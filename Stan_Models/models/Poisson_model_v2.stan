@@ -20,8 +20,8 @@ model {
         real home_skill = 0;
         real away_skill = 0;
         for (player in 1:11) {
-            home_skill += skills[home_team[game] * n_players_per_team + home_players[game, player]];
-            away_skill += skills[away_team[game] * n_players_per_team + away_players[game, player]];
+            home_skill += skills[(home_team[game] - 1) * n_players_per_team + home_players[game, player]];
+            away_skill += skills[(away_team[game] - 1) * n_players_per_team + away_players[game, player]];
         }
 
         // Likelihood

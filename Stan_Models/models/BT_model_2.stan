@@ -17,7 +17,7 @@ model {
     for (jogo in 1:num_jogos) {
         // Likelihood do modelo Bradley-Terry
         if (vitoria_equipe1[jogo] == 1) {
-            target += exp(habilidade[equipe1[jogo]] + home_force) - log(exp(habilidade[equipe1[jogo]] + home_force) + exp(habilidade[equipe2[jogo]]));
+            target += log(exp(habilidade[equipe1[jogo]] + home_force)) - log(exp(habilidade[equipe1[jogo]] + home_force) + exp(habilidade[equipe2[jogo]]));
         } else {
             target += habilidade[equipe2[jogo]] - log(exp(habilidade[equipe1[jogo]] + home_force) + exp(habilidade[equipe2[jogo]]));
         }
