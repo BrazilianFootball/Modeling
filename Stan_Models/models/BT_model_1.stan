@@ -1,23 +1,28 @@
 data {
-    int<lower=1> num_jogos;  // Número total de jogos
-    int<lower=1> num_equipes;  // Número total de equipes
-    array[num_jogos] int<lower=1, upper=num_equipes> equipe1;  // Equipe 1 em cada jogo
-    array[num_jogos] int<lower=1, upper=num_equipes> equipe2;  // Equipe 2 em cada jogo
-    array[num_jogos] int<lower=0, upper=1> vitoria_equipe1;  // 1 se equipe1 venceu, 0 caso contrário
+    int<lower=1> num_games;  // Total number of games
+    int<lower=1> num_teams;  // Total number of teams
+    array[num_games] int<lower=1, upper=num_teams> team1;  // Team 1 in each game
+    array[num_games] int<lower=1, upper=num_teams> team2;  // Team 2 in each game
+    array[num_games] int<lower=0, upper=1> team1_win;  // 1 if team1 won, 0 otherwise
 }
 
 parameters {
-    vector[num_equipes] habilidade;  // Habilidade de cada equipe
+    vector[num_teams] skill;  // Skill of each team
 }
 
 model {
-    habilidade ~ normal(0, 1);  // Prior normal para as habilidades
-    for (jogo in 1:num_jogos) {
-        // Likelihood do modelo Bradley-Terry
-        if (vitoria_equipe1[jogo] == 1) {
-            target += habilidade[equipe1[jogo]] - log(exp(habilidade[equipe1[jogo]]) + exp(habilidade[equipe2[jogo]]));
+    // Normal prior for team skills
+    skill ~ normal(0, 1);
+
+    // Soft constraint: sum of skills should be close to 0
+    sum(skill) ~ normal(0, 1e-4);
+
+    for (game in 1:num_games) {
+        // Likelihood using the Bradley-Terry model
+        if (team1_win[game] == 1) {
+            target += skill[team1[game]] - log(exp(skill[team1[game]]) + exp(skill[team2[game]]));
         } else {
-            target += habilidade[equipe2[jogo]] - log(exp(habilidade[equipe1[jogo]]) + exp(habilidade[equipe2[jogo]]));
+            target += skill[team2[game]] - log(exp(skill[team1[game]]) + exp(skill[team2[game]]));
         }
     }
 }

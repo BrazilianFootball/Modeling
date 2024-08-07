@@ -1,21 +1,26 @@
 data {
-    int<lower=1> num_jogos;  // Número total de jogos
-    int<lower=1> num_equipes;  // Número total de equipes
-    array[num_jogos] int<lower=1, upper=num_equipes> equipe1;  // Equipe 1 em cada jogo
-    array[num_jogos] int<lower=1, upper=num_equipes> equipe2;  // Equipe 2 em cada jogo
-    array[num_jogos] int<lower=0> gols_equipe1;  // Gols da equipe 1 em cada jogo
-    array[num_jogos] int<lower=0> gols_equipe2;  // Gols da equipe 2 em cada jogo
+    int<lower=1> num_games;
+    int<lower=1> num_teams;
+    array[num_games] int<lower=1, upper=num_teams> team1;
+    array[num_games] int<lower=1, upper=num_teams> team2;
+    array[num_games] int<lower=0> goals_team1;
+    array[num_games] int<lower=0> goals_team2;
 }
 
 parameters {
-    vector<lower=0>[num_equipes] habilidade;  // Habilidade de cada equipe
+    // log skill of each team
+    vector<lower=0>[num_teams] skills;
 }
 
 model {
-    habilidade ~ normal(0, 1);  // Prior normal para as habilidades
-    for (jogo in 1:num_jogos) {
-        // Likelihood
-        target += gols_equipe1[jogo] * (log(habilidade[equipe1[jogo]]) - log(habilidade[equipe2[jogo]])) - (habilidade[equipe1[jogo]] / habilidade[equipe2[jogo]]);
-        target += gols_equipe2[jogo] * (log(habilidade[equipe2[jogo]]) - log(habilidade[equipe1[jogo]])) - (habilidade[equipe2[jogo]] / habilidade[equipe1[jogo]]);
+    skills ~ normal(0, 1);
+    sum(skills) ~ normal(0, 1e-4);
+    real lambda_team1;
+    real lambda_team2;
+    for (game in 1:num_games) {
+        lambda_team1 = exp(skills[team1[game]]) / exp(skills[team2[game]]);
+        lambda_team2 = exp(skills[team2[game]]) / exp(skills[team1[game]]);
+        target += goals_team1[game] * (skills[team1[game]] - skills[team2[game]]) - lambda_team1;
+        target += goals_team2[game] * (skills[team2[game]] - skills[team1[game]]) - lambda_team2;
     }
 }
