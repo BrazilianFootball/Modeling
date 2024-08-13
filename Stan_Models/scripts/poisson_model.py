@@ -56,7 +56,7 @@ class championship:
                 self.home_means += home_lam * (complete_home_team == team)
                 self.away_means += away_lam * (complete_away_team == team)
         else:
-            df = pd.read_csv(mode)
+            df = pd.read_csv(mode.format(actual_round=initial_round))
             for i in range(1, self.N_TEAMS + 1):
                 self.home_means[self.HOME_TEAM == i] = df.loc[i, 'mean']
                 self.away_means[self.AWAY_TEAM == i] = df.loc[i, 'mean']
