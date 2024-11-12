@@ -13,11 +13,12 @@ data {
 }
 
 parameters {
-    vector<lower=0>[n_players] skills;
+    vector<lower=0>[n_players+1] skills;
 }
 
 model {
     skills ~ normal(0, 1);
+    skills[n_players+1] ~ normal(0, 1e-8);
     for (game in 1:n_games) {
         real home_skill = sum(skills[home_players[game]]) * time_played[game] / total_time_per_game;
         real away_skill = sum(skills[away_players[game]]) * time_played[game] / total_time_per_game;
