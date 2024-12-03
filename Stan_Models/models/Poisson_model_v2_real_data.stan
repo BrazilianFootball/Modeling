@@ -13,12 +13,13 @@ data {
 }
 
 parameters {
-    vector<lower=0>[n_players] skills;
+    vector<lower=0>[n_players+1] skills;
 }
 
 model {
     skills[1] ~ normal(1, 1e-4);
     skills[2:n_players] ~ normal(1, 1);
+    skills[n_players+1] ~ normal(0, 1e-4);
     real lambda_home;
     real lambda_away;
     real home_skill;
