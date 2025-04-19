@@ -162,3 +162,7 @@ cython_debug/
 .DS_Store
 __local__
 SBC_cache
+
+samples/
+results/
+real_data/
