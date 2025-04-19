@@ -166,3 +166,6 @@ SBC_cache
 samples/
 results/
 real_data/
+
+models/*
+!models/*.stan
