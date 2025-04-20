@@ -7,24 +7,32 @@ data {
 }
 
 parameters {
-    real home_advantage;  // Home team advantage
-    vector[num_teams] skill;  // Skill of each team
+    vector[num_teams-1] skill_raw;
+    real home_advantage;
+}
+
+transformed parameters {
+    vector[num_teams] skill;
+    skill[1:num_teams-1] = skill_raw;
+    skill[num_teams] = -sum(skill_raw);
 }
 
 model {
-    // Normal priors for team skills and home advantage
-    skill ~ normal(0, 1);
-    home_advantage ~ normal(0, 1);
-
-    // Soft constraint: sum of skills should be close to 0
-    sum(skill) ~ normal(0, 1e-4);
+    // Normal prior for team skills
+    skill_raw ~ normal(0, 1);
 
     for (game in 1:num_games) {
         // Likelihood using the Bradley-Terry model
-        if (team1_win[game] == 1) {
-            target += log(exp(skill[team1[game]] + home_advantage)) - log(exp(skill[team1[game]] + home_advantage) + exp(skill[team2[game]]));
-        } else {
-            target += skill[team2[game]] - log(exp(skill[team1[game]] + home_advantage) + exp(skill[team2[game]]));
-        }
+        real skill_diff = skill[team1[game]] + home_advantage - skill[team2[game]];
+        target += team1_win[game] * skill_diff - log1p_exp(skill_diff);
+    }
+}
+
+generated quantities {
+    real log_lik = 0;
+
+    for (game in 1:num_games) {
+        real skill_diff = skill[team1[game]] + home_advantage - skill[team2[game]];
+        log_lik += team1_win[game] * skill_diff - log1p_exp(skill_diff);
     }
 }
