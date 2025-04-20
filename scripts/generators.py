@@ -1,6 +1,6 @@
 import numpy as np
 
-def data_generator_single_BT_1(**kwargs):
+def data_generator_bt_1(**kwargs):
     n_clubs = kwargs.get('n_clubs')
     n_seasons = kwargs.get('n_seasons')
     
@@ -53,7 +53,7 @@ def data_generator_single_BT_1(**kwargs):
     }
 
 
-def data_generator_single_BT_2(**kwargs):
+def data_generator_bt_2(**kwargs):
     n_clubs = kwargs.get('n_clubs')
     n_seasons = kwargs.get('n_seasons')
     
