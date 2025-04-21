@@ -129,3 +129,40 @@ def data_generator_poisson_1(**kwargs):
             'goals_team2': away_goals
         }
     }
+
+
+def data_generator_poisson_2(**kwargs):
+    np.random.seed(kwargs.get('seed'))
+    n_clubs = kwargs.get('n_clubs')
+    n_seasons = kwargs.get('n_seasons')
+    
+    clubs = list(range(1, n_clubs+1))
+    
+    log_forces = np.random.normal(0, 1, size=n_clubs)
+    log_forces[-1] = -sum(log_forces[:-1])
+    force = np.exp(log_forces)
+    home_boost = np.random.normal(1, 1)
+    while home_boost < 0:
+        home_boost = np.random.normal(1, 1)
+
+    mask = create_mask(clubs, force, n_seasons)
+    home_teams, away_teams, home_force, away_force = mask
+
+    home_force += home_boost
+    home_goals = np.random.poisson(home_force / away_force)
+    away_goals = np.random.poisson(away_force / home_force)
+    
+    return {
+        'variables': {
+            'skills': force,
+            'home_force': home_boost
+        },
+        'generated': {
+            'num_games': len(home_teams),
+            'num_teams': n_clubs,
+            'team1': home_teams,
+            'team2': away_teams,
+            'goals_team1': home_goals,
+            'goals_team2': away_goals
+        }
+    }
