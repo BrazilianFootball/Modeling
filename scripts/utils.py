@@ -66,9 +66,8 @@ def setup_was_changed(model_name, data, **kwargs):
     has_changes = check_changes(current_json, previous_json)
     if has_changes:
         save_model_setup(model_name, current_setup)
-        return True
-    else:
-        return False
+    
+    return has_changes
 
 def remove_empty_dirs(model_name):
     for root, dirs, _ in os.walk(f'../samples/{model_name}', topdown=False):
