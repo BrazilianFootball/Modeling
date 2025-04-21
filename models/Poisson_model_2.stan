@@ -33,7 +33,7 @@ model {
 
 generated quantities {
     real log_lik = 0;
-
+    real aux = log(home_force);
     for (game in 1:num_games) {
         real log_lambda_team1 = log_sum_exp(log_skills[team1[game]], aux) - log_skills[team2[game]];
         real log_lambda_team2 = -log_lambda_team1;
