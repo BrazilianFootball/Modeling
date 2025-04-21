@@ -28,3 +28,15 @@ model {
         target += poisson_log_lpmf(goals_team2[game] | log_lambda_team2);
     }
 }
+
+generated quantities {
+    real log_lik = 0;
+
+    for (game in 1:num_games) {
+        real log_lambda_team1 = log_skills[team1[game]] - log_skills[team2[game]];
+        real log_lambda_team2 = -log_lambda_team1;
+
+        log_lik += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
+        log_lik += poisson_log_lpmf(goals_team2[game] | log_lambda_team2);
+    }
+}
