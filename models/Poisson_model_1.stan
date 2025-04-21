@@ -8,7 +8,6 @@ data {
 }
 
 parameters {
-    // log skill for all teams except first one
     vector[num_teams-1] log_skills_raw;
 }
 
@@ -19,14 +18,12 @@ transformed parameters {
 }
 
 model {
-    // Prior on raw skills
     log_skills_raw ~ normal(0, 1);
     
     for (game in 1:num_games) {
         real log_lambda_team1 = log_skills[team1[game]] - log_skills[team2[game]];
         real log_lambda_team2 = -log_lambda_team1;
         
-        // Using Poisson log-likelihood directly
         target += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
         target += poisson_log_lpmf(goals_team2[game] | log_lambda_team2);
     }
