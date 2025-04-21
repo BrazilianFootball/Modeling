@@ -81,6 +81,9 @@ def clear_samples(model_name):
         if file.endswith('.csv'):
             os.remove(file)
     
+    for file in glob(f'../samples/{model_name}/potential_problems.json'):
+        os.remove(file)
+
     remove_empty_dirs(model_name)    
 
 def run_model(model_name, n_sims, generator, generator_kwargs, model_kwargs):
@@ -103,6 +106,9 @@ def run_model(model_name, n_sims, generator, generator_kwargs, model_kwargs):
             os.system('clear')
 
         if potential_problems:
+            with open(f'../samples/{model_name}/potential_problems.json', 'w') as f:
+                json.dump(potential_problems, f)
+            
             print('Potential problems:')
             for i, diagnose in potential_problems.items():
                 print(f'Sim {i+1}:')
