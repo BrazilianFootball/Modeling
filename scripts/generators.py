@@ -20,7 +20,7 @@ def create_mask(clubs, force, n_seasons):
     return home_teams, away_teams, home_force, away_force
 
 def data_generator_bt_1(**kwargs):
-    np.random.seed(0)
+    np.random.seed(kwargs.get('seed'))
     n_clubs = kwargs.get('n_clubs')
     n_seasons = kwargs.get('n_seasons')
     
@@ -60,7 +60,7 @@ def data_generator_bt_1(**kwargs):
 
 
 def data_generator_bt_2(**kwargs):
-    np.random.seed(0)
+    np.random.seed(kwargs.get('seed'))
     n_clubs = kwargs.get('n_clubs')
     n_seasons = kwargs.get('n_seasons')
     
@@ -101,7 +101,7 @@ def data_generator_bt_2(**kwargs):
     }
 
 def data_generator_poisson_1(**kwargs):
-    np.random.seed(0)
+    np.random.seed(kwargs.get('seed'))
     n_clubs = kwargs.get('n_clubs')
     n_seasons = kwargs.get('n_seasons')
     
