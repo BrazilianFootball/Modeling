@@ -96,12 +96,12 @@ def run_model(model_name, n_sims, generator, generator_kwargs, model_kwargs):
         potential_problems = dict()
         model = cmdstanpy.CmdStanModel(stan_file=f'../models/{model_name}.stan')
         for i in range(n_sims):
-            print(f'Running sim {i+1} of {n_sims}')
+            print(f'Running sim {i+1} of {n_sims} ({model_name})')
             fit = model.sample(data=data[i]['generated'], **model_kwargs)
-            fit.save_csvfiles(f'../samples/{model_name}/sim_{i}')
+            fit.save_csvfiles(f'../samples/{model_name}/sim_{i+1}')
             diagnose = fit.diagnose()
             if 'no problems detected' not in diagnose:
-                potential_problems[i] = diagnose
+                potential_problems[i+1] = diagnose
             
             os.system('clear')
 
@@ -111,6 +111,9 @@ def run_model(model_name, n_sims, generator, generator_kwargs, model_kwargs):
             
             print('Potential problems:')
             for i, diagnose in potential_problems.items():
-                print(f'Sim {i+1}:')
+                print(f'Sim {i}:')
                 print(diagnose)
                 print()
+            
+            n_potential_problems = len(potential_problems)
+            print(f'{n_potential_problems} potential problems detected ({n_potential_problems/n_sims:.2%} of total)')
