@@ -164,7 +164,7 @@ def data_generator_poisson_1(
     away_goals = np.random.poisson(away_force / home_force)
 
     return {
-        "variables": {"skills": force},
+        "variables": {"log_skills": log_forces},
         "generated": {
             "num_games": len(home_teams),
             "num_teams": n_clubs,
@@ -209,7 +209,7 @@ def data_generator_poisson_2(
     away_goals = np.random.poisson(away_force / home_force)
 
     return {
-        "variables": {"skills": force, "home_force": home_boost},
+        "variables": {"log_skills": log_forces, "home_force": home_boost},
         "generated": {
             "num_games": len(home_teams),
             "num_teams": n_clubs,
