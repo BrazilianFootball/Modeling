@@ -17,9 +17,7 @@ class NumpyEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, o)
 
 
-def generate_data(
-    generator: Callable[..., Any], n_sims: int, **kwargs: Dict[str, Any]
-) -> Dict[int, Any]:
+def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> Dict[int, Any]:
     """Generate simulation data using provided generator function.
 
     Args:
@@ -30,10 +28,11 @@ def generate_data(
     Returns:
         Dictionary mapping simulation index to generated data
     """
-    data = {}
+    data: Dict[int, Any] = {}
+    new_kwargs = kwargs.copy()
     for i in range(n_sims):
-        kwargs["seed"] = i  # type: ignore
-        data[i] = generator(**kwargs)
+        new_kwargs["seed"] = int(i)
+        data[i] = generator(**new_kwargs)
 
     return data
 
