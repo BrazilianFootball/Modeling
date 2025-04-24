@@ -4,9 +4,8 @@ from typing import List, Optional
 
 import numpy as np
 import plotly.graph_objects as go
+from calculate import adjust_gamma_optimize, ecdf_intervals
 from scipy.stats import binom
-
-from scripts.calculate import adjust_gamma_optimize, ecdf_intervals
 
 
 def plot_rank_hist(

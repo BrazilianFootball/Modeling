@@ -32,7 +32,7 @@ def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> Dict[int, 
     new_kwargs = kwargs.copy()
     for i in range(n_sims):
         new_kwargs["seed"] = int(i)
-        data[i] = generator(**new_kwargs)
+        data[i + 1] = generator(**new_kwargs)
 
     return data
 
@@ -192,13 +192,13 @@ def run_model(
         clear_samples(model_name)
         potential_problems = {}
         model = cmdstanpy.CmdStanModel(stan_file=f"../models/{model_name}.stan")
-        for i in range(n_sims):
-            print(f"Running sim {i+1} of {n_sims} ({model_name})")
+        for i in range(1, n_sims + 1):
+            print(f"Running sim {i} of {n_sims} ({model_name})")
             fit = model.sample(data=data[i]["generated"], **model_kwargs)
-            fit.save_csvfiles(f"../samples/{model_name}/sim_{i+1}")
+            fit.save_csvfiles(f"../samples/{model_name}/sim_{i}")
             diagnose = fit.diagnose()
             if "no problems detected" not in diagnose:
-                potential_problems[i + 1] = diagnose
+                potential_problems[i] = diagnose
 
             os.system("clear")
 
