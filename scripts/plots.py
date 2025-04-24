@@ -1,10 +1,11 @@
 # Based on https://github.com/hyunjimoon/SBC/blob/master/R/plot.R
 
+from typing import List, Optional
+
 import numpy as np
 import plotly.graph_objects as go
-
 from scipy.stats import binom
-from typing import Optional, List
+
 from scripts.calculate import adjust_gamma_optimize, ecdf_intervals
 
 

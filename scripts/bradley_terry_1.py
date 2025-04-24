@@ -1,4 +1,5 @@
-from constants import ITER_SAMPLING, ITER_WARMUP, N_SIMS, generator_kwargs, model_kwargs
+from constants import (ITER_SAMPLING, ITER_WARMUP, N_SIMS, generator_kwargs,
+                       model_kwargs)
 from generators import data_generator_bt_1
 from utils import run_model
 
