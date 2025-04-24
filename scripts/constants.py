@@ -1,20 +1,20 @@
-N_SIMS = 200
+N_SIMS = 1_000
 N_CLUBS = 20
 N_SEASONS = 1
 
 CHAINS = 4
 ITER_WARMUP = {
-    "bt_model_1": 1_000,
-    "bt_model_2": 1_000,
-    "poisson_model_1": 1_000,
-    "poisson_model_2": 1_000,
+    "bt_model_1": 2_000,
+    "bt_model_2": 2_000,
+    "poisson_model_1": 2_000,
+    "poisson_model_2": 2_000,
 }
 
 ITER_SAMPLING = {
-    "bt_model_1": 1_000,
-    "bt_model_2": 1_000,
-    "poisson_model_1": 1_000,
-    "poisson_model_2": 1_000,
+    "bt_model_1": 2_000,
+    "bt_model_2": 2_000,
+    "poisson_model_1": 2_000,
+    "poisson_model_2": 2_000,
 }
 
 ADAPT_DELTA = 0.8
