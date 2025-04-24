@@ -19,8 +19,8 @@ def adjust_gamma(N: int, L: int, K: int = None, conf_level: float = 0.95) -> flo
 
     if L == 1:
         return adjust_gamma_optimize(N, K, conf_level)
-    else:
-        return adjust_gamma_simulate(N, L, K, conf_level)
+
+    return adjust_gamma_simulate(N, L, K, conf_level)
 
 
 def adjust_gamma_optimize(N: int, K: int, conf_level: float = 0.95) -> float:

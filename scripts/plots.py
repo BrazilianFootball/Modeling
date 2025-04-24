@@ -45,7 +45,7 @@ def plot_rank_hist(
                 name=series_names[i],
                 opacity=0.7,
                 histnorm="probability density",
-                xbins=dict(start=0, end=1, size=(1.0 / bins)),
+                xbins={"start": 0, "end": 1, "size": 1.0 / bins},
             )
         )
 
@@ -57,7 +57,7 @@ def plot_rank_hist(
             y=[expected, expected],
             mode="lines",
             name="Expected",
-            line=dict(color="black", dash="dash", width=1),
+            line={"color": "black", "dash": "dash", "width": 1},
         )
     )
 
@@ -67,7 +67,7 @@ def plot_rank_hist(
             y=[ci_upper, ci_upper],
             mode="lines",
             name=f"{int(prob*100)}% CI",
-            line=dict(color="skyblue", dash="dot"),
+            line={"color": "skyblue", "dash": "dot"},
             showlegend=False,
         )
     )
@@ -77,7 +77,7 @@ def plot_rank_hist(
             x=x_range,
             y=[ci_lower, ci_lower],
             mode="lines",
-            line=dict(color="skyblue", dash="dot"),
+            line={"color": "skyblue", "dash": "dot"},
             showlegend=False,
             fill="tonexty",
             fillcolor="rgba(135, 206, 235, 0.2)",
@@ -145,7 +145,7 @@ def plot_ecdf(
             y=[0, 1],
             mode="lines",
             name="Expected",
-            line=dict(color="black", dash="dash", width=1),
+            line={"color": "black", "dash": "dash", "width": 1},
         )
     )
 
@@ -156,7 +156,7 @@ def plot_ecdf(
             y=intervals["upper"],
             mode="lines",
             name=f"{int(prob*100)}% CI",
-            line=dict(color="skyblue"),
+            line={"color": "skyblue"},
             showlegend=False,
         )
     )
@@ -166,7 +166,7 @@ def plot_ecdf(
             x=z_plot,
             y=intervals["lower"],
             mode="lines",
-            line=dict(color="skyblue"),
+            line={"color": "skyblue"},
             fill="tonexty",
             fillcolor="rgba(135, 206, 235, 0.2)",
             showlegend=True,
@@ -240,7 +240,7 @@ def plot_ecdf_diff(
             y=[0, 0],
             mode="lines",
             name="Expected",
-            line=dict(color="black", dash="dash", width=1),
+            line={"color": "black", "dash": "dash", "width": 1},
         )
     )
 
@@ -251,7 +251,7 @@ def plot_ecdf_diff(
             y=intervals["upper"] - z_plot,
             mode="lines",
             name=f"{int(prob*100)}% CI",
-            line=dict(color="skyblue"),
+            line={"color": "skyblue"},
             showlegend=False,
         )
     )
@@ -261,7 +261,7 @@ def plot_ecdf_diff(
             x=z_plot,
             y=intervals["lower"] - z_plot,
             mode="lines",
-            line=dict(color="skyblue"),
+            line={"color": "skyblue"},
             fill="tonexty",
             fillcolor="rgba(135, 206, 235, 0.2)",
             showlegend=True,
