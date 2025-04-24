@@ -1,13 +1,15 @@
 # Based on https://github.com/hyunjimoon/SBC/blob/master/R/calculate.R
 
-from typing import Dict
+from typing import Dict, Optional
 
 import numpy as np
 from scipy.optimize import minimize_scalar
 from scipy.stats import binom, hypergeom
 
 
-def adjust_gamma(N: int, L: int, K: int = None, conf_level: float = 0.95) -> float:
+def adjust_gamma(
+    N: int, L: int, K: Optional[int] = None, conf_level: float = 0.95
+) -> float:
     """Adjusts gamma parameter for simultaneous confidence intervals."""
     if K is None:
         K = N
