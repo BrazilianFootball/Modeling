@@ -1,4 +1,5 @@
 [MASTER]
 disable=
+    C0103,
     C0114,
     E0401
