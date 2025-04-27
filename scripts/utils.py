@@ -1,3 +1,5 @@
+# pylint: disable=too-many-locals
+
 import json
 import os
 from glob import glob
@@ -167,7 +169,6 @@ def clear_samples(model_name: str) -> None:
     remove_empty_dirs(model_name)
 
 
-# pylint: disable=too-many-locals
 def run_model(
     model_name: str,
     n_sims: int,
