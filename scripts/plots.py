@@ -1,100 +1,134 @@
 # Based on https://github.com/hyunjimoon/SBC/blob/master/R/plot.R
+# pylint: disable=too-many-arguments
 
-from typing import List, Optional
+from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 import plotly.graph_objects as go
 from calculate import adjust_gamma_optimize, ecdf_intervals
-from scipy.stats import binom
+from plotly.subplots import make_subplots
 
 
-def plot_rank_hist(
+def _calculate_ci(
+    N: int, K: int, prob: float
+) -> Tuple[np.ndarray, Dict[str, np.ndarray]]:
+    """Calculate confidence intervals for ECDF."""
+    gamma = adjust_gamma_optimize(N, K, conf_level=prob)
+    z = np.linspace(0, 1, K + 1)
+    z_plot = np.concatenate([np.repeat(z[:-1], 2), [1]])
+
+    intervals = ecdf_intervals(N, L=1, K=K, gamma=gamma)
+    intervals["upper"] = np.append(intervals["upper"], [1])
+    intervals["lower"] = np.append(intervals["lower"], [1])
+
+    return z_plot, intervals
+
+
+def _add_ecdf_traces(
+    fig: go.Figure,
     ranks: np.ndarray,
     series_names: List[str],
-    bins: Optional[int] = None,
-    prob: float = 0.95,
-) -> go.Figure:
-    """
-    Plots histogram of ranks with confidence interval.
-
-    Args:
-        ranks: Array of normalized ranks (NxM, where N is sample size and M is number of series)
-        series_names: List of M names for each series
-        bins: Number of bins (default: Sturges rule)
-        prob: Confidence level (default: 0.95)
-    """
+    colors: Optional[List[str]] = None,
+    row: int = 1,
+    col: int = 1,
+    is_diff: bool = False,
+    showlegend: bool = True,
+) -> None:
+    """Add ECDF or ECDF difference traces to the plot."""
     N, M = ranks.shape
 
-    if bins is None:
-        bins = int(np.ceil(np.log2(N) + 1))
+    if colors is None:
+        colors = [
+            "#1f77b4",
+            "#ff7f0e",
+            "#2ca02c",
+            "#d62728",
+            "#9467bd",
+            "#8c564b",
+            "#e377c2",
+            "#7f7f7f",
+            "#bcbd22",
+            "#17becf",
+        ]
 
-    expected = 1.0
-    alpha = 1 - prob
-    ci_lower = binom.ppf(alpha / 2, N, 1 / bins) / (N * (1.0 / bins))
-    ci_upper = binom.ppf(1 - alpha / 2, N, 1 / bins) / (N * (1.0 / bins))
-
-    fig = go.Figure()
-
-    # Histograms
     for i in range(M):
+        sorted_ranks = np.sort(ranks[:, i])
+        ecdf = np.arange(1, N + 1) / N
+        color = colors[i % len(colors)]
+
+        y_values = ecdf - sorted_ranks if is_diff else ecdf
+
         fig.add_trace(
-            go.Histogram(
-                x=ranks[:, i],
-                nbinsx=bins,
+            go.Scatter(
+                x=sorted_ranks,
+                y=y_values,
+                mode="lines",
                 name=series_names[i],
-                opacity=0.7,
-                histnorm="probability density",
-                xbins={"start": 0, "end": 1, "size": 1.0 / bins},
-            )
+                line={"color": color},
+                legendgroup=f"group{i}",
+                showlegend=showlegend,
+            ),
+            row=row,
+            col=col,
         )
 
-    # Expected line and intervals
-    x_range = [0, 1]
+
+def _add_ci_traces(
+    fig: go.Figure,
+    z_plot: np.ndarray,
+    intervals: Dict[str, np.ndarray],
+    prob: float,
+    row: int = 1,
+    col: int = 1,
+    is_diff: bool = False,
+) -> None:
+    """Add confidence interval traces to the plot."""
+    # Expected line
+    y_expected = [0, 0] if is_diff else [0, 1]
     fig.add_trace(
         go.Scatter(
-            x=x_range,
-            y=[expected, expected],
+            x=[0, 1],
+            y=y_expected,
             mode="lines",
             name="Expected",
             line={"color": "black", "dash": "dash", "width": 1},
-        )
+            showlegend=row == 1 and col == 1,
+        ),
+        row=row,
+        col=col,
     )
+
+    # CI traces
+    upper = intervals["upper"] - z_plot if is_diff else intervals["upper"]
+    lower = intervals["lower"] - z_plot if is_diff else intervals["lower"]
 
     fig.add_trace(
         go.Scatter(
-            x=x_range,
-            y=[ci_upper, ci_upper],
+            x=z_plot,
+            y=upper,
             mode="lines",
             name=f"{int(prob*100)}% CI",
-            line={"color": "skyblue", "dash": "dot"},
+            line={"color": "skyblue"},
             showlegend=False,
-        )
+        ),
+        row=row,
+        col=col,
     )
 
     fig.add_trace(
         go.Scatter(
-            x=x_range,
-            y=[ci_lower, ci_lower],
+            x=z_plot,
+            y=lower,
             mode="lines",
-            line={"color": "skyblue", "dash": "dot"},
-            showlegend=False,
+            line={"color": "skyblue"},
             fill="tonexty",
             fillcolor="rgba(135, 206, 235, 0.2)",
-        )
+            showlegend=row == 1 and col == 1,
+            name=f"{int(prob*100)}% CI",
+        ),
+        row=row,
+        col=col,
     )
-
-    fig.update_layout(
-        title="Rank Density",
-        xaxis_title="Normalized Rank",
-        yaxis_title="Density",
-        plot_bgcolor="white",
-        showlegend=True,
-    )
-
-    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
-    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
-
-    return fig
 
 
 def plot_ecdf(
@@ -102,6 +136,7 @@ def plot_ecdf(
     series_names: List[str],
     prob: float = 0.95,
     K: Optional[int] = None,
+    is_diff: bool = False,
 ) -> go.Figure:
     """
     Plots ECDF with confidence intervals for normalized ranks.
@@ -112,69 +147,19 @@ def plot_ecdf(
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
     """
-    N, M = ranks.shape
+    N = ranks.shape[0]
     if K is None:
         K = min(N, 100)
 
-    gamma = adjust_gamma_optimize(N, K, conf_level=prob)
+    z_plot, intervals = _calculate_ci(N, K, prob)
 
-    z = np.linspace(0, 1, K + 1)
-    z_plot = np.concatenate([np.repeat(z[:-1], 2), [1]])
+    fig = make_subplots(rows=1, cols=1)
+    _add_ecdf_traces(fig, ranks, series_names, is_diff=is_diff)
+    _add_ci_traces(fig, z_plot, intervals, prob, is_diff=is_diff)
 
-    # Calculate intervals
-    intervals = ecdf_intervals(N, L=1, K=K, gamma=gamma)
-    intervals["upper"] = np.append(intervals["upper"], [1])
-    intervals["lower"] = np.append(intervals["lower"], [1])
-
-    fig = go.Figure()
-
-    # ECDF for each series
-    for i in range(M):
-        sorted_ranks = np.sort(ranks[:, i])
-        ecdf = np.arange(1, N + 1) / N
-
-        fig.add_trace(
-            go.Scatter(x=sorted_ranks, y=ecdf, mode="lines", name=series_names[i])
-        )
-
-    # Expected line
-    fig.add_trace(
-        go.Scatter(
-            x=[0, 1],
-            y=[0, 1],
-            mode="lines",
-            name="Expected",
-            line={"color": "black", "dash": "dash", "width": 1},
-        )
-    )
-
-    # Confidence intervals
-    fig.add_trace(
-        go.Scatter(
-            x=z_plot,
-            y=intervals["upper"],
-            mode="lines",
-            name=f"{int(prob*100)}% CI",
-            line={"color": "skyblue"},
-            showlegend=False,
-        )
-    )
-
-    fig.add_trace(
-        go.Scatter(
-            x=z_plot,
-            y=intervals["lower"],
-            mode="lines",
-            line={"color": "skyblue"},
-            fill="tonexty",
-            fillcolor="rgba(135, 206, 235, 0.2)",
-            showlegend=True,
-            name=f"{int(prob*100)}% CI",
-        )
-    )
-
+    title = "Rank ECDF" if not is_diff else "Rank ECDF Difference"
     fig.update_layout(
-        title="Rank ECDF",
+        title=title,
         xaxis_title="Normalized Rank",
         yaxis_title="ECDF",
         plot_bgcolor="white",
@@ -187,96 +172,75 @@ def plot_ecdf(
     return fig
 
 
-def plot_ecdf_diff(
+def plot_ecdf_combined(
     ranks: np.ndarray,
     series_names: List[str],
     prob: float = 0.95,
     K: Optional[int] = None,
 ) -> go.Figure:
     """
-    Plots ECDF difference from uniform.
+    Plots ECDF and ECDF difference side by side.
 
     Args:
         ranks: Array of normalized ranks (NxM, where N is sample size and M is number of series)
         series_names: List of M names for each series
-        prob: Confidence level (default: 0.95)
-        K: Number of evaluation points (default: None)
+        prob: Desired confidence level (default: 0.95)
+        K: Number of evaluation points (default: None, uses min(N,100))
     """
-    N, M = ranks.shape
+    N = ranks.shape[0]
     if K is None:
         K = min(N, 100)
 
-    gamma = adjust_gamma_optimize(N, K, conf_level=prob)
+    z_plot, intervals = _calculate_ci(N, K, prob)
 
-    z = np.linspace(0, 1, K + 1)
-    z_plot = np.concatenate([np.repeat(z[:-1], 2), [1]])
+    fig = make_subplots(rows=1, cols=2, subplot_titles=("ECDF", "ECDF - Uniform"))
 
-    # Calculate intervals
-    intervals = ecdf_intervals(N, L=1, K=K, gamma=gamma)
-    intervals["upper"] = np.append(intervals["upper"], [1])
-    intervals["lower"] = np.append(intervals["lower"], [1])
+    colors = [
+        "#1f77b4",
+        "#ff7f0e",
+        "#2ca02c",
+        "#d62728",
+        "#9467bd",
+        "#8c564b",
+        "#e377c2",
+        "#7f7f7f",
+        "#bcbd22",
+        "#17becf",
+    ]
 
-    fig = go.Figure()
-
-    # ECDF difference for each series
-    for i in range(M):
-        sorted_ranks = np.sort(ranks[:, i])
-        ecdf = np.arange(1, N + 1) / N
-
-        fig.add_trace(
-            go.Scatter(
-                x=sorted_ranks,
-                y=ecdf - sorted_ranks,
-                mode="lines",
-                name=series_names[i],
-            )
-        )
-
-    # Expected line
-    fig.add_trace(
-        go.Scatter(
-            x=[0, 1],
-            y=[0, 0],
-            mode="lines",
-            name="Expected",
-            line={"color": "black", "dash": "dash", "width": 1},
-        )
+    _add_ecdf_traces(fig, ranks, series_names, colors, row=1, col=1)
+    _add_ecdf_traces(
+        fig, ranks, series_names, colors, row=1, col=2, is_diff=True, showlegend=False
     )
 
-    # Confidence intervals
-    fig.add_trace(
-        go.Scatter(
-            x=z_plot,
-            y=intervals["upper"] - z_plot,
-            mode="lines",
-            name=f"{int(prob*100)}% CI",
-            line={"color": "skyblue"},
-            showlegend=False,
-        )
-    )
-
-    fig.add_trace(
-        go.Scatter(
-            x=z_plot,
-            y=intervals["lower"] - z_plot,
-            mode="lines",
-            line={"color": "skyblue"},
-            fill="tonexty",
-            fillcolor="rgba(135, 206, 235, 0.2)",
-            showlegend=True,
-            name=f"{int(prob*100)}% CI",
-        )
-    )
+    _add_ci_traces(fig, z_plot, intervals, prob, row=1, col=1)
+    _add_ci_traces(fig, z_plot, intervals, prob, row=1, col=2, is_diff=True)
 
     fig.update_layout(
-        title="Rank ECDF Difference",
-        xaxis_title="Normalized Rank",
-        yaxis_title="ECDF - Uniform",
-        plot_bgcolor="white",
+        title="Rank ECDF and Difference",
         showlegend=True,
+        plot_bgcolor="white",
+        height=400,
     )
 
-    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
-    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+    fig.update_xaxes(
+        showgrid=True, gridwidth=1, gridcolor="lightgray", title_text="Normalized Rank"
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridwidth=1,
+        gridcolor="lightgray",
+        title_text="ECDF",
+        row=1,
+        col=1,
+    )
+    fig.update_yaxes(
+        showgrid=True,
+        gridwidth=1,
+        gridcolor="lightgray",
+        title_text="ECDF - Uniform",
+        row=1,
+        col=2,
+    )
 
     return fig
