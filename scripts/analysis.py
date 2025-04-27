@@ -3,7 +3,7 @@ from typing import Dict, List
 
 import numpy as np
 import pandas as pd
-from plots import plot_ecdf, plot_ecdf_diff
+from plots import plot_ecdf
 from tqdm import tqdm
 from utils import load_model_setup
 
@@ -59,11 +59,11 @@ def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> 
         chain_names = [f"chain_{i}" for i in range(n_chains)]
 
         # Plot ECDF difference
-        fig = plot_ecdf_diff(sample, chain_names)
+        fig = plot_ecdf([sample], [param], chain_names, is_diff=True)
         fig.write_image(f"../results/{model_name}/{param}_ecdf_diff.png")
 
         # Plot ECDF
-        fig = plot_ecdf(sample, chain_names)
+        fig = plot_ecdf([sample], [param], chain_names)
         fig.write_image(f"../results/{model_name}/{param}_ecdf.png")
 
 
