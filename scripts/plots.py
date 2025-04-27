@@ -1,5 +1,6 @@
 # Based on https://github.com/hyunjimoon/SBC/blob/master/R/plot.R
 # pylint: disable=too-many-arguments
+# pylint: disable=too-many-locals
 
 from typing import Dict, List, Optional, Tuple
 
@@ -132,42 +133,84 @@ def _add_ci_traces(
 
 
 def plot_ecdf(
-    ranks: np.ndarray,
+    ranks: List[np.ndarray],
+    param_names: List[str],
     series_names: List[str],
     prob: float = 0.95,
     K: Optional[int] = None,
     is_diff: bool = False,
+    n_rows: int = 1,
+    n_cols: int = 1,
 ) -> go.Figure:
     """
-    Plots ECDF with confidence intervals for normalized ranks.
+    Plots Empirical Cumulative Distribution Functions (ECDFs) with confidence intervals
+    for normalized ranks.
 
     Args:
-        ranks: Array of normalized ranks (NxM, where N is sample size and M is number of series)
+        ranks: List of normalized rank arrays
+               (each array NxM, where N is sample size and M is number of series)
+        param_names: List of parameter names for subplot titles
         series_names: List of M names for each series
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
+        is_diff: Whether to plot difference from uniform distribution (default: False)
+        n_rows: Number of subplot rows (default: 1)
+        n_cols: Number of subplot columns (default: 1)
+
+    Returns:
+        Plotly figure containing the ECDF plots
     """
-    N = ranks.shape[0]
-    if K is None:
-        K = min(N, 100)
+    assert len(ranks) == len(
+        param_names
+    ), "Number of ranks must match number of parameter names"
+    assert (
+        len(ranks) <= n_rows * n_cols
+    ), "Number of parameters must be less than or equal to the number of subplots"
 
-    z_plot, intervals = _calculate_ci(N, K, prob)
+    subplot_titles = []
+    for param in param_names:
+        title = f"{param} - "
+        title += "Rank ECDF" if not is_diff else "Rank ECDF Difference"
+        subplot_titles.append(title)
 
-    fig = make_subplots(rows=1, cols=1)
-    _add_ecdf_traces(fig, ranks, series_names, is_diff=is_diff)
-    _add_ci_traces(fig, z_plot, intervals, prob, is_diff=is_diff)
+    fig = make_subplots(rows=n_rows, cols=n_cols, subplot_titles=subplot_titles)
 
-    title = "Rank ECDF" if not is_diff else "Rank ECDF Difference"
+    showlegend = True
+    for i, rank_array in enumerate(ranks):
+        row = (i // n_cols) + 1
+        col = (i % n_cols) + 1
+
+        N = rank_array.shape[0]
+        if K is None:
+            K = min(N, 100)
+
+        z_plot, intervals = _calculate_ci(N, K, prob)
+
+        _add_ecdf_traces(
+            fig,
+            rank_array,
+            series_names,
+            is_diff=is_diff,
+            row=row,
+            col=col,
+            showlegend=showlegend,
+        )
+        _add_ci_traces(fig, z_plot, intervals, prob, is_diff=is_diff, row=row, col=col)
+        showlegend = False
     fig.update_layout(
-        title=title,
-        xaxis_title="Normalized Rank",
-        yaxis_title="ECDF",
-        plot_bgcolor="white",
         showlegend=True,
+        plot_bgcolor="white",
     )
 
-    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
-    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="lightgray")
+    for i in range(1, n_rows * n_cols + 1):
+        row = (i - 1) // n_cols + 1
+        col = (i - 1) % n_cols + 1
+        fig.update_xaxes(
+            showgrid=True, gridwidth=1, gridcolor="lightgray", row=row, col=col
+        )
+        fig.update_yaxes(
+            showgrid=True, gridwidth=1, gridcolor="lightgray", row=row, col=col
+        )
 
     return fig
 
