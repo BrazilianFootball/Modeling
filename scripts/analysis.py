@@ -1,4 +1,5 @@
 import os
+import warnings
 from typing import Dict, List
 
 import numpy as np
@@ -6,6 +7,8 @@ import pandas as pd
 from plots import plot_ecdf, plot_ecdf_combined
 from tqdm import tqdm
 from utils import load_model_setup
+
+warnings.filterwarnings("ignore")
 
 MODELS = [
     "bt_model_1",
