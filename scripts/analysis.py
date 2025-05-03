@@ -12,6 +12,8 @@ MODELS = [
     "bt_model_2",
     "poisson_model_1",
     "poisson_model_2",
+    "bad_prior_example",
+    "nice_prior_example",
 ]
 
 

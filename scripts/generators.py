@@ -219,3 +219,34 @@ def data_generator_poisson_2(
             "goals_team2": away_goals,
         },
     }
+
+
+def generate_normal_prior_data(
+    *,
+    seed: Optional[int] = None,
+    n_observations: int = 100,
+    true_mu: float = 0,
+    true_sigma: float = 1
+) -> Dict[str, Dict[str, Union[float, np.ndarray]]]:
+    """Generate data for a model with normal prior.
+
+    Args:
+        seed: Random seed for reproducibility
+        n_observations: Number of observations to generate
+        true_mu: True mean of the normal distribution
+        true_sigma: True standard deviation of the normal distribution
+
+    Returns:
+        Dictionary containing variables and generated data
+    """
+    if seed is not None:
+        np.random.seed(seed)
+
+    data = {}
+    data["variables"] = {"mu": true_mu}
+    data["generated"] = {
+        "N": n_observations,
+        "y": np.random.normal(true_mu, true_sigma, size=n_observations).tolist(),
+    }
+
+    return data
