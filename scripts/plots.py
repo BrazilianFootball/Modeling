@@ -141,6 +141,8 @@ def plot_ecdf(
     is_diff: bool = False,
     n_rows: int = 1,
     n_cols: int = 1,
+    height: int = 1200,
+    width: int = 800,
 ) -> go.Figure:
     """
     Plots Empirical Cumulative Distribution Functions (ECDFs) with confidence intervals
@@ -169,9 +171,7 @@ def plot_ecdf(
 
     subplot_titles = []
     for param in param_names:
-        title = f"{param} - "
-        title += "Rank ECDF" if not is_diff else "Rank ECDF Difference"
-        subplot_titles.append(title)
+        subplot_titles.append(f"{param}")
 
     fig = make_subplots(rows=n_rows, cols=n_cols, subplot_titles=subplot_titles)
 
@@ -200,6 +200,9 @@ def plot_ecdf(
     fig.update_layout(
         showlegend=True,
         plot_bgcolor="white",
+        height=height,
+        width=width,
+        title_text="Rank ECDF Difference" if is_diff else "Rank ECDF",
     )
 
     for i in range(1, n_rows * n_cols + 1):
@@ -217,15 +220,18 @@ def plot_ecdf(
 
 def plot_ecdf_combined(
     ranks: np.ndarray,
+    param_name: str,
     series_names: List[str],
     prob: float = 0.95,
     K: Optional[int] = None,
+    height: int = 400,
 ) -> go.Figure:
     """
     Plots ECDF and ECDF difference side by side.
 
     Args:
         ranks: Array of normalized ranks (NxM, where N is sample size and M is number of series)
+        param_name: Name of the parameter
         series_names: List of M names for each series
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
@@ -260,10 +266,10 @@ def plot_ecdf_combined(
     _add_ci_traces(fig, z_plot, intervals, prob, row=1, col=2, is_diff=True)
 
     fig.update_layout(
-        title="Rank ECDF and Difference",
+        title=f"{param_name} - Rank ECDF and ECDF Difference",
         showlegend=True,
         plot_bgcolor="white",
-        height=400,
+        height=height,
     )
 
     fig.update_xaxes(
