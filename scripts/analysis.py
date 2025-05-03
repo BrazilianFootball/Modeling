@@ -24,25 +24,24 @@ def calculate_ranks(model_name: str) -> Dict:
     ranks: Dict[str, Dict[int, List[float]]] = {}
     setup = load_model_setup(model_name)
 
-    def _update_ranks(param: str, chain: int, max_rank: float) -> None:
-        rank = df[param].rank(ascending=False)[0]
+    def _update_ranks(param: str, chain: int, value: float) -> None:
+        rank = np.sum(df[param] < value)
         ranks[param] = ranks.get(param, {})
-        ranks[param][chain] = ranks[param].get(chain, []) + [rank / max_rank]
+        ranks[param][chain] = ranks[param].get(chain, []) + [rank / len(df)]
 
     for sim_id in tqdm(setup["data"]):
         path = f"../results/{model_name}/samples/sim_{sim_id}/"
 
         for chain, file in enumerate(sorted(os.listdir(path))):
             df = pd.read_csv(path + file, comment="#")
-            max_rank = len(df) + 1
 
             for param, value in setup["data"][sim_id]["variables"].items():
                 if isinstance(value, np.ndarray):
-                    for idx in range(len(value)):
-                        param_name = f"{param}.{idx+1}"
-                        _update_ranks(param_name, chain, max_rank)
+                    for i, v in enumerate(value):
+                        param_name = f"{param}.{i+1}"
+                        _update_ranks(param_name, chain, v)
                 else:
-                    _update_ranks(param, chain, max_rank)
+                    _update_ranks(param, chain, value)
 
     np.save(ranks_path, ranks)
     return ranks
@@ -61,7 +60,7 @@ def has_changes(model_name: str) -> bool:
     setup_time = os.path.getmtime(setup_path)
     plots_time = os.path.getmtime(f"{plots_dir}/all_params_ecdf.png")
 
-    return ranks_time < setup_time and plots_time > ranks_time
+    return ranks_time < setup_time or plots_time < ranks_time
 
 
 def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> None:
