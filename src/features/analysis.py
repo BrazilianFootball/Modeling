@@ -22,7 +22,7 @@ MODELS = [
 
 def calculate_ranks(model_name: str) -> Dict:
     """Calculates normalized ranks for each model parameter."""
-    ranks_path = f"../results/{model_name}/ranks.npy"
+    ranks_path = f"results/{model_name}/ranks.npy"
     if os.path.exists(ranks_path):
         return np.load(ranks_path, allow_pickle=True).item()
 
@@ -35,7 +35,7 @@ def calculate_ranks(model_name: str) -> Dict:
         ranks[param][chain] = ranks[param].get(chain, []) + [rank / len(df)]
 
     for sim_id in tqdm(setup["data"]):
-        path = f"../results/{model_name}/samples/sim_{sim_id}/"
+        path = f"results/{model_name}/samples/sim_{sim_id}/"
 
         for chain, file in enumerate(sorted(os.listdir(path))):
             df = pd.read_csv(path + file, comment="#")
@@ -54,9 +54,9 @@ def calculate_ranks(model_name: str) -> Dict:
 
 def has_changes(model_name: str) -> bool:
     """Checks if the model has changed."""
-    ranks_path = f"../results/{model_name}/ranks.npy"
-    setup_path = f"../results/{model_name}/setup.json"
-    plots_dir = f"../results/{model_name}/plots"
+    ranks_path = f"results/{model_name}/ranks.npy"
+    setup_path = f"results/{model_name}/setup.json"
+    plots_dir = f"results/{model_name}/plots"
 
     if not os.path.exists(ranks_path) or not os.listdir(plots_dir):
         return True
@@ -81,7 +81,7 @@ def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> 
         samples.append(sample)
         param_names.append(param)
         fig = plot_ecdf_combined(sample, param, chain_names)
-        fig.write_image(f"../results/{model_name}/plots/{param}_ecdf_combined.png")
+        fig.write_image(f"results/{model_name}/plots/{param}_ecdf_combined.png")
 
     n_params = len(param_names)
     n_cols = min(4, n_params)
@@ -90,10 +90,10 @@ def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> 
     fig = plot_ecdf(
         samples, param_names, chain_names, is_diff=True, n_rows=n_rows, n_cols=n_cols
     )
-    fig.write_image(f"../results/{model_name}/plots/all_params_ecdf_diff.png")
+    fig.write_image(f"results/{model_name}/plots/all_params_ecdf_diff.png")
 
     fig = plot_ecdf(samples, param_names, chain_names, n_rows=n_rows, n_cols=n_cols)
-    fig.write_image(f"../results/{model_name}/plots/all_params_ecdf.png")
+    fig.write_image(f"results/{model_name}/plots/all_params_ecdf.png")
 
 
 def main():

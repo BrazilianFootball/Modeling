@@ -5,11 +5,12 @@ RED='\033[0;31m'
 BLUE='\033[0;34m'
 NC='\033[0m' # No Color
 
-cd "$(dirname "$0")/scripts" || { echo "Could not find scripts directory"; exit 1; }
+PROJECT_ROOT="$(dirname "$0")"
+cd "$PROJECT_ROOT" || { echo "Could not find scripts directory"; exit 1; }
 
 run_script() {
     echo -e "${BLUE}Running $1...${NC}"
-    if python "$1"; then
+    if python "src/models/$1"; then
         echo -e "${GREEN}✓ $1 executed successfully!${NC}"
         return 0
     else
@@ -17,6 +18,9 @@ run_script() {
         return 1
     fi
 }
+
+export PYTHONPATH=$PYTHONPATH:"$PROJECT_ROOT"
+echo "Setting PYTHONPATH to: $PYTHONPATH"
 
 echo "=== Starting model execution ==="
 
@@ -32,6 +36,6 @@ clear
 echo -e "${GREEN}=== All models executed successfully! ===${NC}"
 echo "=== Starting analysis ==="
 
-run_script "analysis.py" || exit 1
+run_script "../features/analysis.py" || exit 1
 
 echo -e "${GREEN}=== Analysis completed successfully! ===${NC}"

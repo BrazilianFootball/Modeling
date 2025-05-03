@@ -1,6 +1,12 @@
-from constants import ITER_SAMPLING, ITER_WARMUP, N_SIMS, generator_kwargs, model_kwargs
-from generators import data_generator_bt_2
-from utils import run_model
+from src.features.constants import (
+    ITER_SAMPLING,
+    ITER_WARMUP,
+    N_SIMS,
+    generator_kwargs,
+    model_kwargs,
+)
+from src.features.generators import data_generator_bt_2
+from src.features.utils import run_model
 
 if __name__ == "__main__":
     MODEL_NAME = "bt_model_2"

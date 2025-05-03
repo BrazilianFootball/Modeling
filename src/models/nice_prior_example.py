@@ -1,6 +1,6 @@
-from constants import ITER_SAMPLING, ITER_WARMUP, model_kwargs
-from generators import generate_normal_prior_data
-from utils import run_model
+from src.features.constants import ITER_SAMPLING, ITER_WARMUP, model_kwargs
+from src.features.generators import generate_normal_prior_data
+from src.features.utils import run_model
 
 if __name__ == "__main__":
     MODEL_NAME = "nice_prior_example"

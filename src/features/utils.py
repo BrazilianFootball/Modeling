@@ -21,9 +21,9 @@ class NumpyEncoder(json.JSONEncoder):
 
 def create_results_dir(model_name: str) -> None:
     """Creates directory to store results."""
-    os.makedirs(f"../results/{model_name}", exist_ok=True)
-    os.makedirs(f"../results/{model_name}/plots", exist_ok=True)
-    os.makedirs(f"../results/{model_name}/samples", exist_ok=True)
+    os.makedirs(f"results/{model_name}", exist_ok=True)
+    os.makedirs(f"results/{model_name}/plots", exist_ok=True)
+    os.makedirs(f"results/{model_name}/samples", exist_ok=True)
 
 
 def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> Dict[int, Any]:
@@ -53,9 +53,7 @@ def save_model_setup(model_name: str, setup: Dict[str, Any]) -> None:
         model_name: Name of the model
         setup: Dictionary containing model setup
     """
-    with open(
-        f"../results/{model_name}/setup.json", "w", encoding="utf-8"
-    ) as file_handle:
+    with open(f"results/{model_name}/setup.json", "w", encoding="utf-8") as file_handle:
         file_handle.write(jsonpickle.encode(setup))
 
 
@@ -68,9 +66,7 @@ def load_model_setup(model_name: str) -> Dict[str, Any]:
     Returns:
         Dictionary containing model setup
     """
-    with open(
-        f"../results/{model_name}/setup.json", "r", encoding="utf-8"
-    ) as file_handle:
+    with open(f"results/{model_name}/setup.json", "r", encoding="utf-8") as file_handle:
         return jsonpickle.decode(file_handle.read())
 
 
@@ -132,7 +128,7 @@ def setup_was_changed(
         True if setup changed, False otherwise
     """
     current_setup = create_model_setup(model_name, data, **kwargs)
-    if not os.path.exists(f"../results/{model_name}/setup.json"):
+    if not os.path.exists(f"results/{model_name}/setup.json"):
         save_model_setup(model_name, current_setup)
         return True
 
@@ -166,10 +162,10 @@ def remove_model_results(model_name: str) -> None:
     Args:
         model_name: Name of the model
     """
-    clear_dir(f"../results/{model_name}/samples")
-    clear_dir(f"../results/{model_name}/plots")
-    if os.path.exists(f"../results/{model_name}/ranks.npy"):
-        os.remove(f"../results/{model_name}/ranks.npy")
+    clear_dir(f"results/{model_name}/samples")
+    clear_dir(f"results/{model_name}/plots")
+    if os.path.exists(f"results/{model_name}/ranks.npy"):
+        os.remove(f"results/{model_name}/ranks.npy")
 
 
 def run_model(
@@ -196,11 +192,11 @@ def run_model(
     if need_update:
         remove_model_results(model_name)
         potential_problems = {}
-        model = cmdstanpy.CmdStanModel(stan_file=f"../models/{model_name}.stan")
+        model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
         for i in range(1, n_sims + 1):
             print(f"Running sim {i} of {n_sims} ({model_name})")
             fit = model.sample(data=data[i]["generated"], **model_kwargs)
-            fit.save_csvfiles(f"../results/{model_name}/samples/sim_{i}")
+            fit.save_csvfiles(f"results/{model_name}/samples/sim_{i}")
             diagnose = fit.diagnose()
             if "no problems detected" not in diagnose:
                 potential_problems[i] = diagnose
@@ -209,7 +205,7 @@ def run_model(
 
         if potential_problems:
             with open(
-                f"../results/{model_name}/potential_problems.json",
+                f"results/{model_name}/potential_problems.json",
                 "w",
                 encoding="utf-8",
             ) as file_handle:
