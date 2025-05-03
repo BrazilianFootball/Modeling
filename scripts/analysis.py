@@ -30,7 +30,7 @@ def calculate_ranks(model_name: str) -> Dict:
         ranks[param][chain] = ranks[param].get(chain, []) + [rank / max_rank]
 
     for sim_id in tqdm(setup["data"]):
-        path = f"../samples/{model_name}/sim_{sim_id}/"
+        path = f"../results/{model_name}/samples/sim_{sim_id}/"
 
         for chain, file in enumerate(sorted(os.listdir(path))):
             df = pd.read_csv(path + file, comment="#")
