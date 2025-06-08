@@ -170,3 +170,4 @@ real_data/
 
 models/*
 !models/*.stan
+!models/README.md
