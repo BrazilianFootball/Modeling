@@ -1,5 +1,3 @@
-# pylint: disable=too-many-locals
-
 import json
 import os
 import shutil
@@ -168,7 +166,7 @@ def remove_model_results(model_name: str) -> None:
         os.remove(f"results/{model_name}/ranks.npy")
 
 
-def run_model(
+def run_model(  # pylint: disable=too-many-locals
     model_name: str,
     n_sims: int,
     generator: Callable,
@@ -188,20 +186,32 @@ def run_model(
     kwargs = {**generator_kwargs, **model_kwargs}
     data = generate_data(generator, n_sims, **generator_kwargs)
     need_update = setup_was_changed(model_name, data, **kwargs)
+    model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
+
+    if os.path.exists(f"results/{model_name}/potential_problems.json"):
+        with open(
+            f"results/{model_name}/potential_problems.json", "r", encoding="utf-8"
+        ) as file_handle:
+            potential_problems = json.load(file_handle)
+    else:
+        potential_problems = {}
 
     if need_update:
         remove_model_results(model_name)
-        potential_problems = {}
-        model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
-        for i in range(1, n_sims + 1):
-            print(f"Running sim {i} of {n_sims} ({model_name})")
-            fit = model.sample(data=data[i]["generated"], **model_kwargs)
-            fit.save_csvfiles(f"results/{model_name}/samples/sim_{i}")
-            diagnose = fit.diagnose()
-            if "no problems detected" not in diagnose:
-                potential_problems[i] = diagnose
 
-            os.system("clear")
+    for i in range(1, n_sims + 1):
+        if os.path.exists(f"results/{model_name}/samples/sim_{i}"):
+            print(f"Skipping sim {i} of {n_sims} ({model_name})")
+            continue
+
+        print(f"Running sim {i} of {n_sims} ({model_name})")
+        fit = model.sample(data=data[i]["generated"], **model_kwargs)
+        fit.save_csvfiles(f"results/{model_name}/samples/sim_{i}")
+        diagnose = fit.diagnose()
+        if "no problems detected" not in diagnose:
+            potential_problems[i] = diagnose
+
+        os.system("clear")
 
         if potential_problems:
             with open(
@@ -211,15 +221,16 @@ def run_model(
             ) as file_handle:
                 json.dump(potential_problems, file_handle)
 
-            print("Potential problems:")
-            for i, diagnose in potential_problems.items():
-                print(f"Sim {i}:")
-                print(diagnose)
-                print()
+    if potential_problems:
+        print("Potential problems:")
+        for i, diagnose in potential_problems.items():
+            print(f"Sim {i}:")
+            print(diagnose)
+            print()
 
-            n_potential_problems = len(potential_problems)
-            potential_problems_percentage = n_potential_problems / n_sims
-            print(
-                f"{n_potential_problems} potential problems detected",
-                f"({potential_problems_percentage:.2%} of total)",
-            )
+        n_potential_problems = len(potential_problems)
+        potential_problems_percentage = n_potential_problems / n_sims
+        print(
+            f"{n_potential_problems} potential problems detected",
+            f"({potential_problems_percentage:.2%} of total)",
+        )
