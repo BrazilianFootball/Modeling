@@ -28,6 +28,8 @@ run_script "bradley_terry_1.py" || exit 1
 run_script "bradley_terry_2.py" || exit 1
 run_script "poisson_1.py" || exit 1
 run_script "poisson_2.py" || exit 1
+run_script "karlis_ntzoufras_1.py" || exit 1
+run_script "karlis_ntzoufras_2.py" || exit 1
 run_script "bad_prior_example.py" || exit 1
 run_script "nice_prior_example.py" || exit 1
 

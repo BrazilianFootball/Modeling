@@ -8,6 +8,8 @@ ITER_WARMUP = {
     "bt_model_2": 2_000,
     "poisson_model_1": 2_000,
     "poisson_model_2": 2_000,
+    "karlis_ntzoufras_1": 2_000,
+    "karlis_ntzoufras_2": 2_000,
     "bad_prior_example": 100,
     "nice_prior_example": 100,
 }
@@ -17,6 +19,8 @@ ITER_SAMPLING = {
     "bt_model_2": 2_000,
     "poisson_model_1": 2_000,
     "poisson_model_2": 2_000,
+    "karlis_ntzoufras_1": 2_000,
+    "karlis_ntzoufras_2": 2_000,
     "bad_prior_example": 100,
     "nice_prior_example": 100,
 }

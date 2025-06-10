@@ -1,3 +1,4 @@
+from itertools import product
 from typing import Dict, List, Optional, Tuple, Union
 
 import numpy as np
@@ -219,6 +220,105 @@ def data_generator_poisson_2(
             "goals_team2": away_goals,
         },
     }
+
+
+def generate_mask_kn_model(  # pylint: disable=too-many-arguments
+    n_seasons: int,
+    mu: float,
+    h: np.ndarray,
+    a: np.ndarray,
+    d: np.ndarray,
+    ha: np.ndarray,
+    hd: np.ndarray,
+) -> np.ndarray:
+    """Generate parameter array for Karlis and Ntzoufras model.
+
+    Args:
+        mu: Mean of the normal distribution
+        h: Home/away effect
+        a: Offensive performance
+        d: Defensive performance
+        ha: How offensive performance differs in home and away
+        hd: How defensive performance differs in home and away
+
+    Returns:
+        Parameter array for Karlis and Ntzoufras model
+    """
+
+    n_clubs = len(a)
+    mask = np.zeros((n_clubs * (n_clubs - 1) * n_seasons, 4))
+    for s, i, j in product(range(n_seasons), range(n_clubs), range(n_clubs)):
+        if i != j:
+            lambda_1 = np.exp(mu + h[0] + a[i] + d[j] + ha[i] + hd[n_clubs + j])
+            lambda_2 = np.exp(mu + h[1] + a[j] + d[i] + ha[n_clubs + i] + hd[j])
+            mask[s * n_clubs * (n_clubs - 1) + i * (n_clubs - 1) + j] = np.array(
+                [i, j, lambda_1, lambda_2]
+            )
+
+    return mask
+
+
+def data_generator_karlis_and_ntzoufras(  # pylint: disable=too-many-locals
+    *,
+    seed: Optional[int] = None,
+    n_clubs: int = 20,
+    n_seasons: int = 1,
+    v2: bool = False
+) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    """Generate data for Karlis and Ntzoufras model.
+
+    Args:
+        seed: Random seed for reproducibility
+        n_clubs: Number of clubs to simulate
+        n_seasons: Number of seasons to simulate
+        v2: Whether to use the second version of the model
+    Returns:
+        Dictionary containing variables and generated data
+    """
+    if seed is not None:
+        np.random.seed(seed)
+
+    mu = np.random.normal(0, 1)
+    h = np.random.normal(0, 1, size=2)
+    a = np.random.normal(0, 1, size=n_clubs)
+    d = np.random.normal(0, 1, size=n_clubs)
+    ha = np.random.normal(0, 1, size=2 * n_clubs)
+    hd = np.random.normal(0, 1, size=2 * n_clubs)
+    if v2:
+        ha = np.zeros_like(ha)
+        hd = np.zeros_like(hd)
+
+    mask = generate_mask_kn_model(n_seasons, mu, h, a, d, ha, hd)
+    home_teams, away_teams, home_force, away_force = (
+        mask[:, 0],
+        mask[:, 1],
+        mask[:, 2],
+        mask[:, 3],
+    )
+
+    home_goals = np.random.poisson(home_force)
+    away_goals = np.random.poisson(away_force)
+
+    return {
+        "variables": {"mu": mu, "h": h, "a": a, "d": d, "ha": ha, "hd": hd},
+        "generated": {
+            "num_games": len(home_teams),
+            "num_teams": n_clubs,
+            "team1": home_teams.astype(int) + 1,
+            "team2": away_teams.astype(int) + 1,
+            "goals_team1": home_goals.astype(int),
+            "goals_team2": away_goals.astype(int),
+        },
+    }
+
+
+def data_generator_karlis_and_ntzoufras_v2(
+    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
+) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    """Generate data for Karlis and Ntzoufras model v2."""
+    return data_generator_karlis_and_ntzoufras(
+        seed=seed, n_clubs=n_clubs, n_seasons=n_seasons, v2=True
+    )
 
 
 def generate_normal_prior_data(
