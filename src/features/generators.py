@@ -222,14 +222,16 @@ def data_generator_poisson_2(
     }
 
 
-def generate_mask_kn_model(  # pylint: disable=too-many-arguments
+def generate_mask_kn_model(  # pylint: disable=too-many-arguments, too-many-locals
     n_seasons: int,
     mu: float,
     h: np.ndarray,
     a: np.ndarray,
     d: np.ndarray,
-    ha: np.ndarray,
-    hd: np.ndarray,
+    ha1: np.ndarray,
+    hd1: np.ndarray,
+    ha2: np.ndarray,
+    hd2: np.ndarray,
 ) -> np.ndarray:
     """Generate parameter array for Karlis and Ntzoufras model.
 
@@ -238,8 +240,10 @@ def generate_mask_kn_model(  # pylint: disable=too-many-arguments
         h: Home/away effect
         a: Offensive performance
         d: Defensive performance
-        ha: How offensive performance differs in home and away
-        hd: How defensive performance differs in home and away
+        ha1: Offensive performance at home
+        hd1: Defensive performance at home
+        ha2: Offensive performance away
+        hd2: Defensive performance away
 
     Returns:
         Parameter array for Karlis and Ntzoufras model
@@ -249,8 +253,8 @@ def generate_mask_kn_model(  # pylint: disable=too-many-arguments
     mask = np.zeros((n_clubs * (n_clubs - 1) * n_seasons, 4))
     for s, i, j in product(range(n_seasons), range(n_clubs), range(n_clubs)):
         if i != j:
-            lambda_1 = np.exp(mu + h[0] + a[i] + d[j] + ha[i] + hd[n_clubs + j])
-            lambda_2 = np.exp(mu + h[1] + a[j] + d[i] + ha[n_clubs + i] + hd[j])
+            lambda_1 = np.exp(mu + h[0] + a[i] + d[j] + ha1[i] + hd2[j])
+            lambda_2 = np.exp(mu + h[1] + a[j] + d[i] + ha2[j] + hd1[i])
             mask[s * n_clubs * (n_clubs - 1) + i * (n_clubs - 1) + j] = np.array(
                 [i, j, lambda_1, lambda_2]
             )
@@ -282,13 +286,26 @@ def data_generator_karlis_and_ntzoufras(  # pylint: disable=too-many-locals
     h = np.random.normal(0, 1, size=2)
     a = np.random.normal(0, 1, size=n_clubs)
     d = np.random.normal(0, 1, size=n_clubs)
-    ha = np.random.normal(0, 1, size=2 * n_clubs)
-    hd = np.random.normal(0, 1, size=2 * n_clubs)
-    if v2:
-        ha = np.zeros_like(ha)
-        hd = np.zeros_like(hd)
+    h[0] = 0
+    a[-1] = -sum(a[:-1])
+    d[-1] = -sum(d[:-1])
 
-    mask = generate_mask_kn_model(n_seasons, mu, h, a, d, ha, hd)
+    ha1 = np.random.normal(0, 1, size=n_clubs)
+    hd1 = np.random.normal(0, 1, size=n_clubs)
+    ha2 = np.random.normal(0, 1, size=n_clubs)
+    hd2 = np.random.normal(0, 1, size=n_clubs)
+    if v2:
+        ha1 = np.zeros_like(ha1)
+        hd1 = np.zeros_like(hd1)
+        ha2 = np.zeros_like(ha2)
+        hd2 = np.zeros_like(hd2)
+    else:
+        ha1[0] = 0
+        hd1[0] = 0
+        ha2[-1] = -sum(ha2[:-1])
+        hd2[-1] = -sum(hd2[:-1])
+
+    mask = generate_mask_kn_model(n_seasons, mu, h, a, d, ha1, hd1, ha2, hd2)
     home_teams, away_teams, home_force, away_force = (
         mask[:, 0],
         mask[:, 1],
@@ -300,7 +317,16 @@ def data_generator_karlis_and_ntzoufras(  # pylint: disable=too-many-locals
     away_goals = np.random.poisson(away_force)
 
     return {
-        "variables": {"mu": mu, "h": h, "a": a, "d": d, "ha": ha, "hd": hd},
+        "variables": {
+            "mu": mu,
+            "h": h,
+            "a": a,
+            "d": d,
+            "ha1": ha1,
+            "hd1": hd1,
+            "ha2": ha2,
+            "hd2": hd2,
+        },
         "generated": {
             "num_games": len(home_teams),
             "num_teams": n_clubs,
