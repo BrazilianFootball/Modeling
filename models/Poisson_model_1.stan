@@ -8,17 +8,15 @@ data {
 }
 
 parameters {
-    vector[num_teams-1] log_skills_raw;
+    sum_to_zero_vector[num_teams] log_skills;
 }
 
 transformed parameters {
-    vector[num_teams] log_skills;
-    log_skills[1:num_teams-1] = log_skills_raw;
-    log_skills[num_teams] = -sum(log_skills_raw);
+    real variance_correction = sqrt(num_teams / (num_teams - 1));
 }
 
 model {
-    log_skills_raw ~ normal(0, 1);
+    log_skills ~ normal(0, variance_correction * 1);
     
     for (game in 1:num_games) {
         real log_lambda_team1 = log_skills[team1[game]] - log_skills[team2[game]];

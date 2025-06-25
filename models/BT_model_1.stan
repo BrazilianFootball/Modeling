@@ -7,20 +7,19 @@ data {
 }
 
 parameters {
-    vector[num_teams-1] skill_raw;
+    sum_to_zero_vector[num_teams] skills_raw;
 }
 
 transformed parameters {
-    vector[num_teams] skill;
-    skill[1:num_teams-1] = skill_raw;
-    skill[num_teams] = -sum(skill_raw);
+    real variance_correction = sqrt(num_teams / (num_teams - 1));
+    vector[num_teams] skills = skills_raw - mean(skills_raw);
 }
 
 model {
-    skill_raw ~ normal(0, 1);
+    skills_raw ~ normal(0, 1);
 
     for (game in 1:num_games) {
-        real skill_diff = skill[team1[game]] - skill[team2[game]];
+        real skill_diff = skills[team1[game]] - skills[team2[game]];
         target += team1_win[game] * skill_diff - log1p_exp(skill_diff);
     }
 }
@@ -29,7 +28,7 @@ generated quantities {
     real log_lik = 0;
 
     for (game in 1:num_games) {
-        real skill_diff = skill[team1[game]] - skill[team2[game]];
+        real skill_diff = skills[team1[game]] - skills[team2[game]];
         log_lik += team1_win[game] * skill_diff - log1p_exp(skill_diff);
     }
 }

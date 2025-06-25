@@ -8,22 +8,20 @@ data {
 }
 
 parameters {
-    vector[num_teams-1] log_skills_raw;
-    real<lower=0> home_force;
+    sum_to_zero_vector[num_teams] log_skills;
+    real log_home_advantage;
 }
 
 transformed parameters {
-    vector[num_teams] log_skills;
-    log_skills[1:num_teams-1] = log_skills_raw;
-    log_skills[num_teams] = -sum(log_skills_raw);
+    real variance_correction = sqrt(num_teams / (num_teams - 1));
 }
 
 model {
-    log_skills_raw ~ normal(0, 1);
-    home_force ~ normal(1, 1);
-    real aux = log(home_force);
+    log_skills ~ normal(0, variance_correction * 1);
+    log_home_advantage ~ normal(0, 1);
+
     for (game in 1:num_games) {
-        real log_lambda_team1 = log_sum_exp(log_skills[team1[game]], aux) - log_skills[team2[game]];
+        real log_lambda_team1 = log_skills[team1[game]] + log_home_advantage - log_skills[team2[game]];
         real log_lambda_team2 = -log_lambda_team1;
 
         target += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
@@ -33,9 +31,8 @@ model {
 
 generated quantities {
     real log_lik = 0;
-    real aux = log(home_force);
     for (game in 1:num_games) {
-        real log_lambda_team1 = log_sum_exp(log_skills[team1[game]], aux) - log_skills[team2[game]];
+        real log_lambda_team1 = log_skills[team1[game]] + log_home_advantage - log_skills[team2[game]];
         real log_lambda_team2 = -log_lambda_team1;
 
         log_lik += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
