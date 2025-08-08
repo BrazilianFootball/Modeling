@@ -140,6 +140,20 @@ def setup_was_changed(
     return has_changes
 
 
+def model_was_changed(model_name: str) -> bool:
+    """Check if model has changed.
+
+    Args:
+        model_name: Name of the model
+
+    Returns:
+        True if model changed, False otherwise
+    """
+    return os.path.getmtime(f"models/{model_name}.stan") > os.path.getmtime(
+        f"results/{model_name}/setup.json"
+    )
+
+
 def clear_dir(dir_path: str) -> None:
     """Remove all files in the directory.
 
@@ -185,7 +199,9 @@ def run_model(  # pylint: disable=too-many-locals
     create_results_dir(model_name)
     kwargs = {**generator_kwargs, **model_kwargs}
     data = generate_data(generator, n_sims, **generator_kwargs)
-    need_update = setup_was_changed(model_name, data, **kwargs)
+    need_update = setup_was_changed(model_name, data, **kwargs) or model_was_changed(
+        model_name
+    )
     model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
 
     if os.path.exists(f"results/{model_name}/potential_problems.json"):
