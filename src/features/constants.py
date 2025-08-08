@@ -7,8 +7,10 @@ DEFAULT_ITER_SAMPLING = 500
 
 CHAINS = 4
 ITER_WARMUP = {
-    "bt_model_1": DEFAULT_ITER_WARMUP,
-    "bt_model_2": DEFAULT_ITER_WARMUP,
+    "bradley_terry_1": DEFAULT_ITER_WARMUP,
+    "bradley_terry_2": DEFAULT_ITER_WARMUP,
+    "bradley_terry_3": DEFAULT_ITER_WARMUP,
+    "bradley_terry_4": DEFAULT_ITER_WARMUP,
     "poisson_model_1": DEFAULT_ITER_WARMUP,
     "poisson_model_2": DEFAULT_ITER_WARMUP,
     "karlis_ntzoufras_1": DEFAULT_ITER_WARMUP,
@@ -18,8 +20,10 @@ ITER_WARMUP = {
 }
 
 ITER_SAMPLING = {
-    "bt_model_1": DEFAULT_ITER_SAMPLING,
-    "bt_model_2": DEFAULT_ITER_SAMPLING,
+    "bradley_terry_1": DEFAULT_ITER_SAMPLING,
+    "bradley_terry_2": DEFAULT_ITER_SAMPLING,
+    "bradley_terry_3": DEFAULT_ITER_SAMPLING,
+    "bradley_terry_4": DEFAULT_ITER_SAMPLING,
     "poisson_model_1": DEFAULT_ITER_SAMPLING,
     "poisson_model_2": DEFAULT_ITER_SAMPLING,
     "karlis_ntzoufras_1": DEFAULT_ITER_SAMPLING,

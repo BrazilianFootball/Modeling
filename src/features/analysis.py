@@ -11,8 +11,10 @@ from utils import load_model_setup
 warnings.filterwarnings("ignore")
 
 MODELS = [
-    "bt_model_1",
-    "bt_model_2",
+    "bradley_terry_1",
+    "bradley_terry_2",
+    "bradley_terry_3",
+    "bradley_terry_4",
     "poisson_model_1",
     "poisson_model_2",
     # "bad_prior_example",
