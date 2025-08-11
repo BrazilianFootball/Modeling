@@ -15,8 +15,11 @@ MODELS = [
     "bradley_terry_2",
     "bradley_terry_3",
     "bradley_terry_4",
-    "poisson_model_1",
-    "poisson_model_2",
+    "poisson_1",
+    # "poisson_2",
+    # "poisson_3",
+    # "poisson_4",
+    # "poisson_5",
     # "bad_prior_example",
     # "nice_prior_example",
 ]
@@ -74,7 +77,7 @@ def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> 
     """Generates plots ECDF for all parameters."""
     samples = []
     param_names = []
-    chain_names = [f"chain_{i}" for i in range(n_chains)]
+    chain_names = [f"Chain {i}" for i in range(n_chains)]
 
     for param in tqdm(ranks.keys(), desc=f"Parameters ({model_name})"):
         sample = np.zeros((n_sims, n_chains))
@@ -83,7 +86,9 @@ def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> 
         samples.append(sample)
         param_names.append(param)
         fig = plot_ecdf_combined(sample, param, chain_names)
-        fig.write_image(f"results/{model_name}/plots/{param}_ecdf_combined.png")
+        fig.write_image(
+            f"results/{model_name}/plots/{param.replace('.', '_')}_ecdf_combined.png"
+        )
 
     n_params = len(param_names)
     n_cols = min(4, n_params)
