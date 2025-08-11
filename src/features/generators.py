@@ -8,7 +8,7 @@ def generate_normal_prior_data(
     seed: Optional[int] = None,
     n_observations: int = 100,
     true_mu: float = 0,
-    true_sigma: float = 1
+    true_sigma: float = 1,
 ) -> Dict[str, Dict[str, Union[float, np.ndarray]]]:
     """Generate data for a model with normal prior.
 
@@ -57,13 +57,20 @@ def generate_matches(clubs: List[int], n_seasons: int) -> Tuple[np.ndarray, np.n
     return home_teams, away_teams
 
 
+def create_sum_zero_vector(n_elements: int) -> np.ndarray:
+    """Create a sum-zero vector of length n_elements."""
+    vector = np.random.normal(0, 1, size=n_elements)
+    vector[-1] = -np.sum(vector[:-1])
+    return vector
+
+
 def data_generator_bt(  # pylint: disable=too-many-locals
     *,
     seed: Optional[int] = None,
     n_clubs: int = 20,
     n_seasons: int = 1,
     home_advantage: bool = False,
-    allow_ties: bool = False
+    allow_ties: bool = False,
 ) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
     """Generate data for Bradley-Terry model with or without home advantage.
 
@@ -73,6 +80,7 @@ def data_generator_bt(  # pylint: disable=too-many-locals
         n_seasons: Number of seasons to simulate
         home_advantage: Whether to include home advantage
         allow_ties: Whether to allow ties
+
     Returns:
         Dictionary containing variables and generated data
     """
@@ -82,8 +90,7 @@ def data_generator_bt(  # pylint: disable=too-many-locals
     clubs = list(range(1, n_clubs + 1))
     home_teams, away_teams = generate_matches(clubs, n_seasons)
 
-    lambdas = np.random.normal(size=n_clubs)
-    lambdas[-1] -= np.sum(lambdas[:-1])
+    lambdas = create_sum_zero_vector(n_clubs)
     variables = {"log_skills": lambdas}
 
     if home_advantage:
@@ -192,12 +199,35 @@ def data_generator_bt_4(
     )
 
 
+def mapping_params_to_model(
+    home_advantage: bool,
+    atk_def_strength: bool,
+    place_params: bool,
+) -> str:
+    """Map parameters to model."""
+    if place_params:
+        return "poisson_5"
+
+    if atk_def_strength and home_advantage:
+        return "poisson_4"
+
+    if atk_def_strength:
+        return "poisson_3"
+
+    if home_advantage:
+        return "poisson_2"
+
+    return "poisson_1"
+
+
 def data_generator_poisson(  # pylint: disable=too-many-locals
     *,
     seed: Optional[int] = None,
     n_clubs: int = 20,
     n_seasons: int = 1,
-    home_advantage: bool = False
+    home_advantage: bool = False,
+    atk_def_strength: bool = False,
+    place_params: bool = False,
 ) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
     """Generate data for Poisson model with or without home advantage.
 
@@ -206,6 +236,8 @@ def data_generator_poisson(  # pylint: disable=too-many-locals
         n_clubs: Number of clubs to simulate
         n_seasons: Number of seasons to simulate
         home_advantage: Whether to include home advantage
+        atk_def_strength: Whether to include attack and defense strength
+        place_params: Indicates whether attack and defense strength depends on place
 
     Returns:
         Dictionary containing variables and generated data
@@ -216,24 +248,40 @@ def data_generator_poisson(  # pylint: disable=too-many-locals
     clubs = list(range(1, n_clubs + 1))
     home_teams, away_teams = generate_matches(clubs, n_seasons)
 
-    log_forces = np.random.normal(0, 1, size=n_clubs)
-    log_forces -= np.mean(log_forces)
-    force = np.exp(log_forces)
+    model_name = mapping_params_to_model(home_advantage, atk_def_strength, place_params)
+    alpha = create_sum_zero_vector(n_clubs)
+    gamma = create_sum_zero_vector(n_clubs)
+    beta = np.random.normal(0, 1, size=n_clubs)
+    delta = np.random.normal(0, 1, size=n_clubs)
+    nu = np.random.normal(0, 1)
+    variables = {"alpha": alpha, "beta": beta, "gamma": gamma, "delta": delta, "nu": nu}
 
-    variables = {"log_skills": log_forces}
+    if model_name in ["poisson_1", "poisson_3", "poisson_5"]:
+        nu = 0
+        variables.pop("nu")
 
-    if home_advantage:
-        log_home_adv = np.random.normal(0, 1)
-        variables["log_home_advantage"] = log_home_adv
+    if model_name != "poisson_5":
+        delta = alpha
+        variables.pop("delta")
+
+    if model_name in ["poisson_1", "poisson_2"]:
+        beta = 0
+        gamma = 0
+        variables.pop("beta")
+        variables.pop("gamma")
+    elif model_name in ["poisson_3", "poisson_4"]:
+        gamma = beta
+        variables.pop("gamma")
+
+    if model_name in ["poisson_1", "poisson_2"]:
+        home_parameters = np.exp(alpha[home_teams - 1] - alpha[away_teams - 1] + nu)
+        away_parameters = np.exp(alpha[away_teams - 1] - alpha[home_teams - 1])
     else:
-        log_home_adv = 0
+        home_parameters = np.exp(alpha[home_teams - 1] + beta[away_teams - 1] + nu)
+        away_parameters = np.exp(gamma[home_teams - 1] + delta[away_teams - 1])
 
-    home_force = force[home_teams - 1]
-    away_force = force[away_teams - 1]
-
-    home_force *= np.exp(log_home_adv)
-    home_goals = np.random.poisson(home_force / away_force)
-    away_goals = np.random.poisson(away_force / home_force)
+    home_goals = np.random.poisson(home_parameters)
+    away_goals = np.random.poisson(away_parameters)
 
     return {
         "variables": variables,
@@ -253,7 +301,12 @@ def data_generator_poisson_1(
 ) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
     """Generate data for Poisson model without home advantage."""
     return data_generator_poisson(
-        seed=seed, n_clubs=n_clubs, n_seasons=n_seasons, home_advantage=False
+        seed=seed,
+        n_clubs=n_clubs,
+        n_seasons=n_seasons,
+        home_advantage=False,
+        atk_def_strength=False,
+        place_params=False,
     )
 
 
@@ -262,5 +315,52 @@ def data_generator_poisson_2(
 ) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
     """Generate data for Poisson model with home advantage."""
     return data_generator_poisson(
-        seed=seed, n_clubs=n_clubs, n_seasons=n_seasons, home_advantage=True
+        seed=seed,
+        n_clubs=n_clubs,
+        n_seasons=n_seasons,
+        home_advantage=True,
+        atk_def_strength=False,
+        place_params=False,
+    )
+
+
+def data_generator_poisson_3(
+    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
+) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    """Generate data for Poisson model with home advantage."""
+    return data_generator_poisson(
+        seed=seed,
+        n_clubs=n_clubs,
+        n_seasons=n_seasons,
+        home_advantage=False,
+        atk_def_strength=True,
+        place_params=False,
+    )
+
+
+def data_generator_poisson_4(
+    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
+) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    """Generate data for Poisson model with home advantage."""
+    return data_generator_poisson(
+        seed=seed,
+        n_clubs=n_clubs,
+        n_seasons=n_seasons,
+        home_advantage=True,
+        atk_def_strength=True,
+        place_params=False,
+    )
+
+
+def data_generator_poisson_5(
+    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
+) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    """Generate data for Poisson model with home advantage."""
+    return data_generator_poisson(
+        seed=seed,
+        n_clubs=n_clubs,
+        n_seasons=n_seasons,
+        home_advantage=False,
+        atk_def_strength=False,
+        place_params=True,
     )
