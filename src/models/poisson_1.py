@@ -9,7 +9,7 @@ from src.features.generators import data_generator_poisson_1
 from src.features.utils import run_model
 
 if __name__ == "__main__":
-    MODEL_NAME = "poisson_model_1"
+    MODEL_NAME = "poisson_1"
     generator = data_generator_poisson_1
     model_kwargs["iter_warmup"] = ITER_WARMUP[MODEL_NAME]
     model_kwargs["iter_sampling"] = ITER_SAMPLING[MODEL_NAME]
