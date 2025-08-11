@@ -171,7 +171,8 @@ def plot_ecdf(
 
     subplot_titles = []
     for param in param_names:
-        subplot_titles.append(f"{param}")
+        param = param.replace(".", "_{") + "}"
+        subplot_titles.append(f"$\\{param}$")
 
     fig = make_subplots(rows=n_rows, cols=n_cols, subplot_titles=subplot_titles)
 
@@ -236,6 +237,7 @@ def plot_ecdf_combined(
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
     """
+    param_name = param_name.replace(".", "_{") + "}"
     N = ranks.shape[0]
     if K is None:
         K = min(N, 100)
@@ -266,7 +268,7 @@ def plot_ecdf_combined(
     _add_ci_traces(fig, z_plot, intervals, prob, row=1, col=2, is_diff=True)
 
     fig.update_layout(
-        title=f"{param_name} - Rank ECDF and ECDF Difference",
+        title=f"$\\{param_name}" + "\\text{ - Rank ECDF and ECDF Difference}$",
         showlegend=True,
         plot_bgcolor="white",
         height=height,
