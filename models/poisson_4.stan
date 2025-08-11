@@ -10,7 +10,7 @@ data {
 parameters {
     vector[num_teams-1] raw_alpha;
     vector[num_teams] beta;
-    real log_home_advantage;
+    real nu;
 }
 
 transformed parameters {
@@ -20,10 +20,10 @@ transformed parameters {
 model {
     raw_alpha ~ normal(0, 1);
     beta ~ normal(0, 1);
-    log_home_advantage ~ normal(0, 1);
+    nu ~ normal(0, 1);
 
     for (game in 1:num_games) {
-        real log_lambda_team1 = alpha[team1[game]] + beta[team2[game]] + log_home_advantage;
+        real log_lambda_team1 = alpha[team1[game]] + beta[team2[game]] + nu;
         real log_lambda_team2 = alpha[team2[game]] + beta[team1[game]];
 
         target += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
@@ -34,7 +34,7 @@ model {
 generated quantities {
     real log_lik = 0;
     for (game in 1:num_games) {
-        real log_lambda_team1 = alpha[team1[game]] + beta[team2[game]] + log_home_advantage;
+        real log_lambda_team1 = alpha[team1[game]] + beta[team2[game]] + nu;
         real log_lambda_team2 = alpha[team2[game]] + beta[team1[game]];
 
         log_lik += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
