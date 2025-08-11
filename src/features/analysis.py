@@ -16,12 +16,10 @@ MODELS = [
     "bradley_terry_3",
     "bradley_terry_4",
     "poisson_1",
-    # "poisson_2",
-    # "poisson_3",
-    # "poisson_4",
-    # "poisson_5",
-    # "bad_prior_example",
-    # "nice_prior_example",
+    "poisson_2",
+    "poisson_3",
+    "poisson_4",
+    "poisson_5",
 ]
 
 

@@ -171,7 +171,7 @@ def plot_ecdf(
 
     subplot_titles = []
     for param in param_names:
-        param = param.replace(".", "_{") + "}"
+        param = param.replace(".", "_{") + "}" if param != "nu" else "nu"
         subplot_titles.append(f"$\\{param}$")
 
     fig = make_subplots(rows=n_rows, cols=n_cols, subplot_titles=subplot_titles)
@@ -237,7 +237,7 @@ def plot_ecdf_combined(
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
     """
-    param_name = param_name.replace(".", "_{") + "}"
+    param_name = param_name.replace(".", "_{") + "}" if param_name != "nu" else "nu"
     N = ranks.shape[0]
     if K is None:
         K = min(N, 100)
