@@ -6,34 +6,6 @@ DEFAULT_ITER_WARMUP = 500
 DEFAULT_ITER_SAMPLING = 500
 
 CHAINS = 4
-ITER_WARMUP = {
-    "bradley_terry_1": DEFAULT_ITER_WARMUP,
-    "bradley_terry_2": DEFAULT_ITER_WARMUP,
-    "bradley_terry_3": DEFAULT_ITER_WARMUP,
-    "bradley_terry_4": DEFAULT_ITER_WARMUP,
-    "poisson_1": DEFAULT_ITER_WARMUP,
-    "poisson_2": DEFAULT_ITER_WARMUP,
-    "poisson_3": DEFAULT_ITER_WARMUP,
-    "poisson_4": DEFAULT_ITER_WARMUP,
-    "poisson_5": DEFAULT_ITER_WARMUP,
-    "bad_prior_example": 100,
-    "nice_prior_example": 100,
-}
-
-ITER_SAMPLING = {
-    "bradley_terry_1": DEFAULT_ITER_SAMPLING,
-    "bradley_terry_2": DEFAULT_ITER_SAMPLING,
-    "bradley_terry_3": DEFAULT_ITER_SAMPLING,
-    "bradley_terry_4": DEFAULT_ITER_SAMPLING,
-    "poisson_1": DEFAULT_ITER_SAMPLING,
-    "poisson_2": DEFAULT_ITER_SAMPLING,
-    "poisson_3": DEFAULT_ITER_SAMPLING,
-    "poisson_4": DEFAULT_ITER_SAMPLING,
-    "poisson_5": DEFAULT_ITER_SAMPLING,
-    "bad_prior_example": 100,
-    "nice_prior_example": 100,
-}
-
 ADAPT_DELTA = 0.8
 MAX_TREE_DEPTH = 10
 
@@ -47,3 +19,41 @@ model_kwargs = {
     "adapt_delta": ADAPT_DELTA,
     "max_treedepth": MAX_TREE_DEPTH,
 }
+
+
+def get_iter_warmup(model_name: str) -> int:
+    """
+    Get the number of warmup iterations for a specific model.
+
+    Args:
+        model_name: Name of the model to get warmup iterations for.
+
+    Returns:
+        Number of warmup iterations for the specified model, or DEFAULT_ITER_WARMUP
+        if the model is not found in the configuration.
+    """
+    ITER_WARMUP = {
+        "bad_prior_example": 100,
+        "nice_prior_example": 100,
+    }
+
+    return ITER_WARMUP.get(model_name, DEFAULT_ITER_WARMUP)
+
+
+def get_iter_sampling(model_name: str) -> int:
+    """
+    Get the number of sampling iterations for a specific model.
+
+    Args:
+        model_name: Name of the model to get sampling iterations for.
+
+    Returns:
+        Number of sampling iterations for the specified model, or DEFAULT_ITER_SAMPLING
+        if the model is not found in the configuration.
+    """
+    ITER_SAMPLING = {
+        "bad_prior_example": 100,
+        "nice_prior_example": 100,
+    }
+
+    return ITER_SAMPLING.get(model_name, DEFAULT_ITER_SAMPLING)
