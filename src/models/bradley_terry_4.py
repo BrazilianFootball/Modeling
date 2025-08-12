@@ -1,3 +1,4 @@
+from src.features.bradley_terry_generators import data_generator_bt_4
 from src.features.constants import (
     N_SIMS,
     generator_kwargs,
@@ -5,7 +6,6 @@ from src.features.constants import (
     get_iter_warmup,
     model_kwargs,
 )
-from src.features.generators import data_generator_bt_4
 from src.features.utils import run_model
 
 if __name__ == "__main__":
