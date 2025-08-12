@@ -5,7 +5,7 @@ from src.features.constants import (
     get_iter_warmup,
     model_kwargs,
 )
-from src.features.generators import data_generator_poisson_2
+from src.features.poisson_generators import data_generator_poisson_2
 from src.features.utils import run_model
 
 if __name__ == "__main__":
