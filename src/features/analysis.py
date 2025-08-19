@@ -15,11 +15,20 @@ MODELS = [
     "bradley_terry_2",
     "bradley_terry_3",
     "bradley_terry_4",
+    "bradley_terry_5",
+    "bradley_terry_6",
+    "bradley_terry_7",
+    "bradley_terry_8",
     "poisson_1",
     "poisson_2",
     "poisson_3",
     "poisson_4",
     "poisson_5",
+    "poisson_6",
+    "poisson_7",
+    "poisson_8",
+    "poisson_9",
+    "poisson_10",
 ]
 
 
