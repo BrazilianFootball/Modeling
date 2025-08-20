@@ -66,6 +66,48 @@ def create_sum_zero_vector(n_elements: int, variance: float = 1) -> np.ndarray:
     return vector
 
 
+def simulate_bradley_terry(
+    home_log_force: np.ndarray,
+    away_log_force: np.ndarray,
+    kappa: float,
+) -> np.ndarray:
+    """
+    Simulate match results using the Bradley-Terry model with ties.
+
+    Args:
+        home_log_force (np.ndarray): Log-strengths of the home teams for each match.
+        away_log_force (np.ndarray): Log-strengths of the away teams for each match.
+        kappa (float): Tie parameter controlling the likelihood of draws.
+
+    Returns:
+        np.ndarray: Array of simulated match results.
+            1   - home win
+            0   - away win
+            0.5 - tie
+    """
+    home_force = np.exp(home_log_force)
+    away_force = np.exp(away_log_force)
+    tie_force = kappa * (home_force * away_force) ** (1 / 2)
+    total_force = home_force + away_force + tie_force
+
+    prob_home = home_force / total_force
+    prob_away = away_force / total_force
+    prob_tie = 1 - prob_home - prob_away
+
+    probs = np.column_stack([prob_home, prob_away, prob_tie])
+    random_vals = np.random.uniform(size=len(home_log_force))
+    cumulative_probs = np.cumsum(probs, axis=1)
+
+    results = np.zeros(len(home_log_force))
+    results[random_vals < cumulative_probs[:, 0]] = 1
+    results[
+        (random_vals >= cumulative_probs[:, 0]) & (random_vals < cumulative_probs[:, 1])
+    ] = 0
+    results[random_vals >= cumulative_probs[:, 1]] = 0.5
+
+    return results
+
+
 def data_generator_bt(
     *,
     seed: Optional[int] = None,
@@ -137,26 +179,7 @@ def data_generator_bt(
 
     home_log_force += variables.get("log_home_advantage", 0)
     kappa = variables.get("kappa", 0)
-
-    home_force = np.exp(home_log_force)
-    away_force = np.exp(away_log_force)
-    tie_force = kappa * (home_force * away_force) ** (1 / 2)
-    total_force = home_force + away_force + tie_force
-
-    prob_home = home_force / total_force
-    prob_away = away_force / total_force
-    prob_tie = 1 - prob_home - prob_away
-
-    probs = np.column_stack([prob_home, prob_away, prob_tie])
-    random_vals = np.random.uniform(size=len(home_teams))
-    cumulative_probs = np.cumsum(probs, axis=1)
-
-    results = np.zeros(len(home_teams))
-    results[random_vals < cumulative_probs[:, 0]] = 1
-    results[
-        (random_vals >= cumulative_probs[:, 0]) & (random_vals < cumulative_probs[:, 1])
-    ] = 0
-    results[random_vals >= cumulative_probs[:, 1]] = 0.5
+    results = simulate_bradley_terry(home_log_force, away_log_force, kappa)
 
     return {
         "variables": variables,
