@@ -69,7 +69,7 @@ def create_sum_zero_vector(n_elements: int, variance: float = 1) -> np.ndarray:
 def simulate_bradley_terry(
     home_log_force: np.ndarray,
     away_log_force: np.ndarray,
-    kappa: float,
+    kappa: np.ndarray,
 ) -> np.ndarray:
     """
     Simulate match results using the Bradley-Terry model with ties.
@@ -77,7 +77,7 @@ def simulate_bradley_terry(
     Args:
         home_log_force (np.ndarray): Log-strengths of the home teams for each match.
         away_log_force (np.ndarray): Log-strengths of the away teams for each match.
-        kappa (float): Tie parameter controlling the likelihood of draws.
+        kappa (np.ndarray): Tie parameter controlling the likelihood of draws.
 
     Returns:
         np.ndarray: Array of simulated match results.
@@ -178,7 +178,7 @@ def data_generator_bt(
         variables["kappa"] = abs(np.random.normal(0, 1))
 
     home_log_force += variables.get("log_home_advantage", 0)
-    kappa = variables.get("kappa", 0)
+    kappa = variables.get("kappa", 0) * np.ones(len(home_teams))
     results = simulate_bradley_terry(home_log_force, away_log_force, kappa)
 
     return {
