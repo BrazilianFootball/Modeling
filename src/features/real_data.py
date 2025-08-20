@@ -5,6 +5,7 @@ import os
 import shutil
 from typing import Dict, List
 
+import matplotlib.pyplot as plt
 import cmdstanpy
 import numpy as np
 import pandas as pd
@@ -373,14 +374,47 @@ def simulate_competition(samples: pd.DataFrame, team_mapping: Dict[int, str], mo
                     points_matrix[home_idx, rd, :] = home_win * 3 + tie * 1
                     points_matrix[away_idx, rd, :] = away_win * 3 + tie * 1
 
+    median_points = np.median(points_matrix, axis=2)
+    p95_points = np.percentile(points_matrix, 95, axis=2)
+    p5_points = np.percentile(points_matrix, 5, axis=2)
 
+    final_points = np.array([current_scenario[team][-1] for team in team_mapping.values()])
+    sorted_indices = np.argsort(-final_points)
+    sorted_team_names = [list(team_mapping.values())[i] for i in sorted_indices]
 
-    print(points_matrix.shape)
-    print(np.median(points_matrix, axis=2).shape)
-    print(np.percentile(points_matrix, 95, axis=2).shape)
-    print(np.percentile(points_matrix, 5, axis=2).shape)
-    print(current_scenario)
-    print(team_mapping)
+    n_rounds = median_points.shape[1]
+    last_rounds = num_rounds + np.arange(n_rounds - n_matches_per_club, n_rounds) + 1
+    fig, axes = plt.subplots(4, 5, figsize=(12, 8), sharex=True, sharey=True)
+    axes = axes.flatten()
+
+    for idx, team_idx in enumerate(sorted_indices):
+        ax = axes[idx]
+        points_at_current_round = current_scenario[sorted_team_names[idx]][num_rounds-1]
+        med = median_points[team_idx, :] + points_at_current_round
+        p95 = p95_points[team_idx, :] + points_at_current_round
+        p5 = p5_points[team_idx, :] + points_at_current_round
+        rounds = np.arange(1, 39)
+
+        team_points = current_scenario[sorted_team_names[idx]]
+
+        ax.plot(last_rounds, med, color="blue")
+        ax.fill_between(last_rounds, p5, p95, color="blue", alpha=0.2)
+        ax.plot(rounds, team_points, color="red", linestyle="--", linewidth=1.5)
+        nome_time = [k for k, v in team_mapping.items() if v == team_idx]
+        if nome_time:
+            subtitulo = nome_time[0]
+        else:
+            subtitulo = sorted_team_names[idx]
+        ax.set_title(subtitulo, fontsize=10)
+        ax.grid(True, linestyle="--", alpha=0.5)
+        if idx % 5 == 0:
+            ax.set_ylabel("Points")
+        if idx >= 15:
+            ax.set_xlabel("Rounds")
+
+    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+    plt.suptitle("Evolution of points by team (sorted by final points)", fontsize=16)
+    plt.show()
     
 
 def run_real_data_model(model_name: str, year: int, num_rounds: int = 380):
