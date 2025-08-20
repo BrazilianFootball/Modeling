@@ -3,14 +3,15 @@
 import json
 import os
 import shutil
-from typing import Dict, List
+from typing import Any, Dict, List, Tuple
 
-import matplotlib.pyplot as plt
 import cmdstanpy
 import numpy as np
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objs as go
 import plotly.io as pio
+import plotly.subplots as psub
 from constants import model_kwargs
 from generators import simulate_bradley_terry
 
@@ -30,13 +31,13 @@ IGNORE_COLS = [
 NUM_TEAMS = 20
 
 
-def generate_real_data_stan_input(year: int, num_rounds: int = 38):
+def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
     """
-    Load and process game data for the Bradley-Terry and Poisson models,
-    then save the processed data as JSON files in the real_data directory.
+    Load and process real Serie A game data for a given year and number of rounds,
+    and save the processed data as JSON files for use with the Bradley-Terry and Poisson models.
 
     Args:
-        year (int): Year of the games to load and process.
+        year (int): The year of the games to load and process.
         num_rounds (int, optional): Number of rounds to process. Defaults to 38.
     """
     path = os.path.join(os.path.dirname(__file__), "../../../Data/results/processed/")
@@ -45,14 +46,14 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38):
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    team_to_index = {}
-    team_names = []
+    team_to_index: Dict[str, int] = {}
+    team_names: List[str] = []
 
     team1: List[int] = []
     team2: List[int] = []
     goals_team1_list: List[int] = []
     goals_team2_list: List[int] = []
-    results = []
+    results: List[float] = []
     for game_data in data.values():
         if len(team1) > num_rounds * 10:
             break
@@ -120,14 +121,14 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38):
     print(f"Data saved successfully in {output_dir}.")
 
 
-def run_model_with_real_data(model_name: str, year: int, num_rounds: int = 38):
+def run_model_with_real_data(
+    model_name: str, year: int, num_rounds: int = 38
+) -> Tuple[cmdstanpy.CmdStanMCMC, Dict[int, str], str]:
     """
-    Run the specified statistical model (Bradley-Terry or Poisson)
-    using real data for a given year.
-
-    This function loads the appropriate data file, prepares the output directories,
-    compiles the corresponding Stan model, and runs the sampling procedure.
-    The resulting samples are saved to disk.
+    Run the specified statistical model (Bradley-Terry or Poisson) using real data
+    for a given year and number of rounds. Loads the appropriate data file, prepares
+    output directories, compiles the Stan model, and runs sampling. Saves the resulting
+    samples to disk.
 
     Args:
         model_name (str): The name of the model to run ("bradley_terry" or "poisson").
@@ -135,7 +136,10 @@ def run_model_with_real_data(model_name: str, year: int, num_rounds: int = 38):
         num_rounds (int, optional): Number of rounds to use. Defaults to 38.
 
     Returns:
-        tuple: (fit, team_mapping, model_name_dir)
+        Tuple[cmdstanpy.CmdStanMCMC, Dict[int, str], str]:
+            fit: The CmdStanPy fit object.
+            team_mapping: Dictionary mapping team indices to team names.
+            model_name_dir: Directory where model results are saved.
     """
     save_dir = os.path.join(os.path.dirname(__file__), "../../real_data/results")
     os.makedirs(save_dir, exist_ok=True)
@@ -155,7 +159,9 @@ def run_model_with_real_data(model_name: str, year: int, num_rounds: int = 38):
     ) as f:
         data = json.load(f)
 
-    team_mapping = {i + 1: team_name for i, team_name in enumerate(data["team_names"])}
+    team_mapping: Dict[int, str] = {
+        i + 1: team_name for i, team_name in enumerate(data["team_names"])
+    }
     del data["team_names"]
     fit = stan_model.sample(data=data, **model_kwargs)
     fit.save_csvfiles(f"{model_name_dir}/{year}_{num_rounds}_samples")
@@ -163,8 +169,21 @@ def run_model_with_real_data(model_name: str, year: int, num_rounds: int = 38):
     return fit, team_mapping, model_name_dir
 
 
-def set_team_strengths(samples: pd.DataFrame, team_mapping: Dict[int, str]):
-    column_mapping = {}
+def set_team_strengths(
+    samples: pd.DataFrame, team_mapping: Dict[int, str]
+) -> pd.DataFrame:
+    """
+    Rename and process the columns of the samples DataFrame to map team indices to team names,
+    and compute the overall team strengths depending on the model structure.
+
+    Args:
+        samples (pd.DataFrame): DataFrame containing the samples from the model.
+        team_mapping (Dict[int, str]): Mapping from team indices to team names.
+
+    Returns:
+        pd.DataFrame: DataFrame with columns renamed to team names and team strengths computed.
+    """
+    column_mapping: Dict[str, str] = {}
     for col in samples.columns:
         if "[" not in col:
             continue
@@ -205,16 +224,17 @@ def set_team_strengths(samples: pd.DataFrame, team_mapping: Dict[int, str]):
             ) / 2 - (samples[team + " (def home)"] - samples[team + " (def away)"]) / 2
     return samples
 
+
 def generate_boxplot(
     samples: pd.DataFrame,
     year: int,
     save_dir: str,
     model_name: str,
     num_rounds: int,
-):
+) -> None:
     """
-    Generate a Plotly boxplot of the Bradley-Terry model's team strengths and save it as a PNG file
-    in the same directory as the model results.
+    Generate a Plotly boxplot of the team strengths and save it as a PNG file
+    in the specified directory.
 
     Args:
         samples (pd.DataFrame): DataFrame containing the samples from the model.
@@ -224,7 +244,7 @@ def generate_boxplot(
         num_rounds (int): Number of rounds used in the model.
 
     Returns:
-        fig: Plotly figure object.
+        None
     """
     samples_long = samples.melt(var_name="Team", value_name="Strength")
     team_means = (
@@ -264,7 +284,16 @@ def generate_boxplot(
     print(f"Boxplot saved as PNG in: {file_path}")
 
 
-def simulate_competition(samples: pd.DataFrame, team_mapping: Dict[int, str], model_name: str, year: int, num_rounds: int, num_simulations: int = 1000):
+def load_real_data(year: int) -> Dict[str, Any]:
+    """
+    Load the real data for a given year and number of rounds.
+
+    Args:
+        year (int): The year of the data to load.
+
+    Returns:
+        Dict[str, Any]: The loaded data dictionary.
+    """
     try:
         with open(
             f"real_data/inputs/poisson_data_{year}_38.json",
@@ -280,19 +309,33 @@ def simulate_competition(samples: pd.DataFrame, team_mapping: Dict[int, str], mo
             encoding="utf-8",
         ) as f:
             data = json.load(f)
-    
+    return data
+
+
+def get_real_points_evolution(
+    data: Dict[str, Any], team_mapping: Dict[int, str]
+) -> Dict[str, List[int]]:
+    """
+    Calculate the current points evolution for each team based on real results.
+
+    Args:
+        data (Dict[str, Any]): Real data loaded.
+        team_mapping (Dict[int, str]): Mapping from team indices to names.
+
+    Returns:
+        Dict[str, List[int]]: Dictionary with the points evolution for each team.
+    """
     home_team = data["team1"]
     away_team = data["team2"]
+    home_team_names = [team_mapping[team] for team in home_team]
+    away_team_names = [team_mapping[team] for team in away_team]
 
-    home_team_names = [team_mapping[team] for team in data["team1"]]
-    away_team_names = [team_mapping[team] for team in data["team2"]]
+    current_scenario: Dict[str, List[int]] = {
+        team: [] for team in team_mapping.values()
+    }
+    accumulated_points: Dict[str, int] = {team: 0 for team in team_mapping.values()}
 
-    current_scenario = {team: [] for team in team_mapping.values()}
-    accumulated_points = {team: 0 for team in team_mapping.values()}
-
-    for i in range(len(home_team_names)):
-        home = home_team_names[i]
-        away = away_team_names[i]
+    for i, (home, away) in enumerate(zip(home_team_names, away_team_names)):
         goals_home = data["goals_team1"][i]
         goals_away = data["goals_team2"][i]
         if goals_home > goals_away:
@@ -311,121 +354,364 @@ def simulate_competition(samples: pd.DataFrame, team_mapping: Dict[int, str], mo
         current_scenario[home].append(accumulated_points[home])
         current_scenario[away].append(accumulated_points[away])
 
+    return current_scenario
 
+
+def generate_points_matrix_bradley_terry(
+    samples: pd.DataFrame,
+    team_mapping: Dict[int, str],
+    data: Dict[str, Any],
+    num_rounds: int,
+    num_simulations: int,
+    n_matches_per_club: int,
+) -> np.ndarray:
+    """
+    Generate a points matrix for the remainder of the season using the Bradley-Terry model.
+
+    Args:
+        samples (pd.DataFrame): Posterior samples of team strengths.
+        team_mapping (Dict[int, str]): Mapping from team indices to names.
+        data (Dict[str, Any]): Real data loaded.
+        num_rounds (int): Number of rounds already played.
+        num_simulations (int): Number of simulations to run.
+        n_matches_per_club (int): Number of matches per club to simulate.
+
+    Returns:
+        np.ndarray: Points matrix of shape (n_teams, n_matches_per_club, num_simulations).
+    """
+    home_team = data["team1"]
+    away_team = data["team2"]
+    home_team_names = [team_mapping[team] for team in home_team]
+    away_team_names = [team_mapping[team] for team in away_team]
     teams = list(team_mapping.values())
     n_teams = len(teams)
-    n_matches_per_club = 38 - num_rounds
     points_matrix = np.zeros((n_teams, n_matches_per_club, num_simulations), dtype=int)
-    samples_indices = np.random.randint(0, len(samples), size=(n_matches_per_club, num_simulations))
-    if "bradley_terry" in model_name:
-        for rd in range(n_matches_per_club):
-            for game in range(10):
-                home_strengths = samples.iloc[samples_indices[rd]][home_team_names[(num_rounds + rd) * 10 + game]].values
-                away_strengths = samples.iloc[samples_indices[rd]][away_team_names[(num_rounds + rd) * 10 + game]].values
-                if "kappa" in samples.columns:
-                    kappa_values = samples.iloc[samples_indices[rd]]["kappa"].values
-                else:
-                    kappa_values = np.zeros(num_simulations)
+    samples_indices = np.random.randint(
+        0, len(samples), size=(n_matches_per_club, num_simulations)
+    )
 
-                results = simulate_bradley_terry(home_strengths, away_strengths, kappa_values)
-                home_idx = home_team[(num_rounds + rd) * 10 + game] - 1
-                away_idx = away_team[(num_rounds + rd) * 10 + game] - 1
-                if rd > 0:
-                    points_matrix[home_idx, rd, :] = points_matrix[home_idx, rd - 1, :] + (results == 1) * 3 + (results == 0.5) * 1
-                    points_matrix[away_idx, rd, :] = points_matrix[away_idx, rd - 1, :] + (results == 0) * 3 + (results == 0.5) * 1
-                else:
-                    points_matrix[home_idx, rd, :] = (results == 1) * 3 + (results == 0.5) * 1
-                    points_matrix[away_idx, rd, :] = (results == 0) * 3 + (results == 0.5) * 1
-    else:
-        for rd in range(n_matches_per_club):
-            if "nu" in samples.columns:
-                nu = samples.iloc[samples_indices[rd]]["nu"].values
+    for rd in range(n_matches_per_club):
+        for game in range(10):
+            home_strengths = samples.iloc[samples_indices[rd]][
+                home_team_names[(num_rounds + rd) * 10 + game]
+            ].values
+            away_strengths = samples.iloc[samples_indices[rd]][
+                away_team_names[(num_rounds + rd) * 10 + game]
+            ].values
+            if "kappa" in samples.columns:
+                kappa_values = samples.iloc[samples_indices[rd]]["kappa"].values
             else:
-                nu = np.zeros(num_simulations)
-            for game in range(10):
-                home_name = home_team_names[(num_rounds + rd) * 10 + game]
-                away_name = away_team_names[(num_rounds + rd) * 10 + game]
-                if home_name + " (atk home)" in samples.columns:
-                    home_strengths = samples.iloc[samples_indices[rd]][home_name + " (atk home)"].values + samples.iloc[samples_indices[rd]][away_name + " (def away)"].values
-                    away_strengths = samples.iloc[samples_indices[rd]][away_name + " (atk away)"].values + samples.iloc[samples_indices[rd]][home_name + " (def home)"].values
-                elif home_name + " (atk)" in samples.columns:
-                    home_strengths = samples.iloc[samples_indices[rd]][home_name + " (atk)"].values + samples.iloc[samples_indices[rd]][away_name + " (def)"].values
-                    away_strengths = samples.iloc[samples_indices[rd]][away_name + " (atk)"].values + samples.iloc[samples_indices[rd]][home_name + " (def)"].values
-                else:
-                    home_strengths = samples.iloc[samples_indices[rd]][home_name].values
-                    away_strengths = samples.iloc[samples_indices[rd]][away_name].values
+                kappa_values = np.zeros(num_simulations)
 
-                home_strengths = np.exp(home_strengths + nu)
-                away_strengths = np.exp(away_strengths + nu)
+            results = simulate_bradley_terry(
+                home_strengths, away_strengths, kappa_values
+            )
+            home_idx = home_team[(num_rounds + rd) * 10 + game] - 1
+            away_idx = away_team[(num_rounds + rd) * 10 + game] - 1
+            home_new_points = (results == 1) * 3 + (results == 0.5) * 1
+            away_new_points = (results == 0) * 3 + (results == 0.5) * 1
+            if rd > 0:
+                points_matrix[home_idx, rd, :] = (
+                    points_matrix[home_idx, rd - 1, :] + home_new_points
+                )
+                points_matrix[away_idx, rd, :] = (
+                    points_matrix[away_idx, rd - 1, :] + away_new_points
+                )
+            else:
+                points_matrix[home_idx, rd, :] = home_new_points
+                points_matrix[away_idx, rd, :] = away_new_points
+    return points_matrix
 
-                home_goals = np.random.poisson(home_strengths)
-                away_goals = np.random.poisson(away_strengths)
 
-                home_win = home_goals > away_goals
-                away_win = home_goals < away_goals
-                tie = home_goals == away_goals
+def generate_points_matrix_poisson(
+    samples: pd.DataFrame,
+    team_mapping: Dict[int, str],
+    data: Dict[str, Any],
+    num_rounds: int,
+    num_simulations: int,
+    n_matches_per_club: int,
+) -> np.ndarray:
+    """
+    Generate a points matrix for the remainder of the season using the Poisson model.
 
-                home_idx = home_team[(num_rounds + rd) * 10 + game] - 1
-                away_idx = away_team[(num_rounds + rd) * 10 + game] - 1
-                if rd > 0:
-                    points_matrix[home_idx, rd, :] = points_matrix[home_idx, rd - 1, :] + home_win * 3 + tie * 1
-                    points_matrix[away_idx, rd, :] = points_matrix[away_idx, rd - 1, :] + away_win * 3 + tie * 1
-                else:
-                    points_matrix[home_idx, rd, :] = home_win * 3 + tie * 1
-                    points_matrix[away_idx, rd, :] = away_win * 3 + tie * 1
+    Args:
+        samples (pd.DataFrame): Posterior samples of team strengths.
+        team_mapping (Dict[int, str]): Mapping from team indices to names.
+        data (Dict[str, Any]): Real data loaded.
+        num_rounds (int): Number of rounds already played.
+        num_simulations (int): Number of simulations to run.
+        n_matches_per_club (int): Number of matches per club to simulate.
 
+    Returns:
+        np.ndarray: Points matrix of shape (n_teams, n_matches_per_club, num_simulations).
+    """
+    home_team = data["team1"]
+    away_team = data["team2"]
+    home_team_names = [team_mapping[team] for team in home_team]
+    away_team_names = [team_mapping[team] for team in away_team]
+    teams = list(team_mapping.values())
+    n_teams = len(teams)
+    points_matrix = np.zeros((n_teams, n_matches_per_club, num_simulations), dtype=int)
+    samples_indices = np.random.randint(
+        0, len(samples), size=(n_matches_per_club, num_simulations)
+    )
+
+    for rd in range(n_matches_per_club):
+        if "nu" in samples.columns:
+            nu = samples.iloc[samples_indices[rd]]["nu"].values
+        else:
+            nu = np.zeros(num_simulations)
+        for game in range(10):
+            home_name = home_team_names[(num_rounds + rd) * 10 + game]
+            away_name = away_team_names[(num_rounds + rd) * 10 + game]
+            if home_name + " (atk home)" in samples.columns:
+                atk_home = samples.iloc[samples_indices[rd]][
+                    home_name + " (atk home)"
+                ].values
+                def_away = samples.iloc[samples_indices[rd]][
+                    away_name + " (def away)"
+                ].values
+                atk_away = samples.iloc[samples_indices[rd]][
+                    away_name + " (atk away)"
+                ].values
+                def_home = samples.iloc[samples_indices[rd]][
+                    home_name + " (def home)"
+                ].values
+                home_strengths = atk_home + def_away
+                away_strengths = atk_away + def_home
+            elif home_name + " (atk)" in samples.columns:
+                atk_strength = samples.iloc[samples_indices[rd]][
+                    home_name + " (atk)"
+                ].values
+                def_strength = samples.iloc[samples_indices[rd]][
+                    away_name + " (def)"
+                ].values
+                home_strengths = atk_strength + def_strength
+                away_strengths = atk_strength + def_strength
+            else:
+                home_strengths = samples.iloc[samples_indices[rd]][home_name].values
+                away_strengths = samples.iloc[samples_indices[rd]][away_name].values
+
+            home_strengths = np.exp(home_strengths + nu)
+            away_strengths = np.exp(away_strengths + nu)
+
+            home_goals = np.random.poisson(home_strengths)
+            away_goals = np.random.poisson(away_strengths)
+
+            home_win = home_goals > away_goals
+            away_win = home_goals < away_goals
+            tie = home_goals == away_goals
+
+            home_idx = home_team[(num_rounds + rd) * 10 + game] - 1
+            away_idx = away_team[(num_rounds + rd) * 10 + game] - 1
+            if rd > 0:
+                points_matrix[home_idx, rd, :] = (
+                    points_matrix[home_idx, rd - 1, :] + home_win * 3 + tie * 1
+                )
+                points_matrix[away_idx, rd, :] = (
+                    points_matrix[away_idx, rd - 1, :] + away_win * 3 + tie * 1
+                )
+            else:
+                points_matrix[home_idx, rd, :] = home_win * 3 + tie * 1
+                points_matrix[away_idx, rd, :] = away_win * 3 + tie * 1
+    return points_matrix
+
+
+def simulate_competition(
+    samples: pd.DataFrame,
+    team_mapping: Dict[int, str],
+    model_name: str,
+    year: int,
+    num_rounds: int,
+    num_simulations: int = 1000,
+) -> Tuple[np.ndarray, Dict[str, List[int]]]:
+    """
+    Simulate the remainder of the Serie A season using posterior samples from the model,
+    generating possible points trajectories for each team.
+
+    Args:
+        samples (pd.DataFrame): DataFrame with model samples.
+        team_mapping (Dict[int, str]): Mapping from team indices to names.
+        model_name (str): Model name.
+        year (int): Data year.
+        num_rounds (int): Number of rounds already played.
+        num_simulations (int, optional): Number of simulations. Default: 1000.
+
+    Returns:
+        Tuple[np.ndarray, Dict[str, List[int]]]:
+            points_matrix: Array of simulated points for each team, round, and simulation.
+            current_scenario: Dictionary with the actual points evolution for each team.
+    """
+    data = load_real_data(year)
+    n_matches_per_club = 38 - num_rounds
+
+    current_scenario = get_real_points_evolution(data, team_mapping)
+
+    if "bradley_terry" in model_name:
+        points_matrix = generate_points_matrix_bradley_terry(
+            samples, team_mapping, data, num_rounds, num_simulations, n_matches_per_club
+        )
+    else:
+        points_matrix = generate_points_matrix_poisson(
+            samples, team_mapping, data, num_rounds, num_simulations, n_matches_per_club
+        )
+
+    return points_matrix, current_scenario
+
+
+def generate_points_evolution_by_team(
+    points_matrix: np.ndarray,
+    current_scenario: Dict[str, List[int]],
+    team_mapping: Dict[int, str],
+    model_name: str,
+    year: int,
+    num_rounds: int,
+    save_dir: str,
+) -> None:
+    """
+    Generate and save a multi-panel plot showing the evolution of points for each team,
+    including actual and simulated points trajectories.
+
+    Args:
+        points_matrix (np.ndarray): Simulated points for each team, round, and simulation.
+        current_scenario (Dict[str, List[int]]): Actual points evolution for each team.
+        team_mapping (Dict[int, str]): Mapping from team indices to team names.
+        model_name (str): Name of the model.
+        year (int): Year of the data.
+        num_rounds (int): Number of rounds already played.
+        save_dir (str): Directory to save the plot.
+
+    Returns:
+        None
+    """
+    n_matches_per_club = 38 - num_rounds
     median_points = np.median(points_matrix, axis=2)
     p95_points = np.percentile(points_matrix, 95, axis=2)
     p5_points = np.percentile(points_matrix, 5, axis=2)
 
-    final_points = np.array([current_scenario[team][-1] for team in team_mapping.values()])
+    final_points = np.array(
+        [current_scenario[team][-1] for team in team_mapping.values()]
+    )
     sorted_indices = np.argsort(-final_points)
     sorted_team_names = [list(team_mapping.values())[i] for i in sorted_indices]
 
     n_rounds = median_points.shape[1]
     last_rounds = num_rounds + np.arange(n_rounds - n_matches_per_club, n_rounds) + 1
-    fig, axes = plt.subplots(4, 5, figsize=(12, 8), sharex=True, sharey=True)
-    axes = axes.flatten()
+
+    fig = psub.make_subplots(
+        rows=4,
+        cols=5,
+        subplot_titles=[
+            [k for k, v in team_mapping.items() if v == team_idx][0]
+            if [k for k, v in team_mapping.items() if v == team_idx]
+            else sorted_team_names[idx]
+            for idx, team_idx in enumerate(sorted_indices)
+        ],
+        shared_xaxes=True,
+        shared_yaxes=True,
+        horizontal_spacing=0.04,
+        vertical_spacing=0.07,
+    )
 
     for idx, team_idx in enumerate(sorted_indices):
-        ax = axes[idx]
-        points_at_current_round = current_scenario[sorted_team_names[idx]][num_rounds-1]
+        row = idx // 5 + 1
+        col = idx % 5 + 1
+
+        points_at_current_round = current_scenario[sorted_team_names[idx]][
+            num_rounds - 1
+        ]
         med = median_points[team_idx, :] + points_at_current_round
         p95 = p95_points[team_idx, :] + points_at_current_round
         p5 = p5_points[team_idx, :] + points_at_current_round
         rounds = np.arange(1, 39)
-
         team_points = current_scenario[sorted_team_names[idx]]
 
-        ax.plot(last_rounds, med, color="blue")
-        ax.fill_between(last_rounds, p5, p95, color="blue", alpha=0.2)
-        ax.plot(rounds, team_points, color="red", linestyle="--", linewidth=1.5)
-        nome_time = [k for k, v in team_mapping.items() if v == team_idx]
-        if nome_time:
-            subtitulo = nome_time[0]
-        else:
-            subtitulo = sorted_team_names[idx]
-        ax.set_title(subtitulo, fontsize=10)
-        ax.grid(True, linestyle="--", alpha=0.5)
-        if idx % 5 == 0:
-            ax.set_ylabel("Points")
-        if idx >= 15:
-            ax.set_xlabel("Rounds")
+        fig.add_trace(
+            go.Scatter(
+                x=last_rounds,
+                y=med,
+                mode="lines",
+                line={"color": "blue"},
+                name="Median simulated",
+                showlegend=(idx == 0),
+            ),
+            row=row,
+            col=col,
+        )
 
-    plt.tight_layout(rect=[0, 0.03, 1, 0.95])
-    plt.suptitle("Evolution of points by team (sorted by final points)", fontsize=16)
-    plt.show()
-    
+        fig.add_trace(
+            go.Scatter(
+                x=np.concatenate([last_rounds, last_rounds[::-1]]),
+                y=np.concatenate([p5, p95[::-1]]),
+                fill="toself",
+                fillcolor="rgba(0, 0, 255, 0.2)",
+                line={"color": "rgba(255,255,255,0)"},
+                hoverinfo="skip",
+                name="90% interval",
+                showlegend=(idx == 0),
+            ),
+            row=row,
+            col=col,
+        )
 
-def run_real_data_model(model_name: str, year: int, num_rounds: int = 380):
+        fig.add_trace(
+            go.Scatter(
+                x=rounds,
+                y=team_points,
+                mode="lines",
+                line={"color": "red", "dash": "dash", "width": 1.5},
+                name="Actual",
+                showlegend=(idx == 0),
+            ),
+            row=row,
+            col=col,
+        )
+
+    for i in range(20):
+        row = i // 5 + 1
+        col = i % 5 + 1
+        if row == 4:
+            fig.update_xaxes(title_text="Rounds", row=row, col=col)
+        if col == 1:
+            fig.update_yaxes(title_text="Points", row=row, col=col)
+
+    fig.update_layout(
+        height=900,
+        width=1200,
+        title_text="Points evolution by team",
+        showlegend=True,
+        paper_bgcolor="rgba(255,255,255,1)",
+        plot_bgcolor="rgba(255,255,255,1)",
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "xanchor": "right",
+            "x": 1,
+        },
+        margin={"t": 80, "b": 40},
+    )
+
+    file_path = os.path.join(
+        save_dir, f"{model_name}_points_evolution_by_team_{year}_{num_rounds}.png"
+    )
+    pio.write_image(fig, file_path, format="png", scale=2)
+
+
+def run_real_data_model(model_name: str, year: int, num_rounds: int = 380) -> None:
     """
-    Run the specified statistical model (Bradley-Terry or Poisson)
-    using real data for a given year and generate a Plotly boxplot saved as PNG.
+    Run the specified statistical model (Bradley-Terry or Poisson) using real data
+    for a given year and number of rounds, generate a boxplot of team strengths,
+    and, if not all rounds are played, simulate the remainder of the season and
+    generate a points evolution plot.
 
     Args:
         model_name (str): The name of the model to run.
         year (int): The year of the real data to use.
         num_rounds (int, optional): Number of rounds to use. Defaults to 380.
+
+    Returns:
+        None
     """
     generate_real_data_stan_input(year, num_rounds)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
@@ -435,24 +721,42 @@ def run_real_data_model(model_name: str, year: int, num_rounds: int = 380):
     ignore_cols = [col for col in samples.columns if "raw" in col] + IGNORE_COLS
     samples = samples.drop(columns=ignore_cols)
     samples = set_team_strengths(samples, team_mapping)
-    generate_boxplot(samples[list(team_mapping.values())], year, model_save_dir, model_name, num_rounds)
+    generate_boxplot(
+        samples[list(team_mapping.values())],
+        year,
+        model_save_dir,
+        model_name,
+        num_rounds,
+    )
     if num_rounds != 38:
-        simulate_competition(samples, team_mapping, model_name, year, num_rounds)
+        points_matrix, current_scenario = simulate_competition(
+            samples, team_mapping, model_name, year, num_rounds
+        )
+        generate_points_evolution_by_team(
+            points_matrix,
+            current_scenario,
+            team_mapping,
+            model_name,
+            year,
+            num_rounds,
+            save_dir=model_save_dir,
+        )
+
 
 if __name__ == "__main__":
     models = [
-        # "bradley_terry_3",
-        # "bradley_terry_4",
+        "bradley_terry_3",
+        "bradley_terry_4",
         "poisson_1",
-        # "poisson_2",
-        # "poisson_3",
-        # "poisson_4",
-        # "poisson_5",
+        "poisson_2",
+        "poisson_3",
+        "poisson_4",
+        "poisson_5",
     ]
 
     for model in models:
-        # run_real_data_model(model, 2024, num_rounds=38)
-        # run_real_data_model(model, 2024, num_rounds=5)
-        # run_real_data_model(model, 2024, num_rounds=10)
-        # run_real_data_model(model, 2024, num_rounds=15)
+        run_real_data_model(model, 2024, num_rounds=38)
+        run_real_data_model(model, 2024, num_rounds=5)
+        run_real_data_model(model, 2024, num_rounds=10)
+        run_real_data_model(model, 2024, num_rounds=15)
         run_real_data_model(model, 2024, num_rounds=20)
