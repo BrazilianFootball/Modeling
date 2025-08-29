@@ -164,6 +164,8 @@ __local__
 _locally
 SBC_cache
 
+results/
+
 models/*
 !models/*.stan
 !models/README.md
