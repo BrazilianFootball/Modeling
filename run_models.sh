@@ -10,7 +10,7 @@ cd "$PROJECT_ROOT" || { echo "Could not find scripts directory"; exit 1; }
 
 run_script() {
     echo -e "${BLUE}Running $1...${NC}"
-    if python "src/models/$1"; then
+    if caffeinate -dims python "src/models/$1"; then
         echo -e "${GREEN}✓ $1 executed successfully!${NC}"
         return 0
     else
