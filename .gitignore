@@ -164,7 +164,7 @@ __local__
 _locally
 SBC_cache
 
-results/
+results/**/*.csv
 
 models/*
 !models/*.stan
