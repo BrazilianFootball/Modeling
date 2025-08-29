@@ -3,15 +3,16 @@
 import json
 import os
 import shutil
+from itertools import product
 from typing import Any, Dict, List, Tuple
 
 import cmdstanpy
 import numpy as np
 import pandas as pd
-import plotly.express as px
 import plotly.graph_objs as go
 import plotly.io as pio
 import plotly.subplots as psub
+from colors import color_mapping
 from constants import model_kwargs
 from generators import simulate_bradley_terry
 
@@ -133,7 +134,7 @@ def run_model_with_real_data(
     Args:
         model_name (str): The name of the model to run ("bradley_terry" or "poisson").
         year (int): The year of the real data to use.
-        num_rounds (int, optional): Number of rounds to use. Defaults to 38.
+        num_rounds (int, optional): Number of rounds to use on fit. Defaults to 38.
 
     Returns:
         Tuple[cmdstanpy.CmdStanMCMC, Dict[int, str], str]:
@@ -146,7 +147,7 @@ def run_model_with_real_data(
     model_name_dir = os.path.join(save_dir, model_name)
     os.makedirs(model_name_dir, exist_ok=True)
 
-    samples_dir = os.path.join(model_name_dir, f"{year}_{num_rounds}_samples")
+    samples_dir = os.path.join(model_name_dir, f"{year}_{num_rounds}")
     if os.path.exists(samples_dir):
         shutil.rmtree(samples_dir)
 
@@ -164,9 +165,9 @@ def run_model_with_real_data(
     }
     del data["team_names"]
     fit = stan_model.sample(data=data, **model_kwargs)
-    fit.save_csvfiles(f"{model_name_dir}/{year}_{num_rounds}_samples")
+    fit.save_csvfiles(samples_dir)
 
-    return fit, team_mapping, model_name_dir
+    return fit, team_mapping, samples_dir
 
 
 def set_team_strengths(
@@ -229,7 +230,6 @@ def generate_boxplot(
     samples: pd.DataFrame,
     year: int,
     save_dir: str,
-    model_name: str,
     num_rounds: int,
 ) -> None:
     """
@@ -240,7 +240,6 @@ def generate_boxplot(
         samples (pd.DataFrame): DataFrame containing the samples from the model.
         year (int): Year of the data.
         save_dir (str): Directory to save the boxplot.
-        model_name (str): Name of the model.
         num_rounds (int): Number of rounds used in the model.
 
     Returns:
@@ -248,38 +247,45 @@ def generate_boxplot(
     """
     samples_long = samples.melt(var_name="Team", value_name="Strength")
     team_means = (
-        samples_long.groupby("Team")["Strength"].mean().sort_values(ascending=False)
+        samples_long.groupby("Team")["Strength"].mean().sort_values(ascending=True)
     )
     samples_long["Team"] = pd.Categorical(
         samples_long["Team"], categories=team_means.index, ordered=True
     )
 
-    fig = px.box(
-        samples_long,
-        y="Team",
-        x="Strength",
-        color="Team",
-        category_orders={"Team": team_means.index.tolist()},
-        title=f"Strength of Teams - Serie A {year} ({num_rounds} rounds)",
+    fig = go.Figure()
+    for team in team_means.index:
+        team_data = samples_long[samples_long["Team"] == team]
+        cor = color_mapping.get(team, "rgba(0,0,0,1)")
+        fig.add_trace(
+            go.Box(
+                x=team_data["Strength"],
+                y=team_data["Team"],
+                name=team,
+                marker_color=cor,
+                boxmean=False,
+                orientation="h",
+                showlegend=False,
+            )
+        )
+
+    fig.update_layout(
+        title=f"Team Strengths - Serie A {year} ({num_rounds} rounds)",
         width=1000,
         height=700,
-        points=False,
-        template="plotly_white",
-    )
-    fig.update_layout(
-        showlegend=False,
         font={"size": 14},
         title_font={"size": 22, "family": "Arial", "color": "black"},
-        xaxis_title="Strength of Team (log-odds)",
+        xaxis_title="Team Strength (log scale)",
         yaxis_title="Teams",
         margin={"l": 80, "r": 40, "t": 80, "b": 60},
+        template="plotly_white",
+        showlegend=False,
+        yaxis={"categoryorder": "array", "categoryarray": team_means.index.tolist()},
     )
     fig.add_vline(x=0, line_dash="dash", line_color="red")
 
     os.makedirs(save_dir, exist_ok=True)
-    file_path = os.path.join(
-        save_dir, f"{model_name}_team_strengths_{year}_{num_rounds}_boxplot.png"
-    )
+    file_path = os.path.join(save_dir, "team_strengths_boxplot.png")
     pio.write_image(fig, file_path, format="png", scale=2)
     print(f"Boxplot saved as PNG in: {file_path}")
 
@@ -563,8 +569,6 @@ def generate_points_evolution_by_team(
     points_matrix: np.ndarray,
     current_scenario: Dict[str, List[int]],
     team_mapping: Dict[int, str],
-    model_name: str,
-    year: int,
     num_rounds: int,
     save_dir: str,
 ) -> None:
@@ -576,8 +580,6 @@ def generate_points_evolution_by_team(
         points_matrix (np.ndarray): Simulated points for each team, round, and simulation.
         current_scenario (Dict[str, List[int]]): Actual points evolution for each team.
         team_mapping (Dict[int, str]): Mapping from team indices to team names.
-        model_name (str): Name of the model.
-        year (int): Year of the data.
         num_rounds (int): Number of rounds already played.
         save_dir (str): Directory to save the plot.
 
@@ -617,21 +619,20 @@ def generate_points_evolution_by_team(
         row = idx // 5 + 1
         col = idx % 5 + 1
 
-        points_at_current_round = current_scenario[sorted_team_names[idx]][
-            num_rounds - 1
-        ]
+        club_name = sorted_team_names[idx]
+        club_color = color_mapping[club_name]
+
+        points_at_current_round = current_scenario[club_name][num_rounds - 1]
         med = median_points[team_idx, :] + points_at_current_round
         p95 = p95_points[team_idx, :] + points_at_current_round
         p5 = p5_points[team_idx, :] + points_at_current_round
-        rounds = np.arange(1, 39)
-        team_points = current_scenario[sorted_team_names[idx]]
-
+        team_points = current_scenario[club_name]
         fig.add_trace(
             go.Scatter(
                 x=last_rounds,
                 y=med,
                 mode="lines",
-                line={"color": "blue"},
+                line={"color": club_color},
                 name="Median simulated",
                 showlegend=(idx == 0),
             ),
@@ -639,13 +640,14 @@ def generate_points_evolution_by_team(
             col=col,
         )
 
+        club_color = club_color.replace(",1)", ",0.25)")
         fig.add_trace(
             go.Scatter(
                 x=np.concatenate([last_rounds, last_rounds[::-1]]),
                 y=np.concatenate([p5, p95[::-1]]),
                 fill="toself",
-                fillcolor="rgba(0, 0, 255, 0.2)",
-                line={"color": "rgba(255,255,255,0)"},
+                fillcolor=club_color,
+                line={"color": club_color},
                 hoverinfo="skip",
                 name="90% interval",
                 showlegend=(idx == 0),
@@ -656,7 +658,7 @@ def generate_points_evolution_by_team(
 
         fig.add_trace(
             go.Scatter(
-                x=rounds,
+                x=np.arange(1, 39),
                 y=team_points,
                 mode="lines",
                 line={"color": "red", "dash": "dash", "width": 1.5},
@@ -680,8 +682,8 @@ def generate_points_evolution_by_team(
         width=1200,
         title_text="Points evolution by team",
         showlegend=True,
-        paper_bgcolor="rgba(255,255,255,1)",
-        plot_bgcolor="rgba(255,255,255,1)",
+        paper_bgcolor="white",
+        plot_bgcolor="white",
         legend={
             "orientation": "h",
             "yanchor": "bottom",
@@ -692,13 +694,11 @@ def generate_points_evolution_by_team(
         margin={"t": 80, "b": 40},
     )
 
-    file_path = os.path.join(
-        save_dir, f"{model_name}_points_evolution_by_team_{year}_{num_rounds}.png"
-    )
+    file_path = os.path.join(save_dir, "points_evolution_by_team.png")
     pio.write_image(fig, file_path, format="png", scale=2)
 
 
-def run_real_data_model(model_name: str, year: int, num_rounds: int = 380) -> None:
+def run_real_data_model(model_name: str, year: int, num_rounds: int = 38) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
     for a given year and number of rounds, generate a boxplot of team strengths,
@@ -708,7 +708,7 @@ def run_real_data_model(model_name: str, year: int, num_rounds: int = 380) -> No
     Args:
         model_name (str): The name of the model to run.
         year (int): The year of the real data to use.
-        num_rounds (int, optional): Number of rounds to use. Defaults to 380.
+        num_rounds (int, optional): Number of rounds already played. Defaults to 38.
 
     Returns:
         None
@@ -725,7 +725,6 @@ def run_real_data_model(model_name: str, year: int, num_rounds: int = 380) -> No
         samples[list(team_mapping.values())],
         year,
         model_save_dir,
-        model_name,
         num_rounds,
     )
     if num_rounds != 38:
@@ -736,8 +735,6 @@ def run_real_data_model(model_name: str, year: int, num_rounds: int = 380) -> No
             points_matrix,
             current_scenario,
             team_mapping,
-            model_name,
-            year,
             num_rounds,
             save_dir=model_save_dir,
         )
@@ -754,9 +751,8 @@ if __name__ == "__main__":
         "poisson_5",
     ]
 
-    for model in models:
-        run_real_data_model(model, 2024, num_rounds=38)
-        run_real_data_model(model, 2024, num_rounds=5)
-        run_real_data_model(model, 2024, num_rounds=10)
-        run_real_data_model(model, 2024, num_rounds=15)
-        run_real_data_model(model, 2024, num_rounds=20)
+    seasons = [*range(2019, 2025)]
+    rounds = [38, 5, 10, 15, 20]
+
+    for model, season, actual_round in product(models, seasons, rounds):
+        run_real_data_model(model, season, num_rounds=actual_round)
