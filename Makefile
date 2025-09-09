@@ -7,7 +7,8 @@ help:
 	@echo "  make local     - Set up local virtual environment with uv"
 	@echo ""
 	@echo "🔧 Code Quality:"
-	@echo "  make check     - Check code (ruff + mypy + pylint)"
+	@echo "  make check     - Check code (ruff + mypy)"
+	@echo "  make pylint    - Run pylint separately"
 	@echo "  make format    - Format code (ruff format)"
 	@echo "  make test      - Run hooks (pre-commit)"
 	@echo ""
@@ -38,7 +39,10 @@ check:
 	@echo "🔍 Checking code quality..."
 	@uv run ruff check src/
 	@uv run mypy src/
-	@uv run pylint src/*.py
+
+pylint:
+	@echo "🔍 Running pylint..."
+	@uv run pylint src/
 
 format:
 	@echo "✨ Formatting code..."

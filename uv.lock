@@ -247,7 +247,7 @@ requires-dist = [
     { name = "plotly", specifier = ">=5.14.0" },
     { name = "plotly-express", specifier = ">=0.4.1" },
     { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.0.0" },
-    { name = "pylint", marker = "extra == 'dev'", specifier = ">=2.17.0" },
+    { name = "pylint", marker = "extra == 'dev'", specifier = "==3.3.8" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.0.0" },
     { name = "pytest-cov", marker = "extra == 'dev'", specifier = ">=4.0.0" },
     { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.1.0" },
