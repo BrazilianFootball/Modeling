@@ -1,6 +1,8 @@
+# pylint: disable=too-many-locals
+
+import json
 import os
 import warnings
-from typing import Dict, List
 
 import numpy as np
 import pandas as pd
@@ -15,30 +17,30 @@ MODELS = [
     "bradley_terry_2",
     "bradley_terry_3",
     "bradley_terry_4",
-    "bradley_terry_5",
-    "bradley_terry_6",
-    "bradley_terry_7",
-    "bradley_terry_8",
+    # "bradley_terry_5",
+    # "bradley_terry_6",
+    # "bradley_terry_7",
+    # "bradley_terry_8",
     "poisson_1",
     "poisson_2",
     "poisson_3",
     "poisson_4",
     "poisson_5",
-    "poisson_6",
-    "poisson_7",
-    "poisson_8",
-    "poisson_9",
-    "poisson_10",
+    # "poisson_6",
+    # "poisson_7",
+    # "poisson_8",
+    # "poisson_9",
+    # "poisson_10",
 ]
 
 
-def calculate_ranks(model_name: str) -> Dict:
+def calculate_ranks(model_name: str) -> dict:
     """Calculates normalized ranks for each model parameter."""
     ranks_path = f"results/{model_name}/ranks.npy"
     if os.path.exists(ranks_path):
         return np.load(ranks_path, allow_pickle=True).item()
 
-    ranks: Dict[str, Dict[int, List[float]]] = {}
+    ranks: dict[str, dict[int, list[float]]] = {}
     setup = load_model_setup(model_name)
 
     def _update_ranks(param: str, chain: int, value: float) -> None:
@@ -80,10 +82,11 @@ def has_changes(model_name: str) -> bool:
     return ranks_time < setup_time or plots_time < ranks_time
 
 
-def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> None:
+def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> None:
     """Generates plots ECDF for all parameters."""
     samples = []
     param_names = []
+    points_out_of_bounds = {}
     chain_names = [f"Chain {i}" for i in range(n_chains)]
 
     for param in tqdm(ranks.keys(), desc=f"Parameters ({model_name})"):
@@ -101,20 +104,35 @@ def generate_plots(model_name: str, ranks: Dict, n_sims: int, n_chains: int) -> 
     n_cols = min(4, n_params)
     n_rows = (n_params + n_cols - 1) // n_cols
 
-    fig = plot_ecdf(
+    fig, points_out_of_bounds["diff_plot"] = plot_ecdf(
         samples, param_names, chain_names, is_diff=True, n_rows=n_rows, n_cols=n_cols
     )
+    for param, points in points_out_of_bounds["diff_plot"].items():
+        if points > 0:
+            print(f"{param} has {points} points out of bounds on the difference plot")
     fig.write_image(f"results/{model_name}/plots/all_params_ecdf_diff.png")
 
-    fig = plot_ecdf(samples, param_names, chain_names, n_rows=n_rows, n_cols=n_cols)
+    fig, points_out_of_bounds["regular_plot"] = plot_ecdf(
+        samples, param_names, chain_names, n_rows=n_rows, n_cols=n_cols
+    )
+    for param, points in points_out_of_bounds["regular_plot"].items():
+        if points > 0:
+            print(f"{param} has {points} points out of bounds on the regular plot")
     fig.write_image(f"results/{model_name}/plots/all_params_ecdf.png")
+
+    with open(
+        f"results/{model_name}/points_out_of_bounds.json", "w", encoding="utf-8"
+    ) as f:
+        json.dump(points_out_of_bounds, f)
 
 
 def main():
     """Main function for model analysis."""
     for model_name in MODELS:
+        print(f"Model: {model_name}")
         ranks = calculate_ranks(model_name)
         if has_changes(model_name):
+            print(f"Generating plots for {model_name}")
             setup = load_model_setup(model_name)
             n_sims = len(setup["data"])
             n_chains = setup["chains"]

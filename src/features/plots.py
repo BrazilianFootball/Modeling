@@ -1,8 +1,7 @@
 # Based on https://github.com/hyunjimoon/SBC/blob/master/R/plot.R
 # pylint: disable=too-many-arguments
+# pylint: disable=too-many-positional-arguments
 # pylint: disable=too-many-locals
-
-from typing import Dict, List, Optional, Tuple
 
 import numpy as np
 import plotly.graph_objects as go
@@ -10,9 +9,36 @@ from calculate import adjust_gamma_optimize, ecdf_intervals
 from plotly.subplots import make_subplots
 
 
+def _check_out_of_bounds(
+    ranks: np.ndarray,
+    z_plot: np.ndarray,
+    intervals: dict[str, np.ndarray],
+    is_diff: bool = False,
+) -> int:
+    """Check how many points fall outside the CI in the region 0.005 <= x <= 0.995."""
+    N, M = ranks.shape
+    out_of_bounds = 0
+    for i in range(M):
+        sorted_ranks = np.sort(ranks[:, i])
+        ecdf = np.arange(1, N + 1) / N
+        y_values = ecdf - sorted_ranks if is_diff else ecdf
+
+        y_interp = np.interp(z_plot, sorted_ranks, y_values)
+
+        upper = intervals["upper"] - z_plot if is_diff else intervals["upper"]
+        lower = intervals["lower"] - z_plot if is_diff else intervals["lower"]
+
+        mask = (z_plot >= 0.005) & (z_plot <= 0.995)
+        out_of_bounds += np.sum(
+            (y_interp[mask] > upper[mask]) | (y_interp[mask] < lower[mask])
+        )
+
+    return out_of_bounds
+
+
 def _calculate_ci(
     N: int, K: int, prob: float
-) -> Tuple[np.ndarray, Dict[str, np.ndarray]]:
+) -> tuple[np.ndarray, dict[str, np.ndarray]]:
     """Calculate confidence intervals for ECDF."""
     gamma = adjust_gamma_optimize(N, K, conf_level=prob)
     z = np.linspace(0, 1, K + 1)
@@ -28,8 +54,8 @@ def _calculate_ci(
 def _add_ecdf_traces(
     fig: go.Figure,
     ranks: np.ndarray,
-    series_names: List[str],
-    colors: Optional[List[str]] = None,
+    series_names: list[str],
+    colors: list[str] | None = None,
     row: int = 1,
     col: int = 1,
     is_diff: bool = False,
@@ -77,14 +103,13 @@ def _add_ecdf_traces(
 def _add_ci_traces(
     fig: go.Figure,
     z_plot: np.ndarray,
-    intervals: Dict[str, np.ndarray],
+    intervals: dict[str, np.ndarray],
     prob: float,
     row: int = 1,
     col: int = 1,
     is_diff: bool = False,
 ) -> None:
     """Add confidence interval traces to the plot."""
-    # Expected line
     y_expected = [0, 0] if is_diff else [0, 1]
     fig.add_trace(
         go.Scatter(
@@ -99,7 +124,6 @@ def _add_ci_traces(
         col=col,
     )
 
-    # CI traces
     upper = intervals["upper"] - z_plot if is_diff else intervals["upper"]
     lower = intervals["lower"] - z_plot if is_diff else intervals["lower"]
 
@@ -133,26 +157,26 @@ def _add_ci_traces(
 
 
 def plot_ecdf(
-    ranks: List[np.ndarray],
-    param_names: List[str],
-    series_names: List[str],
+    ranks: list[np.ndarray],
+    param_names: list[str],
+    series_names: list[str],
     prob: float = 0.95,
-    K: Optional[int] = None,
+    K: int | None = None,
     is_diff: bool = False,
     n_rows: int = 1,
     n_cols: int = 1,
     height: int = 1200,
     width: int = 800,
-) -> go.Figure:
+) -> tuple[go.Figure, dict[str, int]]:
     """
     Plots Empirical Cumulative Distribution Functions (ECDFs) with confidence intervals
     for normalized ranks.
 
     Args:
-        ranks: List of normalized rank arrays
+        ranks: list of normalized rank arrays
                (each array NxM, where N is sample size and M is number of series)
-        param_names: List of parameter names for subplot titles
-        series_names: List of M names for each series
+        param_names: list of parameter names for subplot titles
+        series_names: list of M names for each series
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
         is_diff: Whether to plot difference from uniform distribution (default: False)
@@ -160,7 +184,7 @@ def plot_ecdf(
         n_cols: Number of subplot columns (default: 1)
 
     Returns:
-        Plotly figure containing the ECDF plots
+        Plotly figure containing the ECDF plots, and the number of points out of bounds
     """
     assert len(ranks) == len(
         param_names
@@ -176,7 +200,7 @@ def plot_ecdf(
 
     fig = make_subplots(rows=n_rows, cols=n_cols, subplot_titles=subplot_titles)
 
-    showlegend = True
+    points_out_of_bounds = {}
     for i, rank_array in enumerate(ranks):
         row = (i // n_cols) + 1
         col = (i % n_cols) + 1
@@ -194,10 +218,13 @@ def plot_ecdf(
             is_diff=is_diff,
             row=row,
             col=col,
-            showlegend=showlegend,
+            showlegend=i == 0,
         )
         _add_ci_traces(fig, z_plot, intervals, prob, is_diff=is_diff, row=row, col=col)
-        showlegend = False
+        points_out_of_bounds[param_names[i]] = _check_out_of_bounds(
+            rank_array, z_plot, intervals, is_diff=is_diff
+        )
+
     fig.update_layout(
         showlegend=True,
         plot_bgcolor="white",
@@ -216,15 +243,15 @@ def plot_ecdf(
             showgrid=True, gridwidth=1, gridcolor="lightgray", row=row, col=col
         )
 
-    return fig
+    return fig, points_out_of_bounds
 
 
 def plot_ecdf_combined(
     ranks: np.ndarray,
     param_name: str,
-    series_names: List[str],
+    series_names: list[str],
     prob: float = 0.95,
-    K: Optional[int] = None,
+    K: int | None = None,
     height: int = 400,
 ) -> go.Figure:
     """
@@ -233,7 +260,7 @@ def plot_ecdf_combined(
     Args:
         ranks: Array of normalized ranks (NxM, where N is sample size and M is number of series)
         param_name: Name of the parameter
-        series_names: List of M names for each series
+        series_names: list of M names for each series
         prob: Desired confidence level (default: 0.95)
         K: Number of evaluation points (default: None, uses min(N,100))
     """
