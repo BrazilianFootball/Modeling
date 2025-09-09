@@ -1,26 +1,19 @@
 repos:
--   repo: https://github.com/psf/black
-    rev: 23.3.0
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.1.6
     hooks:
-    -   id: black
-        
--   repo: https://github.com/pycqa/isort
-    rev: 5.12.0
-    hooks:
-    -   id: isort
-        args: ["--profile", "black"]
-        
--   repo: https://github.com/pycqa/flake8
-    rev: 6.0.0
-    hooks:
-    -   id: flake8
-        
--   repo: https://github.com/pycqa/pylint
-    rev: v2.17.4
-    hooks:
-    -   id: pylint
+    # Linter
+    -   id: ruff
+        args: [--fix, --exit-non-zero-on-fix]
+    # Formatter (substitui black)
+    -   id: ruff-format
         
 -   repo: https://github.com/pre-commit/mirrors-mypy
     rev: v1.3.0
     hooks:
     -   id: mypy
+        
+-   repo: https://github.com/pycqa/pylint
+    rev: v2.17.4
+    hooks:
+    -   id: pylint
