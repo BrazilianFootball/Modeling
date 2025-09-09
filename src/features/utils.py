@@ -1,7 +1,8 @@
 import json
 import os
 import shutil
-from typing import Any, Callable, Dict
+from collections.abc import Callable
+from typing import Any
 
 import cmdstanpy
 import jsonpickle
@@ -24,7 +25,7 @@ def create_results_dir(model_name: str) -> None:
     os.makedirs(f"results/{model_name}/samples", exist_ok=True)
 
 
-def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> Dict[int, Any]:
+def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> dict[int, Any]:
     """Generate simulation data using provided generator function.
 
     Args:
@@ -35,7 +36,7 @@ def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> Dict[int, 
     Returns:
         Dictionary mapping simulation index to generated data
     """
-    data: Dict[int, Any] = {}
+    data: dict[int, Any] = {}
     new_kwargs = kwargs.copy()
     for i in range(n_sims):
         new_kwargs["seed"] = int(i)
@@ -44,7 +45,7 @@ def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> Dict[int, 
     return data
 
 
-def save_model_setup(model_name: str, setup: Dict[str, Any]) -> None:
+def save_model_setup(model_name: str, setup: dict[str, Any]) -> None:
     """Save model setup to JSON file.
 
     Args:
@@ -55,7 +56,7 @@ def save_model_setup(model_name: str, setup: Dict[str, Any]) -> None:
         file_handle.write(jsonpickle.encode(setup))
 
 
-def load_model_setup(model_name: str) -> Dict[str, Any]:
+def load_model_setup(model_name: str) -> dict[str, Any]:
     """Load model setup from JSON file.
 
     Args:
@@ -64,13 +65,13 @@ def load_model_setup(model_name: str) -> Dict[str, Any]:
     Returns:
         Dictionary containing model setup
     """
-    with open(f"results/{model_name}/setup.json", "r", encoding="utf-8") as file_handle:
+    with open(f"results/{model_name}/setup.json", encoding="utf-8") as file_handle:
         return jsonpickle.decode(file_handle.read())
 
 
 def create_model_setup(
-    model_name: str, data: Dict[int, Dict[str, Any]], **kwargs: Dict[str, Any]
-) -> Dict[str, Any]:
+    model_name: str, data: dict[int, dict[str, Any]], **kwargs: dict[str, Any]
+) -> dict[str, Any]:
     """Create model setup dictionary.
 
     Args:
@@ -105,15 +106,11 @@ def check_changes(current_setup: str, previous_setup: str) -> bool:
         if key not in previous_dict or current_dict[key] != previous_dict[key]:
             return True
 
-    for key in previous_dict:
-        if key not in current_dict:
-            return True
-
-    return False
+    return any(key not in current_dict for key in previous_dict)
 
 
 def setup_was_changed(
-    model_name: str, data: Dict[int, Dict[str, Any]], **kwargs: Dict[str, Any]
+    model_name: str, data: dict[int, dict[str, Any]], **kwargs: dict[str, Any]
 ) -> bool:
     """Check if model setup has changed.
 
@@ -184,8 +181,8 @@ def run_model(  # pylint: disable=too-many-locals
     model_name: str,
     n_sims: int,
     generator: Callable,
-    generator_kwargs: Dict[str, Any],
-    model_kwargs: Dict[str, Any],
+    generator_kwargs: dict[str, Any],
+    model_kwargs: dict[str, Any],
 ) -> None:
     """Run model simulations.
 
@@ -206,7 +203,7 @@ def run_model(  # pylint: disable=too-many-locals
 
     if os.path.exists(f"results/{model_name}/potential_problems.json"):
         with open(
-            f"results/{model_name}/potential_problems.json", "r", encoding="utf-8"
+            f"results/{model_name}/potential_problems.json", encoding="utf-8"
         ) as file_handle:
             potential_problems = json.load(file_handle)
     else:

@@ -1,13 +1,11 @@
-from typing import Dict, Optional, Union
-
 import numpy as np
 
 from src.features.generators import data_generator_bt
 
 
 def data_generator_bt_1(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model without home advantage."""
     data = data_generator_bt(
         seed=seed,
@@ -25,8 +23,8 @@ def data_generator_bt_1(
 
 
 def data_generator_bt_2(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with home advantage."""
     data = data_generator_bt(
         seed=seed,
@@ -44,8 +42,8 @@ def data_generator_bt_2(
 
 
 def data_generator_bt_3(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with ties."""
     data = data_generator_bt(
         seed=seed,
@@ -63,8 +61,8 @@ def data_generator_bt_3(
 
 
 def data_generator_bt_4(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with home advantage and ties."""
     data = data_generator_bt(
         seed=seed,
@@ -82,8 +80,8 @@ def data_generator_bt_4(
 
 
 def data_generator_bt_5(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model without home advantage."""
     data = data_generator_bt(
         seed=seed,
@@ -98,8 +96,8 @@ def data_generator_bt_5(
 
 
 def data_generator_bt_6(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with home advantage."""
     data = data_generator_bt(
         seed=seed,
@@ -114,8 +112,8 @@ def data_generator_bt_6(
 
 
 def data_generator_bt_7(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with ties."""
     data = data_generator_bt(
         seed=seed,
@@ -130,8 +128,8 @@ def data_generator_bt_7(
 
 
 def data_generator_bt_8(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with home advantage and ties."""
     data = data_generator_bt(
         seed=seed,

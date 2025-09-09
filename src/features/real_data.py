@@ -1,10 +1,10 @@
-# pylint: disable=too-many-locals, too-many-arguments
+# pylint: disable=too-many-locals, too-many-arguments, too-many-statements, too-many-positional-arguments
 
 import json
 import os
 import shutil
 from itertools import product
-from typing import Any, Dict, List, Tuple
+from typing import Any
 
 import cmdstanpy
 import numpy as np
@@ -44,17 +44,17 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
     path = os.path.join(os.path.dirname(__file__), "../../../Data/results/processed/")
     file_path = os.path.join(path, f"Serie_A_{year}_games.json")
 
-    with open(file_path, "r", encoding="utf-8") as f:
+    with open(file_path, encoding="utf-8") as f:
         data = json.load(f)
 
-    team_to_index: Dict[str, int] = {}
-    team_names: List[str] = []
+    team_to_index: dict[str, int] = {}
+    team_names: list[str] = []
 
-    team1: List[int] = []
-    team2: List[int] = []
-    goals_team1_list: List[int] = []
-    goals_team2_list: List[int] = []
-    results: List[float] = []
+    team1: list[int] = []
+    team2: list[int] = []
+    goals_team1_list: list[int] = []
+    goals_team2_list: list[int] = []
+    results: list[float] = []
     for game_data in data.values():
         if len(team1) > num_rounds * 10:
             break
@@ -124,7 +124,7 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
 
 def run_model_with_real_data(
     model_name: str, year: int, num_rounds: int = 38
-) -> Tuple[cmdstanpy.CmdStanMCMC, Dict[int, str], str]:
+) -> tuple[cmdstanpy.CmdStanMCMC, dict[int, str], str]:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
     for a given year and number of rounds. Loads the appropriate data file, prepares
@@ -155,12 +155,11 @@ def run_model_with_real_data(
     real_data_file = "bradley_terry" if "bradley_terry" in model_name else "poisson"
     with open(
         f"real_data/inputs/{real_data_file}_data_{year}_{num_rounds}.json",
-        "r",
         encoding="utf-8",
     ) as f:
         data = json.load(f)
 
-    team_mapping: Dict[int, str] = {
+    team_mapping: dict[int, str] = {
         i + 1: team_name for i, team_name in enumerate(data["team_names"])
     }
     del data["team_names"]
@@ -171,7 +170,7 @@ def run_model_with_real_data(
 
 
 def set_team_strengths(
-    samples: pd.DataFrame, team_mapping: Dict[int, str]
+    samples: pd.DataFrame, team_mapping: dict[int, str]
 ) -> pd.DataFrame:
     """
     Rename and process the columns of the samples DataFrame to map team indices to team names,
@@ -184,7 +183,7 @@ def set_team_strengths(
     Returns:
         pd.DataFrame: DataFrame with columns renamed to team names and team strengths computed.
     """
-    column_mapping: Dict[str, str] = {}
+    column_mapping: dict[str, str] = {}
     for col in samples.columns:
         if "[" not in col:
             continue
@@ -290,7 +289,7 @@ def generate_boxplot(
     print(f"Boxplot saved as PNG in: {file_path}")
 
 
-def load_real_data(year: int) -> Dict[str, Any]:
+def load_real_data(year: int) -> dict[str, Any]:
     """
     Load the real data for a given year and number of rounds.
 
@@ -303,7 +302,6 @@ def load_real_data(year: int) -> Dict[str, Any]:
     try:
         with open(
             f"real_data/inputs/poisson_data_{year}_38.json",
-            "r",
             encoding="utf-8",
         ) as f:
             data = json.load(f)
@@ -311,7 +309,6 @@ def load_real_data(year: int) -> Dict[str, Any]:
         generate_real_data_stan_input(year, 38)
         with open(
             f"real_data/inputs/poisson_data_{year}_38.json",
-            "r",
             encoding="utf-8",
         ) as f:
             data = json.load(f)
@@ -319,8 +316,8 @@ def load_real_data(year: int) -> Dict[str, Any]:
 
 
 def get_real_points_evolution(
-    data: Dict[str, Any], team_mapping: Dict[int, str]
-) -> Dict[str, List[int]]:
+    data: dict[str, Any], team_mapping: dict[int, str]
+) -> dict[str, list[int]]:
     """
     Calculate the current points evolution for each team based on real results.
 
@@ -336,12 +333,14 @@ def get_real_points_evolution(
     home_team_names = [team_mapping[team] for team in home_team]
     away_team_names = [team_mapping[team] for team in away_team]
 
-    current_scenario: Dict[str, List[int]] = {
+    current_scenario: dict[str, list[int]] = {
         team: [] for team in team_mapping.values()
     }
-    accumulated_points: Dict[str, int] = {team: 0 for team in team_mapping.values()}
+    accumulated_points: dict[str, int] = dict.fromkeys(team_mapping.values(), 0)
 
-    for i, (home, away) in enumerate(zip(home_team_names, away_team_names)):
+    for i, (home, away) in enumerate(
+        zip(home_team_names, away_team_names, strict=False)
+    ):
         goals_home = data["goals_team1"][i]
         goals_away = data["goals_team2"][i]
         if goals_home > goals_away:
@@ -365,8 +364,8 @@ def get_real_points_evolution(
 
 def generate_points_matrix_bradley_terry(
     samples: pd.DataFrame,
-    team_mapping: Dict[int, str],
-    data: Dict[str, Any],
+    team_mapping: dict[int, str],
+    data: dict[str, Any],
     num_rounds: int,
     num_simulations: int,
     n_matches_per_club: int,
@@ -431,8 +430,8 @@ def generate_points_matrix_bradley_terry(
 
 def generate_points_matrix_poisson(
     samples: pd.DataFrame,
-    team_mapping: Dict[int, str],
-    data: Dict[str, Any],
+    team_mapping: dict[int, str],
+    data: dict[str, Any],
     num_rounds: int,
     num_simulations: int,
     n_matches_per_club: int,
@@ -525,12 +524,12 @@ def generate_points_matrix_poisson(
 
 def simulate_competition(
     samples: pd.DataFrame,
-    team_mapping: Dict[int, str],
+    team_mapping: dict[int, str],
     model_name: str,
     year: int,
     num_rounds: int,
     num_simulations: int = 1000,
-) -> Tuple[np.ndarray, Dict[str, List[int]]]:
+) -> tuple[np.ndarray, dict[str, list[int]]]:
     """
     Simulate the remainder of the Serie A season using posterior samples from the model,
     generating possible points trajectories for each team.
@@ -567,8 +566,8 @@ def simulate_competition(
 
 def generate_points_evolution_by_team(
     points_matrix: np.ndarray,
-    current_scenario: Dict[str, List[int]],
-    team_mapping: Dict[int, str],
+    current_scenario: dict[str, list[int]],
+    team_mapping: dict[int, str],
     num_rounds: int,
     save_dir: str,
 ) -> None:

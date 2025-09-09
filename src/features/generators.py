@@ -1,17 +1,15 @@
-# pylint: disable=too-many-locals, too-many-statements
-
-from typing import Dict, List, Optional, Tuple, Union
+# pylint: disable=too-many-locals, too-many-statements, too-many-arguments
 
 import numpy as np
 
 
 def generate_normal_prior_data(
     *,
-    seed: Optional[int] = None,
+    seed: int | None = None,
     n_observations: int = 100,
     true_mu: float = 0,
     true_sigma: float = 1,
-) -> Dict[str, Dict[str, Union[float, np.ndarray]]]:
+) -> dict[str, dict[str, float | np.ndarray]]:
     """Generate data for a model with normal prior.
 
     Args:
@@ -36,7 +34,7 @@ def generate_normal_prior_data(
     return data
 
 
-def generate_matches(clubs: List[int], n_seasons: int) -> Tuple[np.ndarray, np.ndarray]:
+def generate_matches(clubs: list[int], n_seasons: int) -> tuple[np.ndarray, np.ndarray]:
     """Create arrays of teams for all matches in all seasons.
 
     Args:
@@ -110,13 +108,13 @@ def simulate_bradley_terry(
 
 def data_generator_bt(
     *,
-    seed: Optional[int] = None,
+    seed: int | None = None,
     n_clubs: int = 20,
     n_seasons: int = 1,
     home_advantage: bool = False,
     allow_ties: bool = False,
     n_players_per_club: int = 1,
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Bradley-Terry model with or without home advantage.
 
     Args:
@@ -219,14 +217,14 @@ def mapping_params_to_model(
 
 def data_generator_poisson(
     *,
-    seed: Optional[int] = None,
+    seed: int | None = None,
     n_clubs: int = 20,
     n_seasons: int = 1,
     home_advantage: bool = False,
     atk_def_strength: bool = False,
     place_params: bool = False,
     n_players_per_club: int = 1,
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with or without home advantage.
 
     Args:

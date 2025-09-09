@@ -1,14 +1,12 @@
 # Based on https://github.com/hyunjimoon/SBC/blob/master/R/calculate.R
 
-from typing import Dict, Optional
-
 import numpy as np
 from scipy.optimize import minimize_scalar
 from scipy.stats import binom, hypergeom
 
 
 def adjust_gamma(
-    N: int, L: int, K: Optional[int] = None, conf_level: float = 0.95
+    N: int, L: int, K: int | None = None, conf_level: float = 0.95
 ) -> float:
     """Adjusts gamma parameter for simultaneous confidence intervals."""
     if K is None:
@@ -56,7 +54,7 @@ def adjust_gamma_simulate(
     return np.quantile(gamma, 1 - conf_level)
 
 
-def ecdf_intervals(N: int, L: int, K: int, gamma: float) -> Dict[str, np.ndarray]:
+def ecdf_intervals(N: int, L: int, K: int, gamma: float) -> dict[str, np.ndarray]:
     """Calculates confidence intervals for ECDF."""
     z = np.linspace(0, 1, K + 1)
     lims = {}

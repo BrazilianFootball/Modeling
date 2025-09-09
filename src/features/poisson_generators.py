@@ -1,13 +1,11 @@
-from typing import Dict, Optional, Union
-
 import numpy as np
 
 from src.features.generators import data_generator_poisson
 
 
 def data_generator_poisson_1(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model without home advantage."""
     data = data_generator_poisson(
         seed=seed,
@@ -26,8 +24,8 @@ def data_generator_poisson_1(
 
 
 def data_generator_poisson_2(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     data = data_generator_poisson(
         seed=seed,
@@ -46,8 +44,8 @@ def data_generator_poisson_2(
 
 
 def data_generator_poisson_3(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     data = data_generator_poisson(
         seed=seed,
@@ -66,8 +64,8 @@ def data_generator_poisson_3(
 
 
 def data_generator_poisson_4(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     data = data_generator_poisson(
         seed=seed,
@@ -86,8 +84,8 @@ def data_generator_poisson_4(
 
 
 def data_generator_poisson_5(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     data = data_generator_poisson(
         seed=seed,
@@ -106,8 +104,8 @@ def data_generator_poisson_5(
 
 
 def data_generator_poisson_6(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model without home advantage."""
     return data_generator_poisson(
         seed=seed,
@@ -121,8 +119,8 @@ def data_generator_poisson_6(
 
 
 def data_generator_poisson_7(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     return data_generator_poisson(
         seed=seed,
@@ -136,8 +134,8 @@ def data_generator_poisson_7(
 
 
 def data_generator_poisson_8(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     return data_generator_poisson(
         seed=seed,
@@ -151,8 +149,8 @@ def data_generator_poisson_8(
 
 
 def data_generator_poisson_9(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     return data_generator_poisson(
         seed=seed,
@@ -166,8 +164,8 @@ def data_generator_poisson_9(
 
 
 def data_generator_poisson_10(
-    *, seed: Optional[int] = None, n_clubs: int = 20, n_seasons: int = 1
-) -> Dict[str, Dict[str, Union[np.ndarray, int]]]:
+    *, seed: int | None = None, n_clubs: int = 20, n_seasons: int = 1
+) -> dict[str, dict[str, np.ndarray | int]]:
     """Generate data for Poisson model with home advantage."""
     return data_generator_poisson(
         seed=seed,
