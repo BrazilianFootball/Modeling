@@ -1,6 +1,7 @@
 # pylint: disable=too-many-locals, too-many-arguments, too-many-statements, too-many-positional-arguments
 
 import json
+import logging
 import os
 import shutil
 from itertools import product
@@ -15,6 +16,9 @@ import plotly.subplots as psub
 from colors import color_mapping
 from constants import model_kwargs
 from generators import simulate_bradley_terry
+
+cmdstanpy_logger = logging.getLogger("cmdstanpy")
+cmdstanpy_logger.disabled = True
 
 IGNORE_COLS = [
     "chain__",
@@ -120,6 +124,89 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
         json.dump(poisson_data, f, ensure_ascii=False, indent=2)
 
     print(f"Data saved successfully in {output_dir}.")
+
+
+def generate_all_matches_data(year: int) -> None:
+    """
+    Generate all matches data for a given year.
+
+    Args:
+        year (int): The year of the data to generate.
+    """
+    save_dir = os.path.join(os.path.dirname(__file__), "../../real_data/results")
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, f"all_matches_{year}.json")
+    if os.path.exists(save_path):
+        return
+
+    path = os.path.join(os.path.dirname(__file__), "../../../Data/results/processed/")
+    file_path = os.path.join(path, f"Serie_A_{year}_games.json")
+
+    with open(file_path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    all_matches = {}
+    for game_id, game_data in data.items():
+        home_team = game_data.get("Home")
+        away_team = game_data.get("Away")
+        result = game_data.get("Result")
+        goals_team1, goals_team2 = map(int, result.lower().split(" x "))
+
+        all_matches[game_id] = {
+            "home_team": home_team,
+            "away_team": away_team,
+            "goals_team1": goals_team1,
+            "goals_team2": goals_team2,
+        }
+        if goals_team1 > goals_team2:
+            all_matches[game_id]["result"] = "H"
+        elif goals_team1 < goals_team2:
+            all_matches[game_id]["result"] = "A"
+        else:
+            all_matches[game_id]["result"] = "D"
+
+    with open(save_path, "w", encoding="utf-8") as f:
+        json.dump(all_matches, f, ensure_ascii=False, indent=2)
+
+    print(f"All matches data saved successfully in {save_path}.")
+
+
+def update_probabilities(
+    probabilities: dict[str, Any], year: int, model_name: str, num_rounds: int
+) -> None:
+    """
+    Update the probabilities for a given year, model name, and number of rounds.
+
+    Args:
+        probabilities (dict[str, Any]): The probabilities to update.
+        year (int): The year of the data to update.
+        model_name (str): The name of the model to update.
+        num_rounds (int): The number of rounds to update.
+    """
+    data_path = os.path.join(
+        os.path.dirname(__file__), f"../../real_data/results/all_matches_{year}.json"
+    )
+    with open(data_path, encoding="utf-8") as f:
+        data = json.load(f)
+
+    for game_id, probabilities_data in probabilities.items():
+        assert data[game_id]["home_team"] == probabilities_data["home_team"]
+        assert data[game_id]["away_team"] == probabilities_data["away_team"]
+        data[game_id]["probabilities"] = data[game_id].get("probabilities", {})
+        data[game_id]["probabilities"][model_name] = data[game_id]["probabilities"].get(
+            model_name, {}
+        )
+        data[game_id]["probabilities"][model_name][
+            str(num_rounds)
+        ] = probabilities_data["probabilities"]
+
+    with open(data_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+    print(
+        f"Probabilities updated successfully in {data_path} for model {model_name}"
+        f" with {num_rounds} rounds on {year}."
+    )
 
 
 def run_model_with_real_data(
@@ -369,7 +456,7 @@ def generate_points_matrix_bradley_terry(
     num_rounds: int,
     num_simulations: int,
     n_matches_per_club: int,
-) -> np.ndarray:
+) -> tuple[np.ndarray, dict[str, dict[str, Any]]]:
     """
     Generate a points matrix for the remainder of the season using the Bradley-Terry model.
 
@@ -395,13 +482,15 @@ def generate_points_matrix_bradley_terry(
         0, len(samples), size=(n_matches_per_club, num_simulations)
     )
 
+    probabilities: dict[str, dict[str, Any]] = {}
     for rd in range(n_matches_per_club):
         for game in range(10):
+            game_id = (num_rounds + rd) * 10 + game
             home_strengths = samples.iloc[samples_indices[rd]][
-                home_team_names[(num_rounds + rd) * 10 + game]
+                home_team_names[game_id]
             ].values
             away_strengths = samples.iloc[samples_indices[rd]][
-                away_team_names[(num_rounds + rd) * 10 + game]
+                away_team_names[game_id]
             ].values
             if "kappa" in samples.columns:
                 kappa_values = samples.iloc[samples_indices[rd]]["kappa"].values
@@ -411,8 +500,8 @@ def generate_points_matrix_bradley_terry(
             results = simulate_bradley_terry(
                 home_strengths, away_strengths, kappa_values
             )
-            home_idx = home_team[(num_rounds + rd) * 10 + game] - 1
-            away_idx = away_team[(num_rounds + rd) * 10 + game] - 1
+            home_idx = home_team[game_id] - 1
+            away_idx = away_team[game_id] - 1
             home_new_points = (results == 1) * 3 + (results == 0.5) * 1
             away_new_points = (results == 0) * 3 + (results == 0.5) * 1
             if rd > 0:
@@ -425,7 +514,21 @@ def generate_points_matrix_bradley_terry(
             else:
                 points_matrix[home_idx, rd, :] = home_new_points
                 points_matrix[away_idx, rd, :] = away_new_points
-    return points_matrix
+
+            probs = [
+                float(np.sum(results == 1) / num_simulations),
+                float(np.sum(results == 0.5) / num_simulations),
+                float(np.sum(results == 0) / num_simulations),
+            ]
+            probabilities[str(game_id + 1).zfill(3)] = {}
+            probabilities[str(game_id + 1).zfill(3)]["home_team"] = home_team_names[
+                game_id
+            ]
+            probabilities[str(game_id + 1).zfill(3)]["away_team"] = away_team_names[
+                game_id
+            ]
+            probabilities[str(game_id + 1).zfill(3)]["probabilities"] = probs
+    return points_matrix, probabilities
 
 
 def generate_points_matrix_poisson(
@@ -435,7 +538,7 @@ def generate_points_matrix_poisson(
     num_rounds: int,
     num_simulations: int,
     n_matches_per_club: int,
-) -> np.ndarray:
+) -> tuple[np.ndarray, dict[str, dict[str, Any]]]:
     """
     Generate a points matrix for the remainder of the season using the Poisson model.
 
@@ -461,14 +564,16 @@ def generate_points_matrix_poisson(
         0, len(samples), size=(n_matches_per_club, num_simulations)
     )
 
+    probabilities: dict[str, dict[str, Any]] = {}
     for rd in range(n_matches_per_club):
         if "nu" in samples.columns:
             nu = samples.iloc[samples_indices[rd]]["nu"].values
         else:
             nu = np.zeros(num_simulations)
         for game in range(10):
-            home_name = home_team_names[(num_rounds + rd) * 10 + game]
-            away_name = away_team_names[(num_rounds + rd) * 10 + game]
+            game_id = (num_rounds + rd) * 10 + game
+            home_name = home_team_names[game_id]
+            away_name = away_team_names[game_id]
             if home_name + " (atk home)" in samples.columns:
                 atk_home = samples.iloc[samples_indices[rd]][
                     home_name + " (atk home)"
@@ -507,8 +612,8 @@ def generate_points_matrix_poisson(
             away_win = home_goals < away_goals
             tie = home_goals == away_goals
 
-            home_idx = home_team[(num_rounds + rd) * 10 + game] - 1
-            away_idx = away_team[(num_rounds + rd) * 10 + game] - 1
+            home_idx = home_team[game_id] - 1
+            away_idx = away_team[game_id] - 1
             if rd > 0:
                 points_matrix[home_idx, rd, :] = (
                     points_matrix[home_idx, rd - 1, :] + home_win * 3 + tie * 1
@@ -519,7 +624,17 @@ def generate_points_matrix_poisson(
             else:
                 points_matrix[home_idx, rd, :] = home_win * 3 + tie * 1
                 points_matrix[away_idx, rd, :] = away_win * 3 + tie * 1
-    return points_matrix
+
+            probs = [
+                float(np.sum(home_win) / num_simulations),
+                float(np.sum(tie) / num_simulations),
+                float(np.sum(away_win) / num_simulations),
+            ]
+            probabilities[str(game_id + 1).zfill(3)] = {}
+            probabilities[str(game_id + 1).zfill(3)]["home_team"] = home_name
+            probabilities[str(game_id + 1).zfill(3)]["away_team"] = away_name
+            probabilities[str(game_id + 1).zfill(3)]["probabilities"] = probs
+    return points_matrix, probabilities
 
 
 def simulate_competition(
@@ -529,7 +644,7 @@ def simulate_competition(
     year: int,
     num_rounds: int,
     num_simulations: int = 1000,
-) -> tuple[np.ndarray, dict[str, list[int]]]:
+) -> tuple[np.ndarray, dict[str, list[int]], dict[str, dict[str, Any]]]:
     """
     Simulate the remainder of the Serie A season using posterior samples from the model,
     generating possible points trajectories for each team.
@@ -553,15 +668,15 @@ def simulate_competition(
     current_scenario = get_real_points_evolution(data, team_mapping)
 
     if "bradley_terry" in model_name:
-        points_matrix = generate_points_matrix_bradley_terry(
+        points_matrix, probabilities = generate_points_matrix_bradley_terry(
             samples, team_mapping, data, num_rounds, num_simulations, n_matches_per_club
         )
     else:
-        points_matrix = generate_points_matrix_poisson(
+        points_matrix, probabilities = generate_points_matrix_poisson(
             samples, team_mapping, data, num_rounds, num_simulations, n_matches_per_club
         )
 
-    return points_matrix, current_scenario
+    return points_matrix, current_scenario, probabilities
 
 
 def generate_points_evolution_by_team(
@@ -697,7 +812,9 @@ def generate_points_evolution_by_team(
     pio.write_image(fig, file_path, format="png", scale=2)
 
 
-def run_real_data_model(model_name: str, year: int, num_rounds: int = 38) -> None:
+def run_real_data_model(
+    model_name: str, year: int, num_rounds: int = 38, num_simulations: int = 1000
+) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
     for a given year and number of rounds, generate a boxplot of team strengths,
@@ -708,10 +825,12 @@ def run_real_data_model(model_name: str, year: int, num_rounds: int = 38) -> Non
         model_name (str): The name of the model to run.
         year (int): The year of the real data to use.
         num_rounds (int, optional): Number of rounds already played. Defaults to 38.
+        num_simulations (int, optional): Number of simulations to run. Defaults to 1000.
 
     Returns:
         None
     """
+    generate_all_matches_data(year)
     generate_real_data_stan_input(year, num_rounds)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
         model_name, year, num_rounds
@@ -727,9 +846,10 @@ def run_real_data_model(model_name: str, year: int, num_rounds: int = 38) -> Non
         num_rounds,
     )
     if num_rounds != 38:
-        points_matrix, current_scenario = simulate_competition(
-            samples, team_mapping, model_name, year, num_rounds
+        points_matrix, current_scenario, probabilities = simulate_competition(
+            samples, team_mapping, model_name, year, num_rounds, num_simulations
         )
+        update_probabilities(probabilities, year, model_name, num_rounds)
         generate_points_evolution_by_team(
             points_matrix,
             current_scenario,
@@ -751,7 +871,9 @@ if __name__ == "__main__":
     ]
 
     seasons = [*range(2019, 2025)]
-    rounds = [38, 5, 10, 15, 20]
+    rounds = [5, 10, 15, 19, 20]
 
     for model, season, actual_round in product(models, seasons, rounds):
-        run_real_data_model(model, season, num_rounds=actual_round)
+        run_real_data_model(
+            model, season, num_rounds=actual_round, num_simulations=100_000
+        )
