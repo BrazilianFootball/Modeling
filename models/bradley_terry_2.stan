@@ -18,7 +18,7 @@ transformed parameters {
 model {
     log_skills_raw ~ normal(0, 1);
     log_home_advantage ~ normal(0, 1);
-    
+
     for (game in 1:num_games) {
         real log_skill_diff = log_skills[team1[game]] + log_home_advantage - log_skills[team2[game]];
         target += results[game] * log_skill_diff - log1p_exp(log_skill_diff);

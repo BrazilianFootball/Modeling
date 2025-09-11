@@ -21,7 +21,7 @@ transformed parameters {
 model {
     log_skills_raw ~ normal(0, 1);
     log_home_advantage ~ normal(0, 1);
-    
+
     for (game in 1:num_games) {
         real log_force_team1 = sum(log_skills[team1_players[game]]) + log_home_advantage;
         real log_force_team2 = sum(log_skills[team2_players[game]]);

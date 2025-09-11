@@ -17,11 +17,11 @@ transformed parameters {
 
 model {
     raw_alpha ~ normal(0, 1);
-    
+
     for (game in 1:num_games) {
         real log_lambda_team1 = alpha[team1[game]] - alpha[team2[game]];
         real log_lambda_team2 = -log_lambda_team1;
-        
+
         target += poisson_log_lpmf(goals_team1[game] | log_lambda_team1);
         target += poisson_log_lpmf(goals_team2[game] | log_lambda_team2);
     }

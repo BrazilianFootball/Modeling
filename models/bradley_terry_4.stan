@@ -26,10 +26,10 @@ model {
         real away_strength = exp(log_skills[team2[game]]);
         real tie_strength = kappa * sqrt(home_strength * away_strength);
         real total_strength = home_strength + away_strength + tie_strength;
-        
+
         real prob_home = home_strength / total_strength;
         real prob_away = away_strength / total_strength;
-        
+
         if (results[game] == 1.0) {
             target += log(prob_home);
         } else if (results[game] == 0.0) {
@@ -48,10 +48,10 @@ generated quantities {
         real away_strength = exp(log_skills[team2[game]]);
         real tie_strength = kappa * sqrt(home_strength * away_strength);
         real total_strength = home_strength + away_strength + tie_strength;
-        
+
         real prob_home = home_strength / total_strength;
         real prob_away = away_strength / total_strength;
-        
+
         if (results[game] == 1.0) {
             log_lik += log(prob_home);
         } else if (results[game] == 0.0) {
