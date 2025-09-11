@@ -215,7 +215,7 @@ def generate_points_matrix_poisson(
                 away_strengths = samples.iloc[samples_indices[rd]][away_name].values
 
             home_strengths = np.exp(home_strengths + nu)
-            away_strengths = np.exp(away_strengths + nu)
+            away_strengths = np.exp(away_strengths)
 
             home_goals = np.random.poisson(home_strengths)
             away_goals = np.random.poisson(away_strengths)
