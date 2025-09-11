@@ -20,7 +20,7 @@ if __name__ == "__main__":
     ]
 
     seasons = [*range(2019, 2025)]
-    rounds = [5, 10, 15, 19, 20]
+    rounds = [5, 10, 15, 19, 20, 38]
 
     for i, (model, season, actual_round) in enumerate(product(models, seasons, rounds)):
         print(
