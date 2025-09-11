@@ -256,7 +256,6 @@ def plot_ecdf_combined(
     series_names: list[str],
     prob: float = 0.95,
     k: int | None = None,
-    height: int = 400,
 ) -> go.Figure:
     """
     Plots ECDF and ECDF difference side by side.
@@ -269,10 +268,12 @@ def plot_ecdf_combined(
         prob: Desired confidence level (default: 0.95)
         k: Number of evaluation points (default: None, uses min(n,100))
     """
-    if "log" in param_name:
+    if "home_advantage" in param_name:
+        param_name = "nu"
+    elif "log" in param_name:
         param_name = param_name.replace(".", " ").replace("_", " ")
-    else:
-        param_name = param_name.replace(".", "_{") + "}" if param_name != "nu" else "nu"
+    elif param_name not in ["nu", "kappa"]:
+        param_name = param_name.replace(".", "_{") + "}"
 
     n = ranks.shape[0]
     if k is None:
@@ -280,7 +281,7 @@ def plot_ecdf_combined(
 
     z_plot, intervals = _calculate_ci(n, k, prob)
 
-    fig = make_subplots(rows=1, cols=2, subplot_titles=("ECDF", "ECDF - Uniform"))
+    fig = make_subplots(rows=1, cols=2, subplot_titles=("ECDF", "ECDF - Difference"))
 
     colors = [
         "#1f77b4",
@@ -309,7 +310,6 @@ def plot_ecdf_combined(
         else f"{param_name} - Rank ECDF and ECDF Difference",
         showlegend=True,
         plot_bgcolor="white",
-        height=height,
     )
 
     fig.update_xaxes(

@@ -77,7 +77,10 @@ def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> 
         param_names.append(param)
         fig = plot_ecdf_combined(sample, param, chain_names)
         fig.write_image(
-            f"results/{model_name}/plots/{param.replace('.', '_')}_ecdf_combined.png"
+            f"results/{model_name}/plots/{param.replace('.', '_')}_ecdf_combined.png",
+            width=800,
+            height=400,
+            scale=1,
         )
 
     n_params = len(param_names)
