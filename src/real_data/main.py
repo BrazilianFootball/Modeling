@@ -1,4 +1,4 @@
-# pylint: disable=too-many-locals, too-many-arguments, too-many-statements, too-many-positional-arguments
+# pylint: disable=too-many-locals, too-many-arguments, too-many-statements, too-many-positional-arguments, duplicate-code
 
 import logging
 from itertools import product

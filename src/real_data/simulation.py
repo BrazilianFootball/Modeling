@@ -311,9 +311,9 @@ def update_probabilities(
         data[game_id]["probabilities"][model_name] = data[game_id]["probabilities"].get(
             model_name, {}
         )
-        data[game_id]["probabilities"][model_name][
-            str(num_rounds)
-        ] = probabilities_data["probabilities"]
+        data[game_id]["probabilities"][model_name][str(num_rounds)] = (
+            probabilities_data["probabilities"]
+        )
 
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)

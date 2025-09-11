@@ -7,7 +7,6 @@ import sys
 
 import cmdstanpy
 import pandas as pd
-from constants import IGNORE_COLS, NUM_TEAMS
 from data_processing import generate_all_matches_data, generate_real_data_stan_input
 from metrics import calculate_metrics
 from simulation import simulate_competition, update_probabilities
@@ -15,7 +14,7 @@ from visualization import generate_boxplot, generate_points_evolution_by_team
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
-from features.constants import model_kwargs  # noqa: E402
+from features.constants import model_kwargs, IGNORE_COLS, N_CLUBS  # noqa: E402
 
 
 def run_model_with_real_data(
@@ -90,9 +89,9 @@ def set_team_strengths(
     if not column_mapping:
         raise ValueError("No skill columns found for teams.")
 
-    if len(column_mapping) == NUM_TEAMS:
+    if len(column_mapping) == N_CLUBS:
         samples = samples.rename(columns=column_mapping)
-    elif len(column_mapping) == 2 * NUM_TEAMS:
+    elif len(column_mapping) == 2 * N_CLUBS:
         column_mapping = {
             from_value: to_value + " (atk)"
             if "alpha" in from_value

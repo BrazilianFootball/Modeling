@@ -6,32 +6,12 @@ import warnings
 
 import numpy as np
 import pandas as pd
+from constants import MODELS
 from plots import plot_ecdf, plot_ecdf_combined
 from tqdm import tqdm
 from utils import load_model_setup
 
 warnings.filterwarnings("ignore")
-
-MODELS = [
-    "bradley_terry_1",
-    "bradley_terry_2",
-    "bradley_terry_3",
-    "bradley_terry_4",
-    # "bradley_terry_5",
-    # "bradley_terry_6",
-    # "bradley_terry_7",
-    # "bradley_terry_8",
-    "poisson_1",
-    "poisson_2",
-    "poisson_3",
-    "poisson_4",
-    "poisson_5",
-    # "poisson_6",
-    # "poisson_7",
-    # "poisson_8",
-    # "poisson_9",
-    # "poisson_10",
-]
 
 
 def calculate_ranks(model_name: str) -> dict:
@@ -57,7 +37,7 @@ def calculate_ranks(model_name: str) -> dict:
             for param, value in setup["data"][sim_id]["variables"].items():
                 if isinstance(value, np.ndarray):
                     for i, v in enumerate(value):
-                        param_name = f"{param}.{i+1}"
+                        param_name = f"{param}.{i + 1}"
                         _update_ranks(param_name, chain, v)
                 else:
                     _update_ranks(param, chain, value)

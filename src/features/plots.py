@@ -16,11 +16,11 @@ def _check_out_of_bounds(
     is_diff: bool = False,
 ) -> int:
     """Check how many points fall outside the CI in the region 0.005 <= x <= 0.995."""
-    N, M = ranks.shape
+    n, m = ranks.shape
     out_of_bounds = 0
-    for i in range(M):
+    for i in range(m):
         sorted_ranks = np.sort(ranks[:, i])
-        ecdf = np.arange(1, N + 1) / N
+        ecdf = np.arange(1, n + 1) / n
         y_values = ecdf - sorted_ranks if is_diff else ecdf
 
         y_interp = np.interp(z_plot, sorted_ranks, y_values)
@@ -37,14 +37,14 @@ def _check_out_of_bounds(
 
 
 def _calculate_ci(
-    N: int, K: int, prob: float
+    n: int, k: int, prob: float
 ) -> tuple[np.ndarray, dict[str, np.ndarray]]:
     """Calculate confidence intervals for ECDF."""
-    gamma = adjust_gamma_optimize(N, K, conf_level=prob)
-    z = np.linspace(0, 1, K + 1)
+    gamma = adjust_gamma_optimize(n, k, conf_level=prob)
+    z = np.linspace(0, 1, k + 1)
     z_plot = np.concatenate([np.repeat(z[:-1], 2), [1]])
 
-    intervals = ecdf_intervals(N, L=1, K=K, gamma=gamma)
+    intervals = ecdf_intervals(n, l=1, k=k, gamma=gamma)
     intervals["upper"] = np.append(intervals["upper"], [1])
     intervals["lower"] = np.append(intervals["lower"], [1])
 
@@ -62,7 +62,7 @@ def _add_ecdf_traces(
     showlegend: bool = True,
 ) -> None:
     """Add ECDF or ECDF difference traces to the plot."""
-    N, M = ranks.shape
+    n, m = ranks.shape
 
     if colors is None:
         colors = [
@@ -78,9 +78,9 @@ def _add_ecdf_traces(
             "#17becf",
         ]
 
-    for i in range(M):
+    for i in range(m):
         sorted_ranks = np.sort(ranks[:, i])
-        ecdf = np.arange(1, N + 1) / N
+        ecdf = np.arange(1, n + 1) / n
         color = colors[i % len(colors)]
 
         y_values = ecdf - sorted_ranks if is_diff else ecdf
@@ -132,7 +132,7 @@ def _add_ci_traces(
             x=z_plot,
             y=upper,
             mode="lines",
-            name=f"{int(prob*100)}% CI",
+            name=f"{int(prob * 100)}% CI",
             line={"color": "skyblue"},
             showlegend=False,
         ),
@@ -149,7 +149,7 @@ def _add_ci_traces(
             fill="tonexty",
             fillcolor="rgba(135, 206, 235, 0.2)",
             showlegend=row == 1 and col == 1,
-            name=f"{int(prob*100)}% CI",
+            name=f"{int(prob * 100)}% CI",
         ),
         row=row,
         col=col,
@@ -161,7 +161,7 @@ def plot_ecdf(
     param_names: list[str],
     series_names: list[str],
     prob: float = 0.95,
-    K: int | None = None,
+    k: int | None = None,
     is_diff: bool = False,
     n_rows: int = 1,
     n_cols: int = 1,
@@ -174,11 +174,11 @@ def plot_ecdf(
 
     Args:
         ranks: list of normalized rank arrays
-               (each array NxM, where N is sample size and M is number of series)
+               (each array nxm, where n is sample size and m is number of series)
         param_names: list of parameter names for subplot titles
-        series_names: list of M names for each series
+        series_names: list of m names for each series
         prob: Desired confidence level (default: 0.95)
-        K: Number of evaluation points (default: None, uses min(N,100))
+        k: Number of evaluation points (default: None, uses min(n,100))
         is_diff: Whether to plot difference from uniform distribution (default: False)
         n_rows: Number of subplot rows (default: 1)
         n_cols: Number of subplot columns (default: 1)
@@ -186,12 +186,12 @@ def plot_ecdf(
     Returns:
         Plotly figure containing the ECDF plots, and the number of points out of bounds
     """
-    assert len(ranks) == len(
-        param_names
-    ), "Number of ranks must match number of parameter names"
-    assert (
-        len(ranks) <= n_rows * n_cols
-    ), "Number of parameters must be less than or equal to the number of subplots"
+    assert len(ranks) == len(param_names), (
+        "Number of ranks must match number of parameter names"
+    )
+    assert len(ranks) <= n_rows * n_cols, (
+        "Number of parameters must be less than or equal to the number of subplots"
+    )
 
     subplot_titles = []
     for param in param_names:
@@ -209,11 +209,11 @@ def plot_ecdf(
         row = (i // n_cols) + 1
         col = (i % n_cols) + 1
 
-        N = rank_array.shape[0]
-        if K is None:
-            K = min(N, 100)
+        n = rank_array.shape[0]
+        if k is None:
+            k = min(n, 100)
 
-        z_plot, intervals = _calculate_ci(N, K, prob)
+        z_plot, intervals = _calculate_ci(n, k, prob)
 
         _add_ecdf_traces(
             fig,
@@ -255,29 +255,30 @@ def plot_ecdf_combined(
     param_name: str,
     series_names: list[str],
     prob: float = 0.95,
-    K: int | None = None,
+    k: int | None = None,
     height: int = 400,
 ) -> go.Figure:
     """
     Plots ECDF and ECDF difference side by side.
 
     Args:
-        ranks: Array of normalized ranks (NxM, where N is sample size and M is number of series)
+        ranks: Array of normalized ranks (nxm, where n is sample size and
+               m is number of series)
         param_name: Name of the parameter
-        series_names: list of M names for each series
+        series_names: list of m names for each series
         prob: Desired confidence level (default: 0.95)
-        K: Number of evaluation points (default: None, uses min(N,100))
+        k: Number of evaluation points (default: None, uses min(n,100))
     """
     if "log" in param_name:
         param_name = param_name.replace(".", " ").replace("_", " ")
     else:
         param_name = param_name.replace(".", "_{") + "}" if param_name != "nu" else "nu"
 
-    N = ranks.shape[0]
-    if K is None:
-        K = min(N, 100)
+    n = ranks.shape[0]
+    if k is None:
+        k = min(n, 100)
 
-    z_plot, intervals = _calculate_ci(N, K, prob)
+    z_plot, intervals = _calculate_ci(n, k, prob)
 
     fig = make_subplots(rows=1, cols=2, subplot_titles=("ECDF", "ECDF - Uniform"))
 
