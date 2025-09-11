@@ -81,7 +81,7 @@ def generate_points_evolution_by_team(
                 x=last_rounds,
                 y=med,
                 mode="lines",
-                line={"color": club_color},
+                line={"color": club_color, "width": 1},
                 name="Median simulated",
                 showlegend=(idx == 0),
             ),
@@ -96,7 +96,7 @@ def generate_points_evolution_by_team(
                 y=np.concatenate([p5, p95[::-1]]),
                 fill="toself",
                 fillcolor=club_color,
-                line={"color": club_color},
+                line={"color": club_color, "width": 1},
                 hoverinfo="skip",
                 name="90% interval",
                 showlegend=(idx == 0),
@@ -110,7 +110,7 @@ def generate_points_evolution_by_team(
                 x=np.arange(1, 39),
                 y=team_points,
                 mode="lines",
-                line={"color": "red", "dash": "dash", "width": 1.5},
+                line={"color": "red", "dash": "dash", "width": 1},
                 name="Actual",
                 showlegend=(idx == 0),
             ),
@@ -119,17 +119,43 @@ def generate_points_evolution_by_team(
         )
 
     for i in range(20):
+        fig.layout.annotations[i].font.size = 8.5
         row = i // 5 + 1
         col = i % 5 + 1
         if row == 4:
-            fig.update_xaxes(title_text="Rounds", row=row, col=col)
+            fig.update_xaxes(
+                title_text="Rounds",
+                row=row,
+                col=col,
+                title_font={"size": 7.5},
+                tickfont={"size": 7},
+            )
+        else:
+            fig.update_xaxes(
+                row=row,
+                col=col,
+                tickfont={"size": 7},
+            )
         if col == 1:
-            fig.update_yaxes(title_text="Points", row=row, col=col)
+            fig.update_yaxes(
+                title_text="Points",
+                row=row,
+                col=col,
+                title_font={"size": 7.5},
+                tickfont={"size": 7},
+            )
+        else:
+            fig.update_yaxes(
+                row=row,
+                col=col,
+                tickfont={"size": 7},
+            )
 
     fig.update_layout(
         height=900,
         width=1200,
-        title_text="Points evolution by team",
+        title_text=f"Points evolution by team (simulated after {num_rounds} rounds)",
+        title_font={"size": 14, "family": "Arial"},
         showlegend=True,
         paper_bgcolor="white",
         plot_bgcolor="white",
@@ -139,8 +165,10 @@ def generate_points_evolution_by_team(
             "y": 1.02,
             "xanchor": "right",
             "x": 1,
+            "font": {"size": 8},
         },
         margin={"t": 80, "b": 40},
+        font={"size": 8},
     )
 
     file_path = os.path.join(save_dir, "points_evolution_by_team.png")
@@ -187,23 +215,31 @@ def generate_boxplot(
                 boxmean=False,
                 orientation="h",
                 showlegend=False,
+                line_width=1,
+                marker_size=3,
             )
         )
 
     fig.update_layout(
-        title=f"Team Strengths - Serie A {year} ({num_rounds} rounds)",
-        width=1000,
-        height=700,
-        font={"size": 14},
-        title_font={"size": 22, "family": "Arial", "color": "black"},
+        height=900,
+        width=1200,
+        title=f"Team Strengths - Serie A {year} (after {num_rounds} rounds)",
+        title_font={"size": 14, "family": "Arial"},
         xaxis_title="Team Strength (log scale)",
         yaxis_title="Teams",
+        xaxis_title_font={"size": 10},
+        yaxis_title_font={"size": 10},
+        xaxis_tickfont={"size": 9},
         margin={"l": 80, "r": 40, "t": 80, "b": 60},
         template="plotly_white",
         showlegend=False,
-        yaxis={"categoryorder": "array", "categoryarray": team_means.index.tolist()},
+        yaxis={
+            "categoryorder": "array",
+            "categoryarray": team_means.index.tolist(),
+            "tickfont": {"size": 9},
+        },
     )
-    fig.add_vline(x=0, line_dash="dash", line_color="red")
+    fig.add_vline(x=0, line_dash="dash", line_color="red", line_width=1)
 
     os.makedirs(save_dir, exist_ok=True)
     file_path = os.path.join(save_dir, "team_strengths_boxplot.png")
