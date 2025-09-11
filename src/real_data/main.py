@@ -10,10 +10,10 @@ cmdstanpy_logger.disabled = True
 
 if __name__ == "__main__":
     models = [
-        # "bradley_terry_3",
-        # "bradley_terry_4",
-        # "poisson_1",
-        # "poisson_2",
+        "bradley_terry_3",
+        "bradley_terry_4",
+        "poisson_1",
+        "poisson_2",
         "poisson_3",
         "poisson_4",
         "poisson_5",
