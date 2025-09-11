@@ -90,6 +90,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
     data, _ = load_all_matches_data(year)
     observations = np.zeros(((38 - num_rounds) * 10, 3), dtype=int)
     predictions = np.zeros(((38 - num_rounds) * 10, 3), dtype=float)
+    naive_predictions = 1 / 3 * np.ones(((38 - num_rounds) * 10, 3), dtype=float)
     game = 0
     results_to_array = {
         "H": np.array([1, 0, 0]),
@@ -125,17 +126,25 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
         ranked_probability_score(observations, predictions),
         log_score(observations, predictions),
     ]
+    naive_row = [
+        year,
+        "naive",
+        num_rounds,
+        brier_score(observations, naive_predictions),
+        ranked_probability_score(observations, naive_predictions),
+        log_score(observations, naive_predictions),
+    ]
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
         df = df[
             ~(
                 (df["year"] == year)
-                & (df["model_name"] == model_name)
+                & (df["model_name"].isin([model_name, "naive"]))
                 & (df["num_rounds"] == num_rounds)
             )
         ]
     else:
         df = pd.DataFrame(columns=header)
 
-    df = pd.concat([df, pd.DataFrame([row], columns=header)], ignore_index=True)
+    df = pd.concat([df, pd.DataFrame([row, naive_row], columns=header)], ignore_index=True)
     df.to_csv(csv_path, index=False, encoding="utf-8")

@@ -92,8 +92,6 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
     with open(poisson_path, "w", encoding="utf-8") as f:
         json.dump(poisson_data, f, ensure_ascii=False, indent=2)
 
-    print(f"Data saved successfully in {output_dir}.")
-
 
 def generate_all_matches_data(year: int) -> None:
     """
@@ -136,8 +134,6 @@ def generate_all_matches_data(year: int) -> None:
 
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(all_matches, f, ensure_ascii=False, indent=2)
-
-    print(f"All matches data saved successfully in {save_path}.")
 
 
 def load_all_matches_data(year: int) -> tuple[dict[str, Any], str]:

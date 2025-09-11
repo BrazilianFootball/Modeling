@@ -58,7 +58,7 @@ def run_model_with_real_data(
         i + 1: team_name for i, team_name in enumerate(data["team_names"])
     }
     del data["team_names"]
-    fit = stan_model.sample(data=data, **model_kwargs)
+    fit = stan_model.sample(data=data, show_progress=False, **model_kwargs)
     fit.save_csvfiles(samples_dir)
 
     return fit, team_mapping, samples_dir

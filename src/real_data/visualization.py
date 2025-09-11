@@ -208,4 +208,3 @@ def generate_boxplot(
     os.makedirs(save_dir, exist_ok=True)
     file_path = os.path.join(save_dir, "team_strengths_boxplot.png")
     pio.write_image(fig, file_path, format="png", scale=2)
-    print(f"Boxplot saved as PNG in: {file_path}")

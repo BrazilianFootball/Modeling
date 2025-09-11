@@ -317,8 +317,3 @@ def update_probabilities(
 
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-
-    print(
-        f"Probabilities updated successfully in {data_path} for model {model_name}"
-        f" with {num_rounds} rounds on {year}."
-    )
