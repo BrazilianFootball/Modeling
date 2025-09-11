@@ -166,6 +166,7 @@ SBC_cache
 
 results/**/*.csv
 real_data/**/*.csv
+!real_data/results/metrics.csv
 
 models/*
 !models/*.stan

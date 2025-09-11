@@ -28,20 +28,20 @@ run_script "bradley_terry_1.py" || exit 1
 run_script "bradley_terry_2.py" || exit 1
 run_script "bradley_terry_3.py" || exit 1
 run_script "bradley_terry_4.py" || exit 1
-run_script "bradley_terry_5.py" || exit 1
-run_script "bradley_terry_6.py" || exit 1
-run_script "bradley_terry_7.py" || exit 1
-run_script "bradley_terry_8.py" || exit 1
+# run_script "bradley_terry_5.py" || exit 1
+# run_script "bradley_terry_6.py" || exit 1
+# run_script "bradley_terry_7.py" || exit 1
+# run_script "bradley_terry_8.py" || exit 1
 run_script "poisson_1.py" || exit 1
 run_script "poisson_2.py" || exit 1
 run_script "poisson_3.py" || exit 1
 run_script "poisson_4.py" || exit 1
 run_script "poisson_5.py" || exit 1
-run_script "poisson_6.py" || exit 1
-run_script "poisson_7.py" || exit 1
-run_script "poisson_8.py" || exit 1
-run_script "poisson_9.py" || exit 1
-run_script "poisson_10.py" || exit 1
+# run_script "poisson_6.py" || exit 1
+# run_script "poisson_7.py" || exit 1
+# run_script "poisson_8.py" || exit 1
+# run_script "poisson_9.py" || exit 1
+# run_script "poisson_10.py" || exit 1
 
 clear
 
