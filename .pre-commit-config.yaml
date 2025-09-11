@@ -1,29 +1,35 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v6.0.0
     hooks:
       - id: trailing-whitespace
+        files: ^(notebooks|src)/
       - id: end-of-file-fixer
+        files: ^(notebooks|src)/
       - id: check-yaml
-      - id: check-merge-conflict
+        files: ^(notebooks|src)/
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.1.6
+    rev: v0.13.0
     hooks:
       - id: ruff
         args: [--fix]
+        files: ^(notebooks|src)/
       - id: ruff-format
+        files: ^(notebooks|src)/
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.5.1
+    rev: v1.17.1
     hooks:
       - id: mypy
+        files: ^(notebooks|src)/
 
   - repo: https://github.com/pycqa/pylint
     rev: v3.3.8
     hooks:
       - id: pylint
         language_version: python3.10
+        files: ^(notebooks|src)/
 
 default_language_version:
   python: python3.10
