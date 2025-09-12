@@ -22,6 +22,14 @@ if __name__ == "__main__":
     seasons = [*range(2019, 2025)]
     rounds = [5, 10, 15, 19, 20, 38]
 
+    models = [
+        "bradley_terry_3",
+        "poisson_1",
+    ]
+
+    seasons = [2019, 2020]
+    rounds = [5, 10, 15, 20]
+
     for i, (model, season, actual_round) in enumerate(product(models, seasons, rounds)):
         print(
             f"Running {model} for {season} with {actual_round} rounds "

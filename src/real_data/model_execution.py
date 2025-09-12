@@ -7,7 +7,11 @@ import sys
 
 import cmdstanpy
 import pandas as pd
-from data_processing import generate_all_matches_data, generate_real_data_stan_input
+from data_processing import (
+    generate_all_matches_data,
+    generate_real_data_stan_input,
+    check_results_exist,
+)
 from metrics import calculate_metrics
 from simulation import simulate_competition, update_probabilities
 from visualization import generate_boxplot, generate_points_evolution_by_team
@@ -37,19 +41,26 @@ def run_model_with_real_data(
             team_mapping: Dictionary mapping team indices to team names.
             model_name_dir: Directory where model results are saved.
     """
-    save_dir = os.path.join(os.path.dirname(__file__), "../../real_data/results")
+    save_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "results", f"{year}"
+    )
     os.makedirs(save_dir, exist_ok=True)
     model_name_dir = os.path.join(save_dir, model_name)
     os.makedirs(model_name_dir, exist_ok=True)
 
-    samples_dir = os.path.join(model_name_dir, f"{year}_{num_rounds}")
+    samples_dir = os.path.join(model_name_dir, f"round_{str(num_rounds).zfill(2)}")
     if os.path.exists(samples_dir):
         shutil.rmtree(samples_dir)
 
     stan_model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
     real_data_file = "bradley_terry" if "bradley_terry" in model_name else "poisson"
     with open(
-        f"real_data/inputs/{real_data_file}_data_{year}_{num_rounds}.json",
+        os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "inputs", f"{year}",
+            f"{real_data_file}_data_{str(num_rounds).zfill(2)}.json"
+        ),
         encoding="utf-8",
     ) as f:
         data = json.load(f)
@@ -121,7 +132,11 @@ def set_team_strengths(
 
 
 def run_real_data_model(
-    model_name: str, year: int, num_rounds: int = 38, num_simulations: int = 1000
+    model_name: str,
+    year: int,
+    num_rounds: int = 38,
+    num_simulations: int = 1_000,
+    ignore_cache: bool = False,
 ) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -138,6 +153,9 @@ def run_real_data_model(
     Returns:
         None
     """
+    if ignore_cache or check_results_exist(model_name, year, num_rounds):
+        return
+
     generate_all_matches_data(year)
     generate_real_data_stan_input(year, num_rounds)
     fit, team_mapping, model_save_dir = run_model_with_real_data(

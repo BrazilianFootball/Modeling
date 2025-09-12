@@ -14,7 +14,7 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
         year (int): The year of the games to load and process.
         num_rounds (int, optional): Number of rounds to process. Defaults to 38.
     """
-    path = os.path.join(os.path.dirname(__file__), "../../../Data/results/processed/")
+    path = os.path.join(os.path.dirname(__file__), "..", "..", "..", "Data", "results", "processed")
     file_path = os.path.join(path, f"Serie_A_{year}_games.json")
 
     with open(file_path, encoding="utf-8") as f:
@@ -79,13 +79,16 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
         }
     )
 
-    output_dir = os.path.join(os.path.dirname(__file__), "../../real_data/inputs")
+    output_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "inputs", f"{year}"
+    )
     os.makedirs(output_dir, exist_ok=True)
 
     bradley_terry_path = os.path.join(
-        output_dir, f"bradley_terry_data_{year}_{num_rounds}.json"
+        output_dir, f"bradley_terry_data_{str(num_rounds).zfill(2)}.json"
     )
-    poisson_path = os.path.join(output_dir, f"poisson_data_{year}_{num_rounds}.json")
+    poisson_path = os.path.join(output_dir, f"poisson_data_{str(num_rounds).zfill(2)}.json")
 
     with open(bradley_terry_path, "w", encoding="utf-8") as f:
         json.dump(bradley_terry_data, f, ensure_ascii=False, indent=2)
@@ -100,13 +103,19 @@ def generate_all_matches_data(year: int) -> None:
     Args:
         year (int): The year of the data to generate.
     """
-    save_dir = os.path.join(os.path.dirname(__file__), "../../real_data/results")
+    save_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "results", f"{year}"
+    )
     os.makedirs(save_dir, exist_ok=True)
-    save_path = os.path.join(save_dir, f"all_matches_{year}.json")
+    save_path = os.path.join(save_dir, "all_matches.json")
     if os.path.exists(save_path):
         return
 
-    path = os.path.join(os.path.dirname(__file__), "../../../Data/results/processed/")
+    path = os.path.join(
+        os.path.dirname(__file__), "..", "..", "..",
+        "Data", "results", "processed"
+    )
     file_path = os.path.join(path, f"Serie_A_{year}_games.json")
 
     with open(file_path, encoding="utf-8") as f:
@@ -147,7 +156,8 @@ def load_all_matches_data(year: int) -> tuple[dict[str, Any], str]:
         tuple[dict[str, Any], str]: The loaded data dictionary and the path to the data file.
     """
     data_path = os.path.join(
-        os.path.dirname(__file__), f"../../real_data/results/all_matches_{year}.json"
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "results", f"{year}", "all_matches.json"
     )
     with open(data_path, encoding="utf-8") as f:
         data = json.load(f)
@@ -166,15 +176,40 @@ def load_real_data(year: int) -> dict[str, Any]:
     """
     try:
         with open(
-            f"real_data/inputs/poisson_data_{year}_38.json",
+            os.path.join(
+                os.path.dirname(__file__), "..", "..",
+                "real_data", "inputs", f"{year}", "poisson_data_38.json"
+            ),
             encoding="utf-8",
         ) as f:
             data = json.load(f)
     except FileNotFoundError:
         generate_real_data_stan_input(year, 38)
         with open(
-            f"real_data/inputs/poisson_data_{year}_38.json",
+            os.path.join(
+                os.path.dirname(__file__), "..", "..",
+                "real_data", "inputs", f"{year}", "poisson_data_38.json"
+            ),
             encoding="utf-8",
         ) as f:
             data = json.load(f)
     return data
+
+
+def check_results_exist(model_name: str, year: int, num_rounds: int) -> bool:
+    """
+    Check if the results for a given model, year, and number of rounds exist.
+
+    Args:
+        model_name (str): The name of the model.
+        year (int): The year of the data.
+        num_rounds (int): The number of rounds of the data.
+
+    Returns:
+        bool: True if the results exist, False otherwise.
+    """
+    save_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "results", f"{year}", f"{model_name}", f"round_{str(num_rounds).zfill(2)}"
+    )
+    return os.path.exists(save_dir)

@@ -255,7 +255,7 @@ def simulate_competition(
     model_name: str,
     year: int,
     num_rounds: int,
-    num_simulations: int = 1000,
+    num_simulations: int = 1_000,
 ) -> tuple[np.ndarray, dict[str, list[int]], dict[str, dict[str, Any]]]:
     """
     Simulate the remainder of the Serie A season using posterior samples from the model,
