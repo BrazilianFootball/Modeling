@@ -1,7 +1,6 @@
 # pylint: disable=too-many-locals, wrong-import-position
 
 import os
-import sys
 
 import numpy as np
 import pandas as pd
@@ -9,9 +8,7 @@ import plotly.graph_objs as go
 import plotly.io as pio
 import plotly.subplots as psub
 
-sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
-
-from features.colors import color_mapping  # noqa: E402
+from colors import color_mapping
 
 
 def generate_points_evolution_by_team(

@@ -3,7 +3,7 @@
 import json
 import os
 from typing import Any
-import pandas as pd
+import requests
 
 
 def generate_all_matches_from_scraped_data(year: int) -> None:
@@ -72,32 +72,56 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
         KeyError: If the championship is not supported.
         Exception: If there is an error downloading or processing the data.
     """
-    year_mask = str(year % 100) + str(year % 100 + 1)
+    with open(os.path.join(os.path.dirname(__file__), "credential.json"), encoding="utf-8") as f:
+        headers = json.load(f)
+
+    uri_mask = "https://api.football-data.org/v4/competitions/{championship}/matches?season={year}"
     championship_mask = {
-        "england": "E0",
-        "germany": "D1",
-        "italy": "I1",
-        "spain": "SP1",
-        "france": "F1",
+        "england": "PL",
+        "germany": "BL1",
+        "italy": "SA",
+        "spain": "PD",
+        "france": "FL1",
     }[championship]
-    url = f"https://www.football-data.co.uk/mmz4281/{year_mask}/{championship_mask}.csv"
-    df = pd.read_csv(url)
-    df = df[['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']]
-    df.reset_index(inplace=True)
-    df.rename(
-        columns={
-            'index': 'game_id',
-            'HomeTeam': 'home_team',
-            'AwayTeam': 'away_team',
-            'FTHG': 'goals_team1',
-            'FTAG': 'goals_team2',
-            'FTR': 'result'
-        },
-        inplace=True
-    )
-    df['game_id'] = (df['game_id'] + 1).astype(str).str.zfill(3)
-    data = df.to_dict(orient='records')
-    data = {game['game_id']: {k: v for k, v in game.items() if k != 'game_id'} for game in data}
+
+    url = uri_mask.format(championship=championship_mask, year=year)
+    response = requests.get(url, headers=headers)
+
+    data = {}
+    matchdays: dict[int, int] = {}
+    num_total_matches = len(response.json()["matches"])
+    if num_total_matches == 380:
+        n_games_per_matchday = 10
+    elif num_total_matches == 306:
+        n_games_per_matchday = 9
+    else:
+        raise ValueError(f"Number of total matches ({num_total_matches}) is not supported")
+
+    for game in response.json()["matches"]:
+        matchday = game["matchday"]
+        home_team = game["homeTeam"]["shortName"]
+        away_team = game["awayTeam"]["shortName"]
+        home_goals = game["score"]["fullTime"]["home"]
+        away_goals = game["score"]["fullTime"]["away"]
+        if home_goals > away_goals:
+            result = "H"
+        elif home_goals < away_goals:
+            result = "A"
+        else:
+            result = "D"
+
+        matchdays[matchday] = matchdays.get(matchday, 0) + 1
+        game_id = str((matchday - 1) * n_games_per_matchday + matchdays[matchday]).zfill(3)
+        data[game_id] = {
+            "home_team": home_team,
+            "away_team": away_team,
+            "goals_team1": home_goals,
+            "goals_team2": away_goals,
+            "result": result
+        }
+
+    sorted_data = sorted(data.items(), key=lambda x: x[0])
+    data = {x[0]: x[1] for x in sorted_data}
 
     save_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
