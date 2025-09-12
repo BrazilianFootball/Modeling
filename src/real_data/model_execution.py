@@ -158,7 +158,7 @@ def run_real_data_model(
     Returns:
         None
     """
-    if ignore_cache or check_results_exist(model_name, year, num_rounds, championship):
+    if check_results_exist(model_name, year, num_rounds, championship) and not ignore_cache:
         return
 
     generate_all_matches_data(year, championship)
