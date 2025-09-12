@@ -1,6 +1,8 @@
 # pylint: disable=too-many-locals, too-many-arguments, too-many-statements, too-many-positional-arguments, duplicate-code, broad-exception-caught
 
+import gc
 import logging
+import warnings
 from itertools import product
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from multiprocessing import cpu_count
@@ -9,6 +11,8 @@ from model_execution import run_real_data_model
 
 cmdstanpy_logger = logging.getLogger("cmdstanpy")
 cmdstanpy_logger.disabled = True
+logging.getLogger("choreographer.browser_async").setLevel(logging.ERROR)
+warnings.filterwarnings("ignore", category=UserWarning, module="choreographer")
 
 def run_single_model(args):
     """
@@ -30,6 +34,8 @@ def run_single_model(args):
         return f"Success: {model} for {season} with {actual_round} rounds for {country}"
     except Exception:
         return f"Error running {model} for {season} with {actual_round} rounds for {country}"
+    finally:
+        gc.collect()
 
 def process_data(
     model_list: list[str],
@@ -117,8 +123,8 @@ if __name__ == "__main__":
     seasons = [*range(2019, 2025)]
     rounds: list[int | str] = [5, 10, 15, 20, "mid", "end"]
     countries = ["brazil"]
-    process_data(models, seasons, rounds, countries)
+    process_data(models, seasons, rounds, countries, max_workers=8)
 
     seasons = [2023, 2024]
     countries = ["england", "france", "germany", "italy", "spain"]
-    process_data(models, seasons, rounds, countries)
+    process_data(models, seasons, rounds, countries, max_workers=8)
