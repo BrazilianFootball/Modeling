@@ -1,4 +1,4 @@
-# pylint: disable=wrong-import-position
+# pylint: disable=wrong-import-position,too-many-arguments, too-many-positional-arguments
 
 import json
 import os
@@ -22,7 +22,7 @@ from features.constants import model_kwargs, IGNORE_COLS  # noqa: E402
 
 
 def run_model_with_real_data(
-    model_name: str, year: int, num_rounds: int = 38
+    model_name: str, year: int, num_rounds: int = 38, championship: str = "brazil"
 ) -> tuple[cmdstanpy.CmdStanMCMC, dict[int, str], str]:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -34,6 +34,7 @@ def run_model_with_real_data(
         model_name (str): The name of the model to run ("bradley_terry" or "poisson").
         year (int): The year of the real data to use.
         num_rounds (int, optional): Number of rounds to use on fit. Defaults to 38.
+        championship (str, optional): The championship of the data. Defaults to "brazil".
 
     Returns:
         Tuple[cmdstanpy.CmdStanMCMC, Dict[int, str], str]:
@@ -43,7 +44,7 @@ def run_model_with_real_data(
     """
     save_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{year}"
+        "real_data", "results", f"{championship}", f"{year}"
     )
     os.makedirs(save_dir, exist_ok=True)
     model_name_dir = os.path.join(save_dir, model_name)
@@ -58,7 +59,7 @@ def run_model_with_real_data(
     with open(
         os.path.join(
             os.path.dirname(__file__), "..", "..",
-            "real_data", "inputs", f"{year}",
+            "real_data", "inputs", f"{championship}", f"{year}",
             f"{real_data_file}_data_{str(num_rounds).zfill(2)}.json"
         ),
         encoding="utf-8",
@@ -136,6 +137,7 @@ def run_real_data_model(
     model_name: str,
     year: int,
     num_rounds: int = 38,
+    championship: str = "brazil",
     num_simulations: int = 1_000,
     ignore_cache: bool = False,
 ) -> None:
@@ -149,18 +151,20 @@ def run_real_data_model(
         model_name (str): The name of the model to run.
         year (int): The year of the real data to use.
         num_rounds (int, optional): Number of rounds already played. Defaults to 38.
+        championship (str, optional): The championship to use. Defaults to "brazil".
         num_simulations (int, optional): Number of simulations to run. Defaults to 1000.
+        ignore_cache (bool, optional): Whether to ignore the cache. Defaults to False.
 
     Returns:
         None
     """
-    if ignore_cache or check_results_exist(model_name, year, num_rounds):
+    if ignore_cache or check_results_exist(model_name, year, num_rounds, championship):
         return
 
-    generate_all_matches_data(year)
-    generate_real_data_stan_input(year, num_rounds)
+    generate_all_matches_data(year, championship)
+    generate_real_data_stan_input(year, num_rounds, championship)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
-        model_name, year, num_rounds
+        model_name, year, num_rounds, championship
     )
     samples = fit.draws_pd()
     ignore_cols = [col for col in samples.columns if "raw" in col] + IGNORE_COLS
@@ -175,9 +179,9 @@ def run_real_data_model(
     n_clubs = len(team_mapping)
     if num_rounds != 2 * (n_clubs - 1):
         points_matrix, current_scenario, probabilities = simulate_competition(
-            samples, team_mapping, model_name, year, num_rounds, num_simulations
+            samples, team_mapping, model_name, year, num_rounds, championship, num_simulations
         )
-        update_probabilities(probabilities, year, model_name, num_rounds)
+        update_probabilities(probabilities, year, model_name, num_rounds, championship)
         generate_points_evolution_by_team(
             points_matrix,
             current_scenario,
@@ -185,4 +189,4 @@ def run_real_data_model(
             num_rounds,
             save_dir=model_save_dir,
         )
-        calculate_metrics(model_name, year, num_rounds)
+        calculate_metrics(model_name, year, num_rounds, championship)

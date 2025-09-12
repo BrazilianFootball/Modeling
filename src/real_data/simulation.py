@@ -255,6 +255,7 @@ def simulate_competition(
     model_name: str,
     year: int,
     num_rounds: int,
+    championship: str,
     num_simulations: int = 1_000,
 ) -> tuple[np.ndarray, dict[str, list[int]], dict[str, dict[str, Any]]]:
     """
@@ -267,6 +268,7 @@ def simulate_competition(
         model_name (str): Model name.
         year (int): Data year.
         num_rounds (int): Number of rounds already played.
+        championship (str): The championship of the data.
         num_simulations (int, optional): Number of simulations. Default: 1000.
 
     Returns:
@@ -274,7 +276,7 @@ def simulate_competition(
             points_matrix: Array of simulated points for each team, round, and simulation.
             current_scenario: Dictionary with the actual points evolution for each team.
     """
-    data = load_real_data(year)
+    data = load_real_data(year, championship)
     n_clubs = len(team_mapping)
     n_matches_per_club = 2 * (n_clubs - 1) - num_rounds
 
@@ -293,7 +295,7 @@ def simulate_competition(
 
 
 def update_probabilities(
-    probabilities: dict[str, Any], year: int, model_name: str, num_rounds: int
+    probabilities: dict[str, Any], year: int, model_name: str, num_rounds: int, championship: str
 ) -> None:
     """
     Update the probabilities for a given year, model name, and number of rounds.
@@ -303,8 +305,9 @@ def update_probabilities(
         year (int): The year of the data to update.
         model_name (str): The name of the model to update.
         num_rounds (int): The number of rounds to update.
+        championship (str): The championship of the data.
     """
-    data, data_path = load_all_matches_data(year)
+    data, data_path = load_all_matches_data(year, championship)
     for game_id, probabilities_data in probabilities.items():
         assert data[game_id]["home_team"] == probabilities_data["home_team"]
         assert data[game_id]["away_team"] == probabilities_data["away_team"]

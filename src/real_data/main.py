@@ -21,13 +21,15 @@ if __name__ == "__main__":
 
     seasons = [*range(2019, 2025)]
     rounds = [5, 10, 15, 19, 20, 38]
+    countries = ["brazil", "england", "france", "germany", "italy", "spain"]
 
-    for i, (model, season, actual_round) in enumerate(product(models, seasons, rounds)):
+    for i, values in enumerate(product(models, seasons, rounds, countries)):
+        model, season, actual_round, country = values
         print(
-            f"Running {model} for {season} with {actual_round} rounds "
-            f"(iteration {i+1} of {len(models)*len(seasons)*len(rounds)})",
+            f"Running {model} for {season} with {actual_round} rounds for {country} "
+            f"(iteration {i+1} of {len(models)*len(seasons)*len(rounds)*len(countries)})",
             end="\r",
         )
         run_real_data_model(
-            model, season, num_rounds=actual_round, num_simulations=100_000
+            model, season, num_rounds=actual_round, championship=country, num_simulations=100_000
         )

@@ -3,9 +3,10 @@
 import json
 import os
 from typing import Any
+import pandas as pd
 
 
-def generate_all_matches_data(year: int) -> None:
+def generate_all_matches_from_scraped_data(year: int) -> None:
     """
     Generate all matches data for a given year.
 
@@ -14,7 +15,7 @@ def generate_all_matches_data(year: int) -> None:
     """
     save_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{year}"
+        "real_data", "results", "brazil", f"{year}"
     )
     os.makedirs(save_dir, exist_ok=True)
     save_path = os.path.join(save_dir, "all_matches.json")
@@ -54,7 +55,91 @@ def generate_all_matches_data(year: int) -> None:
         json.dump(all_matches, f, ensure_ascii=False, indent=2)
 
 
-def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
+def generate_all_matches_from_football_data_co_uk(year: int, championship: str) -> None:
+    """
+    Download, process, and save all matches data for a given year and championship
+    from football-data.co.uk.
+
+    This function fetches the CSV file for the specified championship and season,
+    processes the relevant columns, and saves the data as a JSON file in the
+    appropriate directory structure.
+
+    Args:
+        year (int): The year of the season to process (e.g., 2022 for the 2022/2023 season).
+        championship (str): The championship code (e.g., "england").
+
+    Raises:
+        KeyError: If the championship is not supported.
+        Exception: If there is an error downloading or processing the data.
+    """
+    year_mask = str(year % 100) + str(year % 100 + 1)
+    championship_mask = {
+        "england": "E0",
+        "germany": "D1",
+        "italy": "I1",
+        "spain": "SP1",
+        "france": "F1",
+    }[championship]
+    url = f"https://www.football-data.co.uk/mmz4281/{year_mask}/{championship_mask}.csv"
+    df = pd.read_csv(url)
+    df = df[['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']]
+    df.reset_index(inplace=True)
+    df.rename(
+        columns={
+            'index': 'game_id',
+            'HomeTeam': 'home_team',
+            'AwayTeam': 'away_team',
+            'FTHG': 'goals_team1',
+            'FTAG': 'goals_team2',
+            'FTR': 'result'
+        },
+        inplace=True
+    )
+    df['game_id'] = (df['game_id'] + 1).astype(str).str.zfill(3)
+    data = df.to_dict(orient='records')
+    data = {game['game_id']: {k: v for k, v in game.items() if k != 'game_id'} for game in data}
+
+    save_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "results", f"{championship}", f"{year}"
+    )
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, "all_matches.json")
+    with open(save_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def generate_all_matches_data(year: int, championship: str) -> None:
+    """
+    Generate and save all matches data for a given year and championship.
+
+    This function creates a JSON file containing all match data for the specified
+    year and championship. For the Brazilian championship, it uses scraped data.
+    For other supported championships, it downloads and processes data from
+    football-data.co.uk. If the championship is not supported, it raises a ValueError.
+
+    Args:
+        year (int): The year of the matches to process.
+        championship (str): The name of the championship (e.g., "brazil", "england").
+
+    Raises:
+        ValueError: If the championship is not supported or if there is an error
+            processing the data.
+    """
+    if championship == "brazil":
+        generate_all_matches_from_scraped_data(year)
+    else:
+        try:
+            generate_all_matches_from_football_data_co_uk(year, championship)
+        except Exception as e:
+            raise ValueError(f"Championship {championship} is not supported") from e
+
+
+def generate_real_data_stan_input(
+    year: int,
+    num_rounds: int = 38,
+    championship: str = "brazil"
+) -> None:
     """
     Load and process real Serie A game data for a given year and number of rounds,
     and save the processed data as JSON files for use with the Bradley-Terry and Poisson models.
@@ -62,10 +147,11 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
     Args:
         year (int): The year of the games to load and process.
         num_rounds (int, optional): Number of rounds to process. Defaults to 38.
+        championship (str, optional): The championship of the data. Defaults to "brazil".
     """
     all_matches_path = os.path.join(
         os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{year}", "all_matches.json"
+        "real_data", "results", f"{championship}", f"{year}", "all_matches.json"
     )
 
     with open(all_matches_path, encoding="utf-8") as f:
@@ -89,7 +175,7 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
         raise ValueError(f"Number of total matches is {len(data)}, which is not supported")
 
     for game_data in data.values():
-        if len(team1) > num_rounds * (num_teams // 2):
+        if len(team1) >= num_rounds * (num_teams // 2):
             break
 
         home_team = game_data.get("home_team")
@@ -139,7 +225,7 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
 
     output_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
-        "real_data", "inputs", f"{year}"
+        "real_data", "inputs", f"{championship}", f"{year}"
     )
     os.makedirs(output_dir, exist_ok=True)
 
@@ -154,31 +240,33 @@ def generate_real_data_stan_input(year: int, num_rounds: int = 38) -> None:
         json.dump(poisson_data, f, ensure_ascii=False, indent=2)
 
 
-def load_all_matches_data(year: int) -> tuple[dict[str, Any], str]:
+def load_all_matches_data(year: int, championship: str) -> tuple[dict[str, Any], str]:
     """
     Load the all matches data for a given year.
 
     Args:
         year (int): The year of the data to load.
+        championship (str): The championship of the data.
 
     Returns:
         tuple[dict[str, Any], str]: The loaded data dictionary and the path to the data file.
     """
     data_path = os.path.join(
         os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{year}", "all_matches.json"
+        "real_data", "results", f"{championship}", f"{year}", "all_matches.json"
     )
     with open(data_path, encoding="utf-8") as f:
         data = json.load(f)
     return data, data_path
 
 
-def load_real_data(year: int) -> dict[str, Any]:
+def load_real_data(year: int, championship: str) -> dict[str, Any]:
     """
     Load the real data for a given year and number of rounds.
 
     Args:
         year (int): The year of the data to load.
+        championship (str): The championship of the data.
 
     Returns:
         Dict[str, Any]: The loaded data dictionary.
@@ -187,17 +275,17 @@ def load_real_data(year: int) -> dict[str, Any]:
         with open(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "inputs", f"{year}", "poisson_data_38.json"
+                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_38.json"
             ),
             encoding="utf-8",
         ) as f:
             data = json.load(f)
     except FileNotFoundError:
-        generate_real_data_stan_input(year, 38)
+        generate_real_data_stan_input(year, 38, championship)
         with open(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "inputs", f"{year}", "poisson_data_38.json"
+                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_38.json"
             ),
             encoding="utf-8",
         ) as f:
@@ -205,7 +293,7 @@ def load_real_data(year: int) -> dict[str, Any]:
     return data
 
 
-def check_results_exist(model_name: str, year: int, num_rounds: int) -> bool:
+def check_results_exist(model_name: str, year: int, num_rounds: int, championship: str) -> bool:
     """
     Check if the results for a given model, year, and number of rounds exist.
 
@@ -213,12 +301,14 @@ def check_results_exist(model_name: str, year: int, num_rounds: int) -> bool:
         model_name (str): The name of the model.
         year (int): The year of the data.
         num_rounds (int): The number of rounds of the data.
+        championship (str): The championship of the data.
 
     Returns:
         bool: True if the results exist, False otherwise.
     """
     save_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{year}", f"{model_name}", f"round_{str(num_rounds).zfill(2)}"
+        "real_data", "results", f"{championship}", f"{year}",
+        f"{model_name}", f"round_{str(num_rounds).zfill(2)}"
     )
     return os.path.exists(save_dir)

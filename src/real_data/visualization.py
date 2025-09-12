@@ -70,7 +70,7 @@ def generate_points_evolution_by_team(
         col = idx % 5 + 1
 
         club_name = sorted_team_names[idx]
-        club_color = color_mapping[club_name]
+        club_color = color_mapping.get(club_name, "rgba(0,0,0,1)")
 
         points_at_current_round = current_scenario[club_name][num_rounds - 1]
         med = median_points[team_idx, :] + points_at_current_round

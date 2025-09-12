@@ -79,7 +79,7 @@ def ranked_probability_score(
     return total_score / (2 * n)
 
 
-def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
+def calculate_metrics(model_name: str, year: int, num_rounds: int, championship: str) -> None:
     """
     Calculate the metrics for a given model and year.
 
@@ -87,9 +87,10 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
         model_name (str): The name of the model to calculate the metrics for.
         year (int): The year of the data to use.
         num_rounds (int): The number of rounds to calculate the metrics for.
+        championship (str): The championship of the data.
     """
 
-    data, _ = load_all_matches_data(year)
+    data, _ = load_all_matches_data(year, championship)
     num_total_matches = len(data)
     if num_total_matches == 380:
         num_matches_per_round = 10
@@ -133,6 +134,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
     csv_path = "real_data/results/metrics.csv"
     header = [
         "year",
+        "championship",
         "model_name",
         "num_rounds",
         "brier_score",
@@ -141,6 +143,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
     ]
     row = [
         year,
+        championship,
         model_name,
         num_rounds,
         brier_score(observations, predictions),
@@ -149,6 +152,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
     ]
     naive_row = [
         year,
+        championship,
         "naive",
         num_rounds,
         brier_score(observations, naive_predictions),
@@ -160,6 +164,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
         df = df[
             ~(
                 (df["year"] == year)
+                & (df["championship"] == championship)
                 & (df["model_name"].isin([model_name, "naive"]))
                 & (df["num_rounds"] == num_rounds)
             )
