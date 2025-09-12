@@ -96,8 +96,8 @@ def generate_points_matrix_bradley_terry(
 
     probabilities: dict[str, dict[str, Any]] = {}
     for rd in range(n_matches_per_club):
-        for game in range(10):
-            game_id = (num_rounds + rd) * 10 + game
+        for game in range(n_teams // 2):
+            game_id = (num_rounds + rd) * (n_teams // 2) + game
             home_strengths = samples.iloc[samples_indices[rd]][
                 home_team_names[game_id]
             ].values
@@ -182,8 +182,8 @@ def generate_points_matrix_poisson(
             nu = samples.iloc[samples_indices[rd]]["nu"].values
         else:
             nu = np.zeros(num_simulations)
-        for game in range(10):
-            game_id = (num_rounds + rd) * 10 + game
+        for game in range(n_teams // 2):
+            game_id = (num_rounds + rd) * (n_teams // 2) + game
             home_name = home_team_names[game_id]
             away_name = away_team_names[game_id]
             if home_name + " (atk home)" in samples.columns:
@@ -275,7 +275,8 @@ def simulate_competition(
             current_scenario: Dictionary with the actual points evolution for each team.
     """
     data = load_real_data(year)
-    n_matches_per_club = 38 - num_rounds
+    n_clubs = len(team_mapping)
+    n_matches_per_club = 2 * (n_clubs - 1) - num_rounds
 
     current_scenario = get_real_points_evolution(data, team_mapping)
 

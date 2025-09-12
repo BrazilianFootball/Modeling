@@ -35,7 +35,8 @@ def generate_points_evolution_by_team(
     Returns:
         None
     """
-    n_matches_per_club = 38 - num_rounds
+    n_clubs = len(team_mapping)
+    n_matches_per_club = 2 * (n_clubs - 1) - num_rounds
     median_points = np.median(points_matrix, axis=2)
     p95_points = np.percentile(points_matrix, 95, axis=2)
     p5_points = np.percentile(points_matrix, 5, axis=2)
@@ -107,7 +108,7 @@ def generate_points_evolution_by_team(
 
         fig.add_trace(
             go.Scatter(
-                x=np.arange(1, 39),
+                x=np.arange(1, 2 * n_clubs - 1),
                 y=team_points,
                 mode="lines",
                 line={"color": "red", "dash": "dash", "width": 1},
@@ -118,7 +119,7 @@ def generate_points_evolution_by_team(
             col=col,
         )
 
-    for i in range(20):
+    for i in range(n_clubs):
         fig.layout.annotations[i].font.size = 8.5
         row = i // 5 + 1
         col = i % 5 + 1

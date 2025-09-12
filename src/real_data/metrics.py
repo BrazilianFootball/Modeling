@@ -1,3 +1,5 @@
+# pylint: disable=too-many-locals
+
 import os
 
 import numpy as np
@@ -88,9 +90,28 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int) -> None:
     """
 
     data, _ = load_all_matches_data(year)
-    observations = np.zeros(((38 - num_rounds) * 10, 3), dtype=int)
-    predictions = np.zeros(((38 - num_rounds) * 10, 3), dtype=float)
-    naive_predictions = 1 / 3 * np.ones(((38 - num_rounds) * 10, 3), dtype=float)
+    num_total_matches = len(data)
+    if num_total_matches == 380:
+        num_matches_per_round = 10
+        num_total_rounds = 38
+    elif num_total_matches == 306:
+        num_matches_per_round = 9
+        num_total_rounds = 34
+    else:
+        raise ValueError(f"Number of total matches is {num_total_matches}, which is not supported")
+
+    observations = np.zeros(
+        ((num_total_rounds - num_rounds) * num_matches_per_round, 3),
+        dtype=int
+    )
+    predictions = np.zeros(
+        ((num_total_rounds - num_rounds) * num_matches_per_round, 3),
+        dtype=float
+    )
+    naive_predictions = 1 / 3 * np.ones(
+        ((num_total_rounds - num_rounds) * num_matches_per_round, 3),
+        dtype=float
+    )
     game = 0
     results_to_array = {
         "H": np.array([1, 0, 0]),
