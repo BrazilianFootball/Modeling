@@ -37,11 +37,11 @@ def process_data(
     n_iterations = len(model_list) * len(season_list) * len(round_list) * len(country_list)
     for i, values in enumerate(product(model_list, season_list, round_list, country_list)):
         model, season, actual_round, country = values
-        if actual_round == "mid" and country in ["france", "germany"]:
+        if actual_round == "mid" and country in ["france", "germany", "netherlands", "portugal"]:
             actual_round = 17
         elif actual_round == "mid":
             actual_round = 19
-        elif actual_round == "end" and country in ["france", "germany"]:
+        elif actual_round == "end" and country in ["france", "germany", "netherlands", "portugal"]:
             actual_round = 34
         elif actual_round == "end":
             actual_round = 38
@@ -85,5 +85,5 @@ if __name__ == "__main__":
     process_data(models, seasons, rounds, countries)
 
     seasons = [2023, 2024]
-    countries = ["england", "france", "germany", "italy", "spain"]
+    countries = ["england", "france", "germany", "italy", "netherlands", "portugal", "spain"]
     process_data(models, seasons, rounds, countries)

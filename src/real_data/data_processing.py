@@ -78,10 +78,12 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
     uri_mask = "https://api.football-data.org/v4/competitions/{championship}/matches?season={year}"
     championship_mask = {
         "england": "PL",
+        "france": "FL1",
         "germany": "BL1",
         "italy": "SA",
+        "netherlands": "DED",
+        "portugal": "PPL",
         "spain": "PD",
-        "france": "FL1",
     }[championship]
 
     url = uri_mask.format(championship=championship_mask, year=year)
