@@ -1,0 +1,2662 @@
+{
+  "001": {
+    "home_team": "Burnley",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "002": {
+    "home_team": "Arsenal",
+    "away_team": "Nottingham",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "003": {
+    "home_team": "Bournemouth",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "004": {
+    "home_team": "Brighton Hove",
+    "away_team": "Luton Town",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "005": {
+    "home_team": "Everton",
+    "away_team": "Fulham",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "006": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Crystal Palace",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "007": {
+    "home_team": "Newcastle",
+    "away_team": "Aston Villa",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "008": {
+    "home_team": "Brentford",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "009": {
+    "home_team": "Chelsea",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "010": {
+    "home_team": "Man United",
+    "away_team": "Wolverhampton",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "011": {
+    "home_team": "Nottingham",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "012": {
+    "home_team": "Fulham",
+    "away_team": "Brentford",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "013": {
+    "home_team": "Liverpool",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "014": {
+    "home_team": "Wolverhampton",
+    "away_team": "Brighton Hove",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "015": {
+    "home_team": "Tottenham",
+    "away_team": "Man United",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "016": {
+    "home_team": "Man City",
+    "away_team": "Newcastle",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "017": {
+    "home_team": "Aston Villa",
+    "away_team": "Everton",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "018": {
+    "home_team": "West Ham",
+    "away_team": "Chelsea",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "019": {
+    "home_team": "Crystal Palace",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "020": {
+    "home_team": "Luton Town",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "021": {
+    "home_team": "Chelsea",
+    "away_team": "Luton Town",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "022": {
+    "home_team": "Bournemouth",
+    "away_team": "Tottenham",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "023": {
+    "home_team": "Everton",
+    "away_team": "Wolverhampton",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "024": {
+    "home_team": "Man United",
+    "away_team": "Nottingham",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "025": {
+    "home_team": "Arsenal",
+    "away_team": "Fulham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "026": {
+    "home_team": "Brentford",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "027": {
+    "home_team": "Brighton Hove",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "028": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "029": {
+    "home_team": "Burnley",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "030": {
+    "home_team": "Newcastle",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "031": {
+    "home_team": "Luton Town",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "032": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "033": {
+    "home_team": "Brentford",
+    "away_team": "Bournemouth",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "034": {
+    "home_team": "Burnley",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "035": {
+    "home_team": "Chelsea",
+    "away_team": "Nottingham",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "036": {
+    "home_team": "Man City",
+    "away_team": "Fulham",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "037": {
+    "home_team": "Brighton Hove",
+    "away_team": "Newcastle",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "038": {
+    "home_team": "Crystal Palace",
+    "away_team": "Wolverhampton",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "039": {
+    "home_team": "Liverpool",
+    "away_team": "Aston Villa",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "040": {
+    "home_team": "Arsenal",
+    "away_team": "Man United",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "041": {
+    "home_team": "Wolverhampton",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "042": {
+    "home_team": "Aston Villa",
+    "away_team": "Crystal Palace",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "043": {
+    "home_team": "Fulham",
+    "away_team": "Luton Town",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "044": {
+    "home_team": "Man United",
+    "away_team": "Brighton Hove",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "045": {
+    "home_team": "Tottenham",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "046": {
+    "home_team": "West Ham",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "047": {
+    "home_team": "Newcastle",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "048": {
+    "home_team": "Bournemouth",
+    "away_team": "Chelsea",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "049": {
+    "home_team": "Everton",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "050": {
+    "home_team": "Nottingham",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "051": {
+    "home_team": "Crystal Palace",
+    "away_team": "Fulham",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "052": {
+    "home_team": "Luton Town",
+    "away_team": "Wolverhampton",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "053": {
+    "home_team": "Man City",
+    "away_team": "Nottingham",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "054": {
+    "home_team": "Brentford",
+    "away_team": "Everton",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "055": {
+    "home_team": "Burnley",
+    "away_team": "Man United",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "056": {
+    "home_team": "Arsenal",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "057": {
+    "home_team": "Brighton Hove",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "058": {
+    "home_team": "Chelsea",
+    "away_team": "Aston Villa",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "059": {
+    "home_team": "Liverpool",
+    "away_team": "West Ham",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "060": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Newcastle",
+    "goals_team1": 0,
+    "goals_team2": 8,
+    "result": "A"
+  },
+  "061": {
+    "home_team": "Aston Villa",
+    "away_team": "Brighton Hove",
+    "goals_team1": 6,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "062": {
+    "home_team": "Bournemouth",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "063": {
+    "home_team": "Everton",
+    "away_team": "Luton Town",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "064": {
+    "home_team": "Man United",
+    "away_team": "Crystal Palace",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "065": {
+    "home_team": "Newcastle",
+    "away_team": "Burnley",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "066": {
+    "home_team": "West Ham",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "067": {
+    "home_team": "Wolverhampton",
+    "away_team": "Man City",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "068": {
+    "home_team": "Tottenham",
+    "away_team": "Liverpool",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "069": {
+    "home_team": "Nottingham",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "070": {
+    "home_team": "Fulham",
+    "away_team": "Chelsea",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "071": {
+    "home_team": "Luton Town",
+    "away_team": "Tottenham",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "072": {
+    "home_team": "Burnley",
+    "away_team": "Chelsea",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "073": {
+    "home_team": "Everton",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "074": {
+    "home_team": "Fulham",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "075": {
+    "home_team": "Man United",
+    "away_team": "Brentford",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "076": {
+    "home_team": "Crystal Palace",
+    "away_team": "Nottingham",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "077": {
+    "home_team": "Brighton Hove",
+    "away_team": "Liverpool",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "078": {
+    "home_team": "West Ham",
+    "away_team": "Newcastle",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "079": {
+    "home_team": "Wolverhampton",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "080": {
+    "home_team": "Arsenal",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "081": {
+    "home_team": "Liverpool",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "082": {
+    "home_team": "Bournemouth",
+    "away_team": "Wolverhampton",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "083": {
+    "home_team": "Brentford",
+    "away_team": "Burnley",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "084": {
+    "home_team": "Man City",
+    "away_team": "Brighton Hove",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "085": {
+    "home_team": "Newcastle",
+    "away_team": "Crystal Palace",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "086": {
+    "home_team": "Nottingham",
+    "away_team": "Luton Town",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "087": {
+    "home_team": "Chelsea",
+    "away_team": "Arsenal",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "088": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Man United",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "089": {
+    "home_team": "Aston Villa",
+    "away_team": "West Ham",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "090": {
+    "home_team": "Tottenham",
+    "away_team": "Fulham",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "091": {
+    "home_team": "Crystal Palace",
+    "away_team": "Tottenham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "092": {
+    "home_team": "Chelsea",
+    "away_team": "Brentford",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "093": {
+    "home_team": "Bournemouth",
+    "away_team": "Burnley",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "094": {
+    "home_team": "Arsenal",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "095": {
+    "home_team": "Wolverhampton",
+    "away_team": "Newcastle",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "096": {
+    "home_team": "West Ham",
+    "away_team": "Everton",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "097": {
+    "home_team": "Aston Villa",
+    "away_team": "Luton Town",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "098": {
+    "home_team": "Brighton Hove",
+    "away_team": "Fulham",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "099": {
+    "home_team": "Liverpool",
+    "away_team": "Nottingham",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "100": {
+    "home_team": "Man United",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "101": {
+    "home_team": "Fulham",
+    "away_team": "Man United",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "102": {
+    "home_team": "Brentford",
+    "away_team": "West Ham",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "103": {
+    "home_team": "Burnley",
+    "away_team": "Crystal Palace",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "104": {
+    "home_team": "Everton",
+    "away_team": "Brighton Hove",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "105": {
+    "home_team": "Man City",
+    "away_team": "Bournemouth",
+    "goals_team1": 6,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "106": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Wolverhampton",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "107": {
+    "home_team": "Newcastle",
+    "away_team": "Arsenal",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "108": {
+    "home_team": "Nottingham",
+    "away_team": "Aston Villa",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "109": {
+    "home_team": "Luton Town",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "110": {
+    "home_team": "Tottenham",
+    "away_team": "Chelsea",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "111": {
+    "home_team": "Wolverhampton",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "112": {
+    "home_team": "Arsenal",
+    "away_team": "Burnley",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "113": {
+    "home_team": "Crystal Palace",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "114": {
+    "home_team": "Man United",
+    "away_team": "Luton Town",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "115": {
+    "home_team": "Bournemouth",
+    "away_team": "Newcastle",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "116": {
+    "home_team": "Aston Villa",
+    "away_team": "Fulham",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "117": {
+    "home_team": "Brighton Hove",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "118": {
+    "home_team": "Liverpool",
+    "away_team": "Brentford",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "119": {
+    "home_team": "West Ham",
+    "away_team": "Nottingham",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "120": {
+    "home_team": "Chelsea",
+    "away_team": "Man City",
+    "goals_team1": 4,
+    "goals_team2": 4,
+    "result": "D"
+  },
+  "121": {
+    "home_team": "Man City",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "122": {
+    "home_team": "Burnley",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "123": {
+    "home_team": "Luton Town",
+    "away_team": "Crystal Palace",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "124": {
+    "home_team": "Newcastle",
+    "away_team": "Chelsea",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "125": {
+    "home_team": "Nottingham",
+    "away_team": "Brighton Hove",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "126": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Bournemouth",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "127": {
+    "home_team": "Brentford",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "128": {
+    "home_team": "Tottenham",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "129": {
+    "home_team": "Everton",
+    "away_team": "Man United",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "130": {
+    "home_team": "Fulham",
+    "away_team": "Wolverhampton",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "131": {
+    "home_team": "Arsenal",
+    "away_team": "Wolverhampton",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "132": {
+    "home_team": "Brentford",
+    "away_team": "Luton Town",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "133": {
+    "home_team": "Burnley",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "134": {
+    "home_team": "Nottingham",
+    "away_team": "Everton",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "135": {
+    "home_team": "Newcastle",
+    "away_team": "Man United",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "136": {
+    "home_team": "Bournemouth",
+    "away_team": "Aston Villa",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "137": {
+    "home_team": "Chelsea",
+    "away_team": "Brighton Hove",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "138": {
+    "home_team": "Liverpool",
+    "away_team": "Fulham",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "139": {
+    "home_team": "West Ham",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "140": {
+    "home_team": "Man City",
+    "away_team": "Tottenham",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "141": {
+    "home_team": "Wolverhampton",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "142": {
+    "home_team": "Luton Town",
+    "away_team": "Arsenal",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "143": {
+    "home_team": "Brighton Hove",
+    "away_team": "Brentford",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "144": {
+    "home_team": "Fulham",
+    "away_team": "Nottingham",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "145": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Liverpool",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "146": {
+    "home_team": "Crystal Palace",
+    "away_team": "Bournemouth",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "147": {
+    "home_team": "Aston Villa",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "148": {
+    "home_team": "Man United",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "149": {
+    "home_team": "Everton",
+    "away_team": "Newcastle",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "150": {
+    "home_team": "Tottenham",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "151": {
+    "home_team": "Crystal Palace",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "152": {
+    "home_team": "Brighton Hove",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "153": {
+    "home_team": "Man United",
+    "away_team": "Bournemouth",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "154": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "155": {
+    "home_team": "Wolverhampton",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "156": {
+    "home_team": "Aston Villa",
+    "away_team": "Arsenal",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "157": {
+    "home_team": "Everton",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "158": {
+    "home_team": "Fulham",
+    "away_team": "West Ham",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "159": {
+    "home_team": "Luton Town",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "160": {
+    "home_team": "Tottenham",
+    "away_team": "Newcastle",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "161": {
+    "home_team": "Nottingham",
+    "away_team": "Tottenham",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "162": {
+    "home_team": "Chelsea",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "163": {
+    "home_team": "Man City",
+    "away_team": "Crystal Palace",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "164": {
+    "home_team": "Newcastle",
+    "away_team": "Fulham",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "165": {
+    "home_team": "Burnley",
+    "away_team": "Everton",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "166": {
+    "home_team": "Arsenal",
+    "away_team": "Brighton Hove",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "167": {
+    "home_team": "Brentford",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "168": {
+    "home_team": "West Ham",
+    "away_team": "Wolverhampton",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "169": {
+    "home_team": "Liverpool",
+    "away_team": "Man United",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "170": {
+    "home_team": "Bournemouth",
+    "away_team": "Luton Town",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "171": {
+    "home_team": "Crystal Palace",
+    "away_team": "Brighton Hove",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "172": {
+    "home_team": "Aston Villa",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "173": {
+    "home_team": "West Ham",
+    "away_team": "Man United",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "174": {
+    "home_team": "Fulham",
+    "away_team": "Burnley",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "175": {
+    "home_team": "Luton Town",
+    "away_team": "Newcastle",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "176": {
+    "home_team": "Nottingham",
+    "away_team": "Bournemouth",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "177": {
+    "home_team": "Tottenham",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "178": {
+    "home_team": "Liverpool",
+    "away_team": "Arsenal",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "179": {
+    "home_team": "Wolverhampton",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "180": {
+    "home_team": "Man City",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "181": {
+    "home_team": "Newcastle",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "182": {
+    "home_team": "Bournemouth",
+    "away_team": "Fulham",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "183": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Luton Town",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "184": {
+    "home_team": "Burnley",
+    "away_team": "Liverpool",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "185": {
+    "home_team": "Man United",
+    "away_team": "Aston Villa",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "186": {
+    "home_team": "Brentford",
+    "away_team": "Wolverhampton",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "187": {
+    "home_team": "Chelsea",
+    "away_team": "Crystal Palace",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "188": {
+    "home_team": "Everton",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "189": {
+    "home_team": "Brighton Hove",
+    "away_team": "Tottenham",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "190": {
+    "home_team": "Arsenal",
+    "away_team": "West Ham",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "191": {
+    "home_team": "Luton Town",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "192": {
+    "home_team": "Aston Villa",
+    "away_team": "Burnley",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "193": {
+    "home_team": "Crystal Palace",
+    "away_team": "Brentford",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "194": {
+    "home_team": "Man City",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "195": {
+    "home_team": "Wolverhampton",
+    "away_team": "Everton",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "196": {
+    "home_team": "Nottingham",
+    "away_team": "Man United",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "197": {
+    "home_team": "Fulham",
+    "away_team": "Arsenal",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "198": {
+    "home_team": "Tottenham",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "199": {
+    "home_team": "Liverpool",
+    "away_team": "Newcastle",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "200": {
+    "home_team": "West Ham",
+    "away_team": "Brighton Hove",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "201": {
+    "home_team": "Burnley",
+    "away_team": "Luton Town",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "202": {
+    "home_team": "Chelsea",
+    "away_team": "Fulham",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "203": {
+    "home_team": "Newcastle",
+    "away_team": "Man City",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "204": {
+    "home_team": "Everton",
+    "away_team": "Aston Villa",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "205": {
+    "home_team": "Man United",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "206": {
+    "home_team": "Arsenal",
+    "away_team": "Crystal Palace",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "207": {
+    "home_team": "Brentford",
+    "away_team": "Nottingham",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "208": {
+    "home_team": "Sheffield Utd",
+    "away_team": "West Ham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "209": {
+    "home_team": "Bournemouth",
+    "away_team": "Liverpool",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "210": {
+    "home_team": "Brighton Hove",
+    "away_team": "Wolverhampton",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "211": {
+    "home_team": "Nottingham",
+    "away_team": "Arsenal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "212": {
+    "home_team": "Luton Town",
+    "away_team": "Brighton Hove",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "213": {
+    "home_team": "Fulham",
+    "away_team": "Everton",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "214": {
+    "home_team": "Crystal Palace",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "215": {
+    "home_team": "Aston Villa",
+    "away_team": "Newcastle",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "216": {
+    "home_team": "Tottenham",
+    "away_team": "Brentford",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "217": {
+    "home_team": "Man City",
+    "away_team": "Burnley",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "218": {
+    "home_team": "Liverpool",
+    "away_team": "Chelsea",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "219": {
+    "home_team": "West Ham",
+    "away_team": "Bournemouth",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "220": {
+    "home_team": "Wolverhampton",
+    "away_team": "Man United",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "221": {
+    "home_team": "Everton",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "222": {
+    "home_team": "Brighton Hove",
+    "away_team": "Crystal Palace",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "223": {
+    "home_team": "Burnley",
+    "away_team": "Fulham",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "224": {
+    "home_team": "Newcastle",
+    "away_team": "Luton Town",
+    "goals_team1": 4,
+    "goals_team2": 4,
+    "result": "D"
+  },
+  "225": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Aston Villa",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "226": {
+    "home_team": "Bournemouth",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "227": {
+    "home_team": "Chelsea",
+    "away_team": "Wolverhampton",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "228": {
+    "home_team": "Man United",
+    "away_team": "West Ham",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "229": {
+    "home_team": "Arsenal",
+    "away_team": "Liverpool",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "230": {
+    "home_team": "Brentford",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "231": {
+    "home_team": "Man City",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "232": {
+    "home_team": "Fulham",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "233": {
+    "home_team": "Liverpool",
+    "away_team": "Burnley",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "234": {
+    "home_team": "Luton Town",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "235": {
+    "home_team": "Tottenham",
+    "away_team": "Brighton Hove",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "236": {
+    "home_team": "Wolverhampton",
+    "away_team": "Brentford",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "237": {
+    "home_team": "Nottingham",
+    "away_team": "Newcastle",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "238": {
+    "home_team": "West Ham",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "239": {
+    "home_team": "Aston Villa",
+    "away_team": "Man United",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "240": {
+    "home_team": "Crystal Palace",
+    "away_team": "Chelsea",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "241": {
+    "home_team": "Brentford",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "242": {
+    "home_team": "Burnley",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "243": {
+    "home_team": "Fulham",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "244": {
+    "home_team": "Newcastle",
+    "away_team": "Bournemouth",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "245": {
+    "home_team": "Nottingham",
+    "away_team": "West Ham",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "246": {
+    "home_team": "Tottenham",
+    "away_team": "Wolverhampton",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "247": {
+    "home_team": "Man City",
+    "away_team": "Chelsea",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "248": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Brighton Hove",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "249": {
+    "home_team": "Luton Town",
+    "away_team": "Man United",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "250": {
+    "home_team": "Everton",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "251": {
+    "home_team": "Liverpool",
+    "away_team": "Luton Town",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "252": {
+    "home_team": "Aston Villa",
+    "away_team": "Nottingham",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "253": {
+    "home_team": "Brighton Hove",
+    "away_team": "Everton",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "254": {
+    "home_team": "Crystal Palace",
+    "away_team": "Burnley",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "255": {
+    "home_team": "Man United",
+    "away_team": "Fulham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "256": {
+    "home_team": "Bournemouth",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "257": {
+    "home_team": "Arsenal",
+    "away_team": "Newcastle",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "258": {
+    "home_team": "Wolverhampton",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "259": {
+    "home_team": "West Ham",
+    "away_team": "Brentford",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "260": {
+    "home_team": "Chelsea",
+    "away_team": "Tottenham",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "261": {
+    "home_team": "Brentford",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "262": {
+    "home_team": "Everton",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "263": {
+    "home_team": "Fulham",
+    "away_team": "Brighton Hove",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "264": {
+    "home_team": "Newcastle",
+    "away_team": "Wolverhampton",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "265": {
+    "home_team": "Nottingham",
+    "away_team": "Liverpool",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "266": {
+    "home_team": "Tottenham",
+    "away_team": "Crystal Palace",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "267": {
+    "home_team": "Luton Town",
+    "away_team": "Aston Villa",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "268": {
+    "home_team": "Burnley",
+    "away_team": "Bournemouth",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "269": {
+    "home_team": "Man City",
+    "away_team": "Man United",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "270": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "271": {
+    "home_team": "Man United",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "272": {
+    "home_team": "Bournemouth",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "273": {
+    "home_team": "Crystal Palace",
+    "away_team": "Luton Town",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "274": {
+    "home_team": "Wolverhampton",
+    "away_team": "Fulham",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "275": {
+    "home_team": "Arsenal",
+    "away_team": "Brentford",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "276": {
+    "home_team": "Aston Villa",
+    "away_team": "Tottenham",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "277": {
+    "home_team": "Brighton Hove",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "278": {
+    "home_team": "West Ham",
+    "away_team": "Burnley",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "279": {
+    "home_team": "Liverpool",
+    "away_team": "Man City",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "280": {
+    "home_team": "Chelsea",
+    "away_team": "Newcastle",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "281": {
+    "home_team": "Burnley",
+    "away_team": "Brentford",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "282": {
+    "home_team": "Luton Town",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "283": {
+    "home_team": "Fulham",
+    "away_team": "Tottenham",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "284": {
+    "home_team": "West Ham",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "285": {
+    "home_team": "Arsenal",
+    "away_team": "Chelsea",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "286": {
+    "home_team": "Wolverhampton",
+    "away_team": "Bournemouth",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "287": {
+    "home_team": "Crystal Palace",
+    "away_team": "Newcastle",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "288": {
+    "home_team": "Everton",
+    "away_team": "Liverpool",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "289": {
+    "home_team": "Man United",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "290": {
+    "home_team": "Brighton Hove",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "291": {
+    "home_team": "Newcastle",
+    "away_team": "West Ham",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "292": {
+    "home_team": "Bournemouth",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "293": {
+    "home_team": "Chelsea",
+    "away_team": "Burnley",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "294": {
+    "home_team": "Nottingham",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "295": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Fulham",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "296": {
+    "home_team": "Tottenham",
+    "away_team": "Luton Town",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "297": {
+    "home_team": "Aston Villa",
+    "away_team": "Wolverhampton",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "298": {
+    "home_team": "Brentford",
+    "away_team": "Man United",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "299": {
+    "home_team": "Liverpool",
+    "away_team": "Brighton Hove",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "300": {
+    "home_team": "Man City",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "301": {
+    "home_team": "Nottingham",
+    "away_team": "Fulham",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "302": {
+    "home_team": "Newcastle",
+    "away_team": "Everton",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "303": {
+    "home_team": "Bournemouth",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "304": {
+    "home_team": "Burnley",
+    "away_team": "Wolverhampton",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "305": {
+    "home_team": "West Ham",
+    "away_team": "Tottenham",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "306": {
+    "home_team": "Arsenal",
+    "away_team": "Luton Town",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "307": {
+    "home_team": "Brentford",
+    "away_team": "Brighton Hove",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "308": {
+    "home_team": "Man City",
+    "away_team": "Aston Villa",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "309": {
+    "home_team": "Liverpool",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "310": {
+    "home_team": "Chelsea",
+    "away_team": "Man United",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "311": {
+    "home_team": "Crystal Palace",
+    "away_team": "Man City",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "312": {
+    "home_team": "Aston Villa",
+    "away_team": "Brentford",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "313": {
+    "home_team": "Everton",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "314": {
+    "home_team": "Fulham",
+    "away_team": "Newcastle",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "315": {
+    "home_team": "Luton Town",
+    "away_team": "Bournemouth",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "316": {
+    "home_team": "Wolverhampton",
+    "away_team": "West Ham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "317": {
+    "home_team": "Brighton Hove",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "318": {
+    "home_team": "Man United",
+    "away_team": "Liverpool",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "319": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "320": {
+    "home_team": "Tottenham",
+    "away_team": "Nottingham",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "321": {
+    "home_team": "Newcastle",
+    "away_team": "Tottenham",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "322": {
+    "home_team": "Brentford",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "323": {
+    "home_team": "Burnley",
+    "away_team": "Brighton Hove",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "324": {
+    "home_team": "Man City",
+    "away_team": "Luton Town",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "325": {
+    "home_team": "Nottingham",
+    "away_team": "Wolverhampton",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "326": {
+    "home_team": "Bournemouth",
+    "away_team": "Man United",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "327": {
+    "home_team": "Liverpool",
+    "away_team": "Crystal Palace",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "328": {
+    "home_team": "West Ham",
+    "away_team": "Fulham",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "329": {
+    "home_team": "Arsenal",
+    "away_team": "Aston Villa",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "330": {
+    "home_team": "Chelsea",
+    "away_team": "Everton",
+    "goals_team1": 6,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "331": {
+    "home_team": "Luton Town",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "332": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "333": {
+    "home_team": "Wolverhampton",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "334": {
+    "home_team": "Everton",
+    "away_team": "Nottingham",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "335": {
+    "home_team": "Aston Villa",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "336": {
+    "home_team": "Crystal Palace",
+    "away_team": "West Ham",
+    "goals_team1": 5,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "337": {
+    "home_team": "Fulham",
+    "away_team": "Liverpool",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "338": {
+    "home_team": "Tottenham",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "339": {
+    "home_team": "Brighton Hove",
+    "away_team": "Chelsea",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "340": {
+    "home_team": "Man United",
+    "away_team": "Newcastle",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "341": {
+    "home_team": "West Ham",
+    "away_team": "Liverpool",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "342": {
+    "home_team": "Fulham",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "343": {
+    "home_team": "Man United",
+    "away_team": "Burnley",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "344": {
+    "home_team": "Newcastle",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "345": {
+    "home_team": "Wolverhampton",
+    "away_team": "Luton Town",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "346": {
+    "home_team": "Everton",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "347": {
+    "home_team": "Aston Villa",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "348": {
+    "home_team": "Bournemouth",
+    "away_team": "Brighton Hove",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "349": {
+    "home_team": "Tottenham",
+    "away_team": "Arsenal",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "350": {
+    "home_team": "Nottingham",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "351": {
+    "home_team": "Luton Town",
+    "away_team": "Everton",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "352": {
+    "home_team": "Arsenal",
+    "away_team": "Bournemouth",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "353": {
+    "home_team": "Brentford",
+    "away_team": "Fulham",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "354": {
+    "home_team": "Burnley",
+    "away_team": "Newcastle",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "355": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "356": {
+    "home_team": "Man City",
+    "away_team": "Wolverhampton",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "357": {
+    "home_team": "Brighton Hove",
+    "away_team": "Aston Villa",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "358": {
+    "home_team": "Chelsea",
+    "away_team": "West Ham",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "359": {
+    "home_team": "Liverpool",
+    "away_team": "Tottenham",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "360": {
+    "home_team": "Crystal Palace",
+    "away_team": "Man United",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "361": {
+    "home_team": "Fulham",
+    "away_team": "Man City",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "362": {
+    "home_team": "Bournemouth",
+    "away_team": "Brentford",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "363": {
+    "home_team": "Everton",
+    "away_team": "Sheffield Utd",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "364": {
+    "home_team": "Newcastle",
+    "away_team": "Brighton Hove",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "365": {
+    "home_team": "Tottenham",
+    "away_team": "Burnley",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "366": {
+    "home_team": "West Ham",
+    "away_team": "Luton Town",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "367": {
+    "home_team": "Wolverhampton",
+    "away_team": "Crystal Palace",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "368": {
+    "home_team": "Nottingham",
+    "away_team": "Chelsea",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "369": {
+    "home_team": "Man United",
+    "away_team": "Arsenal",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "370": {
+    "home_team": "Aston Villa",
+    "away_team": "Liverpool",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "371": {
+    "home_team": "Arsenal",
+    "away_team": "Everton",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "372": {
+    "home_team": "Brentford",
+    "away_team": "Newcastle",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "373": {
+    "home_team": "Brighton Hove",
+    "away_team": "Man United",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "374": {
+    "home_team": "Burnley",
+    "away_team": "Nottingham",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "375": {
+    "home_team": "Chelsea",
+    "away_team": "Bournemouth",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "376": {
+    "home_team": "Crystal Palace",
+    "away_team": "Aston Villa",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "377": {
+    "home_team": "Liverpool",
+    "away_team": "Wolverhampton",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "378": {
+    "home_team": "Luton Town",
+    "away_team": "Fulham",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "379": {
+    "home_team": "Man City",
+    "away_team": "West Ham",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "380": {
+    "home_team": "Sheffield Utd",
+    "away_team": "Tottenham",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  }
+}

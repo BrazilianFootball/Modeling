@@ -1,0 +1,2662 @@
+{
+  "001": {
+    "home_team": "Empoli",
+    "away_team": "Verona",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "002": {
+    "home_team": "Frosinone",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "003": {
+    "home_team": "Genoa",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "004": {
+    "home_team": "Inter",
+    "away_team": "Monza",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "005": {
+    "home_team": "Roma",
+    "away_team": "Salernitana",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "006": {
+    "home_team": "Sassuolo",
+    "away_team": "Atalanta",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "007": {
+    "home_team": "Lecce",
+    "away_team": "Lazio",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "008": {
+    "home_team": "Udinese",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "009": {
+    "home_team": "Torino",
+    "away_team": "Cagliari",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "010": {
+    "home_team": "Bologna",
+    "away_team": "Milan",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "011": {
+    "home_team": "Frosinone",
+    "away_team": "Atalanta",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "012": {
+    "home_team": "Monza",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "013": {
+    "home_team": "Verona",
+    "away_team": "Roma",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "014": {
+    "home_team": "Milan",
+    "away_team": "Torino",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "015": {
+    "home_team": "Fiorentina",
+    "away_team": "Lecce",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "016": {
+    "home_team": "Juventus",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "017": {
+    "home_team": "Lazio",
+    "away_team": "Genoa",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "018": {
+    "home_team": "Napoli",
+    "away_team": "Sassuolo",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "019": {
+    "home_team": "Salernitana",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "020": {
+    "home_team": "Cagliari",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "021": {
+    "home_team": "Sassuolo",
+    "away_team": "Verona",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "022": {
+    "home_team": "Roma",
+    "away_team": "Milan",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "023": {
+    "home_team": "Bologna",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "024": {
+    "home_team": "Udinese",
+    "away_team": "Frosinone",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "025": {
+    "home_team": "Atalanta",
+    "away_team": "Monza",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "026": {
+    "home_team": "Napoli",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "027": {
+    "home_team": "Inter",
+    "away_team": "Fiorentina",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "028": {
+    "home_team": "Torino",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "029": {
+    "home_team": "Empoli",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "030": {
+    "home_team": "Lecce",
+    "away_team": "Salernitana",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "031": {
+    "home_team": "Juventus",
+    "away_team": "Lazio",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "032": {
+    "home_team": "Inter",
+    "away_team": "Milan",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "033": {
+    "home_team": "Genoa",
+    "away_team": "Napoli",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "034": {
+    "home_team": "Cagliari",
+    "away_team": "Udinese",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "035": {
+    "home_team": "Frosinone",
+    "away_team": "Sassuolo",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "036": {
+    "home_team": "Monza",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "037": {
+    "home_team": "Fiorentina",
+    "away_team": "Atalanta",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "038": {
+    "home_team": "Roma",
+    "away_team": "Empoli",
+    "goals_team1": 7,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "039": {
+    "home_team": "Salernitana",
+    "away_team": "Torino",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "040": {
+    "home_team": "Verona",
+    "away_team": "Bologna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "041": {
+    "home_team": "Salernitana",
+    "away_team": "Frosinone",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "042": {
+    "home_team": "Lecce",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "043": {
+    "home_team": "Milan",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "044": {
+    "home_team": "Sassuolo",
+    "away_team": "Juventus",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "045": {
+    "home_team": "Lazio",
+    "away_team": "Monza",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "046": {
+    "home_team": "Empoli",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "047": {
+    "home_team": "Atalanta",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "048": {
+    "home_team": "Udinese",
+    "away_team": "Fiorentina",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "049": {
+    "home_team": "Bologna",
+    "away_team": "Napoli",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "050": {
+    "home_team": "Torino",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "051": {
+    "home_team": "Juventus",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "052": {
+    "home_team": "Cagliari",
+    "away_team": "Milan",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "053": {
+    "home_team": "Empoli",
+    "away_team": "Salernitana",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "054": {
+    "home_team": "Verona",
+    "away_team": "Atalanta",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "055": {
+    "home_team": "Inter",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "056": {
+    "home_team": "Lazio",
+    "away_team": "Torino",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "057": {
+    "home_team": "Napoli",
+    "away_team": "Udinese",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "058": {
+    "home_team": "Frosinone",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "059": {
+    "home_team": "Monza",
+    "away_team": "Bologna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "060": {
+    "home_team": "Genoa",
+    "away_team": "Roma",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "061": {
+    "home_team": "Lecce",
+    "away_team": "Napoli",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "062": {
+    "home_team": "Milan",
+    "away_team": "Lazio",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "063": {
+    "home_team": "Salernitana",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "064": {
+    "home_team": "Bologna",
+    "away_team": "Empoli",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "065": {
+    "home_team": "Udinese",
+    "away_team": "Genoa",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "066": {
+    "home_team": "Atalanta",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "067": {
+    "home_team": "Roma",
+    "away_team": "Frosinone",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "068": {
+    "home_team": "Sassuolo",
+    "away_team": "Monza",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "069": {
+    "home_team": "Torino",
+    "away_team": "Verona",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "070": {
+    "home_team": "Fiorentina",
+    "away_team": "Cagliari",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "071": {
+    "home_team": "Empoli",
+    "away_team": "Udinese",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "072": {
+    "home_team": "Lecce",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "073": {
+    "home_team": "Inter",
+    "away_team": "Bologna",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "074": {
+    "home_team": "Juventus",
+    "away_team": "Torino",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "075": {
+    "home_team": "Genoa",
+    "away_team": "Milan",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "076": {
+    "home_team": "Monza",
+    "away_team": "Salernitana",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "077": {
+    "home_team": "Frosinone",
+    "away_team": "Verona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "078": {
+    "home_team": "Lazio",
+    "away_team": "Atalanta",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "079": {
+    "home_team": "Cagliari",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "080": {
+    "home_team": "Napoli",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "081": {
+    "home_team": "Verona",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "082": {
+    "home_team": "Torino",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "083": {
+    "home_team": "Sassuolo",
+    "away_team": "Lazio",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "084": {
+    "home_team": "Roma",
+    "away_team": "Monza",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "085": {
+    "home_team": "Bologna",
+    "away_team": "Frosinone",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "086": {
+    "home_team": "Salernitana",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "087": {
+    "home_team": "Atalanta",
+    "away_team": "Genoa",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "088": {
+    "home_team": "Milan",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "089": {
+    "home_team": "Udinese",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "090": {
+    "home_team": "Fiorentina",
+    "away_team": "Empoli",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "091": {
+    "home_team": "Genoa",
+    "away_team": "Salernitana",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "092": {
+    "home_team": "Sassuolo",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "093": {
+    "home_team": "Lecce",
+    "away_team": "Torino",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "094": {
+    "home_team": "Juventus",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "095": {
+    "home_team": "Cagliari",
+    "away_team": "Frosinone",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "096": {
+    "home_team": "Monza",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "097": {
+    "home_team": "Inter",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "098": {
+    "home_team": "Napoli",
+    "away_team": "Milan",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "099": {
+    "home_team": "Empoli",
+    "away_team": "Atalanta",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "100": {
+    "home_team": "Lazio",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "101": {
+    "home_team": "Bologna",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "102": {
+    "home_team": "Salernitana",
+    "away_team": "Napoli",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "103": {
+    "home_team": "Atalanta",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "104": {
+    "home_team": "Milan",
+    "away_team": "Udinese",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "105": {
+    "home_team": "Verona",
+    "away_team": "Monza",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "106": {
+    "home_team": "Cagliari",
+    "away_team": "Genoa",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "107": {
+    "home_team": "Roma",
+    "away_team": "Lecce",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "108": {
+    "home_team": "Fiorentina",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "109": {
+    "home_team": "Frosinone",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "110": {
+    "home_team": "Torino",
+    "away_team": "Sassuolo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "111": {
+    "home_team": "Sassuolo",
+    "away_team": "Salernitana",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "112": {
+    "home_team": "Genoa",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "113": {
+    "home_team": "Lecce",
+    "away_team": "Milan",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "114": {
+    "home_team": "Juventus",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "115": {
+    "home_team": "Monza",
+    "away_team": "Torino",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "116": {
+    "home_team": "Napoli",
+    "away_team": "Empoli",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "117": {
+    "home_team": "Fiorentina",
+    "away_team": "Bologna",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "118": {
+    "home_team": "Udinese",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "119": {
+    "home_team": "Lazio",
+    "away_team": "Roma",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "120": {
+    "home_team": "Inter",
+    "away_team": "Frosinone",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "121": {
+    "home_team": "Salernitana",
+    "away_team": "Lazio",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "122": {
+    "home_team": "Atalanta",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "123": {
+    "home_team": "Milan",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "124": {
+    "home_team": "Cagliari",
+    "away_team": "Monza",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "125": {
+    "home_team": "Empoli",
+    "away_team": "Sassuolo",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "126": {
+    "home_team": "Frosinone",
+    "away_team": "Genoa",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "127": {
+    "home_team": "Roma",
+    "away_team": "Udinese",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "128": {
+    "home_team": "Juventus",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "129": {
+    "home_team": "Verona",
+    "away_team": "Lecce",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "130": {
+    "home_team": "Bologna",
+    "away_team": "Torino",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "131": {
+    "home_team": "Monza",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "132": {
+    "home_team": "Genoa",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "133": {
+    "home_team": "Lazio",
+    "away_team": "Cagliari",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "134": {
+    "home_team": "Milan",
+    "away_team": "Frosinone",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "135": {
+    "home_team": "Lecce",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "136": {
+    "home_team": "Fiorentina",
+    "away_team": "Salernitana",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "137": {
+    "home_team": "Udinese",
+    "away_team": "Verona",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "138": {
+    "home_team": "Sassuolo",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "139": {
+    "home_team": "Napoli",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "140": {
+    "home_team": "Torino",
+    "away_team": "Atalanta",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "141": {
+    "home_team": "Juventus",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "142": {
+    "home_team": "Verona",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "143": {
+    "home_team": "Atalanta",
+    "away_team": "Milan",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "144": {
+    "home_team": "Inter",
+    "away_team": "Udinese",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "145": {
+    "home_team": "Frosinone",
+    "away_team": "Torino",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "146": {
+    "home_team": "Monza",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "147": {
+    "home_team": "Salernitana",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "148": {
+    "home_team": "Roma",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "149": {
+    "home_team": "Empoli",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "150": {
+    "home_team": "Cagliari",
+    "away_team": "Sassuolo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "151": {
+    "home_team": "Genoa",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "152": {
+    "home_team": "Lecce",
+    "away_team": "Frosinone",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "153": {
+    "home_team": "Napoli",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "154": {
+    "home_team": "Torino",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "155": {
+    "home_team": "Milan",
+    "away_team": "Monza",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "156": {
+    "home_team": "Fiorentina",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "157": {
+    "home_team": "Udinese",
+    "away_team": "Sassuolo",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "158": {
+    "home_team": "Bologna",
+    "away_team": "Roma",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "159": {
+    "home_team": "Lazio",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "160": {
+    "home_team": "Atalanta",
+    "away_team": "Salernitana",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "161": {
+    "home_team": "Sassuolo",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "162": {
+    "home_team": "Empoli",
+    "away_team": "Lazio",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "163": {
+    "home_team": "Monza",
+    "away_team": "Fiorentina",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "164": {
+    "home_team": "Salernitana",
+    "away_team": "Milan",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "165": {
+    "home_team": "Frosinone",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "166": {
+    "home_team": "Torino",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "167": {
+    "home_team": "Bologna",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "168": {
+    "home_team": "Verona",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "169": {
+    "home_team": "Inter",
+    "away_team": "Lecce",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "170": {
+    "home_team": "Roma",
+    "away_team": "Napoli",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "171": {
+    "home_team": "Fiorentina",
+    "away_team": "Torino",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "172": {
+    "home_team": "Napoli",
+    "away_team": "Monza",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "173": {
+    "home_team": "Genoa",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "174": {
+    "home_team": "Lazio",
+    "away_team": "Frosinone",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "175": {
+    "home_team": "Atalanta",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "176": {
+    "home_team": "Cagliari",
+    "away_team": "Empoli",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "177": {
+    "home_team": "Udinese",
+    "away_team": "Bologna",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "178": {
+    "home_team": "Verona",
+    "away_team": "Salernitana",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "179": {
+    "home_team": "Milan",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "180": {
+    "home_team": "Juventus",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "181": {
+    "home_team": "Bologna",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "182": {
+    "home_team": "Inter",
+    "away_team": "Verona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "183": {
+    "home_team": "Frosinone",
+    "away_team": "Monza",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "184": {
+    "home_team": "Lecce",
+    "away_team": "Cagliari",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "185": {
+    "home_team": "Sassuolo",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "186": {
+    "home_team": "Empoli",
+    "away_team": "Milan",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "187": {
+    "home_team": "Torino",
+    "away_team": "Napoli",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "188": {
+    "home_team": "Udinese",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "189": {
+    "home_team": "Salernitana",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "190": {
+    "home_team": "Roma",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "191": {
+    "home_team": "Genoa",
+    "away_team": "Torino",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "192": {
+    "home_team": "Napoli",
+    "away_team": "Salernitana",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "193": {
+    "home_team": "Verona",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "194": {
+    "home_team": "Monza",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "195": {
+    "home_team": "Lazio",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "196": {
+    "home_team": "Cagliari",
+    "away_team": "Bologna",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "197": {
+    "home_team": "Fiorentina",
+    "away_team": "Udinese",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "198": {
+    "home_team": "Milan",
+    "away_team": "Roma",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "199": {
+    "home_team": "Atalanta",
+    "away_team": "Frosinone",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "200": {
+    "home_team": "Juventus",
+    "away_team": "Sassuolo",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "201": {
+    "home_team": "Roma",
+    "away_team": "Verona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "202": {
+    "home_team": "Udinese",
+    "away_team": "Milan",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "203": {
+    "home_team": "Frosinone",
+    "away_team": "Cagliari",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "204": {
+    "home_team": "Empoli",
+    "away_team": "Monza",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "205": {
+    "home_team": "Salernitana",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "206": {
+    "home_team": "Lecce",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "207": {
+    "home_team": "Bologna",
+    "away_team": "Fiorentina",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "208": {
+    "home_team": "Torino",
+    "away_team": "Lazio",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "209": {
+    "home_team": "Sassuolo",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "210": {
+    "home_team": "Inter",
+    "away_team": "Atalanta",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "211": {
+    "home_team": "Cagliari",
+    "away_team": "Torino",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "212": {
+    "home_team": "Atalanta",
+    "away_team": "Udinese",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "213": {
+    "home_team": "Juventus",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "214": {
+    "home_team": "Milan",
+    "away_team": "Bologna",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "215": {
+    "home_team": "Genoa",
+    "away_team": "Lecce",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "216": {
+    "home_team": "Verona",
+    "away_team": "Frosinone",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "217": {
+    "home_team": "Monza",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "218": {
+    "home_team": "Lazio",
+    "away_team": "Napoli",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "219": {
+    "home_team": "Fiorentina",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "220": {
+    "home_team": "Salernitana",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "221": {
+    "home_team": "Lecce",
+    "away_team": "Fiorentina",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "222": {
+    "home_team": "Empoli",
+    "away_team": "Genoa",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "223": {
+    "home_team": "Udinese",
+    "away_team": "Monza",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "224": {
+    "home_team": "Frosinone",
+    "away_team": "Milan",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "225": {
+    "home_team": "Bologna",
+    "away_team": "Sassuolo",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "226": {
+    "home_team": "Torino",
+    "away_team": "Salernitana",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "227": {
+    "home_team": "Napoli",
+    "away_team": "Verona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "228": {
+    "home_team": "Atalanta",
+    "away_team": "Lazio",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "229": {
+    "home_team": "Inter",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "230": {
+    "home_team": "Roma",
+    "away_team": "Cagliari",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "231": {
+    "home_team": "Salernitana",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "232": {
+    "home_team": "Cagliari",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "233": {
+    "home_team": "Roma",
+    "away_team": "Inter",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "234": {
+    "home_team": "Sassuolo",
+    "away_team": "Torino",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "235": {
+    "home_team": "Fiorentina",
+    "away_team": "Frosinone",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "236": {
+    "home_team": "Bologna",
+    "away_team": "Lecce",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "237": {
+    "home_team": "Monza",
+    "away_team": "Verona",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "238": {
+    "home_team": "Genoa",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "239": {
+    "home_team": "Milan",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "240": {
+    "home_team": "Juventus",
+    "away_team": "Udinese",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "241": {
+    "home_team": "Torino",
+    "away_team": "Lecce",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "242": {
+    "home_team": "Inter",
+    "away_team": "Salernitana",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "243": {
+    "home_team": "Napoli",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "244": {
+    "home_team": "Verona",
+    "away_team": "Juventus",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "245": {
+    "home_team": "Atalanta",
+    "away_team": "Sassuolo",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "246": {
+    "home_team": "Lazio",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "247": {
+    "home_team": "Empoli",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "248": {
+    "home_team": "Udinese",
+    "away_team": "Cagliari",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "249": {
+    "home_team": "Frosinone",
+    "away_team": "Roma",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "250": {
+    "home_team": "Monza",
+    "away_team": "Milan",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "251": {
+    "home_team": "Bologna",
+    "away_team": "Verona",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "252": {
+    "home_team": "Sassuolo",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "253": {
+    "home_team": "Salernitana",
+    "away_team": "Monza",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "254": {
+    "home_team": "Genoa",
+    "away_team": "Udinese",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "255": {
+    "home_team": "Juventus",
+    "away_team": "Frosinone",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "256": {
+    "home_team": "Cagliari",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "257": {
+    "home_team": "Lecce",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "258": {
+    "home_team": "Milan",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "259": {
+    "home_team": "Roma",
+    "away_team": "Torino",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "260": {
+    "home_team": "Fiorentina",
+    "away_team": "Lazio",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "261": {
+    "home_team": "Lazio",
+    "away_team": "Milan",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "262": {
+    "home_team": "Udinese",
+    "away_team": "Salernitana",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "263": {
+    "home_team": "Monza",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "264": {
+    "home_team": "Torino",
+    "away_team": "Fiorentina",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "265": {
+    "home_team": "Verona",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "266": {
+    "home_team": "Empoli",
+    "away_team": "Cagliari",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "267": {
+    "home_team": "Frosinone",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "268": {
+    "home_team": "Atalanta",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "269": {
+    "home_team": "Napoli",
+    "away_team": "Juventus",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "270": {
+    "home_team": "Inter",
+    "away_team": "Genoa",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "271": {
+    "home_team": "Napoli",
+    "away_team": "Torino",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "272": {
+    "home_team": "Cagliari",
+    "away_team": "Salernitana",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "273": {
+    "home_team": "Sassuolo",
+    "away_team": "Frosinone",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "274": {
+    "home_team": "Bologna",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "275": {
+    "home_team": "Genoa",
+    "away_team": "Monza",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "276": {
+    "home_team": "Lecce",
+    "away_team": "Verona",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "277": {
+    "home_team": "Milan",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "278": {
+    "home_team": "Juventus",
+    "away_team": "Atalanta",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "279": {
+    "home_team": "Fiorentina",
+    "away_team": "Roma",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "280": {
+    "home_team": "Lazio",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "281": {
+    "home_team": "Empoli",
+    "away_team": "Bologna",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "282": {
+    "home_team": "Monza",
+    "away_team": "Cagliari",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "283": {
+    "home_team": "Udinese",
+    "away_team": "Torino",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "284": {
+    "home_team": "Salernitana",
+    "away_team": "Lecce",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "285": {
+    "home_team": "Frosinone",
+    "away_team": "Lazio",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "286": {
+    "home_team": "Juventus",
+    "away_team": "Genoa",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "287": {
+    "home_team": "Verona",
+    "away_team": "Milan",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "288": {
+    "home_team": "Roma",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "289": {
+    "home_team": "Inter",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "290": {
+    "home_team": "Atalanta",
+    "away_team": "Fiorentina",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "291": {
+    "home_team": "Napoli",
+    "away_team": "Atalanta",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "292": {
+    "home_team": "Genoa",
+    "away_team": "Frosinone",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "293": {
+    "home_team": "Torino",
+    "away_team": "Monza",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "294": {
+    "home_team": "Lazio",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "295": {
+    "home_team": "Fiorentina",
+    "away_team": "Milan",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "296": {
+    "home_team": "Bologna",
+    "away_team": "Salernitana",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "297": {
+    "home_team": "Cagliari",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "298": {
+    "home_team": "Sassuolo",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "299": {
+    "home_team": "Lecce",
+    "away_team": "Roma",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "300": {
+    "home_team": "Inter",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "301": {
+    "home_team": "Salernitana",
+    "away_team": "Sassuolo",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "302": {
+    "home_team": "Milan",
+    "away_team": "Lecce",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "303": {
+    "home_team": "Roma",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "304": {
+    "home_team": "Empoli",
+    "away_team": "Torino",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "305": {
+    "home_team": "Frosinone",
+    "away_team": "Bologna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "306": {
+    "home_team": "Monza",
+    "away_team": "Napoli",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "307": {
+    "home_team": "Cagliari",
+    "away_team": "Atalanta",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "308": {
+    "home_team": "Verona",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "309": {
+    "home_team": "Juventus",
+    "away_team": "Fiorentina",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "310": {
+    "home_team": "Udinese",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "311": {
+    "home_team": "Lazio",
+    "away_team": "Salernitana",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "312": {
+    "home_team": "Lecce",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "313": {
+    "home_team": "Torino",
+    "away_team": "Juventus",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "314": {
+    "home_team": "Bologna",
+    "away_team": "Monza",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "315": {
+    "home_team": "Napoli",
+    "away_team": "Frosinone",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "316": {
+    "home_team": "Sassuolo",
+    "away_team": "Milan",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "317": {
+    "home_team": "Inter",
+    "away_team": "Cagliari",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "318": {
+    "home_team": "Fiorentina",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "319": {
+    "home_team": "Atalanta",
+    "away_team": "Verona",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "320": {
+    "home_team": "Udinese",
+    "away_team": "Roma",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "321": {
+    "home_team": "Genoa",
+    "away_team": "Lazio",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "322": {
+    "home_team": "Cagliari",
+    "away_team": "Juventus",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "323": {
+    "home_team": "Empoli",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "324": {
+    "home_team": "Verona",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "325": {
+    "home_team": "Sassuolo",
+    "away_team": "Lecce",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "326": {
+    "home_team": "Torino",
+    "away_team": "Frosinone",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "327": {
+    "home_team": "Salernitana",
+    "away_team": "Fiorentina",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "328": {
+    "home_team": "Monza",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "329": {
+    "home_team": "Roma",
+    "away_team": "Bologna",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "330": {
+    "home_team": "Milan",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "331": {
+    "home_team": "Frosinone",
+    "away_team": "Salernitana",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "332": {
+    "home_team": "Lecce",
+    "away_team": "Monza",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "333": {
+    "home_team": "Juventus",
+    "away_team": "Milan",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "334": {
+    "home_team": "Lazio",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "335": {
+    "home_team": "Inter",
+    "away_team": "Torino",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "336": {
+    "home_team": "Bologna",
+    "away_team": "Udinese",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "337": {
+    "home_team": "Atalanta",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "338": {
+    "home_team": "Napoli",
+    "away_team": "Roma",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "339": {
+    "home_team": "Fiorentina",
+    "away_team": "Sassuolo",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "340": {
+    "home_team": "Genoa",
+    "away_team": "Cagliari",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "341": {
+    "home_team": "Torino",
+    "away_team": "Bologna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "342": {
+    "home_team": "Monza",
+    "away_team": "Lazio",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "343": {
+    "home_team": "Sassuolo",
+    "away_team": "Inter",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "344": {
+    "home_team": "Cagliari",
+    "away_team": "Lecce",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "345": {
+    "home_team": "Empoli",
+    "away_team": "Frosinone",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "346": {
+    "home_team": "Verona",
+    "away_team": "Fiorentina",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "347": {
+    "home_team": "Milan",
+    "away_team": "Genoa",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "348": {
+    "home_team": "Roma",
+    "away_team": "Juventus",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "349": {
+    "home_team": "Salernitana",
+    "away_team": "Atalanta",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "350": {
+    "home_team": "Udinese",
+    "away_team": "Napoli",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "351": {
+    "home_team": "Frosinone",
+    "away_team": "Inter",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "352": {
+    "home_team": "Napoli",
+    "away_team": "Bologna",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "353": {
+    "home_team": "Milan",
+    "away_team": "Cagliari",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "354": {
+    "home_team": "Lazio",
+    "away_team": "Empoli",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "355": {
+    "home_team": "Genoa",
+    "away_team": "Sassuolo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "356": {
+    "home_team": "Verona",
+    "away_team": "Torino",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "357": {
+    "home_team": "Juventus",
+    "away_team": "Salernitana",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "358": {
+    "home_team": "Atalanta",
+    "away_team": "Roma",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "359": {
+    "home_team": "Lecce",
+    "away_team": "Udinese",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "360": {
+    "home_team": "Fiorentina",
+    "away_team": "Monza",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "361": {
+    "home_team": "Fiorentina",
+    "away_team": "Napoli",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "362": {
+    "home_team": "Lecce",
+    "away_team": "Atalanta",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "363": {
+    "home_team": "Torino",
+    "away_team": "Milan",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "364": {
+    "home_team": "Sassuolo",
+    "away_team": "Cagliari",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "365": {
+    "home_team": "Monza",
+    "away_team": "Frosinone",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "366": {
+    "home_team": "Udinese",
+    "away_team": "Empoli",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "367": {
+    "home_team": "Inter",
+    "away_team": "Lazio",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "368": {
+    "home_team": "Roma",
+    "away_team": "Genoa",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "369": {
+    "home_team": "Salernitana",
+    "away_team": "Verona",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "370": {
+    "home_team": "Bologna",
+    "away_team": "Juventus",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "371": {
+    "home_team": "Cagliari",
+    "away_team": "Fiorentina",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "372": {
+    "home_team": "Genoa",
+    "away_team": "Bologna",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "373": {
+    "home_team": "Juventus",
+    "away_team": "Monza",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "374": {
+    "home_team": "Milan",
+    "away_team": "Salernitana",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "375": {
+    "home_team": "Atalanta",
+    "away_team": "Torino",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "376": {
+    "home_team": "Napoli",
+    "away_team": "Lecce",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "377": {
+    "home_team": "Empoli",
+    "away_team": "Roma",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "378": {
+    "home_team": "Frosinone",
+    "away_team": "Udinese",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "379": {
+    "home_team": "Verona",
+    "away_team": "Inter",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "380": {
+    "home_team": "Lazio",
+    "away_team": "Sassuolo",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  }
+}

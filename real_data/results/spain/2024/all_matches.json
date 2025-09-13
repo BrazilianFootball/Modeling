@@ -1,0 +1,2662 @@
+{
+  "001": {
+    "home_team": "Athletic",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "002": {
+    "home_team": "Real Betis",
+    "away_team": "Girona",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "003": {
+    "home_team": "Celta",
+    "away_team": "Alavés",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "004": {
+    "home_team": "Las Palmas",
+    "away_team": "Sevilla FC",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "005": {
+    "home_team": "Osasuna",
+    "away_team": "Leganés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "006": {
+    "home_team": "Valencia",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "007": {
+    "home_team": "Real Sociedad",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "008": {
+    "home_team": "Mallorca",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "009": {
+    "home_team": "Valladolid",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "010": {
+    "home_team": "Villarreal",
+    "away_team": "Atleti",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "011": {
+    "home_team": "Celta",
+    "away_team": "Valencia",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "012": {
+    "home_team": "Sevilla FC",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "013": {
+    "home_team": "Osasuna",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "014": {
+    "home_team": "Barça",
+    "away_team": "Athletic",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "015": {
+    "home_team": "Getafe",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "016": {
+    "home_team": "Espanyol",
+    "away_team": "Real Sociedad",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "017": {
+    "home_team": "Real Madrid",
+    "away_team": "Valladolid",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "018": {
+    "home_team": "Leganés",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "019": {
+    "home_team": "Alavés",
+    "away_team": "Real Betis",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "020": {
+    "home_team": "Atleti",
+    "away_team": "Girona",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "021": {
+    "home_team": "Villarreal",
+    "away_team": "Celta",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "022": {
+    "home_team": "Mallorca",
+    "away_team": "Sevilla FC",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "023": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "024": {
+    "home_team": "Athletic",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "025": {
+    "home_team": "Valladolid",
+    "away_team": "Leganés",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "026": {
+    "home_team": "Real Sociedad",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "027": {
+    "home_team": "Atleti",
+    "away_team": "Espanyol",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "028": {
+    "home_team": "Girona",
+    "away_team": "Osasuna",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "029": {
+    "home_team": "Las Palmas",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "030": {
+    "home_team": "Real Betis",
+    "away_team": "Getafe",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "031": {
+    "home_team": "Barça",
+    "away_team": "Valladolid",
+    "goals_team1": 7,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "032": {
+    "home_team": "Athletic",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "033": {
+    "home_team": "Espanyol",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "034": {
+    "home_team": "Leganés",
+    "away_team": "Mallorca",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "035": {
+    "home_team": "Valencia",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "036": {
+    "home_team": "Osasuna",
+    "away_team": "Celta",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "037": {
+    "home_team": "Alavés",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "038": {
+    "home_team": "Sevilla FC",
+    "away_team": "Girona",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "039": {
+    "home_team": "Getafe",
+    "away_team": "Real Sociedad",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "040": {
+    "home_team": "Real Madrid",
+    "away_team": "Real Betis",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "041": {
+    "home_team": "Real Betis",
+    "away_team": "Leganés",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "042": {
+    "home_team": "Mallorca",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "043": {
+    "home_team": "Espanyol",
+    "away_team": "Alavés",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "044": {
+    "home_team": "Sevilla FC",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "045": {
+    "home_team": "Real Sociedad",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "046": {
+    "home_team": "Celta",
+    "away_team": "Valladolid",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "047": {
+    "home_team": "Girona",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "048": {
+    "home_team": "Las Palmas",
+    "away_team": "Athletic",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "049": {
+    "home_team": "Atleti",
+    "away_team": "Valencia",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "050": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Osasuna",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "051": {
+    "home_team": "Alavés",
+    "away_team": "Sevilla FC",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "052": {
+    "home_team": "Valladolid",
+    "away_team": "Real Sociedad",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "053": {
+    "home_team": "Osasuna",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "054": {
+    "home_team": "Valencia",
+    "away_team": "Girona",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "055": {
+    "home_team": "Real Madrid",
+    "away_team": "Espanyol",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "056": {
+    "home_team": "Getafe",
+    "away_team": "Leganés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "057": {
+    "home_team": "Athletic",
+    "away_team": "Celta",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "058": {
+    "home_team": "Villarreal",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "059": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "060": {
+    "home_team": "Real Betis",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "061": {
+    "home_team": "Mallorca",
+    "away_team": "Real Sociedad",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "062": {
+    "home_team": "Leganés",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "063": {
+    "home_team": "Sevilla FC",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "064": {
+    "home_team": "Valencia",
+    "away_team": "Osasuna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "065": {
+    "home_team": "Real Madrid",
+    "away_team": "Alavés",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "066": {
+    "home_team": "Girona",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "067": {
+    "home_team": "Barça",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "068": {
+    "home_team": "Las Palmas",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "069": {
+    "home_team": "Espanyol",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "070": {
+    "home_team": "Celta",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "071": {
+    "home_team": "Valladolid",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "072": {
+    "home_team": "Getafe",
+    "away_team": "Alavés",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "073": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Leganés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "074": {
+    "home_team": "Real Sociedad",
+    "away_team": "Valencia",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "075": {
+    "home_team": "Osasuna",
+    "away_team": "Barça",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "076": {
+    "home_team": "Celta",
+    "away_team": "Girona",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "077": {
+    "home_team": "Athletic",
+    "away_team": "Sevilla FC",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "078": {
+    "home_team": "Real Betis",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "079": {
+    "home_team": "Atleti",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "080": {
+    "home_team": "Villarreal",
+    "away_team": "Las Palmas",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "081": {
+    "home_team": "Leganés",
+    "away_team": "Valencia",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "082": {
+    "home_team": "Espanyol",
+    "away_team": "Mallorca",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "083": {
+    "home_team": "Getafe",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "084": {
+    "home_team": "Valladolid",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "085": {
+    "home_team": "Las Palmas",
+    "away_team": "Celta",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "086": {
+    "home_team": "Real Madrid",
+    "away_team": "Villarreal",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "087": {
+    "home_team": "Girona",
+    "away_team": "Athletic",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "088": {
+    "home_team": "Alavés",
+    "away_team": "Barça",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "089": {
+    "home_team": "Sevilla FC",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "090": {
+    "home_team": "Real Sociedad",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "091": {
+    "home_team": "Alavés",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "092": {
+    "home_team": "Athletic",
+    "away_team": "Espanyol",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "093": {
+    "home_team": "Osasuna",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "094": {
+    "home_team": "Girona",
+    "away_team": "Real Sociedad",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "095": {
+    "home_team": "Celta",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "096": {
+    "home_team": "Mallorca",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "097": {
+    "home_team": "Atleti",
+    "away_team": "Leganés",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "098": {
+    "home_team": "Villarreal",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "099": {
+    "home_team": "Barça",
+    "away_team": "Sevilla FC",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "100": {
+    "home_team": "Valencia",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "101": {
+    "home_team": "Espanyol",
+    "away_team": "Sevilla FC",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "102": {
+    "home_team": "Valladolid",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "103": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "104": {
+    "home_team": "Las Palmas",
+    "away_team": "Girona",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "105": {
+    "home_team": "Real Madrid",
+    "away_team": "Barça",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "106": {
+    "home_team": "Leganés",
+    "away_team": "Celta",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "107": {
+    "home_team": "Getafe",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "108": {
+    "home_team": "Real Betis",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "109": {
+    "home_team": "Real Sociedad",
+    "away_team": "Osasuna",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "110": {
+    "home_team": "Mallorca",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "111": {
+    "home_team": "Alavés",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "112": {
+    "home_team": "Osasuna",
+    "away_team": "Valladolid",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "113": {
+    "home_team": "Girona",
+    "away_team": "Leganés",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "114": {
+    "home_team": "Atleti",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "115": {
+    "home_team": "Barça",
+    "away_team": "Espanyol",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "116": {
+    "home_team": "Sevilla FC",
+    "away_team": "Real Sociedad",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "117": {
+    "home_team": "Athletic",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "118": {
+    "home_team": "Celta",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "119": {
+    "home_team": "Villarreal",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "120": {
+    "home_team": "Valencia",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "121": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "122": {
+    "home_team": "Real Madrid",
+    "away_team": "Osasuna",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "123": {
+    "home_team": "Villarreal",
+    "away_team": "Alavés",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "124": {
+    "home_team": "Leganés",
+    "away_team": "Sevilla FC",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "125": {
+    "home_team": "Real Betis",
+    "away_team": "Celta",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "126": {
+    "home_team": "Mallorca",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "127": {
+    "home_team": "Getafe",
+    "away_team": "Girona",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "128": {
+    "home_team": "Valladolid",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "129": {
+    "home_team": "Real Sociedad",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "130": {
+    "home_team": "Espanyol",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "131": {
+    "home_team": "Getafe",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "132": {
+    "home_team": "Valencia",
+    "away_team": "Real Betis",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "133": {
+    "home_team": "Atleti",
+    "away_team": "Alavés",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "134": {
+    "home_team": "Las Palmas",
+    "away_team": "Mallorca",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "135": {
+    "home_team": "Girona",
+    "away_team": "Espanyol",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "136": {
+    "home_team": "Celta",
+    "away_team": "Barça",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "137": {
+    "home_team": "Osasuna",
+    "away_team": "Villarreal",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "138": {
+    "home_team": "Sevilla FC",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "139": {
+    "home_team": "Leganés",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "140": {
+    "home_team": "Athletic",
+    "away_team": "Real Sociedad",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "141": {
+    "home_team": "Mallorca",
+    "away_team": "Valencia",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "142": {
+    "home_team": "Barça",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "143": {
+    "home_team": "Alavés",
+    "away_team": "Leganés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "144": {
+    "home_team": "Espanyol",
+    "away_team": "Celta",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "145": {
+    "home_team": "Valladolid",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "146": {
+    "home_team": "Villarreal",
+    "away_team": "Girona",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "147": {
+    "home_team": "Real Madrid",
+    "away_team": "Getafe",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "148": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "149": {
+    "home_team": "Real Sociedad",
+    "away_team": "Real Betis",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "150": {
+    "home_team": "Sevilla FC",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "151": {
+    "home_team": "Celta",
+    "away_team": "Mallorca",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "152": {
+    "home_team": "Las Palmas",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "153": {
+    "home_team": "Real Betis",
+    "away_team": "Barça",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "154": {
+    "home_team": "Valencia",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "155": {
+    "home_team": "Girona",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "156": {
+    "home_team": "Leganés",
+    "away_team": "Real Sociedad",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "157": {
+    "home_team": "Athletic",
+    "away_team": "Villarreal",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "158": {
+    "home_team": "Osasuna",
+    "away_team": "Alavés",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "159": {
+    "home_team": "Atleti",
+    "away_team": "Sevilla FC",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "160": {
+    "home_team": "Getafe",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "161": {
+    "home_team": "Valladolid",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "162": {
+    "home_team": "Espanyol",
+    "away_team": "Osasuna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "163": {
+    "home_team": "Mallorca",
+    "away_team": "Girona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "164": {
+    "home_team": "Sevilla FC",
+    "away_team": "Celta",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "165": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Real Madrid",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "166": {
+    "home_team": "Atleti",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "167": {
+    "home_team": "Alavés",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "168": {
+    "home_team": "Villarreal",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "169": {
+    "home_team": "Real Sociedad",
+    "away_team": "Las Palmas",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "170": {
+    "home_team": "Barça",
+    "away_team": "Leganés",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "171": {
+    "home_team": "Girona",
+    "away_team": "Valladolid",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "172": {
+    "home_team": "Getafe",
+    "away_team": "Mallorca",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "173": {
+    "home_team": "Celta",
+    "away_team": "Real Sociedad",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "174": {
+    "home_team": "Osasuna",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "175": {
+    "home_team": "Barça",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "176": {
+    "home_team": "Valencia",
+    "away_team": "Alavés",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "177": {
+    "home_team": "Real Madrid",
+    "away_team": "Sevilla FC",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "178": {
+    "home_team": "Leganés",
+    "away_team": "Villarreal",
+    "goals_team1": 2,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "179": {
+    "home_team": "Las Palmas",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "180": {
+    "home_team": "Real Betis",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "181": {
+    "home_team": "Mallorca",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "182": {
+    "home_team": "Athletic",
+    "away_team": "Real Madrid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "183": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Celta",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "184": {
+    "home_team": "Alavés",
+    "away_team": "Girona",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "185": {
+    "home_team": "Valladolid",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "186": {
+    "home_team": "Espanyol",
+    "away_team": "Leganés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "187": {
+    "home_team": "Sevilla FC",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "188": {
+    "home_team": "Las Palmas",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "189": {
+    "home_team": "Atleti",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "190": {
+    "home_team": "Real Sociedad",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "191": {
+    "home_team": "Espanyol",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "192": {
+    "home_team": "Girona",
+    "away_team": "Sevilla FC",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "193": {
+    "home_team": "Leganés",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "194": {
+    "home_team": "Real Betis",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "195": {
+    "home_team": "Getafe",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "196": {
+    "home_team": "Celta",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "197": {
+    "home_team": "Real Madrid",
+    "away_team": "Las Palmas",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "198": {
+    "home_team": "Osasuna",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "199": {
+    "home_team": "Valencia",
+    "away_team": "Real Sociedad",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "200": {
+    "home_team": "Villarreal",
+    "away_team": "Mallorca",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "201": {
+    "home_team": "Las Palmas",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "202": {
+    "home_team": "Mallorca",
+    "away_team": "Real Betis",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "203": {
+    "home_team": "Atleti",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "204": {
+    "home_team": "Sevilla FC",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "205": {
+    "home_team": "Valladolid",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "206": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Girona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "207": {
+    "home_team": "Real Sociedad",
+    "away_team": "Getafe",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "208": {
+    "home_team": "Athletic",
+    "away_team": "Leganés",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "209": {
+    "home_team": "Barça",
+    "away_team": "Valencia",
+    "goals_team1": 7,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "210": {
+    "home_team": "Alavés",
+    "away_team": "Celta",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "211": {
+    "home_team": "Leganés",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "212": {
+    "home_team": "Getafe",
+    "away_team": "Sevilla FC",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "213": {
+    "home_team": "Villarreal",
+    "away_team": "Valladolid",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "214": {
+    "home_team": "Atleti",
+    "away_team": "Mallorca",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "215": {
+    "home_team": "Espanyol",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "216": {
+    "home_team": "Barça",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "217": {
+    "home_team": "Valencia",
+    "away_team": "Celta",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "218": {
+    "home_team": "Osasuna",
+    "away_team": "Real Sociedad",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "219": {
+    "home_team": "Real Betis",
+    "away_team": "Athletic",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "220": {
+    "home_team": "Girona",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "221": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Valladolid",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "222": {
+    "home_team": "Celta",
+    "away_team": "Real Betis",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "223": {
+    "home_team": "Athletic",
+    "away_team": "Girona",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "224": {
+    "home_team": "Las Palmas",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "225": {
+    "home_team": "Real Madrid",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "226": {
+    "home_team": "Alavés",
+    "away_team": "Getafe",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "227": {
+    "home_team": "Valencia",
+    "away_team": "Leganés",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "228": {
+    "home_team": "Real Sociedad",
+    "away_team": "Espanyol",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "229": {
+    "home_team": "Sevilla FC",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "230": {
+    "home_team": "Mallorca",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "231": {
+    "home_team": "Girona",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "232": {
+    "home_team": "Leganés",
+    "away_team": "Alavés",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "233": {
+    "home_team": "Osasuna",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "234": {
+    "home_team": "Atleti",
+    "away_team": "Celta",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "235": {
+    "home_team": "Villarreal",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "236": {
+    "home_team": "Espanyol",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "237": {
+    "home_team": "Valladolid",
+    "away_team": "Sevilla FC",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "238": {
+    "home_team": "Mallorca",
+    "away_team": "Las Palmas",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "239": {
+    "home_team": "Real Betis",
+    "away_team": "Real Sociedad",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "240": {
+    "home_team": "Barça",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "241": {
+    "home_team": "Celta",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "242": {
+    "home_team": "Alavés",
+    "away_team": "Espanyol",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "243": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Villarreal",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "244": {
+    "home_team": "Valencia",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "245": {
+    "home_team": "Las Palmas",
+    "away_team": "Barça",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "246": {
+    "home_team": "Athletic",
+    "away_team": "Valladolid",
+    "goals_team1": 7,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "247": {
+    "home_team": "Real Madrid",
+    "away_team": "Girona",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "248": {
+    "home_team": "Getafe",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "249": {
+    "home_team": "Real Sociedad",
+    "away_team": "Leganés",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "250": {
+    "home_team": "Sevilla FC",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "251": {
+    "home_team": "Valladolid",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "252": {
+    "home_team": "Girona",
+    "away_team": "Celta",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "253": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Sevilla FC",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "254": {
+    "home_team": "Real Betis",
+    "away_team": "Real Madrid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "255": {
+    "home_team": "Atleti",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "256": {
+    "home_team": "Leganés",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "257": {
+    "home_team": "Barça",
+    "away_team": "Real Sociedad",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "258": {
+    "home_team": "Mallorca",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "259": {
+    "home_team": "Osasuna",
+    "away_team": "Valencia",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "260": {
+    "home_team": "Villarreal",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "261": {
+    "home_team": "Celta",
+    "away_team": "Leganés",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "262": {
+    "home_team": "Alavés",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "263": {
+    "home_team": "Valencia",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "264": {
+    "home_team": "Getafe",
+    "away_team": "Atleti",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "265": {
+    "home_team": "Real Madrid",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "266": {
+    "home_team": "Athletic",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "267": {
+    "home_team": "Real Betis",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "268": {
+    "home_team": "Real Sociedad",
+    "away_team": "Sevilla FC",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "269": {
+    "home_team": "Espanyol",
+    "away_team": "Girona",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "270": {
+    "home_team": "Barça",
+    "away_team": "Osasuna",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "271": {
+    "home_team": "Las Palmas",
+    "away_team": "Alavés",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "272": {
+    "home_team": "Valladolid",
+    "away_team": "Celta",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "273": {
+    "home_team": "Mallorca",
+    "away_team": "Espanyol",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "274": {
+    "home_team": "Villarreal",
+    "away_team": "Real Madrid",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "275": {
+    "home_team": "Girona",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "276": {
+    "home_team": "Leganés",
+    "away_team": "Real Betis",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "277": {
+    "home_team": "Sevilla FC",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "278": {
+    "home_team": "Osasuna",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "279": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Real Sociedad",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "280": {
+    "home_team": "Atleti",
+    "away_team": "Barça",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "281": {
+    "home_team": "Real Sociedad",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "282": {
+    "home_team": "Espanyol",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "283": {
+    "home_team": "Alavés",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "284": {
+    "home_team": "Real Madrid",
+    "away_team": "Leganés",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "285": {
+    "home_team": "Getafe",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "286": {
+    "home_team": "Barça",
+    "away_team": "Girona",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "287": {
+    "home_team": "Athletic",
+    "away_team": "Osasuna",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "288": {
+    "home_team": "Valencia",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "289": {
+    "home_team": "Real Betis",
+    "away_team": "Sevilla FC",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "290": {
+    "home_team": "Celta",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "291": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Espanyol",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "292": {
+    "home_team": "Girona",
+    "away_team": "Alavés",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "293": {
+    "home_team": "Real Madrid",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "294": {
+    "home_team": "Mallorca",
+    "away_team": "Celta",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "295": {
+    "home_team": "Barça",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "296": {
+    "home_team": "Las Palmas",
+    "away_team": "Real Sociedad",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "297": {
+    "home_team": "Sevilla FC",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "298": {
+    "home_team": "Valladolid",
+    "away_team": "Getafe",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "299": {
+    "home_team": "Villarreal",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "300": {
+    "home_team": "Leganés",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "301": {
+    "home_team": "Valencia",
+    "away_team": "Sevilla FC",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "302": {
+    "home_team": "Real Sociedad",
+    "away_team": "Mallorca",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "303": {
+    "home_team": "Getafe",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "304": {
+    "home_team": "Celta",
+    "away_team": "Espanyol",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "305": {
+    "home_team": "Leganés",
+    "away_team": "Barça",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "306": {
+    "home_team": "Osasuna",
+    "away_team": "Girona",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "307": {
+    "home_team": "Alavés",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "308": {
+    "home_team": "Real Betis",
+    "away_team": "Villarreal",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "309": {
+    "home_team": "Athletic",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "310": {
+    "home_team": "Atleti",
+    "away_team": "Valladolid",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "311": {
+    "home_team": "Espanyol",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "312": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "313": {
+    "home_team": "Barça",
+    "away_team": "Celta",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "314": {
+    "home_team": "Mallorca",
+    "away_team": "Leganés",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "315": {
+    "home_team": "Las Palmas",
+    "away_team": "Atleti",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "316": {
+    "home_team": "Valladolid",
+    "away_team": "Osasuna",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "317": {
+    "home_team": "Villarreal",
+    "away_team": "Real Sociedad",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "318": {
+    "home_team": "Sevilla FC",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "319": {
+    "home_team": "Real Madrid",
+    "away_team": "Athletic",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "320": {
+    "home_team": "Girona",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "321": {
+    "home_team": "Valencia",
+    "away_team": "Espanyol",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "322": {
+    "home_team": "Barça",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "323": {
+    "home_team": "Athletic",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "324": {
+    "home_team": "Celta",
+    "away_team": "Villarreal",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "325": {
+    "home_team": "Alavés",
+    "away_team": "Real Sociedad",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "326": {
+    "home_team": "Getafe",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "327": {
+    "home_team": "Osasuna",
+    "away_team": "Sevilla FC",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "328": {
+    "home_team": "Leganés",
+    "away_team": "Girona",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "329": {
+    "home_team": "Atleti",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "330": {
+    "home_team": "Real Betis",
+    "away_team": "Valladolid",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "331": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "332": {
+    "home_team": "Alavés",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "333": {
+    "home_team": "Villarreal",
+    "away_team": "Osasuna",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "334": {
+    "home_team": "Las Palmas",
+    "away_team": "Valencia",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "335": {
+    "home_team": "Valladolid",
+    "away_team": "Barça",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "336": {
+    "home_team": "Real Madrid",
+    "away_team": "Celta",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "337": {
+    "home_team": "Sevilla FC",
+    "away_team": "Leganés",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "338": {
+    "home_team": "Espanyol",
+    "away_team": "Real Betis",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "339": {
+    "home_team": "Real Sociedad",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "340": {
+    "home_team": "Girona",
+    "away_team": "Mallorca",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "341": {
+    "home_team": "Las Palmas",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "342": {
+    "home_team": "Valencia",
+    "away_team": "Getafe",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "343": {
+    "home_team": "Celta",
+    "away_team": "Sevilla FC",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "344": {
+    "home_team": "Girona",
+    "away_team": "Villarreal",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "345": {
+    "home_team": "Mallorca",
+    "away_team": "Valladolid",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "346": {
+    "home_team": "Atleti",
+    "away_team": "Real Sociedad",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "347": {
+    "home_team": "Leganés",
+    "away_team": "Espanyol",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "348": {
+    "home_team": "Barça",
+    "away_team": "Real Madrid",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "349": {
+    "home_team": "Athletic",
+    "away_team": "Alavés",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "350": {
+    "home_team": "Real Betis",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "351": {
+    "home_team": "Valladolid",
+    "away_team": "Girona",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "352": {
+    "home_team": "Real Sociedad",
+    "away_team": "Celta",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "353": {
+    "home_team": "Sevilla FC",
+    "away_team": "Las Palmas",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "354": {
+    "home_team": "Alavés",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "355": {
+    "home_team": "Villarreal",
+    "away_team": "Leganés",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "356": {
+    "home_team": "Real Madrid",
+    "away_team": "Mallorca",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "357": {
+    "home_team": "Osasuna",
+    "away_team": "Atleti",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "358": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Real Betis",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "359": {
+    "home_team": "Getafe",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "360": {
+    "home_team": "Espanyol",
+    "away_team": "Barça",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "361": {
+    "home_team": "Atleti",
+    "away_team": "Real Betis",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "362": {
+    "home_team": "Celta",
+    "away_team": "Rayo Vallecano",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "363": {
+    "home_team": "Barça",
+    "away_team": "Villarreal",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "364": {
+    "home_team": "Sevilla FC",
+    "away_team": "Real Madrid",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "365": {
+    "home_team": "Valencia",
+    "away_team": "Athletic",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "366": {
+    "home_team": "Mallorca",
+    "away_team": "Getafe",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "367": {
+    "home_team": "Real Sociedad",
+    "away_team": "Girona",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "368": {
+    "home_team": "Valladolid",
+    "away_team": "Alavés",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "369": {
+    "home_team": "Las Palmas",
+    "away_team": "Leganés",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "370": {
+    "home_team": "Osasuna",
+    "away_team": "Espanyol",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "371": {
+    "home_team": "Real Betis",
+    "away_team": "Valencia",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "372": {
+    "home_team": "Real Madrid",
+    "away_team": "Real Sociedad",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "373": {
+    "home_team": "Leganés",
+    "away_team": "Valladolid",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "374": {
+    "home_team": "Espanyol",
+    "away_team": "Las Palmas",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "375": {
+    "home_team": "Alavés",
+    "away_team": "Osasuna",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "376": {
+    "home_team": "Getafe",
+    "away_team": "Celta",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "377": {
+    "home_team": "Rayo Vallecano",
+    "away_team": "Mallorca",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "378": {
+    "home_team": "Girona",
+    "away_team": "Atleti",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "379": {
+    "home_team": "Villarreal",
+    "away_team": "Sevilla FC",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "380": {
+    "home_team": "Athletic",
+    "away_team": "Barça",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  }
+}
