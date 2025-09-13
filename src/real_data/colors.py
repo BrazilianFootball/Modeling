@@ -124,7 +124,7 @@ color_mapping = {
     "M'gladbach": "rgba(0,128,0,1)",
     "RB Leipzig": "rgba(204,0,0,1)",
     "St. Pauli": "rgba(128,0,0,1)",
-    "Stuttgart": "rgba(255,255,255,1)",
+    "Stuttgart": "rgba(204,0,0,1)",
     "Union Berlin": "rgba(204,0,0,1)",
     "Wolfsburg": "rgba(0,153,0,1)",
 
