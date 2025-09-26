@@ -4,7 +4,7 @@ import json
 import os
 from typing import Any
 from datetime import datetime as dt
-import requests
+import pandas as pd
 
 def parse_datetime(date: str, time: str) -> str:
     """
@@ -94,58 +94,34 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
         KeyError: If the championship is not supported.
         Exception: If there is an error downloading or processing the data.
     """
-    with open(os.path.join(os.path.dirname(__file__), "credential.json"), encoding="utf-8") as f:
-        headers = json.load(f)
-
-    uri_mask = "https://api.football-data.org/v4/competitions/{championship}/matches?season={year}"
+    url_mask = "https://www.football-data.co.uk/mmz4281/{season}/{championship}.csv"
     championship_mask = {
-        "england": "PL",
-        "france": "FL1",
-        "germany": "BL1",
-        "italy": "SA",
-        "netherlands": "DED",
-        "portugal": "PPL",
-        "spain": "PD",
+        "england": "E0",
+        "france": "F1",
+        "germany": "D1",
+        "italy": "I1",
+        "netherlands": "N1",
+        "portugal": "P1",
+        "spain": "SP1",
     }[championship]
 
-    url = uri_mask.format(championship=championship_mask, year=year)
-    response = requests.get(url, headers=headers)
+    season_start = str(year)[2:]
+    season_end = str(year+1)[2:]
+    season = f"{season_start}{season_end}"
 
-    data = {}
-    matchdays: dict[int, int] = {}
-    num_total_matches = len(response.json()["matches"])
-    if num_total_matches == 380:
-        n_games_per_matchday = 10
-    elif num_total_matches == 306:
-        n_games_per_matchday = 9
-    else:
-        raise ValueError(f"Number of total matches ({num_total_matches}) is not supported")
-
-    for game in response.json()["matches"]:
-        matchday = game["matchday"]
-        home_team = game["homeTeam"]["shortName"]
-        away_team = game["awayTeam"]["shortName"]
-        home_goals = game["score"]["fullTime"]["home"]
-        away_goals = game["score"]["fullTime"]["away"]
-        if home_goals > away_goals:
-            result = "H"
-        elif home_goals < away_goals:
-            result = "A"
-        else:
-            result = "D"
-
-        matchdays[matchday] = matchdays.get(matchday, 0) + 1
-        game_id = str((matchday - 1) * n_games_per_matchday + matchdays[matchday]).zfill(3)
-        data[game_id] = {
-            "home_team": home_team,
-            "away_team": away_team,
-            "goals_team1": home_goals,
-            "goals_team2": away_goals,
-            "result": result
-        }
-
-    sorted_data = sorted(data.items(), key=lambda x: x[0])
-    data = {x[0]: x[1] for x in sorted_data}
+    url = url_mask.format(championship=championship_mask, season=season)
+    data = pd.read_csv(url)
+    data = data[['Date', 'Time', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']]
+    all_matches = {}
+    for i in range(len(data)):
+        game_id = str(i+1).zfill(3)
+        info = {}
+        info['home'] = data.loc[i, 'HomeTeam']
+        info['away'] = data.loc[i, 'AwayTeam']
+        info['goals_team1'] = int(data.loc[i, 'FTHG'])
+        info['goals_team2'] = int(data.loc[i, 'FTAG'])
+        info['result'] = data.loc[i, 'FTR']
+        all_matches[game_id] = info
 
     save_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
@@ -154,7 +130,7 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
     os.makedirs(save_dir, exist_ok=True)
     save_path = os.path.join(save_dir, "all_matches.json")
     with open(save_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+        json.dump(all_matches, f, ensure_ascii=False, indent=2)
 
 
 def generate_all_matches_data(year: int, championship: str) -> None:
