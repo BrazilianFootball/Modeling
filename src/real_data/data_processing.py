@@ -3,7 +3,22 @@
 import json
 import os
 from typing import Any
+from datetime import datetime as dt
 import requests
+
+def parse_datetime(date: str, time: str) -> str:
+    """
+    Converts a date and time string to the format 'YYYY/MM/DD HH:MM'.
+
+    Args:
+        date (str): Date in the format 'DD/MM/YYYY'.
+        time (str): Time in the format 'HH:MM'.
+
+    Returns:
+        str: Date and time formatted as 'YYYY/MM/DD HH:MM'.
+             If conversion fails, returns the original concatenated date and time string.
+    """
+    return dt.strptime(f"{date} {time}", "%d/%m/%Y %H:%M").strftime("%Y/%m/%d %H:%M")
 
 
 def generate_all_matches_from_scraped_data(year: int) -> None:
@@ -31,8 +46,15 @@ def generate_all_matches_from_scraped_data(year: int) -> None:
     with open(file_path, encoding="utf-8") as f:
         data = json.load(f)
 
+    data = {
+        game_id: {**game_data, "Datetime": parse_datetime(game_data["Date"], game_data["Time"])}
+        for game_id, game_data in data.items()
+    }
+
+    data = sorted(data.items(), key=lambda x: x[1]['Datetime'])
     all_matches = {}
-    for game_id, game_data in data.items():
+    for i, (_, game_data) in enumerate(data):
+        game_id = str(i+1).zfill(3)
         home_team = game_data.get("Home")
         away_team = game_data.get("Away")
         result = game_data.get("Result")
