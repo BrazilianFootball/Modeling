@@ -8,14 +8,14 @@ import pandas as pd
 
 def parse_datetime(date: str, time: str) -> str:
     """
-    Converts a date and time string to the format 'YYYY/MM/DD HH:MM'.
+    Converts a date and time string to the format "YYYY/MM/DD HH:MM".
 
     Args:
-        date (str): Date in the format 'DD/MM/YYYY'.
-        time (str): Time in the format 'HH:MM'.
+        date (str): Date in the format "DD/MM/YYYY".
+        time (str): Time in the format "HH:MM".
 
     Returns:
-        str: Date and time formatted as 'YYYY/MM/DD HH:MM'.
+        str: Date and time formatted as "YYYY/MM/DD HH:MM".
              If conversion fails, returns the original concatenated date and time string.
     """
     return dt.strptime(f"{date} {time}", "%d/%m/%Y %H:%M").strftime("%Y/%m/%d %H:%M")
@@ -51,7 +51,7 @@ def generate_all_matches_from_scraped_data(year: int) -> None:
         for game_id, game_data in data.items()
     }
 
-    data = sorted(data.items(), key=lambda x: x[1]['Datetime'])
+    data = sorted(data.items(), key=lambda x: x[1]["Datetime"])
     all_matches = {}
     for i, (_, game_data) in enumerate(data):
         game_id = str(i+1).zfill(3)
@@ -111,16 +111,16 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
 
     url = url_mask.format(championship=championship_mask, season=season)
     data = pd.read_csv(url)
-    data = data[['Date', 'Time', 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']]
+    data = data[["Date", "Time", "HomeTeam", "AwayTeam", "FTHG", "FTAG", "FTR"]]
     all_matches = {}
     for i in range(len(data)):
         game_id = str(i+1).zfill(3)
         info = {}
-        info['home'] = data.loc[i, 'HomeTeam']
-        info['away'] = data.loc[i, 'AwayTeam']
-        info['goals_team1'] = int(data.loc[i, 'FTHG'])
-        info['goals_team2'] = int(data.loc[i, 'FTAG'])
-        info['result'] = data.loc[i, 'FTR']
+        info["home_team"] = data.loc[i, "HomeTeam"]
+        info["away_team"] = data.loc[i, "AwayTeam"]
+        info["goals_team1"] = int(data.loc[i, "FTHG"])
+        info["goals_team2"] = int(data.loc[i, "FTAG"])
+        info["result"] = data.loc[i, "FTR"]
         all_matches[game_id] = info
 
     save_dir = os.path.join(
@@ -295,21 +295,28 @@ def load_real_data(year: int, championship: str) -> dict[str, Any]:
     Returns:
         Dict[str, Any]: The loaded data dictionary.
     """
+    if championship in ["brazil", "england", "italy", "spain"]:
+        num_games = 380
+    else:
+        num_games = 306
+
     try:
         with open(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_380_games.json"
+                "real_data", "inputs", f"{championship}", f"{year}",
+                f"poisson_data_{num_games}_games.json"
             ),
             encoding="utf-8",
         ) as f:
             data = json.load(f)
     except FileNotFoundError:
-        generate_real_data_stan_input(year, 380, championship)
+        generate_real_data_stan_input(year, num_games, championship)
         with open(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_380_games.json"
+                "real_data", "inputs", f"{championship}", f"{year}",
+                f"poisson_data_{num_games}_games.json"
             ),
             encoding="utf-8",
         ) as f:
