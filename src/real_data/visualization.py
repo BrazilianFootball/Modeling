@@ -15,7 +15,7 @@ def generate_points_evolution_by_team(
     points_matrix: np.ndarray,
     current_scenario: dict[str, list[int]],
     team_mapping: dict[int, str],
-    num_rounds: int,
+    num_games: int,
     save_dir: str,
 ) -> None:
     """
@@ -26,14 +26,13 @@ def generate_points_evolution_by_team(
         points_matrix (np.ndarray): Simulated points for each team, round, and simulation.
         current_scenario (Dict[str, List[int]]): Actual points evolution for each team.
         team_mapping (Dict[int, str]): Mapping from team indices to team names.
-        num_rounds (int): Number of rounds already played.
+        num_games (int): Number of games already played.
         save_dir (str): Directory to save the plot.
 
     Returns:
         None
     """
     n_clubs = len(team_mapping)
-    n_matches_per_club = 2 * (n_clubs - 1) - num_rounds
     median_points = np.median(points_matrix, axis=2)
     p95_points = np.percentile(points_matrix, 95, axis=2)
     p5_points = np.percentile(points_matrix, 5, axis=2)
@@ -44,8 +43,8 @@ def generate_points_evolution_by_team(
     sorted_indices = np.argsort(-final_points)
     sorted_team_names = [list(team_mapping.values())[i] for i in sorted_indices]
 
-    n_rounds = median_points.shape[1]
-    last_rounds = num_rounds + np.arange(n_rounds - n_matches_per_club, n_rounds) + 1
+    n_total_matches = n_clubs * (n_clubs - 1)
+    simulation_range = np.arange(num_games + 1, n_total_matches)
 
     fig = psub.make_subplots(
         rows=4,
@@ -69,14 +68,14 @@ def generate_points_evolution_by_team(
         club_name = sorted_team_names[idx]
         club_color = color_mapping.get(club_name, "rgba(0,0,0,1)")
 
-        points_at_current_round = current_scenario[club_name][num_rounds - 1]
+        points_at_current_round = current_scenario[club_name][num_games - 1]
         med = median_points[team_idx, :] + points_at_current_round
         p95 = p95_points[team_idx, :] + points_at_current_round
         p5 = p5_points[team_idx, :] + points_at_current_round
         team_points = current_scenario[club_name]
         fig.add_trace(
             go.Scatter(
-                x=last_rounds,
+                x=simulation_range,
                 y=med,
                 mode="lines",
                 line={"color": club_color, "width": 1},
@@ -90,7 +89,7 @@ def generate_points_evolution_by_team(
         club_color = club_color.replace(",1)", ",0.25)")
         fig.add_trace(
             go.Scatter(
-                x=np.concatenate([last_rounds, last_rounds[::-1]]),
+                x=np.concatenate([simulation_range, simulation_range[::-1]]),
                 y=np.concatenate([p5, p95[::-1]]),
                 fill="toself",
                 fillcolor=club_color,
@@ -105,7 +104,7 @@ def generate_points_evolution_by_team(
 
         fig.add_trace(
             go.Scatter(
-                x=np.arange(1, 2 * n_clubs - 1),
+                x=np.arange(1, n_total_matches),
                 y=team_points,
                 mode="lines",
                 line={"color": "red", "dash": "dash", "width": 1},
@@ -122,7 +121,7 @@ def generate_points_evolution_by_team(
         col = i % 5 + 1
         if row == 4:
             fig.update_xaxes(
-                title_text="Rounds",
+                title_text="Games",
                 row=row,
                 col=col,
                 title_font={"size": 7.5},
@@ -152,7 +151,7 @@ def generate_points_evolution_by_team(
     fig.update_layout(
         height=900,
         width=1200,
-        title_text=f"Points evolution by team (simulated after {num_rounds} rounds)",
+        title_text=f"Points evolution by team (simulated after {num_games} games)",
         title_font={"size": 14, "family": "Arial"},
         showlegend=True,
         paper_bgcolor="white",
@@ -177,7 +176,7 @@ def generate_boxplot(
     samples: pd.DataFrame,
     year: int,
     save_dir: str,
-    num_rounds: int,
+    num_games: int,
 ) -> None:
     """
     Generate a Plotly boxplot of the team strengths and save it as a PNG file
@@ -187,7 +186,7 @@ def generate_boxplot(
         samples (pd.DataFrame): DataFrame containing the samples from the model.
         year (int): Year of the data.
         save_dir (str): Directory to save the boxplot.
-        num_rounds (int): Number of rounds used in the model.
+        num_games (int): Number of games used in the model.
 
     Returns:
         None
@@ -221,7 +220,7 @@ def generate_boxplot(
     fig.update_layout(
         height=900,
         width=1200,
-        title=f"Team Strengths - Serie A {year} (after {num_rounds} rounds)",
+        title=f"Team Strengths - Serie A {year} (after {num_games} games)",
         title_font={"size": 14, "family": "Arial"},
         xaxis_title="Team Strength (log scale)",
         yaxis_title="Teams",

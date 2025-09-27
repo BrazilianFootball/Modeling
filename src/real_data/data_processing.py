@@ -161,7 +161,7 @@ def generate_all_matches_data(year: int, championship: str) -> None:
 
 def generate_real_data_stan_input(
     year: int,
-    num_rounds: int = 38,
+    num_games: int = 380,
     championship: str = "brazil"
 ) -> None:
     """
@@ -170,7 +170,7 @@ def generate_real_data_stan_input(
 
     Args:
         year (int): The year of the games to load and process.
-        num_rounds (int, optional): Number of rounds to process. Defaults to 38.
+        num_games (int, optional): Number of games to process. Defaults to 380.
         championship (str, optional): The championship of the data. Defaults to "brazil".
     """
     all_matches_path = os.path.join(
@@ -199,7 +199,7 @@ def generate_real_data_stan_input(
         raise ValueError(f"Number of total matches is {len(data)}, which is not supported")
 
     for game_data in data.values():
-        if len(team1) >= num_rounds * (num_teams // 2):
+        if len(team1) >= num_games:
             break
 
         home_team = game_data.get("home_team")
@@ -254,9 +254,9 @@ def generate_real_data_stan_input(
     os.makedirs(output_dir, exist_ok=True)
 
     bradley_terry_path = os.path.join(
-        output_dir, f"bradley_terry_data_{str(num_rounds).zfill(2)}.json"
+        output_dir, f"bradley_terry_data_{str(num_games).zfill(3)}_games.json"
     )
-    poisson_path = os.path.join(output_dir, f"poisson_data_{str(num_rounds).zfill(2)}.json")
+    poisson_path = os.path.join(output_dir, f"poisson_data_{str(num_games).zfill(3)}_games.json")
 
     with open(bradley_terry_path, "w", encoding="utf-8") as f:
         json.dump(bradley_terry_data, f, ensure_ascii=False, indent=2)
@@ -299,17 +299,17 @@ def load_real_data(year: int, championship: str) -> dict[str, Any]:
         with open(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_38.json"
+                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_380_games.json"
             ),
             encoding="utf-8",
         ) as f:
             data = json.load(f)
     except FileNotFoundError:
-        generate_real_data_stan_input(year, 38, championship)
+        generate_real_data_stan_input(year, 380, championship)
         with open(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_38.json"
+                "real_data", "inputs", f"{championship}", f"{year}", "poisson_data_380_games.json"
             ),
             encoding="utf-8",
         ) as f:
@@ -317,14 +317,14 @@ def load_real_data(year: int, championship: str) -> dict[str, Any]:
     return data
 
 
-def check_results_exist(model_name: str, year: int, num_rounds: int, championship: str) -> bool:
+def check_results_exist(model_name: str, year: int, num_games: int, championship: str) -> bool:
     """
     Check if the results for a given model, year, and number of rounds exist.
 
     Args:
         model_name (str): The name of the model.
         year (int): The year of the data.
-        num_rounds (int): The number of rounds of the data.
+        num_games (int): The number of games of the data.
         championship (str): The championship of the data.
 
     Returns:
@@ -333,6 +333,6 @@ def check_results_exist(model_name: str, year: int, num_rounds: int, championshi
     save_dir = os.path.join(
         os.path.dirname(__file__), "..", "..",
         "real_data", "results", f"{championship}", f"{year}",
-        f"{model_name}", f"round_{str(num_rounds).zfill(2)}"
+        f"{model_name}", f"{str(num_games).zfill(3)}_games"
     )
     return os.path.exists(save_dir)

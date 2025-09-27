@@ -1,10 +1,13 @@
 # pylint: disable=too-many-locals
 
 import os
+import warnings
 
 import numpy as np
 import pandas as pd
 from data_processing import load_all_matches_data
+
+warnings.filterwarnings("ignore")
 
 
 def brier_score(observations: np.ndarray, predictions: np.ndarray) -> float:
@@ -79,40 +82,23 @@ def ranked_probability_score(
     return total_score / (2 * n)
 
 
-def calculate_metrics(model_name: str, year: int, num_rounds: int, championship: str) -> None:
+def calculate_metrics(model_name: str, year: int, num_games: int, championship: str) -> None:
     """
     Calculate the metrics for a given model and year.
 
     Args:
         model_name (str): The name of the model to calculate the metrics for.
         year (int): The year of the data to use.
-        num_rounds (int): The number of rounds to calculate the metrics for.
+        num_games (int): The number of games to calculate the metrics for.
         championship (str): The championship of the data.
     """
 
     data, _ = load_all_matches_data(year, championship)
     num_total_matches = len(data)
-    if num_total_matches == 380:
-        num_matches_per_round = 10
-        num_total_rounds = 38
-    elif num_total_matches == 306:
-        num_matches_per_round = 9
-        num_total_rounds = 34
-    else:
-        raise ValueError(f"Number of total matches is {num_total_matches}, which is not supported")
-
-    observations = np.zeros(
-        ((num_total_rounds - num_rounds) * num_matches_per_round, 3),
-        dtype=int
-    )
-    predictions = np.zeros(
-        ((num_total_rounds - num_rounds) * num_matches_per_round, 3),
-        dtype=float
-    )
-    naive_predictions = 1 / 3 * np.ones(
-        ((num_total_rounds - num_rounds) * num_matches_per_round, 3),
-        dtype=float
-    )
+    sample_size = num_total_matches - num_games
+    observations = np.zeros((sample_size, 3), dtype=int)
+    predictions = np.zeros((sample_size, 3), dtype=float)
+    naive_predictions = 1 / 3 * np.ones((sample_size, 3), dtype=float)
     game = 0
     results_to_array = {
         "H": np.array([1, 0, 0]),
@@ -123,11 +109,11 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int, championship:
         if (
             game_data.get("probabilities", {})
             .get(model_name, {})
-            .get(str(num_rounds), {})
+            .get(str(num_games), {})
         ):
             observations[game, :] = results_to_array[game_data["result"]]
             predictions[game, :] = game_data["probabilities"][model_name][
-                str(num_rounds)
+                str(num_games)
             ]
             game += 1
 
@@ -136,7 +122,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int, championship:
         "year",
         "championship",
         "model_name",
-        "num_rounds",
+        "num_games",
         "brier_score",
         "ranked_probability_score",
         "log_score",
@@ -145,7 +131,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int, championship:
         year,
         championship,
         model_name,
-        num_rounds,
+        num_games,
         brier_score(observations, predictions),
         ranked_probability_score(observations, predictions),
         log_score(observations, predictions),
@@ -154,7 +140,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int, championship:
         year,
         championship,
         "naive",
-        num_rounds,
+        num_games,
         brier_score(observations, naive_predictions),
         ranked_probability_score(observations, naive_predictions),
         log_score(observations, naive_predictions),
@@ -166,7 +152,7 @@ def calculate_metrics(model_name: str, year: int, num_rounds: int, championship:
                 (df["year"] == year)
                 & (df["championship"] == championship)
                 & (df["model_name"].isin([model_name, "naive"]))
-                & (df["num_rounds"] == num_rounds)
+                & (df["num_games"] == num_games)
             )
         ]
     else:
