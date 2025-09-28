@@ -1,0 +1,2144 @@
+{
+  "001": {
+    "home_team": "M'gladbach",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "002": {
+    "home_team": "Augsburg",
+    "away_team": "Hoffenheim",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "003": {
+    "home_team": "Bielefeld",
+    "away_team": "Freiburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "004": {
+    "home_team": "Stuttgart",
+    "away_team": "Greuther Furth",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "005": {
+    "home_team": "Union Berlin",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "006": {
+    "home_team": "Wolfsburg",
+    "away_team": "Bochum",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "007": {
+    "home_team": "Dortmund",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 5,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "008": {
+    "home_team": "Mainz",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "009": {
+    "home_team": "FC Koln",
+    "away_team": "Hertha",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "010": {
+    "home_team": "RB Leipzig",
+    "away_team": "Stuttgart",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "011": {
+    "home_team": "Bochum",
+    "away_team": "Mainz",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "012": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Augsburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "013": {
+    "home_team": "Freiburg",
+    "away_team": "Dortmund",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "014": {
+    "home_team": "Greuther Furth",
+    "away_team": "Bielefeld",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "015": {
+    "home_team": "Hertha",
+    "away_team": "Wolfsburg",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "016": {
+    "home_team": "Leverkusen",
+    "away_team": "M'gladbach",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "017": {
+    "home_team": "Hoffenheim",
+    "away_team": "Union Berlin",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "018": {
+    "home_team": "Bayern Munich",
+    "away_team": "FC Koln",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "019": {
+    "home_team": "Dortmund",
+    "away_team": "Hoffenheim",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "020": {
+    "home_team": "Augsburg",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "021": {
+    "home_team": "Bielefeld",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "022": {
+    "home_team": "FC Koln",
+    "away_team": "Bochum",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "023": {
+    "home_team": "Mainz",
+    "away_team": "Greuther Furth",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "024": {
+    "home_team": "Stuttgart",
+    "away_team": "Freiburg",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "025": {
+    "home_team": "Bayern Munich",
+    "away_team": "Hertha",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "026": {
+    "home_team": "Union Berlin",
+    "away_team": "M'gladbach",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "027": {
+    "home_team": "Wolfsburg",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "028": {
+    "home_team": "Freiburg",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "029": {
+    "home_team": "Greuther Furth",
+    "away_team": "Wolfsburg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "030": {
+    "home_team": "Hoffenheim",
+    "away_team": "Mainz",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "031": {
+    "home_team": "Leverkusen",
+    "away_team": "Dortmund",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "032": {
+    "home_team": "Union Berlin",
+    "away_team": "Augsburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "033": {
+    "home_team": "RB Leipzig",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "034": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Stuttgart",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "035": {
+    "home_team": "Bochum",
+    "away_team": "Hertha",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "036": {
+    "home_team": "M'gladbach",
+    "away_team": "Bielefeld",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "037": {
+    "home_team": "Hertha",
+    "away_team": "Greuther Furth",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "038": {
+    "home_team": "Augsburg",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "039": {
+    "home_team": "Bayern Munich",
+    "away_team": "Bochum",
+    "goals_team1": 7,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "040": {
+    "home_team": "Bielefeld",
+    "away_team": "Hoffenheim",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "041": {
+    "home_team": "Mainz",
+    "away_team": "Freiburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "042": {
+    "home_team": "FC Koln",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "043": {
+    "home_team": "Stuttgart",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "044": {
+    "home_team": "Dortmund",
+    "away_team": "Union Berlin",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "045": {
+    "home_team": "Wolfsburg",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "046": {
+    "home_team": "Greuther Furth",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "047": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "048": {
+    "home_team": "Hoffenheim",
+    "away_team": "Wolfsburg",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "049": {
+    "home_team": "Leverkusen",
+    "away_team": "Mainz",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "050": {
+    "home_team": "RB Leipzig",
+    "away_team": "Hertha",
+    "goals_team1": 6,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "051": {
+    "home_team": "Union Berlin",
+    "away_team": "Bielefeld",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "052": {
+    "home_team": "M'gladbach",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "053": {
+    "home_team": "Bochum",
+    "away_team": "Stuttgart",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "054": {
+    "home_team": "Freiburg",
+    "away_team": "Augsburg",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "055": {
+    "home_team": "FC Koln",
+    "away_team": "Greuther Furth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "056": {
+    "home_team": "Dortmund",
+    "away_team": "Augsburg",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "057": {
+    "home_team": "Hertha",
+    "away_team": "Freiburg",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "058": {
+    "home_team": "Stuttgart",
+    "away_team": "Hoffenheim",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "059": {
+    "home_team": "Wolfsburg",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "060": {
+    "home_team": "RB Leipzig",
+    "away_team": "Bochum",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "061": {
+    "home_team": "Mainz",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "062": {
+    "home_team": "Bayern Munich",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "063": {
+    "home_team": "Bielefeld",
+    "away_team": "Leverkusen",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "064": {
+    "home_team": "Hoffenheim",
+    "away_team": "FC Koln",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "065": {
+    "home_team": "Dortmund",
+    "away_team": "Mainz",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "066": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Hertha",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "067": {
+    "home_team": "Freiburg",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "068": {
+    "home_team": "Greuther Furth",
+    "away_team": "Bochum",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "069": {
+    "home_team": "Union Berlin",
+    "away_team": "Wolfsburg",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "070": {
+    "home_team": "M'gladbach",
+    "away_team": "Stuttgart",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "071": {
+    "home_team": "Leverkusen",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "072": {
+    "home_team": "Augsburg",
+    "away_team": "Bielefeld",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "073": {
+    "home_team": "Mainz",
+    "away_team": "Augsburg",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "074": {
+    "home_team": "Bayern Munich",
+    "away_team": "Hoffenheim",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "075": {
+    "home_team": "Bielefeld",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "076": {
+    "home_team": "RB Leipzig",
+    "away_team": "Greuther Furth",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "077": {
+    "home_team": "Wolfsburg",
+    "away_team": "Freiburg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "078": {
+    "home_team": "Hertha",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "079": {
+    "home_team": "FC Koln",
+    "away_team": "Leverkusen",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "080": {
+    "home_team": "Stuttgart",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "081": {
+    "home_team": "Bochum",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "082": {
+    "home_team": "Hoffenheim",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "083": {
+    "home_team": "Bielefeld",
+    "away_team": "Mainz",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "084": {
+    "home_team": "Dortmund",
+    "away_team": "FC Koln",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "085": {
+    "home_team": "Freiburg",
+    "away_team": "Greuther Furth",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "086": {
+    "home_team": "Leverkusen",
+    "away_team": "Wolfsburg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "087": {
+    "home_team": "Union Berlin",
+    "away_team": "Bayern Munich",
+    "goals_team1": 2,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "088": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "089": {
+    "home_team": "Augsburg",
+    "away_team": "Stuttgart",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "090": {
+    "home_team": "M'gladbach",
+    "away_team": "Bochum",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "091": {
+    "home_team": "Mainz",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "092": {
+    "home_team": "Bayern Munich",
+    "away_team": "Freiburg",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "093": {
+    "home_team": "Bochum",
+    "away_team": "Hoffenheim",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "094": {
+    "home_team": "Stuttgart",
+    "away_team": "Bielefeld",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "095": {
+    "home_team": "Wolfsburg",
+    "away_team": "Augsburg",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "096": {
+    "home_team": "RB Leipzig",
+    "away_team": "Dortmund",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "097": {
+    "home_team": "Hertha",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "098": {
+    "home_team": "FC Koln",
+    "away_team": "Union Berlin",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "099": {
+    "home_team": "Greuther Furth",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "100": {
+    "home_team": "Augsburg",
+    "away_team": "Bayern Munich",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "101": {
+    "home_team": "Bielefeld",
+    "away_team": "Wolfsburg",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "102": {
+    "home_team": "Dortmund",
+    "away_team": "Stuttgart",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "103": {
+    "home_team": "Hoffenheim",
+    "away_team": "RB Leipzig",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "104": {
+    "home_team": "Leverkusen",
+    "away_team": "Bochum",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "105": {
+    "home_team": "M'gladbach",
+    "away_team": "Greuther Furth",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "106": {
+    "home_team": "Union Berlin",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "107": {
+    "home_team": "Freiburg",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "108": {
+    "home_team": "Mainz",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "109": {
+    "home_team": "Stuttgart",
+    "away_team": "Mainz",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "110": {
+    "home_team": "Bochum",
+    "away_team": "Freiburg",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "111": {
+    "home_team": "FC Koln",
+    "away_team": "M'gladbach",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "112": {
+    "home_team": "Greuther Furth",
+    "away_team": "Hoffenheim",
+    "goals_team1": 3,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "113": {
+    "home_team": "Hertha",
+    "away_team": "Augsburg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "114": {
+    "home_team": "Wolfsburg",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "115": {
+    "home_team": "Bayern Munich",
+    "away_team": "Bielefeld",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "116": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Union Berlin",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "117": {
+    "home_team": "RB Leipzig",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "118": {
+    "home_team": "Union Berlin",
+    "away_team": "RB Leipzig",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "119": {
+    "home_team": "Augsburg",
+    "away_team": "Bochum",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "120": {
+    "home_team": "Bielefeld",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "121": {
+    "home_team": "Hoffenheim",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "122": {
+    "home_team": "Leverkusen",
+    "away_team": "Greuther Furth",
+    "goals_team1": 7,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "123": {
+    "home_team": "Mainz",
+    "away_team": "Wolfsburg",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "124": {
+    "home_team": "Dortmund",
+    "away_team": "Bayern Munich",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "125": {
+    "home_team": "Stuttgart",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "126": {
+    "home_team": "M'gladbach",
+    "away_team": "Freiburg",
+    "goals_team1": 0,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "127": {
+    "home_team": "FC Koln",
+    "away_team": "Augsburg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "128": {
+    "home_team": "Bayern Munich",
+    "away_team": "Mainz",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "129": {
+    "home_team": "Bochum",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "130": {
+    "home_team": "Freiburg",
+    "away_team": "Hoffenheim",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "131": {
+    "home_team": "Hertha",
+    "away_team": "Bielefeld",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "132": {
+    "home_team": "RB Leipzig",
+    "away_team": "M'gladbach",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "133": {
+    "home_team": "Wolfsburg",
+    "away_team": "Stuttgart",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "134": {
+    "home_team": "Greuther Furth",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "135": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Leverkusen",
+    "goals_team1": 5,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "136": {
+    "home_team": "Stuttgart",
+    "away_team": "Bayern Munich",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "137": {
+    "home_team": "Bielefeld",
+    "away_team": "Bochum",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "138": {
+    "home_team": "Mainz",
+    "away_team": "Hertha",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "139": {
+    "home_team": "Wolfsburg",
+    "away_team": "FC Koln",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "140": {
+    "home_team": "M'gladbach",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "141": {
+    "home_team": "Augsburg",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "142": {
+    "home_team": "Dortmund",
+    "away_team": "Greuther Furth",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "143": {
+    "home_team": "Leverkusen",
+    "away_team": "Hoffenheim",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "144": {
+    "home_team": "Union Berlin",
+    "away_team": "Freiburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "145": {
+    "home_team": "Bayern Munich",
+    "away_team": "Wolfsburg",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "146": {
+    "home_team": "Bochum",
+    "away_team": "Union Berlin",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "147": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Mainz",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "148": {
+    "home_team": "Greuther Furth",
+    "away_team": "Augsburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "149": {
+    "home_team": "Hoffenheim",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "150": {
+    "home_team": "RB Leipzig",
+    "away_team": "Bielefeld",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "151": {
+    "home_team": "Hertha",
+    "away_team": "Dortmund",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "152": {
+    "home_team": "Freiburg",
+    "away_team": "Leverkusen",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "153": {
+    "home_team": "FC Koln",
+    "away_team": "Stuttgart",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "154": {
+    "home_team": "Bayern Munich",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "155": {
+    "home_team": "Freiburg",
+    "away_team": "Bielefeld",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "156": {
+    "home_team": "Greuther Furth",
+    "away_team": "Stuttgart",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "157": {
+    "home_team": "Hoffenheim",
+    "away_team": "Augsburg",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "158": {
+    "home_team": "Leverkusen",
+    "away_team": "Union Berlin",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "159": {
+    "home_team": "RB Leipzig",
+    "away_team": "Mainz",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "160": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Dortmund",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "161": {
+    "home_team": "Hertha",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "162": {
+    "home_team": "Bochum",
+    "away_team": "Wolfsburg",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "163": {
+    "home_team": "Dortmund",
+    "away_team": "Freiburg",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "164": {
+    "home_team": "FC Koln",
+    "away_team": "Bayern Munich",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "165": {
+    "home_team": "Mainz",
+    "away_team": "Bochum",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "166": {
+    "home_team": "Stuttgart",
+    "away_team": "RB Leipzig",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "167": {
+    "home_team": "Union Berlin",
+    "away_team": "Hoffenheim",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "168": {
+    "home_team": "Wolfsburg",
+    "away_team": "Hertha",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "169": {
+    "home_team": "M'gladbach",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "170": {
+    "home_team": "Augsburg",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "171": {
+    "home_team": "Bielefeld",
+    "away_team": "Greuther Furth",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "172": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Bielefeld",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "173": {
+    "home_team": "Freiburg",
+    "away_team": "Stuttgart",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "174": {
+    "home_team": "Greuther Furth",
+    "away_team": "Mainz",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "175": {
+    "home_team": "Hoffenheim",
+    "away_team": "Dortmund",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "176": {
+    "home_team": "Leverkusen",
+    "away_team": "Augsburg",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "177": {
+    "home_team": "M'gladbach",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "178": {
+    "home_team": "Bochum",
+    "away_team": "FC Koln",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "179": {
+    "home_team": "RB Leipzig",
+    "away_team": "Wolfsburg",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "180": {
+    "home_team": "Hertha",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "181": {
+    "home_team": "Hertha",
+    "away_team": "Bochum",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "182": {
+    "home_team": "Augsburg",
+    "away_team": "Union Berlin",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "183": {
+    "home_team": "Bielefeld",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "184": {
+    "home_team": "FC Koln",
+    "away_team": "Freiburg",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "185": {
+    "home_team": "Mainz",
+    "away_team": "Hoffenheim",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "186": {
+    "home_team": "Stuttgart",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "187": {
+    "home_team": "Bayern Munich",
+    "away_team": "RB Leipzig",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "188": {
+    "home_team": "Dortmund",
+    "away_team": "Leverkusen",
+    "goals_team1": 2,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "189": {
+    "home_team": "Wolfsburg",
+    "away_team": "Greuther Furth",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "190": {
+    "home_team": "RB Leipzig",
+    "away_team": "FC Koln",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "191": {
+    "home_team": "Bochum",
+    "away_team": "Bayern Munich",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "192": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Wolfsburg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "193": {
+    "home_team": "Freiburg",
+    "away_team": "Mainz",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "194": {
+    "home_team": "Greuther Furth",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "195": {
+    "home_team": "M'gladbach",
+    "away_team": "Augsburg",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "196": {
+    "home_team": "Leverkusen",
+    "away_team": "Stuttgart",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "197": {
+    "home_team": "Union Berlin",
+    "away_team": "Dortmund",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "198": {
+    "home_team": "Hoffenheim",
+    "away_team": "Bielefeld",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "199": {
+    "home_team": "Mainz",
+    "away_team": "Leverkusen",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "200": {
+    "home_team": "Augsburg",
+    "away_team": "Freiburg",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "201": {
+    "home_team": "Bielefeld",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "202": {
+    "home_team": "Stuttgart",
+    "away_team": "Bochum",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "203": {
+    "home_team": "Wolfsburg",
+    "away_team": "Hoffenheim",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "204": {
+    "home_team": "FC Koln",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "205": {
+    "home_team": "Bayern Munich",
+    "away_team": "Greuther Furth",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "206": {
+    "home_team": "Dortmund",
+    "away_team": "M'gladbach",
+    "goals_team1": 6,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "207": {
+    "home_team": "Hertha",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "208": {
+    "home_team": "Hoffenheim",
+    "away_team": "Stuttgart",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "209": {
+    "home_team": "Freiburg",
+    "away_team": "Hertha",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "210": {
+    "home_team": "Greuther Furth",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "211": {
+    "home_team": "Leverkusen",
+    "away_team": "Bielefeld",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "212": {
+    "home_team": "M'gladbach",
+    "away_team": "Wolfsburg",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "213": {
+    "home_team": "Union Berlin",
+    "away_team": "Mainz",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "214": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Bayern Munich",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "215": {
+    "home_team": "Bochum",
+    "away_team": "RB Leipzig",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "216": {
+    "home_team": "Augsburg",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "217": {
+    "home_team": "Bielefeld",
+    "away_team": "Augsburg",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "218": {
+    "home_team": "Bayern Munich",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "219": {
+    "home_team": "Bochum",
+    "away_team": "Greuther Furth",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "220": {
+    "home_team": "Hertha",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "221": {
+    "home_team": "RB Leipzig",
+    "away_team": "Freiburg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "222": {
+    "home_team": "Wolfsburg",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "223": {
+    "home_team": "Stuttgart",
+    "away_team": "M'gladbach",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "224": {
+    "home_team": "FC Koln",
+    "away_team": "Hoffenheim",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "225": {
+    "home_team": "Freiburg",
+    "away_team": "Wolfsburg",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "226": {
+    "home_team": "Hoffenheim",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "227": {
+    "home_team": "Union Berlin",
+    "away_team": "Stuttgart",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "228": {
+    "home_team": "M'gladbach",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "229": {
+    "home_team": "Leverkusen",
+    "away_team": "FC Koln",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "230": {
+    "home_team": "Dortmund",
+    "away_team": "Bielefeld",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "231": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Bochum",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "232": {
+    "home_team": "Greuther Furth",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 6,
+    "result": "A"
+  },
+  "233": {
+    "home_team": "Mainz",
+    "away_team": "Dortmund",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "234": {
+    "home_team": "Bochum",
+    "away_team": "M'gladbach",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "235": {
+    "home_team": "Greuther Furth",
+    "away_team": "Freiburg",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "236": {
+    "home_team": "Hertha",
+    "away_team": "Hoffenheim",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "237": {
+    "home_team": "Mainz",
+    "away_team": "Bielefeld",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "238": {
+    "home_team": "Stuttgart",
+    "away_team": "Augsburg",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "239": {
+    "home_team": "Bayern Munich",
+    "away_team": "Union Berlin",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "240": {
+    "home_team": "RB Leipzig",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "241": {
+    "home_team": "Wolfsburg",
+    "away_team": "Leverkusen",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "242": {
+    "home_team": "FC Koln",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "243": {
+    "home_team": "Union Berlin",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "244": {
+    "home_team": "Bielefeld",
+    "away_team": "Stuttgart",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "245": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Greuther Furth",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "246": {
+    "home_team": "Freiburg",
+    "away_team": "Bayern Munich",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "247": {
+    "home_team": "Hoffenheim",
+    "away_team": "Bochum",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "248": {
+    "home_team": "Leverkusen",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "249": {
+    "home_team": "Dortmund",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "250": {
+    "home_team": "Augsburg",
+    "away_team": "Wolfsburg",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "251": {
+    "home_team": "M'gladbach",
+    "away_team": "Mainz",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "252": {
+    "home_team": "Augsburg",
+    "away_team": "Mainz",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "253": {
+    "home_team": "Stuttgart",
+    "away_team": "Dortmund",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "254": {
+    "home_team": "Bayern Munich",
+    "away_team": "Augsburg",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "255": {
+    "home_team": "FC Koln",
+    "away_team": "Mainz",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "256": {
+    "home_team": "Greuther Furth",
+    "away_team": "M'gladbach",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "257": {
+    "home_team": "Wolfsburg",
+    "away_team": "Bielefeld",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "258": {
+    "home_team": "Hertha",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "259": {
+    "home_team": "Bochum",
+    "away_team": "Leverkusen",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "260": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Freiburg",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "261": {
+    "home_team": "RB Leipzig",
+    "away_team": "Hoffenheim",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "262": {
+    "home_team": "Augsburg",
+    "away_team": "Hertha",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "263": {
+    "home_team": "Dortmund",
+    "away_team": "Wolfsburg",
+    "goals_team1": 6,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "264": {
+    "home_team": "Freiburg",
+    "away_team": "Bochum",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "265": {
+    "home_team": "Mainz",
+    "away_team": "Stuttgart",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "266": {
+    "home_team": "M'gladbach",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "267": {
+    "home_team": "Bielefeld",
+    "away_team": "Bayern Munich",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "268": {
+    "home_team": "Hoffenheim",
+    "away_team": "Greuther Furth",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "269": {
+    "home_team": "Union Berlin",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "270": {
+    "home_team": "Leverkusen",
+    "away_team": "RB Leipzig",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "271": {
+    "home_team": "Wolfsburg",
+    "away_team": "Mainz",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "272": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "Hoffenheim",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "273": {
+    "home_team": "FC Koln",
+    "away_team": "Bielefeld",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "274": {
+    "home_team": "Freiburg",
+    "away_team": "M'gladbach",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "275": {
+    "home_team": "Greuther Furth",
+    "away_team": "Leverkusen",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "276": {
+    "home_team": "RB Leipzig",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "277": {
+    "home_team": "Bayern Munich",
+    "away_team": "Dortmund",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "278": {
+    "home_team": "Bochum",
+    "away_team": "Augsburg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "279": {
+    "home_team": "Hertha",
+    "away_team": "Stuttgart",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "280": {
+    "home_team": "Union Berlin",
+    "away_team": "Greuther Furth",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "281": {
+    "home_team": "Augsburg",
+    "away_team": "FC Koln",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "282": {
+    "home_team": "Bielefeld",
+    "away_team": "Hertha",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "283": {
+    "home_team": "Dortmund",
+    "away_team": "Bochum",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "284": {
+    "home_team": "Mainz",
+    "away_team": "Bayern Munich",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "285": {
+    "home_team": "Stuttgart",
+    "away_team": "Wolfsburg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "286": {
+    "home_team": "Hoffenheim",
+    "away_team": "Freiburg",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "287": {
+    "home_team": "Leverkusen",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "288": {
+    "home_team": "M'gladbach",
+    "away_team": "RB Leipzig",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "289": {
+    "home_team": "Bochum",
+    "away_team": "Bielefeld",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "290": {
+    "home_team": "FC Koln",
+    "away_team": "Wolfsburg",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "291": {
+    "home_team": "Freiburg",
+    "away_team": "Union Berlin",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "292": {
+    "home_team": "Greuther Furth",
+    "away_team": "Dortmund",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "293": {
+    "home_team": "Hoffenheim",
+    "away_team": "Leverkusen",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "294": {
+    "home_team": "Hertha",
+    "away_team": "Mainz",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "295": {
+    "home_team": "Ein Frankfurt",
+    "away_team": "M'gladbach",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "296": {
+    "home_team": "Bayern Munich",
+    "away_team": "Stuttgart",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "297": {
+    "home_team": "RB Leipzig",
+    "away_team": "Augsburg",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "298": {
+    "home_team": "Augsburg",
+    "away_team": "Greuther Furth",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "299": {
+    "home_team": "Bielefeld",
+    "away_team": "RB Leipzig",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "300": {
+    "home_team": "Dortmund",
+    "away_team": "Hertha",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "301": {
+    "home_team": "Leverkusen",
+    "away_team": "Freiburg",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "302": {
+    "home_team": "Mainz",
+    "away_team": "Ein Frankfurt",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "303": {
+    "home_team": "M'gladbach",
+    "away_team": "Hoffenheim",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "304": {
+    "home_team": "Stuttgart",
+    "away_team": "FC Koln",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "305": {
+    "home_team": "Union Berlin",
+    "away_team": "Bochum",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "306": {
+    "home_team": "Wolfsburg",
+    "away_team": "Bayern Munich",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  }
+}

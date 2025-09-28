@@ -1,0 +1,2144 @@
+{
+  "001": {
+    "home_team": "Famalicao",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "002": {
+    "home_team": "Guimaraes",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "003": {
+    "home_team": "Nacional",
+    "away_team": "Boavista",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "004": {
+    "home_team": "Porto",
+    "away_team": "Sp Braga",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "005": {
+    "home_team": "Santa Clara",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "006": {
+    "home_team": "Moreirense",
+    "away_team": "Farense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "007": {
+    "home_team": "Tondela",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "008": {
+    "home_team": "Portimonense",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "009": {
+    "home_team": "Sp Braga",
+    "away_team": "Santa Clara",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "010": {
+    "home_team": "Maritimo",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "011": {
+    "home_team": "Benfica",
+    "away_team": "Moreirense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "012": {
+    "home_team": "Boavista",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "013": {
+    "home_team": "Farense",
+    "away_team": "Nacional",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "014": {
+    "home_team": "Gil Vicente",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "015": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "016": {
+    "home_team": "Rio Ave",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "017": {
+    "home_team": "Belenenses",
+    "away_team": "Famalicao",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "018": {
+    "home_team": "Moreirense",
+    "away_team": "Boavista",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "019": {
+    "home_team": "Guimaraes",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "020": {
+    "home_team": "Santa Clara",
+    "away_team": "Gil Vicente",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "021": {
+    "home_team": "Porto",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "022": {
+    "home_team": "Tondela",
+    "away_team": "Sp Braga",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "023": {
+    "home_team": "Nacional",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "024": {
+    "home_team": "Benfica",
+    "away_team": "Farense",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "025": {
+    "home_team": "Famalicao",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "026": {
+    "home_team": "Portimonense",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "027": {
+    "home_team": "Gil Vicente",
+    "away_team": "Tondela",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "028": {
+    "home_team": "Maritimo",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "029": {
+    "home_team": "Sp Braga",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "030": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Porto",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "031": {
+    "home_team": "Belenenses",
+    "away_team": "Moreirense",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "032": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Santa Clara",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "033": {
+    "home_team": "Farense",
+    "away_team": "Famalicao",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "034": {
+    "home_team": "Rio Ave",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "035": {
+    "home_team": "Boavista",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "036": {
+    "home_team": "Tondela",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "037": {
+    "home_team": "Nacional",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "038": {
+    "home_team": "Santa Clara",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "039": {
+    "home_team": "Porto",
+    "away_team": "Gil Vicente",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "040": {
+    "home_team": "Farense",
+    "away_team": "Rio Ave",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "041": {
+    "home_team": "Moreirense",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "042": {
+    "home_team": "Famalicao",
+    "away_team": "Boavista",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "043": {
+    "home_team": "Guimaraes",
+    "away_team": "Sp Braga",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "044": {
+    "home_team": "Benfica",
+    "away_team": "Belenenses",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "045": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Gil Vicente",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "046": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Porto",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "047": {
+    "home_team": "Belenenses",
+    "away_team": "Farense",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "048": {
+    "home_team": "Rio Ave",
+    "away_team": "Moreirense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "049": {
+    "home_team": "Maritimo",
+    "away_team": "Nacional",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "050": {
+    "home_team": "Portimonense",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "051": {
+    "home_team": "Gil Vicente",
+    "away_team": "Guimaraes",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "052": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Tondela",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "053": {
+    "home_team": "Sp Braga",
+    "away_team": "Famalicao",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "054": {
+    "home_team": "Boavista",
+    "away_team": "Benfica",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "055": {
+    "home_team": "Belenenses",
+    "away_team": "Rio Ave",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "056": {
+    "home_team": "Tondela",
+    "away_team": "Santa Clara",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "057": {
+    "home_team": "Famalicao",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "058": {
+    "home_team": "Guimaraes",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "059": {
+    "home_team": "Farense",
+    "away_team": "Boavista",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "060": {
+    "home_team": "Nacional",
+    "away_team": "Gil Vicente",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "061": {
+    "home_team": "Porto",
+    "away_team": "Portimonense",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "062": {
+    "home_team": "Benfica",
+    "away_team": "Sp Braga",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "063": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Famalicao",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "064": {
+    "home_team": "Tondela",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "065": {
+    "home_team": "Santa Clara",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "066": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Moreirense",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "067": {
+    "home_team": "Gil Vicente",
+    "away_team": "Rio Ave",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "068": {
+    "home_team": "Portimonense",
+    "away_team": "Nacional",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "069": {
+    "home_team": "Boavista",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "070": {
+    "home_team": "Sp Braga",
+    "away_team": "Farense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "071": {
+    "home_team": "Maritimo",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "072": {
+    "home_team": "Moreirense",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "073": {
+    "home_team": "Guimaraes",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "074": {
+    "home_team": "Moreirense",
+    "away_team": "Gil Vicente",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "075": {
+    "home_team": "Famalicao",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "076": {
+    "home_team": "Porto",
+    "away_team": "Tondela",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "077": {
+    "home_team": "Nacional",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "078": {
+    "home_team": "Rio Ave",
+    "away_team": "Boavista",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "079": {
+    "home_team": "Belenenses",
+    "away_team": "Sp Braga",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "080": {
+    "home_team": "Benfica",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "081": {
+    "home_team": "Farense",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "082": {
+    "home_team": "Portimonense",
+    "away_team": "Famalicao",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "083": {
+    "home_team": "Maritimo",
+    "away_team": "Belenenses",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "084": {
+    "home_team": "Tondela",
+    "away_team": "Moreirense",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "085": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Farense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "086": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Boavista",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "087": {
+    "home_team": "Gil Vicente",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "088": {
+    "home_team": "Porto",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "089": {
+    "home_team": "Santa Clara",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "090": {
+    "home_team": "Sp Braga",
+    "away_team": "Rio Ave",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "091": {
+    "home_team": "Famalicao",
+    "away_team": "Gil Vicente",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "092": {
+    "home_team": "Nacional",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "093": {
+    "home_team": "Farense",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "094": {
+    "home_team": "Belenenses",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "095": {
+    "home_team": "Rio Ave",
+    "away_team": "Maritimo",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "096": {
+    "home_team": "Boavista",
+    "away_team": "Sp Braga",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "097": {
+    "home_team": "Benfica",
+    "away_team": "Portimonense",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "098": {
+    "home_team": "Moreirense",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "099": {
+    "home_team": "Guimaraes",
+    "away_team": "Porto",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "100": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Sp Braga",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "101": {
+    "home_team": "Tondela",
+    "away_team": "Famalicao",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "102": {
+    "home_team": "Maritimo",
+    "away_team": "Boavista",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "103": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Rio Ave",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "104": {
+    "home_team": "Porto",
+    "away_team": "Moreirense",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "105": {
+    "home_team": "Santa Clara",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "106": {
+    "home_team": "Gil Vicente",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "107": {
+    "home_team": "Portimonense",
+    "away_team": "Farense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "108": {
+    "home_team": "Sp Braga",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "109": {
+    "home_team": "Nacional",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "110": {
+    "home_team": "Benfica",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "111": {
+    "home_team": "Rio Ave",
+    "away_team": "Portimonense",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "112": {
+    "home_team": "Famalicao",
+    "away_team": "Porto",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "113": {
+    "home_team": "Moreirense",
+    "away_team": "Guimaraes",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "114": {
+    "home_team": "Boavista",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "115": {
+    "home_team": "Farense",
+    "away_team": "Gil Vicente",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "116": {
+    "home_team": "Belenenses",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "117": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "118": {
+    "home_team": "Porto",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "119": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Sp Braga",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "120": {
+    "home_team": "Tondela",
+    "away_team": "Boavista",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "121": {
+    "home_team": "Nacional",
+    "away_team": "Moreirense",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "122": {
+    "home_team": "Santa Clara",
+    "away_team": "Famalicao",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "123": {
+    "home_team": "Gil Vicente",
+    "away_team": "Maritimo",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "124": {
+    "home_team": "Portimonense",
+    "away_team": "Belenenses",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "125": {
+    "home_team": "Guimaraes",
+    "away_team": "Nacional",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "126": {
+    "home_team": "Maritimo",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "127": {
+    "home_team": "Moreirense",
+    "away_team": "Portimonense",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "128": {
+    "home_team": "Famalicao",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "129": {
+    "home_team": "Belenenses",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "130": {
+    "home_team": "Rio Ave",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "131": {
+    "home_team": "Benfica",
+    "away_team": "Nacional",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "132": {
+    "home_team": "Farense",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "133": {
+    "home_team": "Sp Braga",
+    "away_team": "Gil Vicente",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "134": {
+    "home_team": "Boavista",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "135": {
+    "home_team": "Nacional",
+    "away_team": "Famalicao",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "136": {
+    "home_team": "Tondela",
+    "away_team": "Farense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "137": {
+    "home_team": "Portimonense",
+    "away_team": "Boavista",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "138": {
+    "home_team": "Guimaraes",
+    "away_team": "Maritimo",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "139": {
+    "home_team": "Santa Clara",
+    "away_team": "Belenenses",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "140": {
+    "home_team": "Porto",
+    "away_team": "Rio Ave",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "141": {
+    "home_team": "Moreirense",
+    "away_team": "Sp Braga",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "142": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "143": {
+    "home_team": "Gil Vicente",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "144": {
+    "home_team": "Farense",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "145": {
+    "home_team": "Belenenses",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "146": {
+    "home_team": "Sp Braga",
+    "away_team": "Portimonense",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "147": {
+    "home_team": "Famalicao",
+    "away_team": "Moreirense",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "148": {
+    "home_team": "Rio Ave",
+    "away_team": "Nacional",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "149": {
+    "home_team": "Benfica",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "150": {
+    "home_team": "Maritimo",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "151": {
+    "home_team": "Boavista",
+    "away_team": "Gil Vicente",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "152": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "153": {
+    "home_team": "Sp Braga",
+    "away_team": "Porto",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "154": {
+    "home_team": "Farense",
+    "away_team": "Moreirense",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "155": {
+    "home_team": "Benfica",
+    "away_team": "Famalicao",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "156": {
+    "home_team": "Maritimo",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "157": {
+    "home_team": "Belenenses",
+    "away_team": "Guimaraes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "158": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Portimonense",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "159": {
+    "home_team": "Rio Ave",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "160": {
+    "home_team": "Boavista",
+    "away_team": "Nacional",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "161": {
+    "home_team": "Gil Vicente",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "162": {
+    "home_team": "Famalicao",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "163": {
+    "home_team": "Nacional",
+    "away_team": "Farense",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "164": {
+    "home_team": "Guimaraes",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "165": {
+    "home_team": "Porto",
+    "away_team": "Boavista",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "166": {
+    "home_team": "Portimonense",
+    "away_team": "Gil Vicente",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "167": {
+    "home_team": "Santa Clara",
+    "away_team": "Sp Braga",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "168": {
+    "home_team": "Moreirense",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "169": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "170": {
+    "home_team": "Tondela",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "171": {
+    "home_team": "Guimaraes",
+    "away_team": "Farense",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "172": {
+    "home_team": "Boavista",
+    "away_team": "Moreirense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "173": {
+    "home_team": "Belenenses",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "174": {
+    "home_team": "Gil Vicente",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "175": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Portimonense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "176": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Guimaraes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "177": {
+    "home_team": "Rio Ave",
+    "away_team": "Famalicao",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "178": {
+    "home_team": "Sp Braga",
+    "away_team": "Tondela",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "179": {
+    "home_team": "Farense",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "180": {
+    "home_team": "Maritimo",
+    "away_team": "Porto",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "181": {
+    "home_team": "Guimaraes",
+    "away_team": "Boavista",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "182": {
+    "home_team": "Famalicao",
+    "away_team": "Farense",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "183": {
+    "home_team": "Santa Clara",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "184": {
+    "home_team": "Porto",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "185": {
+    "home_team": "Portimonense",
+    "away_team": "Maritimo",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "186": {
+    "home_team": "Tondela",
+    "away_team": "Gil Vicente",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "187": {
+    "home_team": "Nacional",
+    "away_team": "Sp Braga",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "188": {
+    "home_team": "Benfica",
+    "away_team": "Rio Ave",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "189": {
+    "home_team": "Moreirense",
+    "away_team": "Belenenses",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "190": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "191": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Santa Clara",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "192": {
+    "home_team": "Portimonense",
+    "away_team": "Tondela",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "193": {
+    "home_team": "Gil Vicente",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "194": {
+    "home_team": "Boavista",
+    "away_team": "Famalicao",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "195": {
+    "home_team": "Maritimo",
+    "away_team": "Moreirense",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "196": {
+    "home_team": "Rio Ave",
+    "away_team": "Farense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "197": {
+    "home_team": "Belenenses",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "198": {
+    "home_team": "Sp Braga",
+    "away_team": "Guimaraes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "199": {
+    "home_team": "Nacional",
+    "away_team": "Maritimo",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "200": {
+    "home_team": "Farense",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "201": {
+    "home_team": "Benfica",
+    "away_team": "Boavista",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "202": {
+    "home_team": "Santa Clara",
+    "away_team": "Portimonense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "203": {
+    "home_team": "Tondela",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "204": {
+    "home_team": "Moreirense",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "205": {
+    "home_team": "Guimaraes",
+    "away_team": "Gil Vicente",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "206": {
+    "home_team": "Porto",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "207": {
+    "home_team": "Famalicao",
+    "away_team": "Sp Braga",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "208": {
+    "home_team": "Gil Vicente",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "209": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Moreirense",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "210": {
+    "home_team": "Santa Clara",
+    "away_team": "Tondela",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "211": {
+    "home_team": "Portimonense",
+    "away_team": "Porto",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "212": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Guimaraes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "213": {
+    "home_team": "Rio Ave",
+    "away_team": "Belenenses",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "214": {
+    "home_team": "Boavista",
+    "away_team": "Farense",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "215": {
+    "home_team": "Maritimo",
+    "away_team": "Famalicao",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "216": {
+    "home_team": "Sp Braga",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "217": {
+    "home_team": "Nacional",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "218": {
+    "home_team": "Rio Ave",
+    "away_team": "Gil Vicente",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "219": {
+    "home_team": "Porto",
+    "away_team": "Santa Clara",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "220": {
+    "home_team": "Belenenses",
+    "away_team": "Boavista",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "221": {
+    "home_team": "Guimaraes",
+    "away_team": "Tondela",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "222": {
+    "home_team": "Famalicao",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "223": {
+    "home_team": "Farense",
+    "away_team": "Sp Braga",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "224": {
+    "home_team": "Benfica",
+    "away_team": "Maritimo",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "225": {
+    "home_team": "Moreirense",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "226": {
+    "home_team": "Portimonense",
+    "away_team": "Guimaraes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "227": {
+    "home_team": "Maritimo",
+    "away_team": "Farense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "228": {
+    "home_team": "Boavista",
+    "away_team": "Rio Ave",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "229": {
+    "home_team": "Tondela",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "230": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "231": {
+    "home_team": "Gil Vicente",
+    "away_team": "Moreirense",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "232": {
+    "home_team": "Santa Clara",
+    "away_team": "Nacional",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "233": {
+    "home_team": "Sp Braga",
+    "away_team": "Belenenses",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "234": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Famalicao",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "235": {
+    "home_team": "Boavista",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "236": {
+    "home_team": "Farense",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "237": {
+    "home_team": "Guimaraes",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "238": {
+    "home_team": "Moreirense",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "239": {
+    "home_team": "Belenenses",
+    "away_team": "Maritimo",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "240": {
+    "home_team": "Benfica",
+    "away_team": "Gil Vicente",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "241": {
+    "home_team": "Rio Ave",
+    "away_team": "Sp Braga",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "242": {
+    "home_team": "Famalicao",
+    "away_team": "Portimonense",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "243": {
+    "home_team": "Nacional",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "244": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Farense",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "245": {
+    "home_team": "Santa Clara",
+    "away_team": "Moreirense",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "246": {
+    "home_team": "Maritimo",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "247": {
+    "home_team": "Sp Braga",
+    "away_team": "Boavista",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "248": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Belenenses",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "249": {
+    "home_team": "Tondela",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "250": {
+    "home_team": "Gil Vicente",
+    "away_team": "Famalicao",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "251": {
+    "home_team": "Portimonense",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "252": {
+    "home_team": "Porto",
+    "away_team": "Guimaraes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "253": {
+    "home_team": "Boavista",
+    "away_team": "Maritimo",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "254": {
+    "home_team": "Rio Ave",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "255": {
+    "home_team": "Sp Braga",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "256": {
+    "home_team": "Belenenses",
+    "away_team": "Gil Vicente",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "257": {
+    "home_team": "Benfica",
+    "away_team": "Santa Clara",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "258": {
+    "home_team": "Famalicao",
+    "away_team": "Tondela",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "259": {
+    "home_team": "Nacional",
+    "away_team": "Guimaraes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "260": {
+    "home_team": "Moreirense",
+    "away_team": "Porto",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "261": {
+    "home_team": "Farense",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "262": {
+    "home_team": "Maritimo",
+    "away_team": "Sp Braga",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "263": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Belenenses",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "264": {
+    "home_team": "Guimaraes",
+    "away_team": "Moreirense",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "265": {
+    "home_team": "Tondela",
+    "away_team": "Benfica",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "266": {
+    "home_team": "Porto",
+    "away_team": "Famalicao",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "267": {
+    "home_team": "Gil Vicente",
+    "away_team": "Farense",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "268": {
+    "home_team": "Portimonense",
+    "away_team": "Rio Ave",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "269": {
+    "home_team": "Santa Clara",
+    "away_team": "Boavista",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "270": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "271": {
+    "home_team": "Maritimo",
+    "away_team": "Gil Vicente",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "272": {
+    "home_team": "Sp Braga",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "273": {
+    "home_team": "Rio Ave",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "274": {
+    "home_team": "Moreirense",
+    "away_team": "Nacional",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "275": {
+    "home_team": "Belenenses",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "276": {
+    "home_team": "Benfica",
+    "away_team": "Porto",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "277": {
+    "home_team": "Farense",
+    "away_team": "Guimaraes",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "278": {
+    "home_team": "Famalicao",
+    "away_team": "Santa Clara",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "279": {
+    "home_team": "Boavista",
+    "away_team": "Tondela",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "280": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Maritimo",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "281": {
+    "home_team": "Gil Vicente",
+    "away_team": "Sp Braga",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "282": {
+    "home_team": "Portimonense",
+    "away_team": "Moreirense",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "283": {
+    "home_team": "Porto",
+    "away_team": "Farense",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "284": {
+    "home_team": "Santa Clara",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "285": {
+    "home_team": "Tondela",
+    "away_team": "Belenenses",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "286": {
+    "home_team": "Nacional",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "287": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Boavista",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "288": {
+    "home_team": "Guimaraes",
+    "away_team": "Famalicao",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "289": {
+    "home_team": "Pacos Ferreira",
+    "away_team": "Gil Vicente",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "290": {
+    "home_team": "Sp Braga",
+    "away_team": "Moreirense",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "291": {
+    "home_team": "Boavista",
+    "away_team": "Portimonense",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "292": {
+    "home_team": "Farense",
+    "away_team": "Tondela",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "293": {
+    "home_team": "Benfica",
+    "away_team": "Sp Lisbon",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "294": {
+    "home_team": "Rio Ave",
+    "away_team": "Porto",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "295": {
+    "home_team": "Famalicao",
+    "away_team": "Nacional",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "296": {
+    "home_team": "Belenenses",
+    "away_team": "Santa Clara",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "297": {
+    "home_team": "Maritimo",
+    "away_team": "Guimaraes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "298": {
+    "home_team": "Tondela",
+    "away_team": "Pacos Ferreira",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "299": {
+    "home_team": "Porto",
+    "away_team": "Belenenses",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "300": {
+    "home_team": "Gil Vicente",
+    "away_team": "Boavista",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "301": {
+    "home_team": "Guimaraes",
+    "away_team": "Benfica",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "302": {
+    "home_team": "Moreirense",
+    "away_team": "Famalicao",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "303": {
+    "home_team": "Nacional",
+    "away_team": "Rio Ave",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "304": {
+    "home_team": "Portimonense",
+    "away_team": "Sp Braga",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "305": {
+    "home_team": "Santa Clara",
+    "away_team": "Farense",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "306": {
+    "home_team": "Sp Lisbon",
+    "away_team": "Maritimo",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  }
+}

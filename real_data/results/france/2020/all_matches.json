@@ -1,0 +1,2662 @@
+{
+  "001": {
+    "home_team": "Bordeaux",
+    "away_team": "Nantes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "002": {
+    "home_team": "Dijon",
+    "away_team": "Angers",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "003": {
+    "home_team": "Lille",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "004": {
+    "home_team": "Monaco",
+    "away_team": "Reims",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "005": {
+    "home_team": "Lorient",
+    "away_team": "Strasbourg",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "006": {
+    "home_team": "Nimes",
+    "away_team": "Brest",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "007": {
+    "home_team": "Nice",
+    "away_team": "Lens",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "008": {
+    "home_team": "Lyon",
+    "away_team": "Dijon",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "009": {
+    "home_team": "Rennes",
+    "away_team": "Montpellier",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "010": {
+    "home_team": "Strasbourg",
+    "away_team": "Nice",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "011": {
+    "home_team": "Reims",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "012": {
+    "home_team": "Angers",
+    "away_team": "Bordeaux",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "013": {
+    "home_team": "Metz",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "014": {
+    "home_team": "Nantes",
+    "away_team": "Nimes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "015": {
+    "home_team": "St Etienne",
+    "away_team": "Lorient",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "016": {
+    "home_team": "Brest",
+    "away_team": "Marseille",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "017": {
+    "home_team": "Lens",
+    "away_team": "Paris SG",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "018": {
+    "home_team": "Bordeaux",
+    "away_team": "Lyon",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "019": {
+    "home_team": "Montpellier",
+    "away_team": "Nice",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "020": {
+    "home_team": "St Etienne",
+    "away_team": "Strasbourg",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "021": {
+    "home_team": "Lille",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "022": {
+    "home_team": "Angers",
+    "away_team": "Reims",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "023": {
+    "home_team": "Dijon",
+    "away_team": "Brest",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "024": {
+    "home_team": "Lorient",
+    "away_team": "Lens",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "025": {
+    "home_team": "Nimes",
+    "away_team": "Rennes",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "026": {
+    "home_team": "Monaco",
+    "away_team": "Nantes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "027": {
+    "home_team": "Paris SG",
+    "away_team": "Marseille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "028": {
+    "home_team": "Montpellier",
+    "away_team": "Lyon",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "029": {
+    "home_team": "Paris SG",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "030": {
+    "home_team": "Marseille",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "031": {
+    "home_team": "Lyon",
+    "away_team": "Nimes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "032": {
+    "home_team": "Lens",
+    "away_team": "Bordeaux",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "033": {
+    "home_team": "Rennes",
+    "away_team": "Monaco",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "034": {
+    "home_team": "Nice",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "035": {
+    "home_team": "Brest",
+    "away_team": "Lorient",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "036": {
+    "home_team": "Metz",
+    "away_team": "Reims",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "037": {
+    "home_team": "Montpellier",
+    "away_team": "Angers",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "038": {
+    "home_team": "Strasbourg",
+    "away_team": "Dijon",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "039": {
+    "home_team": "Nantes",
+    "away_team": "St Etienne",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "040": {
+    "home_team": "Marseille",
+    "away_team": "Lille",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "041": {
+    "home_team": "Lille",
+    "away_team": "Nantes",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "042": {
+    "home_team": "St Etienne",
+    "away_team": "Rennes",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "043": {
+    "home_team": "Marseille",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "044": {
+    "home_team": "Bordeaux",
+    "away_team": "Nice",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "045": {
+    "home_team": "Angers",
+    "away_team": "Brest",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "046": {
+    "home_team": "Dijon",
+    "away_team": "Montpellier",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "047": {
+    "home_team": "Monaco",
+    "away_team": "Strasbourg",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "048": {
+    "home_team": "Nimes",
+    "away_team": "Lens",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "049": {
+    "home_team": "Lorient",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "050": {
+    "home_team": "Reims",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "051": {
+    "home_team": "Paris SG",
+    "away_team": "Angers",
+    "goals_team1": 6,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "052": {
+    "home_team": "Lens",
+    "away_team": "St Etienne",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "053": {
+    "home_team": "Nice",
+    "away_team": "Nantes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "054": {
+    "home_team": "Montpellier",
+    "away_team": "Nimes",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "055": {
+    "home_team": "Bordeaux",
+    "away_team": "Dijon",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "056": {
+    "home_team": "Brest",
+    "away_team": "Monaco",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "057": {
+    "home_team": "Metz",
+    "away_team": "Lorient",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "058": {
+    "home_team": "Strasbourg",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "059": {
+    "home_team": "Rennes",
+    "away_team": "Reims",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "060": {
+    "home_team": "Lyon",
+    "away_team": "Marseille",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "061": {
+    "home_team": "Dijon",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "062": {
+    "home_team": "Nimes",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "063": {
+    "home_team": "Reims",
+    "away_team": "Lorient",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "064": {
+    "home_team": "Marseille",
+    "away_team": "Bordeaux",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "065": {
+    "home_team": "Strasbourg",
+    "away_team": "Lyon",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "066": {
+    "home_team": "Angers",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "067": {
+    "home_team": "Monaco",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "068": {
+    "home_team": "Nantes",
+    "away_team": "Brest",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "069": {
+    "home_team": "St Etienne",
+    "away_team": "Nice",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "070": {
+    "home_team": "Lille",
+    "away_team": "Lens",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "071": {
+    "home_team": "Rennes",
+    "away_team": "Angers",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "072": {
+    "home_team": "Lorient",
+    "away_team": "Marseille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "073": {
+    "home_team": "Paris SG",
+    "away_team": "Dijon",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "074": {
+    "home_team": "Bordeaux",
+    "away_team": "Nimes",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "075": {
+    "home_team": "Brest",
+    "away_team": "Strasbourg",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "076": {
+    "home_team": "Metz",
+    "away_team": "St Etienne",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "077": {
+    "home_team": "Montpellier",
+    "away_team": "Reims",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "078": {
+    "home_team": "Nice",
+    "away_team": "Lille",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "079": {
+    "home_team": "Lyon",
+    "away_team": "Monaco",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "080": {
+    "home_team": "Rennes",
+    "away_team": "Brest",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "081": {
+    "home_team": "Nantes",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "082": {
+    "home_team": "St Etienne",
+    "away_team": "Montpellier",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "083": {
+    "home_team": "Angers",
+    "away_team": "Nice",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "084": {
+    "home_team": "Dijon",
+    "away_team": "Lorient",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "085": {
+    "home_team": "Nimes",
+    "away_team": "Metz",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "086": {
+    "home_team": "Reims",
+    "away_team": "Strasbourg",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "087": {
+    "home_team": "Monaco",
+    "away_team": "Bordeaux",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "088": {
+    "home_team": "Lille",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "089": {
+    "home_team": "Strasbourg",
+    "away_team": "Marseille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "090": {
+    "home_team": "Bordeaux",
+    "away_team": "Montpellier",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "091": {
+    "home_team": "Paris SG",
+    "away_team": "Rennes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "092": {
+    "home_team": "Brest",
+    "away_team": "Lille",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "093": {
+    "home_team": "Lens",
+    "away_team": "Reims",
+    "goals_team1": 4,
+    "goals_team2": 4,
+    "result": "D"
+  },
+  "094": {
+    "home_team": "Lorient",
+    "away_team": "Nantes",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "095": {
+    "home_team": "Metz",
+    "away_team": "Dijon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "096": {
+    "home_team": "Nimes",
+    "away_team": "Angers",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "097": {
+    "home_team": "Nice",
+    "away_team": "Monaco",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "098": {
+    "home_team": "Lyon",
+    "away_team": "St Etienne",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "099": {
+    "home_team": "Rennes",
+    "away_team": "Bordeaux",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "100": {
+    "home_team": "Monaco",
+    "away_team": "Paris SG",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "101": {
+    "home_team": "Brest",
+    "away_team": "St Etienne",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "102": {
+    "home_team": "Nantes",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "103": {
+    "home_team": "Dijon",
+    "away_team": "Lens",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "104": {
+    "home_team": "Montpellier",
+    "away_team": "Strasbourg",
+    "goals_team1": 4,
+    "goals_team2": 3,
+    "result": "H"
+  },
+  "105": {
+    "home_team": "Reims",
+    "away_team": "Nimes",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "106": {
+    "home_team": "Angers",
+    "away_team": "Lyon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "107": {
+    "home_team": "Lille",
+    "away_team": "Lorient",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "108": {
+    "home_team": "Lens",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "109": {
+    "home_team": "Strasbourg",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "110": {
+    "home_team": "Marseille",
+    "away_team": "Nantes",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "111": {
+    "home_team": "Paris SG",
+    "away_team": "Bordeaux",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "112": {
+    "home_team": "Lyon",
+    "away_team": "Reims",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "113": {
+    "home_team": "Lens",
+    "away_team": "Angers",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "114": {
+    "home_team": "Lorient",
+    "away_team": "Montpellier",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "115": {
+    "home_team": "Metz",
+    "away_team": "Brest",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "116": {
+    "home_team": "Monaco",
+    "away_team": "Nimes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "117": {
+    "home_team": "Nice",
+    "away_team": "Dijon",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "118": {
+    "home_team": "St Etienne",
+    "away_team": "Lille",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "119": {
+    "home_team": "Nimes",
+    "away_team": "Marseille",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "120": {
+    "home_team": "Rennes",
+    "away_team": "Lens",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "121": {
+    "home_team": "Montpellier",
+    "away_team": "Paris SG",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "122": {
+    "home_team": "Lille",
+    "away_team": "Monaco",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "123": {
+    "home_team": "Angers",
+    "away_team": "Lorient",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "124": {
+    "home_team": "Bordeaux",
+    "away_team": "Brest",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "125": {
+    "home_team": "Dijon",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "126": {
+    "home_team": "Nantes",
+    "away_team": "Strasbourg",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "127": {
+    "home_team": "Reims",
+    "away_team": "Nice",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "128": {
+    "home_team": "Metz",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "129": {
+    "home_team": "St Etienne",
+    "away_team": "Angers",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "130": {
+    "home_team": "Marseille",
+    "away_team": "Monaco",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "131": {
+    "home_team": "Lens",
+    "away_team": "Montpellier",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "132": {
+    "home_team": "Nice",
+    "away_team": "Rennes",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "133": {
+    "home_team": "Brest",
+    "away_team": "Reims",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "134": {
+    "home_team": "Lorient",
+    "away_team": "Nimes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "135": {
+    "home_team": "Nantes",
+    "away_team": "Dijon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "136": {
+    "home_team": "Strasbourg",
+    "away_team": "Metz",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "137": {
+    "home_team": "Lille",
+    "away_team": "Bordeaux",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "138": {
+    "home_team": "Paris SG",
+    "away_team": "Lyon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "139": {
+    "home_team": "Angers",
+    "away_team": "Strasbourg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "140": {
+    "home_team": "Dijon",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "141": {
+    "home_team": "Montpellier",
+    "away_team": "Metz",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "142": {
+    "home_team": "Nimes",
+    "away_team": "Nice",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "143": {
+    "home_team": "Reims",
+    "away_team": "Nantes",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "144": {
+    "home_team": "Bordeaux",
+    "away_team": "St Etienne",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "145": {
+    "home_team": "Lyon",
+    "away_team": "Brest",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "146": {
+    "home_team": "Monaco",
+    "away_team": "Lens",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "147": {
+    "home_team": "Paris SG",
+    "away_team": "Lorient",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "148": {
+    "home_team": "Rennes",
+    "away_team": "Marseille",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "149": {
+    "home_team": "Metz",
+    "away_team": "Lens",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "150": {
+    "home_team": "Marseille",
+    "away_team": "Reims",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "151": {
+    "home_team": "Nice",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "152": {
+    "home_team": "Brest",
+    "away_team": "Montpellier",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "153": {
+    "home_team": "Dijon",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "154": {
+    "home_team": "Nantes",
+    "away_team": "Angers",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "155": {
+    "home_team": "St Etienne",
+    "away_team": "Nimes",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "156": {
+    "home_team": "Strasbourg",
+    "away_team": "Bordeaux",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "157": {
+    "home_team": "Lorient",
+    "away_team": "Rennes",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "158": {
+    "home_team": "Lille",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "159": {
+    "home_team": "Bordeaux",
+    "away_team": "Reims",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "160": {
+    "home_team": "Lens",
+    "away_team": "Brest",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "161": {
+    "home_team": "Nice",
+    "away_team": "Lorient",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "162": {
+    "home_team": "Nimes",
+    "away_team": "Dijon",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "163": {
+    "home_team": "Rennes",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "164": {
+    "home_team": "Angers",
+    "away_team": "Marseille",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "165": {
+    "home_team": "Lyon",
+    "away_team": "Nantes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "166": {
+    "home_team": "Monaco",
+    "away_team": "St Etienne",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "167": {
+    "home_team": "Montpellier",
+    "away_team": "Lille",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "168": {
+    "home_team": "Paris SG",
+    "away_team": "Strasbourg",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "169": {
+    "home_team": "Brest",
+    "away_team": "Nice",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "170": {
+    "home_team": "Lorient",
+    "away_team": "Monaco",
+    "goals_team1": 2,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "171": {
+    "home_team": "Metz",
+    "away_team": "Bordeaux",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "172": {
+    "home_team": "Nantes",
+    "away_team": "Rennes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "173": {
+    "home_team": "Strasbourg",
+    "away_team": "Nimes",
+    "goals_team1": 5,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "174": {
+    "home_team": "Lille",
+    "away_team": "Angers",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "175": {
+    "home_team": "Lyon",
+    "away_team": "Lens",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "176": {
+    "home_team": "Marseille",
+    "away_team": "Montpellier",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "177": {
+    "home_team": "Reims",
+    "away_team": "Dijon",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "178": {
+    "home_team": "St Etienne",
+    "away_team": "Paris SG",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "179": {
+    "home_team": "Bordeaux",
+    "away_team": "Lorient",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "180": {
+    "home_team": "Dijon",
+    "away_team": "Marseille",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "181": {
+    "home_team": "Lens",
+    "away_team": "Strasbourg",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "182": {
+    "home_team": "Metz",
+    "away_team": "Nice",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "183": {
+    "home_team": "Monaco",
+    "away_team": "Angers",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "184": {
+    "home_team": "Montpellier",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "185": {
+    "home_team": "Nimes",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "186": {
+    "home_team": "Paris SG",
+    "away_team": "Brest",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "187": {
+    "home_team": "Reims",
+    "away_team": "St Etienne",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "188": {
+    "home_team": "Rennes",
+    "away_team": "Lyon",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "189": {
+    "home_team": "Montpellier",
+    "away_team": "Monaco",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "190": {
+    "home_team": "Marseille",
+    "away_team": "Nimes",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "191": {
+    "home_team": "Angers",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "192": {
+    "home_team": "Brest",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "193": {
+    "home_team": "Nantes",
+    "away_team": "Lens",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "194": {
+    "home_team": "Nice",
+    "away_team": "Bordeaux",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "195": {
+    "home_team": "Strasbourg",
+    "away_team": "St Etienne",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "196": {
+    "home_team": "Lille",
+    "away_team": "Reims",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "197": {
+    "home_team": "Lyon",
+    "away_team": "Metz",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "198": {
+    "home_team": "Marseille",
+    "away_team": "Lens",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "199": {
+    "home_team": "Paris SG",
+    "away_team": "Montpellier",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "200": {
+    "home_team": "Lens",
+    "away_team": "Nice",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "201": {
+    "home_team": "Monaco",
+    "away_team": "Marseille",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "202": {
+    "home_team": "Bordeaux",
+    "away_team": "Angers",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "203": {
+    "home_team": "Dijon",
+    "away_team": "Strasbourg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "204": {
+    "home_team": "Metz",
+    "away_team": "Nantes",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "205": {
+    "home_team": "Reims",
+    "away_team": "Brest",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "206": {
+    "home_team": "Rennes",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "207": {
+    "home_team": "St Etienne",
+    "away_team": "Lyon",
+    "goals_team1": 0,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "208": {
+    "home_team": "Lorient",
+    "away_team": "Dijon",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "209": {
+    "home_team": "Lyon",
+    "away_team": "Bordeaux",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "210": {
+    "home_team": "Montpellier",
+    "away_team": "Lens",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "211": {
+    "home_team": "Nice",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "212": {
+    "home_team": "Angers",
+    "away_team": "Nimes",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "213": {
+    "home_team": "Brest",
+    "away_team": "Metz",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "214": {
+    "home_team": "Lorient",
+    "away_team": "Paris SG",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "215": {
+    "home_team": "Strasbourg",
+    "away_team": "Reims",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "216": {
+    "home_team": "Lille",
+    "away_team": "Dijon",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "217": {
+    "home_team": "Nantes",
+    "away_team": "Monaco",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "218": {
+    "home_team": "Bordeaux",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "219": {
+    "home_team": "Metz",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "220": {
+    "home_team": "Reims",
+    "away_team": "Angers",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "221": {
+    "home_team": "Rennes",
+    "away_team": "Lorient",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "222": {
+    "home_team": "Strasbourg",
+    "away_team": "Brest",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "223": {
+    "home_team": "Dijon",
+    "away_team": "Lyon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "224": {
+    "home_team": "Lens",
+    "away_team": "Marseille",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "225": {
+    "home_team": "Monaco",
+    "away_team": "Nice",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "226": {
+    "home_team": "Paris SG",
+    "away_team": "Nimes",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "227": {
+    "home_team": "St Etienne",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "228": {
+    "home_team": "Lorient",
+    "away_team": "Reims",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "229": {
+    "home_team": "Lyon",
+    "away_team": "Strasbourg",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "230": {
+    "home_team": "Lens",
+    "away_team": "Rennes",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "231": {
+    "home_team": "Brest",
+    "away_team": "Bordeaux",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "232": {
+    "home_team": "Montpellier",
+    "away_team": "Dijon",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "233": {
+    "home_team": "Nice",
+    "away_team": "Angers",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "234": {
+    "home_team": "Nimes",
+    "away_team": "Monaco",
+    "goals_team1": 3,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "235": {
+    "home_team": "St Etienne",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "236": {
+    "home_team": "Nantes",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "237": {
+    "home_team": "Marseille",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "238": {
+    "home_team": "Paris SG",
+    "away_team": "Nice",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "239": {
+    "home_team": "Reims",
+    "away_team": "Lens",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "240": {
+    "home_team": "Lyon",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "241": {
+    "home_team": "Monaco",
+    "away_team": "Lorient",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "242": {
+    "home_team": "Angers",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "243": {
+    "home_team": "Dijon",
+    "away_team": "Nimes",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "244": {
+    "home_team": "Metz",
+    "away_team": "Strasbourg",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "245": {
+    "home_team": "Rennes",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "246": {
+    "home_team": "Lille",
+    "away_team": "Brest",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "247": {
+    "home_team": "Bordeaux",
+    "away_team": "Marseille",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "248": {
+    "home_team": "Marseille",
+    "away_team": "Nice",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "249": {
+    "home_team": "Brest",
+    "away_team": "Lyon",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "250": {
+    "home_team": "St Etienne",
+    "away_team": "Reims",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "251": {
+    "home_team": "Nantes",
+    "away_team": "Marseille",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "252": {
+    "home_team": "Montpellier",
+    "away_team": "Rennes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "253": {
+    "home_team": "Lens",
+    "away_team": "Dijon",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "254": {
+    "home_team": "Nice",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "255": {
+    "home_team": "Nimes",
+    "away_team": "Bordeaux",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "256": {
+    "home_team": "Strasbourg",
+    "away_team": "Angers",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "257": {
+    "home_team": "Lorient",
+    "away_team": "Lille",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "258": {
+    "home_team": "Paris SG",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "259": {
+    "home_team": "Nimes",
+    "away_team": "Lorient",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "260": {
+    "home_team": "Rennes",
+    "away_team": "Nice",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "261": {
+    "home_team": "Bordeaux",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "262": {
+    "home_team": "Dijon",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "263": {
+    "home_team": "Monaco",
+    "away_team": "Brest",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "264": {
+    "home_team": "Angers",
+    "away_team": "Lens",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "265": {
+    "home_team": "Lorient",
+    "away_team": "St Etienne",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "266": {
+    "home_team": "Nimes",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "267": {
+    "home_team": "Reims",
+    "away_team": "Montpellier",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "268": {
+    "home_team": "Lille",
+    "away_team": "Strasbourg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "269": {
+    "home_team": "Marseille",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "270": {
+    "home_team": "Brest",
+    "away_team": "Dijon",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "271": {
+    "home_team": "Lyon",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "272": {
+    "home_team": "Metz",
+    "away_team": "Angers",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "273": {
+    "home_team": "Nice",
+    "away_team": "Nimes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "274": {
+    "home_team": "St Etienne",
+    "away_team": "Lens",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "275": {
+    "home_team": "Bordeaux",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "276": {
+    "home_team": "Lille",
+    "away_team": "Marseille",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "277": {
+    "home_team": "Montpellier",
+    "away_team": "Lorient",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "278": {
+    "home_team": "Nantes",
+    "away_team": "Reims",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "279": {
+    "home_team": "Strasbourg",
+    "away_team": "Monaco",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "280": {
+    "home_team": "Marseille",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "281": {
+    "home_team": "Reims",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "282": {
+    "home_team": "Angers",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "283": {
+    "home_team": "Marseille",
+    "away_team": "Brest",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "284": {
+    "home_team": "Nimes",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "285": {
+    "home_team": "Dijon",
+    "away_team": "Bordeaux",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "286": {
+    "home_team": "Lens",
+    "away_team": "Metz",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "287": {
+    "home_team": "Lorient",
+    "away_team": "Nice",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "288": {
+    "home_team": "Rennes",
+    "away_team": "Strasbourg",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "289": {
+    "home_team": "Monaco",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "290": {
+    "home_team": "Paris SG",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "291": {
+    "home_team": "St Etienne",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "292": {
+    "home_team": "Metz",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "293": {
+    "home_team": "Nice",
+    "away_team": "Marseille",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "294": {
+    "home_team": "Strasbourg",
+    "away_team": "Lens",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "295": {
+    "home_team": "Brest",
+    "away_team": "Angers",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "296": {
+    "home_team": "Dijon",
+    "away_team": "Reims",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "297": {
+    "home_team": "Montpellier",
+    "away_team": "Bordeaux",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "298": {
+    "home_team": "Nantes",
+    "away_team": "Lorient",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "299": {
+    "home_team": "Lille",
+    "away_team": "Nimes",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "300": {
+    "home_team": "Lyon",
+    "away_team": "Paris SG",
+    "goals_team1": 2,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "301": {
+    "home_team": "Monaco",
+    "away_team": "Metz",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "302": {
+    "home_team": "Paris SG",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "303": {
+    "home_team": "Lens",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "304": {
+    "home_team": "Angers",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "305": {
+    "home_team": "Bordeaux",
+    "away_team": "Strasbourg",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "306": {
+    "home_team": "Lorient",
+    "away_team": "Brest",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "307": {
+    "home_team": "Nantes",
+    "away_team": "Nice",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "308": {
+    "home_team": "Reims",
+    "away_team": "Rennes",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "309": {
+    "home_team": "Nimes",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "310": {
+    "home_team": "Marseille",
+    "away_team": "Dijon",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "311": {
+    "home_team": "Metz",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "312": {
+    "home_team": "Strasbourg",
+    "away_team": "Paris SG",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "313": {
+    "home_team": "Montpellier",
+    "away_team": "Marseille",
+    "goals_team1": 3,
+    "goals_team2": 3,
+    "result": "D"
+  },
+  "314": {
+    "home_team": "Rennes",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "315": {
+    "home_team": "Brest",
+    "away_team": "Nimes",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "316": {
+    "home_team": "Lens",
+    "away_team": "Lorient",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "317": {
+    "home_team": "Nice",
+    "away_team": "Reims",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "318": {
+    "home_team": "St Etienne",
+    "away_team": "Bordeaux",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "319": {
+    "home_team": "Monaco",
+    "away_team": "Dijon",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "320": {
+    "home_team": "Lyon",
+    "away_team": "Angers",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "321": {
+    "home_team": "Lille",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "322": {
+    "home_team": "Angers",
+    "away_team": "Rennes",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "323": {
+    "home_team": "Marseille",
+    "away_team": "Lorient",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "324": {
+    "home_team": "Paris SG",
+    "away_team": "St Etienne",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "325": {
+    "home_team": "Brest",
+    "away_team": "Lens",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "326": {
+    "home_team": "Dijon",
+    "away_team": "Nice",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "327": {
+    "home_team": "Nimes",
+    "away_team": "Strasbourg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "328": {
+    "home_team": "Reims",
+    "away_team": "Metz",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "329": {
+    "home_team": "Bordeaux",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "330": {
+    "home_team": "Nantes",
+    "away_team": "Lyon",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "331": {
+    "home_team": "Reims",
+    "away_team": "Marseille",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "332": {
+    "home_team": "St Etienne",
+    "away_team": "Brest",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "333": {
+    "home_team": "Metz",
+    "away_team": "Paris SG",
+    "goals_team1": 1,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "334": {
+    "home_team": "Nice",
+    "away_team": "Montpellier",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "335": {
+    "home_team": "Lens",
+    "away_team": "Nimes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "336": {
+    "home_team": "Lorient",
+    "away_team": "Bordeaux",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "337": {
+    "home_team": "Rennes",
+    "away_team": "Dijon",
+    "goals_team1": 5,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "338": {
+    "home_team": "Strasbourg",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "339": {
+    "home_team": "Angers",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "340": {
+    "home_team": "Lyon",
+    "away_team": "Lille",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "341": {
+    "home_team": "Marseille",
+    "away_team": "Strasbourg",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "342": {
+    "home_team": "Paris SG",
+    "away_team": "Lens",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "343": {
+    "home_team": "Lille",
+    "away_team": "Nice",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "344": {
+    "home_team": "Bordeaux",
+    "away_team": "Rennes",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "345": {
+    "home_team": "Brest",
+    "away_team": "Nantes",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "346": {
+    "home_team": "Dijon",
+    "away_team": "Metz",
+    "goals_team1": 1,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "347": {
+    "home_team": "Lorient",
+    "away_team": "Angers",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "348": {
+    "home_team": "Nimes",
+    "away_team": "Reims",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "349": {
+    "home_team": "Montpellier",
+    "away_team": "St Etienne",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "350": {
+    "home_team": "Monaco",
+    "away_team": "Lyon",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "351": {
+    "home_team": "Lens",
+    "away_team": "Lille",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "352": {
+    "home_team": "Nantes",
+    "away_team": "Bordeaux",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "353": {
+    "home_team": "Lyon",
+    "away_team": "Lorient",
+    "goals_team1": 4,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "354": {
+    "home_team": "St Etienne",
+    "away_team": "Marseille",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "355": {
+    "home_team": "Angers",
+    "away_team": "Dijon",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "356": {
+    "home_team": "Metz",
+    "away_team": "Nimes",
+    "goals_team1": 0,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "357": {
+    "home_team": "Nice",
+    "away_team": "Brest",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "358": {
+    "home_team": "Strasbourg",
+    "away_team": "Montpellier",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "359": {
+    "home_team": "Reims",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "360": {
+    "home_team": "Rennes",
+    "away_team": "Paris SG",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "361": {
+    "home_team": "Bordeaux",
+    "away_team": "Lens",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "362": {
+    "home_team": "Dijon",
+    "away_team": "Nantes",
+    "goals_team1": 0,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "363": {
+    "home_team": "Lille",
+    "away_team": "St Etienne",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "364": {
+    "home_team": "Lorient",
+    "away_team": "Metz",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "365": {
+    "home_team": "Marseille",
+    "away_team": "Angers",
+    "goals_team1": 3,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "366": {
+    "home_team": "Monaco",
+    "away_team": "Rennes",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "367": {
+    "home_team": "Montpellier",
+    "away_team": "Brest",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "368": {
+    "home_team": "Nice",
+    "away_team": "Strasbourg",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "369": {
+    "home_team": "Nimes",
+    "away_team": "Lyon",
+    "goals_team1": 2,
+    "goals_team2": 5,
+    "result": "A"
+  },
+  "370": {
+    "home_team": "Paris SG",
+    "away_team": "Reims",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "371": {
+    "home_team": "Angers",
+    "away_team": "Lille",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "372": {
+    "home_team": "Brest",
+    "away_team": "Paris SG",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "373": {
+    "home_team": "Lens",
+    "away_team": "Monaco",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "374": {
+    "home_team": "Lyon",
+    "away_team": "Nice",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "375": {
+    "home_team": "Metz",
+    "away_team": "Marseille",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "376": {
+    "home_team": "Nantes",
+    "away_team": "Montpellier",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "377": {
+    "home_team": "Reims",
+    "away_team": "Bordeaux",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "378": {
+    "home_team": "Rennes",
+    "away_team": "Nimes",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "379": {
+    "home_team": "St Etienne",
+    "away_team": "Dijon",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "380": {
+    "home_team": "Strasbourg",
+    "away_team": "Lorient",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  }
+}

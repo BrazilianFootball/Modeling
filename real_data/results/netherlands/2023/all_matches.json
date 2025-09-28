@@ -7,7 +7,7 @@
     "result": "A"
   },
   "002": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Utrecht",
     "goals_team1": 2,
     "goals_team2": 0,
@@ -15,7 +15,7 @@
   },
   "003": {
     "home_team": "Heerenveen",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
@@ -29,31 +29,31 @@
   },
   "005": {
     "home_team": "Zwolle",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
   "006": {
-    "home_team": "NEC",
+    "home_team": "Nijmegen",
     "away_team": "Excelsior",
     "goals_team1": 3,
     "goals_team2": 4,
     "result": "A"
   },
   "007": {
-    "home_team": "Feyenoord",
-    "away_team": "Sittard",
-    "goals_team1": 0,
-    "goals_team2": 0,
-    "result": "D"
-  },
-  "008": {
-    "home_team": "AZ",
-    "away_team": "Go Ahead",
+    "home_team": "AZ Alkmaar",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 5,
     "goals_team2": 1,
     "result": "H"
+  },
+  "008": {
+    "home_team": "Feyenoord",
+    "away_team": "For Sittard",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
   },
   "009": {
     "home_team": "Almere City",
@@ -64,7 +64,7 @@
   },
   "010": {
     "home_team": "Heracles",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
@@ -78,20 +78,20 @@
   },
   "012": {
     "home_team": "Vitesse",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
   "013": {
-    "home_team": "Sittard",
+    "home_team": "For Sittard",
     "away_team": "Almere City",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
   },
   "014": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Volendam",
     "goals_team1": 4,
     "goals_team2": 1,
@@ -105,7 +105,7 @@
     "result": "A"
   },
   "016": {
-    "home_team": "Sparta",
+    "home_team": "Sparta Rotterdam",
     "away_team": "Feyenoord",
     "goals_team1": 2,
     "goals_team2": 2,
@@ -119,22 +119,22 @@
     "result": "H"
   },
   "018": {
-    "home_team": "RKC",
-    "away_team": "AZ",
+    "home_team": "Waalwijk",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
   "019": {
-    "home_team": "NEC",
-    "away_team": "RKC",
+    "home_team": "Nijmegen",
+    "away_team": "Waalwijk",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
   "020": {
     "home_team": "Excelsior",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
@@ -155,231 +155,231 @@
   },
   "023": {
     "home_team": "Heerenveen",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
   "024": {
-    "home_team": "PSV",
-    "away_team": "Go Ahead",
-    "goals_team1": 3,
-    "goals_team2": 0,
-    "result": "H"
+    "home_team": "Sparta Rotterdam",
+    "away_team": "Nijmegen",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
   },
   "025": {
-    "home_team": "Twente",
-    "away_team": "Vitesse",
-    "goals_team1": 1,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "026": {
-    "home_team": "AZ",
-    "away_team": "Heracles",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "027": {
-    "home_team": "Ajax",
-    "away_team": "Volendam",
-    "goals_team1": 2,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "028": {
-    "home_team": "Sparta",
-    "away_team": "NEC",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "029": {
     "home_team": "Almere City",
     "away_team": "Zwolle",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
-  "030": {
-    "home_team": "Go Ahead",
+  "026": {
+    "home_team": "Go Ahead Eagles",
     "away_team": "Heerenveen",
     "goals_team1": 3,
     "goals_team2": 2,
     "result": "H"
   },
-  "031": {
-    "home_team": "RKC",
-    "away_team": "PSV",
+  "027": {
+    "home_team": "Waalwijk",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
   },
-  "032": {
+  "028": {
     "home_team": "Heracles",
     "away_team": "Excelsior",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
-  "033": {
+  "029": {
     "home_team": "Utrecht",
     "away_team": "Feyenoord",
     "goals_team1": 1,
     "goals_team2": 5,
     "result": "A"
   },
-  "034": {
-    "home_team": "Sittard",
+  "030": {
+    "home_team": "For Sittard",
     "away_team": "Ajax",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
-  "035": {
+  "031": {
     "home_team": "Volendam",
     "away_team": "Twente",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
-  "036": {
+  "032": {
     "home_team": "Vitesse",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
-  "037": {
+  "033": {
     "home_team": "Feyenoord",
     "away_team": "Heerenveen",
     "goals_team1": 6,
     "goals_team2": 1,
     "result": "H"
   },
-  "038": {
+  "034": {
     "home_team": "Vitesse",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
-  "039": {
-    "home_team": "PSV",
-    "away_team": "NEC",
-    "goals_team1": 4,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "040": {
-    "home_team": "Sittard",
+  "035": {
+    "home_team": "For Sittard",
     "away_team": "Volendam",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
-  "041": {
+  "036": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Nijmegen",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "037": {
     "home_team": "Heracles",
     "away_team": "Utrecht",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
-  "042": {
+  "038": {
     "home_team": "Zwolle",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "043": {
-    "home_team": "Twente",
-    "away_team": "Ajax",
-    "goals_team1": 3,
-    "goals_team2": 1,
-    "result": "H"
-  },
-  "044": {
+  "039": {
     "home_team": "Excelsior",
     "away_team": "Almere City",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
-  "045": {
-    "home_team": "AZ",
-    "away_team": "Sparta",
+  "040": {
+    "home_team": "Twente",
+    "away_team": "Ajax",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "041": {
+    "home_team": "AZ Alkmaar",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
   },
-  "046": {
-    "home_team": "Go Ahead",
-    "away_team": "Sittard",
+  "042": {
+    "home_team": "Go Ahead Eagles",
+    "away_team": "For Sittard",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
-  "047": {
+  "043": {
     "home_team": "Volendam",
     "away_team": "Heracles",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
   },
-  "048": {
-    "home_team": "NEC",
+  "044": {
+    "home_team": "Nijmegen",
     "away_team": "Utrecht",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
-  "049": {
+  "045": {
     "home_team": "Almere City",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
   },
-  "050": {
+  "046": {
     "home_team": "Heerenveen",
     "away_team": "Excelsior",
     "goals_team1": 0,
     "goals_team2": 3,
     "result": "A"
   },
-  "051": {
-    "home_team": "Sparta",
+  "047": {
+    "home_team": "Sparta Rotterdam",
     "away_team": "Vitesse",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
-  "052": {
-    "home_team": "RKC",
+  "048": {
+    "home_team": "Waalwijk",
     "away_team": "Twente",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
-  "053": {
+  "049": {
     "home_team": "Zwolle",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 0,
     "goals_team2": 3,
     "result": "A"
   },
-  "054": {
+  "050": {
     "home_team": "Ajax",
     "away_team": "Feyenoord",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
   },
-  "055": {
+  "051": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Go Ahead Eagles",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "052": {
+    "home_team": "Twente",
+    "away_team": "Vitesse",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "053": {
+    "home_team": "AZ Alkmaar",
+    "away_team": "Heracles",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "054": {
     "home_team": "Feyenoord",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "055": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Volendam",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
@@ -392,497 +392,497 @@
     "result": "A"
   },
   "057": {
-    "home_team": "PSV",
-    "away_team": "Volendam",
-    "goals_team1": 3,
-    "goals_team2": 1,
-    "result": "H"
-  },
-  "058": {
     "home_team": "Twente",
     "away_team": "Heerenveen",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
-  "059": {
-    "home_team": "NEC",
+  "058": {
+    "home_team": "Nijmegen",
     "away_team": "Vitesse",
     "goals_team1": 1,
-    "goals_team2": 2,
+    "goals_team2": 3,
     "result": "A"
   },
-  "060": {
+  "059": {
     "home_team": "Excelsior",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
+    "goals_team1": 2,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "060": {
+    "home_team": "Heracles",
+    "away_team": "Zwolle",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
   },
   "061": {
-    "home_team": "Heracles",
-    "away_team": "Zwolle",
-    "goals_team1": 2,
-    "goals_team2": 1,
-    "result": "H"
-  },
-  "062": {
-    "home_team": "AZ",
-    "away_team": "Sittard",
+    "home_team": "AZ Alkmaar",
+    "away_team": "For Sittard",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
-  "063": {
-    "home_team": "RKC",
-    "away_team": "Ajax",
-    "goals_team1": 2,
-    "goals_team2": 3,
-    "result": "A"
-  },
-  "064": {
+  "062": {
     "home_team": "Volendam",
     "away_team": "Utrecht",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "063": {
+    "home_team": "Heerenveen",
+    "away_team": "Nijmegen",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "064": {
+    "home_team": "Almere City",
+    "away_team": "Waalwijk",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
   "065": {
-    "home_team": "Heerenveen",
-    "away_team": "NEC",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "066": {
-    "home_team": "Almere City",
-    "away_team": "RKC",
-    "goals_team1": 1,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "067": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Heracles",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
-  "068": {
+  "066": {
     "home_team": "Vitesse",
     "away_team": "Excelsior",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
-  "069": {
+  "067": {
     "home_team": "Zwolle",
     "away_team": "Feyenoord",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
-  "070": {
-    "home_team": "Sittard",
+  "068": {
+    "home_team": "Ajax",
+    "away_team": "AZ Alkmaar",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "069": {
+    "home_team": "For Sittard",
     "away_team": "Twente",
     "goals_team1": 0,
     "goals_team2": 3,
     "result": "A"
   },
-  "071": {
-    "home_team": "Ajax",
-    "away_team": "AZ",
-    "goals_team1": 1,
-    "goals_team2": 2,
-    "result": "A"
-  },
-  "072": {
-    "home_team": "Sparta",
-    "away_team": "PSV",
+  "070": {
+    "home_team": "Sparta Rotterdam",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
   },
-  "073": {
-    "home_team": "RKC",
+  "071": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "For Sittard",
+    "goals_team1": 3,
+    "goals_team2": 1,
+    "result": "H"
+  },
+  "072": {
+    "home_team": "Waalwijk",
     "away_team": "Volendam",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
   },
-  "074": {
-    "home_team": "PSV",
-    "away_team": "Sittard",
-    "goals_team1": 3,
-    "goals_team2": 1,
-    "result": "H"
-  },
-  "075": {
-    "home_team": "NEC",
+  "073": {
+    "home_team": "Nijmegen",
     "away_team": "Almere City",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "076": {
+  "074": {
+    "home_team": "AZ Alkmaar",
+    "away_team": "Heerenveen",
+    "goals_team1": 3,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "075": {
     "home_team": "Feyenoord",
     "away_team": "Vitesse",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
-  "077": {
-    "home_team": "AZ",
-    "away_team": "Heerenveen",
-    "goals_team1": 3,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "078": {
+  "076": {
     "home_team": "Utrecht",
     "away_team": "Ajax",
     "goals_team1": 4,
     "goals_team2": 3,
     "result": "H"
   },
-  "079": {
-    "home_team": "Heracles",
-    "away_team": "Twente",
-    "goals_team1": 2,
-    "goals_team2": 2,
-    "result": "D"
-  },
-  "080": {
+  "077": {
     "home_team": "Excelsior",
     "away_team": "Zwolle",
     "goals_team1": 2,
     "goals_team2": 4,
     "result": "A"
   },
-  "081": {
-    "home_team": "Go Ahead",
-    "away_team": "Sparta",
+  "078": {
+    "home_team": "Heracles",
+    "away_team": "Twente",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "079": {
+    "home_team": "Go Ahead Eagles",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
-  "082": {
+  "080": {
     "home_team": "Vitesse",
     "away_team": "Zwolle",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "083": {
+  "081": {
     "home_team": "Heerenveen",
     "away_team": "Heracles",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
-  "084": {
+  "082": {
     "home_team": "Almere City",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
+  },
+  "083": {
+    "home_team": "Sparta Rotterdam",
+    "away_team": "Waalwijk",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "084": {
+    "home_team": "For Sittard",
+    "away_team": "Utrecht",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
   "085": {
-    "home_team": "Sparta",
-    "away_team": "RKC",
-    "goals_team1": 2,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "086": {
-    "home_team": "Sittard",
-    "away_team": "Utrecht",
-    "goals_team1": 0,
-    "goals_team2": 0,
-    "result": "D"
-  },
-  "087": {
     "home_team": "Twente",
     "away_team": "Feyenoord",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
   },
-  "088": {
+  "086": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Ajax",
+    "goals_team1": 5,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "087": {
     "home_team": "Volendam",
     "away_team": "Excelsior",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
-  "089": {
-    "home_team": "PSV",
-    "away_team": "Ajax",
-    "goals_team1": 5,
-    "goals_team2": 2,
+  "088": {
+    "home_team": "Ajax",
+    "away_team": "Volendam",
+    "goals_team1": 2,
+    "goals_team2": 0,
     "result": "H"
   },
-  "090": {
-    "home_team": "AZ",
-    "away_team": "NEC",
-    "goals_team1": 1,
-    "goals_team2": 2,
-    "result": "A"
-  },
-  "091": {
+  "089": {
     "home_team": "Heracles",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 6,
     "result": "A"
   },
-  "092": {
-    "home_team": "RKC",
+  "090": {
+    "home_team": "Excelsior",
+    "away_team": "AZ Alkmaar",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
+  "091": {
+    "home_team": "Waalwijk",
     "away_team": "Feyenoord",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
-  "093": {
-    "home_team": "Excelsior",
-    "away_team": "AZ",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "094": {
-    "home_team": "Go Ahead",
+  "092": {
+    "home_team": "Go Ahead Eagles",
     "away_team": "Vitesse",
     "goals_team1": 5,
     "goals_team2": 1,
     "result": "H"
   },
-  "095": {
+  "093": {
     "home_team": "Utrecht",
     "away_team": "Twente",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "096": {
-    "home_team": "Zwolle",
-    "away_team": "Sittard",
-    "goals_team1": 2,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "097": {
-    "home_team": "NEC",
+  "094": {
+    "home_team": "Nijmegen",
     "away_team": "Volendam",
     "goals_team1": 3,
     "goals_team2": 3,
     "result": "D"
   },
-  "098": {
+  "095": {
+    "home_team": "Zwolle",
+    "away_team": "For Sittard",
+    "goals_team1": 2,
+    "goals_team2": 0,
+    "result": "H"
+  },
+  "096": {
     "home_team": "Ajax",
     "away_team": "Heerenveen",
     "goals_team1": 4,
     "goals_team2": 1,
     "result": "H"
   },
-  "099": {
-    "home_team": "Sparta",
+  "097": {
+    "home_team": "Sparta Rotterdam",
     "away_team": "Almere City",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
-  "100": {
-    "home_team": "Sittard",
+  "098": {
+    "home_team": "For Sittard",
     "away_team": "Heracles",
     "goals_team1": 4,
     "goals_team2": 1,
     "result": "H"
   },
-  "101": {
-    "home_team": "RKC",
-    "away_team": "Go Ahead",
+  "099": {
+    "home_team": "Waalwijk",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 0,
     "goals_team2": 1,
     "result": "A"
   },
-  "102": {
+  "100": {
     "home_team": "Twente",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 3,
     "goals_team2": 3,
     "result": "D"
   },
-  "103": {
+  "101": {
     "home_team": "Vitesse",
     "away_team": "Heerenveen",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
-  "104": {
-    "home_team": "PSV",
+  "102": {
+    "home_team": "PSV Eindhoven",
     "away_team": "Zwolle",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
-  "105": {
-    "home_team": "Volendam",
-    "away_team": "Sparta",
-    "goals_team1": 1,
-    "goals_team2": 4,
-    "result": "A"
-  },
-  "106": {
+  "103": {
     "home_team": "Almere City",
     "away_team": "Ajax",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
   },
-  "107": {
+  "104": {
+    "home_team": "Volendam",
+    "away_team": "Sparta Rotterdam",
+    "goals_team1": 1,
+    "goals_team2": 4,
+    "result": "A"
+  },
+  "105": {
     "home_team": "Feyenoord",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
-  "108": {
+  "106": {
     "home_team": "Utrecht",
     "away_team": "Excelsior",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
   },
-  "109": {
+  "107": {
     "home_team": "Excelsior",
     "away_team": "Feyenoord",
     "goals_team1": 2,
     "goals_team2": 4,
     "result": "A"
   },
-  "110": {
-    "home_team": "Twente",
-    "away_team": "PSV",
-    "goals_team1": 0,
-    "goals_team2": 3,
-    "result": "A"
-  },
-  "111": {
+  "108": {
     "home_team": "Heerenveen",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
-  "112": {
-    "home_team": "Zwolle",
-    "away_team": "RKC",
-    "goals_team1": 1,
-    "goals_team2": 2,
+  "109": {
+    "home_team": "Twente",
+    "away_team": "PSV Eindhoven",
+    "goals_team1": 0,
+    "goals_team2": 3,
     "result": "A"
   },
-  "113": {
+  "110": {
     "home_team": "Ajax",
     "away_team": "Vitesse",
     "goals_team1": 5,
     "goals_team2": 0,
     "result": "H"
   },
-  "114": {
+  "111": {
+    "home_team": "Zwolle",
+    "away_team": "Waalwijk",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "112": {
     "home_team": "Almere City",
     "away_team": "Heracles",
     "goals_team1": 0,
     "goals_team2": 5,
     "result": "A"
   },
-  "115": {
-    "home_team": "AZ",
+  "113": {
+    "home_team": "AZ Alkmaar",
     "away_team": "Volendam",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
-  "116": {
-    "home_team": "NEC",
-    "away_team": "Go Ahead",
+  "114": {
+    "home_team": "Nijmegen",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "117": {
-    "home_team": "Sparta",
+  "115": {
+    "home_team": "Sparta Rotterdam",
     "away_team": "Utrecht",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
-  "118": {
+  "116": {
     "home_team": "Heerenveen",
     "away_team": "Almere City",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
-  "119": {
+  "117": {
     "home_team": "Volendam",
     "away_team": "Zwolle",
     "goals_team1": 0,
     "goals_team2": 5,
     "result": "A"
   },
-  "120": {
-    "home_team": "Sittard",
+  "118": {
+    "home_team": "For Sittard",
     "away_team": "Vitesse",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
-  "121": {
-    "home_team": "RKC",
+  "119": {
+    "home_team": "Waalwijk",
     "away_team": "Excelsior",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
   },
-  "122": {
+  "120": {
     "home_team": "Heracles",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 0,
     "goals_team2": 1,
     "result": "A"
   },
-  "123": {
+  "121": {
     "home_team": "Feyenoord",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
-  "124": {
-    "home_team": "NEC",
-    "away_team": "Ajax",
-    "goals_team1": 1,
-    "goals_team2": 2,
-    "result": "A"
-  },
-  "125": {
-    "home_team": "Go Ahead",
+  "122": {
+    "home_team": "Go Ahead Eagles",
     "away_team": "Twente",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
-  "126": {
+  "123": {
+    "home_team": "Nijmegen",
+    "away_team": "Ajax",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "124": {
     "home_team": "Utrecht",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
+  "125": {
+    "home_team": "AZ Alkmaar",
+    "away_team": "Nijmegen",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "126": {
+    "home_team": "Waalwijk",
+    "away_team": "Ajax",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
   "127": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Heerenveen",
     "goals_team1": 2,
     "goals_team2": 0,
@@ -904,35 +904,35 @@
   },
   "130": {
     "home_team": "Ajax",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
   },
   "131": {
     "home_team": "Zwolle",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
   "132": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Almere City",
     "goals_team1": 4,
     "goals_team2": 1,
     "result": "H"
   },
   "133": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Utrecht",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
   "134": {
-    "home_team": "Sittard",
-    "away_team": "RKC",
+    "home_team": "For Sittard",
+    "away_team": "Waalwijk",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
@@ -945,22 +945,22 @@
     "result": "H"
   },
   "136": {
-    "home_team": "NEC",
-    "away_team": "Sittard",
+    "home_team": "Nijmegen",
+    "away_team": "For Sittard",
     "goals_team1": 4,
     "goals_team2": 1,
     "result": "H"
   },
   "137": {
     "home_team": "Utrecht",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "138": {
     "home_team": "Excelsior",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
@@ -980,18 +980,18 @@
     "result": "H"
   },
   "141": {
-    "home_team": "Sparta",
-    "away_team": "Twente",
-    "goals_team1": 2,
-    "goals_team2": 2,
-    "result": "D"
-  },
-  "142": {
     "home_team": "Heracles",
     "away_team": "Feyenoord",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
+  },
+  "142": {
+    "home_team": "Sparta Rotterdam",
+    "away_team": "Twente",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
   },
   "143": {
     "home_team": "Ajax",
@@ -1001,29 +1001,29 @@
     "result": "D"
   },
   "144": {
-    "home_team": "AZ",
-    "away_team": "PSV",
+    "home_team": "AZ Alkmaar",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
   },
   "145": {
-    "home_team": "RKC",
+    "home_team": "Waalwijk",
     "away_team": "Heracles",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
   "146": {
-    "home_team": "Sittard",
-    "away_team": "Sparta",
+    "home_team": "For Sittard",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
   "147": {
     "home_team": "Twente",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
@@ -1036,7 +1036,7 @@
     "result": "D"
   },
   "149": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Excelsior",
     "goals_team1": 3,
     "goals_team2": 1,
@@ -1050,7 +1050,7 @@
     "result": "A"
   },
   "151": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Ajax",
     "goals_team1": 2,
     "goals_team2": 3,
@@ -1065,7 +1065,7 @@
   },
   "153": {
     "home_team": "Feyenoord",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
@@ -1078,7 +1078,7 @@
     "result": "H"
   },
   "155": {
-    "home_team": "NEC",
+    "home_team": "Nijmegen",
     "away_team": "Twente",
     "goals_team1": 1,
     "goals_team2": 0,
@@ -1092,7 +1092,7 @@
     "result": "D"
   },
   "157": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Zwolle",
     "goals_team1": 2,
     "goals_team2": 2,
@@ -1100,35 +1100,35 @@
   },
   "158": {
     "home_team": "Utrecht",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "159": {
+    "home_team": "Sparta Rotterdam",
+    "away_team": "Go Ahead Eagles",
+    "goals_team1": 0,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "160": {
     "home_team": "Vitesse",
     "away_team": "Feyenoord",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
-  "160": {
-    "home_team": "Sparta",
-    "away_team": "Go Ahead",
-    "goals_team1": 0,
-    "goals_team2": 2,
-    "result": "A"
-  },
   "161": {
     "home_team": "Ajax",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 4,
     "goals_team2": 1,
     "result": "H"
   },
   "162": {
     "home_team": "Almere City",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
@@ -1141,18 +1141,18 @@
     "result": "H"
   },
   "164": {
-    "home_team": "RKC",
-    "away_team": "Sparta",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "165": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Almere City",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
+  },
+  "165": {
+    "home_team": "Waalwijk",
+    "away_team": "Sparta Rotterdam",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
   },
   "166": {
     "home_team": "Excelsior",
@@ -1170,28 +1170,28 @@
   },
   "168": {
     "home_team": "Heerenveen",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
   },
   "169": {
-    "home_team": "Go Ahead",
-    "away_team": "NEC",
-    "goals_team1": 2,
-    "goals_team2": 2,
-    "result": "D"
-  },
-  "170": {
     "home_team": "Feyenoord",
     "away_team": "Twente",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
+  "170": {
+    "home_team": "Go Ahead Eagles",
+    "away_team": "Nijmegen",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
   "171": {
     "home_team": "Volendam",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 0,
     "goals_team2": 1,
     "result": "A"
@@ -1205,13 +1205,13 @@
   },
   "173": {
     "home_team": "Twente",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
   "174": {
-    "home_team": "Sittard",
+    "home_team": "For Sittard",
     "away_team": "Heerenveen",
     "goals_team1": 3,
     "goals_team2": 3,
@@ -1219,13 +1219,13 @@
   },
   "175": {
     "home_team": "Ajax",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "176": {
-    "home_team": "NEC",
+    "home_team": "Nijmegen",
     "away_team": "Heracles",
     "goals_team1": 3,
     "goals_team2": 1,
@@ -1233,13 +1233,13 @@
   },
   "177": {
     "home_team": "Vitesse",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
   "178": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Feyenoord",
     "goals_team1": 0,
     "goals_team2": 1,
@@ -1253,15 +1253,15 @@
     "result": "H"
   },
   "180": {
-    "home_team": "Sparta",
+    "home_team": "Sparta Rotterdam",
     "away_team": "Zwolle",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
   "181": {
-    "home_team": "RKC",
-    "away_team": "NEC",
+    "home_team": "Waalwijk",
+    "away_team": "Nijmegen",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
@@ -1275,7 +1275,7 @@
   },
   "183": {
     "home_team": "Almere City",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
@@ -1288,64 +1288,64 @@
     "result": "H"
   },
   "185": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Zwolle",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "186": {
-    "home_team": "Utrecht",
-    "away_team": "Sittard",
-    "goals_team1": 4,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "187": {
     "home_team": "Heerenveen",
     "away_team": "Ajax",
     "goals_team1": 3,
     "goals_team2": 2,
     "result": "H"
   },
+  "187": {
+    "home_team": "Utrecht",
+    "away_team": "For Sittard",
+    "goals_team1": 4,
+    "goals_team2": 0,
+    "result": "H"
+  },
   "188": {
     "home_team": "Volendam",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 1,
     "goals_team2": 5,
     "result": "A"
   },
   "189": {
     "home_team": "Feyenoord",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
   },
   "190": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Heracles",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
   },
   "191": {
-    "home_team": "Sparta",
+    "home_team": "For Sittard",
+    "away_team": "AZ Alkmaar",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "192": {
+    "home_team": "Sparta Rotterdam",
     "away_team": "Excelsior",
     "goals_team1": 4,
     "goals_team2": 2,
     "result": "H"
   },
-  "192": {
-    "home_team": "Sittard",
-    "away_team": "AZ",
-    "goals_team1": 1,
-    "goals_team2": 2,
-    "result": "A"
-  },
   "193": {
     "home_team": "Heerenveen",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
@@ -1366,7 +1366,7 @@
   },
   "196": {
     "home_team": "Ajax",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
@@ -1380,7 +1380,7 @@
   },
   "198": {
     "home_team": "Feyenoord",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
@@ -1393,22 +1393,22 @@
     "result": "H"
   },
   "200": {
-    "home_team": "RKC",
-    "away_team": "Sittard",
+    "home_team": "Waalwijk",
+    "away_team": "For Sittard",
     "goals_team1": 0,
     "goals_team2": 1,
     "result": "A"
   },
   "201": {
     "home_team": "Zwolle",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 1,
     "goals_team2": 7,
     "result": "A"
   },
   "202": {
-    "home_team": "NEC",
-    "away_team": "Sparta",
+    "home_team": "Nijmegen",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
@@ -1429,13 +1429,13 @@
   },
   "205": {
     "home_team": "Twente",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
   "206": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Ajax",
     "goals_team1": 2,
     "goals_team2": 0,
@@ -1450,14 +1450,14 @@
   },
   "208": {
     "home_team": "Volendam",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 2,
     "goals_team2": 5,
     "result": "A"
   },
   "209": {
-    "home_team": "Go Ahead",
-    "away_team": "RKC",
+    "home_team": "Go Ahead Eagles",
+    "away_team": "Waalwijk",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
@@ -1470,8 +1470,8 @@
     "result": "A"
   },
   "211": {
-    "home_team": "Sparta",
-    "away_team": "AZ",
+    "home_team": "Sparta Rotterdam",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
@@ -1484,21 +1484,21 @@
     "result": "H"
   },
   "213": {
-    "home_team": "PSV",
-    "away_team": "Feyenoord",
-    "goals_team1": 2,
-    "goals_team2": 2,
-    "result": "D"
-  },
-  "214": {
     "home_team": "Heerenveen",
     "away_team": "Zwolle",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
   },
+  "214": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Feyenoord",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
   "215": {
-    "home_team": "Sittard",
+    "home_team": "For Sittard",
     "away_team": "Excelsior",
     "goals_team1": 5,
     "goals_team2": 2,
@@ -1512,15 +1512,15 @@
     "result": "D"
   },
   "217": {
-    "home_team": "Go Ahead",
-    "away_team": "PSV",
+    "home_team": "Go Ahead Eagles",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 1,
     "result": "A"
   },
   "218": {
     "home_team": "Twente",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
@@ -1533,35 +1533,35 @@
     "result": "D"
   },
   "220": {
-    "home_team": "RKC",
+    "home_team": "Waalwijk",
     "away_team": "Vitesse",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
   "221": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Excelsior",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
   "222": {
+    "home_team": "Ajax",
+    "away_team": "For Sittard",
+    "goals_team1": 2,
+    "goals_team2": 2,
+    "result": "D"
+  },
+  "223": {
     "home_team": "Zwolle",
     "away_team": "Volendam",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "223": {
-    "home_team": "Ajax",
-    "away_team": "Sittard",
-    "goals_team1": 2,
-    "goals_team2": 2,
-    "result": "D"
-  },
   "224": {
-    "home_team": "NEC",
+    "home_team": "Nijmegen",
     "away_team": "Heerenveen",
     "goals_team1": 2,
     "goals_team2": 0,
@@ -1576,13 +1576,13 @@
   },
   "226": {
     "home_team": "Heracles",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
   },
   "227": {
-    "home_team": "Sittard",
+    "home_team": "For Sittard",
     "away_team": "Zwolle",
     "goals_team1": 3,
     "goals_team2": 1,
@@ -1590,7 +1590,7 @@
   },
   "228": {
     "home_team": "Excelsior",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
@@ -1604,69 +1604,69 @@
   },
   "230": {
     "home_team": "Volendam",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 0,
     "goals_team2": 4,
     "result": "A"
   },
   "231": {
-    "home_team": "Utrecht",
-    "away_team": "NEC",
-    "goals_team1": 1,
-    "goals_team2": 0,
-    "result": "H"
-  },
-  "232": {
     "home_team": "Heerenveen",
     "away_team": "Feyenoord",
     "goals_team1": 2,
     "goals_team2": 3,
     "result": "A"
   },
+  "232": {
+    "home_team": "Utrecht",
+    "away_team": "Nijmegen",
+    "goals_team1": 1,
+    "goals_team2": 0,
+    "result": "H"
+  },
   "233": {
-    "home_team": "Sparta",
+    "home_team": "Sparta Rotterdam",
     "away_team": "Ajax",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
   },
   "234": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Twente",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
   "235": {
-    "home_team": "NEC",
-    "away_team": "PSV",
+    "home_team": "Nijmegen",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
   "236": {
-    "home_team": "Sparta",
-    "away_team": "Sittard",
+    "home_team": "Sparta Rotterdam",
+    "away_team": "For Sittard",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
   "237": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Excelsior",
     "goals_team1": 3,
     "goals_team2": 0,
     "result": "H"
   },
   "238": {
-    "home_team": "RKC",
+    "home_team": "Waalwijk",
     "away_team": "Heerenveen",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "239": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Vitesse",
     "goals_team1": 2,
     "goals_team2": 0,
@@ -1702,28 +1702,28 @@
   },
   "244": {
     "home_team": "Vitesse",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 1,
     "goals_team2": 4,
     "result": "A"
   },
   "245": {
     "home_team": "Excelsior",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 2,
     "result": "A"
   },
   "246": {
-    "home_team": "Sittard",
-    "away_team": "NEC",
+    "home_team": "For Sittard",
+    "away_team": "Nijmegen",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "247": {
     "home_team": "Heracles",
-    "away_team": "AZ",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 5,
     "goals_team2": 0,
     "result": "H"
@@ -1750,7 +1750,7 @@
     "result": "D"
   },
   "251": {
-    "home_team": "RKC",
+    "home_team": "Waalwijk",
     "away_team": "Almere City",
     "goals_team1": 0,
     "goals_team2": 0,
@@ -1758,21 +1758,21 @@
   },
   "252": {
     "home_team": "Ajax",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
   "253": {
-    "home_team": "Sparta",
+    "home_team": "Sparta Rotterdam",
     "away_team": "Heracles",
     "goals_team1": 1,
     "goals_team2": 2,
     "result": "A"
   },
   "254": {
-    "home_team": "PSV",
-    "away_team": "AZ",
+    "home_team": "PSV Eindhoven",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 5,
     "goals_team2": 1,
     "result": "H"
@@ -1786,14 +1786,14 @@
   },
   "256": {
     "home_team": "Twente",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 2,
     "goals_team2": 0,
     "result": "H"
   },
   "257": {
     "home_team": "Vitesse",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 0,
     "goals_team2": 3,
     "result": "A"
@@ -1806,7 +1806,7 @@
     "result": "H"
   },
   "259": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Almere City",
     "goals_team1": 1,
     "goals_team2": 1,
@@ -1814,7 +1814,7 @@
   },
   "260": {
     "home_team": "Volendam",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 3,
     "goals_team2": 2,
     "result": "H"
@@ -1834,22 +1834,22 @@
     "result": "H"
   },
   "263": {
-    "home_team": "PSV",
+    "home_team": "PSV Eindhoven",
     "away_team": "Vitesse",
     "goals_team1": 6,
     "goals_team2": 0,
     "result": "H"
   },
   "264": {
-    "home_team": "AZ",
-    "away_team": "RKC",
+    "home_team": "AZ Alkmaar",
+    "away_team": "Waalwijk",
     "goals_team1": 3,
     "goals_team2": 2,
     "result": "H"
   },
   "265": {
     "home_team": "Almere City",
-    "away_team": "Sparta",
+    "away_team": "Sparta Rotterdam",
     "goals_team1": 2,
     "goals_team2": 3,
     "result": "A"
@@ -1862,7 +1862,7 @@
     "result": "A"
   },
   "267": {
-    "home_team": "Sittard",
+    "home_team": "For Sittard",
     "away_team": "Feyenoord",
     "goals_team1": 0,
     "goals_team2": 1,
@@ -1870,7 +1870,7 @@
   },
   "268": {
     "home_team": "Utrecht",
-    "away_team": "Go Ahead",
+    "away_team": "Go Ahead Eagles",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
@@ -1883,7 +1883,7 @@
     "result": "H"
   },
   "270": {
-    "home_team": "NEC",
+    "home_team": "Nijmegen",
     "away_team": "Zwolle",
     "goals_team1": 2,
     "goals_team2": 2,
@@ -1905,21 +1905,21 @@
   },
   "273": {
     "home_team": "Heerenveen",
-    "away_team": "PSV",
+    "away_team": "PSV Eindhoven",
     "goals_team1": 0,
     "goals_team2": 8,
     "result": "A"
   },
   "274": {
-    "home_team": "Go Ahead",
+    "home_team": "Go Ahead Eagles",
     "away_team": "Feyenoord",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
   "275": {
-    "home_team": "NEC",
-    "away_team": "AZ",
+    "home_team": "Nijmegen",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 0,
     "goals_team2": 3,
     "result": "A"
@@ -1932,14 +1932,14 @@
     "result": "H"
   },
   "277": {
-    "home_team": "Sparta",
+    "home_team": "Sparta Rotterdam",
     "away_team": "Volendam",
     "goals_team1": 1,
     "goals_team2": 0,
     "result": "H"
   },
   "278": {
-    "home_team": "RKC",
+    "home_team": "Waalwijk",
     "away_team": "Utrecht",
     "goals_team1": 2,
     "goals_team2": 2,
@@ -1947,38 +1947,38 @@
   },
   "279": {
     "home_team": "Vitesse",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 3,
     "goals_team2": 2,
     "result": "H"
   },
   "280": {
-    "home_team": "Sittard",
-    "away_team": "Go Ahead",
-    "goals_team1": 0,
-    "goals_team2": 0,
-    "result": "D"
-  },
-  "281": {
     "home_team": "Almere City",
     "away_team": "Heerenveen",
     "goals_team1": 1,
     "goals_team2": 1,
     "result": "D"
   },
-  "282": {
-    "home_team": "PSV",
-    "away_team": "Sparta",
-    "goals_team1": 4,
-    "goals_team2": 2,
-    "result": "H"
+  "281": {
+    "home_team": "For Sittard",
+    "away_team": "Go Ahead Eagles",
+    "goals_team1": 0,
+    "goals_team2": 0,
+    "result": "D"
   },
-  "283": {
+  "282": {
     "home_team": "Heracles",
-    "away_team": "RKC",
+    "away_team": "Waalwijk",
     "goals_team1": 0,
     "goals_team2": 5,
     "result": "A"
+  },
+  "283": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Sparta Rotterdam",
+    "goals_team1": 4,
+    "goals_team2": 2,
+    "result": "H"
   },
   "284": {
     "home_team": "Utrecht",
@@ -1995,7 +1995,7 @@
     "result": "A"
   },
   "286": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Twente",
     "goals_team1": 2,
     "goals_team2": 1,
@@ -2010,7 +2010,7 @@
   },
   "288": {
     "home_team": "Excelsior",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 0,
     "goals_team2": 3,
     "result": "A"
@@ -2030,115 +2030,115 @@
     "result": "H"
   },
   "291": {
-    "home_team": "Twente",
-    "away_team": "Volendam",
-    "goals_team1": 7,
-    "goals_team2": 2,
-    "result": "H"
+    "home_team": "For Sittard",
+    "away_team": "PSV Eindhoven",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
   },
   "292": {
-    "home_team": "Utrecht",
-    "away_team": "Sparta",
+    "home_team": "Go Ahead Eagles",
+    "away_team": "AZ Alkmaar",
     "goals_team1": 0,
-    "goals_team2": 1,
+    "goals_team2": 3,
     "result": "A"
   },
   "293": {
-    "home_team": "Sittard",
-    "away_team": "PSV",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "294": {
-    "home_team": "Go Ahead",
-    "away_team": "AZ",
-    "goals_team1": 0,
-    "goals_team2": 3,
-    "result": "A"
-  },
-  "295": {
-    "home_team": "NEC",
-    "away_team": "Feyenoord",
-    "goals_team1": 2,
-    "goals_team2": 3,
-    "result": "A"
-  },
-  "296": {
-    "home_team": "RKC",
-    "away_team": "Zwolle",
-    "goals_team1": 1,
-    "goals_team2": 1,
-    "result": "D"
-  },
-  "297": {
     "home_team": "Heerenveen",
     "away_team": "Vitesse",
     "goals_team1": 1,
     "goals_team2": 3,
     "result": "A"
   },
+  "294": {
+    "home_team": "Nijmegen",
+    "away_team": "Feyenoord",
+    "goals_team1": 2,
+    "goals_team2": 3,
+    "result": "A"
+  },
+  "295": {
+    "home_team": "Twente",
+    "away_team": "Volendam",
+    "goals_team1": 7,
+    "goals_team2": 2,
+    "result": "H"
+  },
+  "296": {
+    "home_team": "Utrecht",
+    "away_team": "Sparta Rotterdam",
+    "goals_team1": 0,
+    "goals_team2": 1,
+    "result": "A"
+  },
+  "297": {
+    "home_team": "Waalwijk",
+    "away_team": "Zwolle",
+    "goals_team1": 1,
+    "goals_team2": 1,
+    "result": "D"
+  },
   "298": {
     "home_team": "Almere City",
-    "away_team": "NEC",
+    "away_team": "Nijmegen",
     "goals_team1": 1,
     "goals_team2": 4,
     "result": "A"
   },
   "299": {
-    "home_team": "AZ",
+    "home_team": "AZ Alkmaar",
     "away_team": "Utrecht",
     "goals_team1": 3,
     "goals_team2": 3,
     "result": "D"
   },
   "300": {
-    "home_team": "Volendam",
-    "away_team": "Go Ahead",
-    "goals_team1": 1,
-    "goals_team2": 2,
-    "result": "A"
-  },
-  "301": {
     "home_team": "Feyenoord",
     "away_team": "Excelsior",
     "goals_team1": 4,
     "goals_team2": 0,
     "result": "H"
   },
-  "302": {
+  "301": {
     "home_team": "Heracles",
-    "away_team": "Sittard",
+    "away_team": "For Sittard",
     "goals_team1": 0,
     "goals_team2": 0,
     "result": "D"
   },
-  "303": {
-    "home_team": "Zwolle",
-    "away_team": "Twente",
-    "goals_team1": 1,
-    "goals_team2": 2,
-    "result": "A"
-  },
-  "304": {
-    "home_team": "PSV",
-    "away_team": "RKC",
+  "302": {
+    "home_team": "PSV Eindhoven",
+    "away_team": "Waalwijk",
     "goals_team1": 3,
     "goals_team2": 1,
     "result": "H"
   },
-  "305": {
-    "home_team": "Sparta",
+  "303": {
+    "home_team": "Sparta Rotterdam",
     "away_team": "Heerenveen",
     "goals_team1": 2,
     "goals_team2": 1,
     "result": "H"
   },
-  "306": {
+  "304": {
     "home_team": "Vitesse",
     "away_team": "Ajax",
     "goals_team1": 2,
     "goals_team2": 2,
     "result": "D"
+  },
+  "305": {
+    "home_team": "Volendam",
+    "away_team": "Go Ahead Eagles",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
+  },
+  "306": {
+    "home_team": "Zwolle",
+    "away_team": "Twente",
+    "goals_team1": 1,
+    "goals_team2": 2,
+    "result": "A"
   }
 }
