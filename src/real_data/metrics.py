@@ -117,7 +117,7 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
             ]
             game += 1
 
-    csv_path = "real_data/results/metrics.csv"
+    csv_path = f"real_data/results/metrics_{championship}.csv"
     header = [
         "year",
         "championship",

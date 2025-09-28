@@ -91,8 +91,10 @@ if __name__ == "__main__":
 
     # 20 teams championships
     countries += ["england", "italy", "spain"]
+    process_data(models, seasons, games, countries)
 
     # 18 teams championships
-    countries += ["france", "germany", "netherlands", "portugal"]
+    new_games_list: list[int | str] = [45, 90, 135, 180, "mid", "end"]
+    countries = ["france", "germany", "netherlands", "portugal"]
 
-    process_data(models, seasons, games, countries)
+    process_data(models, seasons, new_games_list, countries)
