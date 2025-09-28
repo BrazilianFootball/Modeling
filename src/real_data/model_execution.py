@@ -13,7 +13,7 @@ from data_processing import (
     check_results_exist,
 )
 from metrics import calculate_metrics
-from simulation import simulate_competition, update_probabilities
+from simulation import simulate_competition, update_probabilities, calculate_final_positions_probs
 from visualization import generate_boxplot, generate_points_evolution_by_team
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
@@ -22,7 +22,7 @@ from features.constants import model_kwargs, IGNORE_COLS  # noqa: E402
 
 
 def run_model_with_real_data(
-    model_name: str, year: int, num_rounds: int = 38, championship: str = "brazil"
+    model_name: str, year: int, num_games: int = 380, championship: str = "brazil"
 ) -> tuple[cmdstanpy.CmdStanMCMC, dict[int, str], str]:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -33,7 +33,7 @@ def run_model_with_real_data(
     Args:
         model_name (str): The name of the model to run ("bradley_terry" or "poisson").
         year (int): The year of the real data to use.
-        num_rounds (int, optional): Number of rounds to use on fit. Defaults to 38.
+        num_games (int, optional): Number of games to use on fit. Defaults to 380.
         championship (str, optional): The championship of the data. Defaults to "brazil".
 
     Returns:
@@ -50,7 +50,7 @@ def run_model_with_real_data(
     model_name_dir = os.path.join(save_dir, model_name)
     os.makedirs(model_name_dir, exist_ok=True)
 
-    samples_dir = os.path.join(model_name_dir, f"round_{str(num_rounds).zfill(2)}")
+    samples_dir = os.path.join(model_name_dir, f"{str(num_games).zfill(3)}_games")
     if os.path.exists(samples_dir):
         shutil.rmtree(samples_dir)
 
@@ -60,7 +60,7 @@ def run_model_with_real_data(
         os.path.join(
             os.path.dirname(__file__), "..", "..",
             "real_data", "inputs", f"{championship}", f"{year}",
-            f"{real_data_file}_data_{str(num_rounds).zfill(2)}.json"
+            f"{real_data_file}_data_{str(num_games).zfill(3)}_games.json"
         ),
         encoding="utf-8",
     ) as f:
@@ -136,7 +136,7 @@ def set_team_strengths(
 def run_real_data_model(
     model_name: str,
     year: int,
-    num_rounds: int = 38,
+    num_games: int = 380,
     championship: str = "brazil",
     num_simulations: int = 1_000,
     ignore_cache: bool = False,
@@ -150,7 +150,7 @@ def run_real_data_model(
     Args:
         model_name (str): The name of the model to run.
         year (int): The year of the real data to use.
-        num_rounds (int, optional): Number of rounds already played. Defaults to 38.
+        num_games (int, optional): Number of games already played. Defaults to 380.
         championship (str, optional): The championship to use. Defaults to "brazil".
         num_simulations (int, optional): Number of simulations to run. Defaults to 1000.
         ignore_cache (bool, optional): Whether to ignore the cache. Defaults to False.
@@ -158,35 +158,41 @@ def run_real_data_model(
     Returns:
         None
     """
-    if check_results_exist(model_name, year, num_rounds, championship) and not ignore_cache:
+    if check_results_exist(model_name, year, num_games, championship) and not ignore_cache:
         return
 
     generate_all_matches_data(year, championship)
-    generate_real_data_stan_input(year, num_rounds, championship)
+    generate_real_data_stan_input(year, num_games, championship)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
-        model_name, year, num_rounds, championship
+        model_name, year, num_games, championship
     )
     samples = fit.draws_pd()
-    ignore_cols = [col for col in samples.columns if "raw" in col] + IGNORE_COLS
-    samples = samples.drop(columns=ignore_cols)
+    samples = samples.drop(
+        columns=[col for col in samples.columns if "raw" in col] + IGNORE_COLS
+    )
     samples = set_team_strengths(samples, team_mapping)
     generate_boxplot(
         samples[list(team_mapping.values())],
         year,
         model_save_dir,
-        num_rounds,
+        num_games,
     )
     n_clubs = len(team_mapping)
-    if num_rounds != 2 * (n_clubs - 1):
+    if num_games != n_clubs * (n_clubs - 1):
         points_matrix, current_scenario, probabilities = simulate_competition(
-            samples, team_mapping, model_name, year, num_rounds, championship, num_simulations
+            samples, team_mapping, model_name, year, num_games, championship, num_simulations
         )
-        update_probabilities(probabilities, year, model_name, num_rounds, championship)
-        generate_points_evolution_by_team(
+        update_probabilities(probabilities, year, model_name, num_games, championship)
+        final_points_distribution = generate_points_evolution_by_team(
             points_matrix,
             current_scenario,
             team_mapping,
-            num_rounds,
+            num_games,
             save_dir=model_save_dir,
         )
-        calculate_metrics(model_name, year, num_rounds, championship)
+        calculate_metrics(model_name, year, num_games, championship)
+        calculate_final_positions_probs(
+            final_points_distribution,
+            team_mapping,
+            model_save_dir,
+        )
