@@ -170,81 +170,98 @@ def generate_points_matrix_poisson(
     away_team_names = [team_mapping[team] for team in away_team]
     teams = list(team_mapping.values())
     n_teams = len(teams)
-    points_matrix = np.zeros((n_teams, num_total_matches, num_simulations), dtype=int)
+
+    samples_array = samples.values
+    samples_columns_mapping = {col: i for i, col in enumerate(samples.columns)}
+    nu_idx = samples_columns_mapping.get("nu", None)
+
+    points_matrix = np.zeros((n_teams, num_total_matches - num_games, num_simulations), dtype=int)
     samples_indices = np.random.randint(
-        0, len(samples), size=(num_total_matches, num_simulations)
+        0, len(samples), size=(num_total_matches - num_games, num_simulations)
     )
 
     probabilities: dict[str, dict[str, Any]] = {}
-    for game in range(num_total_matches):
-        if "nu" in samples.columns:
-            nu = samples.iloc[samples_indices[game]]["nu"].values
+    for game_id in range(num_games, num_total_matches):
+        game_simulation_idx = game_id - num_games
+        game_indices = samples_indices[game_simulation_idx]
+        if nu_idx is not None:
+            nu_values = samples_array[game_indices, nu_idx]
         else:
-            nu = np.zeros(num_simulations)
-        for game in range(n_teams // 2):
-            game_id = num_games + game
-            home_name = home_team_names[game_id]
-            away_name = away_team_names[game_id]
-            if home_name + " (atk home)" in samples.columns:
-                atk_home = samples.iloc[samples_indices[game]][
-                    home_name + " (atk home)"
-                ].values
-                def_away = samples.iloc[samples_indices[game]][
-                    away_name + " (def away)"
-                ].values
-                atk_away = samples.iloc[samples_indices[game]][
-                    away_name + " (atk away)"
-                ].values
-                def_home = samples.iloc[samples_indices[game]][
-                    home_name + " (def home)"
-                ].values
-                home_strengths = atk_home + def_away
-                away_strengths = atk_away + def_home
-            elif home_name + " (atk)" in samples.columns:
-                atk_strength = samples.iloc[samples_indices[game]][
-                    home_name + " (atk)"
-                ].values
-                def_strength = samples.iloc[samples_indices[game]][
-                    away_name + " (def)"
-                ].values
-                home_strengths = atk_strength + def_strength
-                away_strengths = atk_strength + def_strength
-            else:
-                home_strengths = samples.iloc[samples_indices[game]][home_name].values
-                away_strengths = samples.iloc[samples_indices[game]][away_name].values
+            nu_values = np.zeros(num_simulations)
 
-            home_strengths = np.exp(home_strengths + nu)
-            away_strengths = np.exp(away_strengths)
+        home_name = home_team_names[game_id]
+        away_name = away_team_names[game_id]
+        if home_name + " (atk home)" in samples.columns:
+            home_atk_idx = samples_columns_mapping[home_name + " (atk home)"]
+            away_def_idx = samples_columns_mapping[away_name + " (def away)"]
+            away_atk_idx = samples_columns_mapping[away_name + " (atk away)"]
+            home_def_idx = samples_columns_mapping[home_name + " (def home)"]
 
-            home_goals = np.random.poisson(home_strengths)
-            away_goals = np.random.poisson(away_strengths)
+            home_atk_strength = samples_array[game_indices, home_atk_idx]
+            away_def_strength = samples_array[game_indices, away_def_idx]
+            away_atk_strength = samples_array[game_indices, away_atk_idx]
+            home_def_strength = samples_array[game_indices, home_def_idx]
 
-            home_win = home_goals > away_goals
-            away_win = home_goals < away_goals
-            tie = home_goals == away_goals
+            home_strengths = home_atk_strength + away_def_strength
+            away_strengths = away_atk_strength + home_def_strength
+        elif home_name + " (atk)" in samples.columns:
+            home_atk_idx = samples_columns_mapping[home_name + " (atk)"]
+            away_def_idx = samples_columns_mapping[away_name + " (def)"]
+            away_atk_idx = samples_columns_mapping[away_name + " (atk)"]
+            home_def_idx = samples_columns_mapping[home_name + " (def)"]
 
-            home_idx = home_team[game_id] - 1
-            away_idx = away_team[game_id] - 1
-            if game > 0:
-                points_matrix[home_idx, game, :] = (
-                    points_matrix[home_idx, game - 1, :] + home_win * 3 + tie * 1
+            home_atk_strength = samples_array[game_indices, home_atk_idx]
+            away_def_strength = samples_array[game_indices, away_def_idx]
+            away_atk_strength = samples_array[game_indices, away_atk_idx]
+            home_def_strength = samples_array[game_indices, home_def_idx]
+
+            home_strengths = home_atk_strength + away_def_strength
+            away_strengths = away_atk_strength + home_def_strength
+        else:
+            home_idx = samples_columns_mapping[home_name]
+            away_idx = samples_columns_mapping[away_name]
+
+            home_strengths = samples_array[game_indices, home_idx]
+            away_strengths = samples_array[game_indices, away_idx]
+
+        home_strengths = np.exp(home_strengths + nu_values)
+        away_strengths = np.exp(away_strengths)
+
+        home_goals = np.random.poisson(home_strengths)
+        away_goals = np.random.poisson(away_strengths)
+
+        home_win = home_goals > away_goals
+        away_win = home_goals < away_goals
+        tie = home_goals == away_goals
+
+        home_idx = home_team[game_id] - 1
+        away_idx = away_team[game_id] - 1
+
+        home_new_points = home_win * 3 + tie * 1
+        away_new_points = away_win * 3 + tie * 1
+        for team_idx in team_mapping:
+            if team_idx - 1 == home_idx:
+                points_matrix[home_idx, game_simulation_idx, :] = (
+                    points_matrix[home_idx, game_simulation_idx - 1, :] + home_new_points
                 )
-                points_matrix[away_idx, game, :] = (
-                    points_matrix[away_idx, game - 1, :] + away_win * 3 + tie * 1
+            elif team_idx - 1 == away_idx:
+                points_matrix[away_idx, game_simulation_idx, :] = (
+                    points_matrix[away_idx, game_simulation_idx - 1, :] + away_new_points
                 )
             else:
-                points_matrix[home_idx, game, :] = home_win * 3 + tie * 1
-                points_matrix[away_idx, game, :] = away_win * 3 + tie * 1
+                points_matrix[team_idx - 1, game_simulation_idx, :] = (
+                    points_matrix[team_idx - 1, game_simulation_idx - 1, :]
+                )
 
-            probs = [
-                float(np.sum(home_win) / num_simulations),
-                float(np.sum(tie) / num_simulations),
-                float(np.sum(away_win) / num_simulations),
-            ]
-            probabilities[str(game_id + 1).zfill(3)] = {}
-            probabilities[str(game_id + 1).zfill(3)]["home_team"] = home_name
-            probabilities[str(game_id + 1).zfill(3)]["away_team"] = away_name
-            probabilities[str(game_id + 1).zfill(3)]["probabilities"] = probs
+        probs = [
+            float(np.sum(home_win) / num_simulations),
+            float(np.sum(tie) / num_simulations),
+            float(np.sum(away_win) / num_simulations),
+        ]
+        probabilities[str(game_id + 1).zfill(3)] = {}
+        probabilities[str(game_id + 1).zfill(3)]["home_team"] = home_name
+        probabilities[str(game_id + 1).zfill(3)]["away_team"] = away_name
+        probabilities[str(game_id + 1).zfill(3)]["probabilities"] = probs
     return points_matrix, probabilities
 
 
