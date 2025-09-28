@@ -1,5 +1,7 @@
 # pylint: disable=too-many-locals, too-many-arguments, too-many-statements, too-many-positional-arguments, duplicate-code, broad-exception-caught
 
+from time import time
+
 import logging
 from itertools import product
 
@@ -33,6 +35,7 @@ def process_data(
     Note:
         Errors are caught and printed but do not stop the overall process.
     """
+    start_time = time()
     success = 0
     n_iterations = len(model_list) * len(season_list) * len(game_list) * len(country_list)
     for i, values in enumerate(product(model_list, season_list, game_list, country_list)):
@@ -48,7 +51,8 @@ def process_data(
 
         print(
             f"Running {model} for {season} with {actual_game} games for {country} "
-            f"(iteration {i+1} of {n_iterations})"
+            f"(iteration {i+1} of {n_iterations}) "
+            f"Time elapsed: {time() - start_time:,.0f} seconds"
             f"{' ' * 30}",
             end="\r",
             flush=True,
@@ -62,7 +66,7 @@ def process_data(
         except Exception as e:
             print(
                 f"Error running {model} for {season} with {actual_game} games for {country}: {e}"
-                f"{' ' * 30}"
+                f"{' ' * 40}"
             )
 
     print(f"\nTotal success: {success}/{n_iterations}")
