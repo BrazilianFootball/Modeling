@@ -13,7 +13,7 @@ from data_processing import (
     check_results_exist,
 )
 from metrics import calculate_metrics
-from simulation import simulate_competition, update_probabilities
+from simulation import simulate_competition, update_probabilities, calculate_final_positions_probs
 from visualization import generate_boxplot, generate_points_evolution_by_team
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
@@ -167,8 +167,9 @@ def run_real_data_model(
         model_name, year, num_games, championship
     )
     samples = fit.draws_pd()
-    ignore_cols = [col for col in samples.columns if "raw" in col] + IGNORE_COLS
-    samples = samples.drop(columns=ignore_cols)
+    samples = samples.drop(
+        columns=[col for col in samples.columns if "raw" in col] + IGNORE_COLS
+    )
     samples = set_team_strengths(samples, team_mapping)
     generate_boxplot(
         samples[list(team_mapping.values())],
@@ -182,7 +183,7 @@ def run_real_data_model(
             samples, team_mapping, model_name, year, num_games, championship, num_simulations
         )
         update_probabilities(probabilities, year, model_name, num_games, championship)
-        generate_points_evolution_by_team(
+        final_points_distribution = generate_points_evolution_by_team(
             points_matrix,
             current_scenario,
             team_mapping,
@@ -190,3 +191,8 @@ def run_real_data_model(
             save_dir=model_save_dir,
         )
         calculate_metrics(model_name, year, num_games, championship)
+        calculate_final_positions_probs(
+            final_points_distribution,
+            team_mapping,
+            model_save_dir,
+        )

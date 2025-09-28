@@ -337,3 +337,36 @@ def update_probabilities(
 
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def calculate_final_positions_probs(
+    final_points_distribution: np.ndarray,
+    team_mapping: dict[int, str],
+    save_dir: str,
+) -> None:
+    """
+    Calculates the probability of each team finishing in each possible final position.
+
+    For each team, this function computes the probability of finishing in every possible
+    position (from first to last) based on the simulated final points distributions.
+    The results are saved as a JSON file in the specified directory.
+
+    Args:
+        final_points_distribution (np.ndarray): Array of shape (n_teams, n_simulations) containing
+            the simulated final points for each team across all simulations.
+        team_mapping (dict[int, str]): Mapping from team indices (1-based) to team names.
+        save_dir (str): Directory where the resulting JSON file will be saved.
+
+    Returns:
+        None
+    """
+    final_positions = np.argsort(final_points_distribution, axis=0)
+    n_teams = len(team_mapping)
+    final_positions_probs: dict[str, list[float]] = {team: [] for team in team_mapping.values()}
+    for idx, team in team_mapping.items():
+        for position in range(n_teams):
+            prob_team_position = np.mean(final_positions[position, :] == idx - 1)
+            final_positions_probs[team].insert(0, prob_team_position)
+
+    with open(os.path.join(save_dir, "final_positions_probs.json"), "w", encoding="utf-8") as f:
+        json.dump(final_positions_probs, f, ensure_ascii=False, indent=2)

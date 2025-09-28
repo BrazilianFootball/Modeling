@@ -134,13 +134,12 @@ def generate_points_evolution_by_team(
         current_scenario[team][num_games - 1] for team in sorted_team_names
     ])
 
-    final_points = points_matrix[:, -1, :].copy()
+    final_points_distribution = points_matrix[:, -1, :].copy()
     for idx, team in team_mapping.items():
-        final_points[idx - 1, :] = (
+        final_points_distribution[idx - 1, :] = (
             points_matrix[idx - 1, -1, :] + current_scenario[team][num_games - 1]
         )
 
-    np.save(os.path.join(save_dir, "final_points.npy"), final_points)
     for idx, (team_idx, team_name) in enumerate(zip(sorted_indices, sorted_team_names)):
         row = idx // 5 + 1
         col = idx % 5 + 1
@@ -210,6 +209,8 @@ def generate_points_evolution_by_team(
 
     file_path = os.path.join(save_dir, "points_evolution_by_team.png")
     pio.write_image(fig, file_path, format="png", scale=1, engine="kaleido")
+
+    return final_points_distribution
 
 
 def generate_boxplot(
