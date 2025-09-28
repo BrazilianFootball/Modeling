@@ -134,10 +134,10 @@ def generate_points_evolution_by_team(
         current_scenario[team][num_games - 1] for team in sorted_team_names
     ])
 
-    final_points = points_matrix.copy()
+    final_points = points_matrix[:, -1, :].copy()
     for idx, team in team_mapping.items():
-        final_points[idx - 1, :, :] = (
-            points_matrix[idx - 1, :, :] + current_scenario[team][num_games - 1]
+        final_points[idx - 1, :] = (
+            points_matrix[idx - 1, -1, :] + current_scenario[team][num_games - 1]
         )
 
     np.save(os.path.join(save_dir, "final_points.npy"), final_points)
