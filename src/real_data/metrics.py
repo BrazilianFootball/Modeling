@@ -82,6 +82,49 @@ def ranked_probability_score(
     return total_score / (2 * n)
 
 
+def interval_score(model_name: str, year: int, num_games: int, championship: str) -> float:
+    """
+    Calculate the interval score for probabilistic forecasts of real points.
+
+    The interval score evaluates the quality of predictive intervals by penalizing intervals
+    that are too wide or do not contain the true value. It is computed using quantile predictions
+    for each team and compares them to the actual observed points.
+
+    Args:
+        model_name (str): The name of the model used to generate the predictions.
+        year (int): The year of the competition.
+        num_games (int): The number of games considered in the evaluation.
+        championship (str): The name of the championship.
+
+    Returns:
+        float: The total interval score for all teams in the dataset.
+    """
+    csv_path = os.path.join(
+        "real_data", "results", f"{championship}", f"{year}", f"{model_name}",
+        f"{str(num_games).zfill(3)}_games", "all_quantiles.csv"
+    )
+    df = pd.read_csv(csv_path)
+    df = df[df["team_played"] is True].reset_index(drop=True)
+    df.drop(columns=["team_played", "game_id", "team"], inplace=True)
+    real_points = df["real_points"].values
+    percentiles = df.columns[:-1]
+    score = 0
+    for i, lower_name in enumerate(percentiles):
+        upper_name = percentiles[-i-1]
+        if lower_name == upper_name:
+            break
+
+        interval_range = float(upper_name.replace("p", "")) - float(lower_name.replace("p", ""))
+        alpha = round(1 - interval_range / 100, 2)
+        lower = df[lower_name].values
+        upper = df[upper_name].values
+        lower_penalty = np.mean(2 / alpha * (lower - real_points) * (real_points < lower))
+        upper_penalty = np.mean(2 / alpha * (real_points - upper) * (real_points > upper))
+        score += lower_penalty + upper_penalty + interval_range
+
+    return score
+
+
 def calculate_metrics(model_name: str, year: int, num_games: int, championship: str) -> None:
     """
     Calculate the metrics for a given model and year.
@@ -117,7 +160,7 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
             ]
             game += 1
 
-    csv_path = f"real_data/results/metrics_{championship}.csv"
+    csv_path = os.path.join("real_data", "results", f"metrics_{championship}.csv")
     header = [
         "year",
         "championship",
@@ -126,6 +169,7 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
         "brier_score",
         "ranked_probability_score",
         "log_score",
+        "interval_score",
     ]
     row = [
         year,
@@ -135,6 +179,7 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
         brier_score(observations, predictions),
         ranked_probability_score(observations, predictions),
         log_score(observations, predictions),
+        interval_score(model_name, year, num_games, championship),
     ]
     naive_row = [
         year,
@@ -144,6 +189,7 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
         brier_score(observations, naive_predictions),
         ranked_probability_score(observations, naive_predictions),
         log_score(observations, naive_predictions),
+        np.nan,
     ]
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
