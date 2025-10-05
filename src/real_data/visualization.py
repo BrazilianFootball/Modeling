@@ -2,7 +2,6 @@
 
 import os
 
-import numba as nb
 import numpy as np
 import pandas as pd
 import plotly.graph_objs as go
@@ -10,31 +9,6 @@ import plotly.io as pio
 import plotly.subplots as psub
 
 from colors import color_mapping
-
-@nb.jit(nopython=True, parallel=True)
-def _calculate_quantiles_fast(points_matrix: np.ndarray) -> np.ndarray:
-    """
-    Optimized version with Numba for quantile calculation.
-    Uses a quick selection algorithm instead of full sorting.
-    """
-    n_teams, n_games, n_sims = points_matrix.shape
-    quantiles = np.zeros((3, n_teams, n_games))
-
-    percentiles = np.array([5.0, 50.0, 95.0])
-
-    for i in range(n_teams):
-        for j in range(n_games):
-            data = points_matrix[i, j, :].copy()
-
-            for k, p in enumerate(percentiles):
-                idx = int((p / 100.0) * (n_sims - 1))
-                quantiles[k, i, j] = np.partition(data, idx)[idx]
-
-    return quantiles
-
-
-# run the function to compile it
-_calculate_quantiles_fast(np.random.rand(100, 100, 1000))
 
 
 def _configure_axes_optimized(fig: go.Figure, n_clubs: int) -> None:
@@ -82,7 +56,7 @@ def _configure_axes_optimized(fig: go.Figure, n_clubs: int) -> None:
 
 def generate_points_evolution_by_team(
     points_matrix: np.ndarray,
-    current_scenario: dict[str, list[int]],
+    current_scenario: dict[str, list[tuple[bool, int]]],
     team_mapping: dict[int, str],
     num_games: int,
     save_dir: str,
@@ -102,14 +76,35 @@ def generate_points_evolution_by_team(
         None
     """
     n_clubs = len(team_mapping)
-    quantiles = _calculate_quantiles_fast(points_matrix)
-    # quantiles = np.quantile(points_matrix, [0.05, 0.5, 0.95], axis=2)
-    p5_points = quantiles[0]
-    median_points = quantiles[1]
-    p95_points = quantiles[2]
+    percentiles = np.linspace(2.5, 97.5, 39)
+    quantiles = np.quantile(points_matrix, percentiles / 100, axis=2)
+    p2_5_points = quantiles[0]
+    median_points = quantiles[19]
+    p97_5_points = quantiles[-1]
+    columns = [f"p{percentile:.2f}" for percentile in percentiles]
+    all_quantiles = []
+    for idx, team in team_mapping.items():
+        team_current_points = current_scenario[team][num_games-1][1]
+        df = pd.DataFrame(
+            data=team_current_points + quantiles[:, idx-1, :].T.round(3),
+            columns=columns
+        )
+        df["team"] = team
+        df["real_points"] = [point[1] for point in current_scenario[team][num_games:]]
+        df["team_played"] = [point[0] for point in current_scenario[team][num_games:]]
+        df.reset_index(inplace=True)
+        df.rename(columns={"index": "game_id"}, inplace=True)
+        df["game_id"] += num_games + 1
+        all_quantiles.append(df)
 
+    all_quantiles = pd.concat(all_quantiles)
+    all_quantiles.to_csv(os.path.join(save_dir, "all_quantiles.csv"), index=False)
+
+    points_on_current_scenario = {
+        team: [point[1] for point in current_scenario[team]] for team in team_mapping.values()
+    }
     final_points = np.array(
-        [current_scenario[team][-1] for team in team_mapping.values()]
+        [points_on_current_scenario[team][-1] for team in team_mapping.values()]
     )
     sorted_indices = np.argsort(-final_points, kind="stable")
     sorted_team_names = [list(team_mapping.values())[i] for i in sorted_indices]
@@ -131,13 +126,13 @@ def generate_points_evolution_by_team(
     )
 
     points_at_current_round = np.array([
-        current_scenario[team][num_games - 1] for team in sorted_team_names
+        points_on_current_scenario[team][num_games - 1] for team in sorted_team_names
     ])
 
     final_points_distribution = points_matrix[:, -1, :].copy()
     for idx, team in team_mapping.items():
         final_points_distribution[idx - 1, :] = (
-            points_matrix[idx - 1, -1, :] + current_scenario[team][num_games - 1]
+            points_matrix[idx - 1, -1, :] + points_on_current_scenario[team][num_games - 1]
         )
 
     for idx, (team_idx, team_name) in enumerate(zip(sorted_indices, sorted_team_names)):
@@ -145,10 +140,10 @@ def generate_points_evolution_by_team(
         col = idx % 5 + 1
 
         med = median_points[team_idx, :] + points_at_current_round[idx]
-        p95 = p95_points[team_idx, :] + points_at_current_round[idx]
-        p5 = p5_points[team_idx, :] + points_at_current_round[idx]
+        p2_5 = p2_5_points[team_idx, :] + points_at_current_round[idx]
+        p97_5 = p97_5_points[team_idx, :] + points_at_current_round[idx]
 
-        team_points = np.array(current_scenario[team_name])
+        team_points = np.array(points_on_current_scenario[team_name])
 
         club_color = team_colors[idx]
         club_color_alpha = team_colors_alpha[idx]
@@ -164,12 +159,12 @@ def generate_points_evolution_by_team(
             ),
             go.Scatter(
                 x=np.concatenate([simulation_range, simulation_range[::-1]]),
-                y=np.concatenate([p5, p95[::-1]]),
+                y=np.concatenate([p2_5, p97_5[::-1]]),
                 fill="toself",
                 fillcolor=club_color_alpha,
                 line={"color": club_color_alpha, "width": 1},
                 hoverinfo="skip",
-                name="90% interval",
+                name="95% interval",
                 showlegend=(idx == 0),
             ),
             go.Scatter(

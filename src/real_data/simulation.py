@@ -16,7 +16,7 @@ from features.generators import simulate_bradley_terry  # noqa: E402
 
 def get_real_points_evolution(
     data: dict[str, Any], team_mapping: dict[int, str]
-) -> dict[str, list[int]]:
+) -> dict[str, list[tuple[bool, int]]]:
     """
     Calculate the current points evolution for each team based on real results.
 
@@ -32,7 +32,7 @@ def get_real_points_evolution(
     home_team_names = [team_mapping[team] for team in home_team]
     away_team_names = [team_mapping[team] for team in away_team]
 
-    current_scenario: dict[str, list[int]] = {
+    current_scenario: dict[str, list[tuple[bool, int]]] = {
         team: [] for team in team_mapping.values()
     }
     accumulated_points: dict[str, int] = dict.fromkeys(team_mapping.values(), 0)
@@ -55,7 +55,7 @@ def get_real_points_evolution(
         accumulated_points[home] += points_home
         accumulated_points[away] += points_away
         for team in team_mapping.values():
-            current_scenario[team].append(accumulated_points[team])
+            current_scenario[team].append((team in [home, away], accumulated_points[team]))
 
     return current_scenario
 
@@ -273,7 +273,7 @@ def simulate_competition(
     num_games: int,
     championship: str,
     num_simulations: int = 1_000,
-) -> tuple[np.ndarray, dict[str, list[int]], dict[str, dict[str, Any]]]:
+) -> tuple[np.ndarray, dict[str, list[tuple[bool, int]]], dict[str, dict[str, Any]]]:
     """
     Simulate the remainder of the Serie A season using posterior samples from the model,
     generating possible points trajectories for each team.
