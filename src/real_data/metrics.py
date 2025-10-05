@@ -104,7 +104,7 @@ def interval_score(model_name: str, year: int, num_games: int, championship: str
         f"{str(num_games).zfill(3)}_games", "all_quantiles.csv"
     )
     df = pd.read_csv(csv_path)
-    df = df[df["team_played"] is True].reset_index(drop=True)
+    df = df[df["team_played"]].reset_index(drop=True)
     df.drop(columns=["team_played", "game_id", "team"], inplace=True)
     real_points = df["real_points"].values
     percentiles = df.columns[:-1]
