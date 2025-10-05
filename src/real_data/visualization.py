@@ -54,6 +54,57 @@ def _configure_axes_optimized(fig: go.Figure, n_clubs: int) -> None:
         fig.update_yaxes(**yaxis_config)
 
 
+def generate_quantiles(
+    points_matrix: np.ndarray,
+    current_scenario: dict[str, list[tuple[bool, int]]],
+    team_mapping: dict[int, str],
+    num_games: int,
+    save_dir: str,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """
+    Generates quantiles for the simulated points of each team and saves them to a CSV file.
+
+    This function calculates specified percentiles (from 2.5 to 97.5) for the simulated points
+    of each team after a given number of games. For each team, it creates a DataFrame containing
+    the quantiles, the team name, the actual points, and whether the team played in each round.
+    All teams' DataFrames are concatenated and saved as a CSV file in the specified directory.
+
+    Args:
+        points_matrix (np.ndarray): Array of simulated points for each team, round, and simulation.
+        current_scenario (dict[str, list[tuple[bool, int]]]): Dictionary with the actual points
+            evolution for each team.
+        team_mapping (dict[int, str]): Mapping from team indices to team names.
+        num_games (int): Number of games already played.
+        save_dir (str): Directory where the CSV file will be saved.
+
+    Returns:
+        tuple[np.ndarray, np.ndarray, np.ndarray]: The arrays of the 2.5th, 50th (median), and
+            97.5th percentiles for each team and round
+    """
+    percentiles = np.linspace(2.5, 97.5, 39)
+    quantiles = np.quantile(points_matrix, percentiles / 100, axis=2)
+    columns = [f"p{percentile:.2f}" for percentile in percentiles]
+    all_quantiles = []
+    for idx, team in team_mapping.items():
+        team_current_points = current_scenario[team][num_games-1][1]
+        df = pd.DataFrame(
+            data=team_current_points + quantiles[:, idx-1, :].T.round(3),
+            columns=columns
+        )
+        df["team"] = team
+        df["real_points"] = [point[1] for point in current_scenario[team][num_games:]]
+        df["team_played"] = [point[0] for point in current_scenario[team][num_games:]]
+        df.reset_index(inplace=True)
+        df.rename(columns={"index": "game_id"}, inplace=True)
+        df["game_id"] += num_games + 1
+        all_quantiles.append(df)
+
+    all_quantiles = pd.concat(all_quantiles)
+    all_quantiles.to_csv(os.path.join(save_dir, "all_quantiles.csv"), index=False)
+
+    return quantiles[0], quantiles[19], quantiles[-1]
+
+
 def generate_points_evolution_by_team(
     points_matrix: np.ndarray,
     current_scenario: dict[str, list[tuple[bool, int]]],
@@ -76,30 +127,9 @@ def generate_points_evolution_by_team(
         None
     """
     n_clubs = len(team_mapping)
-    percentiles = np.linspace(2.5, 97.5, 39)
-    quantiles = np.quantile(points_matrix, percentiles / 100, axis=2)
-    p2_5_points = quantiles[0]
-    median_points = quantiles[19]
-    p97_5_points = quantiles[-1]
-    columns = [f"p{percentile:.2f}" for percentile in percentiles]
-    all_quantiles = []
-    for idx, team in team_mapping.items():
-        team_current_points = current_scenario[team][num_games-1][1]
-        df = pd.DataFrame(
-            data=team_current_points + quantiles[:, idx-1, :].T.round(3),
-            columns=columns
-        )
-        df["team"] = team
-        df["real_points"] = [point[1] for point in current_scenario[team][num_games:]]
-        df["team_played"] = [point[0] for point in current_scenario[team][num_games:]]
-        df.reset_index(inplace=True)
-        df.rename(columns={"index": "game_id"}, inplace=True)
-        df["game_id"] += num_games + 1
-        all_quantiles.append(df)
-
-    all_quantiles = pd.concat(all_quantiles)
-    all_quantiles.to_csv(os.path.join(save_dir, "all_quantiles.csv"), index=False)
-
+    p2_5_points, median_points, p97_5_points = generate_quantiles(
+        points_matrix, current_scenario, team_mapping, num_games, save_dir
+    )
     points_on_current_scenario = {
         team: [point[1] for point in current_scenario[team]] for team in team_mapping.values()
     }
