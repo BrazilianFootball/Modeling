@@ -37,12 +37,15 @@ IGNORE_COLS = [
     "log_lik",
 ]
 
-DEFAULT_ITER_WARMUP = 1000
-DEFAULT_ITER_SAMPLING = 1000
+DEFAULT_ITER_WARMUP = 5000
+DEFAULT_ITER_SAMPLING = 5000
 
 CHAINS = 4
-ADAPT_DELTA = 0.8
-MAX_TREE_DEPTH = 10
+ADAPT_DELTA = 0.95
+ADAPT_INIT_PHASE = 150
+ADAPT_METRIC_WINDOW = 75
+ADAPT_STEP_SIZE = 150
+MAX_TREEDEPTH = 10
 
 generator_kwargs = {
     "n_clubs": N_CLUBS,
@@ -52,7 +55,10 @@ generator_kwargs = {
 model_kwargs = {
     "chains": CHAINS,
     "adapt_delta": ADAPT_DELTA,
-    "max_treedepth": MAX_TREE_DEPTH,
+    "adapt_init_phase": ADAPT_INIT_PHASE,
+    "adapt_metric_window": ADAPT_METRIC_WINDOW,
+    "adapt_step_size": ADAPT_STEP_SIZE,
+    "max_treedepth": MAX_TREEDEPTH,
 }
 
 ITER_WARMUP = {

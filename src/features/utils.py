@@ -199,7 +199,9 @@ def run_model(  # pylint: disable=too-many-locals
     need_update = setup_was_changed(model_name, data, **kwargs) or model_was_changed(
         model_name
     )
-    model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
+    model = cmdstanpy.CmdStanModel(
+        stan_file=f"models/{model_name}.stan", force_compile=True
+    )
 
     if os.path.exists(f"results/{model_name}/potential_problems.json"):
         with open(
