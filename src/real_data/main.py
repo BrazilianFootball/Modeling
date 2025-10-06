@@ -40,6 +40,8 @@ def process_data(
     n_iterations = len(model_list) * len(season_list) * len(game_list) * len(country_list)
     for i, values in enumerate(product(model_list, season_list, game_list, country_list)):
         model, season, actual_game, country = values
+        if season == 2019 and country in ["france", "netherlands"]:
+            continue
         if actual_game == "mid" and country in ["france", "germany", "netherlands", "portugal"]:
             actual_game = 153
         elif actual_game == "mid":
@@ -52,7 +54,7 @@ def process_data(
         print(
             f"Running {model} for {season} with {actual_game} games for {country} "
             f"(iteration {i+1} of {n_iterations}) "
-            f"Time elapsed: {time() - start_time:,.0f} seconds"
+            f"Time elapsed: {time() - start_time:,.2f} seconds"
             f"{' ' * 30}",
             end="\r",
             flush=True,
@@ -69,7 +71,10 @@ def process_data(
                 f"{' ' * 40}"
             )
 
-    print(f"\nTotal success: {success}/{n_iterations}")
+    print(
+        f"\nTotal success: {success}/{n_iterations}"
+        f"\nTime elapsed: {time() - start_time:,.2f} seconds"
+    )
 
 
 if __name__ == "__main__":
@@ -96,5 +101,4 @@ if __name__ == "__main__":
     # 18 teams championships
     new_games_list: list[int | str] = [45, 90, 135, 180, "mid", "end"]
     countries = ["france", "germany", "netherlands", "portugal"]
-
     process_data(models, seasons, new_games_list, countries)
