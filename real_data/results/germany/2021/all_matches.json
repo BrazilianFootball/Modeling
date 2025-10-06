@@ -1075,1070 +1075,2447 @@
     "away_team": "M'gladbach",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.70201,
+          0.18939,
+          0.1086
+        ]
+      }
+    }
   },
   "155": {
     "home_team": "Freiburg",
     "away_team": "Bielefeld",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.55165,
+          0.23685,
+          0.2115
+        ]
+      }
+    }
   },
   "156": {
     "home_team": "Greuther Furth",
     "away_team": "Stuttgart",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.18144,
+          0.22775,
+          0.59081
+        ]
+      }
+    }
   },
   "157": {
     "home_team": "Hoffenheim",
     "away_team": "Augsburg",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.50227,
+          0.24696,
+          0.25077
+        ]
+      }
+    }
   },
   "158": {
     "home_team": "Leverkusen",
     "away_team": "Union Berlin",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36943,
+          0.25551,
+          0.37506
+        ]
+      }
+    }
   },
   "159": {
     "home_team": "RB Leipzig",
     "away_team": "Mainz",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34852,
+          0.2555,
+          0.39598
+        ]
+      }
+    }
   },
   "160": {
     "home_team": "Ein Frankfurt",
     "away_team": "Dortmund",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30559,
+          0.25228,
+          0.44213
+        ]
+      }
+    }
   },
   "161": {
     "home_team": "Hertha",
     "away_team": "FC Koln",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.27767,
+          0.24833,
+          0.474
+        ]
+      }
+    }
   },
   "162": {
     "home_team": "Bochum",
     "away_team": "Wolfsburg",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36912,
+          0.25627,
+          0.37461
+        ]
+      }
+    }
   },
   "163": {
     "home_team": "Dortmund",
     "away_team": "Freiburg",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.41597,
+          0.25489,
+          0.32914
+        ]
+      }
+    }
   },
   "164": {
     "home_team": "FC Koln",
     "away_team": "Bayern Munich",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.17114,
+          0.22131,
+          0.60755
+        ]
+      }
+    }
   },
   "165": {
     "home_team": "Mainz",
     "away_team": "Bochum",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.43893,
+          0.25233,
+          0.30874
+        ]
+      }
+    }
   },
   "166": {
     "home_team": "Stuttgart",
     "away_team": "RB Leipzig",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30985,
+          0.25342,
+          0.43673
+        ]
+      }
+    }
   },
   "167": {
     "home_team": "Union Berlin",
     "away_team": "Hoffenheim",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37361,
+          0.25535,
+          0.37104
+        ]
+      }
+    }
   },
   "168": {
     "home_team": "Wolfsburg",
     "away_team": "Hertha",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3655,
+          0.25735,
+          0.37715
+        ]
+      }
+    }
   },
   "169": {
     "home_team": "M'gladbach",
     "away_team": "Leverkusen",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25203,
+          0.24512,
+          0.50285
+        ]
+      }
+    }
   },
   "170": {
     "home_team": "Augsburg",
     "away_team": "Ein Frankfurt",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25208,
+          0.24603,
+          0.50189
+        ]
+      }
+    }
   },
   "171": {
     "home_team": "Bielefeld",
     "away_team": "Greuther Furth",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.58988,
+          0.22474,
+          0.18538
+        ]
+      }
+    }
   },
   "172": {
     "home_team": "Ein Frankfurt",
     "away_team": "Bielefeld",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.52961,
+          0.24035,
+          0.23004
+        ]
+      }
+    }
   },
   "173": {
     "home_team": "Freiburg",
     "away_team": "Stuttgart",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.55259,
+          0.23289,
+          0.21452
+        ]
+      }
+    }
   },
   "174": {
     "home_team": "Greuther Furth",
     "away_team": "Mainz",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.12852,
+          0.20297,
+          0.66851
+        ]
+      }
+    }
   },
   "175": {
     "home_team": "Hoffenheim",
     "away_team": "Dortmund",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30667,
+          0.25285,
+          0.44048
+        ]
+      }
+    }
   },
   "176": {
     "home_team": "Leverkusen",
     "away_team": "Augsburg",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.50378,
+          0.24449,
+          0.25173
+        ]
+      }
+    }
   },
   "177": {
     "home_team": "M'gladbach",
     "away_team": "Union Berlin",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25001,
+          0.24549,
+          0.5045
+        ]
+      }
+    }
   },
   "178": {
     "home_team": "Bochum",
     "away_team": "FC Koln",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.26982,
+          0.24598,
+          0.4842
+        ]
+      }
+    }
   },
   "179": {
     "home_team": "RB Leipzig",
     "away_team": "Wolfsburg",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.41415,
+          0.25541,
+          0.33044
+        ]
+      }
+    }
   },
   "180": {
     "home_team": "Hertha",
     "away_team": "Bayern Munich",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.11471,
+          0.19024,
+          0.69505
+        ]
+      }
+    }
   },
   "181": {
     "home_team": "Hertha",
     "away_team": "Bochum",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37946,
+          0.25585,
+          0.36469
+        ]
+      }
+    }
   },
   "182": {
     "home_team": "Augsburg",
     "away_team": "Union Berlin",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.24937,
+          0.24389,
+          0.50674
+        ]
+      }
+    }
   },
   "183": {
     "home_team": "Bielefeld",
     "away_team": "M'gladbach",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34753,
+          0.25543,
+          0.39704
+        ]
+      }
+    }
   },
   "184": {
     "home_team": "FC Koln",
     "away_team": "Freiburg",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.32527,
+          0.25464,
+          0.42009
+        ]
+      }
+    }
   },
   "185": {
     "home_team": "Mainz",
     "away_team": "Hoffenheim",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3049,
+          0.25814,
+          0.43696
+        ]
+      }
+    }
   },
   "186": {
     "home_team": "Stuttgart",
     "away_team": "Ein Frankfurt",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.23159,
+          0.23943,
+          0.52898
+        ]
+      }
+    }
   },
   "187": {
     "home_team": "Bayern Munich",
     "away_team": "RB Leipzig",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.66672,
+          0.20191,
+          0.13137
+        ]
+      }
+    }
   },
   "188": {
     "home_team": "Dortmund",
     "away_team": "Leverkusen",
     "goals_team1": 2,
     "goals_team2": 5,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.44033,
+          0.25291,
+          0.30676
+        ]
+      }
+    }
   },
   "189": {
     "home_team": "Wolfsburg",
     "away_team": "Greuther Furth",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.61315,
+          0.21943,
+          0.16742
+        ]
+      }
+    }
   },
   "190": {
     "home_team": "RB Leipzig",
     "away_team": "FC Koln",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30779,
+          0.25145,
+          0.44076
+        ]
+      }
+    }
   },
   "191": {
     "home_team": "Bochum",
     "away_team": "Bayern Munich",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.11025,
+          0.18691,
+          0.70284
+        ]
+      }
+    }
   },
   "192": {
     "home_team": "Ein Frankfurt",
     "away_team": "Wolfsburg",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.50131,
+          0.24623,
+          0.25246
+        ]
+      }
+    }
   },
   "193": {
     "home_team": "Freiburg",
     "away_team": "Mainz",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.4621,
+          0.2516,
+          0.2863
+        ]
+      }
+    }
   },
   "194": {
     "home_team": "Greuther Furth",
     "away_team": "Hertha",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.16599,
+          0.21604,
+          0.61797
+        ]
+      }
+    }
   },
   "195": {
     "home_team": "M'gladbach",
     "away_team": "Augsburg",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36739,
+          0.25673,
+          0.37588
+        ]
+      }
+    }
   },
   "196": {
     "home_team": "Leverkusen",
     "away_team": "Stuttgart",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.52419,
+          0.24172,
+          0.23409
+        ]
+      }
+    }
   },
   "197": {
     "home_team": "Union Berlin",
     "away_team": "Dortmund",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30869,
+          0.25422,
+          0.43709
+        ]
+      }
+    }
   },
   "198": {
     "home_team": "Hoffenheim",
     "away_team": "Bielefeld",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.52765,
+          0.24196,
+          0.23039
+        ]
+      }
+    }
   },
   "199": {
     "home_team": "Mainz",
     "away_team": "Leverkusen",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30975,
+          0.25367,
+          0.43658
+        ]
+      }
+    }
   },
   "200": {
     "home_team": "Augsburg",
     "away_team": "Freiburg",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.23223,
+          0.24141,
+          0.52636
+        ]
+      }
+    }
   },
   "201": {
     "home_team": "Bielefeld",
     "away_team": "Union Berlin",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.22851,
+          0.23917,
+          0.53232
+        ]
+      }
+    }
   },
   "202": {
     "home_team": "Stuttgart",
     "away_team": "Bochum",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34928,
+          0.2552,
+          0.39552
+        ]
+      }
+    }
   },
   "203": {
     "home_team": "Wolfsburg",
     "away_team": "Hoffenheim",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25146,
+          0.24506,
+          0.50348
+        ]
+      }
+    }
   },
   "204": {
     "home_team": "FC Koln",
     "away_team": "Ein Frankfurt",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.35126,
+          0.25607,
+          0.39267
+        ]
+      }
+    }
   },
   "205": {
     "home_team": "Bayern Munich",
     "away_team": "Greuther Furth",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.84894,
+          0.11674,
+          0.03432
+        ]
+      }
+    }
   },
   "206": {
     "home_team": "Dortmund",
     "away_team": "M'gladbach",
     "goals_team1": 6,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.57437,
+          0.23,
+          0.19563
+        ]
+      }
+    }
   },
   "207": {
     "home_team": "Hertha",
     "away_team": "RB Leipzig",
     "goals_team1": 1,
     "goals_team2": 6,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.33788,
+          0.25573,
+          0.40639
+        ]
+      }
+    }
   },
   "208": {
     "home_team": "Hoffenheim",
     "away_team": "Stuttgart",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.5242,
+          0.24195,
+          0.23385
+        ]
+      }
+    }
   },
   "209": {
     "home_team": "Freiburg",
     "away_team": "Hertha",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.51955,
+          0.24151,
+          0.23894
+        ]
+      }
+    }
   },
   "210": {
     "home_team": "Greuther Furth",
     "away_team": "FC Koln",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.10715,
+          0.18805,
+          0.7048
+        ]
+      }
+    }
   },
   "211": {
     "home_team": "Leverkusen",
     "away_team": "Bielefeld",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.52749,
+          0.24217,
+          0.23034
+        ]
+      }
+    }
   },
   "212": {
     "home_team": "M'gladbach",
     "away_team": "Wolfsburg",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37049,
+          0.25517,
+          0.37434
+        ]
+      }
+    }
   },
   "213": {
     "home_team": "Union Berlin",
     "away_team": "Mainz",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.43585,
+          0.25772,
+          0.30643
+        ]
+      }
+    }
   },
   "214": {
     "home_team": "Ein Frankfurt",
     "away_team": "Bayern Munich",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.18824,
+          0.22467,
+          0.58709
+        ]
+      }
+    }
   },
   "215": {
     "home_team": "Bochum",
     "away_team": "RB Leipzig",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.33121,
+          0.25418,
+          0.41461
+        ]
+      }
+    }
   },
   "216": {
     "home_team": "Augsburg",
     "away_team": "Dortmund",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.19854,
+          0.2306,
+          0.57086
+        ]
+      }
+    }
   },
   "217": {
     "home_team": "Bielefeld",
     "away_team": "Augsburg",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34453,
+          0.25741,
+          0.39806
+        ]
+      }
+    }
   },
   "218": {
     "home_team": "Bayern Munich",
     "away_team": "Leverkusen",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.58874,
+          0.22621,
+          0.18505
+        ]
+      }
+    }
   },
   "219": {
     "home_team": "Bochum",
     "away_team": "Greuther Furth",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.61078,
+          0.2191,
+          0.17012
+        ]
+      }
+    }
   },
   "220": {
     "home_team": "Hertha",
     "away_team": "Ein Frankfurt",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25994,
+          0.24531,
+          0.49475
+        ]
+      }
+    }
   },
   "221": {
     "home_team": "RB Leipzig",
     "away_team": "Freiburg",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.2676,
+          0.24675,
+          0.48565
+        ]
+      }
+    }
   },
   "222": {
     "home_team": "Wolfsburg",
     "away_team": "Union Berlin",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.24797,
+          0.24789,
+          0.50414
+        ]
+      }
+    }
   },
   "223": {
     "home_team": "Stuttgart",
     "away_team": "M'gladbach",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34719,
+          0.25906,
+          0.39375
+        ]
+      }
+    }
   },
   "224": {
     "home_team": "FC Koln",
     "away_team": "Hoffenheim",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.35174,
+          0.25537,
+          0.39289
+        ]
+      }
+    }
   },
   "225": {
     "home_team": "Freiburg",
     "away_team": "Wolfsburg",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.52722,
+          0.24227,
+          0.23051
+        ]
+      }
+    }
   },
   "226": {
     "home_team": "Hoffenheim",
     "away_team": "Bayern Munich",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.18529,
+          0.22601,
+          0.5887
+        ]
+      }
+    }
   },
   "227": {
     "home_team": "Union Berlin",
     "away_team": "Stuttgart",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.52762,
+          0.24272,
+          0.22966
+        ]
+      }
+    }
   },
   "228": {
     "home_team": "M'gladbach",
     "away_team": "Hertha",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36366,
+          0.25854,
+          0.3778
+        ]
+      }
+    }
   },
   "229": {
     "home_team": "Leverkusen",
     "away_team": "FC Koln",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.39115,
+          0.25588,
+          0.35297
+        ]
+      }
+    }
   },
   "230": {
     "home_team": "Dortmund",
     "away_team": "Bielefeld",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.59572,
+          0.22466,
+          0.17962
+        ]
+      }
+    }
   },
   "231": {
     "home_team": "Ein Frankfurt",
     "away_team": "Bochum",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.5036,
+          0.24613,
+          0.25027
+        ]
+      }
+    }
   },
   "232": {
     "home_team": "Greuther Furth",
     "away_team": "RB Leipzig",
     "goals_team1": 1,
     "goals_team2": 6,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.14212,
+          0.20848,
+          0.6494
+        ]
+      }
+    }
   },
   "233": {
     "home_team": "Mainz",
     "away_team": "Dortmund",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.24867,
+          0.24342,
+          0.50791
+        ]
+      }
+    }
   },
   "234": {
     "home_team": "Bochum",
     "away_team": "M'gladbach",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37175,
+          0.25931,
+          0.36894
+        ]
+      }
+    }
   },
   "235": {
     "home_team": "Greuther Furth",
     "away_team": "Freiburg",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.0873,
+          0.17448,
+          0.73822
+        ]
+      }
+    }
   },
   "236": {
     "home_team": "Hertha",
     "away_team": "Hoffenheim",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25785,
+          0.24472,
+          0.49743
+        ]
+      }
+    }
   },
   "237": {
     "home_team": "Mainz",
     "away_team": "Bielefeld",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.46602,
+          0.25074,
+          0.28324
+        ]
+      }
+    }
   },
   "238": {
     "home_team": "Stuttgart",
     "away_team": "Augsburg",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3501,
+          0.25594,
+          0.39396
+        ]
+      }
+    }
   },
   "239": {
     "home_team": "Bayern Munich",
     "away_team": "Union Berlin",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.58799,
+          0.22599,
+          0.18602
+        ]
+      }
+    }
   },
   "240": {
     "home_team": "RB Leipzig",
     "away_team": "Ein Frankfurt",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.28808,
+          0.25289,
+          0.45903
+        ]
+      }
+    }
   },
   "241": {
     "home_team": "Wolfsburg",
     "away_team": "Leverkusen",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25198,
+          0.24544,
+          0.50258
+        ]
+      }
+    }
   },
   "242": {
     "home_team": "FC Koln",
     "away_team": "Dortmund",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.28581,
+          0.25173,
+          0.46246
+        ]
+      }
+    }
   },
   "243": {
     "home_team": "Union Berlin",
     "away_team": "FC Koln",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.39455,
+          0.25705,
+          0.3484
+        ]
+      }
+    }
   },
   "244": {
     "home_team": "Bielefeld",
     "away_team": "Stuttgart",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3689,
+          0.2574,
+          0.3737
+        ]
+      }
+    }
   },
   "245": {
     "home_team": "Ein Frankfurt",
     "away_team": "Greuther Furth",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.72024,
+          0.1817,
+          0.09806
+        ]
+      }
+    }
   },
   "246": {
     "home_team": "Freiburg",
     "away_team": "Bayern Munich",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.20551,
+          0.23309,
+          0.5614
+        ]
+      }
+    }
   },
   "247": {
     "home_team": "Hoffenheim",
     "away_team": "Bochum",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.50294,
+          0.24642,
+          0.25064
+        ]
+      }
+    }
   },
   "248": {
     "home_team": "Leverkusen",
     "away_team": "Hertha",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.49519,
+          0.24595,
+          0.25886
+        ]
+      }
+    }
   },
   "249": {
     "home_team": "Dortmund",
     "away_team": "RB Leipzig",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.53089,
+          0.23962,
+          0.22949
+        ]
+      }
+    }
   },
   "250": {
     "home_team": "Augsburg",
     "away_team": "Wolfsburg",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37212,
+          0.25604,
+          0.37184
+        ]
+      }
+    }
   },
   "251": {
     "home_team": "M'gladbach",
     "away_team": "Mainz",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.31048,
+          0.2507,
+          0.43882
+        ]
+      }
+    }
   },
   "252": {
     "home_team": "Augsburg",
     "away_team": "Mainz",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30995,
+          0.25371,
+          0.43634
+        ]
+      }
+    }
   },
   "253": {
     "home_team": "Stuttgart",
     "away_team": "Dortmund",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.18355,
+          0.22669,
+          0.58976
+        ]
+      }
+    }
   },
   "254": {
     "home_team": "Bayern Munich",
     "away_team": "Augsburg",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.70047,
+          0.19058,
+          0.10895
+        ]
+      }
+    }
   },
   "255": {
     "home_team": "FC Koln",
     "away_team": "Mainz",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.41536,
+          0.25675,
+          0.32789
+        ]
+      }
+    }
   },
   "256": {
     "home_team": "Greuther Furth",
     "away_team": "M'gladbach",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.16992,
+          0.21953,
+          0.61055
+        ]
+      }
+    }
   },
   "257": {
     "home_team": "Wolfsburg",
     "away_team": "Bielefeld",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.39776,
+          0.25605,
+          0.34619
+        ]
+      }
+    }
   },
   "258": {
     "home_team": "Hertha",
     "away_team": "Union Berlin",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25586,
+          0.24631,
+          0.49783
+        ]
+      }
+    }
   },
   "259": {
     "home_team": "Bochum",
     "away_team": "Leverkusen",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25172,
+          0.24309,
+          0.50519
+        ]
+      }
+    }
   },
   "260": {
     "home_team": "Ein Frankfurt",
     "away_team": "Freiburg",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3475,
+          0.25256,
+          0.39994
+        ]
+      }
+    }
   },
   "261": {
     "home_team": "RB Leipzig",
     "away_team": "Hoffenheim",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.28744,
+          0.25284,
+          0.45972
+        ]
+      }
+    }
   },
   "262": {
     "home_team": "Augsburg",
     "away_team": "Hertha",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36837,
+          0.25464,
+          0.37699
+        ]
+      }
+    }
   },
   "263": {
     "home_team": "Dortmund",
     "away_team": "Wolfsburg",
     "goals_team1": 6,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.57211,
+          0.23017,
+          0.19772
+        ]
+      }
+    }
   },
   "264": {
     "home_team": "Freiburg",
     "away_team": "Bochum",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.53084,
+          0.23875,
+          0.23041
+        ]
+      }
+    }
   },
   "265": {
     "home_team": "Mainz",
     "away_team": "Stuttgart",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.46088,
+          0.25107,
+          0.28805
+        ]
+      }
+    }
   },
   "266": {
     "home_team": "M'gladbach",
     "away_team": "FC Koln",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.26935,
+          0.24828,
+          0.48237
+        ]
+      }
+    }
   },
   "267": {
     "home_team": "Bielefeld",
     "away_team": "Bayern Munich",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.09755,
+          0.18083,
+          0.72162
+        ]
+      }
+    }
   },
   "268": {
     "home_team": "Hoffenheim",
     "away_team": "Greuther Furth",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.72212,
+          0.18127,
+          0.09661
+        ]
+      }
+    }
   },
   "269": {
     "home_team": "Union Berlin",
     "away_team": "Ein Frankfurt",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37158,
+          0.25586,
+          0.37256
+        ]
+      }
+    }
   },
   "270": {
     "home_team": "Leverkusen",
     "away_team": "RB Leipzig",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.46234,
+          0.25151,
+          0.28615
+        ]
+      }
+    }
   },
   "271": {
     "home_team": "Wolfsburg",
     "away_team": "Mainz",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30872,
+          0.25344,
+          0.43784
+        ]
+      }
+    }
   },
   "272": {
     "home_team": "Ein Frankfurt",
     "away_team": "Hoffenheim",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36949,
+          0.25886,
+          0.37165
+        ]
+      }
+    }
   },
   "273": {
     "home_team": "FC Koln",
     "away_team": "Bielefeld",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.51001,
+          0.24521,
+          0.24478
+        ]
+      }
+    }
   },
   "274": {
     "home_team": "Freiburg",
     "away_team": "M'gladbach",
     "goals_team1": 3,
     "goals_team2": 3,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.53159,
+          0.2414,
+          0.22701
+        ]
+      }
+    }
   },
   "275": {
     "home_team": "Greuther Furth",
     "away_team": "Leverkusen",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.0985,
+          0.18103,
+          0.72047
+        ]
+      }
+    }
   },
   "276": {
     "home_team": "RB Leipzig",
     "away_team": "Union Berlin",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.28777,
+          0.25085,
+          0.46138
+        ]
+      }
+    }
   },
   "277": {
     "home_team": "Bayern Munich",
     "away_team": "Dortmund",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.51809,
+          0.24046,
+          0.24145
+        ]
+      }
+    }
   },
   "278": {
     "home_team": "Bochum",
     "away_team": "Augsburg",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.36915,
+          0.25729,
+          0.37356
+        ]
+      }
+    }
   },
   "279": {
     "home_team": "Hertha",
     "away_team": "Stuttgart",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.40362,
+          0.25276,
+          0.34362
+        ]
+      }
+    }
   },
   "280": {
     "home_team": "Union Berlin",
     "away_team": "Greuther Furth",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.72311,
+          0.18029,
+          0.0966
+        ]
+      }
+    }
   },
   "281": {
     "home_team": "Augsburg",
     "away_team": "FC Koln",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.2684,
+          0.24957,
+          0.48203
+        ]
+      }
+    }
   },
   "282": {
     "home_team": "Bielefeld",
     "away_team": "Hertha",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34573,
+          0.25356,
+          0.40071
+        ]
+      }
+    }
   },
   "283": {
     "home_team": "Dortmund",
     "away_team": "Bochum",
     "goals_team1": 3,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.5723,
+          0.23072,
+          0.19698
+        ]
+      }
+    }
   },
   "284": {
     "home_team": "Mainz",
     "away_team": "Bayern Munich",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.14437,
+          0.20814,
+          0.64749
+        ]
+      }
+    }
   },
   "285": {
     "home_team": "Stuttgart",
     "away_team": "Wolfsburg",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34707,
+          0.25524,
+          0.39769
+        ]
+      }
+    }
   },
   "286": {
     "home_team": "Hoffenheim",
     "away_team": "Freiburg",
     "goals_team1": 3,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34765,
+          0.25455,
+          0.3978
+        ]
+      }
+    }
   },
   "287": {
     "home_team": "Leverkusen",
     "away_team": "Ein Frankfurt",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37211,
+          0.25595,
+          0.37194
+        ]
+      }
+    }
   },
   "288": {
     "home_team": "M'gladbach",
     "away_team": "RB Leipzig",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.32765,
+          0.25449,
+          0.41786
+        ]
+      }
+    }
   },
   "289": {
     "home_team": "Bochum",
     "away_team": "Bielefeld",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.39678,
+          0.25673,
+          0.34649
+        ]
+      }
+    }
   },
   "290": {
     "home_team": "FC Koln",
     "away_team": "Wolfsburg",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.48133,
+          0.24879,
+          0.26988
+        ]
+      }
+    }
   },
   "291": {
     "home_team": "Freiburg",
     "away_team": "Union Berlin",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3974,
+          0.25674,
+          0.34586
+        ]
+      }
+    }
   },
   "292": {
     "home_team": "Greuther Furth",
     "away_team": "Dortmund",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.07069,
+          0.15977,
+          0.76954
+        ]
+      }
+    }
   },
   "293": {
     "home_team": "Hoffenheim",
     "away_team": "Leverkusen",
     "goals_team1": 2,
     "goals_team2": 4,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.37128,
+          0.25621,
+          0.37251
+        ]
+      }
+    }
   },
   "294": {
     "home_team": "Hertha",
     "away_team": "Mainz",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A"
+    "result": "A",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.31472,
+          0.2539,
+          0.43138
+        ]
+      }
+    }
   },
   "295": {
     "home_team": "Ein Frankfurt",
     "away_team": "M'gladbach",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.50381,
+          0.24563,
+          0.25056
+        ]
+      }
+    }
   },
   "296": {
     "home_team": "Bayern Munich",
     "away_team": "Stuttgart",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.71772,
+          0.18209,
+          0.10019
+        ]
+      }
+    }
   },
   "297": {
     "home_team": "RB Leipzig",
     "away_team": "Augsburg",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.41486,
+          0.25665,
+          0.32849
+        ]
+      }
+    }
   },
   "298": {
     "home_team": "Augsburg",
     "away_team": "Greuther Furth",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.61312,
+          0.21909,
+          0.16779
+        ]
+      }
+    }
   },
   "299": {
     "home_team": "Bielefeld",
     "away_team": "RB Leipzig",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.3073,
+          0.25382,
+          0.43888
+        ]
+      }
+    }
   },
   "300": {
     "home_team": "Dortmund",
     "away_team": "Hertha",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.56344,
+          0.23419,
+          0.20237
+        ]
+      }
+    }
   },
   "301": {
     "home_team": "Leverkusen",
     "away_team": "Freiburg",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.34825,
+          0.25654,
+          0.39521
+        ]
+      }
+    }
   },
   "302": {
     "home_team": "Mainz",
     "away_team": "Ein Frankfurt",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.30952,
+          0.25549,
+          0.43499
+        ]
+      }
+    }
   },
   "303": {
     "home_team": "M'gladbach",
     "away_team": "Hoffenheim",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.25251,
+          0.24392,
+          0.50357
+        ]
+      }
+    }
   },
   "304": {
     "home_team": "Stuttgart",
     "away_team": "FC Koln",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.2509,
+          0.24401,
+          0.50509
+        ]
+      }
+    }
   },
   "305": {
     "home_team": "Union Berlin",
     "away_team": "Bochum",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H"
+    "result": "H",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.50614,
+          0.24677,
+          0.24709
+        ]
+      }
+    }
   },
   "306": {
     "home_team": "Wolfsburg",
     "away_team": "Bayern Munich",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D"
+    "result": "D",
+    "probabilities": {
+      "bradley_terry_3": {
+        "153": [
+          0.11286,
+          0.19037,
+          0.69677
+        ]
+      }
+    }
   }
 }

@@ -319,5359 +319,2344 @@
     "away_team": "Chelsea",
     "goals_team1": 2,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33265,
-          0.28103,
-          0.38632
-        ]
-      }
-    }
+    "result": "A"
   },
   "047": {
     "home_team": "Norwich",
     "away_team": "Man City",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.1648,
-          0.25723,
-          0.57797
-        ]
-      }
-    }
+    "result": "H"
   },
   "048": {
     "home_team": "Bournemouth",
     "away_team": "Everton",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29243,
-          0.29248,
-          0.41509
-        ]
-      }
-    }
+    "result": "H"
   },
   "049": {
     "home_team": "Watford",
     "away_team": "Arsenal",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.17509,
-          0.26274,
-          0.56217
-        ]
-      }
-    }
+    "result": "D"
   },
   "050": {
     "home_team": "Aston Villa",
     "away_team": "West Ham",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23111,
-          0.28587,
-          0.48302
-        ]
-      }
-    }
+    "result": "D"
   },
   "051": {
     "home_team": "Southampton",
     "away_team": "Bournemouth",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40866,
-          0.29237,
-          0.29897
-        ]
-      }
-    }
+    "result": "A"
   },
   "052": {
     "home_team": "Leicester",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34255,
-          0.2967,
-          0.36075
-        ]
-      }
-    }
+    "result": "H"
   },
   "053": {
     "home_team": "Burnley",
     "away_team": "Norwich",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4036,
-          0.29657,
-          0.29983
-        ]
-      }
-    }
+    "result": "H"
   },
   "054": {
     "home_team": "Everton",
     "away_team": "Sheffield United",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41832,
-          0.29182,
-          0.28986
-        ]
-      }
-    }
+    "result": "A"
   },
   "055": {
     "home_team": "Man City",
     "away_team": "Watford",
     "goals_team1": 8,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.64166,
-          0.23351,
-          0.12483
-        ]
-      }
-    }
+    "result": "H"
   },
   "056": {
     "home_team": "Newcastle",
     "away_team": "Brighton",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31537,
-          0.29627,
-          0.38836
-        ]
-      }
-    }
+    "result": "D"
   },
   "057": {
     "home_team": "Crystal Palace",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38418,
-          0.29342,
-          0.3224
-        ]
-      }
-    }
+    "result": "D"
   },
   "058": {
     "home_team": "West Ham",
     "away_team": "Man United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34579,
-          0.29448,
-          0.35973
-        ]
-      }
-    }
+    "result": "H"
   },
   "059": {
     "home_team": "Arsenal",
     "away_team": "Aston Villa",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51037,
-          0.27537,
-          0.21426
-        ]
-      }
-    }
+    "result": "H"
   },
   "060": {
     "home_team": "Chelsea",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.1845,
-          0.24738,
-          0.56812
-        ]
-      }
-    }
+    "result": "A"
   },
   "061": {
     "home_team": "Sheffield United",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.14317,
-          0.24781,
-          0.60902
-        ]
-      }
-    }
+    "result": "A"
   },
   "062": {
     "home_team": "Aston Villa",
     "away_team": "Burnley",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29176,
-          0.28918,
-          0.41906
-        ]
-      }
-    }
+    "result": "D"
   },
   "063": {
     "home_team": "Bournemouth",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27829,
-          0.29124,
-          0.43047
-        ]
-      }
-    }
+    "result": "D"
   },
   "064": {
     "home_team": "Chelsea",
     "away_team": "Brighton",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39468,
-          0.27382,
-          0.3315
-        ]
-      }
-    }
+    "result": "H"
   },
   "065": {
     "home_team": "Crystal Palace",
     "away_team": "Norwich",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43386,
-          0.28832,
-          0.27782
-        ]
-      }
-    }
+    "result": "H"
   },
   "066": {
     "home_team": "Tottenham",
     "away_team": "Southampton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38006,
-          0.29815,
-          0.32179
-        ]
-      }
-    }
+    "result": "H"
   },
   "067": {
     "home_team": "Wolves",
     "away_team": "Watford",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46375,
-          0.28564,
-          0.25061
-        ]
-      }
-    }
+    "result": "H"
   },
   "068": {
     "home_team": "Everton",
     "away_team": "Man City",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24162,
-          0.28382,
-          0.47456
-        ]
-      }
-    }
+    "result": "A"
   },
   "069": {
     "home_team": "Leicester",
     "away_team": "Newcastle",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46873,
-          0.28414,
-          0.24713
-        ]
-      }
-    }
+    "result": "H"
   },
   "070": {
     "home_team": "Man United",
     "away_team": "Arsenal",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33632,
-          0.2963,
-          0.36738
-        ]
-      }
-    }
+    "result": "D"
   },
   "071": {
     "home_team": "Brighton",
     "away_team": "Tottenham",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26955,
-          0.29008,
-          0.44037
-        ]
-      }
-    }
+    "result": "H"
   },
   "072": {
     "home_team": "Burnley",
     "away_team": "Everton",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30688,
-          0.29064,
-          0.40248
-        ]
-      }
-    }
+    "result": "H"
   },
   "073": {
     "home_team": "Liverpool",
     "away_team": "Leicester",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53313,
-          0.27205,
-          0.19482
-        ]
-      }
-    }
+    "result": "H"
   },
   "074": {
     "home_team": "Norwich",
     "away_team": "Aston Villa",
     "goals_team1": 1,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36526,
-          0.29493,
-          0.33981
-        ]
-      }
-    }
+    "result": "A"
   },
   "075": {
     "home_team": "Watford",
     "away_team": "Sheffield United",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25656,
-          0.28557,
-          0.45787
-        ]
-      }
-    }
+    "result": "D"
   },
   "076": {
     "home_team": "West Ham",
     "away_team": "Crystal Palace",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39182,
-          0.29628,
-          0.3119
-        ]
-      }
-    }
+    "result": "A"
   },
   "077": {
     "home_team": "Arsenal",
     "away_team": "Bournemouth",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45793,
-          0.28492,
-          0.25715
-        ]
-      }
-    }
+    "result": "H"
   },
   "078": {
     "home_team": "Man City",
     "away_team": "Wolves",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53564,
-          0.27069,
-          0.19367
-        ]
-      }
-    }
+    "result": "A"
   },
   "079": {
     "home_team": "Southampton",
     "away_team": "Chelsea",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37943,
-          0.28025,
-          0.34032
-        ]
-      }
-    }
+    "result": "A"
   },
   "080": {
     "home_team": "Newcastle",
     "away_team": "Man United",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23489,
-          0.2868,
-          0.47831
-        ]
-      }
-    }
+    "result": "H"
   },
   "081": {
     "home_team": "Everton",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33654,
-          0.29325,
-          0.37021
-        ]
-      }
-    }
+    "result": "H"
   },
   "082": {
     "home_team": "Aston Villa",
     "away_team": "Brighton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30283,
-          0.29415,
-          0.40302
-        ]
-      }
-    }
+    "result": "H"
   },
   "083": {
     "home_team": "Bournemouth",
     "away_team": "Norwich",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39663,
-          0.29184,
-          0.31153
-        ]
-      }
-    }
+    "result": "D"
   },
   "084": {
     "home_team": "Chelsea",
     "away_team": "Newcastle",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42808,
-          0.27542,
-          0.2965
-        ]
-      }
-    }
+    "result": "H"
   },
   "085": {
     "home_team": "Leicester",
     "away_team": "Burnley",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41874,
-          0.29161,
-          0.28965
-        ]
-      }
-    }
+    "result": "H"
   },
   "086": {
     "home_team": "Tottenham",
     "away_team": "Watford",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54984,
-          0.26595,
-          0.18421
-        ]
-      }
-    }
+    "result": "D"
   },
   "087": {
     "home_team": "Wolves",
     "away_team": "Southampton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3014,
-          0.2922,
-          0.4064
-        ]
-      }
-    }
+    "result": "D"
   },
   "088": {
     "home_team": "Crystal Palace",
     "away_team": "Man City",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22152,
-          0.2783,
-          0.50018
-        ]
-      }
-    }
+    "result": "A"
   },
   "089": {
     "home_team": "Man United",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.20112,
-          0.2741,
-          0.52478
-        ]
-      }
-    }
+    "result": "D"
   },
   "090": {
     "home_team": "Sheffield United",
     "away_team": "Arsenal",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25772,
-          0.28819,
-          0.45409
-        ]
-      }
-    }
+    "result": "H"
   },
   "091": {
     "home_team": "Southampton",
     "away_team": "Leicester",
     "goals_team1": 0,
     "goals_team2": 9,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33079,
-          0.29946,
-          0.36975
-        ]
-      }
-    }
+    "result": "A"
   },
   "092": {
     "home_team": "Man City",
     "away_team": "Aston Villa",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.58868,
-          0.25624,
-          0.15508
-        ]
-      }
-    }
+    "result": "H"
   },
   "093": {
     "home_team": "Brighton",
     "away_team": "Everton",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29219,
-          0.29142,
-          0.41639
-        ]
-      }
-    }
+    "result": "H"
   },
   "094": {
     "home_team": "Watford",
     "away_team": "Bournemouth",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25153,
-          0.28733,
-          0.46114
-        ]
-      }
-    }
+    "result": "D"
   },
   "095": {
     "home_team": "West Ham",
     "away_team": "Sheffield United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43133,
-          0.29106,
-          0.27761
-        ]
-      }
-    }
+    "result": "D"
   },
   "096": {
     "home_team": "Burnley",
     "away_team": "Chelsea",
     "goals_team1": 2,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34307,
-          0.27938,
-          0.37755
-        ]
-      }
-    }
+    "result": "A"
   },
   "097": {
     "home_team": "Newcastle",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3101,
-          0.29456,
-          0.39534
-        ]
-      }
-    }
+    "result": "D"
   },
   "098": {
     "home_team": "Arsenal",
     "away_team": "Crystal Palace",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41442,
-          0.29491,
-          0.29067
-        ]
-      }
-    }
+    "result": "D"
   },
   "099": {
     "home_team": "Liverpool",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.5245,
-          0.27374,
-          0.20176
-        ]
-      }
-    }
+    "result": "H"
   },
   "100": {
     "home_team": "Norwich",
     "away_team": "Man United",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23676,
-          0.28484,
-          0.4784
-        ]
-      }
-    }
+    "result": "A"
   },
   "101": {
     "home_team": "Bournemouth",
     "away_team": "Man United",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27355,
-          0.28989,
-          0.43656
-        ]
-      }
-    }
+    "result": "H"
   },
   "102": {
     "home_team": "Arsenal",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44639,
-          0.28982,
-          0.26379
-        ]
-      }
-    }
+    "result": "D"
   },
   "103": {
     "home_team": "Aston Villa",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.11576,
-          0.22766,
-          0.65658
-        ]
-      }
-    }
+    "result": "A"
   },
   "104": {
     "home_team": "Brighton",
     "away_team": "Norwich",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3904,
-          0.29472,
-          0.31488
-        ]
-      }
-    }
+    "result": "H"
   },
   "105": {
     "home_team": "Man City",
     "away_team": "Southampton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.483,
-          0.28176,
-          0.23524
-        ]
-      }
-    }
+    "result": "H"
   },
   "106": {
     "home_team": "Sheffield United",
     "away_team": "Burnley",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33547,
-          0.29883,
-          0.3657
-        ]
-      }
-    }
+    "result": "H"
   },
   "107": {
     "home_team": "West Ham",
     "away_team": "Newcastle",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47323,
-          0.28527,
-          0.2415
-        ]
-      }
-    }
+    "result": "A"
   },
   "108": {
     "home_team": "Watford",
     "away_team": "Chelsea",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24839,
-          0.26746,
-          0.48415
-        ]
-      }
-    }
+    "result": "A"
   },
   "109": {
     "home_team": "Crystal Palace",
     "away_team": "Leicester",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31304,
-          0.297,
-          0.38996
-        ]
-      }
-    }
+    "result": "A"
   },
   "110": {
     "home_team": "Everton",
     "away_team": "Tottenham",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.329,
-          0.29416,
-          0.37684
-        ]
-      }
-    }
+    "result": "D"
   },
   "111": {
     "home_team": "Norwich",
     "away_team": "Watford",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41678,
-          0.29399,
-          0.28923
-        ]
-      }
-    }
+    "result": "A"
   },
   "112": {
     "home_team": "Chelsea",
     "away_team": "Crystal Palace",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35864,
-          0.27814,
-          0.36322
-        ]
-      }
-    }
+    "result": "H"
   },
   "113": {
     "home_team": "Burnley",
     "away_team": "West Ham",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29439,
-          0.29415,
-          0.41146
-        ]
-      }
-    }
+    "result": "H"
   },
   "114": {
     "home_team": "Newcastle",
     "away_team": "Bournemouth",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31373,
-          0.29568,
-          0.39059
-        ]
-      }
-    }
+    "result": "H"
   },
   "115": {
     "home_team": "Southampton",
     "away_team": "Everton",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3408,
-          0.29727,
-          0.36193
-        ]
-      }
-    }
+    "result": "A"
   },
   "116": {
     "home_team": "Tottenham",
     "away_team": "Sheffield United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4393,
-          0.29232,
-          0.26838
-        ]
-      }
-    }
+    "result": "D"
   },
   "117": {
     "home_team": "Leicester",
     "away_team": "Arsenal",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32597,
-          0.29626,
-          0.37777
-        ]
-      }
-    }
+    "result": "H"
   },
   "118": {
     "home_team": "Man United",
     "away_team": "Brighton",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44093,
-          0.28786,
-          0.27121
-        ]
-      }
-    }
+    "result": "H"
   },
   "119": {
     "home_team": "Wolves",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40772,
-          0.29211,
-          0.30017
-        ]
-      }
-    }
+    "result": "H"
   },
   "120": {
     "home_team": "Liverpool",
     "away_team": "Man City",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42225,
-          0.29306,
-          0.28469
-        ]
-      }
-    }
+    "result": "H"
   },
   "121": {
     "home_team": "West Ham",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34041,
-          0.29575,
-          0.36384
-        ]
-      }
-    }
+    "result": "A"
   },
   "122": {
     "home_team": "Arsenal",
     "away_team": "Southampton",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39694,
-          0.29349,
-          0.30957
-        ]
-      }
-    }
+    "result": "D"
   },
   "123": {
     "home_team": "Bournemouth",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35118,
-          0.29421,
-          0.35461
-        ]
-      }
-    }
+    "result": "A"
   },
   "124": {
     "home_team": "Brighton",
     "away_team": "Leicester",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27555,
-          0.29181,
-          0.43264
-        ]
-      }
-    }
+    "result": "A"
   },
   "125": {
     "home_team": "Crystal Palace",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.16746,
-          0.26201,
-          0.57053
-        ]
-      }
-    }
+    "result": "A"
   },
   "126": {
     "home_team": "Everton",
     "away_team": "Norwich",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4578,
-          0.28623,
-          0.25597
-        ]
-      }
-    }
+    "result": "A"
   },
   "127": {
     "home_team": "Watford",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24442,
-          0.28103,
-          0.47455
-        ]
-      }
-    }
+    "result": "A"
   },
   "128": {
     "home_team": "Man City",
     "away_team": "Chelsea",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.49793,
-          0.26498,
-          0.23709
-        ]
-      }
-    }
+    "result": "H"
   },
   "129": {
     "home_team": "Sheffield United",
     "away_team": "Man United",
     "goals_team1": 3,
     "goals_team2": 3,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27049,
-          0.28968,
-          0.43983
-        ]
-      }
-    }
+    "result": "D"
   },
   "130": {
     "home_team": "Aston Villa",
     "away_team": "Newcastle",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33734,
-          0.30009,
-          0.36257
-        ]
-      }
-    }
+    "result": "H"
   },
   "131": {
     "home_team": "Newcastle",
     "away_team": "Man City",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.16371,
-          0.25592,
-          0.58037
-        ]
-      }
-    }
+    "result": "D"
   },
   "132": {
     "home_team": "Burnley",
     "away_team": "Crystal Palace",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3298,
-          0.29434,
-          0.37586
-        ]
-      }
-    }
+    "result": "A"
   },
   "133": {
     "home_team": "Chelsea",
     "away_team": "West Ham",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32278,
-          0.27558,
-          0.40164
-        ]
-      }
-    }
+    "result": "A"
   },
   "134": {
     "home_team": "Liverpool",
     "away_team": "Brighton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.60983,
-          0.2475,
-          0.14267
-        ]
-      }
-    }
+    "result": "H"
   },
   "135": {
     "home_team": "Tottenham",
     "away_team": "Bournemouth",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43598,
-          0.29041,
-          0.27361
-        ]
-      }
-    }
+    "result": "H"
   },
   "136": {
     "home_team": "Southampton",
     "away_team": "Watford",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51852,
-          0.27483,
-          0.20665
-        ]
-      }
-    }
+    "result": "H"
   },
   "137": {
     "home_team": "Norwich",
     "away_team": "Arsenal",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22392,
-          0.27923,
-          0.49685
-        ]
-      }
-    }
+    "result": "D"
   },
   "138": {
     "home_team": "Wolves",
     "away_team": "Sheffield United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35708,
-          0.29668,
-          0.34624
-        ]
-      }
-    }
+    "result": "D"
   },
   "139": {
     "home_team": "Leicester",
     "away_team": "Everton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36534,
-          0.29468,
-          0.33998
-        ]
-      }
-    }
+    "result": "H"
   },
   "140": {
     "home_team": "Man United",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.49414,
-          0.28047,
-          0.22539
-        ]
-      }
-    }
+    "result": "D"
   },
   "141": {
     "home_team": "Crystal Palace",
     "away_team": "Bournemouth",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38681,
-          0.29882,
-          0.31437
-        ]
-      }
-    }
+    "result": "H"
   },
   "142": {
     "home_team": "Burnley",
     "away_team": "Man City",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.20186,
-          0.27439,
-          0.52375
-        ]
-      }
-    }
+    "result": "A"
   },
   "143": {
     "home_team": "Chelsea",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44384,
-          0.26769,
-          0.28847
-        ]
-      }
-    }
+    "result": "H"
   },
   "144": {
     "home_team": "Leicester",
     "away_team": "Watford",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.5387,
-          0.26867,
-          0.19263
-        ]
-      }
-    }
+    "result": "H"
   },
   "145": {
     "home_team": "Man United",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34825,
-          0.29893,
-          0.35282
-        ]
-      }
-    }
+    "result": "H"
   },
   "146": {
     "home_team": "Southampton",
     "away_team": "Norwich",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44851,
-          0.28909,
-          0.2624
-        ]
-      }
-    }
+    "result": "H"
   },
   "147": {
     "home_team": "Wolves",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28394,
-          0.2899,
-          0.42616
-        ]
-      }
-    }
+    "result": "H"
   },
   "148": {
     "home_team": "Liverpool",
     "away_team": "Everton",
     "goals_team1": 5,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54766,
-          0.26562,
-          0.18672
-        ]
-      }
-    }
+    "result": "H"
   },
   "149": {
     "home_team": "Sheffield United",
     "away_team": "Newcastle",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3896,
-          0.2958,
-          0.3146
-        ]
-      }
-    }
+    "result": "A"
   },
   "150": {
     "home_team": "Arsenal",
     "away_team": "Brighton",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45486,
-          0.28639,
-          0.25875
-        ]
-      }
-    }
+    "result": "A"
   },
   "151": {
     "home_team": "Everton",
     "away_team": "Chelsea",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38747,
-          0.27597,
-          0.33656
-        ]
-      }
-    }
+    "result": "H"
   },
   "152": {
     "home_team": "Bournemouth",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.14683,
-          0.24802,
-          0.60515
-        ]
-      }
-    }
+    "result": "A"
   },
   "153": {
     "home_team": "Tottenham",
     "away_team": "Burnley",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42642,
-          0.29138,
-          0.2822
-        ]
-      }
-    }
+    "result": "H"
   },
   "154": {
     "home_team": "Watford",
     "away_team": "Crystal Palace",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22401,
-          0.2793,
-          0.49669
-        ]
-      }
-    }
+    "result": "D"
   },
   "155": {
     "home_team": "Man City",
     "away_team": "Man United",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45042,
-          0.28955,
-          0.26003
-        ]
-      }
-    }
+    "result": "A"
   },
   "156": {
     "home_team": "Aston Villa",
     "away_team": "Leicester",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23427,
-          0.27999,
-          0.48574
-        ]
-      }
-    }
+    "result": "A"
   },
   "157": {
     "home_team": "Newcastle",
     "away_team": "Southampton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26204,
-          0.28956,
-          0.4484
-        ]
-      }
-    }
+    "result": "H"
   },
   "158": {
     "home_team": "Norwich",
     "away_team": "Sheffield United",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31325,
-          0.29577,
-          0.39098
-        ]
-      }
-    }
+    "result": "A"
   },
   "159": {
     "home_team": "Brighton",
     "away_team": "Wolves",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34845,
-          0.29401,
-          0.35754
-        ]
-      }
-    }
+    "result": "D"
   },
   "160": {
     "home_team": "West Ham",
     "away_team": "Arsenal",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32802,
-          0.29646,
-          0.37552
-        ]
-      }
-    }
+    "result": "A"
   },
   "161": {
     "home_team": "Liverpool",
     "away_team": "Watford",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.7026,
-          0.20807,
-          0.08933
-        ]
-      }
-    }
+    "result": "H"
   },
   "162": {
     "home_team": "Burnley",
     "away_team": "Newcastle",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40672,
-          0.29633,
-          0.29695
-        ]
-      }
-    }
+    "result": "H"
   },
   "163": {
     "home_team": "Chelsea",
     "away_team": "Bournemouth",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38992,
-          0.27636,
-          0.33372
-        ]
-      }
-    }
+    "result": "A"
   },
   "164": {
     "home_team": "Leicester",
     "away_team": "Norwich",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47374,
-          0.28264,
-          0.24362
-        ]
-      }
-    }
+    "result": "D"
   },
   "165": {
     "home_team": "Sheffield United",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40292,
-          0.29275,
-          0.30433
-        ]
-      }
-    }
+    "result": "H"
   },
   "166": {
     "home_team": "Southampton",
     "away_team": "West Ham",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33242,
-          0.2955,
-          0.37208
-        ]
-      }
-    }
+    "result": "A"
   },
   "167": {
     "home_team": "Man United",
     "away_team": "Everton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37275,
-          0.29662,
-          0.33063
-        ]
-      }
-    }
+    "result": "D"
   },
   "168": {
     "home_team": "Wolves",
     "away_team": "Tottenham",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27353,
-          0.29407,
-          0.4324
-        ]
-      }
-    }
+    "result": "A"
   },
   "169": {
     "home_team": "Arsenal",
     "away_team": "Man City",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27358,
-          0.28885,
-          0.43757
-        ]
-      }
-    }
+    "result": "A"
   },
   "170": {
     "home_team": "Crystal Palace",
     "away_team": "Brighton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39221,
-          0.29435,
-          0.31344
-        ]
-      }
-    }
+    "result": "D"
   },
   "171": {
     "home_team": "Everton",
     "away_team": "Arsenal",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31439,
-          0.29264,
-          0.39297
-        ]
-      }
-    }
+    "result": "D"
   },
   "172": {
     "home_team": "Aston Villa",
     "away_team": "Southampton",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25149,
-          0.2849,
-          0.46361
-        ]
-      }
-    }
+    "result": "A"
   },
   "173": {
     "home_team": "Bournemouth",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34124,
-          0.29599,
-          0.36277
-        ]
-      }
-    }
+    "result": "A"
   },
   "174": {
     "home_team": "Brighton",
     "away_team": "Sheffield United",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3537,
-          0.29325,
-          0.35305
-        ]
-      }
-    }
+    "result": "A"
   },
   "175": {
     "home_team": "Newcastle",
     "away_team": "Crystal Palace",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27926,
-          0.29207,
-          0.42867
-        ]
-      }
-    }
+    "result": "H"
   },
   "176": {
     "home_team": "Norwich",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31131,
-          0.29369,
-          0.395
-        ]
-      }
-    }
+    "result": "A"
   },
   "177": {
     "home_team": "Man City",
     "away_team": "Leicester",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46208,
-          0.2866,
-          0.25132
-        ]
-      }
-    }
+    "result": "H"
   },
   "178": {
     "home_team": "Watford",
     "away_team": "Man United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18417,
-          0.2688,
-          0.54703
-        ]
-      }
-    }
+    "result": "H"
   },
   "179": {
     "home_team": "Tottenham",
     "away_team": "Chelsea",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41017,
-          0.27535,
-          0.31448
-        ]
-      }
-    }
+    "result": "A"
   },
   "180": {
     "home_team": "Tottenham",
     "away_team": "Brighton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43957,
-          0.29217,
-          0.26826
-        ]
-      }
-    }
+    "result": "H"
   },
   "181": {
     "home_team": "Aston Villa",
     "away_team": "Norwich",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34152,
-          0.29534,
-          0.36314
-        ]
-      }
-    }
+    "result": "H"
   },
   "182": {
     "home_team": "Bournemouth",
     "away_team": "Arsenal",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25982,
-          0.28882,
-          0.45136
-        ]
-      }
-    }
+    "result": "D"
   },
   "183": {
     "home_team": "Chelsea",
     "away_team": "Southampton",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34081,
-          0.27682,
-          0.38237
-        ]
-      }
-    }
+    "result": "A"
   },
   "184": {
     "home_team": "Crystal Palace",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31548,
-          0.29554,
-          0.38898
-        ]
-      }
-    }
+    "result": "H"
   },
   "185": {
     "home_team": "Everton",
     "away_team": "Burnley",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40215,
-          0.29412,
-          0.30373
-        ]
-      }
-    }
+    "result": "H"
   },
   "186": {
     "home_team": "Sheffield United",
     "away_team": "Watford",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45662,
-          0.28918,
-          0.2542
-        ]
-      }
-    }
+    "result": "D"
   },
   "187": {
     "home_team": "Man United",
     "away_team": "Newcastle",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.48006,
-          0.28508,
-          0.23486
-        ]
-      }
-    }
+    "result": "H"
   },
   "188": {
     "home_team": "Leicester",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.19437,
-          0.27135,
-          0.53428
-        ]
-      }
-    }
+    "result": "A"
   },
   "189": {
     "home_team": "Wolves",
     "away_team": "Man City",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.19561,
-          0.26888,
-          0.53551
-        ]
-      }
-    }
+    "result": "H"
   },
   "190": {
     "home_team": "Brighton",
     "away_team": "Bournemouth",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3504,
-          0.2951,
-          0.3545
-        ]
-      }
-    }
+    "result": "H"
   },
   "191": {
     "home_team": "Newcastle",
     "away_team": "Everton",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2568,
-          0.28499,
-          0.45821
-        ]
-      }
-    }
+    "result": "A"
   },
   "192": {
     "home_team": "Southampton",
     "away_team": "Crystal Palace",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37013,
-          0.29724,
-          0.33263
-        ]
-      }
-    }
+    "result": "D"
   },
   "193": {
     "home_team": "Watford",
     "away_team": "Aston Villa",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29955,
-          0.29416,
-          0.40629
-        ]
-      }
-    }
+    "result": "H"
   },
   "194": {
     "home_team": "Norwich",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23504,
-          0.28605,
-          0.47891
-        ]
-      }
-    }
+    "result": "D"
   },
   "195": {
     "home_team": "West Ham",
     "away_team": "Leicester",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35441,
-          0.29413,
-          0.35146
-        ]
-      }
-    }
+    "result": "A"
   },
   "196": {
     "home_team": "Burnley",
     "away_team": "Man United",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28446,
-          0.2935,
-          0.42204
-        ]
-      }
-    }
+    "result": "A"
   },
   "197": {
     "home_team": "Arsenal",
     "away_team": "Chelsea",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42553,
-          0.27427,
-          0.3002
-        ]
-      }
-    }
+    "result": "A"
   },
   "198": {
     "home_team": "Liverpool",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.60341,
-          0.24842,
-          0.14817
-        ]
-      }
-    }
+    "result": "H"
   },
   "199": {
     "home_team": "Man City",
     "away_team": "Sheffield United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54084,
-          0.26954,
-          0.18962
-        ]
-      }
-    }
+    "result": "H"
   },
   "200": {
     "home_team": "Brighton",
     "away_team": "Chelsea",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32764,
-          0.27665,
-          0.39571
-        ]
-      }
-    }
+    "result": "D"
   },
   "201": {
     "home_team": "Burnley",
     "away_team": "Aston Villa",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42029,
-          0.29231,
-          0.2874
-        ]
-      }
-    }
+    "result": "A"
   },
   "202": {
     "home_team": "Newcastle",
     "away_team": "Leicester",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24396,
-          0.28478,
-          0.47126
-        ]
-      }
-    }
+    "result": "A"
   },
   "203": {
     "home_team": "Southampton",
     "away_team": "Tottenham",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32066,
-          0.29681,
-          0.38253
-        ]
-      }
-    }
+    "result": "H"
   },
   "204": {
     "home_team": "Watford",
     "away_team": "Wolves",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25339,
-          0.28564,
-          0.46097
-        ]
-      }
-    }
+    "result": "H"
   },
   "205": {
     "home_team": "Man City",
     "away_team": "Everton",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47903,
-          0.28193,
-          0.23904
-        ]
-      }
-    }
+    "result": "H"
   },
   "206": {
     "home_team": "Norwich",
     "away_team": "Crystal Palace",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2767,
-          0.2928,
-          0.4305
-        ]
-      }
-    }
+    "result": "D"
   },
   "207": {
     "home_team": "West Ham",
     "away_team": "Bournemouth",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42797,
-          0.29011,
-          0.28192
-        ]
-      }
-    }
+    "result": "H"
   },
   "208": {
     "home_team": "Arsenal",
     "away_team": "Man United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3672,
-          0.29652,
-          0.33628
-        ]
-      }
-    }
+    "result": "H"
   },
   "209": {
     "home_team": "Liverpool",
     "away_team": "Sheffield United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.60991,
-          0.24575,
-          0.14434
-        ]
-      }
-    }
+    "result": "H"
   },
   "210": {
     "home_team": "Sheffield United",
     "away_team": "West Ham",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27646,
-          0.28961,
-          0.43393
-        ]
-      }
-    }
+    "result": "H"
   },
   "211": {
     "home_team": "Crystal Palace",
     "away_team": "Arsenal",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29068,
-          0.29382,
-          0.4155
-        ]
-      }
-    }
+    "result": "D"
   },
   "212": {
     "home_team": "Chelsea",
     "away_team": "Burnley",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37692,
-          0.277,
-          0.34608
-        ]
-      }
-    }
+    "result": "H"
   },
   "213": {
     "home_team": "Everton",
     "away_team": "Brighton",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41692,
-          0.29294,
-          0.29014
-        ]
-      }
-    }
+    "result": "H"
   },
   "214": {
     "home_team": "Leicester",
     "away_team": "Southampton",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37118,
-          0.29853,
-          0.33029
-        ]
-      }
-    }
+    "result": "A"
   },
   "215": {
     "home_team": "Man United",
     "away_team": "Norwich",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.48127,
-          0.28387,
-          0.23486
-        ]
-      }
-    }
+    "result": "H"
   },
   "216": {
     "home_team": "Wolves",
     "away_team": "Newcastle",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.397,
-          0.29198,
-          0.31102
-        ]
-      }
-    }
+    "result": "D"
   },
   "217": {
     "home_team": "Tottenham",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.20176,
-          0.27532,
-          0.52292
-        ]
-      }
-    }
+    "result": "A"
   },
   "218": {
     "home_team": "Bournemouth",
     "away_team": "Watford",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46074,
-          0.28688,
-          0.25238
-        ]
-      }
-    }
+    "result": "A"
   },
   "219": {
     "home_team": "Aston Villa",
     "away_team": "Man City",
     "goals_team1": 1,
     "goals_team2": 6,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.15535,
-          0.25294,
-          0.59171
-        ]
-      }
-    }
+    "result": "A"
   },
   "220": {
     "home_team": "Watford",
     "away_team": "Tottenham",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18701,
-          0.26541,
-          0.54758
-        ]
-      }
-    }
+    "result": "D"
   },
   "221": {
     "home_team": "Arsenal",
     "away_team": "Sheffield United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45494,
-          0.28921,
-          0.25585
-        ]
-      }
-    }
+    "result": "D"
   },
   "222": {
     "home_team": "Brighton",
     "away_team": "Aston Villa",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40555,
-          0.29146,
-          0.30299
-        ]
-      }
-    }
+    "result": "D"
   },
   "223": {
     "home_team": "Man City",
     "away_team": "Crystal Palace",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50398,
-          0.27729,
-          0.21873
-        ]
-      }
-    }
+    "result": "D"
   },
   "224": {
     "home_team": "Norwich",
     "away_team": "Bournemouth",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31703,
-          0.2936,
-          0.38937
-        ]
-      }
-    }
+    "result": "H"
   },
   "225": {
     "home_team": "Southampton",
     "away_team": "Wolves",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40483,
-          0.29334,
-          0.30183
-        ]
-      }
-    }
+    "result": "A"
   },
   "226": {
     "home_team": "West Ham",
     "away_team": "Everton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36408,
-          0.29356,
-          0.34236
-        ]
-      }
-    }
+    "result": "D"
   },
   "227": {
     "home_team": "Newcastle",
     "away_team": "Chelsea",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29629,
-          0.27405,
-          0.42966
-        ]
-      }
-    }
+    "result": "H"
   },
   "228": {
     "home_team": "Burnley",
     "away_team": "Leicester",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28922,
-          0.29447,
-          0.41631
-        ]
-      }
-    }
+    "result": "H"
   },
   "229": {
     "home_team": "Liverpool",
     "away_team": "Man United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.5236,
-          0.27372,
-          0.20268
-        ]
-      }
-    }
+    "result": "H"
   },
   "230": {
     "home_team": "Aston Villa",
     "away_team": "Watford",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40206,
-          0.2961,
-          0.30184
-        ]
-      }
-    }
+    "result": "H"
   },
   "231": {
     "home_team": "Bournemouth",
     "away_team": "Brighton",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35316,
-          0.29648,
-          0.35036
-        ]
-      }
-    }
+    "result": "H"
   },
   "232": {
     "home_team": "Crystal Palace",
     "away_team": "Southampton",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33504,
-          0.29692,
-          0.36804
-        ]
-      }
-    }
+    "result": "A"
   },
   "233": {
     "home_team": "Everton",
     "away_team": "Newcastle",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45579,
-          0.28909,
-          0.25512
-        ]
-      }
-    }
+    "result": "D"
   },
   "234": {
     "home_team": "Sheffield United",
     "away_team": "Man City",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.19161,
-          0.26762,
-          0.54077
-        ]
-      }
-    }
+    "result": "A"
   },
   "235": {
     "home_team": "Chelsea",
     "away_team": "Arsenal",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30124,
-          0.27447,
-          0.42429
-        ]
-      }
-    }
+    "result": "D"
   },
   "236": {
     "home_team": "Leicester",
     "away_team": "West Ham",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35499,
-          0.29484,
-          0.35017
-        ]
-      }
-    }
+    "result": "H"
   },
   "237": {
     "home_team": "Tottenham",
     "away_team": "Norwich",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.48078,
-          0.28417,
-          0.23505
-        ]
-      }
-    }
+    "result": "H"
   },
   "238": {
     "home_team": "Man United",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42511,
-          0.29184,
-          0.28305
-        ]
-      }
-    }
+    "result": "A"
   },
   "239": {
     "home_team": "Wolves",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.14726,
-          0.24845,
-          0.60429
-        ]
-      }
-    }
+    "result": "A"
   },
   "240": {
     "home_team": "West Ham",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.19875,
-          0.26885,
-          0.5324
-        ]
-      }
-    }
+    "result": "A"
   },
   "241": {
     "home_team": "Leicester",
     "away_team": "Chelsea",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39847,
-          0.2833,
-          0.31823
-        ]
-      }
-    }
+    "result": "D"
   },
   "242": {
     "home_team": "Bournemouth",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40754,
-          0.29615,
-          0.29631
-        ]
-      }
-    }
+    "result": "H"
   },
   "243": {
     "home_team": "Crystal Palace",
     "away_team": "Sheffield United",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38954,
-          0.29767,
-          0.31279
-        ]
-      }
-    }
+    "result": "A"
   },
   "244": {
     "home_team": "Liverpool",
     "away_team": "Southampton",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.5561,
-          0.26599,
-          0.17791
-        ]
-      }
-    }
+    "result": "H"
   },
   "245": {
     "home_team": "Newcastle",
     "away_team": "Norwich",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34896,
-          0.29809,
-          0.35295
-        ]
-      }
-    }
+    "result": "D"
   },
   "246": {
     "home_team": "Watford",
     "away_team": "Everton",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.203,
-          0.27209,
-          0.52491
-        ]
-      }
-    }
+    "result": "A"
   },
   "247": {
     "home_team": "West Ham",
     "away_team": "Brighton",
     "goals_team1": 3,
     "goals_team2": 3,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4276,
-          0.2946,
-          0.2778
-        ]
-      }
-    }
+    "result": "D"
   },
   "248": {
     "home_team": "Man United",
     "away_team": "Wolves",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4381,
-          0.29287,
-          0.26903
-        ]
-      }
-    }
+    "result": "D"
   },
   "249": {
     "home_team": "Burnley",
     "away_team": "Arsenal",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26952,
-          0.29038,
-          0.4401
-        ]
-      }
-    }
+    "result": "D"
   },
   "250": {
     "home_team": "Tottenham",
     "away_team": "Man City",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25939,
-          0.29029,
-          0.45032
-        ]
-      }
-    }
+    "result": "H"
   },
   "251": {
     "home_team": "Everton",
     "away_team": "Crystal Palace",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37659,
-          0.2972,
-          0.32621
-        ]
-      }
-    }
+    "result": "H"
   },
   "252": {
     "home_team": "Brighton",
     "away_team": "Watford",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46059,
-          0.28857,
-          0.25084
-        ]
-      }
-    }
+    "result": "D"
   },
   "253": {
     "home_team": "Sheffield United",
     "away_team": "Bournemouth",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34696,
-          0.29724,
-          0.3558
-        ]
-      }
-    }
+    "result": "H"
   },
   "254": {
     "home_team": "Wolves",
     "away_team": "Leicester",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27686,
-          0.29466,
-          0.42848
-        ]
-      }
-    }
+    "result": "D"
   },
   "255": {
     "home_team": "Southampton",
     "away_team": "Burnley",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39329,
-          0.29875,
-          0.30796
-        ]
-      }
-    }
+    "result": "A"
   },
   "256": {
     "home_team": "Norwich",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.12051,
-          0.23525,
-          0.64424
-        ]
-      }
-    }
+    "result": "A"
   },
   "257": {
     "home_team": "Aston Villa",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22772,
-          0.28145,
-          0.49083
-        ]
-      }
-    }
+    "result": "A"
   },
   "258": {
     "home_team": "Arsenal",
     "away_team": "Newcastle",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.49844,
-          0.28022,
-          0.22134
-        ]
-      }
-    }
+    "result": "H"
   },
   "259": {
     "home_team": "Chelsea",
     "away_team": "Man United",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31205,
-          0.2808,
-          0.40715
-        ]
-      }
-    }
+    "result": "A"
   },
   "260": {
     "home_team": "Man City",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45966,
-          0.29158,
-          0.24876
-        ]
-      }
-    }
+    "result": "H"
   },
   "261": {
     "home_team": "Chelsea",
     "away_team": "Tottenham",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31504,
-          0.27455,
-          0.41041
-        ]
-      }
-    }
+    "result": "H"
   },
   "262": {
     "home_team": "Burnley",
     "away_team": "Bournemouth",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36533,
-          0.29583,
-          0.33884
-        ]
-      }
-    }
+    "result": "H"
   },
   "263": {
     "home_team": "Crystal Palace",
     "away_team": "Newcastle",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43139,
-          0.29284,
-          0.27577
-        ]
-      }
-    }
+    "result": "H"
   },
   "264": {
     "home_team": "Sheffield United",
     "away_team": "Brighton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35283,
-          0.29496,
-          0.35221
-        ]
-      }
-    }
+    "result": "D"
   },
   "265": {
     "home_team": "Southampton",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46065,
-          0.28592,
-          0.25343
-        ]
-      }
-    }
+    "result": "H"
   },
   "266": {
     "home_team": "Leicester",
     "away_team": "Man City",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25119,
-          0.2895,
-          0.45931
-        ]
-      }
-    }
+    "result": "A"
   },
   "267": {
     "home_team": "Man United",
     "away_team": "Watford",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54533,
-          0.26756,
-          0.18711
-        ]
-      }
-    }
+    "result": "H"
   },
   "268": {
     "home_team": "Wolves",
     "away_team": "Norwich",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39244,
-          0.29472,
-          0.31284
-        ]
-      }
-    }
+    "result": "H"
   },
   "269": {
     "home_team": "Arsenal",
     "away_team": "Everton",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38932,
-          0.29456,
-          0.31612
-        ]
-      }
-    }
+    "result": "H"
   },
   "270": {
     "home_team": "Liverpool",
     "away_team": "West Ham",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53241,
-          0.27145,
-          0.19614
-        ]
-      }
-    }
+    "result": "H"
   },
   "271": {
     "home_team": "Norwich",
     "away_team": "Leicester",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24263,
-          0.28569,
-          0.47168
-        ]
-      }
-    }
+    "result": "H"
   },
   "272": {
     "home_team": "Brighton",
     "away_team": "Crystal Palace",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31633,
-          0.29409,
-          0.38958
-        ]
-      }
-    }
+    "result": "A"
   },
   "273": {
     "home_team": "Bournemouth",
     "away_team": "Chelsea",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33325,
-          0.27286,
-          0.39389
-        ]
-      }
-    }
+    "result": "D"
   },
   "274": {
     "home_team": "Newcastle",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3006,
-          0.29345,
-          0.40595
-        ]
-      }
-    }
+    "result": "D"
   },
   "275": {
     "home_team": "West Ham",
     "away_team": "Southampton",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37277,
-          0.2959,
-          0.33133
-        ]
-      }
-    }
+    "result": "H"
   },
   "276": {
     "home_team": "Watford",
     "away_team": "Liverpool",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.08934,
-          0.20844,
-          0.70222
-        ]
-      }
-    }
+    "result": "H"
   },
   "277": {
     "home_team": "Everton",
     "away_team": "Man United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32789,
-          0.2967,
-          0.37541
-        ]
-      }
-    }
+    "result": "D"
   },
   "278": {
     "home_team": "Tottenham",
     "away_team": "Wolves",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43736,
-          0.2882,
-          0.27444
-        ]
-      }
-    }
+    "result": "A"
   },
   "279": {
     "home_team": "Liverpool",
     "away_team": "Bournemouth",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.60814,
-          0.24758,
-          0.14428
-        ]
-      }
-    }
+    "result": "H"
   },
   "280": {
     "home_team": "Arsenal",
     "away_team": "West Ham",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37686,
-          0.29341,
-          0.32973
-        ]
-      }
-    }
+    "result": "H"
   },
   "281": {
     "home_team": "Crystal Palace",
     "away_team": "Watford",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4993,
-          0.28153,
-          0.21917
-        ]
-      }
-    }
+    "result": "H"
   },
   "282": {
     "home_team": "Sheffield United",
     "away_team": "Norwich",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38849,
-          0.29547,
-          0.31604
-        ]
-      }
-    }
+    "result": "H"
   },
   "283": {
     "home_team": "Southampton",
     "away_team": "Newcastle",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44716,
-          0.2912,
-          0.26164
-        ]
-      }
-    }
+    "result": "A"
   },
   "284": {
     "home_team": "Wolves",
     "away_team": "Brighton",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35804,
-          0.29424,
-          0.34772
-        ]
-      }
-    }
+    "result": "D"
   },
   "285": {
     "home_team": "Burnley",
     "away_team": "Tottenham",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2827,
-          0.29476,
-          0.42254
-        ]
-      }
-    }
+    "result": "D"
   },
   "286": {
     "home_team": "Chelsea",
     "away_team": "Everton",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33262,
-          0.27657,
-          0.39081
-        ]
-      }
-    }
+    "result": "H"
   },
   "287": {
     "home_team": "Man United",
     "away_team": "Man City",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25924,
-          0.28982,
-          0.45094
-        ]
-      }
-    }
+    "result": "H"
   },
   "288": {
     "home_team": "Leicester",
     "away_team": "Aston Villa",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.482,
-          0.28401,
-          0.23399
-        ]
-      }
-    }
+    "result": "H"
   },
   "289": {
     "home_team": "Aston Villa",
     "away_team": "Sheffield United",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30357,
-          0.29355,
-          0.40288
-        ]
-      }
-    }
+    "result": "D"
   },
   "290": {
     "home_team": "Man City",
     "away_team": "Arsenal",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43709,
-          0.28847,
-          0.27444
-        ]
-      }
-    }
+    "result": "H"
   },
   "291": {
     "home_team": "Norwich",
     "away_team": "Southampton",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26363,
-          0.28986,
-          0.44651
-        ]
-      }
-    }
+    "result": "A"
   },
   "292": {
     "home_team": "Tottenham",
     "away_team": "Man United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3528,
-          0.29529,
-          0.35191
-        ]
-      }
-    }
+    "result": "D"
   },
   "293": {
     "home_team": "Watford",
     "away_team": "Leicester",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.19369,
-          0.26925,
-          0.53706
-        ]
-      }
-    }
+    "result": "D"
   },
   "294": {
     "home_team": "Brighton",
     "away_team": "Arsenal",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25556,
-          0.2896,
-          0.45484
-        ]
-      }
-    }
+    "result": "H"
   },
   "295": {
     "home_team": "West Ham",
     "away_team": "Wolves",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42531,
-          0.28974,
-          0.28495
-        ]
-      }
-    }
+    "result": "A"
   },
   "296": {
     "home_team": "Bournemouth",
     "away_team": "Crystal Palace",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31342,
-          0.3005,
-          0.38608
-        ]
-      }
-    }
+    "result": "A"
   },
   "297": {
     "home_team": "Newcastle",
     "away_team": "Sheffield United",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3125,
-          0.29923,
-          0.38827
-        ]
-      }
-    }
+    "result": "H"
   },
   "298": {
     "home_team": "Aston Villa",
     "away_team": "Chelsea",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2877,
-          0.27302,
-          0.43928
-        ]
-      }
-    }
+    "result": "A"
   },
   "299": {
     "home_team": "Everton",
     "away_team": "Liverpool",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18683,
-          0.26577,
-          0.5474
-        ]
-      }
-    }
+    "result": "D"
   },
   "300": {
     "home_team": "Man City",
     "away_team": "Burnley",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.52697,
-          0.27309,
-          0.19994
-        ]
-      }
-    }
+    "result": "H"
   },
   "301": {
     "home_team": "Leicester",
     "away_team": "Brighton",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4311,
-          0.29158,
-          0.27732
-        ]
-      }
-    }
+    "result": "D"
   },
   "302": {
     "home_team": "Tottenham",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35879,
-          0.29707,
-          0.34414
-        ]
-      }
-    }
+    "result": "H"
   },
   "303": {
     "home_team": "Man United",
     "away_team": "Sheffield United",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43855,
-          0.29225,
-          0.2692
-        ]
-      }
-    }
+    "result": "H"
   },
   "304": {
     "home_team": "Newcastle",
     "away_team": "Aston Villa",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36572,
-          0.29457,
-          0.33971
-        ]
-      }
-    }
+    "result": "D"
   },
   "305": {
     "home_team": "Norwich",
     "away_team": "Everton",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25723,
-          0.28649,
-          0.45628
-        ]
-      }
-    }
+    "result": "A"
   },
   "306": {
     "home_team": "Wolves",
     "away_team": "Bournemouth",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35559,
-          0.29458,
-          0.34983
-        ]
-      }
-    }
+    "result": "H"
   },
   "307": {
     "home_team": "Liverpool",
     "away_team": "Crystal Palace",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.57127,
-          0.26029,
-          0.16844
-        ]
-      }
-    }
+    "result": "H"
   },
   "308": {
     "home_team": "Burnley",
     "away_team": "Watford",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47022,
-          0.28412,
-          0.24566
-        ]
-      }
-    }
+    "result": "H"
   },
   "309": {
     "home_team": "Southampton",
     "away_team": "Arsenal",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3064,
-          0.29518,
-          0.39842
-        ]
-      }
-    }
+    "result": "A"
   },
   "310": {
     "home_team": "Chelsea",
     "away_team": "Man City",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23728,
-          0.26302,
-          0.4997
-        ]
-      }
-    }
+    "result": "H"
   },
   "311": {
     "home_team": "Aston Villa",
     "away_team": "Wolves",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29884,
-          0.29169,
-          0.40947
-        ]
-      }
-    }
+    "result": "A"
   },
   "312": {
     "home_team": "Watford",
     "away_team": "Southampton",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.20596,
-          0.27532,
-          0.51872
-        ]
-      }
-    }
+    "result": "A"
   },
   "313": {
     "home_team": "Crystal Palace",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37645,
-          0.29619,
-          0.32736
-        ]
-      }
-    }
+    "result": "A"
   },
   "314": {
     "home_team": "Brighton",
     "away_team": "Man United",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27168,
-          0.29017,
-          0.43815
-        ]
-      }
-    }
+    "result": "A"
   },
   "315": {
     "home_team": "Arsenal",
     "away_team": "Norwich",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4938,
-          0.27955,
-          0.22665
-        ]
-      }
-    }
+    "result": "H"
   },
   "316": {
     "home_team": "Bournemouth",
     "away_team": "Newcastle",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39243,
-          0.29603,
-          0.31154
-        ]
-      }
-    }
+    "result": "A"
   },
   "317": {
     "home_team": "Everton",
     "away_team": "Leicester",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3395,
-          0.29495,
-          0.36555
-        ]
-      }
-    }
+    "result": "H"
   },
   "318": {
     "home_team": "West Ham",
     "away_team": "Chelsea",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40033,
-          0.27482,
-          0.32485
-        ]
-      }
-    }
+    "result": "H"
   },
   "319": {
     "home_team": "Sheffield United",
     "away_team": "Tottenham",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26825,
-          0.29313,
-          0.43862
-        ]
-      }
-    }
+    "result": "H"
   },
   "320": {
     "home_team": "Man City",
     "away_team": "Liverpool",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2875,
-          0.28825,
-          0.42425
-        ]
-      }
-    }
+    "result": "H"
   },
   "321": {
     "home_team": "Norwich",
     "away_team": "Brighton",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31226,
-          0.29642,
-          0.39132
-        ]
-      }
-    }
+    "result": "A"
   },
   "322": {
     "home_team": "Leicester",
     "away_team": "Crystal Palace",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39049,
-          0.29841,
-          0.3111
-        ]
-      }
-    }
+    "result": "H"
   },
   "323": {
     "home_team": "Man United",
     "away_team": "Bournemouth",
     "goals_team1": 5,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4383,
-          0.29057,
-          0.27113
-        ]
-      }
-    }
+    "result": "H"
   },
   "324": {
     "home_team": "Wolves",
     "away_team": "Arsenal",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25998,
-          0.28793,
-          0.45209
-        ]
-      }
-    }
+    "result": "A"
   },
   "325": {
     "home_team": "Chelsea",
     "away_team": "Watford",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.49209,
-          0.2649,
-          0.24301
-        ]
-      }
-    }
+    "result": "H"
   },
   "326": {
     "home_team": "Burnley",
     "away_team": "Sheffield United",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36505,
-          0.2991,
-          0.33585
-        ]
-      }
-    }
+    "result": "D"
   },
   "327": {
     "home_team": "Newcastle",
     "away_team": "West Ham",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24313,
-          0.28894,
-          0.46793
-        ]
-      }
-    }
+    "result": "D"
   },
   "328": {
     "home_team": "Liverpool",
     "away_team": "Aston Villa",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.65609,
-          0.22879,
-          0.11512
-        ]
-      }
-    }
+    "result": "H"
   },
   "329": {
     "home_team": "Southampton",
     "away_team": "Man City",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23589,
-          0.28134,
-          0.48277
-        ]
-      }
-    }
+    "result": "H"
   },
   "330": {
     "home_team": "Tottenham",
     "away_team": "Everton",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37602,
-          0.29409,
-          0.32989
-        ]
-      }
-    }
+    "result": "H"
   },
   "331": {
     "home_team": "Crystal Palace",
     "away_team": "Chelsea",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36528,
-          0.2796,
-          0.35512
-        ]
-      }
-    }
+    "result": "A"
   },
   "332": {
     "home_team": "Watford",
     "away_team": "Norwich",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28928,
-          0.29394,
-          0.41678
-        ]
-      }
-    }
+    "result": "H"
   },
   "333": {
     "home_team": "Arsenal",
     "away_team": "Leicester",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37885,
-          0.29523,
-          0.32592
-        ]
-      }
-    }
+    "result": "D"
   },
   "334": {
     "home_team": "Man City",
     "away_team": "Newcastle",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.57523,
-          0.25989,
-          0.16488
-        ]
-      }
-    }
+    "result": "H"
   },
   "335": {
     "home_team": "Sheffield United",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34493,
-          0.2972,
-          0.35787
-        ]
-      }
-    }
+    "result": "H"
   },
   "336": {
     "home_team": "West Ham",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41533,
-          0.29427,
-          0.2904
-        ]
-      }
-    }
+    "result": "A"
   },
   "337": {
     "home_team": "Brighton",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.14373,
-          0.24818,
-          0.60809
-        ]
-      }
-    }
+    "result": "A"
   },
   "338": {
     "home_team": "Bournemouth",
     "away_team": "Tottenham",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.271,
-          0.29261,
-          0.43639
-        ]
-      }
-    }
+    "result": "D"
   },
   "339": {
     "home_team": "Everton",
     "away_team": "Southampton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36079,
-          0.29427,
-          0.34494
-        ]
-      }
-    }
+    "result": "D"
   },
   "340": {
     "home_team": "Aston Villa",
     "away_team": "Man United",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22747,
-          0.28137,
-          0.49116
-        ]
-      }
-    }
+    "result": "A"
   },
   "341": {
     "home_team": "Norwich",
     "away_team": "West Ham",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24181,
-          0.28843,
-          0.46976
-        ]
-      }
-    }
+    "result": "A"
   },
   "342": {
     "home_team": "Watford",
     "away_team": "Newcastle",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28615,
-          0.29562,
-          0.41823
-        ]
-      }
-    }
+    "result": "H"
   },
   "343": {
     "home_team": "Liverpool",
     "away_team": "Burnley",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.59939,
-          0.25378,
-          0.14683
-        ]
-      }
-    }
+    "result": "D"
   },
   "344": {
     "home_team": "Sheffield United",
     "away_team": "Chelsea",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32569,
-          0.28283,
-          0.39148
-        ]
-      }
-    }
+    "result": "H"
   },
   "345": {
     "home_team": "Brighton",
     "away_team": "Man City",
     "goals_team1": 0,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18719,
-          0.27093,
-          0.54188
-        ]
-      }
-    }
+    "result": "A"
   },
   "346": {
     "home_team": "Wolves",
     "away_team": "Everton",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29725,
-          0.2955,
-          0.40725
-        ]
-      }
-    }
+    "result": "H"
   },
   "347": {
     "home_team": "Aston Villa",
     "away_team": "Crystal Palace",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26405,
-          0.28962,
-          0.44633
-        ]
-      }
-    }
+    "result": "H"
   },
   "348": {
     "home_team": "Tottenham",
     "away_team": "Arsenal",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33122,
-          0.29962,
-          0.36916
-        ]
-      }
-    }
+    "result": "H"
   },
   "349": {
     "home_team": "Bournemouth",
     "away_team": "Leicester",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27778,
-          0.29425,
-          0.42797
-        ]
-      }
-    }
+    "result": "H"
   },
   "350": {
     "home_team": "Man United",
     "away_team": "Southampton",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38036,
-          0.29554,
-          0.3241
-        ]
-      }
-    }
+    "result": "D"
   },
   "351": {
     "home_team": "Chelsea",
     "away_team": "Norwich",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42558,
-          0.27811,
-          0.29631
-        ]
-      }
-    }
+    "result": "H"
   },
   "352": {
     "home_team": "Burnley",
     "away_team": "Wolves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35989,
-          0.29571,
-          0.3444
-        ]
-      }
-    }
+    "result": "D"
   },
   "353": {
     "home_team": "Man City",
     "away_team": "Bournemouth",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54055,
-          0.27213,
-          0.18732
-        ]
-      }
-    }
+    "result": "H"
   },
   "354": {
     "home_team": "Newcastle",
     "away_team": "Tottenham",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23618,
-          0.28615,
-          0.47767
-        ]
-      }
-    }
+    "result": "A"
   },
   "355": {
     "home_team": "Arsenal",
     "away_team": "Liverpool",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21172,
-          0.27883,
-          0.50945
-        ]
-      }
-    }
+    "result": "H"
   },
   "356": {
     "home_team": "Everton",
     "away_team": "Aston Villa",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47033,
-          0.2869,
-          0.24277
-        ]
-      }
-    }
+    "result": "D"
   },
   "357": {
     "home_team": "Leicester",
     "away_team": "Sheffield United",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42962,
-          0.29458,
-          0.2758
-        ]
-      }
-    }
+    "result": "H"
   },
   "358": {
     "home_team": "Crystal Palace",
     "away_team": "Man United",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.306,
-          0.29627,
-          0.39773
-        ]
-      }
-    }
+    "result": "A"
   },
   "359": {
     "home_team": "Southampton",
     "away_team": "Brighton",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40984,
-          0.29491,
-          0.29525
-        ]
-      }
-    }
+    "result": "D"
   },
   "360": {
     "home_team": "West Ham",
     "away_team": "Watford",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53823,
-          0.27037,
-          0.1914
-        ]
-      }
-    }
+    "result": "H"
   },
   "361": {
     "home_team": "Norwich",
     "away_team": "Burnley",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30008,
-          0.29296,
-          0.40696
-        ]
-      }
-    }
+    "result": "A"
   },
   "362": {
     "home_team": "Bournemouth",
     "away_team": "Southampton",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29796,
-          0.29207,
-          0.40997
-        ]
-      }
-    }
+    "result": "A"
   },
   "363": {
     "home_team": "Tottenham",
     "away_team": "Leicester",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36097,
-          0.29656,
-          0.34247
-        ]
-      }
-    }
+    "result": "H"
   },
   "364": {
     "home_team": "Brighton",
     "away_team": "Newcastle",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39335,
-          0.29369,
-          0.31296
-        ]
-      }
-    }
+    "result": "D"
   },
   "365": {
     "home_team": "Sheffield United",
     "away_team": "Everton",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29036,
-          0.29073,
-          0.41891
-        ]
-      }
-    }
+    "result": "A"
   },
   "366": {
     "home_team": "Wolves",
     "away_team": "Crystal Palace",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31948,
-          0.29518,
-          0.38534
-        ]
-      }
-    }
+    "result": "H"
   },
   "367": {
     "home_team": "Watford",
     "away_team": "Man City",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.12176,
-          0.23419,
-          0.64405
-        ]
-      }
-    }
+    "result": "A"
   },
   "368": {
     "home_team": "Aston Villa",
     "away_team": "Arsenal",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21338,
-          0.27817,
-          0.50845
-        ]
-      }
-    }
+    "result": "H"
   },
   "369": {
     "home_team": "Man United",
     "away_team": "West Ham",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35526,
-          0.29725,
-          0.34749
-        ]
-      }
-    }
+    "result": "D"
   },
   "370": {
     "home_team": "Liverpool",
     "away_team": "Chelsea",
     "goals_team1": 5,
     "goals_team2": 3,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.56433,
-          0.24875,
-          0.18692
-        ]
-      }
-    }
+    "result": "H"
   },
   "371": {
     "home_team": "Arsenal",
     "away_team": "Watford",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.56211,
-          0.26183,
-          0.17606
-        ]
-      }
-    }
+    "result": "H"
   },
   "372": {
     "home_team": "Burnley",
     "away_team": "Brighton",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36582,
-          0.29925,
-          0.33493
-        ]
-      }
-    }
+    "result": "A"
   },
   "373": {
     "home_team": "Chelsea",
     "away_team": "Wolves",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38888,
-          0.27727,
-          0.33385
-        ]
-      }
-    }
+    "result": "H"
   },
   "374": {
     "home_team": "Crystal Palace",
     "away_team": "Tottenham",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30543,
-          0.29781,
-          0.39676
-        ]
-      }
-    }
+    "result": "D"
   },
   "375": {
     "home_team": "Everton",
     "away_team": "Bournemouth",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41591,
-          0.29197,
-          0.29212
-        ]
-      }
-    }
+    "result": "A"
   },
   "376": {
     "home_team": "Leicester",
     "away_team": "Man United",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34087,
-          0.29968,
-          0.35945
-        ]
-      }
-    }
+    "result": "A"
   },
   "377": {
     "home_team": "Man City",
     "away_team": "Norwich",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.58083,
-          0.25643,
-          0.16274
-        ]
-      }
-    }
+    "result": "H"
   },
   "378": {
     "home_team": "Newcastle",
     "away_team": "Liverpool",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.11845,
-          0.23448,
-          0.64707
-        ]
-      }
-    }
+    "result": "A"
   },
   "379": {
     "home_team": "Southampton",
     "away_team": "Sheffield United",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40901,
-          0.29648,
-          0.29451
-        ]
-      }
-    }
+    "result": "H"
   },
   "380": {
     "home_team": "West Ham",
     "away_team": "Aston Villa",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.48412,
-          0.28389,
-          0.23199
-        ]
-      }
-    }
+    "result": "D"
   }
 }
