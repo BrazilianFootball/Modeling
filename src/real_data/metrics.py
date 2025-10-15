@@ -141,7 +141,6 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
     sample_size = num_total_matches - num_games
     observations = np.zeros((sample_size, 3), dtype=int)
     predictions = np.zeros((sample_size, 3), dtype=float)
-    naive_predictions = 1 / 3 * np.ones((sample_size, 3), dtype=float)
     game = 0
     results_to_array = {
         "H": np.array([1, 0, 0]),
@@ -181,28 +180,18 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
         log_score(observations, predictions),
         interval_score(model_name, year, num_games, championship),
     ]
-    naive_row = [
-        year,
-        championship,
-        "naive",
-        num_games,
-        brier_score(observations, naive_predictions),
-        ranked_probability_score(observations, naive_predictions),
-        log_score(observations, naive_predictions),
-        np.nan,
-    ]
     if os.path.exists(csv_path):
         df = pd.read_csv(csv_path)
         df = df[
             ~(
                 (df["year"] == year)
                 & (df["championship"] == championship)
-                & (df["model_name"].isin([model_name, "naive"]))
+                & (df["model_name"] == model_name)
                 & (df["num_games"] == num_games)
             )
         ]
     else:
         df = pd.DataFrame(columns=header)
 
-    df = pd.concat([df, pd.DataFrame([row, naive_row], columns=header)], ignore_index=True)
+    df = pd.concat([df, pd.DataFrame([row], columns=header)], ignore_index=True)
     df.to_csv(csv_path, index=False, encoding="utf-8")
