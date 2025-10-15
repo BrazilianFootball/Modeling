@@ -295,7 +295,10 @@ def load_real_data(year: int, championship: str) -> dict[str, Any]:
     Returns:
         Dict[str, Any]: The loaded data dictionary.
     """
-    if championship in ["brazil", "england", "italy", "spain"]:
+    if (
+        championship in ["brazil", "england", "italy", "spain"]
+        or (championship == "france" and year <= 2022)
+    ):
         num_games = 380
     else:
         num_games = 306
