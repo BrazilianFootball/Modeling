@@ -31,6 +31,8 @@ def process_data(
         season_list (list): List of seasons (years) to process.
         game_list (list): List of game numbers to process.
         country_list (list): List of country/championship names to process.
+        num_simulations (int): Number of simulations to run.
+        ignore_cache (bool): Whether to ignore the cache.
 
     Note:
         Errors are caught and printed but do not stop the overall process.
