@@ -265,6 +265,78 @@ def generate_points_matrix_poisson(
     return points_matrix, probabilities
 
 
+def generate_points_matrix_naive(
+    probs: list[float],
+    team_mapping: dict[int, str],
+    data: dict[str, Any],
+    num_games: int,
+    num_simulations: int,
+    num_total_matches: int,
+) -> tuple[np.ndarray, dict[str, dict[str, Any]]]:
+    """
+    Simulate the points matrix for the remainder of the season using a naive
+    probability-based model.
+
+    This function uses a constant probability vector for the outcomes (home win, draw, away win)
+    to simulate each remaining game in the season, and accumulates the points for each team across
+    multiple simulation runs. The function returns a matrix of points per team for each round and
+    simulation, as well as a dictionary of simulated probabilities for each future game.
+
+    Args:
+        probs (list[float]): Probabilities for [home win, tie, away win].
+        team_mapping (dict[int, str]): Mapping from team indices to team names.
+        data (dict[str, Any]): Dictionary containing real data, with keys "team1" and "team2".
+        num_games (int): Number of games already played in the season.
+        num_simulations (int): Number of Monte Carlo simulations to run.
+        num_total_matches (int): Total number of matches in the season.
+
+    Returns:
+        tuple:
+            - points_matrix (np.ndarray): Simulated team point totals.
+                Shape: (num_teams, num_remaining_games, num_simulations)
+            - probabilities (dict[str, dict[str, Any]]): Probabilities for each simulated game,
+                keyed by zero-padded game number as a string.
+    """
+    home_team = data["team1"]
+    away_team = data["team2"]
+    home_team_names = [team_mapping[team] for team in home_team]
+    away_team_names = [team_mapping[team] for team in away_team]
+    teams = list(team_mapping.values())
+    n_teams = len(teams)
+    points_matrix = np.zeros((n_teams, num_total_matches - num_games, num_simulations), dtype=int)
+    probabilities: dict[str, dict[str, Any]] = {}
+    for game_id in range(num_games, num_total_matches):
+        game_simulation_idx = game_id - num_games
+        results = np.random.choice(
+            [1, 0.5, 0], size=(num_simulations), p=probs
+        )
+        home_idx = home_team[game_id] - 1
+        away_idx = away_team[game_id] - 1
+        home_new_points = (results == 1) * 3 + (results == 0.5) * 1
+        away_new_points = (results == 0) * 3 + (results == 0.5) * 1
+        for team_idx in team_mapping:
+            if team_idx - 1 == home_idx:
+                points_matrix[home_idx, game_simulation_idx, :] = (
+                    points_matrix[home_idx, game_simulation_idx - 1, :] + home_new_points
+                )
+            elif team_idx - 1 == away_idx:
+                points_matrix[away_idx, game_simulation_idx, :] = (
+                    points_matrix[away_idx, game_simulation_idx - 1, :] + away_new_points
+                )
+            else:
+                points_matrix[team_idx - 1, game_simulation_idx, :] = (
+                    points_matrix[team_idx - 1, game_simulation_idx - 1, :]
+                )
+
+        probabilities[str(game_id + 1).zfill(3)] = {
+            "home_team": home_team_names[game_id],
+            "away_team": away_team_names[game_id],
+            "probabilities": probs,
+        }
+
+    return points_matrix, probabilities
+
+
 def simulate_competition(
     samples: pd.DataFrame,
     team_mapping: dict[int, str],
@@ -298,7 +370,11 @@ def simulate_competition(
 
     current_scenario = get_real_points_evolution(data, team_mapping)
 
-    if "bradley_terry" in model_name:
+    if "naive" in model_name:
+        points_matrix, probabilities = generate_points_matrix_naive(
+            samples, team_mapping, data, num_games, num_simulations, num_total_matches
+        )
+    elif "bradley_terry" in model_name:
         points_matrix, probabilities = generate_points_matrix_bradley_terry(
             samples, team_mapping, data, num_games, num_simulations, num_total_matches
         )
