@@ -319,4175 +319,1826 @@
     "away_team": "Santa Clara",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47889,
-          0.21287,
-          0.30824
-        ]
-      }
-    }
+    "result": "H"
   },
   "047": {
     "home_team": "Famalicao",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.141,
-          0.16832,
-          0.69068
-        ]
-      }
-    }
+    "result": "A"
   },
   "048": {
     "home_team": "Sp Lisbon",
     "away_team": "Portimonense",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33559,
-          0.21332,
-          0.45109
-        ]
-      }
-    }
+    "result": "H"
   },
   "049": {
     "home_team": "Porto",
     "away_team": "Chaves",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4792,
-          0.21241,
-          0.30839
-        ]
-      }
-    }
+    "result": "H"
   },
   "050": {
     "home_team": "Pacos Ferreira",
     "away_team": "Casa Pia",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.02133,
-          0.05629,
-          0.92238
-        ]
-      }
-    }
+    "result": "A"
   },
   "051": {
     "home_team": "Arouca",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38377,
-          0.21591,
-          0.40032
-        ]
-      }
-    }
+    "result": "A"
   },
   "052": {
     "home_team": "Maritimo",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.281,
-          0.20542,
-          0.51358
-        ]
-      }
-    }
+    "result": "A"
   },
   "053": {
     "home_team": "Rio Ave",
     "away_team": "Sp Braga",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21108,
-          0.19168,
-          0.59724
-        ]
-      }
-    }
+    "result": "A"
   },
   "054": {
     "home_team": "Vizela",
     "away_team": "Estoril",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41886,
-          0.21325,
-          0.36789
-        ]
-      }
-    }
+    "result": "A"
   },
   "055": {
     "home_team": "Portimonense",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4487,
-          0.21377,
-          0.33753
-        ]
-      }
-    }
+    "result": "H"
   },
   "056": {
     "home_team": "Gil Vicente",
     "away_team": "Rio Ave",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33778,
-          0.21417,
-          0.44805
-        ]
-      }
-    }
+    "result": "D"
   },
   "057": {
     "home_team": "Santa Clara",
     "away_team": "Pacos Ferreira",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.87257,
-          0.08036,
-          0.04707
-        ]
-      }
-    }
+    "result": "D"
   },
   "058": {
     "home_team": "Estoril",
     "away_team": "Porto",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24473,
-          0.19949,
-          0.55578
-        ]
-      }
-    }
+    "result": "D"
   },
   "059": {
     "home_team": "Boavista",
     "away_team": "Sp Lisbon",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40281,
-          0.21527,
-          0.38192
-        ]
-      }
-    }
+    "result": "H"
   },
   "060": {
     "home_team": "Arouca",
     "away_team": "Guimaraes",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43647,
-          0.2151,
-          0.34843
-        ]
-      }
-    }
+    "result": "D"
   },
   "061": {
     "home_team": "Benfica",
     "away_team": "Maritimo",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.77806,
-          0.13751,
-          0.08443
-        ]
-      }
-    }
+    "result": "H"
   },
   "062": {
     "home_team": "Casa Pia",
     "away_team": "Famalicao",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54839,
-          0.20407,
-          0.24754
-        ]
-      }
-    }
+    "result": "H"
   },
   "063": {
     "home_team": "Sp Braga",
     "away_team": "Vizela",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.58225,
-          0.19861,
-          0.21914
-        ]
-      }
-    }
+    "result": "H"
   },
   "064": {
     "home_team": "Sp Lisbon",
     "away_team": "Gil Vicente",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50416,
-          0.20994,
-          0.2859
-        ]
-      }
-    }
+    "result": "H"
   },
   "065": {
     "home_team": "Porto",
     "away_team": "Sp Braga",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33872,
-          0.21224,
-          0.44904
-        ]
-      }
-    }
+    "result": "H"
   },
   "066": {
     "home_team": "Vizela",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29031,
-          0.20948,
-          0.50021
-        ]
-      }
-    }
+    "result": "H"
   },
   "067": {
     "home_team": "Chaves",
     "away_team": "Estoril",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46855,
-          0.21455,
-          0.3169
-        ]
-      }
-    }
+    "result": "D"
   },
   "068": {
     "home_team": "Guimaraes",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.1846,
-          0.18735,
-          0.62805
-        ]
-      }
-    }
+    "result": "D"
   },
   "069": {
     "home_team": "Rio Ave",
     "away_team": "Santa Clara",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46233,
-          0.2146,
-          0.32307
-        ]
-      }
-    }
+    "result": "H"
   },
   "070": {
     "home_team": "Pacos Ferreira",
     "away_team": "Arouca",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.02468,
-          0.06028,
-          0.91504
-        ]
-      }
-    }
+    "result": "D"
   },
   "071": {
     "home_team": "Famalicao",
     "away_team": "Boavista",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27442,
-          0.20802,
-          0.51756
-        ]
-      }
-    }
+    "result": "H"
   },
   "072": {
     "home_team": "Maritimo",
     "away_team": "Casa Pia",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.1626,
-          0.17966,
-          0.65774
-        ]
-      }
-    }
+    "result": "A"
   },
   "073": {
     "home_team": "Gil Vicente",
     "away_team": "Estoril",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35834,
-          0.21349,
-          0.42817
-        ]
-      }
-    }
+    "result": "A"
   },
   "074": {
     "home_team": "Santa Clara",
     "away_team": "Sp Lisbon",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2733,
-          0.20669,
-          0.52001
-        ]
-      }
-    }
+    "result": "A"
   },
   "075": {
     "home_team": "Benfica",
     "away_team": "Rio Ave",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.63802,
-          0.18567,
-          0.17631
-        ]
-      }
-    }
+    "result": "H"
   },
   "076": {
     "home_team": "Portimonense",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36524,
-          0.21513,
-          0.41963
-        ]
-      }
-    }
+    "result": "A"
   },
   "077": {
     "home_team": "Pacos Ferreira",
     "away_team": "Guimaraes",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.03131,
-          0.06679,
-          0.9019
-        ]
-      }
-    }
+    "result": "A"
   },
   "078": {
     "home_team": "Boavista",
     "away_team": "Maritimo",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.6297,
-          0.18539,
-          0.18491
-        ]
-      }
-    }
+    "result": "D"
   },
   "079": {
     "home_team": "Casa Pia",
     "away_team": "Vizela",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.48059,
-          0.21056,
-          0.30885
-        ]
-      }
-    }
+    "result": "A"
   },
   "080": {
     "home_team": "Sp Braga",
     "away_team": "Chaves",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53499,
-          0.20322,
-          0.26179
-        ]
-      }
-    }
+    "result": "A"
   },
   "081": {
     "home_team": "Arouca",
     "away_team": "Famalicao",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51059,
-          0.20983,
-          0.27958
-        ]
-      }
-    }
+    "result": "H"
   },
   "082": {
     "home_team": "Porto",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29122,
-          0.20795,
-          0.50083
-        ]
-      }
-    }
+    "result": "A"
   },
   "083": {
     "home_team": "Famalicao",
     "away_team": "Pacos Ferreira",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.87715,
-          0.07948,
-          0.04337
-        ]
-      }
-    }
+    "result": "H"
   },
   "084": {
     "home_team": "Estoril",
     "away_team": "Sp Braga",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.20137,
-          0.19021,
-          0.60842
-        ]
-      }
-    }
+    "result": "A"
   },
   "085": {
     "home_team": "Sp Lisbon",
     "away_team": "Casa Pia",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3527,
-          0.21273,
-          0.43457
-        ]
-      }
-    }
+    "result": "H"
   },
   "086": {
     "home_team": "Maritimo",
     "away_team": "Arouca",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18601,
-          0.18826,
-          0.62573
-        ]
-      }
-    }
+    "result": "D"
   },
   "087": {
     "home_team": "Vizela",
     "away_team": "Santa Clara",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.474,
-          0.21172,
-          0.31428
-        ]
-      }
-    }
+    "result": "A"
   },
   "088": {
     "home_team": "Chaves",
     "away_team": "Gil Vicente",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50497,
-          0.20771,
-          0.28732
-        ]
-      }
-    }
+    "result": "H"
   },
   "089": {
     "home_team": "Guimaraes",
     "away_team": "Boavista",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34421,
-          0.21504,
-          0.44075
-        ]
-      }
-    }
+    "result": "H"
   },
   "090": {
     "home_team": "Rio Ave",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28751,
-          0.20692,
-          0.50557
-        ]
-      }
-    }
+    "result": "H"
   },
   "091": {
     "home_team": "Pacos Ferreira",
     "away_team": "Maritimo",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.07076,
-          0.09952,
-          0.82972
-        ]
-      }
-    }
+    "result": "A"
   },
   "092": {
     "home_team": "Santa Clara",
     "away_team": "Porto",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.20191,
-          0.19438,
-          0.60371
-        ]
-      }
-    }
+    "result": "D"
   },
   "093": {
     "home_team": "Benfica",
     "away_team": "Chaves",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.58736,
-          0.19583,
-          0.21681
-        ]
-      }
-    }
+    "result": "H"
   },
   "094": {
     "home_team": "Arouca",
     "away_team": "Sp Lisbon",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39697,
-          0.21693,
-          0.3861
-        ]
-      }
-    }
+    "result": "H"
   },
   "095": {
     "home_team": "Boavista",
     "away_team": "Vizela",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44907,
-          0.21112,
-          0.33981
-        ]
-      }
-    }
+    "result": "D"
   },
   "096": {
     "home_team": "Portimonense",
     "away_team": "Estoril",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.52626,
-          0.20393,
-          0.26981
-        ]
-      }
-    }
+    "result": "D"
   },
   "097": {
     "home_team": "Casa Pia",
     "away_team": "Rio Ave",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.48888,
-          0.20842,
-          0.3027
-        ]
-      }
-    }
+    "result": "H"
   },
   "098": {
     "home_team": "Gil Vicente",
     "away_team": "Sp Braga",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.17567,
-          0.18468,
-          0.63965
-        ]
-      }
-    }
+    "result": "A"
   },
   "099": {
     "home_team": "Guimaraes",
     "away_team": "Famalicao",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46127,
-          0.21425,
-          0.32448
-        ]
-      }
-    }
+    "result": "H"
   },
   "100": {
     "home_team": "Gil Vicente",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23854,
-          0.20064,
-          0.56082
-        ]
-      }
-    }
+    "result": "A"
   },
   "101": {
     "home_team": "Vizela",
     "away_team": "Arouca",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34257,
-          0.21213,
-          0.4453
-        ]
-      }
-    }
+    "result": "A"
   },
   "102": {
     "home_team": "Porto",
     "away_team": "Pacos Ferreira",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.93362,
-          0.04937,
-          0.01701
-        ]
-      }
-    }
+    "result": "H"
   },
   "103": {
     "home_team": "Sp Lisbon",
     "away_team": "Guimaraes",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.43368,
-          0.21776,
-          0.34856
-        ]
-      }
-    }
+    "result": "H"
   },
   "104": {
     "home_team": "Rio Ave",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3268,
-          0.21149,
-          0.46171
-        ]
-      }
-    }
+    "result": "H"
   },
   "105": {
     "home_team": "Maritimo",
     "away_team": "Famalicao",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27851,
-          0.20649,
-          0.515
-        ]
-      }
-    }
+    "result": "D"
   },
   "106": {
     "home_team": "Sp Braga",
     "away_team": "Casa Pia",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.49625,
-          0.21058,
-          0.29317
-        ]
-      }
-    }
+    "result": "A"
   },
   "107": {
     "home_team": "Estoril",
     "away_team": "Benfica",
     "goals_team1": 1,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.16345,
-          0.17948,
-          0.65707
-        ]
-      }
-    }
+    "result": "A"
   },
   "108": {
     "home_team": "Chaves",
     "away_team": "Santa Clara",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.52317,
-          0.20656,
-          0.27027
-        ]
-      }
-    }
+    "result": "D"
   },
   "109": {
     "home_team": "Arouca",
     "away_team": "Rio Ave",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45294,
-          0.21392,
-          0.33314
-        ]
-      }
-    }
+    "result": "A"
   },
   "110": {
     "home_team": "Boavista",
     "away_team": "Porto",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31858,
-          0.20967,
-          0.47175
-        ]
-      }
-    }
+    "result": "A"
   },
   "111": {
     "home_team": "Guimaraes",
     "away_team": "Maritimo",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.58609,
-          0.19639,
-          0.21752
-        ]
-      }
-    }
+    "result": "H"
   },
   "112": {
     "home_team": "Pacos Ferreira",
     "away_team": "Vizela",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.03304,
-          0.06794,
-          0.89902
-        ]
-      }
-    }
+    "result": "A"
   },
   "113": {
     "home_team": "Benfica",
     "away_team": "Gil Vicente",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.68494,
-          0.17166,
-          0.1434
-        ]
-      }
-    }
+    "result": "H"
   },
   "114": {
     "home_team": "Casa Pia",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42859,
-          0.21553,
-          0.35588
-        ]
-      }
-    }
+    "result": "A"
   },
   "115": {
     "home_team": "Portimonense",
     "away_team": "Sp Braga",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30963,
-          0.21086,
-          0.47951
-        ]
-      }
-    }
+    "result": "A"
   },
   "116": {
     "home_team": "Famalicao",
     "away_team": "Sp Lisbon",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28575,
-          0.20845,
-          0.5058
-        ]
-      }
-    }
+    "result": "A"
   },
   "117": {
     "home_team": "Santa Clara",
     "away_team": "Estoril",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3387,
-          0.21506,
-          0.44624
-        ]
-      }
-    }
+    "result": "H"
   },
   "118": {
     "home_team": "Rio Ave",
     "away_team": "Maritimo",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.57064,
-          0.20096,
-          0.2284
-        ]
-      }
-    }
+    "result": "D"
   },
   "119": {
     "home_team": "Portimonense",
     "away_team": "Casa Pia",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.41121,
-          0.21228,
-          0.37651
-        ]
-      }
-    }
+    "result": "A"
   },
   "120": {
     "home_team": "Porto",
     "away_team": "Arouca",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47626,
-          0.213,
-          0.31074
-        ]
-      }
-    }
+    "result": "H"
   },
   "121": {
     "home_team": "Gil Vicente",
     "away_team": "Santa Clara",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40899,
-          0.21426,
-          0.37675
-        ]
-      }
-    }
+    "result": "H"
   },
   "122": {
     "home_team": "Sp Lisbon",
     "away_team": "Pacos Ferreira",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.91243,
-          0.06139,
-          0.02618
-        ]
-      }
-    }
+    "result": "H"
   },
   "123": {
     "home_team": "Chaves",
     "away_team": "Famalicao",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50995,
-          0.20582,
-          0.28423
-        ]
-      }
-    }
+    "result": "A"
   },
   "124": {
     "home_team": "Vizela",
     "away_team": "Guimaraes",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38416,
-          0.21544,
-          0.4004
-        ]
-      }
-    }
+    "result": "H"
   },
   "125": {
     "home_team": "Sp Braga",
     "away_team": "Benfica",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34345,
-          0.21231,
-          0.44424
-        ]
-      }
-    }
+    "result": "H"
   },
   "126": {
     "home_team": "Santa Clara",
     "away_team": "Sp Braga",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.16292,
-          0.17887,
-          0.65821
-        ]
-      }
-    }
+    "result": "A"
   },
   "127": {
     "home_team": "Benfica",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53308,
-          0.20179,
-          0.26513
-        ]
-      }
-    }
+    "result": "H"
   },
   "128": {
     "home_team": "Famalicao",
     "away_team": "Vizela",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3298,
-          0.21348,
-          0.45672
-        ]
-      }
-    }
+    "result": "H"
   },
   "129": {
     "home_team": "Arouca",
     "away_team": "Estoril",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46876,
-          0.21444,
-          0.3168
-        ]
-      }
-    }
+    "result": "H"
   },
   "130": {
     "home_team": "Guimaraes",
     "away_team": "Rio Ave",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40937,
-          0.21638,
-          0.37425
-        ]
-      }
-    }
+    "result": "D"
   },
   "131": {
     "home_team": "Casa Pia",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34427,
-          0.21219,
-          0.44354
-        ]
-      }
-    }
+    "result": "D"
   },
   "132": {
     "home_team": "Pacos Ferreira",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.02679,
-          0.06191,
-          0.9113
-        ]
-      }
-    }
+    "result": "D"
   },
   "133": {
     "home_team": "Maritimo",
     "away_team": "Sp Lisbon",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18869,
-          0.18732,
-          0.62399
-        ]
-      }
-    }
+    "result": "H"
   },
   "134": {
     "home_team": "Boavista",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51362,
-          0.2054,
-          0.28098
-        ]
-      }
-    }
+    "result": "H"
   },
   "135": {
     "home_team": "Portimonense",
     "away_team": "Santa Clara",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.57783,
-          0.19941,
-          0.22276
-        ]
-      }
-    }
+    "result": "D"
   },
   "136": {
     "home_team": "Vizela",
     "away_team": "Maritimo",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.57715,
-          0.19755,
-          0.2253
-        ]
-      }
-    }
+    "result": "H"
   },
   "137": {
     "home_team": "Rio Ave",
     "away_team": "Pacos Ferreira",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.89594,
-          0.06964,
-          0.03442
-        ]
-      }
-    }
+    "result": "A"
   },
   "138": {
     "home_team": "Sp Braga",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.52562,
-          0.20418,
-          0.2702
-        ]
-      }
-    }
+    "result": "H"
   },
   "139": {
     "home_team": "Chaves",
     "away_team": "Arouca",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39317,
-          0.21616,
-          0.39067
-        ]
-      }
-    }
+    "result": "D"
   },
   "140": {
     "home_team": "Benfica",
     "away_team": "Sp Lisbon",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.59106,
-          0.19381,
-          0.21513
-        ]
-      }
-    }
+    "result": "D"
   },
   "141": {
     "home_team": "Porto",
     "away_team": "Famalicao",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.58992,
-          0.19541,
-          0.21467
-        ]
-      }
-    }
+    "result": "H"
   },
   "142": {
     "home_team": "Estoril",
     "away_team": "Casa Pia",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28844,
-          0.20859,
-          0.50297
-        ]
-      }
-    }
+    "result": "H"
   },
   "143": {
     "home_team": "Gil Vicente",
     "away_team": "Guimaraes",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32485,
-          0.21219,
-          0.46296
-        ]
-      }
-    }
+    "result": "H"
   },
   "144": {
     "home_team": "Arouca",
     "away_team": "Portimonense",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33737,
-          0.21334,
-          0.44929
-        ]
-      }
-    }
+    "result": "H"
   },
   "145": {
     "home_team": "Sp Lisbon",
     "away_team": "Vizela",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4434,
-          0.21336,
-          0.34324
-        ]
-      }
-    }
+    "result": "H"
   },
   "146": {
     "home_team": "Pacos Ferreira",
     "away_team": "Sp Braga",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.01292,
-          0.04422,
-          0.94286
-        ]
-      }
-    }
+    "result": "A"
   },
   "147": {
     "home_team": "Santa Clara",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.13326,
-          0.16613,
-          0.70061
-        ]
-      }
-    }
+    "result": "A"
   },
   "148": {
     "home_team": "Guimaraes",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26916,
-          0.20736,
-          0.52348
-        ]
-      }
-    }
+    "result": "A"
   },
   "149": {
     "home_team": "Maritimo",
     "away_team": "Estoril",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.24684,
-          0.20036,
-          0.5528
-        ]
-      }
-    }
+    "result": "H"
   },
   "150": {
     "home_team": "Casa Pia",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54266,
-          0.20235,
-          0.25499
-        ]
-      }
-    }
+    "result": "A"
   },
   "151": {
     "home_team": "Famalicao",
     "away_team": "Rio Ave",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33579,
-          0.21587,
-          0.44834
-        ]
-      }
-    }
+    "result": "D"
   },
   "152": {
     "home_team": "Boavista",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39983,
-          0.21446,
-          0.38571
-        ]
-      }
-    }
+    "result": "D"
   },
   "153": {
     "home_team": "Pacos Ferreira",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.0087,
-          0.03774,
-          0.95356
-        ]
-      }
-    }
+    "result": "A"
   },
   "154": {
     "home_team": "Casa Pia",
     "away_team": "Santa Clara",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.55987,
-          0.20366,
-          0.23647
-        ]
-      }
-    }
+    "result": "H"
   },
   "155": {
     "home_team": "Vizela",
     "away_team": "Rio Ave",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40008,
-          0.21659,
-          0.38333
-        ]
-      }
-    }
+    "result": "H"
   },
   "156": {
     "home_team": "Boavista",
     "away_team": "Portimonense",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34716,
-          0.21437,
-          0.43847
-        ]
-      }
-    }
+    "result": "H"
   },
   "157": {
     "home_team": "Famalicao",
     "away_team": "Estoril",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35365,
-          0.21472,
-          0.43163
-        ]
-      }
-    }
+    "result": "H"
   },
   "158": {
     "home_team": "Guimaraes",
     "away_team": "Chaves",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34813,
-          0.21518,
-          0.43669
-        ]
-      }
-    }
+    "result": "H"
   },
   "159": {
     "home_team": "Pacos Ferreira",
     "away_team": "Gil Vicente",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.04188,
-          0.07909,
-          0.87903
-        ]
-      }
-    }
+    "result": "H"
   },
   "160": {
     "home_team": "Arouca",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21779,
-          0.19728,
-          0.58493
-        ]
-      }
-    }
+    "result": "A"
   },
   "161": {
     "home_team": "Maritimo",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.13298,
-          0.16715,
-          0.69987
-        ]
-      }
-    }
+    "result": "A"
   },
   "162": {
     "home_team": "Sp Lisbon",
     "away_team": "Sp Braga",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2566,
-          0.20458,
-          0.53882
-        ]
-      }
-    }
+    "result": "H"
   },
   "163": {
     "home_team": "Santa Clara",
     "away_team": "Boavista",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26209,
-          0.20515,
-          0.53276
-        ]
-      }
-    }
+    "result": "D"
   },
   "164": {
     "home_team": "Benfica",
     "away_team": "Casa Pia",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.55057,
-          0.20176,
-          0.24767
-        ]
-      }
-    }
+    "result": "H"
   },
   "165": {
     "home_team": "Estoril",
     "away_team": "Guimaraes",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35837,
-          0.21663,
-          0.425
-        ]
-      }
-    }
+    "result": "A"
   },
   "166": {
     "home_team": "Chaves",
     "away_team": "Maritimo",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.62967,
-          0.18668,
-          0.18365
-        ]
-      }
-    }
+    "result": "H"
   },
   "167": {
     "home_team": "Sp Braga",
     "away_team": "Famalicao",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.64398,
-          0.18484,
-          0.17118
-        ]
-      }
-    }
+    "result": "H"
   },
   "168": {
     "home_team": "Porto",
     "away_team": "Vizela",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53123,
-          0.20586,
-          0.26291
-        ]
-      }
-    }
+    "result": "H"
   },
   "169": {
     "home_team": "Gil Vicente",
     "away_team": "Arouca",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28162,
-          0.20786,
-          0.51052
-        ]
-      }
-    }
+    "result": "D"
   },
   "170": {
     "home_team": "Portimonense",
     "away_team": "Pacos Ferreira",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.92892,
-          0.05249,
-          0.01859
-        ]
-      }
-    }
+    "result": "H"
   },
   "171": {
     "home_team": "Rio Ave",
     "away_team": "Sp Lisbon",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33475,
-          0.21609,
-          0.44916
-        ]
-      }
-    }
+    "result": "A"
   },
   "172": {
     "home_team": "Estoril",
     "away_team": "Boavista",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31181,
-          0.2111,
-          0.47709
-        ]
-      }
-    }
+    "result": "H"
   },
   "173": {
     "home_team": "Vizela",
     "away_team": "Chaves",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34029,
-          0.21478,
-          0.44493
-        ]
-      }
-    }
+    "result": "D"
   },
   "174": {
     "home_team": "Arouca",
     "away_team": "Santa Clara",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.52342,
-          0.20908,
-          0.2675
-        ]
-      }
-    }
+    "result": "H"
   },
   "175": {
     "home_team": "Guimaraes",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29528,
-          0.21223,
-          0.49249
-        ]
-      }
-    }
+    "result": "H"
   },
   "176": {
     "home_team": "Famalicao",
     "away_team": "Gil Vicente",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38804,
-          0.21736,
-          0.3946
-        ]
-      }
-    }
+    "result": "A"
   },
   "177": {
     "home_team": "Sp Lisbon",
     "away_team": "Porto",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3057,
-          0.213,
-          0.4813
-        ]
-      }
-    }
+    "result": "A"
   },
   "178": {
     "home_team": "Maritimo",
     "away_team": "Sp Braga",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.10369,
-          0.15128,
-          0.74503
-        ]
-      }
-    }
+    "result": "A"
   },
   "179": {
     "home_team": "Rio Ave",
     "away_team": "Estoril",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40928,
-          0.21719,
-          0.37353
-        ]
-      }
-    }
+    "result": "H"
   },
   "180": {
     "home_team": "Boavista",
     "away_team": "Casa Pia",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.36518,
-          0.21495,
-          0.41987
-        ]
-      }
-    }
+    "result": "D"
   },
   "181": {
     "home_team": "Gil Vicente",
     "away_team": "Vizela",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33027,
-          0.2146,
-          0.45513
-        ]
-      }
-    }
+    "result": "D"
   },
   "182": {
     "home_team": "Estoril",
     "away_team": "Pacos Ferreira",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.89378,
-          0.07117,
-          0.03505
-        ]
-      }
-    }
+    "result": "A"
   },
   "183": {
     "home_team": "Portimonense",
     "away_team": "Maritimo",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.67643,
-          0.17409,
-          0.14948
-        ]
-      }
-    }
+    "result": "H"
   },
   "184": {
     "home_team": "Porto",
     "away_team": "Rio Ave",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.54266,
-          0.20602,
-          0.25132
-        ]
-      }
-    }
+    "result": "H"
   },
   "185": {
     "home_team": "Santa Clara",
     "away_team": "Famalicao",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37708,
-          0.21559,
-          0.40733
-        ]
-      }
-    }
+    "result": "A"
   },
   "186": {
     "home_team": "Sp Braga",
     "away_team": "Arouca",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.53591,
-          0.20633,
-          0.25776
-        ]
-      }
-    }
+    "result": "H"
   },
   "187": {
     "home_team": "Casa Pia",
     "away_team": "Guimaraes",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47449,
-          0.21256,
-          0.31295
-        ]
-      }
-    }
+    "result": "D"
   },
   "188": {
     "home_team": "Chaves",
     "away_team": "Sp Lisbon",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39479,
-          0.21534,
-          0.38987
-        ]
-      }
-    }
+    "result": "A"
   },
   "189": {
     "home_team": "Benfica",
     "away_team": "Boavista",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.57709,
-          0.1982,
-          0.22471
-        ]
-      }
-    }
+    "result": "H"
   },
   "190": {
     "home_team": "Famalicao",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23455,
-          0.20241,
-          0.56304
-        ]
-      }
-    }
+    "result": "H"
   },
   "191": {
     "home_team": "Arouca",
     "away_team": "Casa Pia",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35574,
-          0.21725,
-          0.42701
-        ]
-      }
-    }
+    "result": "H"
   },
   "192": {
     "home_team": "Maritimo",
     "away_team": "Santa Clara",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28859,
-          0.21228,
-          0.49913
-        ]
-      }
-    }
+    "result": "H"
   },
   "193": {
     "home_team": "Vizela",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.18033,
-          0.18586,
-          0.63381
-        ]
-      }
-    }
+    "result": "A"
   },
   "194": {
     "home_team": "Rio Ave",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33486,
-          0.21356,
-          0.45158
-        ]
-      }
-    }
+    "result": "H"
   },
   "195": {
     "home_team": "Pacos Ferreira",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.02342,
-          0.05763,
-          0.91895
-        ]
-      }
-    }
+    "result": "A"
   },
   "196": {
     "home_team": "Porto",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.59022,
-          0.19726,
-          0.21252
-        ]
-      }
-    }
+    "result": "A"
   },
   "197": {
     "home_team": "Sp Lisbon",
     "away_team": "Estoril",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46526,
-          0.2127,
-          0.32204
-        ]
-      }
-    }
+    "result": "H"
   },
   "198": {
     "home_team": "Guimaraes",
     "away_team": "Sp Braga",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22395,
-          0.19692,
-          0.57913
-        ]
-      }
-    }
+    "result": "H"
   },
   "199": {
     "home_team": "Boavista",
     "away_team": "Arouca",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40124,
-          0.21584,
-          0.38292
-        ]
-      }
-    }
+    "result": "D"
   },
   "200": {
     "home_team": "Benfica",
     "away_team": "Famalicao",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.68941,
-          0.16931,
-          0.14128
-        ]
-      }
-    }
+    "result": "H"
   },
   "201": {
     "home_team": "Estoril",
     "away_team": "Vizela",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3646,
-          0.2158,
-          0.4196
-        ]
-      }
-    }
+    "result": "A"
   },
   "202": {
     "home_team": "Portimonense",
     "away_team": "Sp Lisbon",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44976,
-          0.21483,
-          0.33541
-        ]
-      }
-    }
+    "result": "A"
   },
   "203": {
     "home_team": "Chaves",
     "away_team": "Porto",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3083,
-          0.21359,
-          0.47811
-        ]
-      }
-    }
+    "result": "A"
   },
   "204": {
     "home_team": "Gil Vicente",
     "away_team": "Maritimo",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51753,
-          0.20567,
-          0.2768
-        ]
-      }
-    }
+    "result": "H"
   },
   "205": {
     "home_team": "Santa Clara",
     "away_team": "Guimaraes",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3091,
-          0.20995,
-          0.48095
-        ]
-      }
-    }
+    "result": "A"
   },
   "206": {
     "home_team": "Sp Braga",
     "away_team": "Rio Ave",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.59385,
-          0.19386,
-          0.21229
-        ]
-      }
-    }
+    "result": "H"
   },
   "207": {
     "home_team": "Casa Pia",
     "away_team": "Pacos Ferreira",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.92275,
-          0.0561,
-          0.02115
-        ]
-      }
-    }
+    "result": "H"
   },
   "208": {
     "home_team": "Porto",
     "away_team": "Estoril",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.55306,
-          0.20114,
-          0.2458
-        ]
-      }
-    }
+    "result": "H"
   },
   "209": {
     "home_team": "Chaves",
     "away_team": "Portimonense",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3394,
-          0.21205,
-          0.44855
-        ]
-      }
-    }
+    "result": "H"
   },
   "210": {
     "home_team": "Pacos Ferreira",
     "away_team": "Santa Clara",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.0453,
-          0.0821,
-          0.8726
-        ]
-      }
-    }
+    "result": "H"
   },
   "211": {
     "home_team": "Guimaraes",
     "away_team": "Arouca",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3498,
-          0.21671,
-          0.43349
-        ]
-      }
-    }
+    "result": "A"
   },
   "212": {
     "home_team": "Vizela",
     "away_team": "Sp Braga",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21866,
-          0.19411,
-          0.58723
-        ]
-      }
-    }
+    "result": "A"
   },
   "213": {
     "home_team": "Rio Ave",
     "away_team": "Gil Vicente",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44721,
-          0.21309,
-          0.3397
-        ]
-      }
-    }
+    "result": "H"
   },
   "214": {
     "home_team": "Maritimo",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.08488,
-          0.14027,
-          0.77485
-        ]
-      }
-    }
+    "result": "A"
   },
   "215": {
     "home_team": "Sp Lisbon",
     "away_team": "Boavista",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.3813,
-          0.21249,
-          0.40621
-        ]
-      }
-    }
+    "result": "H"
   },
   "216": {
     "home_team": "Famalicao",
     "away_team": "Casa Pia",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.25217,
-          0.20251,
-          0.54532
-        ]
-      }
-    }
+    "result": "H"
   },
   "217": {
     "home_team": "Santa Clara",
     "away_team": "Rio Ave",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.32401,
-          0.21467,
-          0.46132
-        ]
-      }
-    }
+    "result": "A"
   },
   "218": {
     "home_team": "Portimonense",
     "away_team": "Vizela",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50245,
-          0.20884,
-          0.28871
-        ]
-      }
-    }
+    "result": "A"
   },
   "219": {
     "home_team": "Arouca",
     "away_team": "Pacos Ferreira",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.91429,
-          0.0604,
-          0.02531
-        ]
-      }
-    }
+    "result": "D"
   },
   "220": {
     "home_team": "Benfica",
     "away_team": "Guimaraes",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.62609,
-          0.18848,
-          0.18543
-        ]
-      }
-    }
+    "result": "H"
   },
   "221": {
     "home_team": "Estoril",
     "away_team": "Chaves",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31789,
-          0.21279,
-          0.46932
-        ]
-      }
-    }
+    "result": "A"
   },
   "222": {
     "home_team": "Casa Pia",
     "away_team": "Maritimo",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.66004,
-          0.17756,
-          0.1624
-        ]
-      }
-    }
+    "result": "H"
   },
   "223": {
     "home_team": "Sp Braga",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.4475,
-          0.21235,
-          0.34015
-        ]
-      }
-    }
+    "result": "D"
   },
   "224": {
     "home_team": "Boavista",
     "away_team": "Famalicao",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51717,
-          0.20629,
-          0.27654
-        ]
-      }
-    }
+    "result": "A"
   },
   "225": {
     "home_team": "Estoril",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42945,
-          0.213,
-          0.35755
-        ]
-      }
-    }
+    "result": "H"
   },
   "226": {
     "home_team": "Vizela",
     "away_team": "Casa Pia",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.30558,
-          0.21342,
-          0.481
-        ]
-      }
-    }
+    "result": "H"
   },
   "227": {
     "home_team": "Guimaraes",
     "away_team": "Pacos Ferreira",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.90223,
-          0.06741,
-          0.03036
-        ]
-      }
-    }
+    "result": "D"
   },
   "228": {
     "home_team": "Sp Lisbon",
     "away_team": "Santa Clara",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51829,
-          0.20373,
-          0.27798
-        ]
-      }
-    }
+    "result": "H"
   },
   "229": {
     "home_team": "Chaves",
     "away_team": "Sp Braga",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26097,
-          0.20304,
-          0.53599
-        ]
-      }
-    }
+    "result": "A"
   },
   "230": {
     "home_team": "Maritimo",
     "away_team": "Boavista",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.1824,
-          0.18465,
-          0.63295
-        ]
-      }
-    }
+    "result": "H"
   },
   "231": {
     "home_team": "Rio Ave",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.1767,
-          0.18212,
-          0.64118
-        ]
-      }
-    }
+    "result": "A"
   },
   "232": {
     "home_team": "Porto",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42396,
-          0.21467,
-          0.36137
-        ]
-      }
-    }
+    "result": "H"
   },
   "233": {
     "home_team": "Famalicao",
     "away_team": "Arouca",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28014,
-          0.21002,
-          0.50984
-        ]
-      }
-    }
+    "result": "A"
   },
   "234": {
     "home_team": "Gil Vicente",
     "away_team": "Sp Lisbon",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28809,
-          0.20756,
-          0.50435
-        ]
-      }
-    }
+    "result": "D"
   },
   "235": {
     "home_team": "Santa Clara",
     "away_team": "Vizela",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31509,
-          0.21205,
-          0.47286
-        ]
-      }
-    }
+    "result": "A"
   },
   "236": {
     "home_team": "Benfica",
     "away_team": "Porto",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50024,
-          0.20862,
-          0.29114
-        ]
-      }
-    }
+    "result": "A"
   },
   "237": {
     "home_team": "Boavista",
     "away_team": "Guimaraes",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44271,
-          0.2136,
-          0.34369
-        ]
-      }
-    }
+    "result": "H"
   },
   "238": {
     "home_team": "Arouca",
     "away_team": "Maritimo",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.62704,
-          0.18692,
-          0.18604
-        ]
-      }
-    }
+    "result": "H"
   },
   "239": {
     "home_team": "Pacos Ferreira",
     "away_team": "Famalicao",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.04284,
-          0.079,
-          0.87816
-        ]
-      }
-    }
+    "result": "A"
   },
   "240": {
     "home_team": "Portimonense",
     "away_team": "Rio Ave",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50878,
-          0.20702,
-          0.2842
-        ]
-      }
-    }
+    "result": "D"
   },
   "241": {
     "home_team": "Sp Braga",
     "away_team": "Estoril",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.60743,
-          0.1876,
-          0.20497
-        ]
-      }
-    }
+    "result": "H"
   },
   "242": {
     "home_team": "Casa Pia",
     "away_team": "Sp Lisbon",
     "goals_team1": 3,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.42987,
-          0.21568,
-          0.35445
-        ]
-      }
-    }
+    "result": "A"
   },
   "243": {
     "home_team": "Gil Vicente",
     "away_team": "Chaves",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28508,
-          0.20721,
-          0.50771
-        ]
-      }
-    }
+    "result": "D"
   },
   "244": {
     "home_team": "Famalicao",
     "away_team": "Guimaraes",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.324,
-          0.21386,
-          0.46214
-        ]
-      }
-    }
+    "result": "H"
   },
   "245": {
     "home_team": "Estoril",
     "away_team": "Portimonense",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27085,
-          0.20479,
-          0.52436
-        ]
-      }
-    }
+    "result": "A"
   },
   "246": {
     "home_team": "Maritimo",
     "away_team": "Pacos Ferreira",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.8269,
-          0.0992,
-          0.0739
-        ]
-      }
-    }
+    "result": "H"
   },
   "247": {
     "home_team": "Chaves",
     "away_team": "Benfica",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21903,
-          0.19555,
-          0.58542
-        ]
-      }
-    }
+    "result": "H"
   },
   "248": {
     "home_team": "Porto",
     "away_team": "Santa Clara",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.605,
-          0.19095,
-          0.20405
-        ]
-      }
-    }
+    "result": "H"
   },
   "249": {
     "home_team": "Rio Ave",
     "away_team": "Casa Pia",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29793,
-          0.21168,
-          0.49039
-        ]
-      }
-    }
+    "result": "D"
   },
   "250": {
     "home_team": "Sp Braga",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.64052,
-          0.18459,
-          0.17489
-        ]
-      }
-    }
+    "result": "H"
   },
   "251": {
     "home_team": "Sp Lisbon",
     "away_team": "Arouca",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38752,
-          0.21651,
-          0.39597
-        ]
-      }
-    }
+    "result": "D"
   },
   "252": {
     "home_team": "Vizela",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33681,
-          0.21329,
-          0.4499
-        ]
-      }
-    }
+    "result": "D"
   },
   "253": {
     "home_team": "Casa Pia",
     "away_team": "Sp Braga",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.29366,
-          0.207,
-          0.49934
-        ]
-      }
-    }
+    "result": "A"
   },
   "254": {
     "home_team": "Famalicao",
     "away_team": "Maritimo",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.51485,
-          0.20649,
-          0.27866
-        ]
-      }
-    }
+    "result": "H"
   },
   "255": {
     "home_team": "Boavista",
     "away_team": "Rio Ave",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46244,
-          0.20926,
-          0.3283
-        ]
-      }
-    }
+    "result": "H"
   },
   "256": {
     "home_team": "Pacos Ferreira",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.0175,
-          0.04949,
-          0.93301
-        ]
-      }
-    }
+    "result": "A"
   },
   "257": {
     "home_team": "Portimonense",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.561,
-          0.19936,
-          0.23964
-        ]
-      }
-    }
+    "result": "H"
   },
   "258": {
     "home_team": "Benfica",
     "away_team": "Estoril",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.66048,
-          0.1772,
-          0.16232
-        ]
-      }
-    }
+    "result": "H"
   },
   "259": {
     "home_team": "Santa Clara",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26874,
-          0.20574,
-          0.52552
-        ]
-      }
-    }
+    "result": "D"
   },
   "260": {
     "home_team": "Arouca",
     "away_team": "Vizela",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.444,
-          0.21277,
-          0.34323
-        ]
-      }
-    }
+    "result": "H"
   },
   "261": {
     "home_team": "Guimaraes",
     "away_team": "Sp Lisbon",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35309,
-          0.2165,
-          0.43041
-        ]
-      }
-    }
+    "result": "A"
   },
   "262": {
     "home_team": "Rio Ave",
     "away_team": "Arouca",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.33378,
-          0.21263,
-          0.45359
-        ]
-      }
-    }
+    "result": "H"
   },
   "263": {
     "home_team": "Maritimo",
     "away_team": "Guimaraes",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21721,
-          0.1967,
-          0.58609
-        ]
-      }
-    }
+    "result": "A"
   },
   "264": {
     "home_team": "Sp Braga",
     "away_team": "Portimonense",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47642,
-          0.21024,
-          0.31334
-        ]
-      }
-    }
+    "result": "H"
   },
   "265": {
     "home_team": "Chaves",
     "away_team": "Casa Pia",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.35532,
-          0.21475,
-          0.42993
-        ]
-      }
-    }
+    "result": "H"
   },
   "266": {
     "home_team": "Vizela",
     "away_team": "Pacos Ferreira",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.89938,
-          0.06792,
-          0.0327
-        ]
-      }
-    }
+    "result": "A"
   },
   "267": {
     "home_team": "Gil Vicente",
     "away_team": "Benfica",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.14373,
-          0.16897,
-          0.6873
-        ]
-      }
-    }
+    "result": "A"
   },
   "268": {
     "home_team": "Estoril",
     "away_team": "Santa Clara",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44701,
-          0.21298,
-          0.34001
-        ]
-      }
-    }
+    "result": "H"
   },
   "269": {
     "home_team": "Porto",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47108,
-          0.21119,
-          0.31773
-        ]
-      }
-    }
+    "result": "H"
   },
   "270": {
     "home_team": "Sp Lisbon",
     "away_team": "Famalicao",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50644,
-          0.20764,
-          0.28592
-        ]
-      }
-    }
+    "result": "H"
   },
   "271": {
     "home_team": "Casa Pia",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37562,
-          0.21391,
-          0.41047
-        ]
-      }
-    }
+    "result": "D"
   },
   "272": {
     "home_team": "Santa Clara",
     "away_team": "Gil Vicente",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37681,
-          0.21473,
-          0.40846
-        ]
-      }
-    }
+    "result": "H"
   },
   "273": {
     "home_team": "Boavista",
     "away_team": "Estoril",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.47827,
-          0.21003,
-          0.3117
-        ]
-      }
-    }
+    "result": "H"
   },
   "274": {
     "home_team": "Benfica",
     "away_team": "Sp Braga",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44608,
-          0.21315,
-          0.34077
-        ]
-      }
-    }
+    "result": "H"
   },
   "275": {
     "home_team": "Maritimo",
     "away_team": "Rio Ave",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.23209,
-          0.19854,
-          0.56937
-        ]
-      }
-    }
+    "result": "D"
   },
   "276": {
     "home_team": "Guimaraes",
     "away_team": "Vizela",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.40248,
-          0.21608,
-          0.38144
-        ]
-      }
-    }
+    "result": "H"
   },
   "277": {
     "home_team": "Pacos Ferreira",
     "away_team": "Sp Lisbon",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.02565,
-          0.06123,
-          0.91312
-        ]
-      }
-    }
+    "result": "A"
   },
   "278": {
     "home_team": "Famalicao",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.28244,
-          0.21032,
-          0.50724
-        ]
-      }
-    }
+    "result": "A"
   },
   "279": {
     "home_team": "Arouca",
     "away_team": "Porto",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31134,
-          0.20979,
-          0.47887
-        ]
-      }
-    }
+    "result": "A"
   },
   "280": {
     "home_team": "Gil Vicente",
     "away_team": "Boavista",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.27849,
-          0.20585,
-          0.51566
-        ]
-      }
-    }
+    "result": "H"
   },
   "281": {
     "home_team": "Chaves",
     "away_team": "Pacos Ferreira",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.91177,
-          0.06126,
-          0.02697
-        ]
-      }
-    }
+    "result": "H"
   },
   "282": {
     "home_team": "Vizela",
     "away_team": "Famalicao",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.45584,
-          0.21009,
-          0.33407
-        ]
-      }
-    }
+    "result": "D"
   },
   "283": {
     "home_team": "Portimonense",
     "away_team": "Benfica",
     "goals_team1": 1,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26632,
-          0.20244,
-          0.53124
-        ]
-      }
-    }
+    "result": "A"
   },
   "284": {
     "home_team": "Sp Lisbon",
     "away_team": "Maritimo",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.62494,
-          0.18606,
-          0.189
-        ]
-      }
-    }
+    "result": "H"
   },
   "285": {
     "home_team": "Rio Ave",
     "away_team": "Guimaraes",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.37471,
-          0.2168,
-          0.40849
-        ]
-      }
-    }
+    "result": "A"
   },
   "286": {
     "home_team": "Sp Braga",
     "away_team": "Santa Clara",
     "goals_team1": 5,
     "goals_team2": 3,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.65613,
-          0.18032,
-          0.16355
-        ]
-      }
-    }
+    "result": "H"
   },
   "287": {
     "home_team": "Porto",
     "away_team": "Casa Pia",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44088,
-          0.21449,
-          0.34463
-        ]
-      }
-    }
+    "result": "H"
   },
   "288": {
     "home_team": "Estoril",
     "away_team": "Arouca",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.31486,
-          0.21298,
-          0.47216
-        ]
-      }
-    }
+    "result": "H"
   },
   "289": {
     "home_team": "Maritimo",
     "away_team": "Vizela",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22508,
-          0.1966,
-          0.57832
-        ]
-      }
-    }
+    "result": "H"
   },
   "290": {
     "home_team": "Arouca",
     "away_team": "Chaves",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.39331,
-          0.21458,
-          0.39211
-        ]
-      }
-    }
+    "result": "H"
   },
   "291": {
     "home_team": "Santa Clara",
     "away_team": "Portimonense",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.22292,
-          0.20007,
-          0.57701
-        ]
-      }
-    }
+    "result": "H"
   },
   "292": {
     "home_team": "Boavista",
     "away_team": "Sp Braga",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.26919,
-          0.20526,
-          0.52555
-        ]
-      }
-    }
+    "result": "D"
   },
   "293": {
     "home_team": "Famalicao",
     "away_team": "Porto",
     "goals_team1": 2,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21339,
-          0.19381,
-          0.5928
-        ]
-      }
-    }
+    "result": "A"
   },
   "294": {
     "home_team": "Guimaraes",
     "away_team": "Gil Vicente",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.46106,
-          0.21298,
-          0.32596
-        ]
-      }
-    }
+    "result": "H"
   },
   "295": {
     "home_team": "Casa Pia",
     "away_team": "Estoril",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.50565,
-          0.20806,
-          0.28629
-        ]
-      }
-    }
+    "result": "D"
   },
   "296": {
     "home_team": "Pacos Ferreira",
     "away_team": "Rio Ave",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.03311,
-          0.07034,
-          0.89655
-        ]
-      }
-    }
+    "result": "H"
   },
   "297": {
     "home_team": "Sp Lisbon",
     "away_team": "Benfica",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.21659,
-          0.19464,
-          0.58877
-        ]
-      }
-    }
+    "result": "D"
   },
   "298": {
     "home_team": "Rio Ave",
     "away_team": "Famalicao",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44738,
-          0.21459,
-          0.33803
-        ]
-      }
-    }
+    "result": "D"
   },
   "299": {
     "home_team": "Vizela",
     "away_team": "Sp Lisbon",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.34283,
-          0.21681,
-          0.44036
-        ]
-      }
-    }
+    "result": "A"
   },
   "300": {
     "home_team": "Gil Vicente",
     "away_team": "Casa Pia",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.2528,
-          0.20456,
-          0.54264
-        ]
-      }
-    }
+    "result": "H"
   },
   "301": {
     "home_team": "Chaves",
     "away_team": "Boavista",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.38502,
-          0.21312,
-          0.40186
-        ]
-      }
-    }
+    "result": "A"
   },
   "302": {
     "home_team": "Estoril",
     "away_team": "Maritimo",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.55211,
-          0.20069,
-          0.2472
-        ]
-      }
-    }
+    "result": "H"
   },
   "303": {
     "home_team": "Benfica",
     "away_team": "Santa Clara",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.70261,
-          0.16532,
-          0.13207
-        ]
-      }
-    }
+    "result": "H"
   },
   "304": {
     "home_team": "Portimonense",
     "away_team": "Arouca",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.44668,
-          0.21357,
-          0.33975
-        ]
-      }
-    }
+    "result": "A"
   },
   "305": {
     "home_team": "Porto",
     "away_team": "Guimaraes",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.52305,
-          0.20616,
-          0.27079
-        ]
-      }
-    }
+    "result": "H"
   },
   "306": {
     "home_team": "Sp Braga",
     "away_team": "Pacos Ferreira",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_3": {
-        "45": [
-          0.94331,
-          0.04365,
-          0.01304
-        ]
-      }
-    }
+    "result": "H"
   }
 }

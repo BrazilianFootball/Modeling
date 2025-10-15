@@ -1334,3039 +1334,1329 @@
     "away_team": "Torino",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.27866,
-          0.24314,
-          0.4782
-        ]
-      }
-    }
+    "result": "H"
   },
   "192": {
     "home_team": "Napoli",
     "away_team": "Fiorentina",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.41762,
-          0.25231,
-          0.33007
-        ]
-      }
-    }
+    "result": "A"
   },
   "193": {
     "home_team": "Milan",
     "away_team": "Udinese",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.40064,
-          0.25162,
-          0.34774
-        ]
-      }
-    }
+    "result": "H"
   },
   "194": {
     "home_team": "Bologna",
     "away_team": "Verona",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.34698,
-          0.25082,
-          0.4022
-        ]
-      }
-    }
+    "result": "D"
   },
   "195": {
     "home_team": "Brescia",
     "away_team": "Cagliari",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.17865,
-          0.21624,
-          0.60511
-        ]
-      }
-    }
+    "result": "D"
   },
   "196": {
     "home_team": "Lecce",
     "away_team": "Inter",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.06061,
-          0.14309,
-          0.7963
-        ]
-      }
-    }
+    "result": "D"
   },
   "197": {
     "home_team": "Genoa",
     "away_team": "Roma",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.13443,
-          0.20218,
-          0.66339
-        ]
-      }
-    }
+    "result": "A"
   },
   "198": {
     "home_team": "Juventus",
     "away_team": "Parma",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.66253,
-          0.20056,
-          0.13691
-        ]
-      }
-    }
+    "result": "H"
   },
   "199": {
     "home_team": "Atalanta",
     "away_team": "Spal",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.7064,
-          0.18496,
-          0.10864
-        ]
-      }
-    }
+    "result": "A"
   },
   "200": {
     "home_team": "Brescia",
     "away_team": "Milan",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.21727,
-          0.23381,
-          0.54892
-        ]
-      }
-    }
+    "result": "A"
   },
   "201": {
     "home_team": "Spal",
     "away_team": "Bologna",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.21648,
-          0.22944,
-          0.55408
-        ]
-      }
-    }
+    "result": "A"
   },
   "202": {
     "home_team": "Fiorentina",
     "away_team": "Genoa",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.47985,
-          0.24258,
-          0.27757
-        ]
-      }
-    }
+    "result": "D"
   },
   "203": {
     "home_team": "Torino",
     "away_team": "Atalanta",
     "goals_team1": 0,
     "goals_team2": 7,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.25277,
-          0.24055,
-          0.50668
-        ]
-      }
-    }
+    "result": "A"
   },
   "204": {
     "home_team": "Inter",
     "away_team": "Cagliari",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.62162,
-          0.21359,
-          0.16479
-        ]
-      }
-    }
+    "result": "D"
   },
   "205": {
     "home_team": "Parma",
     "away_team": "Udinese",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.4401,
-          0.24816,
-          0.31174
-        ]
-      }
-    }
+    "result": "H"
   },
   "206": {
     "home_team": "Sampdoria",
     "away_team": "Sassuolo",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.36448,
-          0.25151,
-          0.38401
-        ]
-      }
-    }
+    "result": "D"
   },
   "207": {
     "home_team": "Verona",
     "away_team": "Lecce",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.56537,
-          0.22571,
-          0.20892
-        ]
-      }
-    }
+    "result": "H"
   },
   "208": {
     "home_team": "Roma",
     "away_team": "Lazio",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.25189,
-          0.23669,
-          0.51142
-        ]
-      }
-    }
+    "result": "D"
   },
   "209": {
     "home_team": "Napoli",
     "away_team": "Juventus",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.11292,
-          0.18703,
-          0.70005
-        ]
-      }
-    }
+    "result": "H"
   },
   "210": {
     "home_team": "Bologna",
     "away_team": "Brescia",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.52748,
-          0.23579,
-          0.23673
-        ]
-      }
-    }
+    "result": "H"
   },
   "211": {
     "home_team": "Cagliari",
     "away_team": "Parma",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.39066,
-          0.25333,
-          0.35601
-        ]
-      }
-    }
+    "result": "D"
   },
   "212": {
     "home_team": "Sassuolo",
     "away_team": "Roma",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.17827,
-          0.21769,
-          0.60404
-        ]
-      }
-    }
+    "result": "H"
   },
   "213": {
     "home_team": "Juventus",
     "away_team": "Fiorentina",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.7306,
-          0.17418,
-          0.09522
-        ]
-      }
-    }
+    "result": "H"
   },
   "214": {
     "home_team": "Atalanta",
     "away_team": "Genoa",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.66339,
-          0.20111,
-          0.1355
-        ]
-      }
-    }
+    "result": "D"
   },
   "215": {
     "home_team": "Lazio",
     "away_team": "Spal",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.79174,
-          0.14689,
-          0.06137
-        ]
-      }
-    }
+    "result": "H"
   },
   "216": {
     "home_team": "Milan",
     "away_team": "Verona",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.36694,
-          0.2495,
-          0.38356
-        ]
-      }
-    }
+    "result": "D"
   },
   "217": {
     "home_team": "Lecce",
     "away_team": "Torino",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.2021,
-          0.2243,
-          0.5736
-        ]
-      }
-    }
+    "result": "H"
   },
   "218": {
     "home_team": "Udinese",
     "away_team": "Inter",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.11455,
-          0.19063,
-          0.69482
-        ]
-      }
-    }
+    "result": "A"
   },
   "219": {
     "home_team": "Sampdoria",
     "away_team": "Napoli",
     "goals_team1": 2,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.28766,
-          0.24631,
-          0.46603
-        ]
-      }
-    }
+    "result": "A"
   },
   "220": {
     "home_team": "Lazio",
     "away_team": "Verona",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.64224,
-          0.20643,
-          0.15133
-        ]
-      }
-    }
+    "result": "D"
   },
   "221": {
     "home_team": "Roma",
     "away_team": "Bologna",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.54127,
-          0.234,
-          0.22473
-        ]
-      }
-    }
+    "result": "A"
   },
   "222": {
     "home_team": "Fiorentina",
     "away_team": "Atalanta",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.20257,
-          0.22578,
-          0.57165
-        ]
-      }
-    }
+    "result": "A"
   },
   "223": {
     "home_team": "Torino",
     "away_team": "Sampdoria",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.48805,
-          0.24344,
-          0.26851
-        ]
-      }
-    }
+    "result": "A"
   },
   "224": {
     "home_team": "Verona",
     "away_team": "Juventus",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.11961,
-          0.1898,
-          0.69059
-        ]
-      }
-    }
+    "result": "H"
   },
   "225": {
     "home_team": "Spal",
     "away_team": "Sassuolo",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.26748,
-          0.24231,
-          0.49021
-        ]
-      }
-    }
+    "result": "A"
   },
   "226": {
     "home_team": "Brescia",
     "away_team": "Udinese",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.2382,
-          0.23866,
-          0.52314
-        ]
-      }
-    }
+    "result": "D"
   },
   "227": {
     "home_team": "Genoa",
     "away_team": "Cagliari",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.18883,
-          0.22585,
-          0.58532
-        ]
-      }
-    }
+    "result": "H"
   },
   "228": {
     "home_team": "Napoli",
     "away_team": "Lecce",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.55275,
-          0.22957,
-          0.21768
-        ]
-      }
-    }
+    "result": "A"
   },
   "229": {
     "home_team": "Parma",
     "away_team": "Lazio",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.17101,
-          0.21389,
-          0.6151
-        ]
-      }
-    }
+    "result": "A"
   },
   "230": {
     "home_team": "Inter",
     "away_team": "Milan",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.67334,
-          0.19593,
-          0.13073
-        ]
-      }
-    }
+    "result": "H"
   },
   "231": {
     "home_team": "Lecce",
     "away_team": "Spal",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.38774,
-          0.24893,
-          0.36333
-        ]
-      }
-    }
+    "result": "H"
   },
   "232": {
     "home_team": "Bologna",
     "away_team": "Genoa",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.50444,
-          0.24131,
-          0.25425
-        ]
-      }
-    }
+    "result": "A"
   },
   "233": {
     "home_team": "Atalanta",
     "away_team": "Roma",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.37484,
-          0.25127,
-          0.37389
-        ]
-      }
-    }
+    "result": "H"
   },
   "234": {
     "home_team": "Udinese",
     "away_team": "Verona",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.34276,
-          0.25058,
-          0.40666
-        ]
-      }
-    }
+    "result": "D"
   },
   "235": {
     "home_team": "Juventus",
     "away_team": "Brescia",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.80967,
-          0.13616,
-          0.05417
-        ]
-      }
-    }
+    "result": "H"
   },
   "236": {
     "home_team": "Sampdoria",
     "away_team": "Fiorentina",
     "goals_team1": 1,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.32955,
-          0.24951,
-          0.42094
-        ]
-      }
-    }
+    "result": "A"
   },
   "237": {
     "home_team": "Sassuolo",
     "away_team": "Parma",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.25446,
-          0.24351,
-          0.50203
-        ]
-      }
-    }
+    "result": "A"
   },
   "238": {
     "home_team": "Cagliari",
     "away_team": "Napoli",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.43695,
-          0.24735,
-          0.3157
-        ]
-      }
-    }
+    "result": "A"
   },
   "239": {
     "home_team": "Lazio",
     "away_team": "Inter",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.34846,
-          0.24997,
-          0.40157
-        ]
-      }
-    }
+    "result": "H"
   },
   "240": {
     "home_team": "Milan",
     "away_team": "Torino",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.35952,
-          0.24947,
-          0.39101
-        ]
-      }
-    }
+    "result": "H"
   },
   "241": {
     "home_team": "Brescia",
     "away_team": "Napoli",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.22323,
-          0.22929,
-          0.54748
-        ]
-      }
-    }
+    "result": "A"
   },
   "242": {
     "home_team": "Bologna",
     "away_team": "Udinese",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.37857,
-          0.25,
-          0.37143
-        ]
-      }
-    }
+    "result": "D"
   },
   "243": {
     "home_team": "Spal",
     "away_team": "Juventus",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.04776,
-          0.12823,
-          0.82401
-        ]
-      }
-    }
+    "result": "A"
   },
   "244": {
     "home_team": "Fiorentina",
     "away_team": "Milan",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.32818,
-          0.24924,
-          0.42258
-        ]
-      }
-    }
+    "result": "D"
   },
   "245": {
     "home_team": "Genoa",
     "away_team": "Lazio",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.07548,
-          0.1614,
-          0.76312
-        ]
-      }
-    }
+    "result": "A"
   },
   "246": {
     "home_team": "Roma",
     "away_team": "Lecce",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.68783,
-          0.19013,
-          0.12204
-        ]
-      }
-    }
+    "result": "H"
   },
   "247": {
     "home_team": "Lazio",
     "away_team": "Bologna",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.66835,
-          0.19857,
-          0.13308
-        ]
-      }
-    }
+    "result": "H"
   },
   "248": {
     "home_team": "Napoli",
     "away_team": "Torino",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.35078,
-          0.25328,
-          0.39594
-        ]
-      }
-    }
+    "result": "H"
   },
   "249": {
     "home_team": "Lecce",
     "away_team": "Atalanta",
     "goals_team1": 2,
     "goals_team2": 7,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.12199,
-          0.19245,
-          0.68556
-        ]
-      }
-    }
+    "result": "A"
   },
   "250": {
     "home_team": "Cagliari",
     "away_team": "Roma",
     "goals_team1": 3,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.28685,
-          0.24818,
-          0.46497
-        ]
-      }
-    }
+    "result": "A"
   },
   "251": {
     "home_team": "Parma",
     "away_team": "Spal",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.61304,
-          0.21617,
-          0.17079
-        ]
-      }
-    }
+    "result": "A"
   },
   "252": {
     "home_team": "Milan",
     "away_team": "Genoa",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.52487,
-          0.23658,
-          0.23855
-        ]
-      }
-    }
+    "result": "A"
   },
   "253": {
     "home_team": "Sampdoria",
     "away_team": "Verona",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.27996,
-          0.24515,
-          0.47489
-        ]
-      }
-    }
+    "result": "H"
   },
   "254": {
     "home_team": "Udinese",
     "away_team": "Fiorentina",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.39586,
-          0.25091,
-          0.35323
-        ]
-      }
-    }
+    "result": "D"
   },
   "255": {
     "home_team": "Juventus",
     "away_team": "Inter",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.39943,
-          0.24958,
-          0.35099
-        ]
-      }
-    }
+    "result": "H"
   },
   "256": {
     "home_team": "Sassuolo",
     "away_team": "Brescia",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.46263,
-          0.24768,
-          0.28969
-        ]
-      }
-    }
+    "result": "H"
   },
   "257": {
     "home_team": "Torino",
     "away_team": "Parma",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.35303,
-          0.25083,
-          0.39614
-        ]
-      }
-    }
+    "result": "D"
   },
   "258": {
     "home_team": "Verona",
     "away_team": "Cagliari",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.32518,
-          0.25016,
-          0.42466
-        ]
-      }
-    }
+    "result": "H"
   },
   "259": {
     "home_team": "Atalanta",
     "away_team": "Sassuolo",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.60345,
-          0.21788,
-          0.17867
-        ]
-      }
-    }
+    "result": "H"
   },
   "260": {
     "home_team": "Inter",
     "away_team": "Sampdoria",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.74455,
-          0.16808,
-          0.08737
-        ]
-      }
-    }
+    "result": "H"
   },
   "261": {
     "home_team": "Fiorentina",
     "away_team": "Brescia",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.50125,
-          0.23905,
-          0.2597
-        ]
-      }
-    }
+    "result": "D"
   },
   "262": {
     "home_team": "Lecce",
     "away_team": "Milan",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.21229,
-          0.22794,
-          0.55977
-        ]
-      }
-    }
+    "result": "A"
   },
   "263": {
     "home_team": "Bologna",
     "away_team": "Juventus",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.10586,
-          0.18182,
-          0.71232
-        ]
-      }
-    }
+    "result": "A"
   },
   "264": {
     "home_team": "Spal",
     "away_team": "Cagliari",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.15769,
-          0.21239,
-          0.62992
-        ]
-      }
-    }
+    "result": "A"
   },
   "265": {
     "home_team": "Verona",
     "away_team": "Napoli",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.38576,
-          0.25017,
-          0.36407
-        ]
-      }
-    }
+    "result": "A"
   },
   "266": {
     "home_team": "Genoa",
     "away_team": "Parma",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.20437,
-          0.22982,
-          0.56581
-        ]
-      }
-    }
+    "result": "A"
   },
   "267": {
     "home_team": "Torino",
     "away_team": "Udinese",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.41631,
-          0.25028,
-          0.33341
-        ]
-      }
-    }
+    "result": "H"
   },
   "268": {
     "home_team": "Inter",
     "away_team": "Sassuolo",
     "goals_team1": 3,
     "goals_team2": 3,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.73408,
-          0.17415,
-          0.09177
-        ]
-      }
-    }
+    "result": "D"
   },
   "269": {
     "home_team": "Atalanta",
     "away_team": "Lazio",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.25101,
-          0.23755,
-          0.51144
-        ]
-      }
-    }
+    "result": "H"
   },
   "270": {
     "home_team": "Roma",
     "away_team": "Sampdoria",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.61594,
-          0.21545,
-          0.16861
-        ]
-      }
-    }
+    "result": "H"
   },
   "271": {
     "home_team": "Juventus",
     "away_team": "Lecce",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.81405,
-          0.13502,
-          0.05093
-        ]
-      }
-    }
+    "result": "H"
   },
   "272": {
     "home_team": "Brescia",
     "away_team": "Genoa",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.35246,
-          0.25085,
-          0.39669
-        ]
-      }
-    }
+    "result": "D"
   },
   "273": {
     "home_team": "Cagliari",
     "away_team": "Torino",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.41339,
-          0.25341,
-          0.3332
-        ]
-      }
-    }
+    "result": "H"
   },
   "274": {
     "home_team": "Lazio",
     "away_team": "Fiorentina",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.69208,
-          0.19013,
-          0.11779
-        ]
-      }
-    }
+    "result": "H"
   },
   "275": {
     "home_team": "Milan",
     "away_team": "Roma",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.24158,
-          0.23515,
-          0.52327
-        ]
-      }
-    }
+    "result": "H"
   },
   "276": {
     "home_team": "Napoli",
     "away_team": "Spal",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.57177,
-          0.22577,
-          0.20246
-        ]
-      }
-    }
+    "result": "H"
   },
   "277": {
     "home_team": "Sampdoria",
     "away_team": "Bologna",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.30317,
-          0.24801,
-          0.44882
-        ]
-      }
-    }
+    "result": "A"
   },
   "278": {
     "home_team": "Sassuolo",
     "away_team": "Verona",
     "goals_team1": 3,
     "goals_team2": 3,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.28886,
-          0.24384,
-          0.4673
-        ]
-      }
-    }
+    "result": "D"
   },
   "279": {
     "home_team": "Udinese",
     "away_team": "Atalanta",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.21715,
-          0.23202,
-          0.55083
-        ]
-      }
-    }
+    "result": "A"
   },
   "280": {
     "home_team": "Parma",
     "away_team": "Inter",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.15317,
-          0.20774,
-          0.63909
-        ]
-      }
-    }
+    "result": "A"
   },
   "281": {
     "home_team": "Torino",
     "away_team": "Lazio",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.15557,
-          0.21004,
-          0.63439
-        ]
-      }
-    }
+    "result": "A"
   },
   "282": {
     "home_team": "Genoa",
     "away_team": "Juventus",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.05842,
-          0.14135,
-          0.80023
-        ]
-      }
-    }
+    "result": "A"
   },
   "283": {
     "home_team": "Bologna",
     "away_team": "Cagliari",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.2984,
-          0.24795,
-          0.45365
-        ]
-      }
-    }
+    "result": "D"
   },
   "284": {
     "home_team": "Inter",
     "away_team": "Brescia",
     "goals_team1": 6,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.79368,
-          0.14531,
-          0.06101
-        ]
-      }
-    }
+    "result": "H"
   },
   "285": {
     "home_team": "Fiorentina",
     "away_team": "Sassuolo",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.41203,
-          0.2508,
-          0.33717
-        ]
-      }
-    }
+    "result": "A"
   },
   "286": {
     "home_team": "Lecce",
     "away_team": "Sampdoria",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.29263,
-          0.24173,
-          0.46564
-        ]
-      }
-    }
+    "result": "A"
   },
   "287": {
     "home_team": "Spal",
     "away_team": "Milan",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.20051,
-          0.22398,
-          0.57551
-        ]
-      }
-    }
+    "result": "D"
   },
   "288": {
     "home_team": "Verona",
     "away_team": "Parma",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.34134,
-          0.24976,
-          0.4089
-        ]
-      }
-    }
+    "result": "H"
   },
   "289": {
     "home_team": "Atalanta",
     "away_team": "Napoli",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.52833,
-          0.23463,
-          0.23704
-        ]
-      }
-    }
+    "result": "H"
   },
   "290": {
     "home_team": "Roma",
     "away_team": "Udinese",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.54605,
-          0.2316,
-          0.22235
-        ]
-      }
-    }
+    "result": "A"
   },
   "291": {
     "home_team": "Juventus",
     "away_team": "Torino",
     "goals_team1": 4,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.67866,
-          0.19667,
-          0.12467
-        ]
-      }
-    }
+    "result": "H"
   },
   "292": {
     "home_team": "Sassuolo",
     "away_team": "Lecce",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.47581,
-          0.24083,
-          0.28336
-        ]
-      }
-    }
+    "result": "H"
   },
   "293": {
     "home_team": "Lazio",
     "away_team": "Milan",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.64588,
-          0.20499,
-          0.14913
-        ]
-      }
-    }
+    "result": "A"
   },
   "294": {
     "home_team": "Inter",
     "away_team": "Bologna",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.69096,
-          0.18841,
-          0.12063
-        ]
-      }
-    }
+    "result": "A"
   },
   "295": {
     "home_team": "Brescia",
     "away_team": "Verona",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.21435,
-          0.23101,
-          0.55464
-        ]
-      }
-    }
+    "result": "H"
   },
   "296": {
     "home_team": "Cagliari",
     "away_team": "Atalanta",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.28896,
-          0.24508,
-          0.46596
-        ]
-      }
-    }
+    "result": "A"
   },
   "297": {
     "home_team": "Parma",
     "away_team": "Fiorentina",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.46552,
-          0.24661,
-          0.28787
-        ]
-      }
-    }
+    "result": "A"
   },
   "298": {
     "home_team": "Sampdoria",
     "away_team": "Spal",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.48039,
-          0.24401,
-          0.2756
-        ]
-      }
-    }
+    "result": "H"
   },
   "299": {
     "home_team": "Udinese",
     "away_team": "Genoa",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.49967,
-          0.24139,
-          0.25894
-        ]
-      }
-    }
+    "result": "D"
   },
   "300": {
     "home_team": "Napoli",
     "away_team": "Roma",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23563,
-          0.23639,
-          0.52798
-        ]
-      }
-    }
+    "result": "H"
   },
   "301": {
     "home_team": "Lecce",
     "away_team": "Lazio",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.06746,
-          0.1522,
-          0.78034
-        ]
-      }
-    }
+    "result": "H"
   },
   "302": {
     "home_team": "Milan",
     "away_team": "Juventus",
     "goals_team1": 4,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.11477,
-          0.18906,
-          0.69617
-        ]
-      }
-    }
+    "result": "H"
   },
   "303": {
     "home_team": "Fiorentina",
     "away_team": "Cagliari",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.27415,
-          0.24313,
-          0.48272
-        ]
-      }
-    }
+    "result": "D"
   },
   "304": {
     "home_team": "Genoa",
     "away_team": "Napoli",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23922,
-          0.2394,
-          0.52138
-        ]
-      }
-    }
+    "result": "A"
   },
   "305": {
     "home_team": "Atalanta",
     "away_team": "Sampdoria",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.61616,
-          0.21422,
-          0.16962
-        ]
-      }
-    }
+    "result": "H"
   },
   "306": {
     "home_team": "Bologna",
     "away_team": "Sassuolo",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.44124,
-          0.24582,
-          0.31294
-        ]
-      }
-    }
+    "result": "A"
   },
   "307": {
     "home_team": "Roma",
     "away_team": "Parma",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.48198,
-          0.24136,
-          0.27666
-        ]
-      }
-    }
+    "result": "H"
   },
   "308": {
     "home_team": "Torino",
     "away_team": "Brescia",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.56421,
-          0.22851,
-          0.20728
-        ]
-      }
-    }
+    "result": "H"
   },
   "309": {
     "home_team": "Spal",
     "away_team": "Udinese",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.2223,
-          0.23253,
-          0.54517
-        ]
-      }
-    }
+    "result": "A"
   },
   "310": {
     "home_team": "Verona",
     "away_team": "Inter",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.13466,
-          0.19885,
-          0.66649
-        ]
-      }
-    }
+    "result": "D"
   },
   "311": {
     "home_team": "Lazio",
     "away_team": "Sassuolo",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.71346,
-          0.18258,
-          0.10396
-        ]
-      }
-    }
+    "result": "A"
   },
   "312": {
     "home_team": "Brescia",
     "away_team": "Roma",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.12546,
-          0.19641,
-          0.67813
-        ]
-      }
-    }
+    "result": "A"
   },
   "313": {
     "home_team": "Juventus",
     "away_team": "Atalanta",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.56464,
-          0.22606,
-          0.2093
-        ]
-      }
-    }
+    "result": "D"
   },
   "314": {
     "home_team": "Genoa",
     "away_team": "Spal",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.42475,
-          0.24788,
-          0.32737
-        ]
-      }
-    }
+    "result": "H"
   },
   "315": {
     "home_team": "Cagliari",
     "away_team": "Lecce",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.61334,
-          0.21513,
-          0.17153
-        ]
-      }
-    }
+    "result": "D"
   },
   "316": {
     "home_team": "Fiorentina",
     "away_team": "Verona",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.32006,
-          0.25158,
-          0.42836
-        ]
-      }
-    }
+    "result": "D"
   },
   "317": {
     "home_team": "Parma",
     "away_team": "Bologna",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.43489,
-          0.24651,
-          0.3186
-        ]
-      }
-    }
+    "result": "D"
   },
   "318": {
     "home_team": "Udinese",
     "away_team": "Sampdoria",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.44287,
-          0.24791,
-          0.30922
-        ]
-      }
-    }
+    "result": "A"
   },
   "319": {
     "home_team": "Napoli",
     "away_team": "Milan",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.37195,
-          0.24894,
-          0.37911
-        ]
-      }
-    }
+    "result": "D"
   },
   "320": {
     "home_team": "Inter",
     "away_team": "Torino",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.65914,
-          0.20056,
-          0.1403
-        ]
-      }
-    }
+    "result": "H"
   },
   "321": {
     "home_team": "Atalanta",
     "away_team": "Brescia",
     "goals_team1": 6,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.67907,
-          0.19598,
-          0.12495
-        ]
-      }
-    }
+    "result": "H"
   },
   "322": {
     "home_team": "Bologna",
     "away_team": "Napoli",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.36068,
-          0.25209,
-          0.38723
-        ]
-      }
-    }
+    "result": "D"
   },
   "323": {
     "home_team": "Milan",
     "away_team": "Parma",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.33453,
-          0.25032,
-          0.41515
-        ]
-      }
-    }
+    "result": "H"
   },
   "324": {
     "home_team": "Sampdoria",
     "away_team": "Cagliari",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23535,
-          0.23403,
-          0.53062
-        ]
-      }
-    }
+    "result": "H"
   },
   "325": {
     "home_team": "Lecce",
     "away_team": "Fiorentina",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.25088,
-          0.23924,
-          0.50988
-        ]
-      }
-    }
+    "result": "A"
   },
   "326": {
     "home_team": "Roma",
     "away_team": "Verona",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.5135,
-          0.24008,
-          0.24642
-        ]
-      }
-    }
+    "result": "H"
   },
   "327": {
     "home_team": "Sassuolo",
     "away_team": "Juventus",
     "goals_team1": 3,
     "goals_team2": 3,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.07691,
-          0.16348,
-          0.75961
-        ]
-      }
-    }
+    "result": "D"
   },
   "328": {
     "home_team": "Udinese",
     "away_team": "Lazio",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.13248,
-          0.19592,
-          0.6716
-        ]
-      }
-    }
+    "result": "D"
   },
   "329": {
     "home_team": "Torino",
     "away_team": "Genoa",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.54335,
-          0.23434,
-          0.22231
-        ]
-      }
-    }
+    "result": "H"
   },
   "330": {
     "home_team": "Spal",
     "away_team": "Inter",
     "goals_team1": 0,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.05492,
-          0.13765,
-          0.80743
-        ]
-      }
-    }
+    "result": "A"
   },
   "331": {
     "home_team": "Verona",
     "away_team": "Atalanta",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.24705,
-          0.23541,
-          0.51754
-        ]
-      }
-    }
+    "result": "D"
   },
   "332": {
     "home_team": "Cagliari",
     "away_team": "Sassuolo",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.51532,
-          0.24127,
-          0.24341
-        ]
-      }
-    }
+    "result": "D"
   },
   "333": {
     "home_team": "Milan",
     "away_team": "Bologna",
     "goals_team1": 5,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.39374,
-          0.25217,
-          0.35409
-        ]
-      }
-    }
+    "result": "H"
   },
   "334": {
     "home_team": "Parma",
     "away_team": "Sampdoria",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.50733,
-          0.24062,
-          0.25205
-        ]
-      }
-    }
+    "result": "A"
   },
   "335": {
     "home_team": "Brescia",
     "away_team": "Spal",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.40212,
-          0.2493,
-          0.34858
-        ]
-      }
-    }
+    "result": "H"
   },
   "336": {
     "home_team": "Fiorentina",
     "away_team": "Torino",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.31129,
-          0.2473,
-          0.44141
-        ]
-      }
-    }
+    "result": "H"
   },
   "337": {
     "home_team": "Genoa",
     "away_team": "Lecce",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.40732,
-          0.24928,
-          0.3434
-        ]
-      }
-    }
+    "result": "H"
   },
   "338": {
     "home_team": "Napoli",
     "away_team": "Udinese",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.39495,
-          0.24794,
-          0.35711
-        ]
-      }
-    }
+    "result": "H"
   },
   "339": {
     "home_team": "Roma",
     "away_team": "Inter",
     "goals_team1": 2,
     "goals_team2": 2,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.22744,
-          0.23378,
-          0.53878
-        ]
-      }
-    }
+    "result": "D"
   },
   "340": {
     "home_team": "Juventus",
     "away_team": "Lazio",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.43219,
-          0.24548,
-          0.32233
-        ]
-      }
-    }
+    "result": "H"
   },
   "341": {
     "home_team": "Atalanta",
     "away_team": "Bologna",
     "goals_team1": 1,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.54421,
-          0.23243,
-          0.22336
-        ]
-      }
-    }
+    "result": "H"
   },
   "342": {
     "home_team": "Sassuolo",
     "away_team": "Milan",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.29462,
-          0.24536,
-          0.46002
-        ]
-      }
-    }
+    "result": "A"
   },
   "343": {
     "home_team": "Parma",
     "away_team": "Napoli",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.41668,
-          0.24996,
-          0.33336
-        ]
-      }
-    }
+    "result": "H"
   },
   "344": {
     "home_team": "Inter",
     "away_team": "Fiorentina",
     "goals_team1": 0,
     "goals_team2": 0,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.70965,
-          0.18316,
-          0.10719
-        ]
-      }
-    }
+    "result": "D"
   },
   "345": {
     "home_team": "Lecce",
     "away_team": "Brescia",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.36538,
-          0.24531,
-          0.38931
-        ]
-      }
-    }
+    "result": "H"
   },
   "346": {
     "home_team": "Sampdoria",
     "away_team": "Genoa",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.43357,
-          0.24749,
-          0.31894
-        ]
-      }
-    }
+    "result": "A"
   },
   "347": {
     "home_team": "Spal",
     "away_team": "Roma",
     "goals_team1": 1,
     "goals_team2": 6,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.11215,
-          0.18518,
-          0.70267
-        ]
-      }
-    }
+    "result": "A"
   },
   "348": {
     "home_team": "Torino",
     "away_team": "Verona",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.38581,
-          0.25082,
-          0.36337
-        ]
-      }
-    }
+    "result": "D"
   },
   "349": {
     "home_team": "Udinese",
     "away_team": "Juventus",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.10264,
-          0.18004,
-          0.71732
-        ]
-      }
-    }
+    "result": "H"
   },
   "350": {
     "home_team": "Lazio",
     "away_team": "Cagliari",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.59389,
-          0.22335,
-          0.18276
-        ]
-      }
-    }
+    "result": "H"
   },
   "351": {
     "home_team": "Milan",
     "away_team": "Atalanta",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23891,
-          0.23845,
-          0.52264
-        ]
-      }
-    }
+    "result": "D"
   },
   "352": {
     "home_team": "Brescia",
     "away_team": "Parma",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.18999,
-          0.2235,
-          0.58651
-        ]
-      }
-    }
+    "result": "A"
   },
   "353": {
     "home_team": "Genoa",
     "away_team": "Inter",
     "goals_team1": 0,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.06682,
-          0.14909,
-          0.78409
-        ]
-      }
-    }
+    "result": "A"
   },
   "354": {
     "home_team": "Napoli",
     "away_team": "Sassuolo",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.45844,
-          0.24795,
-          0.29361
-        ]
-      }
-    }
+    "result": "H"
   },
   "355": {
     "home_team": "Bologna",
     "away_team": "Lecce",
     "goals_team1": 3,
     "goals_team2": 2,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.53735,
-          0.23161,
-          0.23104
-        ]
-      }
-    }
+    "result": "H"
   },
   "356": {
     "home_team": "Cagliari",
     "away_team": "Udinese",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.45955,
-          0.24649,
-          0.29396
-        ]
-      }
-    }
+    "result": "A"
   },
   "357": {
     "home_team": "Roma",
     "away_team": "Fiorentina",
     "goals_team1": 2,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.5715,
-          0.22536,
-          0.20314
-        ]
-      }
-    }
+    "result": "H"
   },
   "358": {
     "home_team": "Spal",
     "away_team": "Torino",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.18791,
-          0.22232,
-          0.58977
-        ]
-      }
-    }
+    "result": "D"
   },
   "359": {
     "home_team": "Verona",
     "away_team": "Lazio",
     "goals_team1": 1,
     "goals_team2": 5,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.15108,
-          0.20602,
-          0.6429
-        ]
-      }
-    }
+    "result": "A"
   },
   "360": {
     "home_team": "Juventus",
     "away_team": "Sampdoria",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.76561,
-          0.15949,
-          0.0749
-        ]
-      }
-    }
+    "result": "H"
   },
   "361": {
     "home_team": "Parma",
     "away_team": "Atalanta",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.27224,
-          0.24349,
-          0.48427
-        ]
-      }
-    }
+    "result": "A"
   },
   "362": {
     "home_team": "Inter",
     "away_team": "Napoli",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.67991,
-          0.19304,
-          0.12705
-        ]
-      }
-    }
+    "result": "H"
   },
   "363": {
     "home_team": "Lazio",
     "away_team": "Brescia",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.77467,
-          0.15472,
-          0.07061
-        ]
-      }
-    }
+    "result": "H"
   },
   "364": {
     "home_team": "Sampdoria",
     "away_team": "Milan",
     "goals_team1": 1,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.28522,
-          0.24498,
-          0.4698
-        ]
-      }
-    }
+    "result": "A"
   },
   "365": {
     "home_team": "Sassuolo",
     "away_team": "Genoa",
     "goals_team1": 5,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.44198,
-          0.24631,
-          0.31171
-        ]
-      }
-    }
+    "result": "H"
   },
   "366": {
     "home_team": "Udinese",
     "away_team": "Lecce",
     "goals_team1": 1,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.53127,
-          0.23447,
-          0.23426
-        ]
-      }
-    }
+    "result": "A"
   },
   "367": {
     "home_team": "Verona",
     "away_team": "Spal",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.58182,
-          0.22355,
-          0.19463
-        ]
-      }
-    }
+    "result": "H"
   },
   "368": {
     "home_team": "Cagliari",
     "away_team": "Juventus",
     "goals_team1": 2,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.14664,
-          0.20416,
-          0.6492
-        ]
-      }
-    }
+    "result": "H"
   },
   "369": {
     "home_team": "Fiorentina",
     "away_team": "Bologna",
     "goals_team1": 4,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.3458,
-          0.2507,
-          0.4035
-        ]
-      }
-    }
+    "result": "H"
   },
   "370": {
     "home_team": "Torino",
     "away_team": "Roma",
     "goals_team1": 2,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.25507,
-          0.24122,
-          0.50371
-        ]
-      }
-    }
+    "result": "A"
   },
   "371": {
     "home_team": "Brescia",
     "away_team": "Sampdoria",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.29858,
-          0.24531,
-          0.45611
-        ]
-      }
-    }
+    "result": "D"
   },
   "372": {
     "home_team": "Atalanta",
     "away_team": "Inter",
     "goals_team1": 0,
     "goals_team2": 2,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23024,
-          0.23337,
-          0.53639
-        ]
-      }
-    }
+    "result": "A"
   },
   "373": {
     "home_team": "Juventus",
     "away_team": "Roma",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.56732,
-          0.22838,
-          0.2043
-        ]
-      }
-    }
+    "result": "A"
   },
   "374": {
     "home_team": "Milan",
     "away_team": "Cagliari",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.31609,
-          0.2514,
-          0.43251
-        ]
-      }
-    }
+    "result": "H"
   },
   "375": {
     "home_team": "Napoli",
     "away_team": "Lazio",
     "goals_team1": 3,
     "goals_team2": 1,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.14374,
-          0.20345,
-          0.65281
-        ]
-      }
-    }
+    "result": "H"
   },
   "376": {
     "home_team": "Spal",
     "away_team": "Fiorentina",
     "goals_team1": 1,
     "goals_team2": 3,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23871,
-          0.23631,
-          0.52498
-        ]
-      }
-    }
+    "result": "A"
   },
   "377": {
     "home_team": "Bologna",
     "away_team": "Torino",
     "goals_team1": 1,
     "goals_team2": 1,
-    "result": "D",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.33567,
-          0.24714,
-          0.41719
-        ]
-      }
-    }
+    "result": "D"
   },
   "378": {
     "home_team": "Genoa",
     "away_team": "Verona",
     "goals_team1": 3,
     "goals_team2": 0,
-    "result": "H",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.23158,
-          0.23343,
-          0.53499
-        ]
-      }
-    }
+    "result": "H"
   },
   "379": {
     "home_team": "Lecce",
     "away_team": "Parma",
     "goals_team1": 3,
     "goals_team2": 4,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.18932,
-          0.21881,
-          0.59187
-        ]
-      }
-    }
+    "result": "A"
   },
   "380": {
     "home_team": "Sassuolo",
     "away_team": "Udinese",
     "goals_team1": 0,
     "goals_team2": 1,
-    "result": "A",
-    "probabilities": {
-      "bradley_terry_4": {
-        "190": [
-          0.31951,
-          0.24641,
-          0.43408
-        ]
-      }
-    }
+    "result": "A"
   }
 }
