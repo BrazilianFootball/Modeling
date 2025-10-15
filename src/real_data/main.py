@@ -13,7 +13,7 @@ cmdstanpy_logger.disabled = True
 def process_data(
     model_list: list[str],
     season_list: list[int],
-    game_list: list[int | str],
+    game_list: list[int],
     country_list: list[str],
     num_simulations: int = 100_000,
     ignore_cache: bool = False,
@@ -40,16 +40,8 @@ def process_data(
     n_iterations = len(model_list) * len(season_list) * len(game_list) * len(country_list)
     for i, values in enumerate(product(model_list, season_list, game_list, country_list)):
         model, season, actual_game, country = values
-        if season == 2019 and country in ["france", "netherlands"]:
+        if country == "netherlands" and season == 2019:
             continue
-        if actual_game == "mid" and country in ["france", "germany", "netherlands", "portugal"]:
-            actual_game = 153
-        elif actual_game == "mid":
-            actual_game = 190
-        elif actual_game == "end" and country in ["france", "germany", "netherlands", "portugal"]:
-            actual_game = 306
-        elif actual_game == "end":
-            actual_game = 380
 
         print(
             f"Running {model} for {season} with {actual_game} games for {country} "
@@ -70,6 +62,7 @@ def process_data(
                 f"Error running {model} for {season} with {actual_game} games for {country}: {e}"
                 f"{' ' * 40}"
             )
+            raise e
 
     print(
         f"\nTotal success: {success}/{n_iterations}"
@@ -79,6 +72,8 @@ def process_data(
 
 if __name__ == "__main__":
     models = [
+        "naive_1",
+        "naive_2",
         "bradley_terry_3",
         "bradley_terry_4",
         "poisson_1",
@@ -88,17 +83,22 @@ if __name__ == "__main__":
         "poisson_5",
     ]
 
-    seasons = [*range(2019, 2025)]
-    games: list[int | str] = [50, 100, 150, 200, "mid", "end"]
-
-    # scraped data
-    countries = ["brazil"]
-
     # 20 teams championships
-    countries += ["england", "italy", "spain"]
+    seasons = [*range(2019, 2025)]
+    games = [50, 100, 150, 200, 190, 380]
+
+    countries = ["brazil", "england", "italy", "spain"]
+    process_data(models, seasons, games, countries)
+
+    seasons = [*range(2020, 2023)]
+    countries = ["france"]
     process_data(models, seasons, games, countries)
 
     # 18 teams championships
-    new_games_list: list[int | str] = [45, 90, 135, 180, "mid", "end"]
-    countries = ["france", "germany", "netherlands", "portugal"]
-    process_data(models, seasons, new_games_list, countries)
+    games = [45, 90, 135, 180, 153, 306]
+    seasons = [*range(2023, 2025)]
+    process_data(models, seasons, games, countries)
+
+    seasons = [*range(2019, 2025)]
+    countries = ["germany", "netherlands", "portugal"]
+    process_data(models, seasons, games, countries)
