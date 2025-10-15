@@ -6,6 +6,7 @@ import shutil
 import sys
 
 import cmdstanpy
+import numpy as np
 import pandas as pd
 from data_processing import (
     generate_all_matches_data,
@@ -54,7 +55,7 @@ def run_model_with_real_data(
     if os.path.exists(samples_dir):
         shutil.rmtree(samples_dir)
 
-    stan_model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
+    os.makedirs(samples_dir)
     real_data_file = "bradley_terry" if "bradley_terry" in model_name else "poisson"
     with open(
         os.path.join(
@@ -70,8 +71,20 @@ def run_model_with_real_data(
         i + 1: team_name for i, team_name in enumerate(data["team_names"])
     }
     del data["team_names"]
-    fit = stan_model.sample(data=data, show_progress=False, **model_kwargs)
-    fit.save_csvfiles(samples_dir)
+    if "naive_1" in model_name:
+        fit = [1/3, 1/3, 1/3]
+    elif "naive_2" in model_name:
+        home_goals = np.array(data["goals_team1"])
+        away_goals = np.array(data["goals_team2"])
+        fit = [
+            float(np.mean(home_goals > away_goals)),
+            float(np.mean(away_goals > home_goals)),
+            float(np.mean(home_goals == away_goals)),
+        ]
+    else:
+        stan_model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
+        fit = stan_model.sample(data=data, show_progress=False, **model_kwargs)
+        fit.save_csvfiles(samples_dir)
 
     return fit, team_mapping, samples_dir
 
@@ -166,18 +179,22 @@ def run_real_data_model(
     fit, team_mapping, model_save_dir = run_model_with_real_data(
         model_name, year, num_games, championship
     )
-    samples = fit.draws_pd()
-    samples = samples.drop(
-        columns=[col for col in samples.columns if "raw" in col] + IGNORE_COLS
-    )
-    samples = set_team_strengths(samples, team_mapping)
-    generate_boxplot(
-        samples[list(team_mapping.values())],
-        year,
-        model_save_dir,
-        num_games,
-    )
     n_clubs = len(team_mapping)
+    if "naive" not in model_name:
+        samples = fit.draws_pd()
+        samples = samples.drop(
+            columns=[col for col in samples.columns if "raw" in col] + IGNORE_COLS
+        )
+        samples = set_team_strengths(samples, team_mapping)
+        generate_boxplot(
+            samples[list(team_mapping.values())],
+            year,
+            model_save_dir,
+            num_games,
+        )
+    else:
+        samples = fit
+
     if num_games != n_clubs * (n_clubs - 1):
         points_matrix, current_scenario, probabilities = simulate_competition(
             samples, team_mapping, model_name, year, num_games, championship, num_simulations
