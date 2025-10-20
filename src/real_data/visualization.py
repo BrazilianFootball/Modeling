@@ -1,4 +1,4 @@
-# pylint: disable=too-many-locals, wrong-import-position
+# pylint: disable=too-many-locals, wrong-import-position, too-many-arguments, too-many-positional-arguments
 
 import os
 
@@ -111,7 +111,8 @@ def generate_points_evolution_by_team(
     team_mapping: dict[int, str],
     num_games: int,
     save_dir: str,
-) -> None:
+    make_plots: bool = True,
+) -> np.ndarray:
     """
     Generate and save a multi-panel plot showing the evolution of points for each team,
     including actual and simulated points trajectories.
@@ -122,14 +123,11 @@ def generate_points_evolution_by_team(
         team_mapping (Dict[int, str]): Mapping from team indices to team names.
         num_games (int): Number of games already played.
         save_dir (str): Directory to save the plot.
+        make_plots (bool, optional): Whether to make plots. Defaults to True.
 
     Returns:
-        None
+        np.ndarray: Final points distribution.
     """
-    n_clubs = len(team_mapping)
-    p2_5_points, median_points, p97_5_points = generate_quantiles(
-        points_matrix, current_scenario, team_mapping, num_games, save_dir
-    )
     points_on_current_scenario = {
         team: [point[1] for point in current_scenario[team]] for team in team_mapping.values()
     }
@@ -138,6 +136,24 @@ def generate_points_evolution_by_team(
     )
     sorted_indices = np.argsort(-final_points, kind="stable")
     sorted_team_names = [list(team_mapping.values())[i] for i in sorted_indices]
+
+    points_at_current_round = np.array([
+        points_on_current_scenario[team][num_games - 1] for team in sorted_team_names
+    ])
+
+    final_points_distribution = points_matrix[:, -1, :].copy()
+    for idx, team in team_mapping.items():
+        final_points_distribution[idx - 1, :] = (
+            points_matrix[idx - 1, -1, :] + points_on_current_scenario[team][num_games - 1]
+        )
+
+    n_clubs = len(team_mapping)
+    p2_5_points, median_points, p97_5_points = generate_quantiles(
+        points_matrix, current_scenario, team_mapping, num_games, save_dir
+    )
+
+    if not make_plots:
+        return final_points_distribution
 
     n_total_matches = n_clubs * (n_clubs - 1)
     simulation_range = np.arange(num_games + 1, n_total_matches)
@@ -154,16 +170,6 @@ def generate_points_evolution_by_team(
         horizontal_spacing=0.04,
         vertical_spacing=0.07,
     )
-
-    points_at_current_round = np.array([
-        points_on_current_scenario[team][num_games - 1] for team in sorted_team_names
-    ])
-
-    final_points_distribution = points_matrix[:, -1, :].copy()
-    for idx, team in team_mapping.items():
-        final_points_distribution[idx - 1, :] = (
-            points_matrix[idx - 1, -1, :] + points_on_current_scenario[team][num_games - 1]
-        )
 
     for idx, (team_idx, team_name) in enumerate(zip(sorted_indices, sorted_team_names)):
         row = idx // 5 + 1

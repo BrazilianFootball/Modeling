@@ -14,6 +14,7 @@ def process_data(
     model_list: list[str],
     season_list: list[int],
     game_list: list[int],
+    game_to_plot_list: list[int],
     country_list: list[str],
     num_simulations: int = 100_000,
     ignore_cache: bool = False,
@@ -30,6 +31,7 @@ def process_data(
         model_list (list): List of model names to process.
         season_list (list): List of seasons (years) to process.
         game_list (list): List of game numbers to process.
+        game_to_plot_list (list): List of game numbers to plot.
         country_list (list): List of country/championship names to process.
         num_simulations (int): Number of simulations to run.
         ignore_cache (bool): Whether to ignore the cache.
@@ -56,7 +58,8 @@ def process_data(
         try:
             run_real_data_model(
                 model, season, num_games=actual_game, championship=country,
-                num_simulations=num_simulations, ignore_cache=ignore_cache
+                num_simulations=num_simulations, ignore_cache=ignore_cache,
+                make_plots=actual_game in game_to_plot_list
             )
             success += 1
         except Exception as e:
@@ -87,20 +90,22 @@ if __name__ == "__main__":
 
     # 20 teams championships
     seasons = [*range(2019, 2025)]
-    games = [50, 100, 150, 200, 190, 380]
+    games = [*range(50, 381, 10)]
+    games_to_plot = [50, 100, 150, 200, 190, 380]
 
     countries = ["brazil", "england", "italy", "spain"]
-    process_data(models, seasons, games, countries)
+    process_data(models, seasons, games, games_to_plot, countries)
 
     seasons = [*range(2020, 2023)]
     countries = ["france"]
-    process_data(models, seasons, games, countries)
+    process_data(models, seasons, games, games_to_plot, countries)
 
     # 18 teams championships
-    games = [45, 90, 135, 180, 153, 306]
+    games = [*range(45, 307, 9)]
+    games_to_plot = [45, 90, 135, 180, 153, 306]
     seasons = [*range(2023, 2025)]
-    process_data(models, seasons, games, countries)
+    process_data(models, seasons, games, games_to_plot, countries)
 
     seasons = [*range(2019, 2025)]
     countries = ["germany", "netherlands", "portugal"]
-    process_data(models, seasons, games, countries)
+    process_data(models, seasons, games, games_to_plot, countries)

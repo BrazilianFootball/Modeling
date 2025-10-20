@@ -94,6 +94,14 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
         KeyError: If the championship is not supported.
         Exception: If there is an error downloading or processing the data.
     """
+    save_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "results", f"{championship}", f"{year}"
+    )
+    os.makedirs(save_dir, exist_ok=True)
+    save_path = os.path.join(save_dir, "all_matches.json")
+    if os.path.exists(save_path):
+        return
     url_mask = "https://www.football-data.co.uk/mmz4281/{season}/{championship}.csv"
     championship_mask = {
         "england": "E0",
@@ -123,12 +131,6 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
         info["result"] = data.loc[i, "FTR"]
         all_matches[game_id] = info
 
-    save_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{championship}", f"{year}"
-    )
-    os.makedirs(save_dir, exist_ok=True)
-    save_path = os.path.join(save_dir, "all_matches.json")
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(all_matches, f, ensure_ascii=False, indent=2)
 

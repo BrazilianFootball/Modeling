@@ -1,4 +1,4 @@
-# pylint: disable=wrong-import-position,too-many-arguments, too-many-positional-arguments
+# pylint: disable=wrong-import-position,too-many-arguments, too-many-positional-arguments, too-many-locals
 
 import json
 import os
@@ -153,6 +153,7 @@ def run_real_data_model(
     championship: str = "brazil",
     num_simulations: int = 1_000,
     ignore_cache: bool = False,
+    make_plots: bool = False,
 ) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -167,6 +168,7 @@ def run_real_data_model(
         championship (str, optional): The championship to use. Defaults to "brazil".
         num_simulations (int, optional): Number of simulations to run. Defaults to 1000.
         ignore_cache (bool, optional): Whether to ignore the cache. Defaults to False.
+        make_plots (bool, optional): Whether to make plots. Defaults to False.
 
     Returns:
         None
@@ -186,12 +188,13 @@ def run_real_data_model(
             columns=[col for col in samples.columns if "raw" in col] + IGNORE_COLS
         )
         samples = set_team_strengths(samples, team_mapping)
-        generate_boxplot(
-            samples[list(team_mapping.values())],
-            year,
-            model_save_dir,
-            num_games,
-        )
+        if make_plots:
+            generate_boxplot(
+                samples[list(team_mapping.values())],
+                year,
+                model_save_dir,
+                num_games,
+            )
     else:
         samples = fit
 
@@ -206,6 +209,7 @@ def run_real_data_model(
             team_mapping,
             num_games,
             save_dir=model_save_dir,
+            make_plots=make_plots,
         )
         calculate_metrics(model_name, year, num_games, championship)
         calculate_final_positions_probs(
