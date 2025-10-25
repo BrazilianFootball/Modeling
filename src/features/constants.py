@@ -71,8 +71,6 @@ ITER_WARMUP = {
     "poisson_8": 2000,
     "poisson_9": 2000,
     "poisson_10": 2000,
-    "bad_prior_example": 100,
-    "nice_prior_example": 100,
 }
 
 ITER_SAMPLING = {
@@ -85,8 +83,6 @@ ITER_SAMPLING = {
     "poisson_8": 2000,
     "poisson_9": 2000,
     "poisson_10": 2000,
-    "bad_prior_example": 100,
-    "nice_prior_example": 100,
 }
 
 
