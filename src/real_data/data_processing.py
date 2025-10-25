@@ -63,6 +63,7 @@ def generate_all_matches_from_scraped_data(year: int) -> None:
         all_matches[game_id] = {
             "home_team": home_team,
             "away_team": away_team,
+            "match_datetime": game_data.get("Datetime"),
             "goals_team1": goals_team1,
             "goals_team2": goals_team2,
         }

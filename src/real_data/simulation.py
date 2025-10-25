@@ -42,15 +42,19 @@ def get_real_points_evolution(
     ):
         goals_home = data["goals_team1"][i]
         goals_away = data["goals_team2"][i]
-        if goals_home > goals_away:
-            points_home = 3
-            points_away = 0
-        elif goals_home < goals_away:
-            points_home = 0
-            points_away = 3
+        if goals_home is not None and goals_away is not None:
+            if goals_home > goals_away:
+                points_home = 3
+                points_away = 0
+            elif goals_home < goals_away:
+                points_home = 0
+                points_away = 3
+            else:
+                points_home = 1
+                points_away = 1
         else:
-            points_home = 1
-            points_away = 1
+            points_home = 0
+            points_away = 0
 
         accumulated_points[home] += points_home
         accumulated_points[away] += points_away
