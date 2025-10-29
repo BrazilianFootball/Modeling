@@ -154,7 +154,8 @@ if __name__ == "__main__":
         add_game_result(fig, "2025-05-25", "Palmeiras 0x2 Flamengo", -0.025, max_probability)
         add_game_result(fig, "2025-06-01", "Cruzeiro 2x1 Palmeiras", 0.025, max_probability)
         add_game_result(fig, "2025-10-02", "Flamengo 0x0 Cruzeiro", 0, max_probability)
-        add_game_result(fig, "2025-10-19", "Flamengo 3x2 Palmeiras", 0.025, max_probability)
+        add_game_result(fig, "2025-10-19", "Flamengo 3x2 Palmeiras", -0.025, max_probability)
+        add_game_result(fig, "2025-10-26", "Palmeiras 0x0 Cruzeiro", 0.025, max_probability)
 
         add_final_prob(fig, 'Flamengo / RJ', results)
         add_final_prob(fig, 'Palmeiras / SP', results)
