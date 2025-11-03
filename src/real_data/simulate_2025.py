@@ -1,5 +1,6 @@
 import json
 import os
+import shutil
 from datetime import datetime as dt
 from itertools import product
 
@@ -73,19 +74,21 @@ def summarize_results(save_dir: str, match_date: str | None) -> None:
     with open(os.path.join(save_dir, "final_positions_probs.json"), "r", encoding="utf-8") as f:
         final_positions_probs = json.load(f)
 
-    df = pd.DataFrame(columns=['Data', 'Clube', 'Campeão', 'G4', 'G6', 'Sula', 'Z4'])
+    df = pd.DataFrame(
+        columns=['Date', 'Club', 'Championship Probability', 'G4', 'G6', 'Sula', 'Z4']
+    )
     for team, probs in final_positions_probs.items():
         df.loc[len(df)] = {
-            'Data': match_date,
-            'Clube': team,
-            'Campeão': probs[0],
+            'Date': match_date,
+            'Club': team,
+            'Championship Probability': probs[0],
             'G4': sum(probs[:4]),
             'G6': sum(probs[:6]),
             'Sula': sum(probs[6:12]),
             'Z4': sum(probs[-4:])
         }
     df.sort_values(
-        by=['Campeão', 'G4', 'G6', 'Sula', 'Z4'],
+        by=['Championship Probability', 'G4', 'G6', 'Sula', 'Z4'],
         ascending=[False, False, False, False, False],
         ignore_index=True,
         inplace=True
@@ -98,7 +101,7 @@ def simulate_2025(
     num_games: int = 380,
     match_date: str | None = None,
     championship: str = "brazil",
-    num_simulations: int = 1_000_000
+    num_simulations: int = 10_000
 ) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -111,7 +114,7 @@ def simulate_2025(
         num_games (int, optional): Number of games already played. Defaults to 380.
         match_date (str | None, optional): The date of the last match played. Defaults to None.
         championship (str, optional): The championship to use. Defaults to "brazil".
-        num_simulations (int, optional): Number of simulations to run. Defaults to 1000.
+        num_simulations (int, optional): Number of simulations to run. Defaults to 10000.
 
     Returns:
         None
@@ -157,6 +160,16 @@ def simulate_2025(
 
 
 if __name__ == "__main__":
+    results_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil", "2025"
+    )
+    input_dir = os.path.join(
+        os.path.dirname(__file__), "..", "..", "real_data", "inputs", "brazil", "2025"
+    )
+    if os.path.exists(results_dir):
+        shutil.rmtree(results_dir)
+        shutil.rmtree(input_dir)
+
     models = [
         "poisson_2",
         "poisson_4",
@@ -177,7 +190,6 @@ if __name__ == "__main__":
     ) as f:
         data = json.load(f)
 
-    last_game_date = None
     df = pd.DataFrame(data).T.dropna()
     df['match_date'] = df['match_datetime'] \
         .apply(
@@ -192,13 +204,26 @@ if __name__ == "__main__":
         .reset_index() \
         .sort_values(by='index', ignore_index=True)
 
-    games_to_simulate = {
-        i: game_date for i, game_date in zip(
-            games_to_simulate['index'], games_to_simulate['match_date']
-        )
-        if i > 50
-    }
+    games_to_simulate['match_date_dt'] = pd.to_datetime(games_to_simulate['match_date'])
+    games_to_simulate['next_match_date_dt'] = games_to_simulate['match_date_dt'].shift(-1)
+    games_to_simulate['days_to_next_match'] = (
+            games_to_simulate['next_match_date_dt'] - games_to_simulate['match_date_dt']
+        ).dt.days.fillna(3).astype(int)
 
+    games_to_simulate['consider'] = False
+    skip_count = 0
+    for i in games_to_simulate.index:
+        if games_to_simulate.loc[i]['days_to_next_match'] > 1:
+            games_to_simulate.loc[i, 'consider'] = True
+            skip_count = 0
+        elif skip_count < 2:
+            skip_count += 1
+        else:
+            games_to_simulate.loc[i, 'consider'] = True
+            skip_count = 0
+
+    games_to_simulate = games_to_simulate[games_to_simulate['consider']]
+    games_to_simulate = dict(zip(games_to_simulate['index'], games_to_simulate['match_date']))
     for model, (game, match_date) in tqdm(product(models, games_to_simulate.items())):
         final_path = os.path.join(
             os.path.dirname(__file__), "..", "..", "real_data", "results",
