@@ -301,8 +301,13 @@ if __name__ == "__main__":
         add_final_prob(fig, 'Palmeiras / SP', results, 0.0125)
         add_final_prob(fig, 'Cruzeiro / MG', results, 0)
 
+        title = 'Probability of being champion'
+        subtitle = (
+            'Probabilities based on 100,000 simulations of the remaining games. '
+            'Dots represent the actual results on matches.'
+        )
         fig.update_layout(
-            title='Probability of being champion',
+            title=title+f'<br><span style="font-size: 14px;">{subtitle}</span>',
             xaxis_title='Date',
             yaxis_title='Probability (%)',
             legend_title='Club',
