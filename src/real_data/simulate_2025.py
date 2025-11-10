@@ -1,8 +1,11 @@
+# pylint: disable=too-many-arguments, too-many-positional-arguments
+
 import json
 import os
 import shutil
 from datetime import datetime as dt
 from itertools import product
+from time import time
 
 import pandas as pd
 from tqdm import tqdm
@@ -75,20 +78,20 @@ def summarize_results(save_dir: str, match_date: str | None) -> None:
         final_positions_probs = json.load(f)
 
     df = pd.DataFrame(
-        columns=['Date', 'Club', 'Championship Probability', 'G4', 'G6', 'Sula', 'Z4']
+        columns=['Date', 'Club', 'Champion', 'G5', 'G7', 'Sula', 'Z4']
     )
     for team, probs in final_positions_probs.items():
         df.loc[len(df)] = {
             'Date': match_date,
             'Club': team,
-            'Championship Probability': probs[0],
-            'G4': sum(probs[:4]),
-            'G6': sum(probs[:6]),
-            'Sula': sum(probs[6:12]),
+            'Champion': probs[0],
+            'G5': sum(probs[:5]),
+            'G7': sum(probs[:7]),
+            'Sula': sum(probs[7:13]),
             'Z4': sum(probs[-4:])
         }
     df.sort_values(
-        by=['Championship Probability', 'G4', 'G6', 'Sula', 'Z4'],
+        by=['Champion', 'G5', 'G7', 'Sula', 'Z4'],
         ascending=[False, False, False, False, False],
         ignore_index=True,
         inplace=True
@@ -96,7 +99,8 @@ def summarize_results(save_dir: str, match_date: str | None) -> None:
     df.to_csv(os.path.join(save_dir, "summary_results.csv"), index=False)
 
 
-def simulate_2025(
+def simulate_year(
+    year: int,
     model_name: str,
     num_games: int = 380,
     match_date: str | None = None,
@@ -119,7 +123,6 @@ def simulate_2025(
     Returns:
         None
     """
-    year = 2025
     generate_real_data_stan_input(year, num_games, championship)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
         model_name, year, num_games, championship
@@ -160,11 +163,13 @@ def simulate_2025(
 
 
 if __name__ == "__main__":
+    start_time = time()
+    year = dt.now().year
     results_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil", "2025"
+        os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil", f"{year}"
     )
     input_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..", "real_data", "inputs", "brazil", "2025"
+        os.path.dirname(__file__), "..", "..", "real_data", "inputs", "brazil", f"{year}"
     )
     if os.path.exists(results_dir):
         shutil.rmtree(results_dir)
@@ -172,11 +177,8 @@ if __name__ == "__main__":
 
     models = [
         "poisson_2",
-        "poisson_4",
-        "poisson_1",
     ]
 
-    year = dt.now().year
     generate_all_matches_data(year, "brazil")
     fill_matches(year)
 
@@ -234,10 +236,14 @@ if __name__ == "__main__":
         if os.path.exists(final_path):
             continue
 
-        simulate_2025(
+        simulate_year(
+            year=year,
             model_name=model,
             num_games=game,
             match_date=match_date,
             championship="brazil",
-            num_simulations=100_000,
+            num_simulations=10_000,
         )
+
+    os.system("clear")
+    print(f"Total time elapsed (simulation): {time() - start_time:,.2f} seconds")

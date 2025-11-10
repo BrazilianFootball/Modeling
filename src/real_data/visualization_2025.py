@@ -5,6 +5,7 @@ import json
 
 from datetime import datetime as dt
 from glob import glob
+from time import time
 
 import pandas as pd
 import plotly.express as px
@@ -25,7 +26,8 @@ def add_game_result_annotation(fig, date, result, y_offset=0, max_probability=1)
         date: The date/time for the game result annotation.
         result (str): The game result text to display.
         y_offset (float, optional): Vertical offset for positioning. Defaults to 0.
-        max_probability (float, optional): Maximum probability value for line height. Defaults to 1.
+        max_champion (float, optional): Maximum champion probability value for line height.
+                                        Defaults to 1.
 
     Returns:
         None: The function modifies the figure object in place.
@@ -36,11 +38,11 @@ def add_game_result_annotation(fig, date, result, y_offset=0, max_probability=1)
         line_color="gray",
         line_width=2,
         y0=0,
-        y1=max_probability+.025+y_offset
+        y1=max_probability+y_offset-.015
     )
     fig.add_annotation(
         x=date,
-        y=max_probability+.025+y_offset,
+        y=max_probability+.035+y_offset,
         text=result,
         font={"size": 12, "color": "black"},
         showarrow=False
@@ -84,22 +86,24 @@ def add_period(fig, x0, x1, text, text_position, color="gray"):
     )
 
 
-def add_final_prob(fig, team, results, y_shift=0):
+def add_final_prob(fig, team, results, y_shift=0, col='Champion'):
     """Add final probability annotation to the plot for a specific team.
 
-    This function adds a text annotation showing the final championship probability
+    This function adds a text annotation showing the final champion probability
     for a given team at the end of the time series. The annotation is positioned
     slightly to the right of the last data point and uses the team's color.
 
     Args:
         fig: The plotly figure object to add the annotation to.
-        team (str): The name of the team to add the final probability for.
+        team (str): The name of the team to add the final champion probability for.
         results (pd.DataFrame): The results DataFrame containing the team's data.
+        y_shift (float, optional): Vertical shift for the annotation. Defaults to 0.
+        col (str, optional): The column to plot. Defaults to 'Champion'.
 
     Returns:
         None: The function modifies the figure object in place.
     """
-    prob = results[results['Club'] == team]['Championship Probability'].values[-1]
+    prob = results[results['Club'] == team][col].values[-1]
     last_date = results[results['Club'] == team]['Date'].values[-1]
     fig.add_annotation(
         x=pd.to_datetime(last_date)+pd.Timedelta(days=7),
@@ -109,21 +113,23 @@ def add_final_prob(fig, team, results, y_shift=0):
         showarrow=False
     )
 
-def add_matches_result(fig, results_df, match_result):
+
+def add_matches_result(fig, results_df, match_result, col):
     """Add match result markers to the plot for a specific result type.
 
     This function filters the results DataFrame to find matches with a specific
     result (WON, LOST, or DREW) and adds scatter markers to the plot at the
-    corresponding dates and championship probabilities. Each result type is
+    corresponding dates and champion probabilities. Each result type is
     displayed with a distinct color: green for wins, red for losses, and gray
     for draws. All markers are grouped under the 'Results' legend group.
 
     Args:
         fig: The plotly figure object to add the match result markers to.
         results_df (pd.DataFrame): DataFrame containing match results with columns
-            'Date', 'Championship Probability', and 'Result'.
+            'Date', 'Champion', and 'Result'.
         match_result (str): The match result type to plot. Must be one of:
             'WON', 'LOST', or 'DREW'.
+        col (str): The column to plot.
 
     Returns:
         None: The function modifies the figure object in place.
@@ -137,7 +143,7 @@ def add_matches_result(fig, results_df, match_result):
     fig.add_trace(
         go.Scatter(
             x=df['Match Date'],
-            y=df['Championship Probability'],
+            y=df[col],
             mode='markers',
             marker_color=colors[match_result],
             marker_size=8,
@@ -148,17 +154,126 @@ def add_matches_result(fig, results_df, match_result):
         )
     )
 
+
+def generate_viz(results, club_results, clubs, col, title, subtitle):
+    """Generate a visualization plot for team probabilities over time.
+
+    This function creates an interactive line plot showing the probability evolution
+    for specified clubs over time. The plot includes:
+    - Line traces for each club showing probability progression
+    - Period annotations for Club World Cup and FIFA dates
+    - Match result markers (won, lost, drew) as colored dots
+    - Final probability annotations for each club
+    - Grouped legend with clubs and match results
+
+    Args:
+        results (pd.DataFrame): DataFrame containing probability data with columns:
+            'Club', 'Date', and the column specified by 'col'.
+        club_results (pd.DataFrame): DataFrame containing match results with columns:
+            'Club', 'Date', 'Match Result', and 'match_date_dt'.
+        clubs (list): List of club names to include in the visualization.
+        col (str): Column name from 'results' to plot (e.g., 'Champion', 'Z4').
+        title (str): Main title for the plot.
+        subtitle (str): Subtitle text to display below the main title.
+
+    Returns:
+        plotly.graph_objects.Figure: A configured Plotly figure object ready for
+            display or export.
+    """
+    results = results[results['Club'].isin(clubs)]
+    results = results[['Club', 'Date', col]]
+    results['Date'] = results['Date'] \
+        .astype(str) \
+        .apply(lambda x: dt.strptime(x, '%d/%m/%Y').strftime('%Y-%m-%d'))
+
+    results = results.merge(club_results, on=['Club', 'Date'], how='left')
+    results = results[
+        ['Club', 'Date', col, 'Match Result', 'match_date_dt']
+    ]
+    results.rename(columns={"match_date_dt": "Match Date"}, inplace=True)
+    results['Match Date'] = results['Match Date'].astype(str)
+
+    fig = px.line(
+        results,
+        x='Date',
+        y=col,
+        color='Club',
+        color_discrete_map=color_mapping,
+    )
+
+    for trace in fig.data:
+        if trace.type == 'scatter' and trace.mode == 'lines':
+            trace.legendgroup = 'Clubs'
+
+    add_period(fig, "2025-06-12", "2025-07-12", "Club World Cup", ("2025-06-27", 1.025))
+    add_period(fig, "2025-06-02", "2025-06-10", "FIFA Date", ("2025-06-06", 1.025))
+    add_period(fig, "2025-09-01", "2025-09-09", "FIFA Date", ("2025-09-05", 1.025))
+    add_period(fig, "2025-10-06", "2025-10-14", "FIFA Date", ("2025-10-10", 1.025))
+    add_period(fig, "2025-11-10", "2025-11-18", "FIFA Date", ("2025-11-15", 1.025))
+
+    add_matches_result(fig, results, 'Won', col)
+    add_matches_result(fig, results, 'Lost', col)
+    add_matches_result(fig, results, 'Drew', col)
+
+    for club in clubs:
+        add_final_prob(fig, club, results, 0, col)
+
+    fig.update_traces(
+        selector={"legendgroup": "Clubs"},
+        legendgrouptitle={"text": "Clubs", "font": {"size": 14}},
+    )
+
+    fig.update_traces(
+        selector={"legendgroup": "Results"},
+        legendgrouptitle={"text": "Results", "font": {"size": 14}},
+    )
+
+    fig.update_layout(
+        title=title+f'<br><span style="font-size: 14px;">{subtitle}</span>',
+        xaxis_title='Date',
+        yaxis_title='Probability (%)',
+        legend_title='Club',
+        template="plotly_white",
+        legend={
+            "orientation": "v",
+            "yanchor": "top",
+            "y": 1,
+            "xanchor": "left",
+            "x": 1.01,
+            "title_text": None,
+        },
+        yaxis={
+            "tickformat": '.1%',
+            "tickmode": "linear",
+            "dtick": 0.1,
+            "range": [0, 1.05]
+        },
+        xaxis={
+            "title": "Date",
+            "type": "date",
+            "tickformat": "%d/%m/%Y",
+            "tickangle": 45,
+            "showgrid": True,
+            "gridcolor": "lightgray",
+            "showline": True,
+            "linecolor": "black"
+        },
+    )
+
+    return fig
+
+
 if __name__ == "__main__":
+    start_time = time()
+    year = dt.now().year
     models = {
         'poisson_2': 'Poisson 2',
-        'poisson_4': 'Poisson 4',
-        'poisson_1': 'Poisson 1',
     }
 
     with open(
         os.path.join(
             os.path.dirname(__file__),
-            "..", "..", "real_data", "results", "brazil", "2025",
+            "..", "..", "real_data", "results", "brazil", f"{year}",
             "all_matches.json"
         ),
         "r",
@@ -244,7 +359,7 @@ if __name__ == "__main__":
         files = sorted(
             glob(
                 os.path.join(os.path.dirname(__file__),
-                "..", "..", "real_data", "results", "brazil", "2025",
+                "..", "..", "real_data", "results", "brazil", f"{year}",
                 model, "*", "summary_results.csv")
             )
         )
@@ -252,108 +367,53 @@ if __name__ == "__main__":
             df = pd.read_csv(file)
             results = pd.concat([results, df], ignore_index=True)
 
-        results = results[
-            results['Club'].isin(['Flamengo / RJ', 'Palmeiras / SP', 'Cruzeiro / MG'])
-        ]
-        results = results[['Club', 'Date', 'Championship Probability']]
-        results['Date'] = results['Date'] \
-            .astype(str) \
-            .apply(lambda x: dt.strptime(x, '%d/%m/%Y').strftime('%Y-%m-%d'))
-
-        results = results.merge(club_results, on=['Club', 'Date'], how='left')
-        results = results[
-            ['Club', 'Date', 'Championship Probability', 'Match Result', 'match_date_dt']
-        ]
-        results.rename(columns={"match_date_dt": "Match Date"}, inplace=True)
-        results['Match Date'] = results['Match Date'].astype(str)
-
-        fig = px.line(
-            results,
-            x='Date',
-            y='Championship Probability',
-            color='Club',
-            color_discrete_map=color_mapping,
-        )
-
-        for trace in fig.data:
-            if trace.type == 'scatter' and trace.mode == 'lines':
-                trace.legendgroup = 'Clubs'
-
-        add_period(fig, "2025-06-12", "2025-07-12", "Club World Cup", ("2025-06-27", 0.95))
-        add_period(fig, "2025-06-02", "2025-06-10", "FIFA Date", ("2025-06-06", 0.95))
-        add_period(fig, "2025-09-01", "2025-09-09", "FIFA Date", ("2025-09-05", 0.95))
-        add_period(fig, "2025-10-06", "2025-10-14", "FIFA Date", ("2025-10-10", 0.95))
-        # add_period(fig, "2025-11-10", "2025-11-18", "FIFA Date", ("2025-11-15", 0.95))
-
-        y_max = max(results['Championship Probability'])
-        add_game_result_annotation(fig, "2025-05-04", "Cruzeiro 2x1 Flamengo", 0, y_max)
-        add_game_result_annotation(fig, "2025-05-25", "Palmeiras 0x2 Flamengo", -0.025, y_max)
-        add_game_result_annotation(fig, "2025-06-01", "Cruzeiro 2x1 Palmeiras", 0.025, y_max)
-        add_game_result_annotation(fig, "2025-10-02", "Flamengo 0x0 Cruzeiro", 0, y_max)
-        add_game_result_annotation(fig, "2025-10-19", "Flamengo 3x2 Palmeiras", -0.025, y_max)
-        add_game_result_annotation(fig, "2025-10-26", "Palmeiras 0x0 Cruzeiro", 0.025, y_max)
-
-        add_matches_result(fig, results, 'Won')
-        add_matches_result(fig, results, 'Lost')
-        add_matches_result(fig, results, 'Drew')
-
-        add_final_prob(fig, 'Flamengo / RJ', results, -0.0125)
-        add_final_prob(fig, 'Palmeiras / SP', results, 0.0125)
-        add_final_prob(fig, 'Cruzeiro / MG', results, 0)
-
+        clubs = ['Flamengo / RJ', 'Palmeiras / SP', 'Cruzeiro / MG']
         title = 'Probability of being champion'
         subtitle = (
-            'Probabilities based on 100,000 simulations of the remaining games. '
+            'Probabilities based on 10,000 simulations of the remaining games. '
             'Dots represent the actual results on matches.'
         )
-        fig.update_layout(
-            title=title+f'<br><span style="font-size: 14px;">{subtitle}</span>',
-            xaxis_title='Date',
-            yaxis_title='Probability (%)',
-            legend_title='Club',
-            template="plotly_white",
-            legend={
-                "orientation": "v",
-                "yanchor": "top",
-                "y": 1,
-                "xanchor": "left",
-                "x": 1.01,
-                "title_text": None,
-            },
-            yaxis={
-                "tickformat": '.1%',
-                "tickmode": "linear",
-                "dtick": 0.1,
-                "range": [0, 1]
-            },
-            xaxis={
-                "title": "Date",
-                "type": "date",
-                "tickformat": "%d/%m/%Y",
-                "tickangle": 45,
-                "showgrid": True,
-                "gridcolor": "lightgray",
-                "showline": True,
-                "linecolor": "black"
-            },
-        )
-
-        fig.update_traces(
-            selector={"legendgroup": "Clubs"},
-            legendgrouptitle={"text": "Clubs", "font": {"size": 14}},
-        )
-
-        fig.update_traces(
-            selector={"legendgroup": "Results"},
-            legendgrouptitle={"text": "Results", "font": {"size": 14}},
-        )
+        fig = generate_viz(results, club_results, clubs, 'Champion', title, subtitle)
+        y_max = max(results['Champion'])
+        add_game_result_annotation(fig, "2025-05-04", "CRU 2x1 FLA", 0, y_max)
+        add_game_result_annotation(fig, "2025-05-25", "PAL 0x2 FLA", -0.025, y_max)
+        add_game_result_annotation(fig, "2025-06-01", "CRU 2x1 PAL", 0.025, y_max)
+        add_game_result_annotation(fig, "2025-10-02", "FLA 0x0 CRU", 0, y_max)
+        add_game_result_annotation(fig, "2025-10-19", "FLA 3x2 PAL", -0.025, y_max)
+        add_game_result_annotation(fig, "2025-10-26", "PAL 0x0 CRU", 0.025, y_max)
 
         fig.write_image(
             os.path.join(
                 os.path.dirname(__file__), "..", "..",
-                "real_data", "results", "brazil", "2025",
-                f"visualization_{model}.png"
+                "real_data", "results", "brazil", f"{year}",
+                f"visualization_{model}_champ.png"
             ),
             width=1600,
             height=800,
         )
+
+        clubs = [
+            'Vitória / BA',
+            'Santos / SP',
+            'Juventude / RS',
+            'Fortaleza / CE',
+            'Sport / PE'
+        ]
+        title = 'Probability of being relegated'
+        subtitle = (
+            'Probabilities based on 10,000 simulations of the remaining games. '
+            'Dots represent the actual results on matches.'
+        )
+        fig = generate_viz(results, club_results, clubs, 'Z4', title, subtitle)
+
+        fig.write_image(
+            os.path.join(
+                os.path.dirname(__file__), "..", "..",
+                "real_data", "results", "brazil", f"{year}",
+                f"visualization_{model}_z4.png"
+            ),
+            width=1600,
+            height=800,
+        )
+
+    print(f"Total time elapsed (visualization): {time() - start_time:,.2f} seconds")
