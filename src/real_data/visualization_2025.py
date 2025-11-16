@@ -397,7 +397,7 @@ if __name__ == "__main__":
             'Santos / SP',
             'Juventude / RS',
             'Fortaleza / CE',
-            'Sport / PE'
+            'Internacional / RS'
         ]
         title = 'Probability of being relegated'
         subtitle = (
