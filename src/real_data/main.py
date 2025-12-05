@@ -16,7 +16,7 @@ def process_data(
     game_list: list[int],
     game_to_plot_list: list[int],
     country_list: list[str],
-    num_simulations: int = 100_000,
+    num_simulations: int = 10_000,
     ignore_cache: bool = False,
 ) -> None:
     """
