@@ -78,21 +78,29 @@ def summarize_results(save_dir: str, match_date: str | None) -> None:
         final_positions_probs = json.load(f)
 
     df = pd.DataFrame(
-        columns=['Date', 'Club', 'Champion', 'G5', 'G7', 'Sula', 'Z4']
+        columns=[
+            'Date', 'Club', 'Champion',
+            'G4', 'G5', 'G6', 'G7', 'G8',
+            'Sula (8-13)', 'Sula (9-14)', 'Z4'
+        ]
     )
     for team, probs in final_positions_probs.items():
         df.loc[len(df)] = {
             'Date': match_date,
             'Club': team,
             'Champion': probs[0],
+            'G4': sum(probs[:4]),
             'G5': sum(probs[:5]),
+            'G6': sum(probs[:6]),
             'G7': sum(probs[:7]),
-            'Sula': sum(probs[7:13]),
+            'G8': sum(probs[:8]),
+            'Sula (8-13)': sum(probs[7:13]),
+            'Sula (9-14)': sum(probs[8:14]),
             'Z4': sum(probs[-4:])
         }
     df.sort_values(
-        by=['Champion', 'G5', 'G7', 'Sula', 'Z4'],
-        ascending=[False, False, False, False, False],
+        by=['Champion', 'G4', 'G5', 'G6', 'G7', 'G8', 'Sula (8-13)', 'Sula (9-14)', 'Z4'],
+        ascending=[False, False, False, False, False, False, False, False, True],
         ignore_index=True,
         inplace=True
     )

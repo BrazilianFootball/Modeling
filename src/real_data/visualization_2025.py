@@ -7,6 +7,7 @@ from datetime import datetime as dt
 from glob import glob
 from time import time
 
+import numpy as np
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -264,6 +265,7 @@ def generate_viz(results, club_results, clubs, col, title, subtitle):
 
 
 if __name__ == "__main__":
+    N_SIMULATIONS = 10_000
     start_time = time()
     year = dt.now().year
     models = {
@@ -367,6 +369,10 @@ if __name__ == "__main__":
             df = pd.read_csv(file)
             results = pd.concat([results, df], ignore_index=True)
 
+        positions = ['Champion', 'G4', 'G5', 'G6', 'G7', 'G8', 'Sula (8-13)', 'Sula (9-14)', 'Z4']
+        for position in positions:
+            results[position] = (results[position] / N_SIMULATIONS).round(4)
+
         clubs = ['Flamengo / RJ', 'Palmeiras / SP', 'Cruzeiro / MG']
         title = 'Probability of being champion'
         subtitle = (
@@ -393,11 +399,11 @@ if __name__ == "__main__":
         )
 
         clubs = [
+            'Internacional / RS',
             'Vitória / BA',
-            'Santos / SP',
-            'Juventude / RS',
             'Fortaleza / CE',
-            'Internacional / RS'
+            'Ceará / CE',
+            'Santos / SP',
         ]
         title = 'Probability of being relegated'
         subtitle = (
@@ -413,6 +419,69 @@ if __name__ == "__main__":
                 f"visualization_{model}_z4.png"
             ),
             width=1600,
+            height=800,
+        )
+
+        final_positions_probs_file = sorted(glob(
+            os.path.join(
+                os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil",
+                f"{year}", model, "*", "final_positions_probs.json"
+            )
+        ))[-1]
+        with open(final_positions_probs_file, "r", encoding="utf-8") as f:
+            final_positions_probs = json.load(f)
+
+        save_dir = os.path.join(
+            os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil", f"{year}"
+        )
+
+        num_positions = max(len(probs) for probs in final_positions_probs.values())
+        positions = [*range(1, num_positions + 1)]
+
+        club_and_max_prob_pos = []
+        for club, probs in final_positions_probs.items():
+            if probs:
+                maxpos = probs.index(max(probs)) if max(probs) != 0 else len(probs) - 1
+            else:
+                maxpos = num_positions-1
+            club_and_max_prob_pos.append((club, maxpos))
+
+        sorted_clubs = [
+            club for club, _ in sorted(club_and_max_prob_pos, key=lambda x: x[1], reverse=True)
+        ]
+
+        z = []
+        for club in sorted_clubs:
+            club_probs = final_positions_probs[club]
+            row_probs = [
+                club_probs[i] if i < len(club_probs) else None for i in range(num_positions)
+            ]
+            z.append(row_probs)
+
+        z = np.array(z, dtype=float) / N_SIMULATIONS
+        z[z == 0] = np.nan
+        fig = go.Figure(
+            data=go.Heatmap(
+                z=z,
+                x=positions,
+                y=sorted_clubs,
+                colorscale="Viridis",
+                colorbar={"title": "Probability"},
+                zmin=0,
+                zmax=1,
+                hoverongaps=False
+            )
+        )
+        fig.update_layout(
+            title="Final Position Probability for All Clubs",
+            xaxis={"title": "Final Position", "tickmode": "linear"},
+            yaxis={"title": "Club"},
+            plot_bgcolor="white",
+            paper_bgcolor="white",
+        )
+        fig.write_image(
+            os.path.join(save_dir, 'final_position_probs_all_clubs.png'),
+            width=1200,
             height=800,
         )
 
