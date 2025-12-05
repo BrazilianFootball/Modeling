@@ -56,7 +56,7 @@ def _configure_axes_optimized(fig: go.Figure, n_clubs: int) -> None:
 
 def generate_quantiles(
     points_matrix: np.ndarray,
-    current_scenario: dict[str, list[tuple[bool, int]]],
+    current_scenario: dict[str, list[tuple[bool, int, int, int, int]]],
     team_mapping: dict[int, str],
     num_games: int,
     save_dir: str,
@@ -71,8 +71,8 @@ def generate_quantiles(
 
     Args:
         points_matrix (np.ndarray): Array of simulated points for each team, round, and simulation.
-        current_scenario (dict[str, list[tuple[bool, int]]]): Dictionary with the actual points
-            evolution for each team.
+        current_scenario (dict[str, list[tuple[bool, int, int, int, int]]]): Dictionary with the
+            actual points, wins, goals difference and goals for for each team.
         team_mapping (dict[int, str]): Mapping from team indices to team names.
         num_games (int): Number of games already played.
         save_dir (str): Directory where the CSV file will be saved.
@@ -82,7 +82,7 @@ def generate_quantiles(
             97.5th percentiles for each team and round
     """
     percentiles = np.linspace(2.5, 97.5, 39)
-    quantiles = np.quantile(points_matrix, percentiles / 100, axis=2)
+    quantiles = np.quantile(points_matrix[:, :, :, 0], percentiles / 100, axis=2)
     columns = [f"p{percentile:.2f}" for percentile in percentiles]
     all_quantiles = []
     for idx, team in team_mapping.items():
@@ -107,7 +107,7 @@ def generate_quantiles(
 
 def generate_points_evolution_by_team(
     points_matrix: np.ndarray,
-    current_scenario: dict[str, list[tuple[bool, int]]],
+    current_scenario: dict[str, list[tuple[bool, int, int, int, int]]],
     team_mapping: dict[int, str],
     num_games: int,
     save_dir: str,
@@ -119,7 +119,8 @@ def generate_points_evolution_by_team(
 
     Args:
         points_matrix (np.ndarray): Simulated points for each team, round, and simulation.
-        current_scenario (Dict[str, List[int]]): Actual points evolution for each team.
+        current_scenario (Dict[str, List[tuple[bool, int, int, int, int]]]): Dictionary with the
+            actual points, wins, goals difference and goals for for each team.
         team_mapping (Dict[int, str]): Mapping from team indices to team names.
         num_games (int): Number of games already played.
         save_dir (str): Directory to save the plot.
@@ -131,20 +132,51 @@ def generate_points_evolution_by_team(
     points_on_current_scenario = {
         team: [point[1] for point in current_scenario[team]] for team in team_mapping.values()
     }
-    final_points = np.array(
-        [points_on_current_scenario[team][-1] for team in team_mapping.values()]
+    wins_on_current_scenario = {
+        team: [point[2] for point in current_scenario[team]] for team in team_mapping.values()
+    }
+    goals_diff_on_current_scenario = {
+        team: [point[3] for point in current_scenario[team]] for team in team_mapping.values()
+    }
+    goals_for_on_current_scenario = {
+        team: [point[4] for point in current_scenario[team]] for team in team_mapping.values()
+    }
+
+    final_stats = np.array([
+        [
+            points_on_current_scenario[team][-1],
+            wins_on_current_scenario[team][-1],
+            goals_diff_on_current_scenario[team][-1],
+            goals_for_on_current_scenario[team][-1]
+        ] for team in team_mapping.values()
+    ])
+
+    sort_keys = (
+        -final_stats[:, 3],  # Goals for (descending)
+        -final_stats[:, 2],  # Goals diff (descending)
+        -final_stats[:, 1],  # Wins (descending)
+        -final_stats[:, 0],  # Points (descending)
     )
-    sorted_indices = np.argsort(-final_points, kind="stable")
+    sorted_indices = np.lexsort(sort_keys)
     sorted_team_names = [list(team_mapping.values())[i] for i in sorted_indices]
 
     points_at_current_round = np.array([
         points_on_current_scenario[team][num_games - 1] for team in sorted_team_names
     ])
 
-    final_points_distribution = points_matrix[:, -1, :].copy()
+    final_distribution = points_matrix[:, -1, :, :].copy()
     for idx, team in team_mapping.items():
-        final_points_distribution[idx - 1, :] = (
-            points_matrix[idx - 1, -1, :] + points_on_current_scenario[team][num_games - 1]
+        final_distribution[idx - 1, :, 0] = (
+            points_matrix[idx - 1, -1, :, 0] + points_on_current_scenario[team][num_games - 1]
+        )
+        final_distribution[idx - 1, :, 1] = (
+            points_matrix[idx - 1, -1, :, 1] + wins_on_current_scenario[team][num_games - 1]
+        )
+        final_distribution[idx - 1, :, 2] = (
+            points_matrix[idx - 1, -1, :, 2] + goals_diff_on_current_scenario[team][num_games - 1]
+        )
+        final_distribution[idx - 1, :, 3] = (
+            points_matrix[idx - 1, -1, :, 3] + goals_for_on_current_scenario[team][num_games - 1]
         )
 
     n_clubs = len(team_mapping)
@@ -153,7 +185,7 @@ def generate_points_evolution_by_team(
     )
 
     if not make_plots:
-        return final_points_distribution
+        return final_distribution
 
     n_total_matches = n_clubs * (n_clubs - 1)
     simulation_range = np.arange(num_games + 1, n_total_matches)
@@ -241,7 +273,7 @@ def generate_points_evolution_by_team(
     file_path = os.path.join(save_dir, "points_evolution_by_team.png")
     pio.write_image(fig, file_path, format="png", scale=1, engine="kaleido")
 
-    return final_points_distribution
+    return final_distribution
 
 
 def generate_boxplot(
