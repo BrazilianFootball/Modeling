@@ -146,7 +146,7 @@ def model_was_changed(model_name: str) -> bool:
     Returns:
         True if model changed, False otherwise
     """
-    return os.path.getmtime(f"models/{model_name}.stan") > os.path.getmtime(
+    return os.path.getmtime(f"models/club_level/{model_name}.stan") > os.path.getmtime(
         f"results/{model_name}/setup.json"
     )
 
