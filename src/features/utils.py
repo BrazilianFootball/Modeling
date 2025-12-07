@@ -200,7 +200,7 @@ def run_model(  # pylint: disable=too-many-locals
         model_name
     )
     model = cmdstanpy.CmdStanModel(
-        stan_file=f"models/{model_name}.stan", force_compile=True
+        stan_file=f"models/club_level/{model_name}.stan", force_compile=True
     )
 
     if os.path.exists(f"results/{model_name}/potential_problems.json"):

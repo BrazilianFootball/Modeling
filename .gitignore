@@ -169,6 +169,6 @@ real_data/**/*.csv
 !real_data/results/metrics.csv
 src/real_data/credential.json
 
-models/*
-!models/*.stan
+models/club_level/*
+!models/club_level/*.stan
 !models/README.md
