@@ -3,9 +3,11 @@
 import json
 import os
 import warnings
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 import numpy as np
 import pandas as pd
+import plotly.graph_objects as go
 from constants import MODELS
 from plots import plot_ecdf, plot_ecdf_combined
 from tqdm import tqdm
@@ -69,6 +71,8 @@ def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> 
     points_out_of_bounds = {}
     chain_names = [f"Chain {i}" for i in range(n_chains)]
 
+    save_tasks = []
+    plots_dir = f"results/{model_name}/plots"
     for param in tqdm(ranks.keys(), desc=f"Parameters ({model_name})"):
         sample = np.zeros((n_sims, n_chains))
         for chain in range(n_chains):
@@ -76,12 +80,26 @@ def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> 
         samples.append(sample)
         param_names.append(param)
         fig = plot_ecdf_combined(sample, param, chain_names)
-        fig.write_image(
-            f"results/{model_name}/plots/{param.replace('.', '_')}_ecdf_combined.png",
-            width=800,
-            height=400,
-            scale=1,
+        filepath = os.path.join(
+            plots_dir, f"{param.replace('.', '_')}_ecdf_combined.png"
         )
+        save_tasks.append((fig, filepath))
+
+    def save_image(fig_filepath: tuple[go.Figure, str]) -> str:
+        fig, filepath = fig_filepath
+        fig.write_image(filepath, width=800, height=400, scale=1)
+        return filepath
+
+    if save_tasks:
+        print(f"Saving {len(save_tasks)} plot images in parallel...")
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            futures = {executor.submit(save_image, task): task for task in save_tasks}
+            for future in tqdm(
+                as_completed(futures),
+                total=len(futures),
+                desc="Saving images",
+            ):
+                future.result()
 
     n_params = len(param_names)
     n_cols = min(4, n_params)
