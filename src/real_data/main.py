@@ -86,6 +86,11 @@ if __name__ == "__main__":
         "poisson_3",
         "poisson_4",
         "poisson_5",
+        "poisson_6",
+        "poisson_7",
+        "poisson_8",
+        "poisson_9",
+        "poisson_10",
     ]
 
     # 20 teams championships

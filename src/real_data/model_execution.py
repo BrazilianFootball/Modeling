@@ -82,7 +82,7 @@ def run_model_with_real_data(
             float(np.mean(home_goals == away_goals)),
         ]
     else:
-        stan_model = cmdstanpy.CmdStanModel(stan_file=f"models/{model_name}.stan")
+        stan_model = cmdstanpy.CmdStanModel(stan_file=f"models/club_level/{model_name}.stan")
         fit = stan_model.sample(data=data, show_progress=False, **model_kwargs)
         fit.save_csvfiles(samples_dir)
 
