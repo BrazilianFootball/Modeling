@@ -171,4 +171,6 @@ src/real_data/credential.json
 
 models/club_level/*
 !models/club_level/*.stan
+models/player_level/*
+!models/player_level/*.stan
 !models/README.md
