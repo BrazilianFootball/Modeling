@@ -9,7 +9,7 @@ from src.features.poisson_generators import data_generator_poisson_1
 from src.features.utils import run_model
 
 if __name__ == "__main__":
-    MODEL_NAME = "poisson_1"
+    MODEL_NAME = "club_level.poisson_1"
     generator = data_generator_poisson_1
     model_kwargs["iter_warmup"] = get_iter_warmup(MODEL_NAME)
     model_kwargs["iter_sampling"] = get_iter_sampling(MODEL_NAME)
