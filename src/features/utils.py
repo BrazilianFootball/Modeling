@@ -18,11 +18,12 @@ class NumpyEncoder(json.JSONEncoder):
         return json.JSONEncoder.default(self, o)
 
 
-def create_results_dir(model_name: str) -> None:
+def create_results_dir(level: str, model_name: str) -> None:
     """Creates directory to store results."""
-    os.makedirs(f"results/{model_name}", exist_ok=True)
-    os.makedirs(f"results/{model_name}/plots", exist_ok=True)
-    os.makedirs(f"results/{model_name}/samples", exist_ok=True)
+    os.makedirs(f"results/{level}", exist_ok=True)
+    os.makedirs(f"results/{level}/{model_name}", exist_ok=True)
+    os.makedirs(f"results/{level}/{model_name}/plots", exist_ok=True)
+    os.makedirs(f"results/{level}/{model_name}/samples", exist_ok=True)
 
 
 def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> dict[int, Any]:
@@ -45,36 +46,46 @@ def generate_data(generator: Callable, n_sims: int, **kwargs: Any) -> dict[int, 
     return data
 
 
-def save_model_setup(model_name: str, setup: dict[str, Any]) -> None:
+def save_model_setup(level: str, model_name: str, setup: dict[str, Any]) -> None:
     """Save model setup to JSON file.
 
     Args:
+        level: Level of the model
         model_name: Name of the model
         setup: Dictionary containing model setup
     """
-    with open(f"results/{model_name}/setup.json", "w", encoding="utf-8") as file_handle:
+    with open(
+        f"results/{level}/{model_name}/setup.json", "w", encoding="utf-8"
+    ) as file_handle:
         file_handle.write(jsonpickle.encode(setup))
 
 
-def load_model_setup(model_name: str) -> dict[str, Any]:
+def load_model_setup(level: str, model_name: str) -> dict[str, Any]:
     """Load model setup from JSON file.
 
     Args:
+        level: Level of the model
         model_name: Name of the model
 
     Returns:
         Dictionary containing model setup
     """
-    with open(f"results/{model_name}/setup.json", encoding="utf-8") as file_handle:
+    with open(
+        f"results/{level}/{model_name}/setup.json", encoding="utf-8"
+    ) as file_handle:
         return jsonpickle.decode(file_handle.read())
 
 
 def create_model_setup(
-    model_name: str, data: dict[int, dict[str, Any]], **kwargs: dict[str, Any]
+    level: str,
+    model_name: str,
+    data: dict[int, dict[str, Any]],
+    **kwargs: dict[str, Any],
 ) -> dict[str, Any]:
     """Create model setup dictionary.
 
     Args:
+        level: Level of the model
         model_name: Name of the model
         data: Dictionary containing simulation data
         **kwargs: Additional setup parameters
@@ -82,7 +93,7 @@ def create_model_setup(
     Returns:
         Dictionary containing complete model setup
     """
-    setup = {"model_name": model_name, "data": data}
+    setup = {"level": level, "model_name": model_name, "data": data}
 
     setup.update(kwargs)
 
@@ -93,6 +104,7 @@ def check_changes(current_setup: str, previous_setup: str) -> bool:
     """Check if there are changes between two setups.
 
     Args:
+        level: Level of the model
         current_setup: JSON string of current setup
         previous_setup: JSON string of previous setup
 
@@ -110,11 +122,15 @@ def check_changes(current_setup: str, previous_setup: str) -> bool:
 
 
 def setup_was_changed(
-    model_name: str, data: dict[int, dict[str, Any]], **kwargs: dict[str, Any]
+    level: str,
+    model_name: str,
+    data: dict[int, dict[str, Any]],
+    **kwargs: dict[str, Any],
 ) -> bool:
     """Check if model setup has changed.
 
     Args:
+        level: Level of the model
         model_name: Name of the model
         data: Dictionary containing simulation data
         **kwargs: Additional setup parameters
@@ -122,22 +138,22 @@ def setup_was_changed(
     Returns:
         True if setup changed, False otherwise
     """
-    current_setup = create_model_setup(model_name, data, **kwargs)
-    if not os.path.exists(f"results/{model_name}/setup.json"):
-        save_model_setup(model_name, current_setup)
+    current_setup = create_model_setup(level, model_name, data, **kwargs)
+    if not os.path.exists(f"results/{level}/{model_name}/setup.json"):
+        save_model_setup(level, model_name, current_setup)
         return True
 
-    previous_setup = load_model_setup(model_name)
+    previous_setup = load_model_setup(level, model_name)
     current_json = json.dumps(current_setup, cls=NumpyEncoder, sort_keys=True)
     previous_json = json.dumps(previous_setup, cls=NumpyEncoder, sort_keys=True)
     has_changes = check_changes(current_json, previous_json)
     if has_changes:
-        save_model_setup(model_name, current_setup)
+        save_model_setup(level, model_name, current_setup)
 
     return has_changes
 
 
-def model_was_changed(model_name: str) -> bool:
+def model_was_changed(level: str, model_name: str) -> bool:
     """Check if model has changed.
 
     Args:
@@ -146,8 +162,8 @@ def model_was_changed(model_name: str) -> bool:
     Returns:
         True if model changed, False otherwise
     """
-    return os.path.getmtime(f"models/club_level/{model_name}.stan") > os.path.getmtime(
-        f"results/{model_name}/setup.json"
+    return os.path.getmtime(f"models/{level}/{model_name}.stan") > os.path.getmtime(
+        f"results/{level}/{model_name}/setup.json"
     )
 
 
@@ -165,16 +181,16 @@ def clear_dir(dir_path: str) -> None:
             shutil.rmtree(file_path)
 
 
-def remove_model_results(model_name: str) -> None:
+def remove_model_results(level: str, model_name: str) -> None:
     """Remove the model results directory.
 
     Args:
         model_name: Name of the model
     """
-    clear_dir(f"results/{model_name}/samples")
-    clear_dir(f"results/{model_name}/plots")
-    if os.path.exists(f"results/{model_name}/ranks.npy"):
-        os.remove(f"results/{model_name}/ranks.npy")
+    clear_dir(f"results/{level}/{model_name}/samples")
+    clear_dir(f"results/{level}/{model_name}/plots")
+    if os.path.exists(f"results/{level}/{model_name}/ranks.npy"):
+        os.remove(f"results/{level}/{model_name}/ranks.npy")
 
 
 def run_model(  # pylint: disable=too-many-locals
@@ -193,35 +209,36 @@ def run_model(  # pylint: disable=too-many-locals
         generator_kwargs: Arguments for generator function
         model_kwargs: Arguments for model sampling
     """
-    create_results_dir(model_name)
+    level, model_name = model_name.split(".")
+    create_results_dir(level, model_name)
     kwargs = {**generator_kwargs, **model_kwargs}
     data = generate_data(generator, n_sims, **generator_kwargs)
-    need_update = setup_was_changed(model_name, data, **kwargs) or model_was_changed(
-        model_name
-    )
+    need_update = setup_was_changed(
+        level, model_name, data, **kwargs
+    ) or model_was_changed(level, model_name)
     model = cmdstanpy.CmdStanModel(
-        stan_file=f"models/club_level/{model_name}.stan", force_compile=True
+        stan_file=f"models/{level}/{model_name}.stan", force_compile=True
     )
 
-    if os.path.exists(f"results/{model_name}/potential_problems.json"):
+    if os.path.exists(f"results/{level}/{model_name}/potential_problems.json"):
         with open(
-            f"results/{model_name}/potential_problems.json", encoding="utf-8"
+            f"results/{level}/{model_name}/potential_problems.json", encoding="utf-8"
         ) as file_handle:
             potential_problems = json.load(file_handle)
     else:
         potential_problems = {}
 
     if need_update:
-        remove_model_results(model_name)
+        remove_model_results(level, model_name)
 
     for i in range(1, n_sims + 1):
-        if os.path.exists(f"results/{model_name}/samples/sim_{i}"):
+        if os.path.exists(f"results/{level}/{model_name}/samples/sim_{i}"):
             print(f"Skipping sim {i} of {n_sims} ({model_name})")
             continue
 
         print(f"Running sim {i} of {n_sims} ({model_name})")
         fit = model.sample(data=data[i]["generated"], **model_kwargs)
-        fit.save_csvfiles(f"results/{model_name}/samples/sim_{i}")
+        fit.save_csvfiles(f"results/{level}/{model_name}/samples/sim_{i}")
         diagnose = fit.diagnose()
         if "no problems detected" not in diagnose:
             potential_problems[i] = diagnose
@@ -230,7 +247,7 @@ def run_model(  # pylint: disable=too-many-locals
 
         if potential_problems:
             with open(
-                f"results/{model_name}/potential_problems.json",
+                f"results/{level}/{model_name}/potential_problems.json",
                 "w",
                 encoding="utf-8",
             ) as file_handle:

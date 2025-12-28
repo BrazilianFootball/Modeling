@@ -16,14 +16,14 @@ from utils import load_model_setup
 warnings.filterwarnings("ignore")
 
 
-def calculate_ranks(model_name: str) -> dict:
+def calculate_ranks(level: str, model_name: str) -> dict:
     """Calculates normalized ranks for each model parameter."""
-    ranks_path = f"results/{model_name}/ranks.npy"
+    ranks_path = f"results/{level}/{model_name}/ranks.npy"
     if os.path.exists(ranks_path):
         return np.load(ranks_path, allow_pickle=True).item()
 
     ranks: dict[str, dict[int, list[float]]] = {}
-    setup = load_model_setup(model_name)
+    setup = load_model_setup(level, model_name)
 
     def _update_ranks(param: str, chain: int, value: float) -> None:
         rank = np.sum(df[param] < value)
@@ -31,7 +31,7 @@ def calculate_ranks(model_name: str) -> dict:
         ranks[param][chain] = ranks[param].get(chain, []) + [rank / len(df)]
 
     for sim_id in tqdm(setup["data"]):
-        path = f"results/{model_name}/samples/sim_{sim_id}/"
+        path = f"results/{level}/{model_name}/samples/sim_{sim_id}/"
 
         for chain, file in enumerate(sorted(os.listdir(path))):
             df = pd.read_csv(path + file, comment="#")
@@ -48,11 +48,11 @@ def calculate_ranks(model_name: str) -> dict:
     return ranks
 
 
-def has_changes(model_name: str) -> bool:
+def has_changes(level: str, model_name: str) -> bool:
     """Checks if the model has changed."""
-    ranks_path = f"results/{model_name}/ranks.npy"
-    setup_path = f"results/{model_name}/setup.json"
-    plots_dir = f"results/{model_name}/plots"
+    ranks_path = f"results/{level}/{model_name}/ranks.npy"
+    setup_path = f"results/{level}/{model_name}/setup.json"
+    plots_dir = f"results/{level}/{model_name}/plots"
 
     if not os.path.exists(ranks_path) or not os.listdir(plots_dir):
         return True
@@ -64,7 +64,9 @@ def has_changes(model_name: str) -> bool:
     return ranks_time < setup_time or plots_time < ranks_time
 
 
-def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> None:
+def generate_plots(
+    level: str, model_name: str, ranks: dict, n_sims: int, n_chains: int
+) -> None:
     """Generates plots ECDF for all parameters."""
     samples = []
     param_names = []
@@ -72,7 +74,7 @@ def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> 
     chain_names = [f"Chain {i}" for i in range(n_chains)]
 
     save_tasks = []
-    plots_dir = f"results/{model_name}/plots"
+    plots_dir = f"results/{level}/{model_name}/plots"
     for param in tqdm(ranks.keys(), desc=f"Parameters ({model_name})"):
         sample = np.zeros((n_sims, n_chains))
         for chain in range(n_chains):
@@ -111,7 +113,7 @@ def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> 
     for param, points in points_out_of_bounds["diff_plot"].items():
         if points > 0:
             print(f"{param} has {points} points out of bounds on the difference plot")
-    fig.write_image(f"results/{model_name}/plots/all_params_ecdf_diff.png")
+    fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf_diff.png")
 
     fig, points_out_of_bounds["regular_plot"] = plot_ecdf(
         samples, param_names, chain_names, n_rows=n_rows, n_cols=n_cols
@@ -119,10 +121,10 @@ def generate_plots(model_name: str, ranks: dict, n_sims: int, n_chains: int) -> 
     for param, points in points_out_of_bounds["regular_plot"].items():
         if points > 0:
             print(f"{param} has {points} points out of bounds on the regular plot")
-    fig.write_image(f"results/{model_name}/plots/all_params_ecdf.png")
+    fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf.png")
 
     with open(
-        f"results/{model_name}/points_out_of_bounds.json", "w", encoding="utf-8"
+        f"results/{level}/{model_name}/points_out_of_bounds.json", "w", encoding="utf-8"
     ) as f:
         json.dump(points_out_of_bounds, f)
 
@@ -131,13 +133,14 @@ def main():
     """Main function for model analysis."""
     for model_name in MODELS:
         print(f"Model: {model_name}")
-        ranks = calculate_ranks(model_name)
-        if has_changes(model_name):
+        level, model_name = model_name.split(".")
+        ranks = calculate_ranks(level, model_name)
+        if has_changes(level, model_name):
             print(f"Generating plots for {model_name}")
-            setup = load_model_setup(model_name)
+            setup = load_model_setup(level, model_name)
             n_sims = len(setup["data"])
             n_chains = setup["chains"]
-            generate_plots(model_name, ranks, n_sims, n_chains)
+            generate_plots(level, model_name, ranks, n_sims, n_chains)
 
 
 if __name__ == "__main__":

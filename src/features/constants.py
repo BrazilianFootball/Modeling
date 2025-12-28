@@ -3,24 +3,30 @@ N_CLUBS = 20
 N_SEASONS = 1
 
 MODELS = [
-    "bradley_terry_1",
-    "bradley_terry_2",
-    "bradley_terry_3",
-    "bradley_terry_4",
-    # "bradley_terry_5",
-    # "bradley_terry_6",
-    # "bradley_terry_7",
-    # "bradley_terry_8",
-    "poisson_1",
-    "poisson_2",
-    "poisson_3",
-    "poisson_4",
-    "poisson_5",
-    # "poisson_6",
-    # "poisson_7",
-    # "poisson_8",
-    # "poisson_9",
-    # "poisson_10",
+    "club_level.bradley_terry_1",
+    "club_level.bradley_terry_2",
+    "club_level.bradley_terry_3",
+    "club_level.bradley_terry_4",
+    "club_level.poisson_1",
+    "club_level.poisson_2",
+    "club_level.poisson_3",
+    "club_level.poisson_4",
+    "club_level.poisson_5",
+    "club_level.poisson_6",
+    "club_level.poisson_7",
+    "club_level.poisson_8",
+    "club_level.poisson_9",
+    "club_level.poisson_10",
+    "player_level.bradley_terry_3",
+    "player_level.bradley_terry_4",
+    "player_level.poisson_1",
+    "player_level.poisson_2",
+    "player_level.poisson_3",
+    "player_level.poisson_4",
+    "player_level.poisson_6",
+    "player_level.poisson_7",
+    "player_level.poisson_8",
+    "player_level.poisson_9",
 ]
 
 IGNORE_COLS = [
@@ -61,29 +67,9 @@ model_kwargs = {
     "max_treedepth": MAX_TREEDEPTH,
 }
 
-ITER_WARMUP = {
-    "bradley_terry_5": 2000,
-    "bradley_terry_6": 2000,
-    "bradley_terry_7": 2000,
-    "bradley_terry_8": 2000,
-    "poisson_6": 2000,
-    "poisson_7": 2000,
-    "poisson_8": 2000,
-    "poisson_9": 2000,
-    "poisson_10": 2000,
-}
+ITER_WARMUP: dict[str, int] = {}
 
-ITER_SAMPLING = {
-    "bradley_terry_5": 2000,
-    "bradley_terry_6": 2000,
-    "bradley_terry_7": 2000,
-    "bradley_terry_8": 2000,
-    "poisson_6": 2000,
-    "poisson_7": 2000,
-    "poisson_8": 2000,
-    "poisson_9": 2000,
-    "poisson_10": 2000,
-}
+ITER_SAMPLING: dict[str, int] = {}
 
 
 def get_iter_warmup(model_name: str) -> int:
