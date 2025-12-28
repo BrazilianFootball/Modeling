@@ -24,15 +24,30 @@ echo "Setting PYTHONPATH to: $PYTHONPATH"
 
 echo "=== Starting model execution ==="
 
-run_script "bradley_terry_1.py" || exit 1
-run_script "bradley_terry_2.py" || exit 1
-run_script "bradley_terry_3.py" || exit 1
-run_script "bradley_terry_4.py" || exit 1
-run_script "poisson_1.py" || exit 1
-run_script "poisson_2.py" || exit 1
-run_script "poisson_3.py" || exit 1
-run_script "poisson_4.py" || exit 1
-run_script "poisson_5.py" || exit 1
+run_script "club_bradley_terry_1.py" || exit 1
+run_script "club_bradley_terry_2.py" || exit 1
+run_script "club_bradley_terry_3.py" || exit 1
+run_script "club_bradley_terry_4.py" || exit 1
+run_script "club_poisson_1.py" || exit 1
+run_script "club_poisson_2.py" || exit 1
+run_script "club_poisson_3.py" || exit 1
+run_script "club_poisson_4.py" || exit 1
+run_script "club_poisson_5.py" || exit 1
+run_script "club_poisson_6.py" || exit 1
+run_script "club_poisson_7.py" || exit 1
+run_script "club_poisson_8.py" || exit 1
+run_script "club_poisson_9.py" || exit 1
+run_script "club_poisson_10.py" || exit 1
+run_script "player_bradley_terry_3.py" || exit 1
+# run_script "player_bradley_terry_4.py" || exit 1
+# run_script "player_poisson_1.py" || exit 1
+# run_script "player_poisson_2.py" || exit 1
+# run_script "player_poisson_3.py" || exit 1
+# run_script "player_poisson_4.py" || exit 1
+# run_script "player_poisson_6.py" || exit 1
+# run_script "player_poisson_7.py" || exit 1
+# run_script "player_poisson_8.py" || exit 1
+# run_script "player_poisson_9.py" || exit 1
 
 clear
 
