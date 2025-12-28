@@ -20,6 +20,7 @@ transformed parameters {
 model {
     raw_alpha ~ normal(0, 1);
     nu ~ normal(0, 1);
+    correlation_strength ~ normal(0, 1);
 
     for (game in 1:num_games) {
         real log_lambda_team1 = alpha[team1[game]] + nu - alpha[team2[game]] + correlation_strength;

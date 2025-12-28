@@ -25,6 +25,7 @@ model {
     raw_gamma ~ normal(0, 1);
     beta ~ normal(0, 1);
     delta ~ normal(0, 1);
+    correlation_strength ~ normal(0, 1);
 
     for (game in 1:num_games) {
         real log_lambda_team1 = alpha[team1[game]] + beta[team2[game]] + correlation_strength;
