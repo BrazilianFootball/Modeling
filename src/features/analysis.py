@@ -4,6 +4,7 @@ import json
 import os
 import warnings
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from glob import glob
 
 import numpy as np
 import pandas as pd
@@ -59,7 +60,7 @@ def has_changes(level: str, model_name: str) -> bool:
 
     ranks_time = os.path.getmtime(ranks_path)
     setup_time = os.path.getmtime(setup_path)
-    plots_time = os.path.getmtime(f"{plots_dir}/all_params_ecdf.png")
+    plots_time = min(os.path.getmtime(p) for p in glob(f"{plots_dir}/*.png"))
 
     return ranks_time < setup_time or plots_time < ranks_time
 
@@ -113,7 +114,9 @@ def generate_plots(
     for param, points in points_out_of_bounds["diff_plot"].items():
         if points > 0:
             print(f"{param} has {points} points out of bounds on the difference plot")
-    fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf_diff.png")
+
+    if n_rows <= 6:
+        fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf_diff.png")
 
     fig, points_out_of_bounds["regular_plot"] = plot_ecdf(
         samples, param_names, chain_names, n_rows=n_rows, n_cols=n_cols
@@ -121,7 +124,9 @@ def generate_plots(
     for param, points in points_out_of_bounds["regular_plot"].items():
         if points > 0:
             print(f"{param} has {points} points out of bounds on the regular plot")
-    fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf.png")
+
+    if n_rows <= 6:
+        fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf.png")
 
     with open(
         f"results/{level}/{model_name}/points_out_of_bounds.json", "w", encoding="utf-8"

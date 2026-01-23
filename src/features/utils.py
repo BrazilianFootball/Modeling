@@ -211,6 +211,12 @@ def run_model(  # pylint: disable=too-many-locals
     """
     level, model_name = model_name.split(".")
     create_results_dir(level, model_name)
+    if level == "player_level":
+        keys = ["n_clubs", "n_seasons"]
+        for key in keys:
+            if key in generator_kwargs:
+                del generator_kwargs[key]
+
     kwargs = {**generator_kwargs, **model_kwargs}
     data = generate_data(generator, n_sims, **generator_kwargs)
     need_update = setup_was_changed(

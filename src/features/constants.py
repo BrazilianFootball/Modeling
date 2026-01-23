@@ -17,8 +17,8 @@ MODELS = [
     "club_level.poisson_8",
     "club_level.poisson_9",
     "club_level.poisson_10",
-    "player_level.bradley_terry_3",
-    "player_level.bradley_terry_4",
+    # "player_level.bradley_terry_3",
+    # "player_level.bradley_terry_4",
     "player_level.poisson_1",
     "player_level.poisson_2",
     "player_level.poisson_3",
@@ -43,8 +43,8 @@ IGNORE_COLS = [
     "log_lik",
 ]
 
-DEFAULT_ITER_WARMUP = 5000
-DEFAULT_ITER_SAMPLING = 5000
+DEFAULT_ITER_WARMUP = 1_000
+DEFAULT_ITER_SAMPLING = 1_000
 
 CHAINS = 4
 ADAPT_DELTA = 0.95
@@ -67,9 +67,27 @@ model_kwargs = {
     "max_treedepth": MAX_TREEDEPTH,
 }
 
-ITER_WARMUP: dict[str, int] = {}
+ITER_WARMUP: dict[str, int] = {
+    # "player_level.poisson_1": 1_000,
+    # "player_level.poisson_2": 1_000,
+    # "player_level.poisson_3": 1_000,
+    # "player_level.poisson_4": 1_000,
+    # "player_level.poisson_6": 1_000,
+    # "player_level.poisson_7": 1_000,
+    # "player_level.poisson_8": 1_000,
+    # "player_level.poisson_9": 1_000,
+}
 
-ITER_SAMPLING: dict[str, int] = {}
+ITER_SAMPLING: dict[str, int] = {
+    # "player_level.poisson_1": 1_000,
+    # "player_level.poisson_2": 1_000,
+    # "player_level.poisson_3": 1_000,
+    # "player_level.poisson_4": 1_000,
+    # "player_level.poisson_6": 1_000,
+    # "player_level.poisson_7": 1_000,
+    # "player_level.poisson_8": 1_000,
+    # "player_level.poisson_9": 1_000,
+}
 
 
 def get_iter_warmup(model_name: str) -> int:
