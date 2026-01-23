@@ -6,6 +6,9 @@ from typing import Any
 from datetime import datetime as dt
 import pandas as pd
 
+_ALL_MATCHES_CACHE: dict[tuple[int, str], tuple[dict[str, Any], str]] = {}
+_CACHE_MODIFIED: set[tuple[int, str]] = set()
+
 def parse_datetime(date: str, time: str) -> str:
     """
     Converts a date and time string to the format "YYYY/MM/DD HH:MM".
@@ -269,7 +272,7 @@ def generate_real_data_stan_input(
 
 def load_all_matches_data(year: int, championship: str) -> tuple[dict[str, Any], str]:
     """
-    Load the all matches data for a given year.
+    Load the all matches data for a given year (with memory cache).
 
     Args:
         year (int): The year of the data to load.
@@ -278,13 +281,49 @@ def load_all_matches_data(year: int, championship: str) -> tuple[dict[str, Any],
     Returns:
         tuple[dict[str, Any], str]: The loaded data dictionary and the path to the data file.
     """
+    cache_key = (year, championship)
+
+    if cache_key in _ALL_MATCHES_CACHE:
+        return _ALL_MATCHES_CACHE[cache_key]
+
     data_path = os.path.join(
         os.path.dirname(__file__), "..", "..",
         "real_data", "results", f"{championship}", f"{year}", "all_matches.json"
     )
     with open(data_path, encoding="utf-8") as f:
         data = json.load(f)
+
+    _ALL_MATCHES_CACHE[cache_key] = (data, data_path)
     return data, data_path
+
+
+def mark_cache_modified(year: int, championship: str) -> None:
+    """
+    Mark the cache as modified for subsequent writing.
+
+    Args:
+        year (int): The year of the data.
+        championship (str): The championship of the data.
+    """
+    _CACHE_MODIFIED.add((year, championship))
+
+
+def flush_and_clear_cache() -> None:
+    """
+    Write all modified data to disk and clear the cache.
+    Use atomic writing to prevent corruption.
+    """
+    for cache_key in _CACHE_MODIFIED:
+        if cache_key in _ALL_MATCHES_CACHE:
+            data, data_path = _ALL_MATCHES_CACHE[cache_key]
+            # Escrita atômica: escreve em arquivo temporário e renomeia
+            temp_path = data_path + ".tmp"
+            with open(temp_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            os.replace(temp_path, data_path)
+
+    _ALL_MATCHES_CACHE.clear()
+    _CACHE_MODIFIED.clear()
 
 
 def load_real_data(year: int, championship: str) -> dict[str, Any]:

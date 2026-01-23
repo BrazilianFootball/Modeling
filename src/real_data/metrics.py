@@ -2,12 +2,26 @@
 
 import os
 import warnings
+from typing import Any
 
 import numpy as np
 import pandas as pd
 from data_processing import load_all_matches_data
 
 warnings.filterwarnings("ignore")
+
+_METRICS_CACHE: dict[str, list[list[Any]]] = {}
+
+METRICS_HEADER = [
+    "year",
+    "championship",
+    "model_name",
+    "num_games",
+    "brier_score",
+    "ranked_probability_score",
+    "log_score",
+    "interval_score",
+]
 
 
 def brier_score(observations: np.ndarray, predictions: np.ndarray) -> float:
@@ -128,6 +142,7 @@ def interval_score(model_name: str, year: int, num_games: int, championship: str
 def calculate_metrics(model_name: str, year: int, num_games: int, championship: str) -> None:
     """
     Calculate the metrics for a given model and year.
+    The metrics are stored in cache and written to disk only when flush_metrics_cache() is called.
 
     Args:
         model_name (str): The name of the model to calculate the metrics for.
@@ -135,7 +150,6 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
         num_games (int): The number of games to calculate the metrics for.
         championship (str): The championship of the data.
     """
-
     data, _ = load_all_matches_data(year, championship)
     num_total_matches = len(data)
     sample_size = num_total_matches - num_games
@@ -159,17 +173,6 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
             ]
             game += 1
 
-    csv_path = os.path.join("real_data", "results", f"metrics_{championship}.csv")
-    header = [
-        "year",
-        "championship",
-        "model_name",
-        "num_games",
-        "brier_score",
-        "ranked_probability_score",
-        "log_score",
-        "interval_score",
-    ]
     row = [
         year,
         championship,
@@ -180,18 +183,31 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
         log_score(observations, predictions),
         interval_score(model_name, year, num_games, championship),
     ]
-    if os.path.exists(csv_path):
-        df = pd.read_csv(csv_path)
-        df = df[
-            ~(
-                (df["year"] == year)
-                & (df["championship"] == championship)
-                & (df["model_name"] == model_name)
-                & (df["num_games"] == num_games)
-            )
-        ]
-    else:
-        df = pd.DataFrame(columns=header)
 
-    df = pd.concat([df, pd.DataFrame([row], columns=header)], ignore_index=True)
-    df.to_csv(csv_path, index=False, encoding="utf-8")
+    if championship not in _METRICS_CACHE:
+        _METRICS_CACHE[championship] = []
+    _METRICS_CACHE[championship].append(row)
+
+
+def flush_metrics_cache() -> None:
+    """
+    Write all cached metrics to disk and clear the cache.
+    """
+    for championship, rows in _METRICS_CACHE.items():
+        csv_path = os.path.join("real_data", "results", f"metrics_{championship}.csv")
+
+        if os.path.exists(csv_path):
+            df_existing = pd.read_csv(csv_path)
+        else:
+            df_existing = pd.DataFrame(columns=METRICS_HEADER)
+
+        df_new = pd.DataFrame(rows, columns=METRICS_HEADER)
+        df_combined = pd.concat([df_existing, df_new], ignore_index=True)
+        df_combined = df_combined.drop_duplicates(
+            subset=["year", "championship", "model_name", "num_games"],
+            keep="last"
+        )
+
+        df_combined.to_csv(csv_path, index=False, encoding="utf-8")
+
+    _METRICS_CACHE.clear()

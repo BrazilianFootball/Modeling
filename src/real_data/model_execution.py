@@ -22,6 +22,19 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from features.constants import model_kwargs, IGNORE_COLS  # noqa: E402
 
 
+_STAN_MODEL_CACHE: dict[str, cmdstanpy.CmdStanModel] = {}
+
+def get_stan_model(model_name: str) -> cmdstanpy.CmdStanModel:
+    """
+    Get the Stan model from the cache.
+    """
+    if model_name not in _STAN_MODEL_CACHE:
+        _STAN_MODEL_CACHE[model_name] = cmdstanpy.CmdStanModel(
+            stan_file=f"models/club_level/{model_name}.stan",
+            force_compile=True
+        )
+    return _STAN_MODEL_CACHE[model_name]
+
 def run_model_with_real_data(
     model_name: str, year: int, num_games: int = 380, championship: str = "brazil"
 ) -> tuple[cmdstanpy.CmdStanMCMC, dict[int, str], str]:
@@ -82,7 +95,7 @@ def run_model_with_real_data(
             float(np.mean(home_goals == away_goals)),
         ]
     else:
-        stan_model = cmdstanpy.CmdStanModel(stan_file=f"models/club_level/{model_name}.stan")
+        stan_model = get_stan_model(model_name)
         fit = stan_model.sample(data=data, show_progress=False, **model_kwargs)
         fit.save_csvfiles(samples_dir)
 

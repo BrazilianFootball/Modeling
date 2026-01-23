@@ -7,7 +7,11 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
-from data_processing import load_all_matches_data, load_real_data
+from data_processing import (
+    load_all_matches_data,
+    load_real_data,
+    mark_cache_modified
+)
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 
@@ -515,6 +519,8 @@ def update_probabilities(
 ) -> None:
     """
     Update the probabilities for a given year, model name, and number of rounds.
+    The data is kept in cache and written to disk only when flush_and_clear_cache()
+    is called.
 
     Args:
         probabilities (dict[str, Any]): The probabilities to update.
@@ -523,7 +529,7 @@ def update_probabilities(
         num_games (int): The number of games to update.
         championship (str): The championship of the data.
     """
-    data, data_path = load_all_matches_data(year, championship)
+    data, _ = load_all_matches_data(year, championship)
     for game_id, probabilities_data in probabilities.items():
         assert data[game_id]["home_team"] == probabilities_data["home_team"]
         assert data[game_id]["away_team"] == probabilities_data["away_team"]
@@ -535,8 +541,7 @@ def update_probabilities(
             probabilities_data["probabilities"]
         )
 
-    with open(data_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    mark_cache_modified(year, championship)
 
 
 def calculate_final_positions_probs(
