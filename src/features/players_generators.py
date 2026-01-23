@@ -1,10 +1,11 @@
-# pylint: disable=too-many-locals, too-many-statements, too-many-arguments, too-many-branches
+# pylint: disable=too-many-locals, too-many-statements, too-many-arguments, too-many-branches, duplicate-code
 
 import json
 import os
 from typing import Any
 
 import numpy as np
+from scipy.special import logsumexp
 
 from src.features.generators import mapping_params_to_model
 
@@ -113,8 +114,6 @@ def create_players_forces(
     """Create a sum-zero vector of length n_elements."""
     players_forces = np.random.normal(0, variance, size=len(players_mapping))
     players_forces[0] = -np.sum(players_forces[1:])
-    if players_forces[0] > 0:
-        players_forces = -players_forces
 
     return players_forces
 
@@ -186,14 +185,19 @@ def data_generator_bt(
 
     kappa = variables.get("kappa", 0)
     for i in range(data["num_games"]):
-        home_log_force = np.dot(
-            players_forces[np.array(data["home_players"][i]) - 1],
-            np.array(data["home_players_minutes"][i]) / 90,
-        )
-        away_log_force = np.dot(
-            players_forces[np.array(data["away_players"][i]) - 1],
-            np.array(data["away_players_minutes"][i]) / 90,
-        )
+        home_players = np.array(data["home_players"][i])
+        home_minutes = np.array(data["home_players_minutes"][i])
+        away_players = np.array(data["away_players"][i])
+        away_minutes = np.array(data["away_players_minutes"][i])
+
+        log_terms = players_forces[home_players - 1] + np.log(home_minutes) - np.log(90)
+        log_terms = np.where(home_minutes > 0, log_terms, -np.inf)
+        home_log_force = logsumexp(log_terms)
+
+        log_terms = players_forces[away_players - 1] + np.log(away_minutes) - np.log(90)
+        log_terms = np.where(away_minutes > 0, log_terms, -np.inf)
+        away_log_force = logsumexp(log_terms)
+
         home_log_force += variables.get("log_home_advantage", 0)
         data["results"][i] = simulate_bradley_terry(
             [home_log_force], [away_log_force], [kappa]
@@ -229,14 +233,14 @@ def data_generator_poisson(
     if seed is not None:
         np.random.seed(seed)
 
-    variance = 0.25
+    variance = 0.1
     data, players_mapping = generate_players_data()
 
     model_name = mapping_params_to_model(home_advantage, atk_def_strength, place_params)
     alpha = create_players_forces(players_mapping, variance)
     gamma = create_players_forces(players_mapping, variance)
-    beta = np.random.normal(0, variance, size=len(players_mapping))
-    delta = np.random.normal(0, variance, size=len(players_mapping))
+    beta = create_players_forces(players_mapping, variance)
+    delta = create_players_forces(players_mapping, variance)
     correlation_strength = np.random.normal(0, 1) if bivariate else 0
     nu = np.random.normal(0, 1)
     variables = {
@@ -270,14 +274,22 @@ def data_generator_poisson(
 
     for i in range(data["num_games"]):
         if model_name in ["poisson_1", "poisson_2"]:
-            home_strength = np.dot(
-                alpha[np.array(data["home_players"][i]) - 1],
-                np.array(data["home_players_minutes"][i]) / 90,
+            home_players = np.array(data["home_players"][i])
+            home_minutes = np.array(data["home_players_minutes"][i])
+            mask = home_minutes > 0
+            log_terms = (
+                alpha[home_players - 1][mask] + np.log(home_minutes[mask]) - np.log(90)
             )
-            away_strength = np.dot(
-                alpha[np.array(data["away_players"][i]) - 1],
-                np.array(data["away_players_minutes"][i]) / 90,
+            home_strength = logsumexp(log_terms)
+
+            away_players = np.array(data["away_players"][i])
+            away_minutes = np.array(data["away_players_minutes"][i])
+            mask = away_minutes > 0
+            log_terms = (
+                alpha[away_players - 1][mask] + np.log(away_minutes[mask]) - np.log(90)
             )
+            away_strength = logsumexp(log_terms)
+
             home_parameters = np.exp(
                 home_strength - away_strength + nu + correlation_strength
             )
@@ -285,23 +297,33 @@ def data_generator_poisson(
                 away_strength - home_strength + correlation_strength
             )
         else:
-            home_atk_strength = np.dot(
-                alpha[np.array(data["home_players"][i]) - 1],
-                np.array(data["home_players_minutes"][i]) / 90,
-            )
-            away_def_strength = np.dot(
-                beta[np.array(data["away_players"][i]) - 1],
-                np.array(data["away_players_minutes"][i]) / 90,
-            )
+            home_players = np.array(data["home_players"][i])
+            home_minutes = np.array(data["home_players_minutes"][i])
+            away_players = np.array(data["away_players"][i])
+            away_minutes = np.array(data["away_players_minutes"][i])
 
-            home_def_strength = np.dot(
-                gamma[np.array(data["home_players"][i]) - 1],
-                np.array(data["home_players_minutes"][i]) / 90,
+            mask = home_minutes > 0
+            log_terms = (
+                alpha[home_players - 1][mask] + np.log(home_minutes[mask]) - np.log(90)
             )
-            away_atk_strength = np.dot(
-                delta[np.array(data["away_players"][i]) - 1],
-                np.array(data["away_players_minutes"][i]) / 90,
+            home_atk_strength = logsumexp(log_terms)
+
+            log_terms = (
+                gamma[home_players - 1][mask] + np.log(home_minutes[mask]) - np.log(90)
             )
+            home_def_strength = logsumexp(log_terms)
+
+            mask = away_minutes > 0
+            log_terms = (
+                beta[away_players - 1][mask] + np.log(away_minutes[mask]) - np.log(90)
+            )
+            away_def_strength = logsumexp(log_terms)
+
+            log_terms = (
+                delta[away_players - 1][mask] + np.log(away_minutes[mask]) - np.log(90)
+            )
+            away_atk_strength = logsumexp(log_terms)
+
             home_parameters = np.exp(
                 home_atk_strength + away_def_strength + nu + correlation_strength
             )
@@ -311,6 +333,12 @@ def data_generator_poisson(
 
         data["home_goals"][i] = np.random.poisson(home_parameters)
         data["away_goals"][i] = np.random.poisson(away_parameters)
+        if data["home_goals"][i] > 2**31 - 1:
+            goals = data["home_goals"][i]
+            print(f"Home goal {goals} is too large, generating new goal")
+        if data["away_goals"][i] > 2**31 - 1:
+            goals = data["away_goals"][i]
+            print(f"Away goal {goals} is too large, generating new goal")
 
     data.pop("results")
     return {

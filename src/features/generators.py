@@ -183,8 +183,8 @@ def data_generator_poisson(
     model_name = mapping_params_to_model(home_advantage, atk_def_strength, place_params)
     alpha = create_sum_zero_vector(n_clubs, 1)
     gamma = create_sum_zero_vector(n_clubs, 1)
-    beta = np.random.normal(0, 1, size=n_clubs)
-    delta = np.random.normal(0, 1, size=n_clubs)
+    beta = create_sum_zero_vector(n_clubs, 1)
+    delta = create_sum_zero_vector(n_clubs, 1)
     correlation_strength = np.random.normal(0, 1) if bivariate else 0
 
     nu = np.random.normal(0, 1)
@@ -218,18 +218,18 @@ def data_generator_poisson(
         variables.pop("gamma")
 
     if model_name in ["poisson_1", "poisson_2"]:
-        home_strength = np.sum(alpha[home_teams - 1].reshape(1, -1), axis=0)
-        away_strength = np.sum(alpha[away_teams - 1].reshape(1, -1), axis=0)
+        home_strength = alpha[home_teams - 1]
+        away_strength = alpha[away_teams - 1]
         home_parameters = np.exp(
             home_strength - away_strength + nu + correlation_strength
         )
         away_parameters = np.exp(away_strength - home_strength + correlation_strength)
     else:
-        home_atk_strength = np.sum(alpha[home_teams - 1].reshape(1, -1), axis=0)
-        away_def_strength = np.sum(beta[away_teams - 1].reshape(1, -1), axis=0)
+        home_atk_strength = alpha[home_teams - 1]
+        home_def_strength = gamma[home_teams - 1]
+        away_atk_strength = delta[away_teams - 1]
+        away_def_strength = beta[away_teams - 1]
 
-        home_def_strength = np.sum(gamma[home_teams - 1].reshape(1, -1), axis=0)
-        away_atk_strength = np.sum(delta[away_teams - 1].reshape(1, -1), axis=0)
         home_parameters = np.exp(
             home_atk_strength + away_def_strength + nu + correlation_strength
         )
