@@ -9,18 +9,19 @@ data {
 
 parameters {
     vector[num_teams-1] raw_alpha;
-    vector[num_teams] beta;
+    vector[num_teams-1] raw_beta;
     real nu;
     real correlation_strength;
 }
 
 transformed parameters {
     vector[num_teams] alpha = append_row(raw_alpha, -sum(raw_alpha));
+    vector[num_teams] beta = append_row(raw_beta, -sum(raw_beta));
 }
 
 model {
     raw_alpha ~ normal(0, 1);
-    beta ~ normal(0, 1);
+    raw_beta ~ normal(0, 1);
     nu ~ normal(0, 1);
     correlation_strength ~ normal(0, 1);
 

@@ -24,7 +24,7 @@ transformed parameters {
 }
 
 model {
-    raw_alpha ~ normal(0, 1);
+    raw_alpha ~ normal(0, 0.1);
     correlation_strength ~ normal(0, 1);
 
     for (game in 1:num_games) {

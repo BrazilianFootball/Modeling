@@ -23,7 +23,7 @@ transformed parameters {
 }
 
 model {
-    raw_alpha ~ normal(0, 1);
+    raw_alpha ~ normal(0, 0.1);
 
     for (game in 1:num_games) {
         vector[num_players_per_game] log_terms_home;

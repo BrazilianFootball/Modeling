@@ -16,16 +16,17 @@ transformed data {
 
 parameters {
     vector[num_players - 1] raw_alpha;
-    vector[num_players] beta;
+    vector[num_players - 1] raw_beta;
 }
 
 transformed parameters {
     vector[num_players] alpha = append_row(-sum(raw_alpha), raw_alpha);
+    vector[num_players] beta = append_row(-sum(raw_beta), raw_beta);
 }
 
 model {
-    raw_alpha ~ normal(0, 1);
-    beta ~ normal(0, 1);
+    raw_alpha ~ normal(0, 0.1);
+    raw_beta ~ normal(0, 0.1);
 
     for (game in 1:num_games) {
         vector[num_players_per_game] log_terms_home_attack;
