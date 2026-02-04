@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import plotly.graph_objects as go
 from constants import MODELS
-from plots import plot_ecdf, plot_ecdf_combined
+from plots import _calculate_ci, _check_out_of_bounds, plot_ecdf_combined
 from tqdm import tqdm
 from utils import load_model_setup
 
@@ -23,27 +23,26 @@ def calculate_ranks(level: str, model_name: str) -> dict:
     if os.path.exists(ranks_path):
         return np.load(ranks_path, allow_pickle=True).item()
 
-    ranks: dict[str, dict[int, list[float]]] = {}
+    ranks: dict[str, list[float]] = {}
     setup = load_model_setup(level, model_name)
-
-    def _update_ranks(param: str, chain: int, value: float) -> None:
-        rank = np.sum(df[param] < value)
-        ranks[param] = ranks.get(param, {})
-        ranks[param][chain] = ranks[param].get(chain, []) + [rank / len(df)]
 
     for sim_id in tqdm(setup["data"]):
         path = f"results/{level}/{model_name}/samples/sim_{sim_id}/"
 
-        for chain, file in enumerate(sorted(os.listdir(path))):
-            df = pd.read_csv(path + file, comment="#")
+        dfs = []
+        for file in sorted(os.listdir(path)):
+            dfs.append(pd.read_csv(path + file, comment="#"))
+        df = pd.concat(dfs, ignore_index=True)
 
-            for param, value in setup["data"][sim_id]["variables"].items():
-                if isinstance(value, np.ndarray):
-                    for i, v in enumerate(value):
-                        param_name = f"{param}.{i + 1}"
-                        _update_ranks(param_name, chain, v)
-                else:
-                    _update_ranks(param, chain, value)
+        for param, value in setup["data"][sim_id]["variables"].items():
+            if isinstance(value, np.ndarray):
+                for i, v in enumerate(value):
+                    param_name = f"{param}.{i + 1}"
+                    rank = np.sum(df[param_name] < v) / len(df)
+                    ranks[param_name] = ranks.get(param_name, []) + [rank]
+            else:
+                rank = np.sum(df[param] < value) / len(df)
+                ranks[param] = ranks.get(param, []) + [rank]
 
     np.save(ranks_path, ranks)
     return ranks
@@ -65,28 +64,39 @@ def has_changes(level: str, model_name: str) -> bool:
     return ranks_time < setup_time or plots_time < ranks_time
 
 
-def generate_plots(
-    level: str, model_name: str, ranks: dict, n_sims: int, n_chains: int
-) -> None:
-    """Generates plots ECDF for all parameters."""
+def generate_plots(level: str, model_name: str, ranks: dict) -> None:
+    """Generates individual ECDF plots for all parameters."""
     samples = []
     param_names = []
-    points_out_of_bounds = {}
-    chain_names = [f"Chain {i}" for i in range(n_chains)]
+    points_out_of_bounds: dict[str, dict[str, int]] = {
+        "diff_plot": {},
+        "regular_plot": {},
+    }
+    chain_names = ["Combined"]
 
     save_tasks = []
     plots_dir = f"results/{level}/{model_name}/plots"
     for param in tqdm(ranks.keys(), desc=f"Parameters ({model_name})"):
-        sample = np.zeros((n_sims, n_chains))
-        for chain in range(n_chains):
-            sample[:, chain] = ranks[param][chain]
+        sample = np.array(ranks[param]).reshape(-1, 1)
         samples.append(sample)
         param_names.append(param)
+
         fig = plot_ecdf_combined(sample, param, chain_names)
+        fig.update_layout(showlegend=False)
         filepath = os.path.join(
             plots_dir, f"{param.replace('.', '_')}_ecdf_combined.png"
         )
         save_tasks.append((fig, filepath))
+
+        n = sample.shape[0]
+        k = min(n, 100)
+        z_plot, intervals = _calculate_ci(n, k, prob=0.95)
+        points_out_of_bounds["diff_plot"][param] = _check_out_of_bounds(
+            sample, z_plot, intervals, is_diff=True
+        )
+        points_out_of_bounds["regular_plot"][param] = _check_out_of_bounds(
+            sample, z_plot, intervals, is_diff=False
+        )
 
     def save_image(fig_filepath: tuple[go.Figure, str]) -> str:
         fig, filepath = fig_filepath
@@ -102,31 +112,15 @@ def generate_plots(
                 total=len(futures),
                 desc="Saving images",
             ):
-                future.result()
+                try:
+                    future.result(timeout=5)
+                except TimeoutError:
+                    print(f"Timeout error for {future.task_name}")
+                    continue
 
-    n_params = len(param_names)
-    n_cols = min(4, n_params)
-    n_rows = (n_params + n_cols - 1) // n_cols
-
-    fig, points_out_of_bounds["diff_plot"] = plot_ecdf(
-        samples, param_names, chain_names, is_diff=True, n_rows=n_rows, n_cols=n_cols
-    )
     for param, points in points_out_of_bounds["diff_plot"].items():
         if points > 0:
             print(f"{param} has {points} points out of bounds on the difference plot")
-
-    if n_rows <= 6:
-        fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf_diff.png")
-
-    fig, points_out_of_bounds["regular_plot"] = plot_ecdf(
-        samples, param_names, chain_names, n_rows=n_rows, n_cols=n_cols
-    )
-    for param, points in points_out_of_bounds["regular_plot"].items():
-        if points > 0:
-            print(f"{param} has {points} points out of bounds on the regular plot")
-
-    if n_rows <= 6:
-        fig.write_image(f"results/{level}/{model_name}/plots/all_params_ecdf.png")
 
     with open(
         f"results/{level}/{model_name}/points_out_of_bounds.json", "w", encoding="utf-8"
@@ -142,10 +136,7 @@ def main():
         ranks = calculate_ranks(level, model_name)
         if has_changes(level, model_name):
             print(f"Generating plots for {model_name}")
-            setup = load_model_setup(level, model_name)
-            n_sims = len(setup["data"])
-            n_chains = setup["chains"]
-            generate_plots(level, model_name, ranks, n_sims, n_chains)
+            generate_plots(level, model_name, ranks)
 
 
 if __name__ == "__main__":
