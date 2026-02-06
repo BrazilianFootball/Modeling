@@ -119,7 +119,6 @@ if __name__ == "__main__":
     process_data(models, [*range(2019, 2026)], games_20, games_to_plot_20, "brazil")
 
     # England (2019-2024)
-
     process_data(models, [*range(2019, 2025)], games_20, games_to_plot_20, "england")
 
     # Italy (2019-2024)
