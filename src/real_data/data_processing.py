@@ -2,12 +2,12 @@
 
 import json
 import os
-from typing import Any
+from typing import Any, Optional
 from datetime import datetime as dt
 import pandas as pd
 
-_ALL_MATCHES_CACHE: dict[tuple[int, str], tuple[dict[str, Any], str]] = {}
-_CACHE_MODIFIED: set[tuple[int, str]] = set()
+_ALL_MATCHES_CACHE: dict[tuple[int, str, Optional[str]], tuple[dict[str, Any], str]] = {}
+_CACHE_MODIFIED: set[tuple[int, str, Optional[str]]] = set()
 
 def parse_datetime(date: str, time: str) -> str:
     """
@@ -24,19 +24,22 @@ def parse_datetime(date: str, time: str) -> str:
     return dt.strptime(f"{date} {time}", "%d/%m/%Y %H:%M").strftime("%Y/%m/%d %H:%M")
 
 
-def generate_all_matches_from_scraped_data(year: int) -> None:
+def generate_all_matches_from_scraped_data(year: int, save_path: Optional[str] = None) -> None:
     """
     Generate all matches data for a given year.
 
     Args:
         year (int): The year of the data to generate.
+        save_path (str, optional): The path to save the data. Defaults to None.
     """
-    save_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", "brazil", f"{year}"
-    )
-    os.makedirs(save_dir, exist_ok=True)
-    save_path = os.path.join(save_dir, "all_matches.json")
+    if save_path is None:
+        save_dir = os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "results", "brazil", f"{year}"
+        )
+        os.makedirs(save_dir, exist_ok=True)
+        save_path = os.path.join(save_dir, "all_matches.json")
+
     if os.path.exists(save_path):
         return
 
@@ -81,7 +84,11 @@ def generate_all_matches_from_scraped_data(year: int) -> None:
         json.dump(all_matches, f, ensure_ascii=False, indent=2)
 
 
-def generate_all_matches_from_football_data_co_uk(year: int, championship: str) -> None:
+def generate_all_matches_from_football_data_co_uk(
+    year: int,
+    championship: str,
+    save_path: Optional[str] = None
+) -> None:
     """
     Download, process, and save all matches data for a given year and championship
     from football-data.co.uk.
@@ -93,17 +100,20 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
     Args:
         year (int): The year of the season to process (e.g., 2022 for the 2022/2023 season).
         championship (str): The championship code (e.g., "england").
+        save_path (str, optional): The path to save the data. Defaults to None.
 
     Raises:
         KeyError: If the championship is not supported.
         Exception: If there is an error downloading or processing the data.
     """
-    save_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{championship}", f"{year}"
-    )
-    os.makedirs(save_dir, exist_ok=True)
-    save_path = os.path.join(save_dir, "all_matches.json")
+    if save_path is None:
+        save_dir = os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "results", f"{championship}", f"{year}"
+        )
+        os.makedirs(save_dir, exist_ok=True)
+        save_path = os.path.join(save_dir, "all_matches.json")
+
     if os.path.exists(save_path):
         return
     url_mask = "https://www.football-data.co.uk/mmz4281/{season}/{championship}.csv"
@@ -139,7 +149,11 @@ def generate_all_matches_from_football_data_co_uk(year: int, championship: str) 
         json.dump(all_matches, f, ensure_ascii=False, indent=2)
 
 
-def generate_all_matches_data(year: int, championship: str) -> None:
+def generate_all_matches_data(
+    year: int,
+    championship: str,
+    save_path: Optional[str] = None
+) -> None:
     """
     Generate and save all matches data for a given year and championship.
 
@@ -151,16 +165,17 @@ def generate_all_matches_data(year: int, championship: str) -> None:
     Args:
         year (int): The year of the matches to process.
         championship (str): The name of the championship (e.g., "brazil", "england").
+        save_path (str, optional): The path to save the data. Defaults to None.
 
     Raises:
         ValueError: If the championship is not supported or if there is an error
             processing the data.
     """
     if championship == "brazil":
-        generate_all_matches_from_scraped_data(year)
+        generate_all_matches_from_scraped_data(year, save_path)
     else:
         try:
-            generate_all_matches_from_football_data_co_uk(year, championship)
+            generate_all_matches_from_football_data_co_uk(year, championship, save_path)
         except Exception as e:
             raise ValueError(f"Championship {championship} is not supported") from e
 
@@ -168,7 +183,8 @@ def generate_all_matches_data(year: int, championship: str) -> None:
 def generate_real_data_stan_input(
     year: int,
     num_games: int = 380,
-    championship: str = "brazil"
+    championship: str = "brazil",
+    base_path: Optional[str] = None
 ) -> None:
     """
     Load and process real Serie A game data for a given year and number of rounds,
@@ -178,11 +194,23 @@ def generate_real_data_stan_input(
         year (int): The year of the games to load and process.
         num_games (int, optional): Number of games to process. Defaults to 380.
         championship (str, optional): The championship of the data. Defaults to "brazil".
+        base_path (str, optional): The base path to the real data. Defaults to None.
     """
-    all_matches_path = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{championship}", f"{year}", "all_matches.json"
-    )
+    if base_path is None:
+        base_path = os.path.join(
+            os.path.dirname(__file__), "..", "..", "real_data"
+        )
+        output_dir = os.path.join(
+            base_path, "inputs", f"{championship}", f"{year}"
+        )
+        all_matches_path = os.path.join(
+            base_path, "results", f"{championship}", f"{year}", "all_matches.json"
+        )
+    else:
+        output_dir = os.path.join(base_path, "inputs")
+        all_matches_path = os.path.join(base_path, "all_matches.json")
+
+    os.makedirs(output_dir, exist_ok=True)
 
     with open(all_matches_path, encoding="utf-8") as f:
         data = json.load(f)
@@ -253,12 +281,6 @@ def generate_real_data_stan_input(
         }
     )
 
-    output_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "inputs", f"{championship}", f"{year}"
-    )
-    os.makedirs(output_dir, exist_ok=True)
-
     bradley_terry_path = os.path.join(
         output_dir, f"bradley_terry_data_{str(num_games).zfill(3)}_games.json"
     )
@@ -270,26 +292,35 @@ def generate_real_data_stan_input(
         json.dump(poisson_data, f, ensure_ascii=False, indent=2)
 
 
-def load_all_matches_data(year: int, championship: str) -> tuple[dict[str, Any], str]:
+def load_all_matches_data(
+    year: int,
+    championship: str,
+    base_path: Optional[str] = None
+) -> tuple[dict[str, Any], str]:
     """
     Load the all matches data for a given year (with memory cache).
 
     Args:
         year (int): The year of the data to load.
         championship (str): The championship of the data.
+        base_path (str, optional): The base path to the real data. Defaults to None.
 
     Returns:
         tuple[dict[str, Any], str]: The loaded data dictionary and the path to the data file.
     """
-    cache_key = (year, championship)
+    cache_key = (year, championship, base_path)
 
     if cache_key in _ALL_MATCHES_CACHE:
         return _ALL_MATCHES_CACHE[cache_key]
 
-    data_path = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{championship}", f"{year}", "all_matches.json"
-    )
+    if base_path is None:
+        data_path = os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "results", f"{championship}", f"{year}", "all_matches.json"
+        )
+    else:
+        data_path = os.path.join(base_path, "all_matches.json")
+
     with open(data_path, encoding="utf-8") as f:
         data = json.load(f)
 
@@ -297,15 +328,16 @@ def load_all_matches_data(year: int, championship: str) -> tuple[dict[str, Any],
     return data, data_path
 
 
-def mark_cache_modified(year: int, championship: str) -> None:
+def mark_cache_modified(year: int, championship: str, base_path: Optional[str] = None) -> None:
     """
     Mark the cache as modified for subsequent writing.
 
     Args:
         year (int): The year of the data.
         championship (str): The championship of the data.
+        base_path (str, optional): The base path to the real data. Defaults to None.
     """
-    _CACHE_MODIFIED.add((year, championship))
+    _CACHE_MODIFIED.add((year, championship, base_path))
 
 
 def flush_and_clear_cache() -> None:

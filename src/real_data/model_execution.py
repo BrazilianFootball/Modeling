@@ -4,7 +4,7 @@ import json
 import os
 import shutil
 import sys
-
+from typing import Optional
 import cmdstanpy
 import numpy as np
 import pandas as pd
@@ -36,7 +36,8 @@ def get_stan_model(model_name: str) -> cmdstanpy.CmdStanModel:
     return _STAN_MODEL_CACHE[model_name]
 
 def run_model_with_real_data(
-    model_name: str, year: int, num_games: int = 380, championship: str = "brazil"
+    model_name: str, year: int, num_games: int = 380, championship: str = "brazil",
+    base_path: Optional[str] = None
 ) -> tuple[cmdstanpy.CmdStanMCMC, dict[int, str], str]:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -49,6 +50,7 @@ def run_model_with_real_data(
         year (int): The year of the real data to use.
         num_games (int, optional): Number of games to use on fit. Defaults to 380.
         championship (str, optional): The championship of the data. Defaults to "brazil".
+        base_path (str, optional): The base path to the real data. Defaults to None.
 
     Returns:
         Tuple[cmdstanpy.CmdStanMCMC, Dict[int, str], str]:
@@ -56,10 +58,24 @@ def run_model_with_real_data(
             team_mapping: Dictionary mapping team indices to team names.
             model_name_dir: Directory where model results are saved.
     """
-    save_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", f"{championship}", f"{year}"
-    )
+    real_data_file = "bradley_terry" if "bradley_terry" in model_name else "poisson"
+    if base_path is None:
+        base_path = os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "results", f"{championship}", f"{year}"
+        )
+        input_path = os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "inputs", f"{championship}", f"{year}",
+            f"{real_data_file}_data_{str(num_games).zfill(3)}_games.json"
+        )
+    else:
+        input_path = os.path.join(
+            base_path, "inputs",
+            f"{real_data_file}_data_{str(num_games).zfill(3)}_games.json"
+        )
+
+    save_dir = base_path
     os.makedirs(save_dir, exist_ok=True)
     model_name_dir = os.path.join(save_dir, model_name)
     os.makedirs(model_name_dir, exist_ok=True)
@@ -69,15 +85,7 @@ def run_model_with_real_data(
         shutil.rmtree(samples_dir)
 
     os.makedirs(samples_dir)
-    real_data_file = "bradley_terry" if "bradley_terry" in model_name else "poisson"
-    with open(
-        os.path.join(
-            os.path.dirname(__file__), "..", "..",
-            "real_data", "inputs", f"{championship}", f"{year}",
-            f"{real_data_file}_data_{str(num_games).zfill(3)}_games.json"
-        ),
-        encoding="utf-8",
-    ) as f:
+    with open(input_path, encoding="utf-8") as f:
         data = json.load(f)
 
     team_mapping: dict[int, str] = {
@@ -167,6 +175,7 @@ def run_real_data_model(
     num_simulations: int = 1_000,
     ignore_cache: bool = False,
     make_plots: bool = False,
+    base_path: Optional[str] = None
 ) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -182,6 +191,7 @@ def run_real_data_model(
         num_simulations (int, optional): Number of simulations to run. Defaults to 1000.
         ignore_cache (bool, optional): Whether to ignore the cache. Defaults to False.
         make_plots (bool, optional): Whether to make plots. Defaults to False.
+        base_path (str, optional): The base path to the real data. Defaults to None.
 
     Returns:
         None
@@ -192,7 +202,7 @@ def run_real_data_model(
     generate_all_matches_data(year, championship)
     generate_real_data_stan_input(year, num_games, championship)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
-        model_name, year, num_games, championship
+        model_name, year, num_games, championship, base_path
     )
     n_clubs = len(team_mapping)
     if "naive" not in model_name:

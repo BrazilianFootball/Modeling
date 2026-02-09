@@ -1,11 +1,11 @@
-# pylint: disable=too-many-arguments, too-many-positional-arguments
+# pylint: disable=too-many-arguments, too-many-positional-arguments, too-many-locals, too-many-statements, too-many-branches, too-many-instance-attributes
 
 import os
 import json
-
+from typing import Optional
+from dataclasses import dataclass, field
 from datetime import datetime as dt
 from glob import glob
-from time import time
 
 import numpy as np
 import pandas as pd
@@ -13,6 +13,60 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 from colors import color_mapping
+
+
+@dataclass
+class Period:
+    """Represent a special period in the calendar (e.g. FIFA Date, Club World Cup)."""
+    start_date: str
+    end_date: str
+    label: str
+    text_x_position: Optional[str] = None
+    text_y_position: float = 1.025
+
+    def __post_init__(self):
+        if self.text_x_position is None:
+            self.text_x_position = self.start_date
+
+
+@dataclass
+class GameAnnotation:
+    """Represent a game important annotation in the plot."""
+    date: str
+    result_text: str
+    y_offset: float = 0
+
+
+@dataclass
+class ClubStyle:
+    """Represent a club with its line style for the plot.
+
+    Line dash options: 'solid', 'dot', 'dash', 'longdash', 'dashdot', 'longdashdot'
+    """
+    name: str
+    line_dash: str = "solid"
+
+
+@dataclass
+class VisualizationConfig:
+    """Configuration for generating visualizations."""
+    year: int
+    base_path: str
+    models: dict[str, str]
+
+    title_contenders: list[ClubStyle | str]
+    relegation_candidates: list[ClubStyle | str]
+
+    periods: list[Period] = field(default_factory=list)
+
+    title_game_annotations: list[GameAnnotation] = field(default_factory=list)
+    relegation_game_annotations: list[GameAnnotation] = field(default_factory=list)
+
+    num_simulations: int = 10_000
+    image_width: int = 1600
+    image_height: int = 800
+
+    heatmap_num_games: int | None = None
 
 def add_game_result_annotation(fig, date, result, y_offset=0, max_probability=1):
     """Add a game result annotation to the plot with a vertical line and text.
@@ -156,13 +210,16 @@ def add_matches_result(fig, results_df, match_result, col):
     )
 
 
-def generate_viz(results, club_results, clubs, col, title, subtitle):
+def generate_viz(
+    results, club_results, clubs: list[ClubStyle | str], col, title, subtitle,
+    periods: Optional[list[Period]] = None
+):
     """Generate a visualization plot for team probabilities over time.
 
     This function creates an interactive line plot showing the probability evolution
     for specified clubs over time. The plot includes:
     - Line traces for each club showing probability progression
-    - Period annotations for Club World Cup and FIFA dates
+    - Period annotations for Club World Cup and FIFA dates (if provided)
     - Match result markers (won, lost, drew) as colored dots
     - Final probability annotations for each club
     - Grouped legend with clubs and match results
@@ -172,16 +229,27 @@ def generate_viz(results, club_results, clubs, col, title, subtitle):
             'Club', 'Date', and the column specified by 'col'.
         club_results (pd.DataFrame): DataFrame containing match results with columns:
             'Club', 'Date', 'Match Result', and 'match_date_dt'.
-        clubs (list): List of club names to include in the visualization.
+        clubs (list[ClubStyle | str]): List of ClubStyle objects or club names to include.
         col (str): Column name from 'results' to plot (e.g., 'Champion', 'Z4').
         title (str): Main title for the plot.
         subtitle (str): Subtitle text to display below the main title.
+        periods (list[Period], optional): List of Period objects to display on the plot.
 
     Returns:
         plotly.graph_objects.Figure: A configured Plotly figure object ready for
             display or export.
     """
-    results = results[results['Club'].isin(clubs)]
+    club_styles: list[ClubStyle] = []
+    for club in clubs:
+        if isinstance(club, str):
+            club_styles.append(ClubStyle(name=club, line_dash="solid"))
+        else:
+            club_styles.append(club)
+
+    club_names = [cs.name for cs in club_styles]
+    line_dash_map = {cs.name: cs.line_dash for cs in club_styles}
+
+    results = results[results['Club'].isin(club_names)]
     results = results[['Club', 'Date', col]]
     results['Date'] = results['Date'] \
         .astype(str) \
@@ -205,19 +273,28 @@ def generate_viz(results, club_results, clubs, col, title, subtitle):
     for trace in fig.data:
         if trace.type == 'scatter' and trace.mode == 'lines':
             trace.legendgroup = 'Clubs'
+            club_name = trace.name
+            if club_name in line_dash_map:
+                trace.line.dash = line_dash_map[club_name]
 
-    add_period(fig, "2025-06-12", "2025-07-12", "Club World Cup", ("2025-06-27", 1.025))
-    add_period(fig, "2025-06-02", "2025-06-10", "FIFA Date", ("2025-06-06", 1.025))
-    add_period(fig, "2025-09-01", "2025-09-09", "FIFA Date", ("2025-09-05", 1.025))
-    add_period(fig, "2025-10-06", "2025-10-14", "FIFA Date", ("2025-10-10", 1.025))
-    add_period(fig, "2025-11-10", "2025-11-18", "FIFA Date", ("2025-11-15", 1.025))
+    if periods:
+        for period in periods:
+            add_period(
+                fig,
+                period.start_date,
+                period.end_date,
+                period.label,
+                (period.text_x_position, period.text_y_position)
+            )
 
     add_matches_result(fig, results, 'Won', col)
     add_matches_result(fig, results, 'Lost', col)
     add_matches_result(fig, results, 'Drew', col)
 
-    for club in clubs:
-        add_final_prob(fig, club, results, 0, col)
+    for club_name in club_names:
+        filtered = results[results['Club'] == club_name]
+        if not filtered.empty:
+            add_final_prob(fig, club_name, results, 0, col)
 
     fig.update_traces(
         selector={"legendgroup": "Clubs"},
@@ -264,26 +341,19 @@ def generate_viz(results, club_results, clubs, col, title, subtitle):
     return fig
 
 
-if __name__ == "__main__":
-    N_SIMULATIONS = 10_000
-    start_time = time()
-    year = dt.now().year
-    models = {
-        'poisson_2': 'Poisson 2',
-    }
+def run_visualization(config: VisualizationConfig) -> None:
+    """
+    Execute the generation of visualizations based on the provided configuration.
 
-    with open(
-        os.path.join(
-            os.path.dirname(__file__),
-            "..", "..", "real_data", "results", "brazil", f"{year}",
-            "all_matches.json"
-        ),
-        "r",
-        encoding="utf-8"
-    ) as f:
+    Args:
+        config: VisualizationConfig object with all the necessary configurations.
+    """
+    with open(os.path.join(config.base_path, "all_matches.json"), "r", encoding="utf-8") as f:
         all_matches = json.load(f)
 
-    simulated_games = pd.DataFrame(all_matches).T.drop(['probabilities'], axis=1).dropna()
+    simulated_games = pd.DataFrame(all_matches).T.drop(
+        ['probabilities'], axis=1, errors='ignore'
+    ).dropna()
     simulated_games['match_date'] = simulated_games['match_datetime'] \
         .apply(
             lambda x: str(x).split()[0].replace("/", "-")
@@ -356,13 +426,11 @@ if __name__ == "__main__":
     club_results['match_date'] = club_results['match_date_dt'].astype(str)
     club_results.rename(columns={"match_date": "Date"}, inplace=True)
 
-    for model, model_name in models.items():
+    for model, _ in config.models.items():
         results = pd.DataFrame()
         files = sorted(
             glob(
-                os.path.join(os.path.dirname(__file__),
-                "..", "..", "real_data", "results", "brazil", f"{year}",
-                model, "*", "summary_results.csv")
+                os.path.join(config.base_path, model, "*", "summary_results.csv")
             )
         )
         for file in files:
@@ -370,70 +438,69 @@ if __name__ == "__main__":
             results = pd.concat([results, df], ignore_index=True)
 
         positions = ['Champion', 'G4', 'G5', 'G6', 'G7', 'G8', 'Sula (8-13)', 'Sula (9-14)', 'Z4']
+        num_simulations = config.num_simulations
         for position in positions:
-            results[position] = (results[position] / N_SIMULATIONS).round(4)
+            results[position] = (results[position] / num_simulations).round(4)
 
-        clubs = ['Flamengo / RJ', 'Palmeiras / SP', 'Cruzeiro / MG']
         title = 'Probability of being champion'
         subtitle = (
-            'Probabilities based on 10,000 simulations of the remaining games. '
+            f'Probabilities based on {num_simulations:,} simulations of the remaining games. '
             'Dots represent the actual results on matches.'
         )
-        fig = generate_viz(results, club_results, clubs, 'Champion', title, subtitle)
-        y_max = max(results['Champion'])
-        add_game_result_annotation(fig, "2025-05-04", "CRU 2x1 FLA", 0, y_max)
-        add_game_result_annotation(fig, "2025-05-25", "PAL 0x2 FLA", -0.025, y_max)
-        add_game_result_annotation(fig, "2025-06-01", "CRU 2x1 PAL", 0.025, y_max)
-        add_game_result_annotation(fig, "2025-10-02", "FLA 0x0 CRU", 0, y_max)
-        add_game_result_annotation(fig, "2025-10-19", "FLA 3x2 PAL", -0.025, y_max)
-        add_game_result_annotation(fig, "2025-10-26", "PAL 0x0 CRU", 0.025, y_max)
-
-        fig.write_image(
-            os.path.join(
-                os.path.dirname(__file__), "..", "..",
-                "real_data", "results", "brazil", f"{year}",
-                f"visualization_{model}_champ.png"
-            ),
-            width=1600,
-            height=800,
+        fig = generate_viz(
+            results, club_results, config.title_contenders,
+            'Champion', title, subtitle, config.periods
         )
 
-        clubs = [
-            'Internacional / RS',
-            'Vitória / BA',
-            'Fortaleza / CE',
-            'Ceará / CE',
-            'Santos / SP',
-        ]
+        y_max = max(results['Champion'])
+        for annotation in config.title_game_annotations:
+            add_game_result_annotation(
+                fig, annotation.date, annotation.result_text,
+                annotation.y_offset, y_max
+            )
+
+        fig.write_image(
+            os.path.join(config.base_path, f"visualization_{model}_champ.png"),
+            width=config.image_width,
+            height=config.image_height,
+        )
+
         title = 'Probability of being relegated'
         subtitle = (
-            'Probabilities based on 10,000 simulations of the remaining games. '
+            f'Probabilities based on {num_simulations:,} simulations of the remaining games. '
             'Dots represent the actual results on matches.'
         )
-        fig = generate_viz(results, club_results, clubs, 'Z4', title, subtitle)
+        fig = generate_viz(
+            results, club_results, config.relegation_candidates,
+            'Z4', title, subtitle, config.periods
+        )
+
+        y_max = max(results['Z4'])
+        for annotation in config.relegation_game_annotations:
+            add_game_result_annotation(
+                fig, annotation.date, annotation.result_text,
+                annotation.y_offset, y_max
+            )
 
         fig.write_image(
-            os.path.join(
-                os.path.dirname(__file__), "..", "..",
-                "real_data", "results", "brazil", f"{year}",
-                f"visualization_{model}_z4.png"
-            ),
-            width=1600,
-            height=800,
+            os.path.join(config.base_path, f"visualization_{model}_z4.png"),
+            width=config.image_width,
+            height=config.image_height,
         )
 
-        final_positions_probs_file = sorted(glob(
-            os.path.join(
-                os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil",
-                f"{year}", model, "*", "final_positions_probs.json"
+        if config.heatmap_num_games is not None:
+            final_positions_probs_file = os.path.join(
+                config.base_path, model,
+                f"{str(config.heatmap_num_games).zfill(3)}_games",
+                "final_positions_probs.json"
             )
-        ))[-1]
+        else:
+            final_positions_probs_file = sorted(glob(
+                os.path.join(config.base_path, model, "*", "final_positions_probs.json")
+            ))[-1]
+
         with open(final_positions_probs_file, "r", encoding="utf-8") as f:
             final_positions_probs = json.load(f)
-
-        save_dir = os.path.join(
-            os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil", f"{year}"
-        )
 
         num_positions = max(len(probs) for probs in final_positions_probs.values())
         positions = [*range(1, num_positions + 1)]
@@ -458,7 +525,7 @@ if __name__ == "__main__":
             ]
             z.append(row_probs)
 
-        z = np.array(z, dtype=float) / N_SIMULATIONS
+        z = np.array(z, dtype=float) / config.num_simulations
         z[z == 0] = np.nan
         fig = go.Figure(
             data=go.Heatmap(
@@ -480,9 +547,39 @@ if __name__ == "__main__":
             paper_bgcolor="white",
         )
         fig.write_image(
-            os.path.join(save_dir, 'final_position_probs_all_clubs.png'),
+            os.path.join(
+                config.base_path,
+                f'final_position_probs_all_clubs_{config.heatmap_num_games}_{model}.png'
+            ),
             width=1200,
             height=800,
         )
 
-    print(f"Total time elapsed (visualization): {time() - start_time:,.2f} seconds")
+
+if __name__ == "__main__":
+    config_2019 = VisualizationConfig(
+        year=2019,
+        base_path=os.path.join(
+            os.path.dirname(__file__), "..", "..",
+            "real_data", "club_level_simulations", "brazil", "2019"
+        ),
+        models={'poisson_2': 'Poisson 2'},
+        title_contenders=[
+            ClubStyle('Flamengo / RJ', 'solid'),
+            ClubStyle('Palmeiras / SP', 'dash'),
+            ClubStyle('Santos / SP', 'dot'),
+        ],
+        relegation_candidates=[
+            ClubStyle('Ceará / CE', 'solid'),
+            ClubStyle('Cruzeiro / MG', 'dash'),
+            ClubStyle('CSA / AL', 'dot'),
+            ClubStyle('Chapecoense / SC', 'dashdot'),
+            ClubStyle('Avaí / SC', 'longdash'),
+        ],
+        periods=[],
+        title_game_annotations=[],
+        relegation_game_annotations=[],
+        num_simulations=10_000,
+    )
+
+    run_visualization(config_2019)

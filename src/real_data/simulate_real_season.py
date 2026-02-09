@@ -1,4 +1,4 @@
-# pylint: disable=too-many-arguments, too-many-positional-arguments
+# pylint: disable=too-many-arguments, too-many-positional-arguments, duplicate-code, too-many-locals
 
 import json
 import os
@@ -6,17 +6,28 @@ import shutil
 from datetime import datetime as dt
 from itertools import product
 from time import time
+from typing import Optional
 
 import pandas as pd
 from tqdm import tqdm
 
-from data_processing import generate_all_matches_data, generate_real_data_stan_input
+from data_processing import (
+    flush_and_clear_cache,
+    generate_all_matches_data,
+    generate_real_data_stan_input,
+    load_all_matches_data,
+)
 from model_execution import run_model_with_real_data, set_team_strengths
-from simulation import calculate_final_positions_probs, simulate_competition, update_probabilities
+from simulation import (
+    calculate_final_positions_probs,
+    calculate_final_positions_real,
+    simulate_competition,
+    update_probabilities,
+)
 from visualization import generate_boxplot, generate_points_evolution_by_team
 from features.constants import IGNORE_COLS
 
-def fill_matches(year: int) -> None:
+def fill_matches(base_path: str) -> None:
     """Fill missing matches in the all_matches.json file for a given year.
 
     This function reads the existing match data, identifies all teams that have played,
@@ -24,17 +35,13 @@ def fill_matches(year: int) -> None:
     and adds the remaining matches as "TBD" (To Be Determined) entries to the data.
 
     Args:
-        year (int): The year for which to fill missing matches.
+        base_path (str): The base path to the real data.
 
     Returns:
         None: The function modifies the all_matches.json file in place.
     """
-    save_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..",
-        "real_data", "results", "brazil", f"{year}"
-    )
-    os.makedirs(save_dir, exist_ok=True)
-    save_path = os.path.join(save_dir, "all_matches.json")
+    os.makedirs(base_path, exist_ok=True)
+    save_path = os.path.join(base_path, "all_matches.json")
     with open(save_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
@@ -113,7 +120,8 @@ def simulate_year(
     num_games: int = 380,
     match_date: str | None = None,
     championship: str = "brazil",
-    num_simulations: int = 10_000
+    num_simulations: int = 10_000,
+    base_path: Optional[str] = None
 ) -> None:
     """
     Run the specified statistical model (Bradley-Terry or Poisson) using real data
@@ -127,13 +135,14 @@ def simulate_year(
         match_date (str | None, optional): The date of the last match played. Defaults to None.
         championship (str, optional): The championship to use. Defaults to "brazil".
         num_simulations (int, optional): Number of simulations to run. Defaults to 10000.
+        base_path (str, optional): The base path to the real data. Defaults to None.
 
     Returns:
         None
     """
-    generate_real_data_stan_input(year, num_games, championship)
+    generate_real_data_stan_input(year, num_games, championship, base_path)
     fit, team_mapping, model_save_dir = run_model_with_real_data(
-        model_name, year, num_games, championship
+        model_name, year, num_games, championship, base_path
     )
     n_clubs = len(team_mapping)
     samples = fit.draws_pd()
@@ -152,7 +161,7 @@ def simulate_year(
         points_matrix, current_scenario, probabilities = simulate_competition(
             samples, team_mapping, model_name, year, num_games, championship, num_simulations
         )
-        update_probabilities(probabilities, year, model_name, num_games, championship)
+        update_probabilities(probabilities, year, model_name, num_games, championship, base_path)
         final_points_distribution = generate_points_evolution_by_team(
             points_matrix,
             current_scenario,
@@ -168,32 +177,36 @@ def simulate_year(
         )
 
         summarize_results(model_save_dir, match_date)
+    else:
+        data, _ = load_all_matches_data(year, championship, base_path)
+        calculate_final_positions_real(
+            data,
+            team_mapping,
+            model_save_dir,
+            num_simulations,
+        )
+        summarize_results(model_save_dir, match_date)
 
 
-if __name__ == "__main__":
-    start_time = time()
-    year = dt.now().year
-    results_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..", "real_data", "results", "brazil", f"{year}"
-    )
-    input_dir = os.path.join(
-        os.path.dirname(__file__), "..", "..", "real_data", "inputs", "brazil", f"{year}"
-    )
-    if os.path.exists(results_dir):
-        shutil.rmtree(results_dir)
-        shutil.rmtree(input_dir)
+def run_simulation(year: int, models: list[str], base_path: str, n_simulations: int) -> None:
+    """Run the simulation for a given year and models.
 
-    models = [
-        "poisson_2",
-    ]
+    Args:
+        year (int): The year of the simulation.
+        models (list[str]): The models to run.
+        base_path (str): The base path to the real data.
+        n_simulations (int): The number of simulations to run.
+    """
+    if os.path.exists(base_path):
+        shutil.rmtree(base_path)
 
-    generate_all_matches_data(year, "brazil")
-    fill_matches(year)
+    os.makedirs(base_path, exist_ok=True)
+    generate_all_matches_data(year, "brazil", os.path.join(base_path, "all_matches.json"))
+    fill_matches(base_path)
 
     with open(
         os.path.join(
-            os.path.dirname(__file__), "..", "..",
-            "real_data", "results", "brazil", f"{year}", "all_matches.json"
+            base_path, "all_matches.json"
         ),
         "r",
         encoding="utf-8"
@@ -236,9 +249,7 @@ if __name__ == "__main__":
     games_to_simulate = dict(zip(games_to_simulate['index'], games_to_simulate['match_date']))
     for model, (game, match_date) in tqdm(product(models, games_to_simulate.items())):
         final_path = os.path.join(
-            os.path.dirname(__file__), "..", "..", "real_data", "results",
-            "brazil", f"{year}", model, f"{str(game).zfill(3)}_games",
-            "summary_results.csv"
+            base_path, model, f"{str(game).zfill(3)}_games", "summary_results.csv"
         )
 
         if os.path.exists(final_path):
@@ -250,8 +261,29 @@ if __name__ == "__main__":
             num_games=game,
             match_date=match_date,
             championship="brazil",
-            num_simulations=10_000,
+            num_simulations=n_simulations,
+            base_path=base_path,
         )
+
+    flush_and_clear_cache()
+
+
+if __name__ == "__main__":
+    start_time = time()
+    n_simulations = 10_000
+    year = 2019
+    models = [
+        "poisson_2",
+        # "poisson_4",
+        # "poisson_7",
+        # "poisson_9",
+    ]
+    base_path = os.path.join(
+        os.path.dirname(__file__), "..", "..", "real_data",
+        "club_level_simulations", "brazil", f"{year}"
+    )
+
+    run_simulation(year, models, base_path, n_simulations)
 
     os.system("clear")
     print(f"Total time elapsed (simulation): {time() - start_time:,.2f} seconds")

@@ -3,7 +3,7 @@
 import json
 import os
 import sys
-from typing import Any
+from typing import Any, Optional
 
 import numpy as np
 import pandas as pd
@@ -515,7 +515,8 @@ def simulate_competition(
 
 
 def update_probabilities(
-    probabilities: dict[str, Any], year: int, model_name: str, num_games: int, championship: str
+    probabilities: dict[str, Any], year: int, model_name: str, num_games: int, championship: str,
+    base_path: Optional[str] = None
 ) -> None:
     """
     Update the probabilities for a given year, model name, and number of rounds.
@@ -528,8 +529,9 @@ def update_probabilities(
         model_name (str): The name of the model to update.
         num_games (int): The number of games to update.
         championship (str): The championship of the data.
+        base_path (str, optional): The base path to the real data. Defaults to None.
     """
-    data, _ = load_all_matches_data(year, championship)
+    data, _ = load_all_matches_data(year, championship, base_path)
     for game_id, probabilities_data in probabilities.items():
         assert data[game_id]["home_team"] == probabilities_data["home_team"]
         assert data[game_id]["away_team"] == probabilities_data["away_team"]
@@ -541,7 +543,7 @@ def update_probabilities(
             probabilities_data["probabilities"]
         )
 
-    mark_cache_modified(year, championship)
+    mark_cache_modified(year, championship, base_path)
 
 
 def calculate_final_positions_probs(
@@ -585,6 +587,81 @@ def calculate_final_positions_probs(
         for position in range(n_teams):
             prob_team_position = int(np.sum(final_positions[position, :] == idx - 1))
             final_positions_probs[team].insert(0, prob_team_position)
+
+    with open(os.path.join(save_dir, "final_positions_probs.json"), "w", encoding="utf-8") as f:
+        json.dump(final_positions_probs, f, ensure_ascii=False, indent=2)
+
+
+def calculate_final_positions_real(
+    data: dict[str, Any],
+    team_mapping: dict[int, str],
+    save_dir: str,
+    num_simulations: int,
+) -> None:
+    """
+    Calculates the final positions based on real results (no simulation needed).
+
+    This function is used when all matches have been played and we just need to
+    record the actual final standings. Each team gets probability = num_simulations
+    for their real position and 0 for all other positions.
+
+    Args:
+        data (dict[str, Any]): Dictionary containing all match data.
+        team_mapping (dict[int, str]): Mapping from team indices (1-based) to team names.
+        save_dir (str): Directory where the resulting JSON file will be saved.
+        num_simulations (int): Number of simulations (used as the count for the real position).
+
+    Returns:
+        None
+    """
+    n_teams = len(team_mapping)
+
+    team_stats: dict[str, dict[str, int]] = {
+        team: {"points": 0, "wins": 0, "goals_diff": 0, "goals_for": 0}
+        for team in team_mapping.values()
+    }
+
+    for match in data.values():
+        home_team = match["home_team"]
+        away_team = match["away_team"]
+        home_goals = match.get("goals_team1")
+        away_goals = match.get("goals_team2")
+
+        if home_goals is None or away_goals is None:
+            continue
+
+        team_stats[home_team]["goals_for"] += home_goals
+        team_stats[away_team]["goals_for"] += away_goals
+        team_stats[home_team]["goals_diff"] += home_goals - away_goals
+        team_stats[away_team]["goals_diff"] += away_goals - home_goals
+
+        if home_goals > away_goals:
+            team_stats[home_team]["points"] += 3
+            team_stats[home_team]["wins"] += 1
+        elif away_goals > home_goals:
+            team_stats[away_team]["points"] += 3
+            team_stats[away_team]["wins"] += 1
+        else:
+            team_stats[home_team]["points"] += 1
+            team_stats[away_team]["points"] += 1
+
+    sorted_teams = sorted(
+        team_stats.keys(),
+        key=lambda t: (
+            team_stats[t]["points"],
+            team_stats[t]["wins"],
+            team_stats[t]["goals_diff"],
+            team_stats[t]["goals_for"],
+        ),
+        reverse=True,
+    )
+
+    final_positions_probs: dict[str, list[int]] = {}
+    for team in team_mapping.values():
+        position = sorted_teams.index(team)
+        probs = [0] * n_teams
+        probs[position] = num_simulations
+        final_positions_probs[team] = probs
 
     with open(os.path.join(save_dir, "final_positions_probs.json"), "w", encoding="utf-8") as f:
         json.dump(final_positions_probs, f, ensure_ascii=False, indent=2)
