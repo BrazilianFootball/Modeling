@@ -2,7 +2,6 @@
 
 import json
 import os
-import shutil
 from datetime import datetime as dt
 from itertools import product
 from time import time
@@ -145,6 +144,9 @@ def simulate_year(
         model_name, year, num_games, championship, base_path
     )
     n_clubs = len(team_mapping)
+    if n_clubs < 20:
+        return
+
     samples = fit.draws_pd()
     samples = samples.drop(
         columns=[col for col in samples.columns if "raw" in col] + IGNORE_COLS
@@ -197,9 +199,6 @@ def run_simulation(year: int, models: list[str], base_path: str, n_simulations: 
         base_path (str): The base path to the real data.
         n_simulations (int): The number of simulations to run.
     """
-    if os.path.exists(base_path):
-        shutil.rmtree(base_path)
-
     os.makedirs(base_path, exist_ok=True)
     generate_all_matches_data(year, "brazil", os.path.join(base_path, "all_matches.json"))
     fill_matches(base_path)
@@ -227,7 +226,10 @@ def run_simulation(year: int, models: list[str], base_path: str, n_simulations: 
         .reset_index() \
         .sort_values(by='index', ignore_index=True)
 
-    games_to_simulate['match_date_dt'] = pd.to_datetime(games_to_simulate['match_date'])
+    games_to_simulate['match_date_dt'] = pd.to_datetime(
+        games_to_simulate['match_date'],
+        dayfirst=True
+    )
     games_to_simulate['next_match_date_dt'] = games_to_simulate['match_date_dt'].shift(-1)
     games_to_simulate['days_to_next_match'] = (
             games_to_simulate['next_match_date_dt'] - games_to_simulate['match_date_dt']
