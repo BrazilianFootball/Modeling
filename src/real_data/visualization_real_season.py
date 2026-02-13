@@ -16,11 +16,24 @@ from colors import color_mapping
 
 
 @dataclass
+class FontConfig:
+    """Font size configuration for visualizations."""
+    annotation: int = 16
+    legend: int = 14
+    legend_title: int = 14
+    title: int = 24
+    subtitle: int = 18
+    axis_title: int = 18
+    axis_tick: int = 14
+    general: int = 18
+
+
+@dataclass
 class Period:
     """Represent a special period in the calendar (e.g. FIFA Date, Club World Cup)."""
     start_date: str
     end_date: str
-    label: str
+    label: str = ""
     text_x_position: Optional[str] = None
     text_y_position: float = 1.025
 
@@ -63,12 +76,16 @@ class VisualizationConfig:
     relegation_game_annotations: list[GameAnnotation] = field(default_factory=list)
 
     num_simulations: int = 10_000
-    image_width: int = 1600
-    image_height: int = 800
+    image_width: int = 1000
+    image_height: int = 500
 
     heatmap_num_games: int | None = None
 
-def add_game_result_annotation(fig, date, result, y_offset=0, max_probability=1):
+    font_config: FontConfig = field(default_factory=FontConfig)
+
+def add_game_result_annotation(
+    fig, date, result, y_offset=0, max_probability=1, font_config: Optional[FontConfig] = None
+):
     """Add a game result annotation to the plot with a vertical line and text.
 
     This function adds a vertical dashed line at the specified date and a text
@@ -81,12 +98,16 @@ def add_game_result_annotation(fig, date, result, y_offset=0, max_probability=1)
         date: The date/time for the game result annotation.
         result (str): The game result text to display.
         y_offset (float, optional): Vertical offset for positioning. Defaults to 0.
-        max_champion (float, optional): Maximum champion probability value for line height.
-                                        Defaults to 1.
+        max_probability (float, optional): Maximum probability value for line height.
+                                           Defaults to 1.
+        font_config (FontConfig, optional): Font configuration. Defaults to FontConfig().
 
     Returns:
         None: The function modifies the figure object in place.
     """
+    if font_config is None:
+        font_config = FontConfig()
+
     fig.add_vline(
         x=date,
         line_dash="dash",
@@ -99,12 +120,15 @@ def add_game_result_annotation(fig, date, result, y_offset=0, max_probability=1)
         x=date,
         y=max_probability+.035+y_offset,
         text=result,
-        font={"size": 12, "color": "black"},
+        font={"size": font_config.annotation, "color": "black"},
         showarrow=False
     )
 
 
-def add_period(fig, x0, x1, text, text_position, color="gray"):
+def add_period(
+    fig, x0, x1, text, text_position, color="gray",
+    font_config: Optional[FontConfig] = None
+) -> None:
     """Add a period annotation to the plot with a background rectangle and text.
 
     This function adds a vertical rectangle (period) to the plot with specified
@@ -119,10 +143,14 @@ def add_period(fig, x0, x1, text, text_position, color="gray"):
         text (str): Text to display as annotation.
         text_position (tuple): (x, y) coordinates for text placement.
         color (str, optional): Color for the rectangle fill. Defaults to "gray".
+        font_config (FontConfig, optional): Font configuration. Defaults to FontConfig().
 
     Returns:
         None: The function modifies the figure object in place.
     """
+    if font_config is None:
+        font_config = FontConfig()
+
     fig.add_vrect(
         x0=x0,
         x1=x1,
@@ -136,12 +164,15 @@ def add_period(fig, x0, x1, text, text_position, color="gray"):
         x=text_position[0],
         y=text_position[1],
         text=text,
-        font={"size": 12, "color": "black"},
+        font={"size": font_config.annotation, "color": "black"},
         showarrow=False
     )
 
 
-def add_final_prob(fig, team, results, y_shift=0, col='Champion'):
+def add_final_prob(
+    fig, team, results, y_shift=0, col='Champion',
+    font_config: Optional[FontConfig] = None
+) -> None:
     """Add final probability annotation to the plot for a specific team.
 
     This function adds a text annotation showing the final champion probability
@@ -154,17 +185,21 @@ def add_final_prob(fig, team, results, y_shift=0, col='Champion'):
         results (pd.DataFrame): The results DataFrame containing the team's data.
         y_shift (float, optional): Vertical shift for the annotation. Defaults to 0.
         col (str, optional): The column to plot. Defaults to 'Champion'.
+        font_config (FontConfig, optional): Font configuration. Defaults to FontConfig().
 
     Returns:
         None: The function modifies the figure object in place.
     """
+    if font_config is None:
+        font_config = FontConfig()
+
     prob = results[results['Club'] == team][col].values[-1]
     last_date = results[results['Club'] == team]['Date'].values[-1]
     fig.add_annotation(
         x=pd.to_datetime(last_date)+pd.Timedelta(days=7),
         y=prob+y_shift,
         text=f'{prob:.2%}',
-        font={"size": 12, "color": color_mapping[team]},
+        font={"size": font_config.annotation, "color": color_mapping[team]},
         showarrow=False
     )
 
@@ -212,7 +247,7 @@ def add_matches_result(fig, results_df, match_result, col):
 
 def generate_viz(
     results, club_results, clubs: list[ClubStyle | str], col, title, subtitle,
-    periods: Optional[list[Period]] = None
+    periods: Optional[list[Period]] = None, font_config: Optional[FontConfig] = None
 ):
     """Generate a visualization plot for team probabilities over time.
 
@@ -234,11 +269,14 @@ def generate_viz(
         title (str): Main title for the plot.
         subtitle (str): Subtitle text to display below the main title.
         periods (list[Period], optional): List of Period objects to display on the plot.
+        font_config (FontConfig, optional): Font configuration. Defaults to FontConfig().
 
     Returns:
         plotly.graph_objects.Figure: A configured Plotly figure object ready for
             display or export.
     """
+    if font_config is None:
+        font_config = FontConfig()
     club_styles: list[ClubStyle] = []
     for club in clubs:
         if isinstance(club, str):
@@ -284,34 +322,37 @@ def generate_viz(
                 period.start_date,
                 period.end_date,
                 period.label,
-                (period.text_x_position, period.text_y_position)
+                (period.text_x_position, period.text_y_position),
+                font_config=font_config,
             )
 
     add_matches_result(fig, results, 'Won', col)
     add_matches_result(fig, results, 'Lost', col)
     add_matches_result(fig, results, 'Drew', col)
 
-    for club_name in club_names:
-        filtered = results[results['Club'] == club_name]
-        if not filtered.empty:
-            add_final_prob(fig, club_name, results, 0, col)
+    # for club_name in club_names:
+    #     filtered = results[results['Club'] == club_name]
+    #     if not filtered.empty:
+    #         add_final_prob(fig, club_name, results, 0, col, font_config=font_config)
 
     fig.update_traces(
         selector={"legendgroup": "Clubs"},
-        legendgrouptitle={"text": "Clubs", "font": {"size": 14}},
+        legendgrouptitle={"text": "Clubs", "font": {"size": font_config.legend_title}},
     )
 
     fig.update_traces(
         selector={"legendgroup": "Results"},
-        legendgrouptitle={"text": "Results", "font": {"size": 14}},
+        legendgrouptitle={"text": "Results", "font": {"size": font_config.legend_title}},
     )
 
     fig.update_layout(
-        title=title+f'<br><span style="font-size: 14px;">{subtitle}</span>',
+        title=title+f'<br><span style="font-size: {font_config.subtitle}px;">{subtitle}</span>',
         xaxis_title='Date',
         yaxis_title='Probability (%)',
         legend_title='Club',
         template="plotly_white",
+        font={"size": font_config.general},
+        title_font={"size": font_config.title},
         legend={
             "orientation": "v",
             "yanchor": "top",
@@ -319,12 +360,15 @@ def generate_viz(
             "xanchor": "left",
             "x": 1.01,
             "title_text": None,
+            "font": {"size": font_config.legend},
         },
         yaxis={
             "tickformat": '.1%',
             "tickmode": "linear",
             "dtick": 0.1,
-            "range": [0, 1.05]
+            "range": [0, 1.05],
+            "title_font": {"size": font_config.axis_title},
+            "tickfont": {"size": font_config.axis_tick},
         },
         xaxis={
             "title": "Date",
@@ -334,7 +378,9 @@ def generate_viz(
             "showgrid": True,
             "gridcolor": "lightgray",
             "showline": True,
-            "linecolor": "black"
+            "linecolor": "black",
+            "title_font": {"size": font_config.axis_title},
+            "tickfont": {"size": font_config.axis_tick},
         },
     )
 
@@ -443,20 +489,21 @@ def run_visualization(config: VisualizationConfig) -> None:
             results[position] = (results[position] / num_simulations).round(4)
 
         title = 'Probability of being champion'
-        subtitle = (
-            f'Probabilities based on {num_simulations:,} simulations of the remaining games. '
-            'Dots represent the actual results on matches.'
-        )
+        # subtitle = (
+        #     f'Probabilities based on {num_simulations:,} simulations of the remaining games. '
+        #     'Dots represent the actual results on matches.'
+        # )
+        subtitle = ""
         fig = generate_viz(
             results, club_results, config.title_contenders,
-            'Champion', title, subtitle, config.periods
+            'Champion', title, subtitle, config.periods, config.font_config
         )
 
         y_max = max(results['Champion'])
         for annotation in config.title_game_annotations:
             add_game_result_annotation(
                 fig, annotation.date, annotation.result_text,
-                annotation.y_offset, y_max
+                annotation.y_offset, y_max, config.font_config
             )
 
         fig.write_image(
@@ -466,20 +513,16 @@ def run_visualization(config: VisualizationConfig) -> None:
         )
 
         title = 'Probability of being relegated'
-        subtitle = (
-            f'Probabilities based on {num_simulations:,} simulations of the remaining games. '
-            'Dots represent the actual results on matches.'
-        )
         fig = generate_viz(
             results, club_results, config.relegation_candidates,
-            'Z4', title, subtitle, config.periods
+            'Z4', title, subtitle, config.periods, config.font_config
         )
 
         y_max = max(results['Z4'])
         for annotation in config.relegation_game_annotations:
             add_game_result_annotation(
                 fig, annotation.date, annotation.result_text,
-                annotation.y_offset, y_max
+                annotation.y_offset, y_max, config.font_config
             )
 
         fig.write_image(
@@ -541,8 +584,19 @@ def run_visualization(config: VisualizationConfig) -> None:
         )
         fig.update_layout(
             title="Final Position Probability for All Clubs",
-            xaxis={"title": "Final Position", "tickmode": "linear"},
-            yaxis={"title": "Club"},
+            title_font={"size": config.font_config.title},
+            font={"size": config.font_config.general},
+            xaxis={
+                "title": "Final Position",
+                "tickmode": "linear",
+                "title_font": {"size": config.font_config.axis_title},
+                "tickfont": {"size": config.font_config.axis_tick},
+            },
+            yaxis={
+                "title": "Club",
+                "title_font": {"size": config.font_config.axis_title},
+                "tickfont": {"size": config.font_config.axis_tick},
+            },
             plot_bgcolor="white",
             paper_bgcolor="white",
         )
