@@ -14,18 +14,25 @@ class PlayerStats:
     """Statistics for a player across seasons."""
 
     name: str = ""
-    teams: set[str] = field(default_factory=set)
+    minutes_per_team: dict[str, int] = field(default_factory=dict)
     total_minutes: int = 0
     total_games: int = 0
     total_wins: int = 0
     total_draws: int = 0
     weighted_score: float = 0.0
 
+    @property
+    def main_team(self) -> str:
+        """Returns the team where the player had the most minutes."""
+        if not self.minutes_per_team:
+            return ""
+        return max(self.minutes_per_team, key=lambda k: self.minutes_per_team[k])
+
     def to_dict(self) -> dict[str, Any]:
         """Convert to dictionary for JSON serialization."""
         return {
             "name": self.name,
-            "teams": list(self.teams),
+            "team": self.main_team,
             "total_minutes": self.total_minutes,
             "total_games": self.total_games,
             "total_wins": self.total_wins,
@@ -186,7 +193,10 @@ def _process_seasons_data(
 
                     players_stats[player].total_minutes += sub_game_time
                     if home_team:
-                        players_stats[player].teams.add(home_team)
+                        players_stats[player].minutes_per_team[home_team] = (
+                            players_stats[player].minutes_per_team.get(home_team, 0)
+                            + sub_game_time
+                        )
 
                     home_players[player] = (
                         home_players.get(player, 0) + sub_game_data["Time"]
@@ -206,7 +216,10 @@ def _process_seasons_data(
 
                     players_stats[player].total_minutes += sub_game_time
                     if away_team:
-                        players_stats[player].teams.add(away_team)
+                        players_stats[player].minutes_per_team[away_team] = (
+                            players_stats[player].minutes_per_team.get(away_team, 0)
+                            + sub_game_time
+                        )
 
                     away_players[player] = (
                         away_players.get(player, 0) + sub_game_data["Time"]
@@ -415,23 +428,39 @@ def process_players_data(
     return summary
 
 
-if __name__ == "__main__":
-    SEASONS = [*range(2025, 2026)]
-    MODELS = [
-        "poisson_2",
-        "poisson_4",
-        "poisson_7",
-        "poisson_9"
-    ]
-    for model_name in MODELS:
-        season_name = str(SEASONS[0]) if len(SEASONS) == 1 else f"{SEASONS[0]}-{SEASONS[-1]}"
+def run_player_models(
+    seasons: list[int],
+    models: list[str],
+    chains: int = 4,
+    iter_warmup: int = 2_500,
+    iter_sampling: int = 2_500,
+) -> None:
+    """
+    Runs player level models and saves the results to CSV files.
 
+    Args:
+        seasons: List of years of the seasons to be processed.
+        models: List of model names to run.
+        chains: Number of MCMC chains.
+        iter_warmup: Number of warmup iterations per chain.
+        iter_sampling: Number of sampling iterations per chain.
+    """
+    season_name = str(seasons[0]) if len(seasons) == 1 else f"{seasons[0]}-{seasons[-1]}"
+    print(f"Processing {season_name} seasons")
+
+    results_path = os.path.join(
+        os.path.dirname(__file__), "..", "..",
+        "real_data", "player_level_results"
+    )
+    os.makedirs(results_path, exist_ok=True)
+
+    for model_name in models:
         draws, players_mapping, players_stats = get_players_posterior_samples(
-            seasons=SEASONS,
+            seasons=seasons,
             model_name=model_name,
-            chains=4,
-            iter_warmup=2_500,
-            iter_sampling=2_500,
+            chains=chains,
+            iter_warmup=iter_warmup,
+            iter_sampling=iter_sampling,
         )
 
         summary = process_players_data(
@@ -440,13 +469,28 @@ if __name__ == "__main__":
             players_stats,
         )
 
-        results_path = os.path.join(
-            os.path.dirname(__file__), "..", "..",
-            "real_data", "players"
-        )
-        os.makedirs(results_path, exist_ok=True)
         summary.to_csv(
             os.path.join(results_path, f"players_summary_{season_name}_{model_name}.csv"),
             index=False,
             encoding="utf-8"
         )
+
+
+if __name__ == "__main__":
+    CONFIGS = [
+        {
+            "seasons": [*range(2025, 2026)],
+            "models": ["poisson_7"],
+        },
+        {
+            "seasons": [*range(2020, 2026)],
+            "models": ["poisson_7"],
+        },
+        {
+            "seasons": [*range(2013, 2026)],
+            "models": ["poisson_7"],
+        },
+    ]
+
+    for config in CONFIGS:
+        run_player_models(**config)  # type: ignore[arg-type]
