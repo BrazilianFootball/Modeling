@@ -164,15 +164,19 @@ __local__
 _locally
 SBC_cache
 
-results/**/*.csv
-real_data/**/*.csv
-!real_data/results/metrics.csv
-!real_data/players/*.csv
-real_data/club_level_simulations/**/inputs
-src/real_data/credential.json
-
 models/club_level/*
 !models/club_level/*.stan
 models/player_level/*
 !models/player_level/*.stan
 !models/README.md
+
+notebooks/_*.ipynb
+
+real_data/**/*.csv
+real_data/club_level_simulations/**/inputs
+!real_data/results/metrics.csv
+!real_data/players/*.csv
+
+results/**/*.csv
+
+src/real_data/credential.json
