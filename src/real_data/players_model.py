@@ -1,4 +1,4 @@
-# pylint: disable=too-many-locals, too-many-statements, too-many-branches
+# pylint: disable=too-many-locals, too-many-statements, too-many-branches, too-many-instance-attributes
 import json
 import os
 import tempfile
@@ -20,6 +20,8 @@ class PlayerStats:
     total_wins: int = 0
     total_draws: int = 0
     weighted_score: float = 0.0
+    weighted_goals: float = 0.0
+    weighted_goals_difference: float = 0.0
 
     @property
     def main_team(self) -> str:
@@ -38,6 +40,8 @@ class PlayerStats:
             "total_wins": self.total_wins,
             "total_draws": self.total_draws,
             "weighted_score": self.weighted_score,
+            "weighted_goals": self.weighted_goals,
+            "weighted_goals_difference": self.weighted_goals_difference,
         }
 
 
@@ -229,24 +233,36 @@ def _process_seasons_data(
             for player in home_players_in_game:
                 players_stats[player].total_games += 1
                 minutes_in_game = home_players[player]
+                weight = minutes_in_game / 90
 
                 if home_result == "win":
                     players_stats[player].total_wins += 1
-                    players_stats[player].weighted_score += (minutes_in_game / 90) * 3
+                    players_stats[player].weighted_score += weight * 3
                 elif home_result == "draw":
                     players_stats[player].total_draws += 1
-                    players_stats[player].weighted_score += (minutes_in_game / 90) * 1
+                    players_stats[player].weighted_score += weight * 1
+
+                players_stats[player].weighted_goals += weight * home_goals
+                players_stats[player].weighted_goals_difference += (
+                    weight * (home_goals - away_goals)
+                )
 
             for player in away_players_in_game:
                 players_stats[player].total_games += 1
                 minutes_in_game = away_players[player]
+                weight = minutes_in_game / 90
 
                 if away_result == "win":
                     players_stats[player].total_wins += 1
-                    players_stats[player].weighted_score += (minutes_in_game / 90) * 3
+                    players_stats[player].weighted_score += weight * 3
                 elif away_result == "draw":
                     players_stats[player].total_draws += 1
-                    players_stats[player].weighted_score += (minutes_in_game / 90) * 1
+                    players_stats[player].weighted_score += weight * 1
+
+                players_stats[player].weighted_goals += weight * away_goals
+                players_stats[player].weighted_goals_difference += (
+                    weight * (away_goals - home_goals)
+                )
 
             if sum(home_players.values()) < 990:
                 home_players["None"] = 990 - sum(home_players.values())
@@ -351,6 +367,8 @@ def get_players_posterior_samples(
             iter_sampling=iter_sampling,
             show_progress=True,
         )
+        info = fit.summary()
+        print(info[["ESS_bulk", "ESS_tail", "R_hat"]].describe())
         draws = fit.draws_pd()
     finally:
         os.unlink(stan_file_path)
@@ -433,7 +451,7 @@ def run_player_models(
     models: list[str],
     chains: int = 4,
     iter_warmup: int = 2_500,
-    iter_sampling: int = 2_500,
+    iter_sampling: int = 7_500,
 ) -> None:
     """
     Runs player level models and saves the results to CSV files.
@@ -484,10 +502,6 @@ if __name__ == "__main__":
         },
         {
             "seasons": [*range(2020, 2026)],
-            "models": ["poisson_7"],
-        },
-        {
-            "seasons": [*range(2013, 2026)],
             "models": ["poisson_7"],
         },
     ]
