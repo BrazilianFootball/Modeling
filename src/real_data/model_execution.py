@@ -151,8 +151,8 @@ def set_team_strengths(
     else:
         map_case = {
             "alpha": " (atk home)",
-            "gamma": " (atk away)",
-            "delta": " (def home)",
+            "delta": " (atk away)",
+            "gamma": " (def home)",
             "beta": " (def away)",
         }
         column_mapping = {
