@@ -1,0 +1,33 @@
+\chapter{Methodology}
+\label{methodology}
+
+This chapter presents a collection of probabilistic models used to describe football match outcomes.
+Rather than introducing each model independently, we adopt a unified approach in which both model families are first defined through general formulations.
+Specific models are then obtained by imposing structural constraints and simplifying assumptions on these general representations.
+
+We begin with the Bradley–Terry family of models, which describe match outcomes in terms of latent team skill parameters.
+A general formulation is introduced that encompasses home effects and the possibility of draws, from which simpler variants naturally emerge by restricting the corresponding parameters.
+This formulation provides a common reference point for interpretation, comparison, and validation across the different Bradley–Terry specifications.
+
+We then consider Poisson-based models, which explicitly model the number of goals scored by each team.
+The general Poisson formulation incorporates offensive and defensive effects, home effects, and potential dependence between teams’ scoring processes.
+As with the Bradley–Terry case, the specific Poisson models used in this work are obtained through systematic simplifications of the general formulation, resulting in a structured hierarchy of models with increasing complexity.
+
+All models are intentionally kept simple, both in structure and in the number of parameters.
+This design choice reflects our goal of validating the models using Simulation-Based Calibration and fitting them to real data from the Brazilian First Division.
+The predictive performance of the models is compared, and the best-performing specifications are subsequently extended to player-level versions, where the dimensionality of the parameter space increases substantially.
+Maintaining simple club-level formulations is therefore essential to control the computational cost of these extensions while preserving interpretability.
+
+The chapter also describes how the club-level formulations are adapted to player-level models, outlining the structural modifications required to replace team-level to player-level parameters.
+The inference procedure is then detailed, covering the prior distributions, the data inputs at each level, and the MCMC sampling configuration.
+Finally, the chapter concludes with the evaluation methodology used to assess the predictive performance of the models on real data, including the prediction scheme, baseline predictors, and proper scoring rules.
+
+\input{files/401-bt_models}
+
+\input{files/402-poisson_models}
+
+\input{files/403-player_level_extension}
+
+\input{files/404-inference_procedure}
+
+\input{files/405-evaluation_methodology}

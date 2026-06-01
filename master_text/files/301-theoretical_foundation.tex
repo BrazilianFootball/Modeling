@@ -1,0 +1,140 @@
+\section{Theoretical Foundation}
+\label{sec:theoretical_foundation}
+
+The main idea of SBC is to use the rank statistic as a diagnostic measure.
+For each simulation $i = 1, \dots, S$:
+
+\begin{algorithm}[!ht]
+    Sample $\theta_i \sim p(\theta)$\;
+    Sample $y_i \sim p(y \mid \theta_i)$\;
+    Obtain posterior samples $\{\theta_i^{(1)},\dots,\theta_i^{(L)}\} \gets \mathcal{A}(y_i)$\;
+    Compute rank $R_i$ of $\theta_i$ among the posterior samples\;
+    \caption{
+        \textbf{Single iteration of the SBC procedure}.
+        For each simulation, sample parameters from the prior, generate synthetic data, run inference, and compute the rank statistic.
+    }
+    \label{alg:sbc-iteration}
+\end{algorithm}
+
+Under the assumption that the inference algorithm, $\mathcal{A}$, correctly reproduces the posterior distribution $p(\theta \mid y)$, the rank statistic follows a discrete uniform distribution on $\{0, 1, \dots, L\}$.
+Theorem \ref{thm:rank-uniformity} states and proves this result through an approach similar to the argument in Appendix B of \textcite{talts_2020}.
+\begin{theorem}[Rank Uniformity Under Correct Posterior Inference]
+    If the inference algorithm $\mathcal{A}$ used in Algorithm~\ref{alg:sbc-iteration} correctly reproduces the posterior distribution $p(\theta \mid y)$ for all $\theta$ and $y$, then the rank statistic $R_i$ produced by the SBC iteration is distributed uniformly on $\{0,1,\dots,L\}$.
+    \label{thm:rank-uniformity}
+\end{theorem}
+
+\begin{proof}
+    For simplicity, we will omit the indices in this proof.
+    Now, without loss of generality, we can relabel all the posterior samples such that
+    \[\theta^{(1)} \leq \theta^{(2)} \leq \dots \leq \theta^{(L)}.\]
+
+    Then, we can write the probability mass function of the rank statistic as
+    \begin{align*}
+        p(r) & = \binom{L}{r} \int p(y, \theta)
+                \cdot \lrp{\prod_{l=1}^{r} \int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid \theta, y} d\theta^{(l)}}
+                \cdot \lrp{\prod_{l=r+1}^{L} \int_{\theta}^{\infty} p\lrp{\theta^{(l)}\mid \theta, y} d\theta^{(l)}}
+                d\theta dy \\
+             & = \binom{L}{r} \int p(y, \theta)
+                \cdot \lrp{\int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid \theta, y} d\theta^{(l)}}^r
+                \cdot \lrp{1 - \int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid \theta, y} d\theta^{(l)}}^{L-r}
+                d\theta dy.
+    \end{align*}
+
+    Since we condition on the data $y$, the posterior sample is independent of the generative parameter $\theta$, so
+    \[p\lrp{\theta^{(l)}\mid \theta, y} = p\lrp{\theta^{(l)}\mid y}.\]
+
+    Also, using that $p(y, \theta) = p(\theta \mid y)\cdot p(y)$ we can rewrite
+    \begin{align*}
+        p(r) & = \binom{L}{r} \int p(y, \theta)
+                \cdot \lrp{\int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid \theta, y} d\theta^{(l)}}^r
+                \cdot \lrp{1 - \int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid \theta, y} d\theta^{(l)}}^{L-r}
+                d\theta dy \\
+             & = \binom{L}{r} \int p(y) \int p(\theta \mid y)
+                \cdot \lrp{\int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid y} d\theta^{(l)}}^r
+                \cdot \lrp{1 - \int_{-\infty}^{\theta} p\lrp{\theta^{(l)}\mid y} d\theta^{(l)}}^{L-r}
+                d\theta dy.
+    \end{align*}
+
+    Since the algorithm correctly reproduces the posterior distribution, we have
+    \[p\lrp{\theta^{(l)} \mid y} = p(\theta \mid y).\]
+
+    Now, define
+    \[u = \int_{-\infty}^{\theta} p(t \mid y) dt = F_y(\theta) \implies u \in [0, 1] \land du = p(\theta \mid y) d\theta,\]
+    \noindent which allows us to change the variables in the integral. Then
+    \begin{align*}
+        p(r) & = \binom{L}{r} \int p(y) \cdot \int_0^1 u^r \cdot \lrp{1 - u}^{L-r} du dy \\
+             & = \dfrac{L!}{r! \cdot (L - r)!} \int p(y) \cdot \dfrac{r! \cdot (L - r)!}{(L + 1)!} dy \\
+             & = \dfrac{1}{L + 1} \int p(y) dy \\
+             & = \dfrac{1}{L + 1},
+    \end{align*}
+
+    \noindent which is consistent with a uniform distribution over the $L + 1$ possible ranks of the set $\{0, 1, \dots, L\}$.
+\end{proof}
+
+In practice, Theorem \ref{thm:rank-uniformity} states that by repeating this process across $S$ simulations, we can plot and see visually or test statistically whether the computed ranks are uniformly distributed to validate the calibration of the inference process.
+Figure \ref{fig:sbc_workflow} shows the workflow of this validation.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.9cm,
+        >=Latex,
+        thick,
+        process/.style={
+            draw,
+            rounded corners,
+            minimum width=4cm,
+            minimum height=1cm,
+            align=center,
+            font=\small,
+            fill=#1!15
+        },
+        process/.default=blue,
+        decision/.style={
+            diamond,
+            aspect=2.2,
+            draw,
+            align=center,
+            inner sep=1pt,
+            fill=yellow!15,
+            font=\small
+        }
+    ]
+
+        % ---- Nodes ----
+        \node[process=magenta]
+            (start)  {Set $i  = 0$};
+        \node[process=blue,   below=of start]
+            (sample)  {Update i = i + 1 \\ Sample $\theta_i \sim p(\theta)$};
+        \node[process=green,  below=of sample]
+            (simulate) {Simulate $\boldsymbol{y_i} \sim p(\boldsymbol{y} \mid \theta_i)$};
+        \node[process=orange, below=of simulate]
+            (infer) {Infer $p(\theta \mid \boldsymbol{y_i})$};
+        \node[process=red,    below=of infer]
+            (rank) {Compute rank of $\theta_i$};
+        \node[process=cyan,   below=of rank]
+            (store) {Store rank $r_i$};
+        \node[decision, below=of store]
+            (check) {$i = S$ ?};
+        \node[process=gray,   right=2cm of check, text width=4.2cm]
+            (aggregate) {Check uniformity \\ of $\{r_i\}_{i=1}^S$};
+
+        % ---- Arrows ----
+        \draw[->] (start) -- (sample);
+        \draw[->] (sample) -- (simulate);
+        \draw[->] (simulate) -- (infer);
+        \draw[->] (infer) -- (rank);
+        \draw[->] (rank) -- (store);
+        \draw[->] (store) -- (check);
+
+        % Decision arrows
+        \draw[->] (check.east) -- node[above]{yes} (aggregate.west);
+        \draw[->, bend left=40] (check.west) to node[left]{no} (sample.west);
+
+    \end{tikzpicture}
+    \caption{
+        \textbf{SBC workflow}.
+        For each simulated dataset, we generate $\theta_i$, simulate data $y_i$, infer the posterior, and check whether ranks of $\theta_i$ are uniformly distributed.
+    }
+    \label{fig:sbc_workflow}
+\end{figure}

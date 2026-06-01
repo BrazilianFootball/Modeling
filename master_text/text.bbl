@@ -1,0 +1,1624 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{aldous_2017}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0fd2268ae30823fa3ecf119829343670}{%
+           family={Aldous},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{0fd2268ae30823fa3ecf119829343670}
+      \strng{fullhash}{0fd2268ae30823fa3ecf119829343670}
+      \strng{bibnamehash}{0fd2268ae30823fa3ecf119829343670}
+      \strng{authorbibnamehash}{0fd2268ae30823fa3ecf119829343670}
+      \strng{authornamehash}{0fd2268ae30823fa3ecf119829343670}
+      \strng{authorfullhash}{0fd2268ae30823fa3ecf119829343670}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{4}
+      \field{title}{Elo Ratings and the Sports Model: A Neglected Topic in Applied Probability?}
+      \field{volume}{32}
+      \field{year}{2017}
+      \field{pages}{616\bibrangedash 629}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1214/17-STS628
+      \endverb
+    \endentry
+    \entry{chancedegol}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=0cae07581bedba80e061158df519b87f}{%
+           family={Arruda},
+           familyi={A\bibinitperiod},
+           given={Marcelo\bibnamedelimb Leme\bibnamedelima de},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0cae07581bedba80e061158df519b87f}
+      \strng{fullhash}{0cae07581bedba80e061158df519b87f}
+      \strng{bibnamehash}{0cae07581bedba80e061158df519b87f}
+      \strng{authorbibnamehash}{0cae07581bedba80e061158df519b87f}
+      \strng{authornamehash}{0cae07581bedba80e061158df519b87f}
+      \strng{authorfullhash}{0cae07581bedba80e061158df519b87f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chance de Gol}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb https://www.chancedegol.com.br/
+      \endverb
+      \verb{url}
+      \verb https://www.chancedegol.com.br/
+      \endverb
+    \endentry
+    \entry{baio_2010}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c74c1978f61672d907cc27b11aec65a8}{%
+           family={Baio},
+           familyi={B\bibinitperiod},
+           given={Gianluca},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f3c941d41e1ccee6619493d31f0283e}{%
+           family={Blangiardo},
+           familyi={B\bibinitperiod},
+           given={Marta},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{53706806bf9404ef172ece2bc9b7614c}
+      \strng{fullhash}{53706806bf9404ef172ece2bc9b7614c}
+      \strng{bibnamehash}{53706806bf9404ef172ece2bc9b7614c}
+      \strng{authorbibnamehash}{53706806bf9404ef172ece2bc9b7614c}
+      \strng{authornamehash}{53706806bf9404ef172ece2bc9b7614c}
+      \strng{authorfullhash}{53706806bf9404ef172ece2bc9b7614c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Statistics}
+      \field{number}{2}
+      \field{title}{Bayesian hierarchical model for the prediction of football results}
+      \field{volume}{37}
+      \field{year}{2010}
+      \field{pages}{253\bibrangedash 264}
+      \range{pages}{12}
+    \endentry
+    \entry{benz_2023}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=0168a2b190ce0edafef1ef0ab3e1bbf0}{%
+           family={Benz},
+           familyi={B\bibinitperiod},
+           given={Luke\bibnamedelima S.},
+           giveni={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4884106157b6425b4ce134174e6f6b29}{%
+           family={Lopez},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b48bb6150f034370fd59a4c7073a4927}
+      \strng{fullhash}{b48bb6150f034370fd59a4c7073a4927}
+      \strng{bibnamehash}{b48bb6150f034370fd59a4c7073a4927}
+      \strng{authorbibnamehash}{b48bb6150f034370fd59a4c7073a4927}
+      \strng{authornamehash}{b48bb6150f034370fd59a4c7073a4927}
+      \strng{authorfullhash}{b48bb6150f034370fd59a4c7073a4927}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{AStA Advances in Statistical Analysis}
+      \field{number}{1}
+      \field{title}{Estimating the change in soccer's home advantage during the Covid-19 pandemic using bivariate Poisson regression}
+      \field{volume}{107}
+      \field{year}{2023}
+      \field{pages}{205\bibrangedash 232}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s10182-021-00413-9
+      \endverb
+    \endentry
+    \entry{bradley_terry_1952}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a5f44e148696806fac3157838562a830}{%
+           family={Bradley},
+           familyi={B\bibinitperiod},
+           given={Ralph\bibnamedelima Allan},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a3591c5b9ed914ba95425df62b28c12}{%
+           family={Terry},
+           familyi={T\bibinitperiod},
+           given={Milton\bibnamedelima E.},
+           giveni={M\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Oxford University Press, Biometrika Trust]}%
+      }
+      \strng{namehash}{9de9bb18181586d76ddf0bbf0cbb6387}
+      \strng{fullhash}{9de9bb18181586d76ddf0bbf0cbb6387}
+      \strng{bibnamehash}{9de9bb18181586d76ddf0bbf0cbb6387}
+      \strng{authorbibnamehash}{9de9bb18181586d76ddf0bbf0cbb6387}
+      \strng{authornamehash}{9de9bb18181586d76ddf0bbf0cbb6387}
+      \strng{authorfullhash}{9de9bb18181586d76ddf0bbf0cbb6387}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00063444, 14643510}
+      \field{journaltitle}{Biometrika}
+      \field{number}{3/4}
+      \field{title}{Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons}
+      \field{volume}{39}
+      \field{year}{1952}
+      \field{pages}{324\bibrangedash 345}
+      \range{pages}{22}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2334029
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2334029
+      \endverb
+    \endentry
+    \entry{carpenter_2017}{article}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=5321a7ac2b0407bc405fa8816fd73f09}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=937991c72400f4d0e0252027c8c03f67}{%
+           family={Hoffman},
+           familyi={H\bibinitperiod},
+           given={Matthew\bibnamedelima D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb04571d965766ee6d71dafbd3eb452e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cc812cde8c441e79dfaab4955a72c2c}{%
+           family={Goodrich},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1982fa604a3f94837efceaa53330b2a4}{%
+           family={Betancourt},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=13e542215366001a04c3d21163d79458}{%
+           family={Brubaker},
+           familyi={B\bibinitperiod},
+           given={Marcus},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41eee90a96d38ce11a198e6c0aeb415f}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jiqiang},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=137297e0019ba55bca6f9b200782ae52}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f0d8885ad4c012b0ced0ee95cdf2729}{%
+           family={Riddell},
+           familyi={R\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Columbia Univ., New York, NY (United States); Harvard Univ., Cambridge, MA (United States)}%
+      }
+      \strng{namehash}{315a7c9e1cdeecc523de3b4d0e029d66}
+      \strng{fullhash}{29572594759b21c576aa9533a18a00d1}
+      \strng{bibnamehash}{315a7c9e1cdeecc523de3b4d0e029d66}
+      \strng{authorbibnamehash}{315a7c9e1cdeecc523de3b4d0e029d66}
+      \strng{authornamehash}{315a7c9e1cdeecc523de3b4d0e029d66}
+      \strng{authorfullhash}{29572594759b21c576aa9533a18a00d1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Statistical Software}
+      \field{number}{1}
+      \field{title}{Stan: A probabilistic programming language}
+      \field{volume}{76}
+      \field{year}{2017}
+    \endentry
+    \entry{cattelan_2013}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ddba594a97452f114437a2cc63f2e754}{%
+           family={Cattelan},
+           familyi={C\bibinitperiod},
+           given={Manuela},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2c09427c392dba21427be812f0244bcc}{%
+           family={Varin},
+           familyi={V\bibinitperiod},
+           given={Cristiano},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83bd34bb6266c52d0791aef76d308276}{%
+           family={Firth},
+           familyi={F\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{264a5a7f227e1598296af9a5275a1997}
+      \strng{fullhash}{264a5a7f227e1598296af9a5275a1997}
+      \strng{bibnamehash}{264a5a7f227e1598296af9a5275a1997}
+      \strng{authorbibnamehash}{264a5a7f227e1598296af9a5275a1997}
+      \strng{authornamehash}{264a5a7f227e1598296af9a5275a1997}
+      \strng{authorfullhash}{264a5a7f227e1598296af9a5275a1997}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society: Series C (Applied Statistics)}
+      \field{number}{1}
+      \field{title}{Dynamic Bradley–Terry modelling of sports tournaments}
+      \field{volume}{62}
+      \field{year}{2013}
+      \field{pages}{135\bibrangedash 150}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1111/j.1467-9876.2012.01046.x
+      \endverb
+      \verb{urlraw}
+      \verb https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9876.2012.01046.x
+      \endverb
+      \verb{url}
+      \verb https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9876.2012.01046.x
+      \endverb
+    \endentry
+    \entry{cook_2006}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=7081d88ca5b16a18f6a8ad608c660493}{%
+           family={Cook},
+           familyi={C\bibinitperiod},
+           given={Samantha\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=49a367b6280de8a239f8bbdd573f996f}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B.},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {[American Statistical Association, Taylor}%
+        {Francis, Ltd., Institute of Mathematical Statistics, Interface Foundation of America]}%
+      }
+      \strng{namehash}{839c4f1d84e82cf25921b8801f52a0c0}
+      \strng{fullhash}{839c4f1d84e82cf25921b8801f52a0c0}
+      \strng{bibnamehash}{839c4f1d84e82cf25921b8801f52a0c0}
+      \strng{authorbibnamehash}{839c4f1d84e82cf25921b8801f52a0c0}
+      \strng{authornamehash}{839c4f1d84e82cf25921b8801f52a0c0}
+      \strng{authorfullhash}{839c4f1d84e82cf25921b8801f52a0c0}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{10618600}
+      \field{journaltitle}{Journal of Computational and Graphical Statistics}
+      \field{number}{3}
+      \field{title}{Validation of Software for Bayesian Models Using Posterior Quantiles}
+      \field{volume}{15}
+      \field{year}{2006}
+      \field{pages}{675\bibrangedash 692}
+      \range{pages}{18}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/27594203
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/27594203
+      \endverb
+    \endentry
+    \entry{davidson_1970}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c91d20332f758eb3b418288640df62cd}{%
+           family={Davidson},
+           familyi={D\bibinitperiod},
+           given={Roger\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {[American Statistical Association, Taylor}%
+        {Francis, Ltd.]}%
+      }
+      \strng{namehash}{c91d20332f758eb3b418288640df62cd}
+      \strng{fullhash}{c91d20332f758eb3b418288640df62cd}
+      \strng{bibnamehash}{c91d20332f758eb3b418288640df62cd}
+      \strng{authorbibnamehash}{c91d20332f758eb3b418288640df62cd}
+      \strng{authornamehash}{c91d20332f758eb3b418288640df62cd}
+      \strng{authorfullhash}{c91d20332f758eb3b418288640df62cd}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{01621459, 1537274X}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{329}
+      \field{title}{On Extending the {B}radley-{T}erry Model to Accommodate Ties in Paired Comparison Experiments}
+      \field{volume}{65}
+      \field{year}{1970}
+      \field{pages}{317\bibrangedash 328}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2283595
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2283595
+      \endverb
+    \endentry
+    \entry{davidson_1977}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c91d20332f758eb3b418288640df62cd}{%
+           family={Davidson},
+           familyi={D\bibinitperiod},
+           given={Roger\bibnamedelima R.},
+           giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4f7ddb3d57866ff216d7afb3e2c42e07}{%
+           family={Beaver},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {International Biometric Society}%
+      }
+      \strng{namehash}{da92136209243c9540a29e3b3685844a}
+      \strng{fullhash}{da92136209243c9540a29e3b3685844a}
+      \strng{bibnamehash}{da92136209243c9540a29e3b3685844a}
+      \strng{authorbibnamehash}{da92136209243c9540a29e3b3685844a}
+      \strng{authornamehash}{da92136209243c9540a29e3b3685844a}
+      \strng{authorfullhash}{da92136209243c9540a29e3b3685844a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0006341X, 15410420}
+      \field{journaltitle}{Biometrics}
+      \field{number}{4}
+      \field{title}{On Extending the {B}radley-{T}erry Model to Incorporate Within-Pair Order Effects}
+      \field{volume}{33}
+      \field{year}{1977}
+      \field{pages}{693\bibrangedash 702}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2529467
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2529467
+      \endverb
+    \endentry
+    \entry{ufmg_futebol}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b3a2e43f513a51816469d9e4dd71645b}{%
+           family={{Departamento de Matemática, UFMG}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{b3a2e43f513a51816469d9e4dd71645b}
+      \strng{fullhash}{b3a2e43f513a51816469d9e4dd71645b}
+      \strng{bibnamehash}{b3a2e43f513a51816469d9e4dd71645b}
+      \strng{authorbibnamehash}{b3a2e43f513a51816469d9e4dd71645b}
+      \strng{authornamehash}{b3a2e43f513a51816469d9e4dd71645b}
+      \strng{authorfullhash}{b3a2e43f513a51816469d9e4dd71645b}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Probabilidades no Futebol}
+      \field{year}{2005}
+      \verb{urlraw}
+      \verb https://www.mat.ufmg.br/futebol/
+      \endverb
+      \verb{url}
+      \verb https://www.mat.ufmg.br/futebol/
+      \endverb
+    \endentry
+    \entry{diniz_2018}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=2715ed13900eae1c2de05606c2f1ed53}{%
+           family={Diniz},
+           familyi={D\bibinitperiod},
+           given={Marcio\bibnamedelima Alves},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c87b1d660c84fdd48a26999544b6571a}{%
+           family={Izbicki},
+           familyi={I\bibinitperiod},
+           given={Rafael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c0c45cfe1d333216f32145a4ddacc303}{%
+           family={Lopes},
+           familyi={L\bibinitperiod},
+           given={Danilo},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcf8897bbe3c34755ce50b485d7ad1a1}{%
+           family={Salasar},
+           familyi={S\bibinitperiod},
+           given={Luis\bibnamedelima Ernesto},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Informa UK Limited}%
+      }
+      \strng{namehash}{76d8059a8e5ea77f48c4898bd775efd3}
+      \strng{fullhash}{f70dff770a8b3d7b6634c7a72318fb8a}
+      \strng{bibnamehash}{76d8059a8e5ea77f48c4898bd775efd3}
+      \strng{authorbibnamehash}{76d8059a8e5ea77f48c4898bd775efd3}
+      \strng{authornamehash}{76d8059a8e5ea77f48c4898bd775efd3}
+      \strng{authorfullhash}{f70dff770a8b3d7b6634c7a72318fb8a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1476-9360}
+      \field{journaltitle}{Journal of the Operational Research Society}
+      \field{month}{4}
+      \field{number}{5}
+      \field{title}{Comparing probabilistic predictive models applied to football}
+      \field{volume}{70}
+      \field{year}{2018}
+      \field{pages}{770\bibrangedash 782}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1080/01605682.2018.1457485
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1080/01605682.2018.1457485
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1080/01605682.2018.1457485
+      \endverb
+    \endentry
+    \entry{dixon_1997}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1164c3d54b66774d19dad91efbbbb33e}{%
+           family={Dixon},
+           familyi={D\bibinitperiod},
+           given={Mark\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6c4a838648e29ebf56362b5bd4a96164}{%
+           family={Coles},
+           familyi={C\bibinitperiod},
+           given={Stuart\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Royal Statistical Society, Oxford University Press]}%
+      }
+      \strng{namehash}{f83cbabba2d2598e91eeb2fbff083b72}
+      \strng{fullhash}{f83cbabba2d2598e91eeb2fbff083b72}
+      \strng{bibnamehash}{f83cbabba2d2598e91eeb2fbff083b72}
+      \strng{authorbibnamehash}{f83cbabba2d2598e91eeb2fbff083b72}
+      \strng{authornamehash}{f83cbabba2d2598e91eeb2fbff083b72}
+      \strng{authorfullhash}{f83cbabba2d2598e91eeb2fbff083b72}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00359254, 14679876}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series C (Applied Statistics)}
+      \field{number}{2}
+      \field{title}{Modelling Association Football Scores and Inefficiencies in the Football Betting Market}
+      \field{volume}{46}
+      \field{year}{1997}
+      \field{pages}{265\bibrangedash 280}
+      \range{pages}{16}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2986290
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2986290
+      \endverb
+    \endentry
+    \entry{elo_1961}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ba734edd6a1a96ab7e1903630e8f56f0}{%
+           family={Elo},
+           familyi={E\bibinitperiod},
+           given={Arpad\bibnamedelima E.},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {United States Chess Federation}%
+      }
+      \strng{namehash}{ba734edd6a1a96ab7e1903630e8f56f0}
+      \strng{fullhash}{ba734edd6a1a96ab7e1903630e8f56f0}
+      \strng{bibnamehash}{ba734edd6a1a96ab7e1903630e8f56f0}
+      \strng{authorbibnamehash}{ba734edd6a1a96ab7e1903630e8f56f0}
+      \strng{authornamehash}{ba734edd6a1a96ab7e1903630e8f56f0}
+      \strng{authorfullhash}{ba734edd6a1a96ab7e1903630e8f56f0}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Chess Life}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{The {USCF} Rating System -- A Scientific Achievement}
+      \field{volume}{16}
+      \field{year}{1961}
+      \field{pages}{160\bibrangedash 161}
+      \range{pages}{2}
+    \endentry
+    \entry{fischer_2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=00495fd279d93dfc503d0cc61a8b5c49}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Kai},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79e9982f4623ebcfaf6e0086d1562dc5}{%
+           family={Haucap},
+           familyi={H\bibinitperiod},
+           given={Justus},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bafdfd1353e4af1659c86701e10a9d4c}
+      \strng{fullhash}{bafdfd1353e4af1659c86701e10a9d4c}
+      \strng{bibnamehash}{bafdfd1353e4af1659c86701e10a9d4c}
+      \strng{authorbibnamehash}{bafdfd1353e4af1659c86701e10a9d4c}
+      \strng{authornamehash}{bafdfd1353e4af1659c86701e10a9d4c}
+      \strng{authorfullhash}{bafdfd1353e4af1659c86701e10a9d4c}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sports Economics}
+      \field{number}{8}
+      \field{title}{Does Crowd Support Drive the Home Advantage in Professional Football? Evidence from German Ghost Games during the COVID-19 Pandemic}
+      \field{volume}{22}
+      \field{year}{2021}
+      \verb{doi}
+      \verb 10.1177/15270025211026552
+      \endverb
+    \endentry
+    \entry{gelman_2020}{misc}{}
+      \name{author}{10}{}{%
+        {{un=0,uniquepart=base,hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d36e97683cbc9d6ef06fc2ec40becb0}{%
+           family={Vehtari},
+           familyi={V\bibinitperiod},
+           given={Aki},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=740d117d0458272bb691f40adf15dfdb}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=349f7e565b19452ba4b48c1444dd0784}{%
+           family={Margossian},
+           familyi={M\bibinitperiod},
+           given={Charles\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5321a7ac2b0407bc405fa8816fd73f09}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d99a582e1b92c4dfd1fc834e146596ba}{%
+           family={Yao},
+           familyi={Y\bibinitperiod},
+           given={Yuling},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcc69ca3509324893a5dbf5cba60aa14}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={Lauren},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d22d0f2897624075bcba3f2195a96094}{%
+           family={Gabry},
+           familyi={G\bibinitperiod},
+           given={Jonah},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec69dfaa36b99b02d1d9a3733eae1d23}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul-Christian},
+           giveni={P\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=78238fef9a217c94bd838c226e914662}{%
+           family={Modrák},
+           familyi={M\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7b511f44eded88e08c98470ecd75568d}
+      \strng{fullhash}{b9d22941ceaf49d420166607da4fe436}
+      \strng{bibnamehash}{7b511f44eded88e08c98470ecd75568d}
+      \strng{authorbibnamehash}{7b511f44eded88e08c98470ecd75568d}
+      \strng{authornamehash}{7b511f44eded88e08c98470ecd75568d}
+      \strng{authorfullhash}{b9d22941ceaf49d420166607da4fe436}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Bayesian Workflow}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2011.01808
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2011.01808
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2011.01808
+      \endverb
+    \endentry
+    \entry{gvr_2024}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=3ac6348a7537d4e74e40d122bdb8ea8f}{%
+           family={{Grand View Research}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ac6348a7537d4e74e40d122bdb8ea8f}
+      \strng{fullhash}{3ac6348a7537d4e74e40d122bdb8ea8f}
+      \strng{bibnamehash}{3ac6348a7537d4e74e40d122bdb8ea8f}
+      \strng{authorbibnamehash}{3ac6348a7537d4e74e40d122bdb8ea8f}
+      \strng{authornamehash}{3ac6348a7537d4e74e40d122bdb8ea8f}
+      \strng{authorfullhash}{3ac6348a7537d4e74e40d122bdb8ea8f}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sports Betting Market Size \& Share, Industry Report, 2030}
+      \field{urlday}{22}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.grandviewresearch.com/industry-analysis/sports-betting-market-report
+      \endverb
+      \verb{url}
+      \verb https://www.grandviewresearch.com/industry-analysis/sports-betting-market-report
+      \endverb
+    \endentry
+    \entry{holgate_1964}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=39021a752340f4e9031e642e5065bbe0}{%
+           family={Holgate},
+           familyi={H\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{39021a752340f4e9031e642e5065bbe0}
+      \strng{fullhash}{39021a752340f4e9031e642e5065bbe0}
+      \strng{bibnamehash}{39021a752340f4e9031e642e5065bbe0}
+      \strng{authorbibnamehash}{39021a752340f4e9031e642e5065bbe0}
+      \strng{authornamehash}{39021a752340f4e9031e642e5065bbe0}
+      \strng{authorfullhash}{39021a752340f4e9031e642e5065bbe0}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0006-3444}
+      \field{journaltitle}{Biometrika}
+      \field{month}{6}
+      \field{number}{1-2}
+      \field{title}{Estimation for the bivariate Poisson distribution}
+      \field{volume}{51}
+      \field{year}{1964}
+      \field{pages}{241\bibrangedash 287}
+      \range{pages}{47}
+      \verb{doi}
+      \verb 10.1093/biomet/51.1-2.241
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/biomet/51.1-2.241
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/biomet/51.1-2.241
+      \endverb
+    \endentry
+    \entry{karlis_2003}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf8066be4829fb5f69dd7cd67f98db0e}{%
+           family={Karlis},
+           familyi={K\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb5b80fd274dce871390ecd9ef73bfa3}{%
+           family={Ntzoufras},
+           familyi={N\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Royal Statistical Society, Wiley]}%
+      }
+      \strng{namehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{fullhash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{bibnamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authorbibnamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authornamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authorfullhash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00390526, 14679884}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series D (The Statistician)}
+      \field{number}{3}
+      \field{title}{Analysis of Sports Data by Using Bivariate {P}oisson Models}
+      \field{volume}{52}
+      \field{year}{2003}
+      \field{pages}{381\bibrangedash 393}
+      \range{pages}{13}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/4128211
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/4128211
+      \endverb
+    \endentry
+    \entry{karlis_2009}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf8066be4829fb5f69dd7cd67f98db0e}{%
+           family={Karlis},
+           familyi={K\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb5b80fd274dce871390ecd9ef73bfa3}{%
+           family={Ntzoufras},
+           familyi={N\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{fullhash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{bibnamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authorbibnamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authornamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authorfullhash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IMA Journal of Management Mathematics}
+      \field{number}{2}
+      \field{title}{Bayesian modelling of football outcomes: using the Skellam's distribution for the goal difference}
+      \field{volume}{20}
+      \field{year}{2009}
+      \field{pages}{133\bibrangedash 145}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1093/imaman/dpn026
+      \endverb
+    \endentry
+    \entry{karlis_2000}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cf8066be4829fb5f69dd7cd67f98db0e}{%
+           family={Karlis},
+           familyi={K\bibinitperiod},
+           given={Dimitris},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cb5b80fd274dce871390ecd9ef73bfa3}{%
+           family={Ntzoufras},
+           familyi={N\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{fullhash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{bibnamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authorbibnamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authornamehash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \strng{authorfullhash}{fdcd51fe2cf7e7d00008bfa403bf30d0}
+      \field{extraname}{3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Student}
+      \field{title}{On Modelling Soccer Data}
+      \field{year}{2000}
+    \endentry
+    \entry{koopman_2015}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=21f365c12bd59fa8a7120260bd39f1fc}{%
+           family={Koopman},
+           familyi={K\bibinitperiod},
+           given={Siem\bibnamedelima Jan},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=64af141853d5116ecec4f66bb8712053}{%
+           family={Lit},
+           familyi={L\bibinitperiod},
+           given={Rutger},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5631a23bbb36eb99443a55e779ceb6c8}
+      \strng{fullhash}{5631a23bbb36eb99443a55e779ceb6c8}
+      \strng{bibnamehash}{5631a23bbb36eb99443a55e779ceb6c8}
+      \strng{authorbibnamehash}{5631a23bbb36eb99443a55e779ceb6c8}
+      \strng{authornamehash}{5631a23bbb36eb99443a55e779ceb6c8}
+      \strng{authorfullhash}{5631a23bbb36eb99443a55e779ceb6c8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Royal Statistical Society: Series A}
+      \field{number}{1}
+      \field{title}{A dynamic bivariate Poisson model for analysing and forecasting match results in the English Premier League}
+      \field{volume}{178}
+      \field{year}{2015}
+      \field{pages}{167\bibrangedash 186}
+      \range{pages}{20}
+    \endentry
+    \entry{lee_1997}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fb0b855c040e9843d1a93dd7e2050eea}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Alan\bibnamedelima J.},
+           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ASA Website}%
+      }
+      \strng{namehash}{fb0b855c040e9843d1a93dd7e2050eea}
+      \strng{fullhash}{fb0b855c040e9843d1a93dd7e2050eea}
+      \strng{bibnamehash}{fb0b855c040e9843d1a93dd7e2050eea}
+      \strng{authorbibnamehash}{fb0b855c040e9843d1a93dd7e2050eea}
+      \strng{authornamehash}{fb0b855c040e9843d1a93dd7e2050eea}
+      \strng{authorfullhash}{fb0b855c040e9843d1a93dd7e2050eea}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0933-2480}
+      \field{journaltitle}{CHANCE}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Modeling Scores in the Premier League: Is Manchester United Really the Best?}
+      \field{volume}{10}
+      \field{year}{1997}
+      \field{pages}{15\bibrangedash 19}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1080/09332480.1997.10554791
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/09332480.1997.10554791
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/09332480.1997.10554791
+      \endverb
+    \endentry
+    \entry{maher_1982}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2cad154b11eb4948fc0f32eefaa4eec1}{%
+           family={Maher},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2cad154b11eb4948fc0f32eefaa4eec1}
+      \strng{fullhash}{2cad154b11eb4948fc0f32eefaa4eec1}
+      \strng{bibnamehash}{2cad154b11eb4948fc0f32eefaa4eec1}
+      \strng{authorbibnamehash}{2cad154b11eb4948fc0f32eefaa4eec1}
+      \strng{authornamehash}{2cad154b11eb4948fc0f32eefaa4eec1}
+      \strng{authorfullhash}{2cad154b11eb4948fc0f32eefaa4eec1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistica Neerlandica}
+      \field{number}{3}
+      \field{title}{Modelling association football scores}
+      \field{volume}{36}
+      \field{year}{1982}
+      \field{pages}{109\bibrangedash 118}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1111/j.1467-9574.1982.tb00782.x
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9574.1982.tb00782.x
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9574.1982.tb00782.x
+      \endverb
+    \endentry
+    \entry{michels_2026_dataset}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d6613092da7fec795b878f7b965042ab}{%
+           family={Michels},
+           familyi={M\bibinitperiod},
+           given={Igor\bibnamedelima Patrício},
+           giveni={I\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f324a1103bcd9bb6ba6f39a28810a208}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Luiz\bibnamedelima Max},
+           giveni={L\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Zenodo}%
+      }
+      \strng{namehash}{146df4f806e5e6f30f38f4b06faa8fe3}
+      \strng{fullhash}{146df4f806e5e6f30f38f4b06faa8fe3}
+      \strng{bibnamehash}{146df4f806e5e6f30f38f4b06faa8fe3}
+      \strng{authorbibnamehash}{146df4f806e5e6f30f38f4b06faa8fe3}
+      \strng{authornamehash}{146df4f806e5e6f30f38f4b06faa8fe3}
+      \strng{authorfullhash}{146df4f806e5e6f30f38f4b06faa8fe3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 2.0.0}
+      \field{title}{Brazilian Football Match Report Dataset (2013--2025)}
+      \field{year}{2026}
+      \verb{doi}
+      \verb 10.5281/zenodo.19273806
+      \endverb
+      \verb{urlraw}
+      \verb https://zenodo.org/records/19273806
+      \endverb
+      \verb{url}
+      \verb https://zenodo.org/records/19273806
+      \endverb
+    \endentry
+    \entry{modrak_2025}{article}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=78238fef9a217c94bd838c226e914662}{%
+           family={Modrák},
+           familyi={M\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df2319656b19dd8d1a85dac9c9537f40}{%
+           family={Moon},
+           familyi={M\bibinitperiod},
+           given={Angie\bibnamedelima H.},
+           giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f48772c77f732a062a0ff2f081a7af0f}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Shinyoung},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5a4a19127ef59777727e64311f631d8}{%
+           family={Bürkner},
+           familyi={B\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00916736456f04f0ffe7954c178ff51c}{%
+           family={Huurre},
+           familyi={H\bibinitperiod},
+           given={Niko},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1af9a0292ca44827eb3d1da61acf2c03}{%
+           family={Faltejsková},
+           familyi={F\bibinitperiod},
+           given={Kateřina},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d36e97683cbc9d6ef06fc2ec40becb0}{%
+           family={Vehtari},
+           familyi={V\bibinitperiod},
+           given={Aki},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{8e499cebeaabd76d00b1bb8e3e5710dd}
+      \strng{fullhash}{ce6bb4d506c9d80ef407cc38f3120697}
+      \strng{bibnamehash}{8e499cebeaabd76d00b1bb8e3e5710dd}
+      \strng{authorbibnamehash}{8e499cebeaabd76d00b1bb8e3e5710dd}
+      \strng{authornamehash}{8e499cebeaabd76d00b1bb8e3e5710dd}
+      \strng{authorfullhash}{ce6bb4d506c9d80ef407cc38f3120697}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1936-0975}
+      \field{journaltitle}{Bayesian Analysis}
+      \field{month}{6}
+      \field{number}{2}
+      \field{title}{Simulation-Based Calibration Checking for Bayesian Computation: The Choice of Test Quantities Shapes Sensitivity}
+      \field{volume}{20}
+      \field{year}{2025}
+      \verb{doi}
+      \verb 10.1214/23-ba1404
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1214/23-BA1404
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1214/23-BA1404
+      \endverb
+    \endentry
+    \entry{nguyen_2021}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=7188c4953e2208ca80aa3ee642b777fc}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Quang},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {New England Statistical Society}%
+      }
+      \strng{namehash}{7188c4953e2208ca80aa3ee642b777fc}
+      \strng{fullhash}{7188c4953e2208ca80aa3ee642b777fc}
+      \strng{bibnamehash}{7188c4953e2208ca80aa3ee642b777fc}
+      \strng{authorbibnamehash}{7188c4953e2208ca80aa3ee642b777fc}
+      \strng{authornamehash}{7188c4953e2208ca80aa3ee642b777fc}
+      \strng{authorfullhash}{7188c4953e2208ca80aa3ee642b777fc}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2693-7166}
+      \field{journaltitle}{The New England Journal of Statistics in Data Science}
+      \field{month}{12}
+      \field{title}{{P}oisson Modeling and Predicting English Premier League Goal Scoring}
+      \field{year}{2021}
+      \field{pages}{95\bibrangedash 101}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.51387/21-nejsds1
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.51387/21-NEJSDS1
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.51387/21-NEJSDS1
+      \endverb
+    \endentry
+    \entry{penn_2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=05990cfaf360d120162dae97c5694478}{%
+           family={Penn},
+           familyi={P\bibinitperiod},
+           given={Mark\bibnamedelima J.},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f3475063a5ccf1d62b5ebcd37037e5e5}{%
+           family={Donnelly},
+           familyi={D\bibinitperiod},
+           given={Christl\bibnamedelima A.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Public Library of Science}%
+      }
+      \strng{namehash}{bb6f07189c9baa26b69ad522966c3a51}
+      \strng{fullhash}{bb6f07189c9baa26b69ad522966c3a51}
+      \strng{bibnamehash}{bb6f07189c9baa26b69ad522966c3a51}
+      \strng{authorbibnamehash}{bb6f07189c9baa26b69ad522966c3a51}
+      \strng{authornamehash}{bb6f07189c9baa26b69ad522966c3a51}
+      \strng{authorfullhash}{bb6f07189c9baa26b69ad522966c3a51}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{PLOS ONE}
+      \field{number}{5}
+      \field{title}{Analysis of a double {P}oisson model for predicting football results in Euro 2020}
+      \field{volume}{17}
+      \field{year}{2022}
+      \field{pages}{e0268511}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1371/journal.pone.0268511
+      \endverb
+    \endentry
+    \entry{pollard_1986}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2603181392ca94390d02b01a2f1b0cdf}{%
+           family={Pollard},
+           familyi={P\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2603181392ca94390d02b01a2f1b0cdf}
+      \strng{fullhash}{2603181392ca94390d02b01a2f1b0cdf}
+      \strng{bibnamehash}{2603181392ca94390d02b01a2f1b0cdf}
+      \strng{authorbibnamehash}{2603181392ca94390d02b01a2f1b0cdf}
+      \strng{authornamehash}{2603181392ca94390d02b01a2f1b0cdf}
+      \strng{authorfullhash}{2603181392ca94390d02b01a2f1b0cdf}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sports Sciences}
+      \field{number}{3}
+      \field{title}{Home advantage in soccer: A retrospective analysis}
+      \field{volume}{4}
+      \field{year}{1986}
+      \field{pages}{237\bibrangedash 248}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1080/02640418608732122
+      \endverb
+    \endentry
+    \entry{pypdf2}{software}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42bff21481c2bad754594b58a9866ab2}{%
+           family={{PyPDF2 Development Team}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{42bff21481c2bad754594b58a9866ab2}
+      \strng{fullhash}{42bff21481c2bad754594b58a9866ab2}
+      \strng{bibnamehash}{42bff21481c2bad754594b58a9866ab2}
+      \strng{authorbibnamehash}{42bff21481c2bad754594b58a9866ab2}
+      \strng{authornamehash}{42bff21481c2bad754594b58a9866ab2}
+      \strng{authorfullhash}{42bff21481c2bad754594b58a9866ab2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 3.0.1}
+      \field{title}{PyPDF2: A Pure-Python PDF Library}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://pypdf2.readthedocs.io/
+      \endverb
+      \verb{url}
+      \verb https://pypdf2.readthedocs.io/
+      \endverb
+    \endentry
+    \entry{re}{manual}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c7b5508dc5e59a2846d22617276cc27c}{%
+           family={{Python Software Foundation}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{fullhash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{bibnamehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authorbibnamehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authornamehash}{c7b5508dc5e59a2846d22617276cc27c}
+      \strng{authorfullhash}{c7b5508dc5e59a2846d22617276cc27c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Python Standard Library}
+      \field{title}{re — Regular expression operations}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://docs.python.org/3/library/re.html
+      \endverb
+      \verb{url}
+      \verb https://docs.python.org/3/library/re.html
+      \endverb
+    \endentry
+    \entry{requests}{software}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9b0625faae31ef68348d51e7ea785961}{%
+           family={{Reitz, Kenneth and Contributors}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b0625faae31ef68348d51e7ea785961}
+      \strng{fullhash}{9b0625faae31ef68348d51e7ea785961}
+      \strng{bibnamehash}{9b0625faae31ef68348d51e7ea785961}
+      \strng{authorbibnamehash}{9b0625faae31ef68348d51e7ea785961}
+      \strng{authornamehash}{9b0625faae31ef68348d51e7ea785961}
+      \strng{authorfullhash}{9b0625faae31ef68348d51e7ea785961}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Python HTTP Library}
+      \field{title}{Requests: HTTP for Humans}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://docs.python-requests.org/
+      \endverb
+      \verb{url}
+      \verb https://docs.python-requests.org/
+      \endverb
+    \endentry
+    \entry{rue_2000}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=e326a9db67a823211c2fdf9f542d0f34}{%
+           family={Rue},
+           familyi={R\bibinitperiod},
+           given={Håvard},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=33b9517ffa7967737630ba6aab41ae37}{%
+           family={Salvesen},
+           familyi={S\bibinitperiod},
+           given={Øyvind},
+           giveni={Ø\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {[Royal Statistical Society, Wiley]}%
+      }
+      \strng{namehash}{c34a67db84dab31e10b40450ee7b470d}
+      \strng{fullhash}{c34a67db84dab31e10b40450ee7b470d}
+      \strng{bibnamehash}{c34a67db84dab31e10b40450ee7b470d}
+      \strng{authorbibnamehash}{c34a67db84dab31e10b40450ee7b470d}
+      \strng{authornamehash}{c34a67db84dab31e10b40450ee7b470d}
+      \strng{authorfullhash}{c34a67db84dab31e10b40450ee7b470d}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00390526, 14679884}
+      \field{journaltitle}{Journal of the Royal Statistical Society. Series D (The Statistician)}
+      \field{number}{3}
+      \field{title}{Prediction and Retrospective Analysis of Soccer Matches in a League}
+      \field{volume}{49}
+      \field{year}{2000}
+      \field{pages}{399\bibrangedash 418}
+      \range{pages}{20}
+      \verb{urlraw}
+      \verb http://www.jstor.org/stable/2681065
+      \endverb
+      \verb{url}
+      \verb http://www.jstor.org/stable/2681065
+      \endverb
+    \endentry
+    \entry{sors_2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=10a79155cc0f4814252763cd2b72d44f}{%
+           family={Sors},
+           familyi={S\bibinitperiod},
+           given={Fabrizio},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eeacc347608ff8a0d17aa0d0fa9d55fc}{%
+           family={Grassi},
+           familyi={G\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df6b08c72822eeb7be97bd05a928defe}{%
+           family={Agostini},
+           familyi={A\bibinitperiod},
+           given={Tiziano},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5be0ad2d937d1c17c1fcd00bd6093a02}{%
+           family={Murgia},
+           familyi={M\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7e926fc46070e055511f64d5b4f1d418}
+      \strng{fullhash}{26e80ed7e4608e53a8db442e42662991}
+      \strng{bibnamehash}{7e926fc46070e055511f64d5b4f1d418}
+      \strng{authorbibnamehash}{7e926fc46070e055511f64d5b4f1d418}
+      \strng{authornamehash}{7e926fc46070e055511f64d5b4f1d418}
+      \strng{authorfullhash}{26e80ed7e4608e53a8db442e42662991}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{European Journal of Sport Science}
+      \field{number}{12}
+      \field{title}{The sound of silence in association football: Home advantage and referee bias decrease in matches played without spectators}
+      \field{volume}{21}
+      \field{year}{2021}
+      \field{pages}{1597\bibrangedash 1605}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1080/17461391.2020.1845814
+      \endverb
+    \endentry
+    \entry{cmdstanpy}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=38cdaa762a62c2f6e7ff4a46c1ce1705}{%
+           family={{Stan Development Team}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{fullhash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{bibnamehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{authorbibnamehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{authornamehash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \strng{authorfullhash}{38cdaa762a62c2f6e7ff4a46c1ce1705}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Version 1.2.0}
+      \field{title}{CmdStanPy: Python interface to CmdStan}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://github.com/stan-dev/cmdstanpy
+      \endverb
+      \verb{url}
+      \verb https://github.com/stan-dev/cmdstanpy
+      \endverb
+    \endentry
+    \entry{talts_2020}{misc}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e5c61fef1d2675693bf590489d5b7836}{%
+           family={Talts},
+           familyi={T\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1982fa604a3f94837efceaa53330b2a4}{%
+           family={Betancourt},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=740d117d0458272bb691f40adf15dfdb}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d36e97683cbc9d6ef06fc2ec40becb0}{%
+           family={Vehtari},
+           familyi={V\bibinitperiod},
+           given={Aki},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e1eb60e3b6e222217bf8e9b24070b28}{%
+           family={Gelman},
+           familyi={G\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d37e539b0e8df59145b070749103f56f}
+      \strng{fullhash}{ca994dc3abf763ad24108ca75f586f74}
+      \strng{bibnamehash}{d37e539b0e8df59145b070749103f56f}
+      \strng{authorbibnamehash}{d37e539b0e8df59145b070749103f56f}
+      \strng{authornamehash}{d37e539b0e8df59145b070749103f56f}
+      \strng{authorfullhash}{ca994dc3abf763ad24108ca75f586f74}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Validating Bayesian Inference Algorithms with Simulation-Based Calibration}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 1804.06788
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1804.06788
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1804.06788
+      \endverb
+    \endentry
+    \entry{wolf_2020}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=60f2558dc5f41b3e88664339861d8970}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={Stephan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d96c14f747a907418e51f7fbc2215be7}{%
+           family={Schmitt},
+           familyi={S\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=952e7ee348d058f9287a08ad1c034dbc}{%
+           family={Schuller},
+           familyi={S\bibinitperiod},
+           given={Björn},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b5ae0c2c9e46a8ff78c1931aecdac2d2}
+      \strng{fullhash}{b5ae0c2c9e46a8ff78c1931aecdac2d2}
+      \strng{bibnamehash}{b5ae0c2c9e46a8ff78c1931aecdac2d2}
+      \strng{authorbibnamehash}{b5ae0c2c9e46a8ff78c1931aecdac2d2}
+      \strng{authornamehash}{b5ae0c2c9e46a8ff78c1931aecdac2d2}
+      \strng{authorfullhash}{b5ae0c2c9e46a8ff78c1931aecdac2d2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sports Analytics}
+      \field{month}{10}
+      \field{title}{A football player rating system}
+      \field{volume}{6}
+      \field{year}{2020}
+      \field{pages}{1\bibrangedash 15}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.3233/JSA-200411
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

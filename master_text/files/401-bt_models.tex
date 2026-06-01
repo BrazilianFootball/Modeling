@@ -1,0 +1,206 @@
+\section{Bradley-Terry model}
+\label{sec:BTmodel}
+
+Bradley–Terry models \cite{bradley_terry_1952} provide a natural starting point for modelling football match outcomes, as they directly relate the probability of winning to latent team skill parameters.
+In their simplest form, these models treat matches as binary events, focusing only on the final outcome rather than the underlying scoreline.
+
+In this work, we consider a family of Bradley–Terry–type models of increasing complexity, beginning with a basic binary formulation and progressively incorporating home effect and the possibility of draws.
+These models serve both as a baseline for predictive performance and as a test for methodological validation, given their relatively low-dimensional parameter space and well-understood identifiability properties.
+
+\subsection{General Formulation}
+\label{sec:BT_general_formulation}
+
+Before presenting the specific variants of the Bradley–Terry model, we introduce a general formulation that incorporates all its structural components: team skills, home effect, and the possibility of draws.
+This serves as a conceptual starting point, from which different models naturally emerge through parameter restrictions and simplifying assumptions.
+
+The Bradley-Terry model can be expressed in terms of team strengths and outcome probabilities.
+For a match between team $i$ (home) and team $j$ (away), the strengths are defined as:
+\begin{align}
+    \label{eq:bt_general_home_strength}
+    s_i &= \exp(\theta_i + \nu) \\
+    \label{eq:bt_general_away_strength}
+    s_j &= \exp(\theta_j),
+\end{align}
+
+\noindent where:
+\begin{itemize}
+    \item $\theta_i \in \mathbb{R}$ is the log-skill parameter for team $i$;
+    \item $\nu \in \mathbb{R}$ is the home effect parameter;
+    \item $s_i$ is the strength of team $i$ when playing at home;
+    \item $s_j$ is the strength of team $j$ when playing away.
+\end{itemize}
+
+The probability of each outcome is then given by:
+\begin{align}
+    \label{eq:bt_general_prob_home}
+    P(\text{team } i \text{ wins}) &= \frac{s_i}{s_i + s_j + s_{\text{tie}}} \\
+    \label{eq:bt_general_prob_away}
+    P(\text{team } j \text{ wins}) &= \frac{s_j}{s_i + s_j + s_{\text{tie}}} \\
+    \label{eq:bt_general_prob_tie}
+    P(\text{draw}) &= \frac{s_{\text{tie}}}{s_i + s_j + s_{\text{tie}}},
+\end{align}
+
+\noindent where $s_{\text{tie}} = \kappa \sqrt{s_i \cdot s_j}$ is the tie strength, with $\kappa \geq 0$ being the tie parameter, following the approach of \textcite{davidson_1970}.
+When $\kappa = 0$, draws are not allowed and the model reduces to a binary outcome model, with the outcome $y_{i,j}$ following a Bernoulli distribution.
+When $\kappa > 0$, the outcome $y_{i,j}$ follows a categorical distribution with these probabilities.
+
+Given a set of matches $\mathcal{M}$, the likelihood can be computed as:
+\begin{equation}
+    \label{eq:bt_general_likelihood}
+    \mathcal{L}(\boldsymbol{\theta}, \nu, \kappa ; \mathbf{y}) = \prod_{m \in \mathcal{M}} P(y_m \mid \theta_{i_m}, \theta_{j_m}, \nu, \kappa),
+\end{equation}
+
+\noindent where $y_m$ is the outcome of match $m$ between teams $i_m$ and $j_m$.
+
+The Bradley-Terry model defined by equations \ref{eq:bt_general_prob_home}, \ref{eq:bt_general_prob_away}, and \ref{eq:bt_general_prob_tie} presents identifiability issues, with the likelihood remaining invariant under translations of all log-skill parameters by a constant $c$:
+\begin{equation}
+    \mathcal{L}(\boldsymbol{\theta}, \nu, \kappa ; \mathbf{y}) = \mathcal{L}(\boldsymbol{\theta} + c, \nu, \kappa ;\mathbf{y}),
+\end{equation}
+
+\noindent since:
+\begin{align*}
+    (\theta_i + c) + \nu - (\theta_j + c) &= \theta_i + \nu - \theta_j, \\
+    \exp(\theta_i + c + \nu) &= \exp(c) \cdot \exp(\theta_i + \nu), \\
+    \exp(\theta_j + c) &= \exp(c) \cdot \exp(\theta_j),
+\end{align*}
+
+\noindent and the constant $\exp(c)$ cancels out in the ratio of strengths.
+
+To ensure model identifiability, we impose a sum-to-zero constraint on the log-skill parameters:
+\begin{equation}
+    \label{eq:sum_zero_cons_bt}
+    \sum_{i=1}^{n} \theta_i = 0.
+\end{equation}
+
+This constraint is implemented by parametrizing the vector as:
+\begin{equation}
+    \boldsymbol{\theta} = \lrc{\theta_1, \theta_2, \ldots, \theta_{n-1}, -\sum_{i=1}^{n-1} \theta_i},
+\end{equation}
+
+\noindent where only the first $n-1$ parameters are estimated, and the last is determined by the constraint.
+
+\subsection{Model Variants}
+\label{sec:BT_model_variants}
+
+Different models arise from simplifying assumptions about the parameters in the general formulation.
+The models can be categorized based on two key dimensions:
+\begin{enumerate}
+    \item \textbf{Home Effect}: Present ($\nu \neq 0$) vs. Absent ($\nu = 0$);
+    \item \textbf{Ties Allowed}: Present ($\kappa > 0$) vs. Absent ($\kappa = 0$).
+\end{enumerate}
+
+This section describes the four Bradley-Terry model variants (BT1--BT4) used to model match outcomes in football matches in the present work.
+These models are organized from the simplest binary outcome model without home effect, BT1, to the most complex ternary outcome model with home effect, BT4.
+The model names were chosen for simplicity, avoiding unnecessary repetition.
+
+Model \textbf{BT1} is the simplest Bradley-Terry model, using a single log-skill parameter $\theta_i$ per team with no home effect and no ties allowed.
+The log-odds of team $i$ winning against team $j$ is given by $\log(\text{odds}) = \theta_i - \theta_j$, which corresponds to a binary outcome model where $P(\text{team } i \text{ wins}) = \exp(\theta_i) / (\exp(\theta_i) + \exp(\theta_j))$.
+
+Model \textbf{BT2} extends BT1 by incorporating a home effect parameter $\nu$.
+The log-odds becomes $\log(\text{odds}) = \theta_i + \nu - \theta_j$ for the home team, capturing the additional effect of playing at home.
+Like BT1, this model does not allow ties.
+
+Model \textbf{BT3} extends BT1 by allowing ties through the introduction of a tie parameter $\kappa \geq 0$.
+The tie strength is defined as $s_{\text{tie}} = \kappa \sqrt{s_i \cdot s_j}$, where $s_i = \exp(\theta_i)$ and $s_j = \exp(\theta_j)$.
+This model does not include home effect, so the strengths are symmetric with respect to home and away contexts.
+
+Model \textbf{BT4} combines the features of BT2 and BT3, incorporating both home effect and ties.
+The home team's strength becomes $s_i = \exp(\theta_i + \nu)$, while the away team's strength remains $s_j = \exp(\theta_j)$.
+The tie strength is $s_{\text{tie}} = \kappa \sqrt{s_i \cdot s_j}$, providing the most flexible specification that accounts for both home effect and the possibility of draws.
+
+The taxonomy of these model variants is illustrated in Figure~\ref{fig:bt_models_taxonomy}.
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[
+        level 1/.style = {sibling distance = 4cm, level distance = 2.5cm},
+        level 2/.style = {sibling distance = 2cm, level distance = 2cm},
+        every node/.style = {
+            draw,
+            rectangle,
+            rounded corners,
+            align=center,
+            minimum width = 1.5cm,
+            minimum height = 0.8cm,
+            font = \scriptsize
+        },
+        root/.style = {
+            minimum width = 3.5cm,
+            minimum height = 1.5cm,
+            font = \normalsize
+        },
+        leaf/.style = {
+            fill = gray!20,
+            font = \tiny
+        }
+    ]
+        \node[root] {
+            $\begin{aligned}
+                s_i &= \exp(\theta_i + \nu) \\
+                s_j &= \exp(\theta_j) \\
+                s_{\text{tie}} &= \kappa \sqrt{s_i \cdot s_j}
+            \end{aligned}$ \\
+            General Formulation
+        }
+            child {
+                node {
+                    $\kappa = 0$ \\
+                    No Ties
+                }
+                child {
+                    node {
+                        $\nu = 0$ \\
+                        No Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {BT1}
+                    }
+                }
+                child {
+                    node {
+                        $\nu \neq 0$ \\
+                        With Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {BT2}
+                    }
+                }
+            }
+            child {
+                node {
+                    $\kappa > 0$ \\
+                    Ties Allowed
+                }
+                child {
+                    node {
+                        $\nu = 0$ \\
+                        No Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {BT3}
+                    }
+                }
+                child {
+                    node {
+                        $\nu \neq 0$ \\
+                        With Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {BT4}
+                    }
+                }
+            };
+    \end{tikzpicture}
+    \caption{
+        \textbf{Taxonomy of the four Bradley-Terry model variants}.
+        The root node displays the complete specification with log-skill parameters ($\theta_i$), home effect ($\nu$), and tie parameter ($\kappa$).
+        The first level of branching corresponds to whether ties are allowed ($\kappa > 0$) or not ($\kappa = 0$).
+        The second level distinguishes models with ($\nu \neq 0$) and without ($\nu = 0$) home effect.
+        Each leaf node represents a specific model variant, with the model identifier (BT1--BT4) indicating the final configuration after all simplifications have been applied.
+    }
+    \label{fig:bt_models_taxonomy}
+\end{figure}

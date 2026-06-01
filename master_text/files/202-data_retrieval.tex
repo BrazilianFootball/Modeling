@@ -1,0 +1,114 @@
+\section{Data Retrieval Process}
+\label{sec:retrieval}
+
+The data retrieval process begins with extracting the PDF reports from CBF's website.
+We use the Python package \textsc{requests} \cite{requests}, passing the URL pattern described in Section~\ref{sec:report_structure} as an argument.
+After making the request, we validate the response and, if valid, save the PDF file to disk.
+To avoid overwhelming CBF's server, once a report is successfully saved, we do not make additional requests for that same report.
+
+With the saved PDF, we open it using \textsc{PdfReader} from the \textsc{PyPDF2} package \cite{pypdf2} and extract all text content to a CSV file, which is then saved to disk.
+The parsing process is implemented in Python using the \textsc{re} package \cite{re} for regular expression matching to extract and parse the data from the CSV files, saving the structured information into JSON files.
+
+From the file header, we extract the clubs' names and the final match result.
+For both clubs in the game, we collect information about all players who participated in that match, including their jersey number, nickname and full name, starting condition (in the line-up or on the bench), professional status, the player's CBF code, and the club represented by the player in that game.
+
+After extracting player information, we collect data on goals scored in the match.
+For each goal, we save the moment (minute and period), the goal type (open-play, penalty, free kick, or own goal), the jersey number and name of the scorer, and the club for which the goal was scored.
+
+We also extract information about substitutions that occurred during the game.
+For each substitution, we save the moment of the change, the club that made the substitution, and the jersey number and name of both the player who entered and the player who exited.
+
+Finally, we record information about yellow and red cards.
+This data is saved with the same structure as goals, except for the goal type field.
+An important note is that in this process, each half of the game is clipped to 45 minutes.
+Therefore, all events that occurred during injury time are recorded as events at minute 45 of the corresponding period.
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+        node distance=0.9cm,
+        >=Latex,
+        thick,
+        process/.style={
+            draw,
+            rounded corners,
+            minimum width=4cm,
+            minimum height=1cm,
+            align=center,
+            font=\small,
+            fill=blue!15
+        },
+        save/.style={
+            draw,
+            rounded corners,
+            minimum width=4cm,
+            minimum height=1cm,
+            align=center,
+            font=\small,
+            fill=cyan!15
+        },
+        decision/.style={
+            diamond,
+            aspect=2.2,
+            draw,
+            align=center,
+            inner sep=1pt,
+            fill=yellow!15,
+            font=\small
+        },
+        startstop/.style={
+            draw,
+            rounded corners,
+            minimum width=4cm,
+            minimum height=1cm,
+            align=center,
+            font=\small,
+            fill=red!15
+        },
+        skip/.style={
+            draw,
+            rounded corners,
+            minimum width=4cm,
+            minimum height=1cm,
+            align=center,
+            font=\small,
+            fill=gray!15
+        }
+    ]
+        % Main vertical flow
+        \node[startstop] (start) {Start};
+        \node[process, below=of start] (request) {Request PDF\\from CBF's site};
+        \node[decision, below=of request] (valid) {Valid?};
+        \node[save, below=of valid] (savepdf) {Save PDF};
+        \node[process, below=of savepdf] (extract) {Extract text\\(PyPDF2)};
+        \node[save, below=of extract] (savecsv) {Save to CSV};
+        \node[process, below=of savecsv] (parse) {Parse with\\regex};
+        \node[process, below=of parse] (extractdata) {Extract data};
+        \node[save, below=of extractdata] (savejson) {Save to JSON};
+        \node[decision, below=of savejson] (more) {More?};
+        \node[startstop, below=of more] (end) {End};
+
+        % Side branch
+        \node[skip, right=2cm of valid, text width=4cm] (skip) {Skip};
+
+        % Arrows
+        \draw[->] (start) -- (request);
+        \draw[->] (request) -- (valid);
+        \draw[->] (valid) -- node[left] {Yes} (savepdf);
+        \draw[->] (valid.east) -- node[above] {No} (skip.west);
+        \draw[->] (savepdf) -- (extract);
+        \draw[->] (extract) -- (savecsv);
+        \draw[->] (savecsv) -- (parse);
+        \draw[->] (parse) -- (extractdata);
+        \draw[->] (extractdata) -- (savejson);
+        \draw[->] (savejson) -- (more);
+        \draw[->] (more) -- node[left] {No} (end);
+        \draw[->, bend left=40] (more.west) to node[left] {Yes} (request.west);
+        \draw[->] (skip) |- (more);
+    \end{tikzpicture}
+    \caption{
+        \textbf{Data extraction workflow}.
+        Overview of the extraction process: first extracting the reports from CBF's website, then processing the information through PDF to CSV conversion and JSON parsing.
+    }
+    \label{fig:extraction_flowchart}
+\end{figure}

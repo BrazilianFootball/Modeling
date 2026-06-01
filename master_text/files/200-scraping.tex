@@ -1,0 +1,37 @@
+\chapter{Data Extraction and Processing}
+\label{scraping}
+
+This chapter details the methodology for extracting, organising and processing data from digital match reports made available by the \textit{Confederação Brasileira de Futebol} (CBF).
+
+The CBF maintains, since 2013, a repository with open access to match reports in PDF format.
+These reports can be accessed through CBF's website (\url{https://www.cbf.com.br}) or using the following URL pattern: \url{https://conteudo.cbf.com.br/sumulas/{year}/{championship_id}{game_id}se.pdf}.
+The championship identifiers are shown in Table~\ref{tab:championship_id}.
+The game ID is an incremental integer, one for each game and defined before the start of the championship, which may result in gaps when a game is postponed during the season.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{ccc}
+        \toprule
+        Championship ID & Championship Name                      & Details \\
+        \midrule
+        142             & \textit{Campeonato Brasileiro Série A} & Brazilian First Division \\
+        242             & \textit{Campeonato Brasileiro Série B} & Brazilian Second Division \\
+        342             & \textit{Campeonato Brasileiro Série C} & Brazilian Third Division \\
+        542             & \textit{Campeonato Brasileiro Série D} & Brazilian Fourth Division \\
+        424             & \textit{Copa do Brasil}                & National Cup \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Championship ID pattern on CBF's website}.
+        The IDs used for accessing match reports on CBF's website.
+    }
+    \label{tab:championship_id}
+\end{table}
+
+\input{files/201-report_structure}
+
+\input{files/202-data_retrieval}
+
+\input{files/203-data_treatment}
+
+\input{files/204-data_characterization}

@@ -1,0 +1,13 @@
+\section{Computational and High Dimensional Considerations}
+\label{sec:computational_considerations}
+
+As illustrated in Figure \ref{fig:sbc_workflow}, SBC can be computationally expensive, as it requires repeated posterior inference for many synthetic datasets.
+This cost can be mitigated through parallelisation, since each inference run is independent.
+Despite the high computational cost, performing SBC early in the modelling process allows for detection of coding mistakes or conceptual errors before substantial resources are spent on large-scale analyses.
+For this reason, it is recommended that SBC be considered as part of the Bayesian model development process, rather than an afterthought, as emphasised by \textcite{gelman_2020}.
+
+These computational challenges become even more pronounced in high-dimensional models, where a large number of parameters must be assessed simultaneously.
+Applying SBC independently to each parameter is conceptually straightforward but has a huge cost.
+To reduce this cost, the workflow in Figure \ref{fig:sbc_workflow} can be extended to high dimensional models by just taking $\theta$ as a $d$-dimensional vector.
+For each component of $\theta$, rank statistics can be computed and stored across simulations, and their empirical distributions can then be checked for uniformity.
+While this approach increases storage and computational demands, it provides a systematic way to diagnose inference quality even in complex, high-dimensional settings.

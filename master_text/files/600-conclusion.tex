@@ -1,0 +1,43 @@
+\chapter{Conclusion}
+\label{conclusion}
+
+Probabilistic models for football outcomes have been studied extensively, specifically for European competitions.
+However, the validation via Simulation-Based Calibration and the extension to the player level remain uncommon.
+This work addresses this gap by making three main contributions.
+
+The first contribution is a dataset spanning from 2013 to 2025, covering five competitions (\textit{Série A} through \textit{D} and \textit{Copa do Brasil}).
+It maps over 16,800 unique players across 368 clubs and is available at \url{https://github.com/BrazilianFootball/Data}, with an archived version on Zenodo \cite{michels_2026_dataset}.
+The extraction pipeline converts PDF match reports into structured JSON files with match-level summary and temporal segmentation based on substitutions and red cards.
+This information enables the analysis at both club and player levels.
+
+The second contribution is the application of Simulation-Based Calibration to validate the inference procedure for all 22 proposed models.
+The validation occurs for 14 club-level (4 Bradley-Terry and 10 Poisson variants) and 8 player-level (all Poisson variants) specifications.
+All of them passed validation, with flagging rates consistent with chance under 95\% confidence bands.
+This procedure ensures that posterior distributions are correctly calibrated before application to real data.
+
+The third contribution is the comparative evaluation of models on \textit{Brasileirão} data from 2020--2025 and their extension to the player level.
+Model P7 (single skill with home effect and common effect) achieved the best predictive performance according to Brier Score, Log Score, and Ranked Probability Score.
+Analysing year by year, the home effect remained robust over time, with estimates for the multiplicative effect on the home team's expected goals ranging from 1.31 to 1.53.
+The common effect parameter was statistically indistinguishable from zero, indicating that team strengths alone adequately capture the goal-scoring structure in \textit{Brasileirão}.
+
+At the player level, log-skill parameters were estimated for 730 unique players in the single-season analysis and 1,975 in the multi-season analysis.
+The synthetic player parameter quantifying red card effects showed strong negative impact on the team's expected goals when aggregating players to the team level.
+For regular players, all estimated credible intervals include zero, indicating that the model fails to identify any significant difference between players.
+Furthermore, individual skill estimates correlate near-perfectly with weighted goal difference.
+This is a strong indication that the player-level model captures the team context in matches played by the player rather than isolated individual ability.
+
+This confounding between player skill and team performance reflects a fundamental limitation of models relying solely on match outcomes.
+Without individual action data, the contribution of each player cannot be separated from the collective team effect.
+More broadly, the models assume that team strengths are constant within each season and that matches are exchangeable.
+This assumption ignores several factors that may influence outcomes, such as fatigue from fixture congestion and the differential pressure of decisive versus inconsequential matches.
+Under exchangeability, a win in the first round carries the same inferential weight as a win in the final round, precluding the detection of form fluctuations or momentum effects.
+
+Several directions could address these limitations.
+Incorporating player-specific event data would enable finer performance attribution and reduce the confounding between individual skill and team context.
+Relaxing the exchangeability assumption would require dynamic specifications where team and player abilities evolve over time.
+State-space formulations, in which parameters follow a random walk or autoregressive process, would allow the model to capture form fluctuations.
+Such extensions would also enable predictions that account for recent performance rather than treating all historical matches equally.
+Another possibility is adding contextual covariates, such as days since last match, travel distance, or an indicator for decisive matches, to the model.
+These covariates would allow the model to distinguish between high- and low-pressure moments without abandoning the exchangeability framework entirely.
+
+To support reproducibility, all code used in this work is available at \url{https://github.com/BrazilianFootball/Modeling}.

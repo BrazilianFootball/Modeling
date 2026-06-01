@@ -1,0 +1,272 @@
+\section{Poisson model}
+\label{sec:Poisson_model}
+
+From a modelling perspective, Bradley-Terry models treat matches as binary or ternary events by collapsing the game score into a win/draw/loss indicator.
+This abstraction makes it impossible for the model to distinguish between a dominant win and a narrow one, resulting in a loss of information about team performance.
+
+In contrast, Poisson models \cite{maher_1982, dixon_1997, lee_1997, karlis_2000} offer an alternative by modelling the home and away goals directly.
+This not only doubles the number of observed data per match, from an indicator to two count variables, but also allows the model to capture potential asymmetries between teams' performance.
+
+\subsection{General Formulation}
+\label{sec:Poisson_general_formulation}
+
+The general formulation of the Poisson models presented in this section describes the most comprehensive structure considered in this work for modelling the number of goals scored by each team.
+This parametrization includes distinct offensive and defensive effects, distinguishes between home and away contexts, and allows for the inclusion of a common effect term on both goal intensities, serving as the foundation for all model variants introduced later.
+
+The general formulation for the log-intensity parameters can be expressed as:
+\begin{align}
+    \label{eq:poisson_general_home}
+    \log(\lambda_{i,j,h}) &= \alpha_i + \beta_j + \nu + \eta \\
+    \label{eq:poisson_general_away}
+    \log(\lambda_{j,i,a}) &= \delta_j + \gamma_i + \eta,
+\end{align}
+
+where:
+\begin{itemize}
+    \item $\lambda_{i,j,h}$ is the expected number of goals scored by team $i$ (home) against team $j$ (away);
+    \item $\lambda_{j,i,a}$ is the expected number of goals scored by team $j$ (away) against team $i$ (home);
+    \item $\alpha_i$ is the offensive ability of team $i$ when playing at home;
+    \item $\gamma_i$ is the defensive ability of team $i$ when playing at home;
+    \item $\beta_j$ is the defensive ability of team $j$ when playing away;
+    \item $\delta_j$ is the offensive ability of team $j$ when playing away;
+    \item $\nu \in \mathbb{R}$ is the home effect parameter;
+    \item $\eta \in \mathbb{R}$ is a common effect parameter that affects both teams equally.
+\end{itemize}
+
+The goals are then modelled as conditionally independent Poisson random variables:
+\begin{align}
+    \label{eq:poisson_general_dist_home}
+    g_{i,j} \mid \lambda_{i,j} &\sim \text{Poisson}(\lambda_{i,j}) \\
+    \label{eq:poisson_general_dist_away}
+    g_{j,i} \mid \lambda_{j,i} &\sim \text{Poisson}(\lambda_{j,i}),
+\end{align}
+
+\noindent where $g_{i,j}$ and $g_{j,i}$ are the goals scored by teams $i$ and $j$ respectively.
+
+Given a set of matches $\mathcal{M}$, with home goals $G_h$ and away goals $G_a$, the likelihood can be computed as:
+\begin{equation}
+    \label{eq:poisson_general_likelihood}
+    \mathcal{L}(\boldsymbol{\theta} ; G_h, G_a) = \prod_{m \in \mathcal{M}} \frac{\lambda_{m_h}^{g_{h_m}} \cdot \exp(-\lambda_{m_h})}{g_{h_m}!} \cdot \frac{\lambda_{m_a}^{g_{a_m}} \cdot \exp(-\lambda_{m_a})}{g_{a_m}!},
+\end{equation}
+
+\noindent where $g_{h_m}$ and $g_{a_m}$ are the total goals of home and away teams in match $m$, respectively, and $\lambda_{m_h}$ and $\lambda_{m_a}$ are the expected number of goals for the home and away teams in match $m$.
+
+The general formulation presented in equations \ref{eq:poisson_general_home} and \ref{eq:poisson_general_away} presents identifiability issues.
+Specifically, the likelihood remains invariant under certain transformations of the parameters.
+
+When $\boldsymbol{\alpha}$, $\boldsymbol{\beta}$, $\boldsymbol{\gamma}$, and $\boldsymbol{\delta}$ are all independent, adding a constant $c$ to all attack parameters and subtracting the same constant from the defence parameters, while keeping $\nu$ and $\eta$ unchanged, does not change the likelihood:
+\begin{equation}
+    \mathcal{L}(\boldsymbol{\alpha}, \boldsymbol{\beta}, \boldsymbol{\gamma}, \boldsymbol{\delta}, \nu, \eta ; G_h, G_a) = \mathcal{L}(\boldsymbol{\alpha} + c, \boldsymbol{\beta} - c, \boldsymbol{\gamma} - c, \boldsymbol{\delta} + c, \nu, \eta ; G_h, G_a).
+\end{equation}
+
+This occurs because:
+\begin{align*}
+    (\alpha_i + c) + (\beta_j - c) + \nu + \eta &= \alpha_i + \beta_j + \nu + \eta \\
+    (\delta_j + c) + (\gamma_i - c) + \eta &= \delta_j + \gamma_i + \eta.
+\end{align*}
+
+The constant $c$ cancels out in the additions and subtractions, leaving the log-intensity parameters unchanged, and thus the likelihood remains invariant.
+Similarly, adding a constant $c$ on $\eta$ and subtracting $c$ on both $\alpha$ and $\delta$ or both $\beta$ and $\gamma$ keep the likelihood unchanged:
+\begin{align*}
+    \mathcal{L}(\boldsymbol{\alpha}, \boldsymbol{\beta}, \boldsymbol{\gamma}, \boldsymbol{\delta}, \nu, \eta ; G_h, G_a) &  = \mathcal{L}(\boldsymbol{\alpha} - c, \boldsymbol{\beta}, \boldsymbol{\gamma}, \boldsymbol{\delta} - c, \nu, \eta + c ; G_h, G_a) \\
+    & = \mathcal{L}(\boldsymbol{\alpha}, \boldsymbol{\beta} - c, \boldsymbol{\gamma} - c, \boldsymbol{\delta}, \nu, \eta + c ; G_h, G_a).
+\end{align*}
+To ensure model identifiability, we impose sum-to-zero constraints parametrizing the vectors as:
+\begin{align}
+    \label{eq:sum_to_zero_alpha}
+    \boldsymbol{\alpha} &= \lrc{\alpha_1, \alpha_2, \ldots, \alpha_{n-1}, -\sum_{i=1}^{n-1} \alpha_i} \\
+    \label{eq:sum_to_zero_beta}
+    \boldsymbol{\beta} &= \lrc{\beta_1, \beta_2, \ldots, \beta_{n-1}, -\sum_{i=1}^{n-1} \beta_i} \\
+    \label{eq:sum_to_zero_delta}
+    \boldsymbol{\delta} &= \lrc{\delta_1, \delta_2, \ldots, \delta_{n-1}, -\sum_{i=1}^{n-1} \delta_i} \\
+    \label{eq:sum_to_zero_gamma}
+    \boldsymbol{\gamma} &= \lrc{\gamma_1, \gamma_2, \ldots, \gamma_{n-1}, -\sum_{i=1}^{n-1} \gamma_i}
+\end{align}
+
+\noindent where only the first $n-1$ parameters are estimated, and the last is determined by the constraint.
+
+In models where $\eta$ is set equal to zero, the constraints given by Equations \ref{eq:sum_to_zero_beta} and \ref{eq:sum_to_zero_delta} can be removed, since the restrictions of Equations \ref{eq:sum_to_zero_alpha} and \ref{eq:sum_to_zero_gamma} are already sufficient to ensure identifiability.
+However, in our implementation, we maintain all constraints regardless of whether $\eta$ is present.
+This approach ensures consistency across all model variants and enhances interpretability by fixing a reference point (zero mean) for all parameter vectors, allowing parameters to be interpreted as deviations from the average team ability.
+
+\subsection{Model Variants}
+\label{sec:Poisson_model_variants}
+
+Different models arise from simplifying assumptions about the parameters in equations \ref{eq:poisson_general_home} and \ref{eq:poisson_general_away}. The models can be categorized based on three key dimensions:
+\begin{enumerate}
+    \item \textbf{Offence-Defence Parametrization}: Single parameter ($\boldsymbol{\alpha} = \boldsymbol{\delta}$ and $\boldsymbol{\beta} = \boldsymbol{\gamma}$, with $\boldsymbol{\beta} = -\boldsymbol{\alpha}$) vs. Two parameters ($\boldsymbol{\alpha}$ and $\boldsymbol{\beta}$ independent, with $\boldsymbol{\alpha} = \boldsymbol{\delta}$ and $\boldsymbol{\beta} = \boldsymbol{\gamma}$) vs. Four parameters ($\boldsymbol{\alpha}$, $\boldsymbol{\beta}$, $\boldsymbol{\gamma}$, and $\boldsymbol{\delta}$ all independent);
+    \item \textbf{Home Effect}: Present ($\nu \neq 0$) vs. Absent ($\nu = 0$);
+    \item \textbf{Common Effect}: Present ($\eta \neq 0$) vs. Absent ($\eta = 0$).
+\end{enumerate}
+
+This section describes all the Poisson model variants (P1--P10) used to model goal scoring in football matches in the present work.
+These models are organized from the most general formulation, ranging from the simplest single-parameter model, P1, to the most complex four-parameter model with home effect and common effect, P10.
+The model names were chosen for simplicity, avoiding unnecessary repetition.
+
+Model \textbf{P1} uses a single skill parameter $\boldsymbol{\alpha}$ per team, with $\log(\lambda_{i,j}) = \alpha_i - \alpha_j$ and $\log(\lambda_{j,i}) = \alpha_j - \alpha_i = -\log(\lambda_{i,j})$.
+It assumes identical offensive and defensive abilities, with no home effect or common effect.
+
+Model \textbf{P2} extends P1 by adding a home effect parameter $\nu$, giving $\log(\lambda_{i,j}) = \alpha_i + \nu - \alpha_j$ for the home team and $\log(\lambda_{j,i}) = \alpha_j - \alpha_i$ for the away team.
+
+Model \textbf{P3} introduces separate offensive ($\boldsymbol{\alpha}$) and defensive ($\boldsymbol{\beta}$) parameters, with $\log(\lambda_{i,j}) = \alpha_i + \beta_j$.
+It assumes identical abilities at home and away, with no home effect or common effect.
+
+Model \textbf{P4} combines P3's two-parameter structure with home effect: $\log(\lambda_{i,j}) = \alpha_i + \beta_j + \nu$ for the home team and $\log(\lambda_{j,i}) = \alpha_j + \beta_i$ for the away team.
+
+Model \textbf{P5} uses four independent parameter sets: $\boldsymbol{\alpha}$, $\boldsymbol{\gamma}$ for home abilities and $\boldsymbol{\beta}$, $\boldsymbol{\delta}$ for away abilities, with $\log(\lambda_{i,j,h}) = \alpha_i + \beta_j$ and $\log(\lambda_{j,i,a}) = \gamma_i + \delta_j$.
+This parametrization already captures home effect implicitly through the difference between home and away parameter sets, making an explicit home effect parameter $\nu$ redundant and potentially causing identifiability issues.
+Model P5 includes no common effect.
+
+Models \textbf{P6} through \textbf{P10} extend P1 through P5, respectively, by adding a common effect parameter $\eta$ to both log-intensities: $\log(\lambda_{i,j}) = \log(\lambda_{i,j}^{\text{base}}) + \eta$ and $\log(\lambda_{j,i}) = \log(\lambda_{j,i}^{\text{base}}) + \eta$, where the base structure follows the corresponding model P1--P5.
+This formulation is inspired by the bivariate Poisson distribution proposed by \textcite{holgate_1964}, where shared components appear in both rate parameters.
+In our models, the common effect parameter $\eta$ acts as a shared additive term on both log-intensities, uniformly scaling both teams' scoring rates by a constant factor $\exp(\eta)$ across all matches.
+This parameter captures systematic deviations in the overall level of scoring that are not explained by team strengths alone, such as league-wide tactical trends or seasonal effects, rather than match-specific factors such as weather conditions or pitch quality, which would require a match-varying parameter.
+
+The taxonomy of these model variants is illustrated in Figure~\ref{fig:poisson_models_taxonomy}.
+
+\begin{figure}[ht]
+    \centering
+    \begin{tikzpicture}[
+        level 1/.style = {sibling distance = 6cm, level distance = 2.5cm},
+        level 2/.style = {sibling distance = 3cm, level distance = 2cm},
+        level 3/.style = {sibling distance = 1.5cm, level distance = 1.8cm},
+        every node/.style = {
+            draw,
+            rectangle,
+            rounded corners,
+            align=center,
+            minimum width = 1.25cm,
+            minimum height = 0.8cm,
+            font = \scriptsize
+        },
+        root/.style = {
+            minimum width = 3.5cm,
+            minimum height = 1.5cm,
+            font = \normalsize
+        },
+        leaf/.style = {
+            fill = gray!20,
+            font = \tiny
+        }
+    ]
+        \node[root] {$\begin{aligned}
+            \log(\lambda_{i,j,h}) &= \alpha_i + \beta_j + \nu + \eta \\
+            \log(\lambda_{j,i,a}) &= \delta_j + \gamma_i + \eta
+        \end{aligned}$\\General Formulation}
+            child {
+                node {
+                    $\boldsymbol{\beta} = -\boldsymbol{\alpha}$ \\
+                    $\boldsymbol{\delta} = \boldsymbol{\alpha}$ \\
+                    $\boldsymbol{\gamma} = \boldsymbol{\beta} = -\boldsymbol{\alpha}$ \\
+                    Single Parameter
+                }
+                child {
+                    node {
+                        $\nu = 0$ \\
+                        No Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta = 0$ \\ P1
+                        }
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta \neq 0$ \\ P6
+                        }
+                    }
+                }
+                child {
+                    node {
+                        $\nu \neq 0$ \\
+                        With Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta = 0$ \\ P2
+                        }
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta \neq 0$ \\ P7
+                        }
+                    }
+                }
+            }
+            child {
+                node {
+                    $\boldsymbol{\alpha} = \boldsymbol{\delta}$ \\
+                    $\boldsymbol{\beta} = \boldsymbol{\gamma}$ \\
+                    Two Parameters
+                }
+                child {
+                    node {
+                        $\nu = 0$ \\
+                        No Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta = 0$ \\ P3
+                        }
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta \neq 0$ \\ P8
+                        }
+                    }
+                }
+                child {
+                    node {
+                        $\nu \neq 0$ \\
+                        With Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta = 0$ \\ P4
+                        }
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta \neq 0$ \\ P9
+                        }
+                    }
+                }
+            }
+            child {
+                node {
+                    All independent \\
+                    Four Parameters
+                }
+                child {
+                    node {
+                        $\nu = 0$ \\
+                        No Home \\
+                        Effect
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta = 0$ \\ P5
+                        }
+                    }
+                    child {
+                        node[leaf] {
+                            $\eta \neq 0$ \\ P10
+                        }
+                    }
+                }
+            };
+    \end{tikzpicture}
+    \caption{
+        \textbf{Taxonomy of the ten Poisson model variants}.
+        The root node displays the complete four-parameter specification with independent offensive and defensive parameters for home and away contexts ($\boldsymbol{\alpha}$, $\boldsymbol{\beta}$, $\boldsymbol{\gamma}$, $\boldsymbol{\delta}$), home effect ($\nu$), and common effect ($\eta$).
+        The first level of branching corresponds to the parametrization structure: single parameter (where offensive and defensive abilities are constrained to be equal), two parameters (where home and away abilities are constrained to be equal), or four parameters (where all abilities are independent).
+        The second level distinguishes models with ($\nu \neq 0$) and without ($\nu = 0$) home effect.
+        The third level separates models with ($\eta \neq 0$) and without ($\eta = 0$) common effect.
+        Each leaf node represents a specific model variant, with the model identifier (P1--P10) indicating the final configuration after all simplifications have been applied.
+    }
+    \label{fig:poisson_models_taxonomy}
+\end{figure}

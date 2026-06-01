@@ -1,0 +1,294 @@
+\section{Player-Level Models}
+\label{sec:player_level_models}
+
+This section extends the P7 framework from the club level to the player level, decomposing team strength into individual contributions.
+While club-level models treat teams as atomic entities, the player-level specification allocates team performance to the players who participated in each match.
+In this model, each player is assigned a latent log-skill parameter $\alpha_p$, constrained under a sum-to-zero identifiability condition.
+This constraint ensures that estimated abilities represent deviations from the league-wide average player, rather than absolute or context-free measures of talent.
+
+To evaluate how temporal aggregation affects estimation, we consider two time periods.
+The first one corresponds to the 2025 season, the latest full season of the \textit{Brasileirão}.
+The second one covers the 2020--2025 period, analysed in Section~\ref{sec:club_applications}.
+For each period, the model estimates individual log-skill parameters for all players who participated in at least one match, along with three global parameters.
+The global parameters measure the home effect ($\nu$), the common effect parameter ($\eta$), and the impact of a red card by the introduction of a synthetic player parameter ($\alpha_{\text{synthetic}}$).
+
+Player rankings are reported using posterior medians of $\alpha_p$ for each player.
+For descriptive purposes, we also report total minutes played, number of matches, wins, draws, and a set of weighted metrics based on playing time.
+In these weighted metrics we use the fraction of minutes played by the player in the match to compute their impact on points, goals, and goals difference.
+For example, a player who played 30 minutes of a match receives 33.3\% of the team's points, goals, and goals difference for that match.
+Also, to help identify the player, the column ``Team'' reports the team where the player played the most minutes during the analysed period.
+
+\subsection{2025 Season}
+\label{subsec:player_2025}
+
+Section~\ref{subsec:season_2025} analysed the 2025 \textit{Brasileirão} from a club-level perspective, showing how Flamengo and Palmeiras contested the title throughout the season, with Flamengo securing the championship in the penultimate round.
+The relegation battle extended to the final match-day, with Ceará and Fortaleza joining Sport and Juventude in the bottom four.
+Here, we extend this analysis to the player level, decomposing the 20 teams' performance into 730 unique players participating across the 380 matches.
+The first point of interest is given by the global parameters, in Table~\ref{tab:player_global_2025}.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lccccc}
+        \toprule
+        Parameter & Mean & Median & Std & 95\% CI \\
+        \midrule
+        $\nu$ (home effect) & 0.422 & 0.422 & 0.066 & [0.294, 0.549] \\
+        $\eta$ (common effect) & $-0.002$ & $-0.002$ & 0.051 & [$-0.104$, 0.096] \\
+        $\alpha_{\text{synthetic}}$ & $-2.51$ & $-2.28$ & 1.69 & $(-\infty, -0.16]$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Posterior estimates for global parameters under the P7 model for the 2025 season}.
+        Estimates are computed from 30,000 MCMC samples.
+    }
+    \label{tab:player_global_2025}
+\end{table}
+
+The home effect estimate of $\nu = 0.422$ corresponds to a multiplicative factor of $\exp(0.422) \approx 1.52$ on expected goals for the home team.
+This value is nearly identical to the club-level estimate reported in Table~\ref{tab:match_params} ($\nu = 0.425$), showing consistency between the two levels of analysis.
+The common effect parameter $\eta \approx 0$ indicates a negligible systematic deviation in overall scoring levels beyond what is explained by team strengths.
+This value is slightly different from the one estimated at the club-level ($\eta = -0.062$), but both credible intervals include zero.
+
+The new parameter representing the synthetic player, $\alpha_{\text{synthetic}} = -2.28$, quantifies the effect of playing with fewer players due to red cards.
+Since we are interested in answering whether a red card has a negative impact on club performance, we calculate a unilateral credible interval.
+Given the credible interval, we can affirm that a red card acts as a below-average player.
+Compared with other parameters, this estimate has a larger variance because the sum-to-zero constraint defines $\alpha_{\text{synthetic}} = -\sum_{p} \alpha_p$, causing its uncertainty to accumulate across all individual player estimates.
+
+Beyond global parameters, the model estimates individual skill coefficients for each player.
+These estimates capture each player's contribution to their team's aggregate strength, as defined by Equation~\ref{eq:team_skill_aggregation}.
+This aggregate strength determines the expected goal rate relative to the opponent's strength, after accounting for home effect.
+Table~\ref{tab:top20_2025} presents the top 20 players by estimated log-skill.
+
+\begin{table}[htbp]
+    \centering
+    \tiny
+    \begin{tabular}{rlcccrrrrrrrr}
+        \toprule
+        \# & Player & Team & Median & 95\% CI & Min. & G & W & D & WS & WG & WGD \\
+        \midrule
+        1 & Agustin Rossi & Flamengo & 0.049 & [-0.15, 0.25] & 3,330 & 37 & 23 & 9 & 78.0 & 75.0 & 51.0 \\
+        2 & Léo Pereira & Flamengo & 0.046 & [-0.16, 0.25] & 2,954 & 33 & 22 & 8 & 73.5 & 68.5 & 47.5 \\
+        3 & De Arrascaeta & Flamengo & 0.037 & [-0.16, 0.23] & 2,402 & 33 & 22 & 7 & 58.5 & 52.2 & 35.8 \\
+        4 & Léo Ortiz & Flamengo & 0.030 & [-0.17, 0.23] & 2,248 & 26 & 16 & 7 & 52.0 & 45.0 & 31.7 \\
+        5 & Luiz Araújo & Flamengo & 0.029 & [-0.17, 0.23] & 1,712 & 33 & 22 & 7 & 44.0 & 40.9 & 29.3 \\
+        6 & Villalba & Cruzeiro & 0.027 & [-0.17, 0.23] & 2,864 & 32 & 16 & 13 & 60.5 & 47.3 & 27.3 \\
+        7 & Weverton & Palmeiras & 0.027 & [-0.17, 0.23] & 2,340 & 26 & 19 & 3 & 60.0 & 49.0 & 28.0 \\
+        8 & Jemmes & Mirassol & 0.026 & [-0.17, 0.22] & 3,318 & 37 & 18 & 13 & 66.6 & 62.7 & 25.9 \\
+        9 & Lucas Silva & Cruzeiro & 0.025 & [-0.17, 0.22] & 2,752 & 34 & 18 & 12 & 58.5 & 45.9 & 24.6 \\
+        10 & Christian & Cruzeiro & 0.025 & [-0.17, 0.22] & 2,387 & 30 & 17 & 10 & 55.1 & 41.2 & 25.7 \\
+        11 & Kaio Jorge & Cruzeiro & 0.025 & [-0.18, 0.22] & 2,687 & 33 & 18 & 11 & 58.0 & 45.3 & 24.5 \\
+        12 & Fabrício Bruno & Cruzeiro & 0.024 & [-0.17, 0.22] & 2,950 & 33 & 17 & 11 & 61.8 & 49.0 & 24.0 \\
+        13 & Kaiki Bruno & Cruzeiro & 0.024 & [-0.17, 0.22] & 2,996 & 34 & 17 & 12 & 62.3 & 49.9 & 24.4 \\
+        14 & Daniel & Mirassol & 0.024 & [-0.17, 0.22] & 3,265 & 37 & 18 & 12 & 65.5 & 60.8 & 23.9 \\
+        15 & Varela & Flamengo & 0.024 & [-0.18, 0.22] & 1,326 & 20 & 13 & 5 & 36.1 & 31.6 & 25.6 \\
+        16 & Pedro & Flamengo & 0.023 & [-0.17, 0.22] & 1,044 & 21 & 14 & 5 & 27.9 & 30.6 & 23.7 \\
+        17 & Vitinho & Botafogo & 0.023 & [-0.17, 0.22] & 2,875 & 36 & 17 & 11 & 56.7 & 50.9 & 21.2 \\
+        18 & Neto & Mirassol & 0.023 & [-0.18, 0.22] & 2,479 & 34 & 16 & 12 & 50.4 & 49.0 & 21.4 \\
+        19 & Alex Sandro & Flamengo & 0.023 & [-0.17, 0.22] & 1,499 & 19 & 13 & 5 & 37.0 & 33.2 & 23.2 \\
+        20 & Joaquin Piquerez & Palmeiras & 0.022 & [-0.17, 0.22] & 2,411 & 29 & 18 & 5 & 55.9 & 47.2 & 24.8 \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Top 20 players ranked by estimated skill under the P7 model for the 2025 season}.
+        Skill estimates are posterior medians from 30,000 MCMC samples.
+        Positive values indicate above-average skill relative to the league.
+        Abbreviations: Min.\ = total minutes played, G = games, W = wins, D = draws, WS = weighted points (sum of team points weighted by player's share of match minutes), WG = weighted goals, WGD = weighted goal difference.
+    }
+    \label{tab:top20_2025}
+\end{table}
+
+The ranking is dominated by players from Flamengo (8 of top 20) and Cruzeiro (6), reflecting their strong performances as champion and third-place finisher, respectively.
+The other players are also from clubs that finished in the top positions of the league, with Mirassol standing out with three players in their first season at \textit{Brasileirão Série A}: Jemmes, Daniel and Neto.
+The top-ranked player, Agustin Rossi, has over 3,300 minutes with 23 wins in 37 matches, helping Flamengo to earn 78 points and the championship.
+During his participation, Flamengo scored a weighted total of 75 goals with a goal difference of 51.
+
+Just as the top rankings concentrate players from the best performing clubs, the bottom rankings reveal the other extreme, with players from relegated clubs.
+Some of these players accumulated significant playing time on losing teams, resulting in skill estimates that reflect the team's poor performance.
+For example, given Sport's relegation with only 17 points, their players unsurprisingly dominate the lowest positions, as shown in Table~\ref{tab:bottom20_2025}.
+
+\begin{table}[htbp]
+    \centering
+    \tiny
+    \begin{tabular}{rlcccrrrrrrrr}
+        \toprule
+        \# & Player & Team & Median & 95\% CI & Min. & G & W & D & WS & WG & WGD \\
+        \midrule
+        711 & Ewerthon & Juventude & -0.012 & [-0.21, 0.18] & 1,110 & 17 & 3 & 5 & 8.0 & 10.1 & -16.7 \\
+        712 & Renato Kayzer & Vitória & -0.013 & [-0.21, 0.18] & 2,042 & 28 & 7 & 9 & 21.9 & 18.4 & -18.3 \\
+        713 & Caique & Juventude & -0.014 & [-0.21, 0.18] & 2,054 & 28 & 7 & 6 & 18.8 & 19.5 & -20.1 \\
+        714 & Ramon & Vitória & -0.014 & [-0.21, 0.18] & 1,949 & 23 & 7 & 5 & 25.1 & 15.1 & -20.1 \\
+        715 & Chrystian & Sport & -0.015 & [-0.21, 0.18] & 1,546 & 33 & 2 & 11 & 6.8 & 10.7 & -18.7 \\
+        716 & Ramon Menezes & Sport & -0.015 & [-0.21, 0.17] & 1,923 & 23 & 2 & 7 & 13.0 & 19.5 & -22.9 \\
+        717 & Pablo & Sport & -0.015 & [-0.21, 0.18] & 1,098 & 20 & 1 & 5 & 2.3 & 10.1 & -21.9 \\
+        718 & Alan Ruschel & Juventude & -0.015 & [-0.21, 0.18] & 1,275 & 20 & 3 & 4 & 7.1 & 8.7 & -18.5 \\
+        719 & Caique França & Sport & -0.015 & [-0.21, 0.18] & 1,350 & 15 & 0 & 4 & 4.0 & 8.0 & -21.0 \\
+        720 & Igor Carius & Sport & -0.015 & [-0.21, 0.18] & 1,822 & 26 & 2 & 8 & 10.2 & 13.6 & -21.5 \\
+        721 & Luiz Gustavo & Juventude & -0.017 & [-0.21, 0.18] & 2,407 & 31 & 6 & 8 & 23.9 & 22.9 & -22.6 \\
+        722 & Lucas & Sport & -0.018 & [-0.21, 0.17] & 904 & 11 & 0 & 0 & 0.0 & 6.1 & -23.9 \\
+        723 & Luan Candido & Sport & -0.018 & [-0.21, 0.18] & 1,317 & 15 & 1 & 3 & 6.0 & 12.6 & -22.6 \\
+        724 & Matheusinho & Sport & -0.019 & [-0.21, 0.18] & 1,702 & 23 & 2 & 6 & 10.2 & 16.3 & -23.8 \\
+        725 & Rafael Thyere & Sport & -0.020 & [-0.21, 0.18] & 2,151 & 24 & 2 & 8 & 14.0 & 20.8 & -27.8 \\
+        726 & Gabriel Vasconcelos & Sport & -0.021 & [-0.21, 0.17] & 2,160 & 24 & 2 & 7 & 13.0 & 20.0 & -28.0 \\
+        727 & Jadson & Juventude & -0.022 & [-0.21, 0.17] & 2,920 & 35 & 9 & 7 & 29.9 & 30.6 & -31.4 \\
+        728 & Matheus Alexandre & Sport & -0.023 & [-0.22, 0.17] & 1,782 & 25 & 2 & 7 & 9.0 & 16.1 & -28.1 \\
+        729 & Lucas Lima & Sport & -0.028 & [-0.22, 0.16] & 2,549 & 32 & 1 & 9 & 10.8 & 20.6 & -36.5 \\
+        730 & Christian Rivera & Sport & -0.028 & [-0.22, 0.16] & 2,818 & 33 & 2 & 8 & 14.0 & 24.3 & -39.5 \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Bottom 20 players ranked by estimated skill under the P7 model for the 2025 season}.
+        Skill estimates are posterior medians from 30,000 MCMC samples.
+        Abbreviations: Min.\ = total minutes played, G = games, W = wins, D = draws, WS = weighted points (sum of team points weighted by player's share of match minutes), WG = weighted goals, WGD = weighted goal difference.
+    }
+    \label{tab:bottom20_2025}
+\end{table}
+
+Beyond Sport, the bottom rankings include some players from Juventude, another club with a poor campaign that was relegated.
+The lowest-ranked player, Christian Rivera, has over 2,800 minutes across 33 matches, during which Sport won only twice and earned 14 points, with a weighted goal difference of -39.5.
+Some Sport players recorded zero wins across the entire season: Lucas (11 matches, weighted goal difference of -23.9) and Caique França (15 matches, weighted goal difference of -21.0).
+In addition to Sport and Juventude players, the bottom 20 also include Ramon and Renato Kayzer, both from Vitória, a club that narrowly avoided relegation.
+
+\subsection{2020--2025 Period}
+\label{subsec:player_2020_2025}
+
+While the single-season analysis provides a snapshot of player performance, extending the temporal window addresses two key limitations: small sample sizes for individual players and the confounding influence of short-term team dynamics.
+The six-season period (2020--2025) increases both the sample size and the number of estimated player effects, with 1,975 unique players across 2,280 matches.
+Before examining individual rankings, we first analyse the global parameter estimates.
+Table~\ref{tab:player_global_2020_2025} presents the posterior summaries for this extended period.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lcccc}
+        \toprule
+        Parameter & Median & Mean & Std & 95\% CI \\
+        \midrule
+        $\nu$ (home effect) & 0.324 & 0.324 & 0.027 & [0.270, 0.377] \\
+        $\eta$ (common effect) & 0.016 & 0.016 & 0.021 & [$-0.025$, 0.057] \\
+        $\alpha_{\text{synthetic}}$ & $-4.81$ & $-5.24$ & 2.42 & $(-\infty, -2.07]$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Posterior estimates for global parameters under the P7 model for the 2020--2025 period}.
+        Estimates are computed from 30,000 MCMC samples.
+    }
+    \label{tab:player_global_2020_2025}
+\end{table}
+
+The home effect ($\nu = 0.324$) corresponds to a multiplicative factor of approximately 1.38 on expected goals, consistent with the range of club-level estimates in Table~\ref{tab:match_params} (log between 0.273 and 0.425, factor between 1.31 and 1.53).
+The common effect parameter $\eta$ remains indistinguishable from zero, as in the single-season analysis.
+The synthetic player parameter ($\alpha_{\text{synthetic}} = -4.81$) is considerably lower than the 2025 estimate ($-2.28$), and its credible interval now excludes zero by a wide margin.
+In practical terms, this implies that receiving a red card is equivalent to replacing a player with one whose relative skill is $\exp(-4.81) \approx 0.008$ times the average.
+
+With global parameters consistent with both the single-season and club-level analyses, we turn to individual player estimates.
+The multi-season aggregation produces more stable skill coefficients, as players accumulate more minutes across multiple campaigns.
+Tables~\ref{tab:top20_2020_2025} and~\ref{tab:bottom20_2020_2025} present the top and bottom 20 players ranked by posterior median log-skill, respectively.
+
+\begin{table}[htbp]
+    \centering
+    \tiny
+    \begin{tabular}{rlcccrrrrrrrr}
+        \toprule
+        \# & Player & Team & Median & 95\% CI & Min. & G & W & D & WS & WG & WGD \\
+        \midrule
+        1 & Weverton & Palmeiras & 0.132 & [-0.07, 0.33] & 16,448 & 183 & 105 & 44 & 359.0 & 308.0 & 153.5 \\
+        2 & De Arrascaeta & Flamengo & 0.093 & [-0.10, 0.30] & 9,864 & 142 & 87 & 29 & 225.9 & 205.5 & 106.7 \\
+        3 & Fabrício Bruno & Flamengo & 0.083 & [-0.12, 0.28] & 13,391 & 155 & 81 & 43 & 275.7 & 235.6 & 94.2 \\
+        4 & Gustavo Gómez & Palmeiras & 0.083 & [-0.12, 0.29] & 13,786 & 157 & 86 & 39 & 290.7 & 236.2 & 105.5 \\
+        5 & Murilo & Palmeiras & 0.082 & [-0.12, 0.28] & 8,930 & 102 & 60 & 27 & 202.5 & 167.3 & 96.4 \\
+        6 & Joaquín Piquerez & Palmeiras & 0.079 & [-0.12, 0.28] & 9,453 & 112 & 68 & 24 & 216.5 & 179.2 & 99.9 \\
+        7 & Marcos Rocha & Palmeiras & 0.076 & [-0.12, 0.27] & 9,723 & 133 & 75 & 34 & 213.0 & 178.8 & 91.1 \\
+        8 & Raphael Veiga & Palmeiras & 0.076 & [-0.13, 0.28] & 11,203 & 164 & 91 & 37 & 236.4 & 200.3 & 93.0 \\
+        9 & Léo Pereira & Flamengo & 0.067 & [-0.13, 0.27] & 11,332 & 136 & 72 & 35 & 231.1 & 207.6 & 84.0 \\
+        10 & Zé Rafael & Palmeiras & 0.064 & [-0.14, 0.26] & 11,385 & 159 & 84 & 39 & 232.3 & 199.9 & 82.3 \\
+        11 & Agustin Rossi & Flamengo & 0.063 & [-0.14, 0.26] & 7,830 & 87 & 49 & 22 & 169.0 & 149.0 & 74.0 \\
+        12 & Éverson & Atlético-MG & 0.060 & [-0.14, 0.26] & 17,901 & 199 & 90 & 57 & 326.9 & 276.8 & 72.0 \\
+        13 & Renê & Internacional & 0.058 & [-0.14, 0.26] & 9,691 & 128 & 67 & 33 & 197.1 & 152.3 & 61.0 \\
+        14 & Rony & Palmeiras & 0.056 & [-0.14, 0.25] & 11,222 & 181 & 90 & 49 & 221.0 & 190.4 & 73.1 \\
+        15 & Léo Ortiz & RB Bragantino & 0.055 & [-0.15, 0.25] & 12,565 & 149 & 65 & 48 & 226.6 & 202.7 & 64.7 \\
+        16 & Pedro & Flamengo & 0.052 & [-0.15, 0.25] & 9,030 & 157 & 87 & 33 & 184.7 & 170.2 & 65.9 \\
+        17 & Bruno Henrique & Flamengo & 0.052 & [-0.15, 0.25] & 10,385 & 148 & 81 & 35 & 211.8 & 182.4 & 64.7 \\
+        18 & Ayrton Lucas & Flamengo & 0.052 & [-0.15, 0.25] & 8,812 & 116 & 60 & 26 & 174.8 & 159.9 & 61.6 \\
+        19 & Gerson & Flamengo & 0.050 & [-0.15, 0.25] & 8,946 & 109 & 61 & 25 & 192.2 & 173.4 & 63.5 \\
+        20 & Victor Cuesta & Internacional & 0.050 & [-0.15, 0.25] & 12,449 & 141 & 63 & 40 & 226.6 & 192.8 & 55.3 \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Top 20 players ranked by estimated skill under the P7 model for the 2020--2025 period}.
+        Skill estimates are posterior medians from 30,000 MCMC samples.
+        Abbreviations: Min.\ = total minutes played, G = games, W = wins, D = draws, WS = weighted points (sum of team points weighted by player's share of match minutes), WG = weighted goals, WGD = weighted goal difference.
+    }
+    \label{tab:top20_2020_2025}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \tiny
+    \begin{tabular}{rlcccrrrrrrrr}
+        \toprule
+        \# & Player & Team & Median & 95\% CI & Min. & G & W & D & WS & WG & WGD \\
+        \midrule
+        1,956 & Victor Luis & Botafogo & -0.026 & [-0.22, 0.17] & 6,632 & 104 & 23 & 31 & 67.1 & 74.1 & -32.7 \\
+        1,957 & Lucas & América-MG & -0.026 & [-0.22, 0.17] & 7,119 & 94 & 27 & 20 & 89.6 & 78.8 & -34.7 \\
+        1,958 & Rodrigo Alves & Juventude & -0.026 & [-0.22, 0.16] & 2,788 & 35 & 3 & 11 & 17.9 & 23.0 & -34.4 \\
+        1,959 & Pedro Raul & Ceará & -0.026 & [-0.22, 0.16] & 8,898 & 123 & 27 & 39 & 101.1 & 93.5 & -37.9 \\
+        1,960 & Victor Hugo & Bahia & -0.027 & [-0.22, 0.16] & 10,710 & 124 & 37 & 27 & 132.6 & 128.9 & -36.8 \\
+        1,961 & Shaylon & Atlético-GO & -0.028 & [-0.22, 0.17] & 6,143 & 103 & 26 & 28 & 65.1 & 63.3 & -36.6 \\
+        1,962 & Rafael Thyere & Sport & -0.028 & [-0.22, 0.17] & 5,567 & 66 & 14 & 20 & 56.0 & 49.1 & -37.2 \\
+        1,963 & Lucas Halter & Goiás & -0.029 & [-0.22, 0.16] & 8,664 & 104 & 33 & 27 & 112.1 & 94.5 & -39.1 \\
+        1,964 & Christian Rivera & Sport & -0.029 & [-0.22, 0.16] & 2,818 & 33 & 2 & 8 & 14.0 & 24.3 & -39.5 \\
+        1,965 & Gilberto & Bahia & -0.030 & [-0.22, 0.16] & 8,156 & 133 & 37 & 30 & 93.8 & 99.0 & -38.8 \\
+        1,966 & Matheus & Cuiabá & -0.030 & [-0.22, 0.16] & 8,629 & 111 & 27 & 26 & 96.8 & 91.8 & -37.9 \\
+        1,967 & Gabriel Baralhas & Atlético-GO & -0.031 & [-0.23, 0.16] & 9,088 & 129 & 37 & 35 & 110.1 & 96.7 & -44.6 \\
+        1,968 & Éder & Atlético-GO & -0.034 & [-0.22, 0.16] & 10,617 & 126 & 37 & 35 & 136.3 & 111.3 & -46.0 \\
+        1,969 & Tadeu & Goiás & -0.035 & [-0.22, 0.15] & 9,450 & 105 & 26 & 31 & 109.0 & 107.0 & -48.0 \\
+        1,970 & Matheusinho & Sport & -0.036 & [-0.23, 0.16] & 4,960 & 85 & 20 & 20 & 52.5 & 55.4 & -41.3 \\
+        1,971 & Isidro Pitta & Cuiabá & -0.037 & [-0.23, 0.15] & 7,161 & 118 & 31 & 27 & 66.6 & 64.7 & -48.8 \\
+        1,972 & Kevin & Avaí & -0.037 & [-0.23, 0.15] & 5,213 & 65 & 11 & 15 & 45.4 & 51.6 & -47.6 \\
+        1,973 & Lucas Lima & Sport & -0.044 & [-0.24, 0.15] & 8,823 & 137 & 32 & 40 & 91.4 & 93.5 & -54.0 \\
+        1,974 & Jadson & Juventude & -0.050 & [-0.24, 0.14] & 10,300 & 131 & 30 & 38 & 113.0 & 114.7 & -66.4 \\
+        1,975 & Gabriel Vasconcelos & Coritiba & -0.051 & [-0.24, 0.14] & 9,110 & 102 & 23 & 25 & 93.5 & 104.2 & -71.4 \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Bottom 20 players ranked by estimated skill under the P7 model for the 2020--2025 period}.
+        Skill estimates are posterior medians from 30,000 MCMC samples.
+        Abbreviations: Min.\ = total minutes played, G = games, W = wins, D = draws, WS = weighted points (sum of team points weighted by player's share of match minutes), WG = weighted goals, WGD = weighted goal difference.
+    }
+    \label{tab:bottom20_2020_2025}
+\end{table}
+
+Two points immediately stand out from the rankings.
+First, all credible intervals (both top and bottom and in all periods) include zero, meaning the model cannot statistically distinguish any individual player from the league-wide average.
+Second, the top 20 is heavily concentrated in two clubs: Palmeiras and Flamengo, with 8 players each.
+
+Despite the statistical indistinguishability, examining the ranking by posterior median reveals interpretable patterns.
+In this period, Palmeiras was champion twice, in 2022 and 2023, and finished in the top half of the table in the other seasons: 7th in 2020, 3rd in 2021 and 2nd in both 2024 and 2025.
+Flamengo also won the championship twice, in 2020 and 2025, with good results in the other seasons: 2nd in 2021, 5th in 2022, 4th in 2023 and 3rd in 2024.
+
+The four remaining players in the top 20 (Éverson, Renê, Léo Ortiz, and Victor Cuesta) also accumulated significant minutes in successful environments, though across multiple clubs.
+Éverson won the 2021 title with Atlético-MG and finished in the top three twice more.
+Renê played for Flamengo (2020--2021), Internacional (2022--2024), and Fluminense (2025), consistently participating in top-half finishes.
+Léo Ortiz spent four seasons at RB Bragantino before transferring to Flamengo in 2024, while Victor Cuesta played for Internacional, Botafogo, and Bahia, all clubs that achieved mid-to-upper table finishes during his tenure.
+Conversely, the bottom 20 includes players from a broader set of teams that experienced relegation or persistent struggles: Coritiba, Juventude, Sport, Cuiabá, Avaí, Goiás, and Atlético Goianiense.
+These patterns indicate that posterior rankings reflect sustained exposure to winning or losing contexts rather than isolated individual excellence or deficiency.
+
+This interpretation is reinforced by the near-perfect correlation ($r = 0.99$) between posterior medians and weighted goal difference (WGD).
+Since WGD aggregates team-level outcomes (goals scored minus goals conceded) weighted by each player's share of match minutes, this correlation reveals that estimated skill largely captures whether a player recorded minutes in winning or losing environments.
+In the end, the model effectively transforms collective team performance into individual-level estimates, with limited capacity to isolate marginal contributions.
+
+This structural dependence has notable consequences for certain player profiles.
+Goalkeepers, who typically play full matches whenever fielded, are particularly susceptible to extreme rankings because their WGD closely tracks their team's aggregate performance.
+Among the top 20, three goalkeepers appear: Weverton (1st), Agustin Rossi (11th), and Éverson (12th).
+Among the bottom 20, Tadeu (1,969th) and Gabriel Vasconcelos (1,975th) occupy similarly extreme positions.
+The pattern extends beyond goalkeepers to any player who consistently appears in the starting lineup of a club and plays a considerable fraction of the match.
+
+The case of Pedro Raul illustrates this dynamic.
+Despite being the runner-up top scorer of the 2022 \textit{Brasileirão} while playing for Goiás (13th place in that season) and scoring 11 goals for Ceará in 2025, he ranks 1,959th out of 1,975 players in the six-season analysis.
+Across 123 matches and nearly 9,000 minutes, he participated in only 27 wins and recorded a weighted goal difference of $-37.9$.
+These numbers reflect the poor performance of teams like Goiás and Ceará rather than his individual ability.
+Since the model observes only match outcomes, his individual attacking output cannot offset the collective struggles of his teams.
+
+These findings echo the club-level analysis of Section~\ref{sec:club_applications}.
+Just as team strength estimates reflect aggregate match outcomes, player-level estimates reflect the teams in which players played.
+The decomposition from clubs to players increases model dimensionality but does not resolve the fundamental challenge of separating individual ability from collective performance.
+Future work incorporating player-specific actions or event data may offer a path toward more granular attribution.

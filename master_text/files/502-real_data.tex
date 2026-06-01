@@ -1,0 +1,52 @@
+\section{Model Evaluation on Real Data}
+\label{sec:real_data}
+
+After validating the inference procedure through Simulation-Based Calibration in Section~\ref{sec:sbc_results}, we now evaluate the predictive performance of all club-level models on real \textit{Brasileirão Série A} data from 2020 to 2025 using the evaluation methodology described in Section~\ref{sec:evaluation_methodology}.
+
+Models BT1 and BT2 are important from a theoretical standpoint as the simplest Bradley-Terry specifications.
+Their successful SBC validation (Section~\ref{subsec:sbc_club}) confirms the correctness of the inference framework before extending to more complex variants.
+However, for the real data evaluation, these models were excluded because they do not allow ties, a result that occurs with non-negligible frequency in football.
+Table~\ref{tab:club_metrics} presents the predictive performance of all 12 club-level models and the two baselines.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{lcccc}
+        \toprule
+        Model & BS & RPS & LS & IS \\
+        \midrule
+        Naive 1 & 0.6667 & 0.2359 & 1.0986 & 1086.2815 \\
+        Naive 2 & 0.6373 & 0.2243 & 1.0570 & 1079.1856 \\
+        \midrule
+        BT3 & 0.6494 & 0.2293 & 1.0768 & 1073.2671 \\
+        BT4 & 0.6508 & 0.2296 & 1.0800 & 1075.1171 \\
+        \midrule
+        P1  & 0.6497 & 0.2287 & 1.0741 & 1061.8859 \\
+        P2  & 0.6256 & 0.2180 & 1.0402 & \textbf{1059.8783} \\
+        P3  & 0.6558 & 0.2324 & 1.0860 & 1082.7855 \\
+        P4  & 0.6356 & 0.2230 & 1.0550 & 1078.7061 \\
+        P5  & 0.6834 & 0.2460 & 1.1255 & 1103.8898 \\
+        P6  & 0.6495 & 0.2286 & 1.0738 & 1061.5644 \\
+        P7  & \textbf{0.6237} & \textbf{0.2172} & \textbf{1.0378} & 1061.0630 \\
+        P8  & 0.6548 & 0.2318 & 1.0840 & 1081.7105 \\
+        P9  & 0.6334 & 0.2218 & 1.0526 & 1084.7895 \\
+        P10 & 0.6835 & 0.2460 & 1.1263 & 1104.6147 \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Predictive performance of club-level models on \textit{Brasileirão} data (2020--2025)}.
+        Models are grouped by type: naive baselines, Bradley-Terry (BT), and Poisson (P).
+        Lower values indicate better performance; best values for each metric are shown in bold.
+    }
+    \label{tab:club_metrics}
+\end{table}
+
+These results guide the selection of models for player-level extension.
+First, models P5 and P10, which use separate skill parameters for home and away contexts instead of an explicit home effect parameter, perform poorly across all metrics, ranking below even the uninformative baseline (Naive 1).
+This suggests that the additional flexibility leads to overfitting given the limited number of matches per team in a single season.
+Second, Bradley-Terry models consistently underperform compared to the best Poisson models, likely because they discard valuable information by modelling only match outcomes rather than goal counts.
+Third, among Poisson models, those without an explicit home effect parameter (P1, P3, P6, P8) are consistently outperformed by their counterparts with home effect (P2, P4, P7, P9).
+This confirms that explicitly modelling home effect is essential for predictive accuracy in the \textit{Brasileirão}.
+
+Based on these findings, only Poisson models with home effect were selected for further evaluation on real data: P2, P4, P7, and P9.
+These four models span the two main parametrization structures, single skill (P2, P7) and attack/defence (P4, P9), and both common effect settings, without common effect (P2, P4) and with common effect (P7, P9).
+Also, for more detailed analysis on club level, we will use only the model P7, the best model according to Table~\ref{tab:club_metrics}.

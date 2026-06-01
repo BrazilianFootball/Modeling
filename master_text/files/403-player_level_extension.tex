@@ -1,0 +1,34 @@
+\section{Adaptation to Player-Level Models}
+\label{sec:player_level_adaptation}
+
+The models described in the previous sections operate at the club level, where team abilities are modelled directly as team-specific parameters.
+However, these models can be adapted to operate at the player level.
+This adaptation provides a more granular understanding of team performance by decomposing it into individual player contributions.
+
+Instead of estimating team abilities directly, we estimate individual player abilities and aggregate them, weighting by playing time, to obtain team-level strengths.
+For a given match, let $\mathcal{P}_h$ and $\mathcal{P}_a$ denote the sets of players participating in the home and away teams, respectively, and let $m_p$ denote the number of minutes played by player $p$ in that match.
+The team-level skill is given by:
+\begin{equation}
+    \label{eq:team_skill_aggregation}
+    s_{\text{team}} = \sum_{p \in \mathcal{P}} \exp(\theta_p) \cdot \frac{m_p}{90},
+\end{equation}
+
+\noindent where $\theta_p$ is the log-skill parameter for player $p$, and $\mathcal{P}$ is either $\mathcal{P}_h$ or $\mathcal{P}_a$ depending on the team.
+The normalization by 90 minutes ensures that a player's contribution is proportional to their playing time relative to the standard match duration.
+
+When a player is sent off (red card), the team plays with fewer players for the remainder of the match.
+To handle this situation, we introduce a synthetic player with an estimable ability parameter $\theta_{\text{synthetic}}$ that represents the impact of playing with fewer players.
+Specifically, if a player is sent off at minute $t_{\text{off}}$, we add a synthetic player with $m_{\text{synthetic}} = 90 - t_{\text{off}}$ minutes.
+If two or more players receive a red card, the same treatment is applied, increasing the value of $m_{\text{synthetic}}$.
+The synthetic player's ability $\theta_{\text{synthetic}}$ is estimated by the model and quantifies the impact of the red card on team performance.
+This approach allows the model to learn how much a sending-off affects team strength.
+
+As club-level models, player-level models also require identifiability constraints.
+The same sum-to-zero constraint is imposed on the player skill parameters:
+\begin{equation}
+    \label{eq:player_sum_zero_constraint}
+    \sum_{p=1}^{n} \theta_p = 0,
+\end{equation}
+
+\noindent where $n$ is the total number of players, including the synthetic.
+This constraint ensures that the model is identifiable and that player abilities are measured relative to the average player ability.

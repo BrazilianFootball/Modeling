@@ -1,0 +1,52 @@
+\section{Inference Procedure}
+\label{sec:inference_procedure}
+
+This section describes the prior distributions, data inputs, and computational settings used for posterior inference across all models.
+All models are fitted within a Bayesian framework using Stan \cite{carpenter_2017} via the CmdStanPy interface \cite{cmdstanpy}, with the No-U-Turn Sampler (NUTS) as the Hamiltonian Monte Carlo algorithm.
+
+All club-level models use independent $\N(0, 1)$ priors for every parameter.
+This applies to team log-skill parameters ($\boldsymbol{\theta}$, $\boldsymbol{\alpha}$, $\boldsymbol{\beta}$, $\boldsymbol{\gamma}$, $\boldsymbol{\delta}$), the home effect ($\nu$), the tie parameter ($\kappa$), and the common effect parameter ($\eta$), whenever each is present in the model.
+For player-level Poisson models, the prior on individual skill parameters is set to $\N(0, 0.1)$.
+Since team strength is obtained by aggregating the contributions of 11--16 players (Equation~\ref{eq:team_skill_aggregation}), the tighter per-player prior ensures numerical stability during posterior sampling.
+Global parameters ($\nu$ and $\eta$) retain the $\N(0, 1)$ prior at the player level, as their dimensionality does not change.
+Table~\ref{tab:priors} summarises the prior distributions used across all models.
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{llcc}
+        \toprule
+        Parameter & Description & Club-Level & Player-Level \\
+        \midrule
+        $\boldsymbol{\theta}$, $\boldsymbol{\alpha}$, $\boldsymbol{\beta}$, $\boldsymbol{\gamma}$, $\boldsymbol{\delta}$ & Skill parameters & $\N(0, 1)$ & $\N(0, 0.1)$ \\
+        $\nu$ & Home effect & $\N(0, 1)$ & $\N(0, 1)$ \\
+        $\kappa$ & Tie parameter (BT) & $\N(0, 1)$ & --- \\
+        $\eta$ & Common effect & $\N(0, 1)$ & $\N(0, 1)$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{
+        \textbf{Prior distributions for all model parameters}.
+        Skill parameters receive a tighter prior at the player level to ensure numerical stability when aggregating individual contributions into team strength.
+        The tie parameter $\kappa$ is only present in Bradley-Terry models, which are not extended to the player level.
+    }
+    \label{tab:priors}
+\end{table}
+
+Club-level models receive, for each match, the identifiers of the home and away teams and the number of goals scored by each.
+For Bradley-Terry models, the goals are collapsed into a categorical outcome (home win, draw, or away win).
+No information about individual players, substitutions, or playing time is used at this level.
+Player-level models require a richer data structure.
+For each match, the model receives the list of players participating in each team, identified by their unique CBF ID, along with the number of minutes played by each player and the total goals scored by each team.
+This information is derived from the temporal segmentation of match reports described in Section~\ref{sec:data_treatment}, which tracks substitutions and red cards to determine each player's exact playing time.
+When a player receives a red card, the synthetic player described in Section~\ref{sec:player_level_adaptation} is assigned the remaining minutes of the match.
+
+The scope of data used for fitting differs between the two analysis contexts.
+For club-level model evaluation, the rolling-window scheme described in Section~\ref{sec:evaluation_methodology} fits the model incrementally: at each evaluation point, the model receives all \textit{Brasileirão Série A} matches played up to that point in the current season, starting from 50 matches (approximately 5 complete match-days) and progressing through the season in increments of 10 matches.
+For player-level analysis, the model is fitted on the complete set of matches from the selected period: all 380 matches of the 2025 season for the single-season analysis and all 2,280 matches from 2020 to 2025 for the multi-season analysis.
+In both cases, only \textit{Brasileirão Série A} data is used.
+
+Club-level models are fitted with 4 parallel chains, each running 1,000 warmup iterations and 1,000 sampling iterations, yielding 4,000 posterior samples per fit.
+The sampler uses an adaptation target acceptance probability of $\delta = 0.95$ and a maximum tree depth of 10.
+This configuration is identical to the one used for SBC validation (Section~\ref{sec:sbc_experimental_design}).
+Player-level models require a more intensive sampling configuration due to the substantially higher dimensionality of the parameter space.
+Each fit uses 4 parallel chains with 2,500 warmup iterations and 7,500 sampling iterations per chain, yielding 30,000 posterior samples.
+The extended warmup allows the sampler to adequately adapt its mass matrix to the high-dimensional geometry, while the larger number of sampling iterations ensures sufficient effective sample size across hundreds of parameters.

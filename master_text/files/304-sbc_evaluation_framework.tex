@@ -1,0 +1,21 @@
+\section{Experimental Design}
+\label{sec:sbc_experimental_design}
+
+All SBC experiments were designed to represent the typical format of a \textit{Brasileirão Série A} season.
+For each model, $S = 500$ synthetic datasets were generated, each comprising $n = 20$ teams competing in a double round-robin tournament with $380$ matches.
+
+The inference process uses Stan \cite{carpenter_2017} via the CmdStanPy interface \cite{cmdstanpy}.
+Each simulation was run with 4 parallel chains, 1,000 warm-up iterations, and 1,000 sampling iterations per chain, yielding 4,000 posterior samples per simulation.
+The sampler was configured with an adaptation target acceptance probability of $\delta = 0.95$ and a maximum tree depth of 10.
+
+For each simulation $i$, the true parameter values $\boldsymbol{\theta}_i$ were sampled from the prior distributions specified in the model.
+Synthetic data $\mathbf{y}_i$ were generated according to the likelihood, and posterior samples $\{\boldsymbol{\theta}_i^{(1)}, \ldots, \boldsymbol{\theta}_i^{(L)}\}$ were obtained via Markov Chain Monte Carlo (MCMC).
+The normalized rank of each true parameter value among its posterior samples was recorded.
+Under correct posterior inference, these ranks should follow a uniform distribution on $[0, 1]$, as established in Theorem~\ref{thm:rank-uniformity}.
+
+Since there are a lot of models, with many parameters, to evaluate, we use a systematic approach to identify potential miscalibrations.
+For each parameter in a model, we compute the ECDF difference plot and check whether any point falls outside the 95\% confidence envelope.
+If at least one point lies outside this envelope, that parameter is flagged, and we record the total number of points outside the envelope for that parameter.
+Aggregating across all parameters of a model, we obtain two summary statistics: the total number of flagged parameters (``Flags'') and the cumulative count of points outside the confidence envelopes (``Points Out'').
+A model with many flagged parameters or a large cumulative count suggests potential miscalibration.
+However, under correct calibration, we expect approximately 5\% of parameters to be flagged by chance alone, and minimal deviations may still occur due to the inherent randomness of the simulations.

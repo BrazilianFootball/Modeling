@@ -1,0 +1,92 @@
+\section{Data Treatment and Normalization}
+\label{sec:data_treatment}
+
+As discussed in the previous section, most of the data registered in the reports concerns a player's jersey number and name.
+This poses two problems: first, some clubs adopt a variable jersey number distribution during the season, where players in the starting line-up always have numbers from 1 to 11.
+Secondly, using player names can be problematic because we have both the player's nickname and ``full name'', but the full name is often incomplete or truncated.
+To address these issues, we convert all player references to CBF's unique ID system.
+During the data extraction process, we substitute the player's name and jersey number with their personal CBF ID, ensuring consistent identification across matches and seasons.
+
+Furthermore, our data processing workflow segments each game using all player substitutions and red cards to create temporal segments.
+For each game, we generate ``sub-games'', each representing a period during which the same set of players was on the pitch, bounded by substitutions or red card events.
+The final result is a JSON file with all games structured as shown in Figure~\ref{fig:json_structure}.
+\begin{center}
+    \lstset{style=json}
+    \begin{lstlisting}
+{
+    "001": {
+        "Summary": {
+            "Home": "Vasco da Gama / RJ",
+            "Away": "Portuguesa / SP",
+            "Result": "1 X 0",
+            "Date": "25/05/2013",
+            "Time": "18:30",
+            "Stadium": "São Januário / Rio de Janeiro"
+        },
+        "0": {
+            "Home": {
+                "Squad": ["146379", "186825", "430895", "165075", "402413", "307406",
+                          "357424", "317751", "156194", "167111", "175011"],
+                "Cards": [[[28, False], "430895"]],
+                "Goals": [[[47, False], "402413"]]
+            },
+            "Away": {
+                "Squad": ["159483", "158204", "160789", "134212", "151104", "160357",
+                          "176908", "138048", "190258", "136911", "188158"],
+                "Cards": [[[23, False], "176908"]],
+                "Goals": []
+            },
+            "Time": 62
+        },
+        "1": {
+            "Home": {
+                "Squad": ["146379", "186825", "430895", "165075", "402413", "307406",
+                          "357424", "317751", "156194", "167111", "143841"],
+                "Cards": [],
+                "Goals": []
+            },
+            "Away": {
+                "Squad": ["159483", "158204", "160789", "134212", "151104", "160357",
+                          "176908", "138048", "190258", "136911", "188158"],
+                "Cards": [],
+                "Goals": []
+            },
+            "Time": 4
+        }
+    }
+}
+    \end{lstlisting}
+    \captionof{figure}{
+        \textbf{Final JSON structure example}.
+        Example of the game between CR Vasco da Gama and Associação Portuguesa de Desportos, showing two sub-games triggered by a substitution (CBF ID 175011 replaced by 143841) at the 62nd minute.
+        The ``Summary'' field stores general metadata such as team names, final result, date/time, and venue.
+    }
+    \label{fig:json_structure}
+\end{center}
+
+The JSON structure can be interpreted as follows:
+\begin{itemize}
+    \item \texttt{"001"}: Represents the unique identifier for the match.
+    \begin{itemize}
+        \item \texttt{"Summary"}: Provides a summary of the match, including home team, away team, final result, date, time, and stadium.
+        \item Other second-level keys (e.g., \texttt{"0"}, \texttt{"1"}, \texttt{"2"}, ...) represent different segments of the match.
+        These segments are created whenever a substitution or red card occurs, even if the red card is shown to a reserve player.
+        \begin{itemize}
+            \item \texttt{"Home"} and \texttt{"Away"}: Information about each team during this segment.
+            \begin{itemize}
+                \item \texttt{"Squad"}: List of player CBF IDs for the team.
+                \item \texttt{"Cards"}: List of cards received by team players.
+                Each card is represented by an array where the first element is a tuple with the minute the card was shown and a boolean flag indicating whether it occurred during injury time of the current segment.
+                The second element is the player's CBF ID.
+                \item \texttt{"Goals"}: List of goals scored by the team, each represented by an array where the first element is a tuple with the minute the goal was scored and a boolean flag indicating whether it occurred during injury time.
+                The second element is the scorer's CBF ID.
+            \end{itemize}
+            \item \texttt{"Time"}: Duration of this segment in minutes.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+An important consideration in this process is that all reports are written manually, which means they may contain typos or mistakes.
+When we identified anomalies that caused errors in the retrieval process, we manually corrected them.
+However, this correction process was only performed for First Division (\textit{Série A}) matches.
+Consequently, in lower divisions, we can expect more anomalies that were not treated, which may result in potentially inferior data quality for those competitions.

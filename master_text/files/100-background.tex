@@ -1,0 +1,67 @@
+\chapter{Background}
+\label{background}
+
+Football is the most popular sport in the world.
+Originating in England during the nineteenth century, the game rapidly spread across continents and became deeply embedded in national cultures.
+In Brazil, where the sport arrived in 1894, football transcended its role as mere entertainment to become a defining element of national identity.
+It is a passion that unites millions of people regardless of social background, region, or creed.
+
+This popularity has also made football a significant economic force.
+Beyond matchday revenues, merchandise sales, and broadcasting rights, the global sports betting market has grown substantially in recent years.
+Football accounts for the largest share of this market, which is projected to reach approximately 187 billion dollars by 2030 \cite{gvr_2024}.
+Questions such as ``which team is better?'' or ``is player A superior to player B?'' are no longer confined to casual conversations among fans.
+They now carry financial implications for betting operators and bettors alike, creating demand for rigorous quantitative analysis.
+
+This context has motivated the development of probabilistic models capable of estimating team strengths, predicting match outcomes, and quantifying the uncertainty associated with these predictions.
+Such models provide a framework for transforming historical match data into actionable insights, whether for sports analysts, club managers, or betting markets.
+This chapter reviews the main modelling approaches proposed in the literature, covering paired comparison models, goal-based formulations, player-level extensions, and a simulation-based validation technique.
+
+Among paired comparison models, the Bradley-Terry model \cite{bradley_terry_1952} was originally developed for analysing experiments where items are compared in pairs and a preference or outcome is recorded.
+In the context of sports, this model provides a natural framework for modelling match outcomes by relating the probability of one team beating another to latent skill parameters.
+The original formulation considered binary outcomes, representing a win for one of the two items being compared.
+\textcite{davidson_1970} extended the Bradley-Terry model, introducing a tie parameter.
+This parameter allows the model to assign non-zero probability to draw outcomes, making it more suitable for football applications.
+\textcite{davidson_1977} further extended the model to incorporate order effects, which can capture home effects in sports contexts.
+These extensions transformed the Bradley-Terry model from a simple binary comparison tool into a flexible framework for modelling sports competitions.
+More recently, \textcite{cattelan_2013} developed dynamic Bradley-Terry models that allow team strengths to evolve over time, capturing the temporal dynamics of team performance throughout a season.
+This work demonstrated the flexibility of the Bradley-Terry framework for modelling sports tournaments and showed how temporal variation can be incorporated while maintaining the model's interpretability.
+
+Rather than modelling only match outcomes, an alternative and complementary approach uses the number of goals scored by each team as variables to be modelled.
+This approach was formalised by \textcite{maher_1982}, where these variables are modelled as Poisson with rates that depend on team offensive and defensive abilities.
+We call these Poisson-based formulations as Poisson models, where the focus is modelling explicitly the final score of a match.
+\textcite{lee_1997} applied Poisson models to English Premier League data, with a particular emphasis on incorporating home effects as a distinct parameter in the model.
+Independently, \textcite{dixon_1997} extended this class of models by introducing a correlation parameter to account for the dependence between home and away goal counts.
+Their model incorporated a bivariate Poisson distribution to capture this correlation, building upon earlier work on bivariate Poisson distributions \cite{holgate_1964}.
+
+\textcite{karlis_2003} further developed the bivariate Poisson approach, demonstrating that accounting for correlation improves model fit and predictive performance.
+\textcite{karlis_2009} proposed using the Skellam distribution to model goal differences directly, offering an alternative to bivariate Poisson models that focuses on the difference between goal counts rather than the counts themselves.
+This approach can be particularly useful when the research question focuses on match outcomes rather than exact scorelines.
+Within a Bayesian framework, \textcite{baio_2010} proposed a hierarchical model for estimating team strengths and predicting match scores, introducing a mixture formulation to address the overshrinkage produced by standard hierarchical priors.
+Similarly to the dynamic extensions in the Bradley-Terry framework, \textcite{rue_2000} introduced a Bayesian Poisson model with time-varying team strengths, and \textcite{koopman_2015} combined the bivariate Poisson formulation with state-space methods to model the evolution of team abilities across a season.
+Recent applications include Poisson-based analyses of the English Premier League \cite{nguyen_2021} and double Poisson formulations for international tournaments such as Euro 2020 \cite{penn_2022}.
+
+Most of the literature on football modelling operates at the club level, treating each match as a confrontation between two atomic entities, where each team possesses an estimated strength parameter derived from observed data.
+However, since clubs are formed by a collection of players, it is natural to consider individual-level modelling, where each player is treated as an atomic entity for the model.
+In this direction, \textcite{wolf_2020} proposed a player rating system based on the Elo algorithm, originally developed by \textcite{elo_1961} and still used today by the Fédération Internationale des Échecs (FIDE) for chess rankings.
+Since the Elo update rule corresponds to stochastic gradient ascent on the Bradley-Terry log-likelihood \cite{aldous_2017}, the work of \textcite{wolf_2020} can be viewed as a player-level extension of the Bradley-Terry framework.
+Using data from 18 European competitions from seasons 2014/15 to 2017/18, they calculated player rankings and generated insights into each player's impact on their club's performance.
+
+A critical aspect of statistical modelling is ensuring that the methods used for posterior inference correctly reproduce the intended posterior distributions.
+When this is not the case, the resulting parameter estimates and uncertainty quantification can be misleading, potentially leading to incorrect conclusions.
+Traditional diagnostics, such as trace plots and effective sample size, can detect some problems but may miss systematic biases.
+Nevertheless, they provide no direct guarantee that the samples are drawn from the correct posterior distribution.
+
+\textcite{cook_2006} introduced the concept of Simulation-Based Calibration (SBC) as a method for validating Bayesian inference procedures.
+The key insight is that if an inference procedure correctly reproduces the posterior distribution, then the rank of the true parameter value among posterior samples should follow a uniform distribution.
+This property provides a powerful diagnostic tool: systematic deviations from uniformity indicate that the inference procedure is not correctly reproducing the posterior distribution.
+\textcite{talts_2020} formalized this approach and provided a comprehensive framework for applying SBC to validate Bayesian models.
+They showed that SBC can detect various types of problems, including bias, under-dispersion, and overdispersion in posterior distributions.
+More recently, \textcite{modrak_2025} extended SBC to high-dimensional settings, by testing uniformity of test quantities.
+
+In the context of Brazilian football, some initiatives include the \textit{Chance de Gol} website \cite{chancedegol}, which has been providing match outcome probabilities since 1999, and the \textit{Probabilidades no Futebol} project \cite{ufmg_futebol}, maintained by the Department of Mathematics at the Universidade Federal de Minas Gerais (UFMG) since 2005.
+On the academic side, \textcite{diniz_2018} compared several probabilistic predictive models, including Bayesian multinomial-Dirichlet formulations, evaluating their predictive performance on \textit{Campeonato Brasileiro Série A} (also known as \textit{Brasileirão}) matches using proper scoring rules and calibration diagnostics.
+
+The present work makes three main contributions to the literature on Brazilian football modelling.
+First, a comprehensive dataset of Brazilian football matches spanning multiple seasons and competitions is introduced.
+Second, Simulation-Based Calibration is applied to validate Bayesian inference in football models.
+Finally, club-level formulations are extended to the player level, enabling a more granular analysis of team performance.
