@@ -2,6 +2,7 @@
 
 import json
 import os
+from itertools import product
 from typing import Any, Optional
 from datetime import datetime as dt
 import pandas as pd
@@ -21,6 +22,7 @@ def parse_datetime(date: str, time: str) -> str:
         str: Date and time formatted as "YYYY/MM/DD HH:MM".
              If conversion fails, returns the original concatenated date and time string.
     """
+    time = time.strip() or "00:00"  # a few scraped reports have no kick-off time
     return dt.strptime(f"{date} {time}", "%d/%m/%Y %H:%M").strftime("%Y/%m/%d %H:%M")
 
 
@@ -79,6 +81,26 @@ def generate_all_matches_from_scraped_data(year: int, save_path: Optional[str] =
             all_matches[game_id]["result"] = "A"
         else:
             all_matches[game_id]["result"] = "D"
+
+    # Fixtures that were never played (e.g. Chapecoense x Atletico-MG in 2016) are kept as
+    # unplayed placeholders in the last round, so the season keeps n_clubs * (n_clubs - 1)
+    # matches: they are simulated as regular matches but never used to fit a model.
+    teams = {m["home_team"] for m in all_matches.values()}
+    teams |= {m["away_team"] for m in all_matches.values()}
+    played = {(m["home_team"], m["away_team"]) for m in all_matches.values()}
+    last_datetime = max(m["match_datetime"] for m in all_matches.values())
+    for home_team, away_team in sorted(product(teams, teams)):
+        if home_team == away_team or (home_team, away_team) in played:
+            continue
+
+        all_matches[str(len(all_matches) + 1).zfill(3)] = {
+            "home_team": home_team,
+            "away_team": away_team,
+            "match_datetime": last_datetime,
+            "goals_team1": None,
+            "goals_team2": None,
+            "result": "TBD",
+        }
 
     with open(save_path, "w", encoding="utf-8") as f:
         json.dump(all_matches, f, ensure_ascii=False, indent=2)
@@ -222,7 +244,7 @@ def generate_real_data_stan_input(
     team2: list[int] = []
     goals_team1_list: list[int] = []
     goals_team2_list: list[int] = []
-    results: list[float] = []
+    results: list[Optional[float]] = []
 
     # hardcoded start because we don't know the number of teams in advance
     if len(data) == 380:
@@ -259,8 +281,10 @@ def generate_real_data_stan_input(
             results.append(1.0)
         elif result == "A":
             results.append(0.0)
-        else:
+        elif result == "D":
             results.append(0.5)
+        else:
+            results.append(None)
 
     base_data = {
         "num_games": len(team1),

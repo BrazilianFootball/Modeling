@@ -167,12 +167,16 @@ def calculate_metrics(model_name: str, year: int, num_games: int, championship: 
             .get(model_name, {})
             .get(str(num_games), {})
         ):
+            if game_data["result"] not in results_to_array:
+                continue  # unplayed match
+
             observations[game, :] = results_to_array[game_data["result"]]
             predictions[game, :] = game_data["probabilities"][model_name][
                 str(num_games)
             ]
             game += 1
 
+    observations, predictions = observations[:game], predictions[:game]
     row = [
         year,
         championship,
