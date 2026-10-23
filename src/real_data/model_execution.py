@@ -92,6 +92,17 @@ def run_model_with_real_data(
         i + 1: team_name for i, team_name in enumerate(data["team_names"])
     }
     del data["team_names"]
+
+    # unplayed matches (goals/results set to null) are simulated but never used in the fit
+    key = "goals_team1" if "goals_team1" in data else "results"
+    played = [value is not None for value in data[key]]
+    if not all(played):
+        for name, value in data.items():
+            if isinstance(value, list):
+                data[name] = [item for item, keep in zip(value, played, strict=True) if keep]
+
+        data["num_games"] = sum(played)
+
     if "naive_1" in model_name:
         fit = [1/3, 1/3, 1/3]
     elif "naive_2" in model_name:
